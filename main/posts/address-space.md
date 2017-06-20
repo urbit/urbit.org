@@ -296,7 +296,7 @@ planets; which should govern?  The obvious design is a three-chambered
 legislature balanced against itself.
 
 For more on Urbit's governance design, see our [beliefs and
-principles]() and our [interim constitution]().
+principles](../principles) and our [interim constitution](../constitution).
 
 <br /><br />
 
