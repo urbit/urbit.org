@@ -13,6 +13,7 @@
           ;div.col-sm-12.col-md-8.col-md-offset-2
             ;div.mb-20
               ;h1.h1-large: It's 2019. You're still just a row in someone's database.
+              ;h1.h1-large: 2019了。你仍不过是别人数据库中的一行记录。
             ==
             ;div.mb-20
               ;img.col-sm-12@"/images/megacorp.svg";
@@ -28,6 +29,17 @@
               Your Urbit is a personal cloud server. A simple, private, general-purpose virtual computer on an encrypted P2P network.
 
               Your Urbit is your digital passport, your digital vault, and your digital assistant. You own it on Ethereum – no one controls it but you.
+            ;div.p--intro.pb-30
+              ;>
+              你的数字生活散布于各类账号、应用与服务。
+
+              其中的每一个仅做一件事并且被别人所控制。它们很好用，但他们确实是庞大、反乌托邦的玩具。
+
+              这些虚的、单一目的的计算机的局限性是显而易见的。人们理应有更好的。
+
+              你的Urbit是一个个人云服务器。一个在加密点对点网络上的简单、私有、泛功能的虚拟计算机。
+
+              你的Urbit是你的数字护照、你的数字储藏库与你的数字助手。你对它的所有权基于以太坊之上 - 除你之外没有人可以控制它。
             ==
           ==
         ==
@@ -65,9 +77,13 @@
             ;div.mb-20
               ;div.p--intro
                 ;p.mb-4: Today, you have two bad options for cloud computing: run your own Unix server or join a bunch of apps and services.
+                ;p.mb-4: 当今，你有两种糟糕的云计算选择：运行你自己的Unix服务器或者加入一堆应用与服务。
                 ;p.mb-4: We aren't going to take this deal. We don't want to be system administrators and we don't want to be ruled by some MEGACORP.
+                ;p.mb-4: 我们不打算接受这样的交易。我们不想成为系统管理员并且我们不想被某个巨型公司主宰。
                 ;p.mb-4: So we built a new platform. A clean-slate stack simple enough that ordinary people can run their own servers.
+                ;p.mb-4: 所以我们建立了一个新平台。一个简单到普通人可以运行他们自己服务器的新技术栈。
                 ;p.mb-4: Urbit is a stack of three layers: Azimuth, Arvo and Aegean. Each layer could be used as a product on its own, and they're all open source.
+                ;p.mb-4: Urbit是一个三层的栈：Azimuth、Arvo和Aegean。每一层可以作为其单独的产品使用，并且他们都是开源的。
               ==
             ==
           ==
@@ -77,23 +93,29 @@
             ;img.col-sm-12@"/images/azimuth.svg";
             ;h3.mb-4: Azimuth
             ;p: is virtual land on Ethereum. An Azimuth point is a secure digital identity and network address.
+            ;p: 是存在于以太坊上的虚拟的土地。一个Azimuth点是一个安全的数字身份与网络地址。
           ==
           ;div.col-md-3.col-md-offset-1
             ;img.col-sm-12@"/images/arvo-complete.svg";
             ;h3.mb-4: Arvo
             ;p: is a clean-slate OS and P2P network. An Arvo server uses an Azimuth point as its name and address.
+            ;p: 是一个全新的操作系统与点对点网络。一个Arvo服务器使用一个Azimuth点作为其名称和地址。
           ==
           ;div.col-md-3.col-md-offset-1
             ;img.col-sm-12@"/images/aegean.svg";
             ;h3.mb-4: Aegean
             ;p: is a pattern of independent, decentralized societies on top of the Arvo network.
+            ;p: 是一个独立、去中心化的存在于Arvo网络之上的社会所采用的模式。
           ==
         ==
         ;div.col-md-8.col-md-offset-2.mb-40
           ;div.p--intro
             ;p.mb-4: Urbit is still young. It's not quite ready for everyone. Great system software takes a long time to grow.
+            ;p.mb-4: Urbit还很年轻。它还不能为每个人所用。伟大的系统软件需要长时间的成长。
             ;p.mb-4: But Urbit isn't a dream. It's real. It's a running, stable network. And once you find your way in, there's a lot to explore.
+            ;p.mb-4: 但Urbit不是梦。它是真实的。它是一个正运行、稳定的网络。并且一旦你开始了解它，会有更多的去探索。
             ;p.mb-4: Urbit is the last platform. The personal-computing revolution hasn't even happened yet.
+            ;p.mb-4: Urbit是最后的平台。个人计算革命甚至仍未开始。
           ==
         ==
       == ::/container
@@ -103,6 +125,7 @@
           ;div.row.mb-8
             ;div.col-md-9.col-md-offset-1.mb-10
               ;h1.h1-large.white: Table of Contents
+              ;h1.h1-large.white: 目录
             ==
           ==
           ;div.row.mb-8
@@ -110,6 +133,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-urbit-is-for"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
               ==
             ==
           ==
@@ -118,6 +142,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-arvo-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
               ==
             ==
           ==
@@ -126,6 +151,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-azimuth-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
               ==
             ==
           ==
@@ -134,6 +160,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#history"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: 历史
               ==
             ==
           ==
@@ -142,6 +169,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#azimuth-distribution"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分发
               ==
             ==
           ==
@@ -168,6 +196,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-urbit-is-for"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
                 ==
               ==
             ==
@@ -176,6 +205,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-arvo-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
                 ==
               ==
             ==
@@ -184,6 +214,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-azimuth-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
                 ==
               ==
             ==
@@ -192,6 +223,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#history"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip：历史
                 ==
               ==
             ==
@@ -200,6 +232,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#azimuth-distribution"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分发
                 ==
               ==
             ==
@@ -262,6 +295,7 @@
           ;div.row.sm-h2.h1.h1-large.h-font
             ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
             ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Aegean: What Urbit is For
+            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Aegean：Urbit的用途是什么
           ==
         ==
       ==
@@ -279,19 +313,35 @@
             ;>
             Today MEGACORP runs our cloud software, decides how to update it and stores our data. What will the world look like when people can run their own servers?
 
+            现今巨型公司运行我们的云软件，决定如何升级它和存储我们的数据。当人们得以运行他们自己的服务器时世界会是什么样子？
+
             In the real world, different cultures and societies coexist on top of neutral physical infrastructure. Different people, communities and cultures share the same roads and electrical grid.
+
+            在真实的世界里，不同的文化与社会共存于中性的物理基础设施之上。不同的人们、社区与文化共享同一个道路与输电网络。
 
             In the cloud, it's as if we spend our lives in hotels.
 
+            在云，好似我们在旅馆度过我们的时光。
+
             Aegean is a pattern for building _cities_. A city is a group of people running the same _agent_, a kind of program, on their Arvo servers.
+
+            Aegean是一个建设城市的模式。一座城市是一群人运行同一个媒介，一种程序，于他们的Arvo服务器之上。
 
             A city is not an 'app' designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
 
+            一座城市不是为一件事物设计的“应用”。一座城市是一个社区的工具的组合。每座城市是独立和自治的。城市控制其自身接口并无线升级它们自己的代码。
+
             We've started a few cities already, and we'll talk a bit about what we see on the horizon. What we can imagine is only the beginning.
+
+            我们已经启动了一些城市，并且我们将谈谈我们在地平线上看到的。我们能想象到的仅仅是刚刚开始。
 
             One thing we know for sure: the future isn't a single monoculture. All of humanity doesn't want to live in the same city. Most people live in many and move comfortably between them.
 
+            我们能确定的一件事：未来不是一个单一的单极文化。全人类不愿居于同一个城市。大多数人住在几个城市并且舒适地在他们之间迁移。
+
             We see a vast archipelago of hypercultures. A centerless network of networks on top of the neutral Arvo and Azimuth infrastructure.
+
+            我们看到超文化的列岛。一个中性的Arvo与Azimuth基础设施之上的网络为节点的无中心网络。
           ==
         ==
       ==
@@ -301,6 +351,7 @@
       ;div.row
         ;div.col-md-8.col-md-offset-2
           ;h1.center.mb-20: Homesteading this new continent
+          ;h1.center.mb-20: 居于新大陆
         ==
       ==
     ==
