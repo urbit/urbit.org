@@ -351,7 +351,7 @@
       ;div.row
         ;div.col-md-8.col-md-offset-2
           ;h1.center.mb-20: Homesteading this new continent
-          ;h1.center.mb-20: 居于新大陆
+          ;h1.center.mb-20: 以新大陆为家园
         ==
       ==
     ==
@@ -367,15 +367,27 @@
         ;div.col-md-8.col-md-offset-2
           As a community building a new platform we need to chat and engage in longform discussion. Separate platforms with separate logins and bloated interfaces are a drag to use.
 
+          作为建设新平台的社区，我们需要聊聊并参与长篇讨论。不同的平台及其不同的账户登陆与臃肿的接口使用起来很费劲。
+
           So we built an agent to work just for us. It's called Landscape, and we've used it to start a few invite-only cities.
+
+          所以我们单独为自己建设了一个新的介质。它的名字叫Landscape，并且我们已经使用它开启了一些受邀制的城市。
 
           These cities are sort of like colonies on a new continent. They're rough. They aren't ready for everyone. They aren't secure yet, they won't last forever. But we already like them better than the alternative.
 
+          这些城市有些像一个新大陆上的殖民地。它们粗糙。它们还没有准备好为每个人使用。它们尚不安全，它们不是永久性的。但我们对它们的喜爱已经胜过其它的选择。
+
           And we can already see what it will look like to let others start homesteading with us. Living on a platform where your community is in control is a whole new world.
+
+          而且我们已经可以看到当其他人开始被允许开始以此为家园时它的样子。居于一个控制权握于你的社区的平台是一个全新的世界。
 
           We're excited to not only welcome other communities, but to extend the flexiblity of our agents. To experiment with what's possible.
 
+          我们不仅兴奋地欢迎其他社区，还将延展我们介质的灵活性。以试验可能性。
+
           Location data, heart rate, nutrition and note taking between members of an expedition, for example. Anonymized genetic data, visualization tools and documents for a group of researchers. There's so much to explore.
+
+          比如本地数据、心率、营养和一次外出中成员们各自的笔记。匿名的一般化数据、可视化工具与一个团队的研究者做的文档。很多有待探索。
         ==
       ==
     ==
@@ -383,17 +395,26 @@
       ;div.row.align-vertical
         ;div.col-md-5
           ;h1.mb-10: The blockchain is an I/O device
+          ;h1.mb-10: 区块链是个I/O设备
           ;div
             ;div.md-hide.mb-4
               ;img@"/images/offchain.svg";
             ==
             The blockchain was supposed to make the financial system open to anyone. But we're still stuck on MEGACORP exchanges or using flimsy 'dapps' in our browser.
 
+            区块链本为对每个人都开放的金融系统而造。然而我们仍然停滞于巨型企业的交易所或在我们的浏览器中使用单薄的“dapps”。
+
             A city of traders on Urbit could easily relay orders to one another and send signed transactions directly to the chain from a single agent. That's what you get for free with a fast, deterministic computer on a secure authenticated network.
+
+            Urbit交易员组成的城市可以轻松地向另一个转发订单与直接从一个交易员向链发送经签名加密后的交割。那是你获得在安全已验证的网络之上的快速、确定性的计算机的同时免费得到的。
 
             And why not go a step further? Let your Arvo server run your trading algorithms or participate in prediction markets. Today's 'dapps' don't have access to persistent state and their UI is limited. Worse, they can't communicate with one another.
 
+            并且为什么不再更进一步？让你的Arvo服务器运行你的交易算法或参与预测市场。今天的“dapps”无法触碰永久储存状态并且他们的UI很有局限性。更糟的是，它们之间无法通讯。
+
             Blockchains are so much more useful when connected to a secure personal server. Consensus computation can be much more than just trading coins.
+
+            当安全的个人服务器连接到区块链时，区块链更加有用。共识计算可以远远超过仅仅是交易币。
           ==
         ==
         ;div.col-md-5.col-md-offset-1.sm-hide
@@ -406,6 +427,7 @@
         ;div.col-md-8.col-md-offset-2
           ;div.center
             ;h1.mb-10: Your private city of robots
+            ;h1.mb-10: 你的私有机器人城市
           ==
         ==
         ;div.col-md-6.col-md-offset-3
@@ -414,19 +436,30 @@
         ;div.col-md-8.col-md-offset-2
           ;>
             The 'internet of things' is a mess. Some of the 'things' are pretty nice pieces of hardware. But they all require that I use some MEGACORP service. Why can't I just talk directly to my own thermostat?
+
+            “物联网”一团糟。某些“物”是很不错的硬件。但它们都需要我使用一些巨型企业的服务。为什么我不能直接和我自己的恒温器通话？
         ==
         ;div.col-md-8.col-md-offset-2
             ;p
               ;span: Your Azimuth identity, or
+              ;span: 你的Azimuth身份，或
               ;i.ml-1: planet
+              ;i.ml-1: 星球
               ;span: , can launch 2
+              ;span: ，可以启动2
+              ;sup.mr-1: 32
               ;sup.mr-1: 32
               ;span: (4 billion) child identities, or
+              ;span: （40亿）子身份，或
               ;i.ml-1: moons
+              ;i.ml-1: 卫星
               ;span: . That should be enough for your lights, your fridge, your 3D printer, and your swarm of farm robots. Own a factory? Sure, that too.
+              ;span: 。那应该足够给你的照明、你的电冰箱、你的3D打印机和你的耕作机器人群。拥有座工厂？好，那个也可以。
             ==
             ;p
               Once they run Arvo servers, your devices can all run the same agent and join your own private city. Taking control of your robot army is simple once they share the same computing platform.
+
+              一旦它们运行Arvo服务器，你的设备可以全部运行同一个介质并加入你自己的私有城市。只要他们共享同一个计算平台，控制你的机器人军团很简单。
             ==
         ==
       ==
@@ -436,6 +469,7 @@
         ;div.col-md-6
           ;div.mb-10
             ;h1: The archive of your life
+            ;h1: 你的生活存档
             ;div.center.sm-mt-10.sm-mb-10.md-hide
               ;img.col-md-6@"/images/face.svg";
             ==
@@ -443,9 +477,15 @@
           ;div
             Your human record needs to be safe in the cloud. The technology works. MEGACORP is always the weak link. No corporation can promise to live forever — or care forever.
 
+            你的人类性记录需要在云上安全。这个科技好用。巨型企业总是弱点。没有企业能保证永远存在 - 或永远在乎。
+
             That's why your Arvo server is the right place to store all the data you want to keep — every message you've ever sent, every photo you've taken, even your financial and medical records. Your personal server maintains an archive, a permanent, trusted place to keep your digital life.
 
+            那就是为什么你的Arvo服务器是正确地点存储所有你想保存的数据 - 每一条你发送的消息、每一张你拍摄的照片、甚至你的财务与医疗记录。你的个人服务器维护一个存档、一个永久、值得信任的地点保存你的数字生活。
+
             Once your data is safe on your personal server, the way you managed it now will seem scary and backward.
+
+            一旦你的数据在你的个人服务器上安全，你现在管理它的方式将显得可怕与退步。
           ==
         ==
         ;div.col-md-4.col-md-offset-1.center.sm-hide
@@ -459,6 +499,7 @@
           ;div.row.sm-h2.h1.h1-large.h-font
             ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
             ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Arvo: What Urbit is
+            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Arvo: Urbit是什么
           ==
         ==
       ==
@@ -474,6 +515,7 @@
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
                   ;h4.text-md: One file
+                  ;h4.text-md: 一份文件
                 ==
 
               ==
@@ -488,6 +530,7 @@
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
                   ;h4.text-md: Your passcode
+                  ;h4.text-md: 你的密码
                 ==
               ==
             ==
@@ -501,6 +544,7 @@
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
                   ;h4.text-md: A program
+                  ;h4.text-md: 一个程序
                 ==
               ==
             ==
@@ -522,20 +566,33 @@
           ;>
             Your personal server, called a ship, is stored as a log of the events it's received, encrypted with a passcode. To start your ship, open your event log file with the Arvo program and type in your passcode. To stop it, just close the program; the event log will wait patiently for next boot.
 
+            你的个人服务器，称作一艘飞船，被作为其接收事件的日志存储，通过密码加密。启动你的飞船，用Arvo程序打开你的事件日志文件并输入你的密码。停止它，直接关闭程序；事件日志将耐心地等待下一次启动。
+
             To use the Arvo network each ship must have an Azimuth name, or _point_. You own your point on Ethereum. It's a short, pronouncable name like `~laptel-nilfur` or `~doplyx-halsev` (the '~' is silent). Other ships use your Azimuth point to find and talk to your ship, no matter where it is in the world.
+
+            要使用Arvo网络，每艘飞船必须有一个Azimuth名称，或点。你拥有在以太坊上的你的点。它是一个短的，可以读出来的名称，类似于“~laptel-nilfur”或“~doplyx-halsev”（“~”不发音）。其他飞船通过你的Azimuth点发现你的飞船和联系你的飞船，无论它在什么地方。
 
             Most people park their ship in the cloud. If you prefer to host yourself, your ship can live on a laptop, a phone, even a USB stick. It's just a file. It doesn't have to be on all the time. Just don't lose it.
 
+            大多数人把他们的飞船停在云上。如果你喜欢自己建立，你的飞船可以存在于笔记本电脑、手机、甚至U盘上。它只是一个文件。它不必一直运行。只要别丢了它。
+
             Wherever your ship is, just log on at `urbit.org` with your name and passcode — like a normal web account.
+
+            无论你的飞船在哪里，只要用你的名称和密码登陆“urbit.org” - 像普通的网络账户一样。
 
             You operate your ship through a web UI and/or a local console. You can sync the current version its files with your local computer. (Arvo remembers every version, forever.) Your ship can also host its own webpages and interact with existing webservices on your behalf.
 
+            你通过网页界面和/或本地命令行界面操作你的飞船。你可以用你的本地电脑同步到最新版本的文件。（Arvo记得本一个版本，永远。）你的飞船也可以作为服务器寄存网页与
+
             Your ship is designed to need no maintenance at all. Upgrades come in over the network. It never gets old or out of date. Leave one off for a century, then turn it on — it might take a week, but it will automatically upgrade itself to 2119.
+
+            你的飞船被设计成无需任何维护。通过网络升级。它从不变老或过时。一个世纪不启动，然后打开它 - 可能会需要一周，但它会自动自我升级到2119年。
           ==
       ==
       ;div.row
         ;div.col-md-12.center
           ;h1.mb-10.mt-10: Okay nerds, here's a quick technical overview
+          ;h1.mb-10.mt-10: 好了，技术
         ==
       ==
       ;div.row.sm-wrap-reverse.mb-20
