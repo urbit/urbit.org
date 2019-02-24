@@ -13,7 +13,7 @@
           ;div.col-sm-12.col-md-8.col-md-offset-2
             ;div.mb-20
               ;h1.h1-large: It's 2019. You're still just a row in someone's database.
-              ;h1.h1-large: 2019了。你仍不过是别人数据库中的一行记录。
+              ;h1.h1-large: 2019了。你依然不过是别人数据库中的一行记录。
             ==
             ;div.mb-20
               ;img.col-sm-12@"/images/megacorp.svg";
@@ -31,13 +31,13 @@
               Your Urbit is your digital passport, your digital vault, and your digital assistant. You own it on Ethereum – no one controls it but you.
             ;div.p--intro.pb-30
               ;>
-              你的数字生活散布于各类账号、应用与服务。
+              你的数字生活遍布各类账号、应用与服务。
 
-              其中的每一个仅做一件事并且被别人所控制。它们很好用，但他们确实是庞大、反乌托邦的玩具。
+              其中，每一个仅做一件事并且由别人控制。它们很好使，但它们的的确确是庞大、反乌托邦的玩具之作。
 
-              这些虚的、单一目的的计算机的局限性是显而易见的。人们理应有更好的。
+              这些不实、单一目的的计算机的局限性是显而易见的。人们理应获得更好的。
 
-              你的Urbit是一个个人云服务器。一个在加密点对点网络上的简单、私有、泛功能的虚拟计算机。
+              你的Urbit是个个人云服务器。一个在加密点对点网络上简单、私有、泛功能的虚拟计算机。
 
               你的Urbit是你的数字护照、你的数字储藏库与你的数字助手。你对它的所有权基于以太坊之上 - 除你之外没有人可以控制它。
             ==
@@ -81,9 +81,9 @@
                 ;p.mb-4: We aren't going to take this deal. We don't want to be system administrators and we don't want to be ruled by some MEGACORP.
                 ;p.mb-4: 我们不打算接受这样的交易。我们不想成为系统管理员并且我们不想被某个巨型公司主宰。
                 ;p.mb-4: So we built a new platform. A clean-slate stack simple enough that ordinary people can run their own servers.
-                ;p.mb-4: 所以我们建立了一个新平台。一个简单到普通人可以运行他们自己服务器的新技术栈。
+                ;p.mb-4: 所以我们建立了一个新平台。一套简单到普通人可以运行他们自己服务器的新技术栈。
                 ;p.mb-4: Urbit is a stack of three layers: Azimuth, Arvo and Aegean. Each layer could be used as a product on its own, and they're all open source.
-                ;p.mb-4: Urbit是一个三层的栈：Azimuth、Arvo和Aegean。每一层可以作为其单独的产品使用，并且他们都是开源的。
+                ;p.mb-4: Urbit是一套三层的栈：Azimuth、Arvo和Aegean。每一层可以作为其单独的产品使用，并且他们都是开源的。
               ==
             ==
           ==
@@ -105,17 +105,17 @@
             ;img.col-sm-12@"/images/aegean.svg";
             ;h3.mb-4: Aegean
             ;p: is a pattern of independent, decentralized societies on top of the Arvo network.
-            ;p: 是一个独立、去中心化的存在于Arvo网络之上的社会所采用的模式。
+            ;p: 是一个用于存在于Arvo网络之上独立、去中心化社会的模式。
           ==
         ==
         ;div.col-md-8.col-md-offset-2.mb-40
           ;div.p--intro
             ;p.mb-4: Urbit is still young. It's not quite ready for everyone. Great system software takes a long time to grow.
-            ;p.mb-4: Urbit还很年轻。它还不能为每个人所用。伟大的系统软件需要长时间的成长。
+            ;p.mb-4: Urbit还很年轻。它尚未准备好为每个人所用。伟大的系统软件需要长时间成长。
             ;p.mb-4: But Urbit isn't a dream. It's real. It's a running, stable network. And once you find your way in, there's a lot to explore.
-            ;p.mb-4: 但Urbit不是梦。它是真实的。它是一个正运行、稳定的网络。并且一旦你开始了解它，会有更多的去探索。
+            ;p.mb-4: 但Urbit不是个梦。它是真实的。它是个运行中、稳定的网络。并且一旦你开始了解它，会有更多去探索。
             ;p.mb-4: Urbit is the last platform. The personal-computing revolution hasn't even happened yet.
-            ;p.mb-4: Urbit是最后的平台。个人计算革命甚至仍未开始。
+            ;p.mb-4: Urbit是最后的平台。个人计算革命甚至尚未开始。
           ==
         ==
       == ::/container
@@ -169,7 +169,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#azimuth-distribution"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分发
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分布
               ==
             ==
           ==
@@ -313,35 +313,35 @@
             ;>
             Today MEGACORP runs our cloud software, decides how to update it and stores our data. What will the world look like when people can run their own servers?
 
-            现今巨型公司运行我们的云软件，决定如何升级它和存储我们的数据。当人们得以运行他们自己的服务器时世界会是什么样子？
+            现今巨型企业运行我们的云软件、决定如何对其升级与存储我们的数据。当人们得以运行他们自己的服务器时世界会是什么样子？
 
             In the real world, different cultures and societies coexist on top of neutral physical infrastructure. Different people, communities and cultures share the same roads and electrical grid.
 
-            在真实的世界里，不同的文化与社会共存于中性的物理基础设施之上。不同的人们、社区与文化共享同一个道路与输电网络。
+            在真实的世界中，不同文化与社会共存于中性的物理基础设施之上。不同人、社区与文化共享着同一个道路与输电网络。
 
             In the cloud, it's as if we spend our lives in hotels.
 
-            在云，好似我们在旅馆度过我们的时光。
+            在云上，我们好似在旅馆生活。
 
             Aegean is a pattern for building _cities_. A city is a group of people running the same _agent_, a kind of program, on their Arvo servers.
 
-            Aegean是一个建设城市的模式。一座城市是一群人运行同一个媒介，一种程序，于他们的Arvo服务器之上。
+            Aegean是个用以建设城市的模式。一座城市是一群人在他们Arvo服务器上运行同一个媒介、一种程序。
 
             A city is not an 'app' designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
 
-            一座城市不是为一件事物设计的“应用”。一座城市是一个社区的工具的组合。每座城市是独立和自治的。城市控制其自身接口并无线升级它们自己的代码。
+            一座城市不是为一件事物而设计的“应用”。一座城市是一个社区拥有的工具的组合。每座城市独立且自治。城市控制其自身接口并通过无线网络对它们自己的代码升级。
 
             We've started a few cities already, and we'll talk a bit about what we see on the horizon. What we can imagine is only the beginning.
 
-            我们已经启动了一些城市，并且我们将谈谈我们在地平线上看到的。我们能想象到的仅仅是刚刚开始。
+            我们已经启动了一些城市，并且我们将谈谈我们即将迫近的。我们能想象到的仅仅是刚刚开始。
 
             One thing we know for sure: the future isn't a single monoculture. All of humanity doesn't want to live in the same city. Most people live in many and move comfortably between them.
 
-            我们能确定的一件事：未来不是一个单一的单极文化。全人类不愿居于同一个城市。大多数人住在几个城市并且舒适地在他们之间迁移。
+            我们能确定一件事：未来不是个单一的一元文化。全人类不愿居于同一座城市。大多数人住在几座城市并且在其间舒适地迁移。
 
             We see a vast archipelago of hypercultures. A centerless network of networks on top of the neutral Arvo and Azimuth infrastructure.
 
-            我们看到超文化的列岛。一个中性的Arvo与Azimuth基础设施之上的网络为节点的无中心网络。
+            我们所见的是个巨大的超文化列岛。一个中性的Arvo和Azimuth基础设施之上的无中心网络网络。
           ==
         ==
       ==
@@ -367,27 +367,27 @@
         ;div.col-md-8.col-md-offset-2
           As a community building a new platform we need to chat and engage in longform discussion. Separate platforms with separate logins and bloated interfaces are a drag to use.
 
-          作为建设新平台的社区，我们需要聊聊并参与长篇讨论。不同的平台及其不同的账户登陆与臃肿的接口使用起来很费劲。
+          作为建设新平台的社区，我们需要聊聊并参与长篇讨论。不同平台及其不同的账户登陆与臃肿的接口使用起来很费劲。
 
           So we built an agent to work just for us. It's called Landscape, and we've used it to start a few invite-only cities.
 
-          所以我们单独为自己建设了一个新的介质。它的名字叫Landscape，并且我们已经使用它开启了一些受邀制的城市。
+          所以我们单独为自己建设了个新的媒介。称作Landscape，并且我们已经使用它开启了一些受邀制的城市。
 
           These cities are sort of like colonies on a new continent. They're rough. They aren't ready for everyone. They aren't secure yet, they won't last forever. But we already like them better than the alternative.
 
-          这些城市有些像一个新大陆上的殖民地。它们粗糙。它们还没有准备好为每个人使用。它们尚不安全，它们不是永久性的。但我们对它们的喜爱已经胜过其它的选择。
+          这些城市有些像一个新大陆上的殖民地。它们不健全。它们尚未准备好为每个人使用。它们尚不安全，它们不是永久性的。但我们喜欢它们已经胜过了对其它选择的。
 
           And we can already see what it will look like to let others start homesteading with us. Living on a platform where your community is in control is a whole new world.
 
-          而且我们已经可以看到当其他人开始被允许开始以此为家园时它的样子。居于一个控制权握于你的社区的平台是一个全新的世界。
+          而且我们已经可以看到当其他人开始被允许开始以此为家园时它的样子。居于一个社区控制权握于你手的平台是个崭新的世界。
 
           We're excited to not only welcome other communities, but to extend the flexiblity of our agents. To experiment with what's possible.
 
-          我们不仅兴奋地欢迎其他社区，还将延展我们介质的灵活性。以试验可能性。
+          我们不仅兴奋地欢迎其它社区，还将延展我们媒介的灵活性。以试验其它可能性。
 
           Location data, heart rate, nutrition and note taking between members of an expedition, for example. Anonymized genetic data, visualization tools and documents for a group of researchers. There's so much to explore.
 
-          比如本地数据、心率、营养和一次外出中成员们各自的笔记。匿名的一般化数据、可视化工具与一个团队的研究者做的文档。很多有待探索。
+          比如位置数据、心率、营养和一次考察中成员们各自的笔记。匿名的基因数据、可视化工具与研究者团队的文档。存在很多有待探索。
         ==
       ==
     ==
@@ -402,19 +402,19 @@
             ==
             The blockchain was supposed to make the financial system open to anyone. But we're still stuck on MEGACORP exchanges or using flimsy 'dapps' in our browser.
 
-            区块链本为对每个人都开放的金融系统而造。然而我们仍然停滞于巨型企业的交易所或在我们的浏览器中使用单薄的“dapps”。
+            区块链本为对人人都开放的金融系统而制。而我们尚止步不前于巨型企业的交易所或是通过我们的浏览器使用单薄的“dapps”。
 
             A city of traders on Urbit could easily relay orders to one another and send signed transactions directly to the chain from a single agent. That's what you get for free with a fast, deterministic computer on a secure authenticated network.
 
-            Urbit交易员组成的城市可以轻松地向另一个转发订单与直接从一个交易员向链发送经签名加密后的交割。那是你获得在安全已验证的网络之上的快速、确定性的计算机的同时免费得到的。
+            Urbit交易员组成的城市可以轻松地向另一个城市转发订单并且直接从一个交易员向链发送经签名加密后的交割。都是你在获得于安全已验证的网络之上快速、确定性的计算机的同时免费得到的。
 
             And why not go a step further? Let your Arvo server run your trading algorithms or participate in prediction markets. Today's 'dapps' don't have access to persistent state and their UI is limited. Worse, they can't communicate with one another.
 
-            并且为什么不再更进一步？让你的Arvo服务器运行你的交易算法或参与预测市场。今天的“dapps”无法触碰永久储存状态并且他们的UI很有局限性。更糟的是，它们之间无法通讯。
+            那么为什么不再更进一步？让你的Arvo服务器运行你的交易算法或参与预测市场。今天的“dapps”对永久储存的状态无权限并且它们的UI很有局限性。更糟的是，它们之间无法通讯。
 
             Blockchains are so much more useful when connected to a secure personal server. Consensus computation can be much more than just trading coins.
 
-            当安全的个人服务器连接到区块链时，区块链更加有用。共识计算可以远远超过仅仅是交易币。
+            当安全的个人服务器连接到区块链时，区块链就更加有用。币的交割将只是共识计算过程中包括的一小部分。
           ==
         ==
         ;div.col-md-5.col-md-offset-1.sm-hide
@@ -437,7 +437,7 @@
           ;>
             The 'internet of things' is a mess. Some of the 'things' are pretty nice pieces of hardware. But they all require that I use some MEGACORP service. Why can't I just talk directly to my own thermostat?
 
-            “物联网”一团糟。某些“物”是很不错的硬件。但它们都需要我使用一些巨型企业的服务。为什么我不能直接和我自己的恒温器通话？
+            “物联网”一团糟。某些“物”是很不错的硬件。但它们都需要我使用一些来自巨型企业的服务。为什么我不能直接和我自己的恒温器通话？
         ==
         ;div.col-md-8.col-md-offset-2
             ;p
@@ -459,7 +459,7 @@
             ;p
               Once they run Arvo servers, your devices can all run the same agent and join your own private city. Taking control of your robot army is simple once they share the same computing platform.
 
-              一旦它们运行Arvo服务器，你的设备可以全部运行同一个介质并加入你自己的私有城市。只要他们共享同一个计算平台，控制你的机器人军团很简单。
+              一旦它们运行Arvo服务器，你的设备可以全部运行同一个媒介并加入你自己的私有城市。控制你的机器人军团很简单，只要他们共享同一个计算平台。
             ==
         ==
       ==
