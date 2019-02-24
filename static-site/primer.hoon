@@ -592,7 +592,7 @@
       ;div.row
         ;div.col-md-12.center
           ;h1.mb-10.mt-10: Okay nerds, here's a quick technical overview
-          ;h1.mb-10.mt-10: 好了，技术
+          ;h1.mb-10.mt-10: 好吧，书虫们，下面是简明的技术概述
         ==
       ==
       ;div.row.sm-wrap-reverse.mb-20
@@ -600,19 +600,35 @@
           ;>
             Arvo is a general-purpose computer that runs as a virtual machine. You can think of it as an overlay OS; it treats Unix the way Unix treats the BIOS.
 
+            Arvo是一个作为虚拟机运行的通用计算机。你可以把它想作是操作系统上的一层覆盖；它对待Unix好似Unix对待BIOS。
+
             Its behavior is completely defined by a frozen transition function called Nock that goes from `[event, current-state]` to `[effects, next-state]`. An event might be a keypress, an HTTP request, or a UDP message from another Arvo. An effect might be a command to the Unix terminal, an HTTP response, or another UDP message to another Arvo.
+
+            它的行为完全被称为Nock的由“[event, current-state]”至“[effects, next-state]”的冻结变换功能所定义。一个事件可能是一个键盘按键被按、一个HTTP请求、或一个来自另一个Arvo的UDP消息。一个效应可能是一个Unix命令行工具中的命令、一个HTTP回复、或一个来发送到另一个Arvo的UDP消息。
 
             Arvo consists of the following stack of components, from the bottom up.
 
+            Arvo自下而上由以下组件栈组成。
+
             Vere, our interpreter, written in C, is a transactional I/O processor over libuv, which stores its state as a persistent event log and/or memory checkpoint. Vere interprets Nock.
+
+            Vere，我们基于C编写的解释器，是一个基于存储其状态为永久事件日志和/或内存节点的libuv的交割I/O处理器。Vere解释Nock。
 
             Nock, our machine language, is like a pico-Lisp with no symbols. It's a homoiconic purely functional machine code with 12 opcodes and one universal datatype, the noun: an acyclic binary tree that is either a number (which can also represent an arbitrarily large bytestream) or a cell, which is a pair of nouns.
 
+            Nock，我们的机器语言，类似于无符号的pico-Lisp。它是同像性的纯函数机器代码，具有12个opcode与1个通用数据类型，noun：其分支可以是一个可以表示一个任意大byte流的数字，或是一个有一对noun的容器的循环二叉树。
+
             Hoon is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock.
 
+            Hoon是纯函数式、静态、积极求值的编译至Nock的程序语言。
+
             The Arvo kernel is a functional, nonpreemptive, general-purpose OS written in 1000 lines of Hoon.
+            
+            Arvo内核是函数式、非可插队、通用的1000行Hoon写就的操作系统。
 
             Our stack is weird. But you'll get used to it. The whole thing is open source under the MIT license – [take a look](https://github.com/urbit/urbit).
+
+            我们的技术栈是怪异的。但你会习惯它。所有的东西都在MIT许可协议下开源 - [看看](https://github.com/urbit/urbit)。
           ==
         ;div.col-md-5.col-md-offset-1.sm-mb-10.stack-apart.animate-false
           ;svg(xmlns "http://www.w3.org/2000/svg", viewbox "0 0 512 760")
@@ -620,17 +636,21 @@
               ;g.nock-label
                 ;text.text-lg.text-600(x "296", y "116"): Nock
                 ;text.text-lg(x "296", y "144"): Virtual machine
+                ;text.text-lg(x "296", y "144"): 虚拟机
                 ;rect(x "296", y "80", fill "#EE3124", width "10", height "10");
               ==
               ;g.hoon-label
                 ;text.text-lg.text-600(x "296", y "349"): Hoon
                 ;text.text-lg(x "296", y "378"): Programming
+                ;text.text-lg(x "296", y "378"): 程序
                 ;text.text-lg(x "296", y "402"): language
+                ;text.text-lg(x "296", y "402"): 语言
               ==
               ;rect(x "296", y "313", fill "#4fe89c", width "10", height "10");
               ;g.arvo-label
                 ;text.text-lg.text-600(x "296", y "645"): Arvo
                 ;text.text-lg(x "296", y "674"): Operating system
+                ;text.text-lg(x "296", y "674"): 操作系统
                 ;rect(x "296", y "609", fill "#ffc440", width "10", height "10");
               ==
             ==
@@ -665,13 +685,16 @@
             ;ul.list-reset.col-md-12.h-font
               ;div.square.square-sm.square-orange.mb-2;
               ;li.text-600.mb-0: Arvo kernel
+              ;li.text-600.mb-0: Arvo内核
               ;li: Core OS and event manager
+              ;li: 核心操作系统与事件管理器
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-gray.mb-2;
                 ;li.text-600.mb-0: Ames
                 ;li: Peer-to-peer network
+                ;li: 点对点网络
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -679,6 +702,7 @@
               ;div.square.square-sm.square-blue.mb-2;
               ;li.text-600.mb-0: Clay
               ;li.col-md-11: Global filesystem
+              ;li.col-md-11: 全局文件系统
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -686,6 +710,7 @@
                 ;div.square.square-sm.square-green-light.mb-2;
                 ;li.text-600.mb-0: Ford
                 ;li: Build system
+                ;li: 构建系统
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -693,6 +718,7 @@
                 ;div.square.square-sm.square-cyan.mb-2;
                 ;li.text-600.mb-0: Gall
                 ;li: Application sandbox
+                ;li: 应用程序沙盒
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -700,6 +726,7 @@
                 ;div.square.square-sm.square-navy.mb-2;
                 ;li.text-600.mb-0: Jael
                 ;li: Vault for secrets
+                ;li: 秘密存储库
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -707,6 +734,7 @@
                 ;div.square.square-sm.square-purple.mb-2;
                 ;li.text-600.mb-0: Eyre
                 ;li: Web server
+                ;li: Web服务器
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -714,13 +742,16 @@
                 ;div.square.square-sm.square-green.mb-2;
                 ;li.text-600.mb-0: Landscape
                 ;li: Chat and discussion agent
+                ;li: 聊天与讨论端
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-orange-dark.mb-2;
                 ;li.text-600.mb-0: API gateways
+                ;li.text-600.mb-0: API网关
                 ;li: To existing services
+                ;li: 至已有服务
               ==
             ==
             ;div.col-sm-6.col-md-4
@@ -728,6 +759,7 @@
                 ;div.square.square-sm.square-orange-dark.mb-2;
                 ;li.text-600.mb-0: Dill
                 ;li: Terminal driver
+                ;li: 终端驱动
               ==
             ==
           ==
@@ -738,27 +770,51 @@
           ;>
           How do you embed a general-purpose computer into a function? You load programs and data into the state, which the transition function can update on each event.
 
+          你如何在一个函数里嵌入一个通用计算机？将程序和数据载入由变换函数基于每个事件而更新的状态。
+
           To boot a new ship, the first several events are run by the VM (named Vere, written in C) before your ship enters the network. These initial events load in a Hoon compiler, compile and install the Arvo kernel, initialize userland apps and files, and assign your Azimuth point and private keys as your ship's identity. Now your ship is ready to talk to the the world.
+
+          要启动一艘新飞船，首要的几个事件由虚拟机（名为Vere，由C写就）在你飞船进入网络之前运行。这些初始事件载入于编译器Hoon、编译及安装Arvo内核，初始化用户域的应用与文件，并且分配作为你飞船身份的你的Azimuth点和私钥。现在你的飞船可以与世界沟通了。
 
           The Arvo stack can push any update to any part of itself, except Nock and Vere.
 
+          Arvo栈可以向其自身除Nock与Vere之外的任何部分推送任何升级。
+
           Let's walk through some of the components of the Arvo kernel. This is where it gets interesting.
+
+          让我们看看Arvo内核的部分组件。这是开始有意思的地方。
 
           Ames, our network protocol is overlayed over UDP. Every message between ships is signed and end-to-end encrypted. Ames is message-oriented, CQRS, connectionless, data-centric, and transactional.
 
+          Ames，我们的网络协议覆盖于UDP之上。每一条飞船与飞船间的消息都经过签名与端到端加密。Ames是消息导向、命令查询职责分离、无连接、数据为中心与交割化的。
+
           Clay, our filesystem, is a reactive, _typed_, distributed revision-control store that defines an authenticated global immutable namespace.
+
+          Clay，我们的文件系统，是一个响应、有类型、分布式版本控制的定义一个已验证全局非变名称空间的存储。
 
           Ford, our functional build system, can auto-update a page in your browser when someone checks in a change to a math function in a back-end rendering library.
 
+          Ford，我们的函数式构建系统，当有人触发后台渲染库中的一个数学函数时能够自动升级一个你浏览器中的网页。
+
           With compiler, libraries, Arvo and modules, the whole OS is ~30,000 lines of code.
+
+          编译器、库、Arvo和模块总计，整个操作系统有约30,000行代码。
 
           Urbit is also a nontrivial list of other features and components. You can read more in our long, peculiar, mildly outdated [whitepaper](http://media.urbit.org/whitepaper.pdf). _Caveat lector_, it's a tad academic.
 
+          Urbit也是一个不寻常的其它功能与组件的列表。你可以在我们长篇、专门化、些许过时的阅读更多[白皮书](http://media.urbit.org/whitepaper.pdf)。小心，它有点学术化。
+
           Today, Urbit is a stable testnet. Urbit hosts its own site, forum, and federated chat. Its last unplanned breach (global hard fork) was in 2016.
+
+          今天，Urbit是一个稳定的测试网。Urbit寄存其自己的网站、论坛与联合制的聊天系统。它的最后一次计划外事故（全局硬分叉）是在2016年。
 
           Urbit now has a practical clean-room Vere alternative, Jaque, built on Graal/Truffle. Jaque can boot a ship and join the network. It still has some stack issues.
 
+          Urbit现在有一个务实洁净的Vere替代品，Jaque，基于Graal/Truffle。Jaque可以启动一艘飞船并加入网络。它仍然有一些栈问题。
+
           Urbit is not done. It needs optimization, documentation, a lot of polish and even a bit of architecture. But it certainly does work!
+
+          Urbit未完工。它需要优化、文档、大量打磨和甚至一些架构变化。但它确实正常运行。
         ==
       ==
       ;div#what-azimuth-is.container.sm-pt-20.sm-pb-20.pt-40.pb-40
