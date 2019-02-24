@@ -325,7 +325,7 @@
 
             Aegean is a pattern for building _cities_. A city is a group of people running the same _agent_, a kind of program, on their Arvo servers.
 
-            Aegean是个用以建设城市的模式。一座城市是一群人在他们Arvo服务器上运行同一个媒介、一种程序。
+            Aegean是个用以建设城市的模式。一座城市是一群人在他们Arvo服务器上运行同一个**媒介**、一种程序。
 
             A city is not an 'app' designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
 
@@ -477,15 +477,15 @@
           ;div
             Your human record needs to be safe in the cloud. The technology works. MEGACORP is always the weak link. No corporation can promise to live forever — or care forever.
 
-            你的人类性记录需要在云上安全。这个科技好用。巨型企业总是弱点。没有企业能保证永远存在 - 或永远在乎。
+            你的生物性信息需要安全于云上。这个科技用起来没问题。巨型企业总是其薄弱之处。没有企业能保证永远存在 - 或永远在乎。
 
             That's why your Arvo server is the right place to store all the data you want to keep — every message you've ever sent, every photo you've taken, even your financial and medical records. Your personal server maintains an archive, a permanent, trusted place to keep your digital life.
 
-            那就是为什么你的Arvo服务器是正确地点存储所有你想保存的数据 - 每一条你发送的消息、每一张你拍摄的照片、甚至你的财务与医疗记录。你的个人服务器维护一个存档、一个永久、值得信任的地点保存你的数字生活。
+            那就是为什么你的Arvo服务器是正确的场所之于存储一切你想保存的数据 - 每一条你发送的消息、每一张你拍摄的照片、甚至你的财务与医疗记录。你的个人服务器维护一个存档、一个永久、值得信任的场所以保存你的数字生活。
 
             Once your data is safe on your personal server, the way you managed it now will seem scary and backward.
 
-            一旦你的数据在你的个人服务器上安全，你现在管理它的方式将显得可怕与退步。
+            一旦你数据在你的个人服务器上安全，你现在管理它的方式将显得可怕与落后。
           ==
         ==
         ;div.col-md-4.col-md-offset-1.center.sm-hide
@@ -566,33 +566,33 @@
           ;>
             Your personal server, called a ship, is stored as a log of the events it's received, encrypted with a passcode. To start your ship, open your event log file with the Arvo program and type in your passcode. To stop it, just close the program; the event log will wait patiently for next boot.
 
-            你的个人服务器，称作一艘飞船，被作为其接收事件的日志存储，通过密码加密。启动你的飞船，用Arvo程序打开你的事件日志文件并输入你的密码。停止它，直接关闭程序；事件日志将耐心地等待下一次启动。
+            你的个人服务器，称作一艘飞船，被作为其接收、由密码加密的事件日志存储。要启动你的飞船时，用Arvo程序打开你的事件日志文件并输入你的密码。要停止它时，直接关闭程序；事件日志将耐心地等待下一次启动。
 
             To use the Arvo network each ship must have an Azimuth name, or _point_. You own your point on Ethereum. It's a short, pronouncable name like `~laptel-nilfur` or `~doplyx-halsev` (the '~' is silent). Other ships use your Azimuth point to find and talk to your ship, no matter where it is in the world.
 
-            要使用Arvo网络，每艘飞船必须有一个Azimuth名称，或点。你拥有在以太坊上的你的点。它是一个短的，可以读出来的名称，类似于“~laptel-nilfur”或“~doplyx-halsev”（“~”不发音）。其他飞船通过你的Azimuth点发现你的飞船和联系你的飞船，无论它在什么地方。
+            要使用Arvo网络时，每艘飞船必须有一个Azimuth名称、或**点**。你拥有的点在以太坊上。它是个简短，能被读出声来的名称，类似于“~laptel-nilfur”或“~doplyx-halsev”（“~”不发音）。其他飞船通过你的Azimuth点发现及联系你的飞船，无论它在天涯海角。
 
             Most people park their ship in the cloud. If you prefer to host yourself, your ship can live on a laptop, a phone, even a USB stick. It's just a file. It doesn't have to be on all the time. Just don't lose it.
 
-            大多数人把他们的飞船停在云上。如果你喜欢自己建立，你的飞船可以存在于笔记本电脑、手机、甚至U盘上。它只是一个文件。它不必一直运行。只要别丢了它。
+            大多数人把他们的飞船置于云上。如果你想要自己运营，你的飞船可以存在于笔记本电脑、手机、甚至U盘上。它只是一个文件。它没必要一直运行。别把它弄丢了就行。
 
             Wherever your ship is, just log on at `urbit.org` with your name and passcode — like a normal web account.
 
-            无论你的飞船在哪里，只要用你的名称和密码登陆“urbit.org” - 像普通的网络账户一样。
+            无论你的飞船在哪里，只要用你的名称和密码登陆“urbit.org” - 像普通的互联网账户一样。
 
             You operate your ship through a web UI and/or a local console. You can sync the current version its files with your local computer. (Arvo remembers every version, forever.) Your ship can also host its own webpages and interact with existing webservices on your behalf.
 
-            你通过网页界面和/或本地命令行界面操作你的飞船。你可以用你的本地电脑同步到最新版本的文件。（Arvo记得本一个版本，永远。）你的飞船也可以作为服务器寄存网页与
+            你通过网页界面和/或本地命令行界面操作你的飞船。你可以用你的本地电脑同步到最新版本的文件。（Arvo永远记得每一个版本。）你的飞船也能作为网站服务器使用和代替你与已有的互联网服务互动。
 
             Your ship is designed to need no maintenance at all. Upgrades come in over the network. It never gets old or out of date. Leave one off for a century, then turn it on — it might take a week, but it will automatically upgrade itself to 2119.
 
-            你的飞船被设计成无需任何维护。通过网络升级。它从不变老或过时。一个世纪不启动，然后打开它 - 可能会需要一周，但它会自动自我升级到2119年。
+            你的飞船被设计成彻底免维护的。通过网络进行升级。它从不变旧或过时。一个世纪不启动后打开它 - 可能会需要一周，但它会自动自我升级到2119年。
           ==
       ==
       ;div.row
         ;div.col-md-12.center
           ;h1.mb-10.mt-10: Okay nerds, here's a quick technical overview
-          ;h1.mb-10.mt-10: 好吧，书虫们，下面是简明的技术概述
+          ;h1.mb-10.mt-10: 好吧，宅们，下面是简明的技术概述
         ==
       ==
       ;div.row.sm-wrap-reverse.mb-20
@@ -600,19 +600,19 @@
           ;>
             Arvo is a general-purpose computer that runs as a virtual machine. You can think of it as an overlay OS; it treats Unix the way Unix treats the BIOS.
 
-            Arvo是一个作为虚拟机运行的通用计算机。你可以把它想作是操作系统上的一层覆盖；它对待Unix好似Unix对待BIOS。
+            Arvo是个作为虚拟机运行的通用计算机。你可以把它想作是操作系统上的一层覆盖；它对待Unix好似Unix对待BIOS。
 
             Its behavior is completely defined by a frozen transition function called Nock that goes from `[event, current-state]` to `[effects, next-state]`. An event might be a keypress, an HTTP request, or a UDP message from another Arvo. An effect might be a command to the Unix terminal, an HTTP response, or another UDP message to another Arvo.
 
-            它的行为完全被称为Nock的由“[event, current-state]”至“[effects, next-state]”的冻结变换功能所定义。一个事件可能是一个键盘按键被按、一个HTTP请求、或一个来自另一个Arvo的UDP消息。一个效应可能是一个Unix命令行工具中的命令、一个HTTP回复、或一个来发送到另一个Arvo的UDP消息。
+            它的行为完全被由“[event, current-state]”至“[effects, next-state]”的冻结变换函数（称为Nock）所定义。一个事件可能是按下了一个键盘按键、一个HTTP请求、或一个来自另一个Arvo的UDP消息。一个效应可能是一个Unix命令行工具中的命令、一个HTTP回复、或一个发送到另一个Arvo的UDP消息。
 
             Arvo consists of the following stack of components, from the bottom up.
 
-            Arvo自下而上由以下组件栈组成。
+            Arvo自下而上由以下组件栈构成。
 
             Vere, our interpreter, written in C, is a transactional I/O processor over libuv, which stores its state as a persistent event log and/or memory checkpoint. Vere interprets Nock.
 
-            Vere，我们基于C编写的解释器，是一个基于存储其状态为永久事件日志和/或内存节点的libuv的交割I/O处理器。Vere解释Nock。
+            Vere，我们基于C编写的解释器，是个基于将其状态存储为永久事件日志和/或内存节点的libuv之上的交割I/O处理器。Vere解释Nock。
 
             Nock, our machine language, is like a pico-Lisp with no symbols. It's a homoiconic purely functional machine code with 12 opcodes and one universal datatype, the noun: an acyclic binary tree that is either a number (which can also represent an arbitrarily large bytestream) or a cell, which is a pair of nouns.
 
@@ -620,7 +620,7 @@
 
             Hoon is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock.
 
-            Hoon是纯函数式、静态、积极求值的编译至Nock的程序语言。
+            Hoon是纯函数式、静态、积极求值、编译至Nock的程序语言。
 
             The Arvo kernel is a functional, nonpreemptive, general-purpose OS written in 1000 lines of Hoon.
             
@@ -774,7 +774,7 @@
 
           To boot a new ship, the first several events are run by the VM (named Vere, written in C) before your ship enters the network. These initial events load in a Hoon compiler, compile and install the Arvo kernel, initialize userland apps and files, and assign your Azimuth point and private keys as your ship's identity. Now your ship is ready to talk to the the world.
 
-          要启动一艘新飞船，首要的几个事件由虚拟机（名为Vere，由C写就）在你飞船进入网络之前运行。这些初始事件载入于编译器Hoon、编译及安装Arvo内核，初始化用户域的应用与文件，并且分配作为你飞船身份的你的Azimuth点和私钥。现在你的飞船可以与世界沟通了。
+          要启动一艘新飞船时，首要的几个事件由虚拟机（名为Vere，由C写就）在你飞船进入网络之前运行。这些初始事件载入于编译器Hoon、编译及安装Arvo内核，初始化用户域的应用与文件，并且分配作为你飞船身份的你的Azimuth点和私钥。现在你的飞船可以与世界沟通了。
 
           The Arvo stack can push any update to any part of itself, except Nock and Vere.
 
@@ -782,7 +782,7 @@
 
           Let's walk through some of the components of the Arvo kernel. This is where it gets interesting.
 
-          让我们看看Arvo内核的部分组件。这是开始有意思的地方。
+          让我们历数Arvo内核的部分组件。这里开始有意思了。
 
           Ames, our network protocol is overlayed over UDP. Every message between ships is signed and end-to-end encrypted. Ames is message-oriented, CQRS, connectionless, data-centric, and transactional.
 
@@ -790,7 +790,7 @@
 
           Clay, our filesystem, is a reactive, _typed_, distributed revision-control store that defines an authenticated global immutable namespace.
 
-          Clay，我们的文件系统，是一个响应、有类型、分布式版本控制的定义一个已验证全局非变名称空间的存储。
+          Clay，我们的文件系统，是一个响应式、**有类型约束**、分布式版本控制、定义一个已验证全局不可变名称空间的存储。
 
           Ford, our functional build system, can auto-update a page in your browser when someone checks in a change to a math function in a back-end rendering library.
 
@@ -798,11 +798,11 @@
 
           With compiler, libraries, Arvo and modules, the whole OS is ~30,000 lines of code.
 
-          编译器、库、Arvo和模块总计，整个操作系统有约30,000行代码。
+          编译器、库、Arvo和模块一道，整个操作系统有约30,000行代码。
 
           Urbit is also a nontrivial list of other features and components. You can read more in our long, peculiar, mildly outdated [whitepaper](http://media.urbit.org/whitepaper.pdf). _Caveat lector_, it's a tad academic.
 
-          Urbit也是一个不寻常的其它功能与组件的列表。你可以在我们长篇、专门化、些许过时的阅读更多[白皮书](http://media.urbit.org/whitepaper.pdf)。小心，它有点学术化。
+          Urbit也是个其它功能与组件的不寻常列表。你可以阅读我们长篇、特有、些许过时的[白皮书](http://media.urbit.org/whitepaper.pdf)以了解更多。**提示**，它有点学术。
 
           Today, Urbit is a stable testnet. Urbit hosts its own site, forum, and federated chat. Its last unplanned breach (global hard fork) was in 2016.
 
@@ -810,11 +810,11 @@
 
           Urbit now has a practical clean-room Vere alternative, Jaque, built on Graal/Truffle. Jaque can boot a ship and join the network. It still has some stack issues.
 
-          Urbit现在有一个务实洁净的Vere替代品，Jaque，基于Graal/Truffle。Jaque可以启动一艘飞船并加入网络。它仍然有一些栈问题。
+          Urbit现在有一个务实洁净的Vere替代品，Jaque，基于Graal/Truffle。Jaque可以启动一艘飞船并加入网络。它仍然有一些栈相关的问题。
 
           Urbit is not done. It needs optimization, documentation, a lot of polish and even a bit of architecture. But it certainly does work!
 
-          Urbit未完工。它需要优化、文档、大量打磨和甚至一些架构变化。但它确实正常运行。
+          Urbit未完工。它需要优化、文档、大量打磨、甚至一些架构变化。但它确实正常运行着。
         ==
       ==
       ;div#what-azimuth-is.container.sm-pt-20.sm-pb-20.pt-40.pb-40
@@ -838,19 +838,19 @@
 
             With clear ownership, IP addresses would develop clear reputations. Abusers would lose real money in reputation cost and the internet would be a friendly network.
 
-            具备了明晰的所有权，IP地址将发展出明确的声誉。捣乱者将损失基于声誉成本的真金白银并且互联网将是一个有好的网络。
+            具备了明晰的所有权，IP地址将发展出明确的声誉。捣乱者将损失基于声誉成本的真金白银并且互联网将是个友好的网络。
 
             We can't fix IP. So we built a system of decentralized address space and called it Azimuth. Ames, the Arvo UDP overlay network, uses Azimuth addresses for identity and routing.
 
-            我们无法矫正IP。所以我们建立了一个去中心化的地址空间系统并称其为Azimuth。Ames，UDP式的Arvo叠加网络，使用Azimuth地址作为身份与路由。
+            我们无法矫正IP。所以我们建立了一个去中心化的地址空间系统并称其为Azimuth。Ames，作为UDP式的Arvo叠加网络，使用Azimuth地址作为身份与路由。
 
             Any reputation system needs scarcity of identity. Numerical scarcity is more elegant than a real-name policy. So Azimuth is limited to `4,294,967,296` independent planets.
 
-            任何声誉系统都需要身份的稀缺性。数值稀缺性比实际名称规则更优美。所以Azimuth限于“4,294,967,296”个独立行星。
+            任何声誉系统都需要身份的稀缺性。数值稀缺性比实名规则更优美。所以Azimuth限于“4,294,967,296”个独立行星。
 
             The Azimuth address space grows like a family. 8-bit galaxies (like `~hal`) can issue 16-bit stars `~sogtyv`, which issue 32-bit planets (`~laptel-holfur`). Each of these addresses is called an Azimuth _point_.
 
-            Azimuth地址空间像家庭那样成长。8位星系（如“~hal”）可以发行有能力发行32位行星（“~laptel-holfur”）的16位恒星“~sogtyv”。每一个这样的地址称为Azimuth点。
+            Azimuth地址空间像家庭那样成长。8位星系（如“~hal”）可以发行有能力发行32位行星（“~laptel-holfur”）的16位恒星“~sogtyv”。每一个这样的地址称为Azimuth**点**。
             ;div.row.mb-3
               ;div.col-sm-4.text-mono
                 ;ul.list-reset
@@ -887,7 +887,7 @@
             ==
             Stars and planets can emancipate themselves by changing sponsors, so you're never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
-            恒星与行星可以通过变更赞助方自我接触约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
+            恒星与行星可以通过变更赞助方自我解除约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
 
             The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
 
