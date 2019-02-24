@@ -444,7 +444,7 @@
               ;span: Your Azimuth identity, or
               ;span: 你的Azimuth身份，或
               ;i.ml-1: planet
-              ;i.ml-1: 星球
+              ;i.ml-1: 行星
               ;span: , can launch 2
               ;span: ，可以启动2
               ;sup.mr-1: 32
@@ -823,6 +823,7 @@
             ;div.row.sm-h2.h1.h1-large.h-font
               ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
               ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth: What Urbit is
+              ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth：Urbit是什么
             ==
           ==
         ==
@@ -833,19 +834,32 @@
             ;>
             If IP addresses were cryptographic property, the Internet could have funded its own development with its own address space.
 
+            如果IP地址是密码式财产，互联网就可以通过其地址空间为其开发提供资金。
+
             With clear ownership, IP addresses would develop clear reputations. Abusers would lose real money in reputation cost and the internet would be a friendly network.
+
+            具备了明晰的所有权，IP地址将发展出明确的声誉。捣乱者将损失基于声誉成本的真金白银并且互联网将是一个有好的网络。
 
             We can't fix IP. So we built a system of decentralized address space and called it Azimuth. Ames, the Arvo UDP overlay network, uses Azimuth addresses for identity and routing.
 
+            我们无法矫正IP。所以我们建立了一个去中心化的地址空间系统并称其为Azimuth。Ames，UDP式的Arvo叠加网络，使用Azimuth地址作为身份与路由。
+
             Any reputation system needs scarcity of identity. Numerical scarcity is more elegant than a real-name policy. So Azimuth is limited to `4,294,967,296` independent planets.
 
+            任何声誉系统都需要身份的稀缺性。数值稀缺性比实际名称规则更优美。所以Azimuth限于“4,294,967,296”个独立行星。
+
             The Azimuth address space grows like a family. 8-bit galaxies (like `~hal`) can issue 16-bit stars `~sogtyv`, which issue 32-bit planets (`~laptel-holfur`). Each of these addresses is called an Azimuth _point_.
+
+            Azimuth地址空间像家庭那样成长。8位星系（如“~hal”）可以发行有能力发行32位行星（“~laptel-holfur”）的16位恒星“~sogtyv”。每一个这样的地址称为Azimuth点。
             ;div.row.mb-3
               ;div.col-sm-4.text-mono
                 ;ul.list-reset
                   ;li.red.text-600: 1 Galaxy
+                  ;li.red.text-600: 1个星系
                   ;li.blue.text-600: 1 Star
+                  ;li.blue.text-600: 1颗恒星
                   ;li.green.text-600: 1 Planet
+                  ;li.green.text-600: 1颗行星
                 ==
               ==
               ;div.col-sm-8.text-mono
@@ -854,23 +868,30 @@
                     ;span: = ~2
                     ;sup.mr-1: 8
                     ;span: Stars
+                    ;span: 颗恒星
                   ==
                   ;li.green.text-600
                     ;span: = ~2
                     ;sup.mr-1: 16
                     ;span: Planets
+                    ;span: 颗行星
                   ==
                   ;li.gray.text-600
                     ;span: = ~2
                     ;sup.mr-1: 32
                     ;span: Moons
+                    ;span: 颗卫星
                   ==
                 ==
               ==
             ==
             Stars and planets can emancipate themselves by changing sponsors, so you're never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
+            恒星与行星可以通过变更赞助方自我接触约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
+
             The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
+
+            基本的
 
             Governance is performed by the galaxies. The galaxies form a senate which updates the logic of the Ethereum land registry by majority vote.
 
