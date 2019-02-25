@@ -160,7 +160,7 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#history"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: 历史
+                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: 沿革
               ==
             ==
           ==
@@ -223,7 +223,7 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#history"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip：历史
+                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip：沿革
                 ==
               ==
             ==
@@ -620,7 +620,7 @@
 
             Hoon is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock.
 
-            Hoon是纯函数式、静态、积极求值、编译至Nock的程序语言。
+            Hoon是纯函数式、静态、积极求值、编译至Nock的编程语言。
 
             The Arvo kernel is a functional, nonpreemptive, general-purpose OS written in 1000 lines of Hoon.
             
@@ -834,7 +834,7 @@
             ;>
             If IP addresses were cryptographic property, the Internet could have funded its own development with its own address space.
 
-            如果IP地址是密码式财产，互联网就可以通过其地址空间为其开发提供资金。
+            如果IP地址是密码式资产，互联网就可以通过其地址空间为其开发提供资金。
 
             With clear ownership, IP addresses would develop clear reputations. Abusers would lose real money in reputation cost and the internet would be a friendly network.
 
@@ -887,15 +887,19 @@
             ==
             Stars and planets can emancipate themselves by changing sponsors, so you're never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
-            恒星与行星可以通过变更赞助方自我解除约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
+            恒星与行星可以通过变更担保方自我解除约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
 
             The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
 
-            基本的
+            大致想法是，你需要**某人**担保你在网络上的成员身份。一个无法找到担保方的地址很可能是个机器人或是个垃圾邮件发送者。在Arvo网络中，上一级提供点对点路由与分发软件升级。Azimuth中的担保是个非常简单的声誉系统。刚好足够决定向谁导向数据包并且易于在此基础上做构建。
 
             Governance is performed by the galaxies. The galaxies form a senate which updates the logic of the Ethereum land registry by majority vote.
 
+            治理由星系完成。星系形成一个通过多数原则投票机制可对以太坊上土地注册逻辑升级的参议院。
+
             Azimuth is designed to make Arvo a safe, friendly network. Once that's true, who wants to keep using the Internet?
+
+            Azimuth基于使Arvo成为安全、友好的网络而设计。一旦正确实现，谁会想用传统互联网？
           ==
           ;div.col-sm-12.col-md-3.col-md-offset-1
             ;div.row
@@ -908,6 +912,7 @@
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 256
                   ;p.mb-0.pb-0.red.text-600: Galaxies
+                  ;p.mb-0.pb-0.red.text-600: 星系
                 ==
               ==
               ;div.col-sm-5.col-sm-offset-2.col-md-12.col-md-offset-0
@@ -919,6 +924,7 @@
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 65,280
                   ;p.mb-0.pb-0.blue.text-600: Stars
+                  ;p.mb-0.pb-0.blue.text-600: 恒星
                 ==
               ==
               ;div.col-sm-5.col-md-12
@@ -930,6 +936,7 @@
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 4,294,902,016
                   ;p.mb-0.pb-0.green.text-600: Planets
+                  ;p.mb-0.pb-0.green.text-600: 行星
                 ==
               ==
             ==
@@ -945,6 +952,7 @@
             ;div.row.sm-h2.h1.h1-large.h-font
               ;span.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
               ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: History
+              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: 沿革
             ==
           ==
         ==
@@ -954,6 +962,8 @@
           ;div.col-md-8.col-md-offset-2.p--intro
             ;p
               At the start, a new platform takes imagination, independence, and time. At the end, it takes hustle, organization, and money.
+            ;p
+              一开始，一个新平台依托想象、独立与时间。最后，它立于忙乱、组织与金钱。
             ==
           ==
         ==
@@ -964,6 +974,7 @@
           ==
           ;div.col-sm-8.col-md-5
             ;p.text-lg.text-600: Curtis goes down to his garage to reinvent computing. Or something.
+            ;p.text-lg.text-600: Curtis下到他的车库去重塑计算。或是一些事物。
           ==
         ==
         ;div.row.mb-10
@@ -973,12 +984,16 @@
           ==
           ;div.col-sm-8.col-md-3
             Nock works. Coming in at 32 lines of code, that's about 1 line of code every two months.
+          ;div.col-sm-8.col-md-3
+            Nock正常工作。一共32行代码，差不多每两个月一行代码。
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-green;
           ==
           ;div.col-sm-8.col-md-4
             While Nock is cool, it needs a language. Work on Hoon begins.
+          ;div.col-sm-8.col-md-4
+            虽然Nock很酷，它还需要一个编程语言。Hoon的工作开始了。
           ==
         ==
         ;div.row.mb-10
@@ -988,12 +1003,16 @@
           ==
           ;div.col-sm-8.col-md-3
               Hoon works pretty well. It's much easier to write Hoon than Nock.
+          ;div.col-sm-8.col-md-3
+              Hoon工作得很不错。写Hoon比写Nock容易多了。
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-orange;
           ==
           ;div.col-sm-8.col-md-4
             But what do you do with a language on its own? Not much. Work on Arvo begins.
+          ;div.col-sm-8.col-md-4
+            一个编程语言本身能用来干什么？不太多。Arvo的工作开始了。
           ==
         ==
         ;div.row.mb-10
@@ -1003,6 +1022,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Arvo boots and can do a few tricks.
+          ;div.col-sm-8.col-md-3
+              Arvo可以启动并且能做些小把戏。
           ==
         ==
         ;div.row.mb-10.sm-wrap-reverse
@@ -1012,9 +1033,11 @@
           ==
           ;div.col-sm-8.col-md-5
             ;p.text-lg.text-600: The first live Urbit test network is started with a command-line chat.
+            ;p.text-lg.text-600: 首个即时Urbit测试网由命令行聊天开始了。
           ==
           ;div.col-md-2.col-md-offset-1.sm-center.sm-mb-10
             ;img@"/images/sticker-1.svg"(alt "11 years later");
+            ;img@"/images/sticker-1.svg"(alt "11年后");
           ==
         ==
 
@@ -1025,6 +1048,8 @@
           ==
           ;div.col-sm-8.col-md-3
             Tlon is founded as the corporate vehicle for Urbit.
+          ;div.col-sm-8.col-md-3
+            Tlon作为Urbit的公司化存在而设立。
           ==
         ==
         ;div.row.mb-10
@@ -1034,6 +1059,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Urbit serves its own website and chat.
+          ;div.col-sm-8.col-md-3
+              Urbit作为其自己网站和聊天服务的服务器了。
           ==
         ==
 
@@ -1044,6 +1071,8 @@
           ==
           ;div.col-sm-8.col-md-5
             ;p.text-lg.text-600: The first public sale of Urbit address space. Finishes in four hours.
+          ;div.col-sm-8.col-md-5
+            ;p.text-lg.text-600: 首次公开发售Urbit地址空间。于4小时内售罄。
           ==
         ==
         ;div.row.mb-10
@@ -1053,6 +1082,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Our test network runs for ten months without a reboot.
+          ;div.col-sm-8.col-md-3
+              我们的测试网在无重启下连续运行了10个月。
           ==
         ==
         ;div.row.mb-10.sm-wrap-reverse
@@ -1062,6 +1093,8 @@
           ==
           ;div.col-sm-8.col-md-5
             ;p.text-lg.text-600: Our private sale sells out in six hours — limit 2 per person.
+          ;div.col-sm-8.col-md-5
+            ;p.text-lg.text-600: 我们的私密发售于6小时内售罄 - 每个人可以购买两个恒星。
           ==
         ==
         ;div.row.mb-10
@@ -1071,6 +1104,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Work on new versions of networking, frontend, boot sequence, secret storage, Arvo kernel, and Hoon language begins.
+          ;div.col-sm-8.col-md-3
+              开始开发新版本的网络、前台、启动序列、秘密存储、Arvo内核及Hoon语言。
           ==
           ;div.col-sm-2.col-md-1.text-mono.text-700.center: ~2017.11
           ;div.col-sm-2.col-md-1.center
@@ -1078,6 +1113,8 @@
           ==
           ;div.col-sm-8.col-md-3
               The great migration to Ethereum starts.
+          ;div.col-sm-8.col-md-3
+              向以太坊的大迁徙开始。
           ==
         ==
         ;div.row.mb-10
@@ -1087,6 +1124,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Landscape begins in earnest, wallet design, Bridge, Ford is rewritten.
+          ;div.col-sm-8.col-md-3
+              Landscape细致地开始了、钱包设计、Bridge和Ford被重写。
           ==
           ;div.col-sm-2.col-md-1.text-mono.text-700.center: ~2018.10
           ;div.col-sm-2.col-md-1.center
@@ -1094,6 +1133,8 @@
           ==
           ;div.col-sm-8.col-md-3
               Landscape is demoed to all of Tlon.
+          ;div.col-sm-8.col-md-3
+              在Tlon向大家演示了Landscape。
           ==
         ==
         ;div.row.sm-wrap-reverse
@@ -1103,6 +1144,7 @@
           ==
           ;div.col-sm-8.col-md-5
             ;p.text-lg.text-600: Azimuth is live on Ethereum, Bridge and Wallet Generator are live. Landscape is in a private beta.
+            ;p.text-lg.text-600: Azimuth在以太坊上运行中、Bridge和钱包生成器在运行中。Landscape在内测中。
           ==
         ==
       ==
@@ -1114,6 +1156,7 @@
             ;div.row.sm-h2.h1.h1-large.h-font
               ;span.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
               ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth distribution
+              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth分布
             ==
           ==
         == :: /row
@@ -1123,13 +1166,23 @@
           ;div.col-md-8.col-md-offset-2.p--intro
             Azimuth, the Urbit address space, is digital property. Property is a fact, not a value judgment. Who owns it is who owns it.
 
+            Azimuth，作为Urbit的地址空间，是数字资产。资产是现实而不是价值判断。拥有即是拥有。
+
             At first, most of it was just given away. Like bitcoins, galaxies used to be easy to get. In 2010, you could earn a galaxy by writing decrement in Nock.
+
+            起初，其中的大多数是无偿给出的。类似于比特币，获得星系曾经很容易。2010年，在Nock里编写decrement就可以得到一个星系。
 
             In 2013 we started Tlon as the vehicle for Urbit development. Tlon bought half the address space for what is now just a few BTC. Soon after, we created 'urbit.org' — a pool of 64 galaxies meant to fund development of Urbit infrastructure. Tlon remains the guardian of the urbit.org galaxies.
 
+            2013年，我们设立了Tlon作为Urbit开发的载体。Tlon以现在值仅仅几个比特币的价格购买了一半的地址空间。不久之后，我们创建了“urbit.org” - 一个64星系的池子以为Urbit的基础设施开发提供资金。Tlon留任为urbit.org关联星系的守护者。
+
             We have always wanted the address space to be widely distributed. As urbit becomes more useful, this happens on its own.
 
+            我们始终希望地址空间得以广泛分布。当Urbit变得越来越有用，它会自然而然地发生。
+
             At the launch of Azimuth to Ethereum (`~2019.1`), this is the distribution of stars:
+
+            在Azimuth启动于以太坊之时（“约2019年一月”），恒星的分布如下：
           ==
         == :: /row
         ;div.row.pb-20
@@ -1162,6 +1215,7 @@
                     ;div.circle.circle-sm.shape-blue-light;
                   ==
                   ;div.col-md-4.text-700: Contributors + supporters
+                  ;div.col-md-4.text-700: 贡献者 + 支持者
                   ;div.col-md-2.text-mono: 17.57%
                 == ::/row
               == ::/ col-sm-5
@@ -1170,7 +1224,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-orange;
                   ==
-                  ;div.col-md-4.text-700: Founders + Tlon employees
+                  ;div.col-md-4.text-700: 创始人 + Tlon雇员
                   ;div.col-md-2.text-mono: 15.23%
                 == :: /row
               ==  ::// col-sm-5
@@ -1179,7 +1233,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-green;
                   ==
-                  ;div.col-md-3.text-700: Tlon investors
+                  ;div.col-md-3.text-700: Tlon投资方
                   ;div.col-md-2.col-md-offset-1.text-mono: 13.28%
                 == ::/row
               == ::/ col-sm-5
@@ -1188,7 +1242,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-black;
                   ==
-                  ;div.col-md-3.text-700: 2018 Galaxy Buyers
+                  ;div.col-md-3.text-700: 2018星系买家
                   ;div.col-md-2.col-md-offset-1.text-mono: 8.39%
                 == ::/row
               == ::/ col-sm-5
@@ -1197,7 +1251,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-gray-dark;
                   ==
-                  ;div.col-md-3.text-700: 2016 + 2017 Star Buyers
+                  ;div.col-md-3.text-700: 2016 + 2017恒星买家
                   ;div.col-md-2.col-md-offset-1.text-mono: 3.13%
                 == ::/row
               == ::/ col-sm-5
@@ -1208,10 +1262,12 @@
           ;div.col-md-4.col-md-offset-1
             ;h1.h1-large.gray.text-mono.text-700: >1,000
             ;p.text-600: Star and galaxy owners
+            ;p.text-600: 恒星与星系所有者
           ==
           ;div.col-md-4.col-md-offset-1
             ;h1.h1-large.blue.text-mono.text-700: ~19%
             ;p.text-600: Of the network dedicated to funding open source development through urbit.org.
+            ;p.text-600: 通过urbit.org为开源开发提供资金而专设的部分在网络中的百分比。
           ==
         == :: /row 3-up
       == :: /container
@@ -1219,14 +1275,21 @@
         ;div.row
           ;div.col-md-8.col-md-offset-2.mb-12
             ;h1: Azimuth unlocking
+            ;h1: Azimuth解锁
           ==
           ;div.col-md-8.col-md-offset-2.mb-24.p--intro
             ;p: To prevent the network from growing too quickly, Azimuth has built in 'unlocking' for stars. Galaxies remain transferrable, but their stars unlock over time.
+            ;p: 为避免网络暴增，Azimuth为恒星内建“解锁”功能。星系仍然可转让，但它们的恒星逐渐解锁。
             ;p: Each star also unlocks its ability to issue planets over six years. 1024 in the first year, which doubles each year thereafter.
+            ;p: 每棵恒星同时在6年中逐渐解锁发放行星的功能。首年1024颗，之后逐年加倍。
             ;p: Star buyers in the first two sales (2016 + 2017) and private buyers since 2015 are unlocked right away.
+            ;p: 前两次恒星发售（2016 + 2017）的买家与自2015年开始的私密买家所持有的恒星直接全部解锁。
             ;p: Galaxy buyers from 2018 unlock over either one or three years.
+            ;p: 自2018开始的星系买家所持有的恒星在1或3年中逐渐解锁。
             ;p: urbit.org unlocks linearly over two years.
+            ;p: urbit.org在2年中线性逐渐解锁。
             ;p: Founders, early employees + contributors, supporters, prizewinners and Tlon and its investors are locked for a year, then unlock linearly over four years.
+            ;p: 创始人、早期雇员 + 贡献者、支持者、奖励获得者和Tlon及其投资方的锁定期限是1年，其后在4年中线性解锁。
           ==
         ==
         ;div.flex.mb-6
@@ -1259,6 +1322,7 @@
         ;div.flex.mb-6.items-center
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: 2017 / 2018 Star Sales, Private Buyers 2015 - 2017
+            ;div.mb-0.text-sm.text-600: 2017 / 2018恒星发售、2015 - 2017私密买家
           ==
           ;div.col-sm-1
             ;div.h-32.bg-blue;
@@ -1267,6 +1331,7 @@
         ;div.flex.mb-6.items-center
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: urbit.org + urbit.org Prize Winners
+            ;div.mb-0.text-sm.text-600: urbit.org + urbit.org奖励获得者
           ==
           ;div.col-sm-5
             ;div.h-32.bg-blue;
@@ -1275,6 +1340,7 @@
         ;div.flex.mb-6.items-center
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: 2018 Galaxy Buyers
+            ;div.mb-0.text-sm.text-600: 2018星系买家
           ==
           ;div.col-sm-7
             ;div.h-32.bg-blue;
@@ -1283,6 +1349,7 @@
         ;div.flex.mb-6.items-center
           ;div.col-md-2
             ;div.mb-0.text-sm.text-600: Founders + Early Employees, Contributors + Supporters, Tlon + Tlon Investors
+            ;div.mb-0.text-sm.text-600: 创始人 + 早期雇员、 贡献者 + 支持者、 Tlon + Tlon投资方
           ==
           ;div.col-sm-2.col-md-3
             ;div.h-32.bg-blue-light;
