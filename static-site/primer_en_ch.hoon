@@ -616,7 +616,7 @@
 
             Nock, our machine language, is like a pico-Lisp with no symbols. It's a homoiconic purely functional machine code with 12 opcodes and one universal datatype, the noun: an acyclic binary tree that is either a number (which can also represent an arbitrarily large bytestream) or a cell, which is a pair of nouns.
 
-            Nock，我们的机器语言，类似于无符号的pico-Lisp。它是同像性的纯函数机器代码，具有12个opcode与1个通用数据类型，noun：其分支可以是一个可以表示一个任意大byte流的数字，或是一个有一对noun的cons cell的循环二叉树。
+            Nock，我们的机器语言，类似于无符号的pico-Lisp。它是同像性的纯函数机器代码，具有12个opcode与1个通用数据类型，noun：循环二叉树，其分支可以是一个数字(可以用于表示一个任意大的byte流)，或是一个有一对noun的cons cell。
 
             Hoon is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock.
 
