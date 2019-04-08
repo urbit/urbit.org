@@ -10,7 +10,7 @@
 
 Here's a short update from the team at Tlon for the week of `~2019.2.5`:
 
-;img@"https://storage.googleapis.com/media.urbit.org/fora/updates/2019.2.4-update.jpg"(Width "100%");
+;img@"https://media.urbit.org/fora/updates/2019.2.4-update.jpg"(width "100%");
 
 Welcome to the other side. The Urbit PKI, Azimuth, now fully [migrated to the Ethereum blockchain](https://urbit.org/posts/essays/azimuth-is-on-chain/). This migration means that all address-space-holders have cryptographic ownership of their assets. The guide to getting on the network can be found [here](https://urbit.org/docs/getting-started/).
 

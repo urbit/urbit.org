@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+# Use this script to automate building the website. You'll need a fresh copy of
+# the repository and a fresh fakezod booted with the static-site-dev branch of
+# Arvo. The site is built in two steps because Urbit typically runs out of
+# memory before finishing a full build. One fakezod is usually good for only a
+# single build.
+
+# Strip trailing slashes on input parameters
+
+site=${1%/}
+ship=${2%/}
+
+# Copy static_site to ship
+
+copy_static_site ()
+{
+  echo -e "- Copying source files from $site to $ship"
+  rm -rf $ship/home/web
+  cp -r $site/static-site $ship/home/web
+  cp $site/static-site/index.hoon $ship/home/web.hoon
+  rm -rf $ship/home/ren/partials
+  cp -r $site/partials $ship/home/ren/partials
+  cp $site/urb.hoon $ship/home/ren
+}
+
+# Print instructions if both parameters aren't provided
+
+if [[ $# -lt 2 ]] ; then
+  printf '- This command needs two arguments:\n(1) the path to your urbit.org repository\n(2) the path to your pier\n'
+  exit 0
+fi
+
+# Print instructions
+
+read -n1 -s -r -p $'- Boot your fakezod and run |mount %, then press any key to continue\n'
+
+# Create dist folder
+
+dist="dist-$(date -u '+%Y.%-m.%-d...%H.%M.%S')"
+mkdir $dist
+
+# Second render with |static in urbit (posts)
+
+copy_static_site $site $ship
+rm -rf $ship/home/web/docs
+read -n1 -s -r -p $'- Wait for sync, then run |static in your urbit, wait for it to finish, then press any key to continue\n'
+
+# Copy results of first render (posts) to dist folder
+
+echo -e "- Copying posts from $site to $ship"
+cp -r $ship/.urb/put/web/* $dist
+
+# First render with |static in urbit (docs)
+
+copy_static_site $site $ship
+rm -rf $ship/home/web/posts
+read -n1 -s -r -p $'- Wait for sync, then run |static in your urbit again, wait for it to finish, then press any key to continue\n'
+
+# Copy results of second render (docs) to dist folder
+
+rsync -av --ignore-existing $ship/.urb/put/web/* $dist
+
+# Remove unecessary files
+
+rm -rf $dist/index
+
+# Copy js directory 
+
+rm -rf $dist/js/*
+cp -r $site/static-site/js $dist
+
+echo -e "- Find your website in $dist"

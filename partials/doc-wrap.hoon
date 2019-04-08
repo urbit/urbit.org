@@ -3,7 +3,7 @@
 /=  content  /,  /web/docs/learn  /partials-kids-plus/
                  /web/docs/reference  /partials-kids-plus/
                  /web/docs/getting-started  /partials-kids-plus/
-                 /web/docs/introduction  /partials-kids-plus/
+                 /web/docs/concepts  /partials-kids-plus/
                  /web/docs  /elem/
              ==
 /=  sidebar  /partials-sidebar/

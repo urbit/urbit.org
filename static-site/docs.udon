@@ -2,12 +2,69 @@
         navuptwo/'true'
         next/'true'
         sort/'1'
-        title/'Technical overview'
+        title/'Introduction'
     ==
 ;>
 
 # Docs
 
-Welcome to the documentation for the Urbit project, including the Azimuth identity layer, the Arvo operating system, and the Hoon programming language. This documentation is maintained by [Tlon](https://tlon.io) in a public [Github repository](https://github.com/urbit/docs). Issues and contributions are welcome.
+Welcome to the documentation for the Urbit project, including the Azimuth identity layer, the Arvo operating system, and the Hoon programming language. This documentation is maintained by [Tlon](https://tlon.io) in a public [GitHub repository](https://github.com/urbit/docs). Issues and contributions are welcome.
 
-Please make your way to the [Introduction](docs/introduction) for an overview of the docs.
+The documentation is organized into five high-level sections. Read on to get acquainted.
+
+## [Getting Started](/docs/getting-started)
+
+If you'd like to install Arvo, get an Azimuth point, and/or get on the Urbit network, you'll find guides here. Dive in, and don't be afraid to [ask for help](mailto:support@urbit.org)!
+
+The three pages below are meant to be followed in order.
+
+- The [Bridge section](/docs/getting-started/azimuth) is the first step. It tells you how to access your Azimuth identity using our client.
+- The [guide to installing Urbit](/docs/getting-started/installing-urbit) is the second step. It tells you how to get our software on your machine.
+- The [guide to booting a ship](/docs/getting-started/booting-a-ship) is the third and final step. It walks you through using what you did in the previous steps to get onto the Arvo network.
+
+In addition to those primary pages, the documents below are helpful but optional for using Urbit.
+
+- [Creating a Development Ship](/docs/getting-started/creating-a-development-ship), a walkthrough for creating a walkthrough for creating a disposable ship, disconnected from the Arvo network, for hacking on Urbit, developing applications, and learning.
+- [Operating a Star](/docs/getting-started/creating-a-development-ship)
+
+## [Using](/docs/using)
+
+Here live guides that are helpful for everyday users.
+
+- [Admin and Operation](/using/admin) is a guide to the basic commands used to interact with your ship.
+- [Messaging](/using/messaging) tells you how to use Talk, our chat system.
+- [Shell](/using/shell) is a guide to using Dojo, our command-line interface.
+- [Introduction to the Filesystem](/using/filesystem) explains the basics of using use Clay, our revision-control filesystem.
+- [Source Layout](/using/layout) walks you through the various directories of the Arvo operating system.
+- [Sail](/using/sail) is a guide to Sail: Hoon markup that's used to build web pages with XML.
+- [Udon](/using/udon) is a guide to Udon, which is our take on Markdown.
+- [Generators](/using/generators) will explain how to use the "generator," a kind of file that's the easiest way to run Hoon programs.
+
+## [Concepts](/docs/concepts)
+
+If you're looking for a high-level introduction to the Urbit project and its components, start here.
+
+- [Arvo vs. Azimuth](/docs/concepts/arvo-vs-azimuth), a quick explanation of the two parallel systems that compose Urbit.
+- [Technical Overview](/docs/concepts/technical-overview), a more in-depth description of the entire Urbit stack.
+- [Contributing](/docs/concepts/contributing), a guide to getting involved with the Urbit project.
+- [Community Tutorials](/docs/concepts/community-tutorials), a collection of unofficial but useful Urbit learning resources.
+- [Source Code](/docs/concepts/source-code-overview), an explanation of Urbit's constituent GitHub repositories.
+- [Galaxies, Stars, and Planets](/docs/concepts/galaxies-stars-and-planets), an explanation of the Azimuth address-space hierarchy.
+
+## [Learn](/docs/learn)
+
+If you're interested in contributing to the project, building applications, or understanding the system technically, take a look at our tutorials and explanations of Urbit's components.
+
+- The [Hoon section](/docs/learn/hoon), for resources on learning our programming language. To understand the system, start here.
+- The [Arvo section](/docs/learn/arvo), for the internals of Arvo, Urbit's operating system.
+- The [Nock section](/docs/learn/nock), for learning Nock, Urbit's low-level language.
+- The [Vere section](/docs/learn/vere), for learning about Vere, the virtual machine that runs on Unix.
+
+## [Reference](/docs/reference)
+
+If you're a developer looking for Arvo reference documentation, this section is for you.
+
+- The [Glossary](/docs/reference/glossary) will help if you're confused by all the new jargon.
+- The [Cheat Sheet](/docs/reference/cheat-sheet) is a compact document for looking up Hoon expressions.
+- The [Hoon Expressions](/docs/reference/hoon-expressions) section contains more comprehensive reference material for Hoon expressions.
+- The [Standard Library](/docs/reference/library) section documents the Hoon standard library.
