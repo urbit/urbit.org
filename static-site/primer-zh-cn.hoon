@@ -3,7 +3,7 @@
 /=  article  /partials-article/
 /=  footer-contact   /partials-footer-contact/
 /=  footer-signup   /partials-footer-signup/
-;html(lang "en")
+;html(lang "zh-CN")
   ;+  (head "Urbit / Primer")
   ;link/"/css/primer.css"(rel "stylesheet");
   ;body
@@ -102,7 +102,6 @@
         ;div.container
           ;div.row.mb-8
             ;div.col-md-9.col-md-offset-1.mb-10
-              ;h1.h1-large.white: Table of Contents
               ;h1.h1-large.white: 目录
             ==
           ==
@@ -110,7 +109,6 @@
             ;div.col-md-12
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-urbit-is-for"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
               ==
             ==
@@ -119,7 +117,6 @@
             ;div.col-md-12
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-arvo-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
               ==
             ==
@@ -128,7 +125,6 @@
             ;div.col-md-12
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-azimuth-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
               ==
             ==
@@ -137,7 +133,6 @@
             ;div.col-md-12
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#history"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: 沿革
               ==
             ==
@@ -146,7 +141,6 @@
             ;div.col-md-12
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#azimuth-distribution"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分布
               ==
             ==
@@ -173,7 +167,6 @@
               ;div.col-md-10.col-md-offset-1
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-urbit-is-for"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
                 ==
               ==
@@ -182,7 +175,7 @@
               ;div.col-md-10.col-md-offset-1
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-arvo-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
+                  ;
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
                 ==
               ==
@@ -191,7 +184,6 @@
               ;div.col-md-10.col-md-offset-1
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-azimuth-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
                 ==
               ==
@@ -200,7 +192,6 @@
               ;div.col-md-10.col-md-offset-1
                 ;a.row.h2.h-font.white.text-decoration-none/"#history"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip：沿革
                 ==
               ==
@@ -209,7 +200,6 @@
               ;div.col-md-10.col-md-offset-1
                 ;a.row.h2.h-font.white.text-decoration-none/"#azimuth-distribution"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分发
                 ==
               ==
@@ -342,7 +332,6 @@
     ;div.container.mb-30
       ;div.row.align-vertical
         ;div.col-md-5
-          ;h1.mb-10: The blockchain is an I/O device
           ;h1.mb-10: 区块链是个I/O设备
           ;div
             ;div.md-hide.mb-4
@@ -366,7 +355,6 @@
       ;div.row
         ;div.col-md-8.col-md-offset-2
           ;div.center
-            ;h1.mb-10: Your private city of robots
             ;h1.mb-10: 你的私有机器人城市
           ==
         ==
@@ -397,7 +385,6 @@
       ;div.row.align-vertical
         ;div.col-md-6
           ;div.mb-10
-            ;h1: The archive of your life
             ;h1: 你的生活存档
             ;div.center.sm-mt-10.sm-mb-10.md-hide
               ;img.col-md-6@"/images/face.svg";
@@ -672,7 +659,6 @@
           ;div.col-sm-12
             ;div.row.sm-h2.h1.h1-large.h-font
               ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
-              ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth: What Urbit is
               ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth：Urbit是什么
             ==
           ==
@@ -943,7 +929,6 @@
           ;div.col-md-12
             ;div.row.sm-h2.h1.h1-large.h-font
               ;span.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
-              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth distribution
               ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth分布
             ==
           ==

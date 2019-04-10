@@ -12,22 +12,22 @@
         ;div.row
           ;div.col-sm-12.col-md-8.col-md-offset-2
             ;div.mb-20
-              ;h1.h1-large: 2019了。你依然不过是别人数据库中的一行记录。
+              ;h1.h1-large: It's 2019. You're still just a row in someone's database.
             ==
             ;div.mb-20
               ;img.col-sm-12@"/images/megacorp.svg";
             ==
             ;div.p--intro.pb-30
               ;>
-              你的数字生活遍布各类账号、应用与服务。
+              Your digital life is spread across all kinds of accounts, apps and services.
 
-              其中，每一个仅做一件事并且由别人控制。它们很好使，但它们的的确确是庞大、反乌托邦的玩具之作。
+              Every one of them does only one thing and is controlled by someone else. They work great, but they're really just big, dystopian toys.
 
-              这些不实、单一目的的计算机的局限性是显而易见的。人们理应获得更好的。
+              The limits of these fake, single-purpose computers are clear. People deserve better.
 
-              你的Urbit是个个人云服务器。一个在加密点对点网络上简单、私有、泛功能的虚拟计算机。
+              Your Urbit is a personal cloud server. A simple, private, general-purpose virtual computer on an encrypted P2P network.
 
-              你的Urbit是你的数字护照、你的数字储藏库与你的数字助手。你对它的所有权基于以太坊之上 - 除你之外没有人可以控制它。
+              Your Urbit is your digital passport, your digital vault, and your digital assistant. You own it on Ethereum – no one controls it but you.
             ==
           ==
         ==
@@ -64,10 +64,10 @@
             ==
             ;div.mb-20
               ;div.p--intro
-                ;p.mb-4: 当今，你有两种糟糕的云计算选择：运行你自己的Unix服务器或者加入一堆应用与服务。
-                ;p.mb-4: 我们不打算接受这样的交易。我们不想成为系统管理员并且我们不想被某个巨型公司主宰。
-                ;p.mb-4: 所以我们建立了一个新平台。一套简单到普通人可以运行他们自己服务器的新技术栈。
-                ;p.mb-4: Urbit是一套三层的栈：Azimuth、Arvo和Aegean。每一层可以作为其单独的产品使用，并且他们都是开源的。
+                ;p.mb-4: Today, you have two bad options for cloud computing: run your own Unix server or join a bunch of apps and services.
+                ;p.mb-4: We aren't going to take this deal. We don't want to be system administrators and we don't want to be ruled by some MEGACORP.
+                ;p.mb-4: So we built a new platform. A clean-slate stack simple enough that ordinary people can run their own servers.
+                ;p.mb-4: Urbit is a stack of three layers: Azimuth, Arvo and Aegean. Each layer could be used as a product on its own, and they're all open source.
               ==
             ==
           ==
@@ -76,24 +76,24 @@
           ;div.col-md-3.col-md-offset-0
             ;img.col-sm-12@"/images/azimuth.svg";
             ;h3.mb-4: Azimuth
-            ;p: 是存在于以太坊上的虚拟的土地。一个Azimuth点是一个安全的数字身份与网络地址。
+            ;p: is virtual land on Ethereum. An Azimuth point is a secure digital identity and network address.
           ==
           ;div.col-md-3.col-md-offset-1
             ;img.col-sm-12@"/images/arvo-complete.svg";
             ;h3.mb-4: Arvo
-            ;p: 是一个全新的操作系统与点对点网络。一个Arvo服务器使用一个Azimuth点作为其名称和地址。
+            ;p: is a clean-slate OS and P2P network. An Arvo server uses an Azimuth point as its name and address.
           ==
           ;div.col-md-3.col-md-offset-1
             ;img.col-sm-12@"/images/aegean.svg";
             ;h3.mb-4: Aegean
-            ;p: 是一个用于存在于Arvo网络之上独立、去中心化社会的模式。
+            ;p: is a pattern of independent, decentralized societies on top of the Arvo network.
           ==
         ==
         ;div.col-md-8.col-md-offset-2.mb-40
           ;div.p--intro
-            ;p.mb-4: Urbit还很年轻。它尚未准备好为每个人所用。伟大的系统软件需要长时间成长。
-            ;p.mb-4: 但Urbit不是个梦。它是真实的。它是个运行中、稳定的网络。并且一旦你开始了解它，会有更多去探索。
-            ;p.mb-4: Urbit是最后的平台。个人计算革命甚至尚未开始。
+            ;p.mb-4: Urbit is still young. It's not quite ready for everyone. Great system software takes a long time to grow.
+            ;p.mb-4: But Urbit isn't a dream. It's real. It's a running, stable network. And once you find your way in, there's a lot to explore.
+            ;p.mb-4: Urbit is the last platform. The personal-computing revolution hasn't even happened yet.
           ==
         ==
       == ::/container
@@ -103,7 +103,6 @@
           ;div.row.mb-8
             ;div.col-md-9.col-md-offset-1.mb-10
               ;h1.h1-large.white: Table of Contents
-              ;h1.h1-large.white: 目录
             ==
           ==
           ;div.row.mb-8
@@ -111,7 +110,6 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-urbit-is-for"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
               ==
             ==
           ==
@@ -120,7 +118,6 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-arvo-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
               ==
             ==
           ==
@@ -129,7 +126,6 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#what-azimuth-is"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
               ==
             ==
           ==
@@ -138,7 +134,6 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#history"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: 沿革
               ==
             ==
           ==
@@ -147,7 +142,6 @@
               ;a.row.sm-h2.h1.h1-large.h-font.white.text-decoration-none/"#azimuth-distribution"
                 ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
                 ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
-                ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分布
               ==
             ==
           ==
@@ -174,7 +168,6 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-urbit-is-for"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean: What Urbit is For
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Aegean：Urbit的用途是什么
                 ==
               ==
             ==
@@ -183,7 +176,6 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-arvo-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo: What Urbit is
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Arvo：Urbit是什么
                 ==
               ==
             ==
@@ -192,7 +184,6 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#what-azimuth-is"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth: What Urbit is
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth：Urbit是什么
                 ==
               ==
             ==
@@ -201,7 +192,6 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#history"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: History
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip：沿革
                 ==
               ==
             ==
@@ -210,7 +200,6 @@
                 ;a.row.h2.h-font.white.text-decoration-none/"#azimuth-distribution"
                   ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
                   ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth distribution
-                  ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0.underline.underline--skip: Azimuth分发
                 ==
               ==
             ==
@@ -272,7 +261,7 @@
         ;div.col-sm-12
           ;div.row.sm-h2.h1.h1-large.h-font
             ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (1)
-            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Aegean：Urbit的用途是什么
+            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Aegean: What Urbit is For
           ==
         ==
       ==
@@ -288,21 +277,21 @@
         ;div.col-sm-12.col-md-8.col-md-offset-2
           ;div.p--intro.pb-30
             ;>
-            现今巨型企业运行我们的云软件、决定如何对其升级与存储我们的数据。当人们得以运行他们自己的服务器时世界会是什么样子？
+            Today MEGACORP runs our cloud software, decides how to update it and stores our data. What will the world look like when people can run their own servers?
 
-            在真实的世界中，不同文化与社会共存于中性的物理基础设施之上。不同人、社区与文化共享着同一个道路与输电网络。
+            In the real world, different cultures and societies coexist on top of neutral physical infrastructure. Different people, communities and cultures share the same roads and electrical grid.
 
-            在云上，我们好似在旅馆生活。
+            In the cloud, it's as if we spend our lives in hotels.
 
-            Aegean是个用以建设城市的模式。一座城市是一群人在他们Arvo服务器上运行同一个**媒介**、一种程序。
+            Aegean is a pattern for building _cities_. A city is a group of people running the same _agent_, a kind of program, on their Arvo servers.
 
-            一座城市不是为一件事物而设计的“应用”。一座城市是一个社区拥有的工具的组合。每座城市独立且自治。城市控制其自身接口并通过无线网络对它们自己的代码升级。
+            A city is not an 'app' designed for one thing. A city is a combination of tools for a community. Each city is independent and self-governing. Cities control their own interfaces and update their own code over the air.
 
-            我们已经启动了一些城市，并且我们将谈谈我们即将迫近的。我们能想象到的仅仅是刚刚开始。
+            We've started a few cities already, and we'll talk a bit about what we see on the horizon. What we can imagine is only the beginning.
 
-            我们能确定一件事：未来不是个单一的一元文化。全人类不愿居于同一座城市。大多数人住在几座城市并且在其间舒适地迁移。
+            One thing we know for sure: the future isn't a single monoculture. All of humanity doesn't want to live in the same city. Most people live in many and move comfortably between them.
 
-            我们所见的是个巨大的超文化列岛。一个中性的Arvo和Azimuth基础设施之上的无中心网络网络。
+            We see a vast archipelago of hypercultures. A centerless network of networks on top of the neutral Arvo and Azimuth infrastructure.
           ==
         ==
       ==
@@ -311,7 +300,7 @@
     ;div.container
       ;div.row
         ;div.col-md-8.col-md-offset-2
-          ;h1.center.mb-20: 以新大陆为家园
+          ;h1.center.mb-20: Homesteading this new continent
         ==
       ==
     ==
@@ -325,17 +314,17 @@
     ;div.container.sm-mb-0.mb-40
       ;div.row
         ;div.col-md-8.col-md-offset-2
-          作为建设新平台的社区，我们需要聊聊并参与长篇讨论。不同平台及其不同的账户登陆与臃肿的接口使用起来很费劲。
+          As a community building a new platform we need to chat and engage in longform discussion. Separate platforms with separate logins and bloated interfaces are a drag to use.
 
-          所以我们单独为自己建设了个新的媒介。称作Landscape，并且我们已经使用它开启了一些受邀制的城市。
+          So we built an agent to work just for us. It's called Landscape, and we've used it to start a few invite-only cities.
 
-          这些城市有些像一个新大陆上的殖民地。它们不健全。它们尚未准备好为每个人使用。它们尚不安全，它们不是永久性的。但我们喜欢它们已经胜过了对其它选择的。
+          These cities are sort of like colonies on a new continent. They're rough. They aren't ready for everyone. They aren't secure yet, they won't last forever. But we already like them better than the alternative.
 
-          而且我们已经可以看到当其他人开始被允许开始以此为家园时它的样子。居于一个社区控制权握于你手的平台是个崭新的世界。
+          And we can already see what it will look like to let others start homesteading with us. Living on a platform where your community is in control is a whole new world.
 
-          我们不仅兴奋地欢迎其它社区，还将延展我们媒介的灵活性。以试验其它可能性。
+          We're excited to not only welcome other communities, but to extend the flexiblity of our agents. To experiment with what's possible.
 
-          比如位置数据、心率、营养和一次考察中成员们各自的笔记。匿名的基因数据、可视化工具与研究者团队的文档。存在很多有待探索。
+          Location data, heart rate, nutrition and note taking between members of an expedition, for example. Anonymized genetic data, visualization tools and documents for a group of researchers. There's so much to explore.
         ==
       ==
     ==
@@ -343,18 +332,17 @@
       ;div.row.align-vertical
         ;div.col-md-5
           ;h1.mb-10: The blockchain is an I/O device
-          ;h1.mb-10: 区块链是个I/O设备
           ;div
             ;div.md-hide.mb-4
               ;img@"/images/offchain.svg";
             ==
-            区块链本为对人人都开放的金融系统而制。而我们尚止步不前于巨型企业的交易所或是通过我们的浏览器使用单薄的“dapps”。
+            The blockchain was supposed to make the financial system open to anyone. But we're still stuck on MEGACORP exchanges or using flimsy 'dapps' in our browser.
 
-            Urbit交易员组成的城市可以轻松地向另一个城市转发订单并且直接从一个交易员向链发送经签名加密后的交割。都是你在获得于安全已验证的网络之上快速、确定性的计算机的同时免费得到的。
+            A city of traders on Urbit could easily relay orders to one another and send signed transactions directly to the chain from a single agent. That's what you get for free with a fast, deterministic computer on a secure authenticated network.
 
-            那么为什么不再更进一步？让你的Arvo服务器运行你的交易算法或参与预测市场。今天的“dapps”对永久储存的状态无权限并且它们的UI很有局限性。更糟的是，它们之间无法通讯。
+            And why not go a step further? Let your Arvo server run your trading algorithms or participate in prediction markets. Today's 'dapps' don't have access to persistent state and their UI is limited. Worse, they can't communicate with one another.
 
-            当安全的个人服务器连接到区块链时，区块链就更加有用。币的交割将只是共识计算过程中包括的一小部分。
+            Blockchains are so much more useful when connected to a secure personal server. Consensus computation can be much more than just trading coins.
           ==
         ==
         ;div.col-md-5.col-md-offset-1.sm-hide
@@ -367,7 +355,6 @@
         ;div.col-md-8.col-md-offset-2
           ;div.center
             ;h1.mb-10: Your private city of robots
-            ;h1.mb-10: 你的私有机器人城市
           ==
         ==
         ;div.col-md-6.col-md-offset-3
@@ -375,20 +362,20 @@
         ==
         ;div.col-md-8.col-md-offset-2
           ;>
-            “物联网”一团糟。某些“物”是很不错的硬件。但它们都需要我使用一些来自巨型企业的服务。为什么我不能直接和我自己的恒温器通话？
+            The 'internet of things' is a mess. Some of the 'things' are pretty nice pieces of hardware. But they all require that I use some MEGACORP service. Why can't I just talk directly to my own thermostat?
         ==
         ;div.col-md-8.col-md-offset-2
             ;p
-              ;span: 你的Azimuth身份，或
-              ;i.ml-1: 行星
-              ;span: ，可以启动2
+              ;span: Your Azimuth identity, or
+              ;i.ml-1: planet
+              ;span: , can launch 2
               ;sup.mr-1: 32
-              ;span: （40亿）子身份，或
-              ;i.ml-1: 卫星
-              ;span: 。那应该足够给你的照明、你的电冰箱、你的3D打印机和你的耕作机器人群。拥有座工厂？好，那个也可以。
+              ;span: (4 billion) child identities, or
+              ;i.ml-1: moons
+              ;span: . That should be enough for your lights, your fridge, your 3D printer, and your swarm of farm robots. Own a factory? Sure, that too.
             ==
             ;p
-              一旦它们运行Arvo服务器，你的设备可以全部运行同一个媒介并加入你自己的私有城市。控制你的机器人军团很简单，只要他们共享同一个计算平台。
+              Once they run Arvo servers, your devices can all run the same agent and join your own private city. Taking control of your robot army is simple once they share the same computing platform.
             ==
         ==
       ==
@@ -398,17 +385,16 @@
         ;div.col-md-6
           ;div.mb-10
             ;h1: The archive of your life
-            ;h1: 你的生活存档
             ;div.center.sm-mt-10.sm-mb-10.md-hide
               ;img.col-md-6@"/images/face.svg";
             ==
           ==
           ;div
-            你的生物性信息需要安全于云上。这个科技用起来没问题。巨型企业总是其薄弱之处。没有企业能保证永远存在 - 或永远在乎。
+            Your human record needs to be safe in the cloud. The technology works. MEGACORP is always the weak link. No corporation can promise to live forever — or care forever.
 
-            那就是为什么你的Arvo服务器是正确的场所之于存储一切你想保存的数据 - 每一条你发送的消息、每一张你拍摄的照片、甚至你的财务与医疗记录。你的个人服务器维护一个存档、一个永久、值得信任的场所以保存你的数字生活。
+            That's why your Arvo server is the right place to store all the data you want to keep — every message you've ever sent, every photo you've taken, even your financial and medical records. Your personal server maintains an archive, a permanent, trusted place to keep your digital life.
 
-            一旦你数据在你的个人服务器上安全，你现在管理它的方式将显得可怕与落后。
+            Once your data is safe on your personal server, the way you managed it now will seem scary and backward.
           ==
         ==
         ;div.col-md-4.col-md-offset-1.center.sm-hide
@@ -421,7 +407,7 @@
         ;div.col-sm-12
           ;div.row.sm-h2.h1.h1-large.h-font
             ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (2)
-            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Arvo: Urbit是什么
+            ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Arvo: What Urbit is
           ==
         ==
       ==
@@ -436,7 +422,7 @@
                   ;img@"/images/file.svg";
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
-                  ;h4.text-md: 一份文件
+                  ;h4.text-md: One file
                 ==
 
               ==
@@ -450,7 +436,7 @@
                   ;img@"/images/passcode.svg";
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
-                  ;h4.text-md: 你的密码
+                  ;h4.text-md: Your passcode
                 ==
               ==
             ==
@@ -463,7 +449,7 @@
                   ;img@"/images/program.svg";
                 ==
                 ;div.col-sm-12.col-md-12.col-md-offset-0.center
-                  ;h4.text-md: 一个程序
+                  ;h4.text-md: A program
                 ==
               ==
             ==
@@ -483,60 +469,60 @@
       ;div.row.mb-20
         ;div.col-md-8.col-md-offset-2
           ;>
-            你的个人服务器，称作一艘飞船，被作为其接收、由密码加密的事件日志存储。要启动你的飞船时，用Arvo程序打开你的事件日志文件并输入你的密码。要停止它时，直接关闭程序；事件日志将耐心地等待下一次启动。
+            Your personal server, called a ship, is stored as a log of the events it's received, encrypted with a passcode. To start your ship, open your event log file with the Arvo program and type in your passcode. To stop it, just close the program; the event log will wait patiently for next boot.
 
-            要使用Arvo网络时，每艘飞船必须有一个Azimuth名称、或**点**。你拥有的点在以太坊上。它是个简短，能被读出声来的名称，类似于“~laptel-nilfur”或“~doplyx-halsev”（“~”不发音）。其他飞船通过你的Azimuth点发现及联系你的飞船，无论它在天涯海角。
+            To use the Arvo network each ship must have an Azimuth name, or _point_. You own your point on Ethereum. It's a short, pronouncable name like `~laptel-nilfur` or `~doplyx-halsev` (the '~' is silent). Other ships use your Azimuth point to find and talk to your ship, no matter where it is in the world.
 
-            大多数人把他们的飞船置于云上。如果你想要自己运营，你的飞船可以存在于笔记本电脑、手机、甚至U盘上。它只是一个文件。它没必要一直运行。别把它弄丢了就行。
+            Most people park their ship in the cloud. If you prefer to host yourself, your ship can live on a laptop, a phone, even a USB stick. It's just a file. It doesn't have to be on all the time. Just don't lose it.
 
-            无论你的飞船在哪里，只要用你的名称和密码登陆“urbit.org” - 像普通的互联网账户一样。
+            Wherever your ship is, just log on at `urbit.org` with your name and passcode — like a normal web account.
 
-            你通过网页界面和/或本地命令行界面操作你的飞船。你可以用你的本地电脑同步到最新版本的文件。（Arvo永远记得每一个版本。）你的飞船也能作为网站服务器使用和代替你与已有的互联网服务互动。
+            You operate your ship through a web UI and/or a local console. You can sync the current version its files with your local computer. (Arvo remembers every version, forever.) Your ship can also host its own webpages and interact with existing webservices on your behalf.
 
-            你的飞船被设计成彻底免维护的。通过网络进行升级。它从不变旧或过时。一个世纪不启动后打开它 - 可能会需要一周，但它会自动自我升级到2119年。
+            Your ship is designed to need no maintenance at all. Upgrades come in over the network. It never gets old or out of date. Leave one off for a century, then turn it on — it might take a week, but it will automatically upgrade itself to 2119.
           ==
       ==
       ;div.row
         ;div.col-md-12.center
-          ;h1.mb-10.mt-10: 好吧，宅们，下面是简明的技术概述
+          ;h1.mb-10.mt-10: Okay nerds, here's a quick technical overview
         ==
       ==
       ;div.row.sm-wrap-reverse.mb-20
         ;div.col-md-5
           ;>
-            Arvo是个作为虚拟机运行的通用计算机。你可以把它想作是操作系统上的一层覆盖；它对待Unix好似Unix对待BIOS。
+            Arvo is a general-purpose computer that runs as a virtual machine. You can think of it as an overlay OS; it treats Unix the way Unix treats the BIOS.
 
-            它的行为完全被由“[event, current-state]”至“[effects, next-state]”的冻结变换函数（称为Nock）所定义。一个事件可能是按下了一个键盘按键、一个HTTP请求、或一个来自另一个Arvo的UDP消息。一个效应可能是一个Unix命令行工具中的命令、一个HTTP回复、或一个发送到另一个Arvo的UDP消息。
+            Its behavior is completely defined by a frozen transition function called Nock that goes from `[event, current-state]` to `[effects, next-state]`. An event might be a keypress, an HTTP request, or a UDP message from another Arvo. An effect might be a command to the Unix terminal, an HTTP response, or another UDP message to another Arvo.
 
-            Arvo自下而上由以下组件栈构成。
+            Arvo consists of the following stack of components, from the bottom up.
 
-            Vere，我们基于C编写的解释器，是个基于将其状态存储为永久事件日志和/或内存节点的libuv之上的交割I/O处理器。Vere解释Nock。
+            Vere, our interpreter, written in C, is a transactional I/O processor over libuv, which stores its state as a persistent event log and/or memory checkpoint. Vere interprets Nock.
 
-            Nock，我们的机器语言，类似于无符号的pico-Lisp。它是同像性的纯函数机器代码，具有12个opcode与1个通用数据类型，noun：其分支可以是一个可以表示一个任意大byte流的数字，或是一个有一对noun的cons cell的循环二叉树。
+            Nock, our machine language, is like a pico-Lisp with no symbols. It's a homoiconic purely functional machine code with 12 opcodes and one universal datatype, the noun: an acyclic binary tree that is either a number (which can also represent an arbitrarily large bytestream) or a cell, which is a pair of nouns.
 
-            Hoon是纯函数式、静态、积极求值、编译至Nock的编程语言。
+            Hoon is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock.
 
-            Arvo内核是函数式、非可插队、通用的1000行Hoon写就的操作系统。
+            The Arvo kernel is a functional, nonpreemptive, general-purpose OS written in 1000 lines of Hoon.
 
-            我们的技术栈是怪异的。但你会习惯它。所有的东西都在MIT许可协议下开源 - [看看](https://github.com/urbit/urbit)。
+            Our stack is weird. But you'll get used to it. The whole thing is open source under the MIT license – [take a look](https://github.com/urbit/urbit).
           ==
         ;div.col-md-5.col-md-offset-1.sm-mb-10.stack-apart.animate-false
           ;svg(xmlns "http://www.w3.org/2000/svg", viewbox "0 0 512 760")
             ;g.text.h-font
               ;g.nock-label
                 ;text.text-lg.text-600(x "296", y "116"): Nock
-                ;text.text-lg(x "296", y "144"): 虚拟机
+                ;text.text-lg(x "296", y "144"): Virtual machine
                 ;rect(x "296", y "80", fill "#EE3124", width "10", height "10");
               ==
               ;g.hoon-label
                 ;text.text-lg.text-600(x "296", y "349"): Hoon
-                ;text.text-lg(x "296", y "378"): 编程
-                ;text.text-lg(x "296", y "402"): 语言
+                ;text.text-lg(x "296", y "378"): Programming
+                ;text.text-lg(x "296", y "402"): language
               ==
               ;rect(x "296", y "313", fill "#4fe89c", width "10", height "10");
               ;g.arvo-label
                 ;text.text-lg.text-600(x "296", y "645"): Arvo
-                ;text.text-lg(x "296", y "674"): 操作系统
+                ;text.text-lg(x "296", y "674"): Operating system
                 ;rect(x "296", y "609", fill "#ffc440", width "10", height "10");
               ==
             ==
@@ -570,70 +556,70 @@
           ;div.row
             ;ul.list-reset.col-md-12.h-font
               ;div.square.square-sm.square-orange.mb-2;
-              ;li.text-600.mb-0: Arvo内核
-              ;li: 核心操作系统与事件管理器
+              ;li.text-600.mb-0: Arvo kernel
+              ;li: Core OS and event manager
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-gray.mb-2;
                 ;li.text-600.mb-0: Ames
-                ;li: 点对点网络
+                ;li: Peer-to-peer network
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
               ;div.square.square-sm.square-blue.mb-2;
               ;li.text-600.mb-0: Clay
-              ;li.col-md-11: 全局文件系统
+              ;li.col-md-11: Global filesystem
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-green-light.mb-2;
                 ;li.text-600.mb-0: Ford
-                ;li: 构建系统
+                ;li: Build system
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-cyan.mb-2;
                 ;li.text-600.mb-0: Gall
-                ;li: 应用程序沙盒
+                ;li: Application sandbox
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-navy.mb-2;
                 ;li.text-600.mb-0: Jael
-                ;li: 秘密存储库
+                ;li: Vault for secrets
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-purple.mb-2;
                 ;li.text-600.mb-0: Eyre
-                ;li: Web服务器
+                ;li: Web server
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-green.mb-2;
                 ;li.text-600.mb-0: Landscape
-                ;li: 聊天与讨论端
+                ;li: Chat and discussion agent
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-orange-dark.mb-2;
-                ;li.text-600.mb-0: API网关
-                ;li: 至已有服务
+                ;li.text-600.mb-0: API gateways
+                ;li: To existing services
               ==
             ==
             ;div.col-sm-6.col-md-4
               ;ul.list-reset.h-font
                 ;div.square.square-sm.square-orange-dark.mb-2;
                 ;li.text-600.mb-0: Dill
-                ;li: 终端驱动
+                ;li: Terminal driver
               ==
             ==
           ==
@@ -642,29 +628,29 @@
       ;div.row
         ;div.col-md-8.col-md-offset-2
           ;>
-          你如何在一个函数里嵌入一个通用计算机？将程序和数据载入由变换函数基于每个事件而更新的状态。
+          How do you embed a general-purpose computer into a function? You load programs and data into the state, which the transition function can update on each event.
 
-          要启动一艘新飞船时，首要的几个事件由虚拟机（名为Vere，由C写就）在你飞船进入网络之前运行。这些初始事件载入于编译器Hoon、编译及安装Arvo内核，初始化用户域的应用与文件，并且分配作为你飞船身份的你的Azimuth点和私钥。现在你的飞船可以与世界沟通了。
+          To boot a new ship, the first several events are run by the VM (named Vere, written in C) before your ship enters the network. These initial events load in a Hoon compiler, compile and install the Arvo kernel, initialize userland apps and files, and assign your Azimuth point and private keys as your ship's identity. Now your ship is ready to talk to the the world.
 
-          Arvo栈可以向其自身除Nock与Vere之外的任何部分推送任何升级。
+          The Arvo stack can push any update to any part of itself, except Nock and Vere.
 
-          让我们历数Arvo内核的部分组件。这里开始有意思了。
+          Let's walk through some of the components of the Arvo kernel. This is where it gets interesting.
 
-          Ames，我们的网络协议覆盖于UDP之上。每一条飞船与飞船间的消息都经过签名与端到端加密。Ames是消息导向、命令查询职责分离、无连接、数据为中心与交割化的。
+          Ames, our network protocol is overlayed over UDP. Every message between ships is signed and end-to-end encrypted. Ames is message-oriented, CQRS, connectionless, data-centric, and transactional.
 
-          Clay，我们的文件系统，是一个响应式、**有类型约束**、分布式版本控制、定义一个已验证全局不可变名称空间的存储。
+          Clay, our filesystem, is a reactive, _typed_, distributed revision-control store that defines an authenticated global immutable namespace.
 
-          Ford，我们的函数式构建系统，当有人触发后台渲染库中的一个数学函数时能够自动升级一个你浏览器中的网页。
+          Ford, our functional build system, can auto-update a page in your browser when someone checks in a change to a math function in a back-end rendering library.
 
-          编译器、库、Arvo和模块一道，整个操作系统有约30,000行代码。
+          With compiler, libraries, Arvo and modules, the whole OS is ~30,000 lines of code.
 
-          Urbit也是个其它功能与组件的不寻常列表。你可以阅读我们长篇、特有、些许过时的[白皮书](http://media.urbit.org/whitepaper.pdf)以了解更多。**提示**，它有点学术。
+          Urbit is also a nontrivial list of other features and components. You can read more in our long, peculiar, mildly outdated [whitepaper](http://media.urbit.org/whitepaper.pdf). _Caveat lector_, it's a tad academic.
 
-          今天，Urbit是一个稳定的测试网。Urbit寄存其自己的网站、论坛与联合制的聊天系统。它的最后一次计划外事故（全局硬分叉）是在2016年。
+          Today, Urbit is a stable testnet. Urbit hosts its own site, forum, and federated chat. Its last unplanned breach (global hard fork) was in 2016.
 
-          Urbit现在有一个务实洁净的Vere替代品，Jaque，基于Graal/Truffle。Jaque可以启动一艘飞船并加入网络。它仍然有一些栈相关的问题。
+          Urbit now has a practical clean-room Vere alternative, Jaque, built on Graal/Truffle. Jaque can boot a ship and join the network. It still has some stack issues.
 
-          Urbit未完工。它需要优化、文档、大量打磨、甚至一些架构变化。但它确实正常运行着。
+          Urbit is not done. It needs optimization, documentation, a lot of polish and even a bit of architecture. But it certainly does work!
         ==
       ==
       ;div#what-azimuth-is.container.sm-pt-20.sm-pb-20.pt-40.pb-40
@@ -673,7 +659,6 @@
             ;div.row.sm-h2.h1.h1-large.h-font
               ;div.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (3)
               ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth: What Urbit is
-              ;div.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth：Urbit是什么
             ==
           ==
         ==
@@ -682,21 +667,21 @@
         ;div.row.sm-wrap-reverse.mb-16
           ;div.col-md-5.col-md-offset-1
             ;>
-            如果IP地址是密码式资产，互联网就可以通过其地址空间为其开发提供资金。
+            If IP addresses were cryptographic property, the Internet could have funded its own development with its own address space.
 
-            具备了明晰的所有权，IP地址将发展出明确的声誉。捣乱者将损失基于声誉成本的真金白银并且互联网将是个友好的网络。
+            With clear ownership, IP addresses would develop clear reputations. Abusers would lose real money in reputation cost and the internet would be a friendly network.
 
-            我们无法矫正IP。所以我们建立了一个去中心化的地址空间系统并称其为Azimuth。Ames，作为UDP式的Arvo叠加网络，使用Azimuth地址作为身份与路由。
+            We can't fix IP. So we built a system of decentralized address space and called it Azimuth. Ames, the Arvo UDP overlay network, uses Azimuth addresses for identity and routing.
 
-            任何声誉系统都需要身份的稀缺性。数值稀缺性比实名规则更优美。所以Azimuth限于“4,294,967,296”个独立行星。
+            Any reputation system needs scarcity of identity. Numerical scarcity is more elegant than a real-name policy. So Azimuth is limited to `4,294,967,296` independent planets.
 
-            Azimuth地址空间像家庭那样成长。8位星系（如“~hal”）可以发行有能力发行32位行星（“~laptel-holfur”）的16位恒星“~sogtyv”。每一个这样的地址称为Azimuth**点**。
+            The Azimuth address space grows like a family. 8-bit galaxies (like `~hal`) can issue 16-bit stars `~sogtyv`, which issue 32-bit planets (`~laptel-holfur`). Each of these addresses is called an Azimuth _point_.
             ;div.row.mb-3
               ;div.col-sm-4.text-mono
                 ;ul.list-reset
-                  ;li.red.text-600: 1个星系
-                  ;li.blue.text-600: 1颗恒星
-                  ;li.green.text-600: 1颗行星
+                  ;li.red.text-600: 1 Galaxy
+                  ;li.blue.text-600: 1 Star
+                  ;li.green.text-600: 1 Planet
                 ==
               ==
               ;div.col-sm-8.text-mono
@@ -704,28 +689,28 @@
                   ;li.blue.text-600
                     ;span: = ~2
                     ;sup.mr-1: 8
-                    ;span: 颗恒星
+                    ;span: Stars
                   ==
                   ;li.green.text-600
                     ;span: = ~2
                     ;sup.mr-1: 16
-                    ;span: 颗行星
+                    ;span: Planets
                   ==
                   ;li.gray.text-600
                     ;span: = ~2
                     ;sup.mr-1: 32
-                    ;span: 颗卫星
+                    ;span: Moons
                   ==
                 ==
               ==
             ==
-            恒星与行星可以通过变更担保方自我解除约束，所以你永远不会被困住。卫星为设备而生，所以它们无法脱离他们的行星。（我们不希望一堆联网的灯泡四处游荡形成机器人网络，对吧？）
+            Stars and planets can emancipate themselves by changing sponsors, so you're never trapped. Moons are meant for devices, so they can't escape from their planets. (We don't want a bunch of connected lightbulbs wandering around forming botnets, do we?)
 
-            大致想法是，你需要**某人**担保你在网络上的成员身份。一个无法找到担保方的地址很可能是个机器人或是个垃圾邮件发送者。在Arvo网络中，上一级提供点对点路由与分发软件升级。Azimuth中的担保是个非常简单的声誉系统。刚好足够决定向谁导向数据包并且易于在此基础上做构建。
+            The basic idea is, you need _someone_ to sponsor your membership on the network. An address that can't find a sponsor is probably a bot or a spammer. In the Arvo network parents provide P2P routing and distribute software updates. Azimuth sponsorship is a very simple reputation system. Just enough to decide who to route packets to, and easy to build on top of.
 
-            治理由星系完成。星系形成一个通过多数原则投票机制可对以太坊上土地注册逻辑升级的参议院。
+            Governance is performed by the galaxies. The galaxies form a senate which updates the logic of the Ethereum land registry by majority vote.
 
-            Azimuth基于使Arvo成为安全、友好的网络而设计。一旦正确实现，谁会想用传统互联网？
+            Azimuth is designed to make Arvo a safe, friendly network. Once that's true, who wants to keep using the Internet?
           ==
           ;div.col-sm-12.col-md-3.col-md-offset-1
             ;div.row
@@ -737,7 +722,7 @@
                     ;sup: 8
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 256
-                  ;p.mb-0.pb-0.red.text-600: 星系
+                  ;p.mb-0.pb-0.red.text-600: Galaxies
                 ==
               ==
               ;div.col-sm-5.col-sm-offset-2.col-md-12.col-md-offset-0
@@ -748,7 +733,7 @@
                     ;sup: 16
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 65,280
-                  ;p.mb-0.pb-0.blue.text-600: 恒星
+                  ;p.mb-0.pb-0.blue.text-600: Stars
                 ==
               ==
               ;div.col-sm-5.col-md-12
@@ -759,7 +744,7 @@
                     ;sup: 32
                   ==
                   ;p.mb-0.pb-0.text-mono.text-600: 4,294,902,016
-                  ;p.mb-0.pb-0.green.text-600: 行星
+                  ;p.mb-0.pb-0.green.text-600: Planets
                 ==
               ==
             ==
@@ -774,7 +759,7 @@
           ;div.col-sm-12
             ;div.row.sm-h2.h1.h1-large.h-font
               ;span.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (4)
-              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: 沿革
+              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: History
             ==
           ==
         ==
@@ -783,7 +768,7 @@
         ;div.row.mb-20
           ;div.col-md-8.col-md-offset-2.p--intro
             ;p
-              一开始，一个新平台依托想象、独立与时间。最后，它立于忙乱、组织与金钱。
+              At the start, a new platform takes imagination, independence, and time. At the end, it takes hustle, organization, and money.
             ==
           ==
         ==
@@ -793,7 +778,7 @@
             ;div.circle.circle-sm.mt-2.shape-red;
           ==
           ;div.col-sm-8.col-md-5
-            ;p.text-lg.text-600: Curtis下到他的车库去重塑计算。或是一些事物。
+            ;p.text-lg.text-600: Curtis goes down to his garage to reinvent computing. Or something.
           ==
         ==
         ;div.row.mb-10
@@ -802,13 +787,13 @@
             ;div.circle.circle-sm.mt-1.shape-red;
           ==
           ;div.col-sm-8.col-md-3
-            Nock正常工作。一共32行代码，差不多每两个月一行代码。
+            Nock works. Coming in at 32 lines of code, that's about 1 line of code every two months.
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-green;
           ==
           ;div.col-sm-8.col-md-4
-            虽然Nock很酷，它还需要一个编程语言。Hoon的工作开始了。
+            While Nock is cool, it needs a language. Work on Hoon begins.
           ==
         ==
         ;div.row.mb-10
@@ -817,13 +802,13 @@
             ;div.circle.circle-sm.mt-1.square-green;
           ==
           ;div.col-sm-8.col-md-3
-              Hoon工作得很不错。写Hoon比写Nock容易多了。
+              Hoon works pretty well. It's much easier to write Hoon than Nock.
           ==
           ;div.col-sm-2.col-sm-offset-2.col-md-1.col-md-offset-0.center
             ;div.circle.circle-sm.mt-1.square-orange;
           ==
           ;div.col-sm-8.col-md-4
-            一个编程语言本身能用来干什么？不太多。Arvo的工作开始了。
+            But what do you do with a language on its own? Not much. Work on Arvo begins.
           ==
         ==
         ;div.row.mb-10
@@ -832,7 +817,7 @@
             ;div.circle.circle-sm.mt-1.square-orange;
           ==
           ;div.col-sm-8.col-md-3
-              Arvo可以启动并且能做些小把戏。
+              Arvo boots and can do a few tricks.
           ==
         ==
         ;div.row.mb-10.sm-wrap-reverse
@@ -841,10 +826,10 @@
             ;div.circle.circle-sm.mt-2.square-blue;
           ==
           ;div.col-sm-8.col-md-5
-            ;p.text-lg.text-600: 首个即时Urbit测试网由命令行聊天开始了。
+            ;p.text-lg.text-600: The first live Urbit test network is started with a command-line chat.
           ==
           ;div.col-md-2.col-md-offset-1.sm-center.sm-mb-10
-            ;img@"/images/sticker-1.svg"(alt "11年后");
+            ;img@"/images/sticker-1.svg"(alt "11 years later");
           ==
         ==
 
@@ -854,7 +839,7 @@
             ;div.circle.circle-sm.mt-1.square-blue;
           ==
           ;div.col-sm-8.col-md-3
-            Tlon作为Urbit的公司化存在而设立。
+            Tlon is founded as the corporate vehicle for Urbit.
           ==
         ==
         ;div.row.mb-10
@@ -863,7 +848,7 @@
             ;div.circle.circle-sm.mt-1.square-blue;
           ==
           ;div.col-sm-8.col-md-3
-              Urbit作为其自己网站和聊天服务的服务器了。
+              Urbit serves its own website and chat.
           ==
         ==
 
@@ -873,7 +858,7 @@
             ;div.circle.circle-sm.mt-2.square-blue;
           ==
           ;div.col-sm-8.col-md-5
-            ;p.text-lg.text-600: 首次公开发售Urbit地址空间。于4小时内售罄。
+            ;p.text-lg.text-600: The first public sale of Urbit address space. Finishes in four hours.
           ==
         ==
         ;div.row.mb-10
@@ -882,7 +867,7 @@
             ;div.circle.circle-sm.mt-1.square-blue;
           ==
           ;div.col-sm-8.col-md-3
-              我们的测试网在无重启下连续运行了10个月。
+              Our test network runs for ten months without a reboot.
           ==
         ==
         ;div.row.mb-10.sm-wrap-reverse
@@ -891,7 +876,7 @@
             ;div.circle.circle-sm.mt-2.square-blue;
           ==
           ;div.col-sm-8.col-md-5
-            ;p.text-lg.text-600: 我们的私密发售于6小时内售罄 - 每个人可以购买两个恒星。
+            ;p.text-lg.text-600: Our private sale sells out in six hours — limit 2 per person.
           ==
         ==
         ;div.row.mb-10
@@ -900,14 +885,14 @@
             ;div.circle.circle-sm.mt-1.shape-blue;
           ==
           ;div.col-sm-8.col-md-3
-              开始开发新版本的网络、前台、启动序列、秘密存储、Arvo内核及Hoon语言。
+              Work on new versions of networking, frontend, boot sequence, secret storage, Arvo kernel, and Hoon language begins.
           ==
           ;div.col-sm-2.col-md-1.text-mono.text-700.center: ~2017.11
           ;div.col-sm-2.col-md-1.center
             ;div.circle.circle-sm.mt-1.shape-blue;
           ==
           ;div.col-sm-8.col-md-3
-              向以太坊的大迁徙开始。
+              The great migration to Ethereum starts.
           ==
         ==
         ;div.row.mb-10
@@ -916,14 +901,14 @@
             ;div.circle.circle-sm.mt-1.shape-blue;
           ==
           ;div.col-sm-8.col-md-3
-              Landscape细致地开始了、钱包设计、Bridge和Ford被重写。
+              Landscape begins in earnest, wallet design, Bridge, Ford is rewritten.
           ==
           ;div.col-sm-2.col-md-1.text-mono.text-700.center: ~2018.10
           ;div.col-sm-2.col-md-1.center
             ;div.circle.circle-sm.mt-1.shape-blue;
           ==
           ;div.col-sm-8.col-md-3
-              在Tlon向大家演示了Landscape。
+              Landscape is demoed to all of Tlon.
           ==
         ==
         ;div.row.sm-wrap-reverse
@@ -932,7 +917,7 @@
             ;div.circle.circle-sm.mt-2.square-blue;
           ==
           ;div.col-sm-8.col-md-5
-            ;p.text-lg.text-600: Azimuth在以太坊上运行中、Bridge和钱包生成器在运行中。Landscape在内测中。
+            ;p.text-lg.text-600: Azimuth is live on Ethereum, Bridge and Wallet Generator are live. Landscape is in a private beta.
           ==
         ==
       ==
@@ -944,7 +929,6 @@
             ;div.row.sm-h2.h1.h1-large.h-font
               ;span.col-sm-1.col-md-1.col-md-offset-1.center.dlig: (5)
               ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth distribution
-              ;span.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-0: Azimuth分布
             ==
           ==
         == :: /row
@@ -952,15 +936,15 @@
       ;div.container
         ;div.row.mb-30
           ;div.col-md-8.col-md-offset-2.p--intro
-            Azimuth，作为Urbit的地址空间，是数字资产。资产是现实而不是价值判断。拥有即是拥有。
+            Azimuth, the Urbit address space, is digital property. Property is a fact, not a value judgment. Who owns it is who owns it.
 
-            起初，其中的大多数是无偿给出的。类似于比特币，获得星系曾经很容易。2010年，在Nock里编写decrement就可以得到一个星系。
+            At first, most of it was just given away. Like bitcoins, galaxies used to be easy to get. In 2010, you could earn a galaxy by writing decrement in Nock.
 
-            2013年，我们设立了Tlon作为Urbit开发的载体。Tlon以现在值仅仅几个比特币的价格购买了一半的地址空间。不久之后，我们创建了“urbit.org” - 一个64星系的池子以为Urbit的基础设施开发提供资金。Tlon留任为urbit.org关联星系的守护者。
+            In 2013 we started Tlon as the vehicle for Urbit development. Tlon bought half the address space for what is now just a few BTC. Soon after, we created 'urbit.org' — a pool of 64 galaxies meant to fund development of Urbit infrastructure. Tlon remains the guardian of the urbit.org galaxies.
 
-            我们始终希望地址空间得以广泛分布。当Urbit变得越来越有用，它会自然而然地发生。
+            We have always wanted the address space to be widely distributed. As urbit becomes more useful, this happens on its own.
 
-            在Azimuth启动于以太坊之时（“约2019年一月”），恒星的分布如下：
+            At the launch of Azimuth to Ethereum (`~2019.1`), this is the distribution of stars:
           ==
         == :: /row
         ;div.row.pb-20
@@ -992,7 +976,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-blue-light;
                   ==
-                  ;div.col-md-4.text-700: 贡献者 + 支持者
+                  ;div.col-md-4.text-700: Contributors + supporters
                   ;div.col-md-2.text-mono: 17.57%
                 == ::/row
               == ::/ col-sm-5
@@ -1001,7 +985,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-orange;
                   ==
-                  ;div.col-md-4.text-700: 创始人 + Tlon雇员
+                  ;div.col-md-4.text-700: Founders + Tlon employees
                   ;div.col-md-2.text-mono: 15.23%
                 == :: /row
               ==  ::// col-sm-5
@@ -1010,7 +994,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-green;
                   ==
-                  ;div.col-md-3.text-700: Tlon投资方
+                  ;div.col-md-3.text-700: Tlon investors
                   ;div.col-md-2.col-md-offset-1.text-mono: 13.28%
                 == ::/row
               == ::/ col-sm-5
@@ -1019,7 +1003,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-black;
                   ==
-                  ;div.col-md-3.text-700: 2018星系买家
+                  ;div.col-md-3.text-700: 2018 Galaxy Buyers
                   ;div.col-md-2.col-md-offset-1.text-mono: 8.39%
                 == ::/row
               == ::/ col-sm-5
@@ -1028,7 +1012,7 @@
                   ;div.col-sm-1.col-md-2.center
                     ;div.circle.circle-sm.shape-gray-dark;
                   ==
-                  ;div.col-md-3.text-700: 2016 + 2017恒星买家
+                  ;div.col-md-3.text-700: 2016 + 2017 Star Buyers
                   ;div.col-md-2.col-md-offset-1.text-mono: 3.13%
                 == ::/row
               == ::/ col-sm-5
@@ -1038,26 +1022,26 @@
         ;div.row.pb-20
           ;div.col-md-4.col-md-offset-1
             ;h1.h1-large.gray.text-mono.text-700: >1,000
-            ;p.text-600: 恒星与星系所有者
+            ;p.text-600: Star and galaxy owners
           ==
           ;div.col-md-4.col-md-offset-1
             ;h1.h1-large.blue.text-mono.text-700: ~19%
-            ;p.text-600: 通过urbit.org为开源开发提供资金而专设的部分在网络中的百分比。
+            ;p.text-600: Of the network dedicated to funding open source development through urbit.org.
           ==
         == :: /row 3-up
       == :: /container
       ;div.container.pv-20
         ;div.row
           ;div.col-md-8.col-md-offset-2.mb-12
-            ;h1: Azimuth解锁
+            ;h1: Azimuth unlocking
           ==
           ;div.col-md-8.col-md-offset-2.mb-24.p--intro
-            ;p: 为避免网络暴增，Azimuth为恒星内建“解锁”功能。星系仍然可转让，但它们的恒星逐渐解锁。
-            ;p: 每棵恒星同时在6年中逐渐解锁发放行星的功能。首年1024颗，之后逐年加倍。
-            ;p: 前两次恒星发售（2016 + 2017）的买家与自2015年开始的私密买家所持有的恒星直接全部解锁。
-            ;p: 自2018开始的星系买家所持有的恒星在1或3年中逐渐解锁。
-            ;p: urbit.org在2年中线性逐渐解锁。
-            ;p: 创始人、早期雇员 + 贡献者、支持者、奖励获得者和Tlon及其投资方的锁定期限是1年，其后在4年中线性解锁。
+            ;p: To prevent the network from growing too quickly, Azimuth has built in 'unlocking' for stars. Galaxies remain transferrable, but their stars unlock over time.
+            ;p: Each star also unlocks its ability to issue planets over six years. 1024 in the first year, which doubles each year thereafter.
+            ;p: Star buyers in the first two sales (2016 + 2017) and private buyers since 2015 are unlocked right away.
+            ;p: Galaxy buyers from 2018 unlock over either one or three years.
+            ;p: urbit.org unlocks linearly over two years.
+            ;p: Founders, early employees + contributors, supporters, prizewinners and Tlon and its investors are locked for a year, then unlock linearly over four years.
           ==
         ==
         ;div.flex.mb-6
@@ -1089,7 +1073,7 @@
         ==
         ;div.flex.mb-6.items-center
           ;div.col-md-2
-            ;div.mb-0.text-sm.text-600: 2017 / 2018恒星发售、2015 - 2017私密买家
+            ;div.mb-0.text-sm.text-600: 2017 / 2018 Star Sales, Private Buyers 2015 - 2017
           ==
           ;div.col-sm-1
             ;div.h-32.bg-blue;
@@ -1097,7 +1081,7 @@
         ==
         ;div.flex.mb-6.items-center
           ;div.col-md-2
-            ;div.mb-0.text-sm.text-600: urbit.org + urbit.org奖励获得者
+            ;div.mb-0.text-sm.text-600: urbit.org + urbit.org Prize Winners
           ==
           ;div.col-sm-5
             ;div.h-32.bg-blue;
@@ -1105,7 +1089,7 @@
         ==
         ;div.flex.mb-6.items-center
           ;div.col-md-2
-            ;div.mb-0.text-sm.text-600: 2018星系买家
+            ;div.mb-0.text-sm.text-600: 2018 Galaxy Buyers
           ==
           ;div.col-sm-7
             ;div.h-32.bg-blue;
@@ -1113,7 +1097,7 @@
         ==
         ;div.flex.mb-6.items-center
           ;div.col-md-2
-            ;div.mb-0.text-sm.text-600: 创始人 + 早期雇员、 贡献者 + 支持者、 Tlon + Tlon投资方
+            ;div.mb-0.text-sm.text-600: Founders + Early Employees, Contributors + Supporters, Tlon + Tlon Investors
           ==
           ;div.col-sm-2.col-md-3
             ;div.h-32.bg-blue-light;
