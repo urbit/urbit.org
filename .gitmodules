@@ -1,3 +1,0 @@
-[submodule "content/docs"]
-	path = content/docs
-	url = git@github.com:urbit/docs.git
