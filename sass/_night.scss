@@ -1,0 +1,16 @@
+@media screen and (prefers-color-scheme: dark) {
+    body.bg-white {
+        background: #000000;
+        color: #fff;
+        a {
+            color: #fff;
+        }
+    }
+    .bg-black {
+        background: #fff;
+        color: #000000;
+    }
+    .header__nav-icon:before, .header__nav-icon:after {
+        background: #fff;
+    }
+}
