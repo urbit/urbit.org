@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
-{% include "partials/top-alert.html" %}
+
+<div class="bg-black z3 w-full mb2">
+  <div class="top-bar-inner">
+    <p class="white fs35 p3 mv0 t-center" style="margin-left:none">
+      Interested in developing on Urbit? <a href="/hoonschool" class="white">Sign up for Hoon School!</a>
+    </p>
+  </div>
+</div>
+
 <div class="wrapper">
   <div class="container">
     <div class="no-side-nav-column">
