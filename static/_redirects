@@ -4,5 +4,5 @@
 /landscape                           /docs/concepts/contributing/
 /docs/getting-started/using-a-star   /docs/getting-started/operating-a-star/
 /docs/bridge                         /docs/getting-started/azimuth/
-/docs/pki                            /docs/concepts/arvo-vs-azimuth/
+/docs/pki                            /docs/concepts/azimuth/
 /docs/arvo/internals/                /docs/learn/arvo/
