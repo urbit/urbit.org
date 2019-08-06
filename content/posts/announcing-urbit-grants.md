@@ -1,6 +1,6 @@
 +++
 title = "Announcing: Urbit Grants Program"
-date = 2019-08-05
+date = 2019-08-06
 author = "Robert Mariani"
 description = "Announcing Urbit Grants, a way to earn stars through contributing."
 aliases = ["/posts/essays/announcing-urbit-grants"]
