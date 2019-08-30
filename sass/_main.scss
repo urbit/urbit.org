@@ -4,9 +4,12 @@
 // layout
 
 body {
-    @extend .sans, .grid12;
+    @extend .sans;
+    &:not(.primer) {
+        @extend .grid12;
+        margin: 0 32px;
+    }
     font-size: 1rem;
-    margin: 0 32px;
     color: #000;
 }
 
