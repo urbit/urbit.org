@@ -6,23 +6,11 @@
 <!-- search overlay (btn to activate located in navigations-docs partial) -->
 {% include "partials/search-overlay.html" %}
 <!-- content -->
-<div>
-  <div>
-    <div>
       {% include "partials/navigation-docs.html" %}
-      <div></div>
-    </div>
-    <div>
-      <div></div>
       <article>
         <!-- header -->
         <h1>{{ section.title }}</h1>
         <!-- body -->
-        <div>
           {{ section.content | safe }}
-        </div>
       </article>
-    </div>
-  </div>
-</div>
 {% endblock content %}
