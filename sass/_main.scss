@@ -1,6 +1,8 @@
 @import "indigo";
 @import url('https://rsms.me/inter/inter-ui.css');
 
+// layout
+
 body {
     @extend .sans, .f4, .grid12;
     margin: 0 32px;
@@ -19,13 +21,21 @@ article {
 }
 
 // components
+    // images
+img {
+    max-width: 100%;
+}
     // flatten headers
 h1, h2, h3, h4, h5 {
     @extend .f4, .fw-bold;
 }
-    // ship styling
+    // author and ship styling
+span[rel=author] {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
 address {
     display: inline;
     font-style: normal;
-    float: right;
 }

@@ -8,10 +8,17 @@
 <nav class="mt6"><a class="gray3" href="{{config.base_url}}">Urbit</a> <span class="gray3"> / </span><a href="{{config.base_url}}/posts/{{page.taxonomies.posts[0]}}">{{ page.taxonomies.posts[0] }}</a></nav>
 {% endif %}
         <article class="mt6 mb6">
-          <!-- <h4><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
           <h1>{{ page.title }}</h1>
           <!-- body -->
           {{ page.content | safe }}
-          {% if page.extra.author %} <span class="mt3" rel="author"> {{ page.extra.author }} </span> {% if page.extra.ship %} <address class="mono">{{ page.extra.ship }}</address>{% endif %} {% endif %}
+          {% if page.extra.author %} 
+            <span class="mt3" rel="author"> {{ page.extra.author }} </span> 
+            {% if page.extra.ship %} 
+              <address class="mono">{{ page.extra.ship }}</address>
+            {% endif %}
+            {% if page.date %}
+              <time class="mono block f5">~{{page.date}}</time>
+            {% endif %}
+          {% endif %}
         </article>
 {% endblock content %}
