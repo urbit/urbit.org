@@ -8,7 +8,7 @@
     <meta name="description" content="{{ config.description }}">
     <meta name="author" content="{{ config.extra.author.name }}">
     <link rel="icon" type="image/png" href="/images/favicon.ico" />
-    <link rel="alternative" type="application/rss+xml" title="RSS" href="{{ config.base_url }}/rss.xml" />
+    <link rel="alternative" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <title>{% block title %}{% endblock title %} - {{ config.title }}</title>
     <!-- stylesheets -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
@@ -17,8 +17,8 @@
     	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
     	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
-    <link rel="stylesheet" href="{{ config.base_url }}/indigo.css">
-    <link rel="stylesheet" href="{{ get_url(path="/styles.css", trailing_slash=true, cachebust=true) }}">
+    <link rel="stylesheet" href="/indigo.css">
+    <link rel="stylesheet" href="/styles.css">
     <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
