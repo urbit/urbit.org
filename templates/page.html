@@ -5,7 +5,13 @@
 <!-- header -->
 <!-- content -->
 {% if page.taxonomies.posts %}
-<nav class="mt6"><a class="gray3" href="{{config.base_url}}">Urbit</a> <span class="gray3"> / </span><a href="{{config.base_url}}/posts/{{page.taxonomies.posts[0]}}">{{ page.taxonomies.posts[0] }}</a></nav>
+<nav class="mt6">
+  <a class="gray3" href="{{config.base_url}}">Urbit</a> 
+  <span class="gray3"> / </span>
+  <a href="{{config.base_url}}/posts/{{page.taxonomies.posts[0] | lower}}">
+    {{ page.taxonomies.posts[0] }}
+  </a>
+</nav>
 {% endif %}
         <article class="mt6 mb6">
           <h1>{{ page.title }}</h1>
