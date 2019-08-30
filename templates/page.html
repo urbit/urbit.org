@@ -6,9 +6,9 @@
 <!-- content -->
 {% if page.taxonomies.posts %}
 <nav class="mt6">
-  <a class="gray3" href="{{config.base_url}}">Urbit</a> 
+  <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
-  <a href="{{config.base_url}}/posts/{{page.taxonomies.posts[0] | lower}}">
+  <a href="/posts/{{page.taxonomies.posts[0] | lower}}">
     {{ page.taxonomies.posts[0] }}
   </a>
 </nav>
