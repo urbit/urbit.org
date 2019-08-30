@@ -1,23 +1,22 @@
 {% block content %}
-<div id="js-content-nav-toggle" class="content-nav-icon"></div>
-<nav class="content-nav">
-  <button id="js-search-window-toggle" type="button" class="search-bar content-nav__search-bar inline align-center" style="outline:none">
-    <div class="inline-block"><span class="header__search-icon mh3 inline-block fs6">⚲</span></div><span class="gray50">Search</span>
+<nav>
+  <button id="js-search-window-toggle" type="button"  style="outline:none">
+    <div ><span >⚲</span></div><span >Search</span>
   </button>
-  <ul class="list content-nav__index">
+  <ul>
     {% block menu %}
       {% set index = get_section(path="docs/_index.md") %}
       {% for s in index.subsections %}
         {% set subsection = get_section(path=s) %}
-        <li class="list__item content-nav__index__item mt5">
-          <a class="text-600" href="{{ subsection.permalink }}">
+        <li>
+          <a href="{{ subsection.permalink }}">
             {{ subsection.title }}
           </a>
           {% if subsection.pages %}
           <!-- level 1 -->
-          <ul class="sub-list">
+          <ul>
             {% for page in subsection.pages %}
-            <li class="list__item">
+            <li>
               <a href="{{ page.permalink }}">
                 {{ page.title }}
               </a>
@@ -26,16 +25,16 @@
 
             {% for y in subsection.subsections %}
             {% set subsubsection = get_section(path=y) %}
-            <ul class="sub-list">
-              <li class="list__item">
+            <ul>
+              <li>
                 <a href="{{ subsubsection.permalink }}">
                   {{ subsubsection.title }}
                 </a>
                 <!-- level 2 -->
                 {% if subsubsection.pages %}
-                <ul class="sub-list subsub-list">
+                <ul>
                   {% for page in subsubsection.pages %}
-                    <li class="list__item">
+                    <li>
                       <a href="{{ page.permalink }}">
                         {{ page.title }}
                       </a>
@@ -44,16 +43,16 @@
 
                   {% for x in subsubsection.subsections %}
                   {% set subsubsubsection = get_section(path=x) %}
-                  <ul class="sub-list">
-                    <li class="list__item">
+                  <ul>
+                    <li>
                       <a href="{{ subsubsubsection.permalink }}">
                         {{ subsubsubsection.title }}
                       </a>
                       {% if subsubsubsection.pages %}
                       <!-- level 3 -->
-                      <ul class="sub-list subsub-list">
+                      <ul>
                         {% for page in subsubsubsection.pages %}
-                          <li class="list__item">
+                          <li>
                             <a href="{{ page.permalink }}">
                               {{ page.title }}
                             </a>

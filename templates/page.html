@@ -1,27 +1,17 @@
 {% extends "base.html" %}
 {% block title %} {{ page.title }} {% endblock title %}
 {% block content %}
+
 <!-- header -->
-{% include "partials/navigation.html" %}
 <!-- content -->
-<div class="main-wrapper">
-  <div class="wrapper">
-    <div class="container container--fixed content-nav-container">
-      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
-      <div class="content-spacer"></div>
-    </div>
-    <div class="container">
-      <div class="content-nav-spacer"></div>
-      <div class="content posts__content pb40">
-        <article class="article">
-          <!-- header -->
-          <!-- <h4 class="mb8"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
-          <h1 class="mb8">{{ page.title }}</h1>
+{% if page.taxonomies.posts %}
+<nav class="mt6"><a class="gray3" href="{{config.base_url}}">Urbit</a> <span class="gray3"> / </span><a href="{{config.base_url}}/posts/{{page.taxonomies.posts[0]}}">{{ page.taxonomies.posts[0] }}</a></nav>
+{% endif %}
+        <article class="mt6 mb6">
+          <!-- <h4><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
+          <h1>{{ page.title }}</h1>
           <!-- body -->
           {{ page.content | safe }}
+          {% if page.extra.author %} <span class="mt3" rel="author"> {{ page.extra.author }} </span> {% if page.extra.ship %} <address class="mono">{{ page.extra.ship }}</address>{% endif %} {% endif %}
         </article>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock content %}

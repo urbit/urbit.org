@@ -2,39 +2,39 @@
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
 {% include "partials/top-alert.html" %}
-<div class="wrapper">
-  <div class="container">
-    <div class="no-side-nav-column">
-      <h1 class="mt10">Urbit</h1>
-      <p class="mb6">A personal server built from scratch.</p>
-      <ul class="list">
-        <li class="list__item">
+<div>
+  <div>
+    <div>
+      <h1>Urbit</h1>
+      <p>A personal server built from scratch.</p>
+      <ul>
+        <li>
           <h2>
             <a href="{{config.base_url ~ "/primer/"}}">
               Primer
             </a>
           </h2>
-          <p class="mb6">
+          <p>
             A 10-minute read on what Urbit is and why it exists.
           </p>
         </li>
-        <li class="list__item">
+        <li>
           <h2>
             <a href="{{config.base_url ~ "/posts/"}}">
               Posts
             </a>
           </h2>
-          <p class="mb6">
+          <p>
             Regular updates, occasional essays and media.
           </p>
         </li>
-        <li class="list__item">
+        <li>
           <h2>
             <a href="{{config.base_url ~ "/docs/"}}">
               Docs
             </a>
           </h2>
-          <p class="mb6">
+          <p>
             Installation instructions and complete system documentation.
           </p>
         </li>

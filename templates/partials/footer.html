@@ -1,52 +1,52 @@
 {% block content %}
-<footer class="footer">
-  <section class="form mv20">
+<footer>
+  <section>
     <div id="mc_embed_signup">
-      <h2 class="mb2">Updates</h2>
+      <h2>Updates</h2>
       <p>Every month we send an email with community events and what we're up to.</p>
       <iframe name="nothing" style="display:none;"></iframe>
-      <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
-        <div class="input-group text-mono" id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <input class="required tlon-input mb2" type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
+      <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  target="_blank" novalidate>
+        <div  id="mc_embed_signup_scroll">
+          <div >
+            <input  type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
           </div>
-          <div id="mce-responses" class="clear">
-            <div id="mce-error-response" class="response" style="display:none"></div>
-            <div id="mce-success-response" class="response" style="display:none"></div>
+          <div id="mce-responses" >
+            <div id="mce-error-response"  style="display:none"></div>
+            <div id="mce-success-response"  style="display:none"></div>
           </div>
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value=""></div>
-          <button id="mc-embedded-subscribe" class="btn bg-black white" type="submit" name="subscribe">
-            <span class="text-500">Subscribe</span>
+          <button id="mc-embedded-subscribe"  type="submit" name="subscribe">
+            <span >Subscribe</span>
           </button>
         </div>
       </form>
     </div>
   </section>
-  <section class="mb6">
-    <h4 class="mb1">Follow</h4>
-    <ul class="list">
-      <li class="list__item">
-        <a class="mono" href="https://twitter.com/urbit">twitter.com/urbit</a>
+  <section >
+    <h4>Follow</h4>
+    <ul>
+      <li>
+        <a  href="https://twitter.com/urbit">twitter.com/urbit</a>
       </li>
-      <li class="list__item">
-        <a class="mono" href="https://github.com/urbit/">github.com/urbit</a>
-      </li>
-    </ul>
-  </section>
-  <section class="mb6">
-    <h4 class="mb1">Contact</h4>
-    <ul class="list">
-      <li class="list__item">
-        <a class="mono" href="mailto:support@urbit.org">support@urbit.org</a>
+      <li>
+        <a  href="https://github.com/urbit/">github.com/urbit</a>
       </li>
     </ul>
   </section>
-  <section class="mb6">
-    <h4 class="mb1">Company</h4>
-    <ul class="list">
+  <section>
+    <h4>Contact</h4>
+    <ul>
+      <li>
+        <a  href="mailto:support@urbit.org">support@urbit.org</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h4>Company</h4>
+    <ul>
       {% for item in config.extra.urbit_footer %}
-        <li class="list__item">
-          <a class="mono" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+        <li>
+          <a  href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
             {{ item.name }}
           </a>
         </li>

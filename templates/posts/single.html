@@ -2,15 +2,11 @@
 {% block title %} {{ term.name }} {% endblock title %}
 {% block content %}
 <!-- header -->
-{% include "partials/navigation.html" %}
 <!-- content -->
-<div class="main-wrapper">
-  <div class="wrapper">
-    <div class="container container--fixed content-nav-container">
-      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
-      <nav class="content-nav">
-        <ul class="list">
-          <li class="list__item content-nav__item">
+<div>
+      <nav>
+        <ul>
+          <li>
             <a href="{{ config.base_url }}/posts/">
               All
             </a>
@@ -32,17 +28,15 @@
           </li>
         </ul>
       </nav>
-      <div class="content-spacer"></div>
     </div>
-    <div class="container">
-      <div class="content-nav-spacer"></div>
-      <article class="content posts__content">
-        <h1 class="mb8">{{ term.name }}</h1>
-        <ul class="list">
+    <div>
+      <article>
+        <h1>{{ term.name }}</h1>
+        <ul>
           {% for page in term.pages %}
-            <li class="list__item mb8">
-              <span class="h4 mt0 mb0 mr2 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
-              <span class="h4 mt0 mb0 lowercase">
+            <li>
+              <span>&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+              <span>
                 {% if page.taxonomies.posts %}
                   {% for post in page.taxonomies.posts %}
                     <a href="{{ get_taxonomy_url(kind="posts", name=post | safe) }}">
@@ -51,8 +45,8 @@
                   {% endfor %}
                 {% endif %}
               </span>
-              <h2 class="mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-              <p class="mt3">{{ page.description }}</p>
+              <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+              <p>{{ page.description }}</p>
             </li>
           {% endfor %}
         </ul>

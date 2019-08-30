@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="wrapper">
-  <div class="container">
-    <div class="no-side-nav-column">
-      <h1 class="mt10">Error 404</h1>
-      <p class="mb14">Sorry, but the page you requested doesn't exist.</p>
-      <ul class="list">
+<div>
+  <div>
+    <div>
+      <h1>Error 404</h1>
+      <p>Sorry, but the page you requested doesn't exist.</p>
+      <ul>
         {% for item in config.extra.urbit_menu %}
-          <li class="list__item">
-            <h2 class="mb6">
+          <li>
+            <h2>
               <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
                 {{ item.name }}
               </a>
