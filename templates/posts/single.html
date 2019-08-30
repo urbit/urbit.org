@@ -3,55 +3,33 @@
 {% block content %}
 <!-- header -->
 <!-- content -->
-<div>
-      <nav>
-        <ul>
-          <li>
-            <a href="{{ config.base_url }}/posts/">
-              All
-            </a>
-          </li>
-          <li class="list__item content-nav__item">
-            <a href="{{ config.base_url }}/posts/essays/">
-              Essays
-            </a>
-          </li>
-          <li class="list__item content-nav__item">
-            <a href="{{ config.base_url }}/posts/media/">
-              Media
-            </a>
-          </li>
-          <li class="list__item content-nav__item">
-            <a href="{{ config.base_url }}/posts/updates/">
-              Updates
-            </a>
-          </li>
-        </ul>
+    <nav class="mt6">
+        <a class="gray3" href="{{config.base_url}}">Urbit</a> 
+        <span class="gray3"> / </span>
+        <a href="{{config.base_url}}/posts/{{term.name | lower}}">
+          {{ term.name }}
+        </a>
       </nav>
-    </div>
-    <div>
-      <article>
-        <h1>{{ term.name }}</h1>
-        <ul>
+      <article class="mt6 mb6 post-list">
+        <h1 class="fw-regular mt8 mb8">{{ term.name }}</h1>
+        <ul class="posts">
           {% for page in term.pages %}
-            <li>
-              <span>&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
-              <span>
+            <li class="mb5 mt5">
+              <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+              <p class="mb2 mt2">{{ page.description }}</p>
+              <span class="mono f5">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+              <span class="mono f5">
                 {% if page.taxonomies.posts %}
                   {% for post in page.taxonomies.posts %}
-                    <a href="{{ get_taxonomy_url(kind="posts", name=post | safe) }}">
-                      {{ post }}
+                    <a class="mono f5" href="{{ get_taxonomy_url(kind="posts", name=post | safe) }}">
+                      {{ post | lower }}
                     </a>
                   {% endfor %}
                 {% endif %}
+                {% if page.extra.ship %}<span class="mono f5 ml2">{{ page.extra.ship }}</span> {% endif %}
               </span>
-              <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-              <p>{{ page.description }}</p>
             </li>
           {% endfor %}
         </ul>
       </article>
-    </div>
-  </div>
-</div>
 {% endblock content %}

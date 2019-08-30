@@ -14,13 +14,29 @@ nav {
 }
 
 article {
+    // default
     grid-area: auto / 4 / auto / 9;
+    // links on body text
     a {
         @extend .bb1, .b-black;
-       }
+        &.mono {
+            border-bottom: 0;
+        }
+    }
+    // post directories
+    &.post-list {
+        grid-area: auto / 4 / auto / 12;
+    }
 }
 
 // components
+    // ul reset
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
     // images
 img {
     max-width: 100%;
@@ -34,8 +50,12 @@ span[rel=author] {
     font-weight: 600;
     margin-right: 5px;
 }
-
 address {
     display: inline;
     font-style: normal;
+}
+
+    // post lists
+ul.posts {
+    list-style-type: none;
 }
