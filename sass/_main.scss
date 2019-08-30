@@ -4,13 +4,20 @@
 // layout
 
 body {
-    @extend .sans, .f4, .grid12;
+    @extend .sans, .grid12;
+    font-size: 1rem;
     margin: 0 32px;
     color: #000;
 }
 
 nav {
-    grid-area: auto / 1 / auto / 3;
+    grid-area: auto / 1 / auto / 4;
+    // If you need to flush the nav to break
+    // the body's margin, use this:
+    &.full-left {
+        margin-left: -32px;
+        padding-left: 32px;
+    }
 }
 
 article {
@@ -27,6 +34,9 @@ article {
     &.post-list {
         grid-area: auto / 4 / auto / 12;
     }
+    li {
+        margin: 1rem;
+    }
 }
 
 // components
@@ -37,25 +47,67 @@ ul {
     padding-inline-start: 0;
     padding-inline-end: 0;
 }
-    // images
+
+    // images for posts
 img {
     max-width: 100%;
 }
+
     // flatten headers
 h1, h2, h3, h4, h5 {
-    @extend .f4, .fw-bold;
+    @extend .fw-bold;
+    font-size: 1rem;
 }
+
     // author and ship styling
 span[rel=author] {
     font-weight: 600;
     margin-right: 5px;
 }
+
 address {
     display: inline;
     font-style: normal;
 }
 
-    // post lists
-ul.posts {
+    // post and nav lists
+ul.posts, nav ul {
     list-style-type: none;
+}
+
+ul.posts li {
+    margin: 2rem 0 2rem 0;
+}
+
+nav ul.docs {
+    line-height: 30px;
+}
+
+    // search button
+#js-search-window-toggle {
+    position: relative;
+    display: block;
+    width: calc(100% - 64px);
+    text-align: left;
+    background: transparent;
+    span#search-icon {
+        display: inline-block;
+        transform: rotate(-45deg);
+    }
+    span.search-slash {
+        font-size: 0.75em;
+        position: absolute;
+        right: 0px;
+        top: 2px;
+        padding: 6px;
+        border: 1px solid #b1b2b3;
+        border-radius: 3px;
+    }
+}
+    // tooltipping
+.tippy-tooltip {
+    border-radius: 0px;
+}
+.tippy-content {
+    color: white;
 }
