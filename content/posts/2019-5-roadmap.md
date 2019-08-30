@@ -101,5 +101,3 @@ Hoon school was the first effort in this direction. We intend to do a lot more:
 - Hoon School participants understand clearly how to build a Modulo agent, and invite others into it.
 - The road toward building an Azimuth module is well understood, paved, and clear.
 - We have clear instructions and tutorials for building Azimuth modules and using Azimuth as a login or reputation primitive.
-
-**Galen Wolfe-Pauly** `~ravmel-ropdyl`

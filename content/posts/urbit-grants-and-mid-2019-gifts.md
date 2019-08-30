@@ -41,4 +41,3 @@ Making the process of rewarding contributors is something we’ve thought a lot 
 
 Please [subscribe to our newsletter](http://eepurl.com/b7x7hj) to make sure you receive future announcements.
 
-– **Galen** `~ravmel-ropdyl` & **Alex** `~mignyt-mogseb`

@@ -74,4 +74,3 @@ Many of us spend all day on Landscape, use it from our phones, and find it reall
 
 We operate one public channel, `~dopzod/urbit-help` for answering any of your questions about the system. And, from time to time, we have been creating topic-centric channels and announcing them publicly. This has been a lot of fun. Come join us if you’re feeling brave.
 
-**Galen Wolfe-Pauly** `~ravmel-ropdyl`

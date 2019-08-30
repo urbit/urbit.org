@@ -25,5 +25,3 @@ In theory we could all be using Apple I’s today, but they’re a bit cumbersom
 Imagine that a computer was something you kept forever. It would comfortably store your entire life: your writing, photos, blood tests, even your genome. Your computer would never show you ads, interrupt you against your wishes, or send your data to someone else without your permission. 
 
 Imagine a computer that was extremely valuable to you, that you’d pay thousands of dollars to recover, but you used *less* than the one you do today. 
-
-**Galen Wolfe-Pauly** `~ravmel-ropdyl`
