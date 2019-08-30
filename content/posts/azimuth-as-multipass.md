@@ -1,11 +1,13 @@
 +++
 title = "Azimuth as Multipass"
 date = 2019-05-16
-author = "Galen Wolfe-Pauly"
 description = "What if everyone had a single 'civilizational key'?"
 aliases = ["/posts/essays/azimuth-as-multipass/"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png)

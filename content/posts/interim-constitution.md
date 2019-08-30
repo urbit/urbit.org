@@ -1,11 +1,12 @@
 +++
 title = "Interim Constitution"
 date = 2016-05-16
-author = "Tlon"
 description = "The governing rules for the early days of the Urbit network."
 aliases = ["/posts/essays/interim-constitution"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Tlon"
 +++
 ![](https://media.urbit.org/site/blog-7.jpg)
 

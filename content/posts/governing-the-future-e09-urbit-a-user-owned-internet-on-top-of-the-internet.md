@@ -1,10 +1,11 @@
 +++
 title = "Governing the Future E09: Urbit – A User Owned Internet on top of the Internet"
 date = 2017-08-10
-author = "Tlon"
 description = "Galen talks with Hampus Jakobsson about Urbit on the Governing the Future podcast."
 [taxonomies]
 posts = ["Media"]
+[extra]
+author = "Tlon"
 +++
 > What happens when users get to control a piece of the internet. What does this browser of servers mean when we can use own client and still communicate? Can we create a new Internet owned by the people, an internet designed like a city by an architect and not only engineers?
 

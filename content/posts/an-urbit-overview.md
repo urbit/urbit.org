@@ -1,11 +1,13 @@
 +++
 title = "An Urbit Overview"
 date = 2016-05-11
-author = "Galen Wolfe-Pauly"
 description = "A high-level overview of Urbit."
 aliases = ["/posts/essays/an-urbit-overview"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
 +++
 ![](https://media.urbit.org/site/blog-0.jpg)
 

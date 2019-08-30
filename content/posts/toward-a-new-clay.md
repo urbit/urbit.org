@@ -1,11 +1,13 @@
 +++
 title = "Toward a New %clay"
 date = 2016-07-14
-author = "Curtis Yarvin"
 description = "Urbit's revision-control system, %clay, is itself due for a (medium-sized) revision!"
 aliases = ["/posts/essays/toward-a-new-clay"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin"
+ship = "~sorreg-namtyv"
 +++
 
 TLDR: (a) Urbit's revision-control system, `%clay`, is itself due

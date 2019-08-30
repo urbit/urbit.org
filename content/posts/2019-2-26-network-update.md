@@ -1,10 +1,11 @@
 +++
 title = "~2019.2.26 Network Update"
 date = 2019-02-26
-author = "~poldec-tonteg"
 description = "A short update on network status as of ~2019.2.26."
 [taxonomies]
 posts = ["Updates"]
+[extra]
+author = "~poldec-tonteg"
 +++
 ![](https://media.urbit.org/site/posts/updates/~2019.2.26-update-1.jpg)
 

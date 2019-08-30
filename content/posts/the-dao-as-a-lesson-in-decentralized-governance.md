@@ -1,10 +1,12 @@
 +++
 title = "The DAO as a Lesson in Decentralized Governance"
 date = 2016-06-24
-author = "Curtis Yarvin"
 description = "What's the right lesson for the decentralization community to learn from the collapse of the DAO?"
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin"
+ship = "~sorreg-namtyv"
 +++
 What's the right lesson for the decentralization community to
 learn from the collapse of the DAO?

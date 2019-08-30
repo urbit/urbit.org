@@ -1,11 +1,13 @@
 +++
 title = "Toward a Frozen Operating System"
 date = 2017-05-10
-author = "Curtis Yarvin + Galen Wolfe-Pauly"
 description = "Is it possible to freeze an entire OS?"
 aliases = ["/posts/essays/toward-a-frozen-operating-system"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin + Galen Wolfe-Pauly"
+ship = "~sorreg-namtyv + ~ravmel-ropdyl"
 +++
 Is it possible to freeze an entire OS, so that its codebase never changes and
 never has to change?  Is the proposition even meaningful?  Is it practical?

@@ -1,11 +1,13 @@
 +++
 title = "The Urbit Address Space"
 date = 2016-05-16
-author = "Galen Wolfe-Pauly, Curtis Yarvin"
 description = "An overview of Urbit's cryptographic address space."
 aliases = ["/posts/essays/the-urbit-address-space"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly + Curtis Yarvin"
+ship = "~ravmel-ropdyl + ~sorreg-namtyv"
 +++
 ![](https://media.urbit.org/site/blog-3.jpg)
 

@@ -1,11 +1,13 @@
 +++
 title = "The State of Landscape"
 date = 2019-05-16
-author = "Galen Wolfe-Pauly"
 description = "An update on the state of Landscape and the Urbit network."
 aliases = ["/posts/essays/the-state-of-landscape"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/the-state-of-landscape-1.png)

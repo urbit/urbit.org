@@ -1,11 +1,13 @@
 +++
 title = "Beliefs and principles guiding the Urbit project."
 date = 2016-05-11
-author = "Galen Wolfe-Pauly + Curtis Yarvin"
 description = "We believe."
 aliases = ["/posts/essays/beliefs-and-principles"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin + Galen Wolfe-Pauly"
+ship = "~sorreg-namtyv + ~ravmel-ropdyl"
 +++
 ![](https://media.urbit.org/site/blog-2.jpg)
 

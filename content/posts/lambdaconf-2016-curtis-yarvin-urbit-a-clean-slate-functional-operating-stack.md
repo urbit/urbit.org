@@ -1,10 +1,11 @@
 +++
 title = "LambdaConf 2016: Curtis Yarvin - Urbit: A Clean Slate Functional Operating Stack"
 date = 2016-09-28
-author = "Tlon"
 description = "Curtis presents a comprehensive technical overview of Urbit at LambdaConf 2016."
 [taxonomies]
 posts = ["Media"]
+[extra]
+author = "Tlon"
 +++
 {{ youtube(id="bTisf4oxIFo") }}
 

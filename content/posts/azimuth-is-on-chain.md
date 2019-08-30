@@ -1,11 +1,13 @@
 +++
 title = "Azimuth is On-Chain"
 date = 2019-01-14
-author = "Galen Wolfe-Pauly"
 description = "The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post."
 aliases = ["/posts/essays/azimuth-is-on-chain"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
 +++
 
 ![](https://storage.googleapis.com/media.urbit.org/site/arvo-4.svg)

@@ -1,11 +1,13 @@
 +++
 title = "Common Objections to Urbit"
 date = 2016-06-28
-author = "Curtis Yarvin"
 description = "Some common objections to Urbit, discussed."
 aliases = ["/posts/essays/common-objections-to-urbit"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin"
+ship = "~sorreg-namtyv"
 +++
 ![](https://media.urbit.org/site/blog-9.jpg)
 

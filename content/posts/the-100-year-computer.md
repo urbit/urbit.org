@@ -1,11 +1,13 @@
 +++
 title = "The 100-Year Computer"
 date = 2019-05-14
-author = "Galen Wolfe-Pauly"
 description = "One way to think about Urbit: as a \"100-year computer.\""
 aliases = ["/posts/essays/the-100-year-computer/"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/100-year-computer-1.png)

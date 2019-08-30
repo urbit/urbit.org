@@ -1,11 +1,13 @@
 +++
 title = "Magic"
 date = 2016-05-16
-author = "Curtis Yarvin"
 description = "A thought-experiment to explain the Urbit user experience."
 aliases = ["/posts/essays/magic"]
 [taxonomies]
 posts = ["Essays"]
+[extra]
+author = "Curtis Yarvin"
+ship = "~sorreg-namtyv"
 +++
 ![](https://media.urbit.org/site/blog-7.jpg)
 
