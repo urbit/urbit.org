@@ -63,6 +63,14 @@ nav {
     &.no-break {
         min-width: 168px;
     }
+    &.home ul li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+aside {
+    grid-area: auto / 7 / auto / 9; 
 }
 
 article {

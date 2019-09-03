@@ -1,44 +1,41 @@
 {% extends "base.html" %}
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
-{% include "partials/top-alert.html" %}
-<div>
-  <div>
-    <div>
-      <h1>Urbit</h1>
-      <p>A personal server built from scratch.</p>
-      <ul>
-        <li>
-          <h2>
-            <a href="{{config.base_url ~ "/primer/"}}">
-              Primer
+<nav class="home mt6">
+  <p class="mb6 mt6">Urbit is your last computer</p>
+      <h3>What is Urbit?</h3>
+  <ul> 
+    <li>Project Overview</li>
+    <li>Interface</li>
+    <li>Infrastructure</li>
+    <li>Azimuth</li>
+  </ul>
+  <h3 class="mt6">Contributing</h3>
+  <ul>
+    <li>How can I help?</li>
+    <li>Operating Galaxies and Stars</li>
+    <li>Governance</li>
+  </ul>
+  <h3 class="mt6">Learn</h3>
+  <ul>
+    <li><a href="/posts/essays">Essays</a></li>
+    <li>Media</li>
+    <li><a href="/faq">FAQ</a></li>
+  </ul>
+</nav>
+<aside class="mt6">
+  <section><h3 class="mt6 mb6">Latest Posts</h3>
+        {% set s = get_section(path="posts/_index.md") %}
+        {% for page in s.pages | slice(end=2) %}
+            <a class="block fw-bold mt4 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
+            <address class="mono block mv1">{{ page.extra.ship }}</address>
+            <time class="mono mr3">{{ page.date | date(format="~%Y.%m.%d") }}</time>
+            <a class="mono" href="/posts/{{page.taxonomies.posts[0] | lower}}">
+              {{ page.taxonomies.posts[0] | lower}}
             </a>
-          </h2>
-          <p>
-            A 10-minute read on what Urbit is and why it exists.
-          </p>
-        </li>
-        <li>
-          <h2>
-            <a href="{{config.base_url ~ "/posts/"}}">
-              Posts
-            </a>
-          </h2>
-          <p>
-            Regular updates, occasional essays and media.
-          </p>
-        </li>
-        <li>
-          <h2>
-            <a href="{{config.base_url ~ "/docs/"}}">
-              Docs
-            </a>
-          </h2>
-          <p>
-            Installation instructions and complete system documentation.
-          </p>
-        </li>
-      </ul>
+        {% endfor %}
+  </section>
+</aside>
       <!-- footer -->
       {% include "partials/footer.html" %}
     </div>
