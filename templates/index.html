@@ -24,7 +24,7 @@
   </ul>
 </nav>
 <aside class="mt6">
-  <section><h3 class="mt6 mb6">Latest Posts</h3>
+  <section class="mt6 mb6"><h3>Latest Posts</h3>
         {% set s = get_section(path="posts/_index.md") %}
         {% for page in s.pages | slice(end=2) %}
             <a class="block fw-bold mt4 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
