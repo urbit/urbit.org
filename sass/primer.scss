@@ -13549,6 +13549,7 @@ must add span in markup to display icon
 
 /*Responsive Variables */
 /*Responsive Spacing */
+
 @media only screen and (max-width: 480px) {
   .sm-m-0 {
     margin: (0rem / 4); }
@@ -16751,6 +16752,14 @@ must add span in markup to display icon
     padding-top: (99rem / 4);
     padding-bottom: (99rem / 4); } }
 
+  @media only screen and (max-width: 330px) {
+  .xs-mb-10 {
+    margin-bottom: (10rem / 4);
+  }
+  .xs-mb-28 {
+    margin-bottom: (28rem / 4);
+  }
+}
 /*Responsive Typography */
 /** Responsive for Mobile **/
 @media only screen and (max-width: 480px) {
