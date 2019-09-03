@@ -5,7 +5,7 @@ description = "On the latest Urbit user interface, and the interfaces to come."
 aliases = ["/posts/essays/landscape-a-portrait/"]
 [taxonomies]
 posts = ["Essays"]
-[extras]
+[extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"
 +++
