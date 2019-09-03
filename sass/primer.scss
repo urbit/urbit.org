@@ -13060,6 +13060,7 @@ ol > li:before {
     padding-right: (99rem / 4); } }
 
 * {
+  color: inherit;
   box-sizing: border-box; }
 
 html {
@@ -16878,3 +16879,9 @@ must add span in markup to display icon
 .square-purple {
   background-color: #7272ED;
   border-color: #7272ED; }
+
+nav {
+  position: fixed;
+  background: transparent;
+  mix-blend-mode: exclusion;
+}
