@@ -1,27 +1,4 @@
-// toggling of navigation menus
-var toggleMainNav = document.getElementById('js-main-nav-toggle');
-if (toggleMainNav !== null) {
-  toggleMainNav.onclick = function() {
-    document.body.classList.toggle('has-active-main-nav');
-  }
-}
 
-var toggleContentNav = document.getElementById('js-content-nav-toggle');
-
-// Only show the content nav for docs or posts
-let navEnabledSections = ['docs', 'posts']
-let showNav = false
-for (let section of navEnabledSections) {
-  window.location.href.includes(section) ? showNav = true : null
-}
-showNav ? null : toggleContentNav.classList.add('none')
-
-
-if (toggleContentNav !== null) {
-  toggleContentNav.onclick = function() {
-    document.body.classList.toggle('has-active-content-nav');
-  }
-}
 
 function initHotKeys() {
 
@@ -341,14 +318,14 @@ if (document.readyState === "complete" ||
 }
 
 // Scroll to current document in nav list.
-let docsNavScroll = function() {
-  let docsNav = document.querySelectorAll("ul.content-nav__index a")
-  for (let link in docsNav) {
-    if (window.location.href.includes(docsNav[link].href)) {
-      docsNav[link].scrollIntoView()
-    }
-  }
-}
+// let docsNavScroll = function() {
+//  let docsNav = document.querySelectorAll("ul.content-nav__index a")
+//  for (let link in docsNav) {
+//    if (window.location.href.includes(docsNav[link].href)) {
+//      docsNav[link].scrollIntoView()
+//    }
+//  }
+//}
 
 if (window.location.href.includes("docs")) {
   docsNavScroll();

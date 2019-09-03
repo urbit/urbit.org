@@ -88,7 +88,7 @@ nav ul.docs {
     line-height: 30px;
 }
 
-    // search button
+    // search button and overlay
 #js-search-window-toggle {
     position: relative;
     display: block;
@@ -103,16 +103,98 @@ nav ul.docs {
         font-size: 0.75em;
         position: absolute;
         right: 0px;
-        top: 2px;
+        top: 6px;
         padding: 6px;
         border: 1px solid #b1b2b3;
         border-radius: 3px;
     }
 }
+.has-active-search-window {
+    .search-overlay {
+        display: block;
+        margin-left: -32px;
+        padding-left: 32px;
+        height: 100vh;
+    }
+}
+
+.b-transparent {
+    background: rgba(0,0,0,0.4);
+}
+
+.pop-up {
+    width: 100%;
+    max-width: 600px;
+    margin: (28rem / 4) auto;
+    background: #fff;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="search"] {
+ font-size: (4rem / 4);
+ line-height: (6rem / 4);
+ transition: all 0.1s linear;
+ padding-right: 40px;
+ position: relative;
+ border-radius: 0 !important;
+ &:focus {
+     outline: 0;
+     border: 0;
+ }
+}
+
+.search-bar {
+    background: #fff;
+    font-size: (4rem / 4);
+    transition: all 0.1s linear;
+    padding: 12px 0 12px 0;
+    position: relative;
+    font-weight: normal;
+    text-align: left;
+    box-shadow: none !important;
+    color: #B1B2B3;
+    width: 100%;
+    padding-left: 0rem;
+  }
+
+  .header__search-icon {
+    transform: rotate(-45deg);
+    vertical-align: bottom;
+  }
+
+  .search-overlay {
+    .search-bar {
+      &__input {
+        padding-left: 40px;
+      }
+    }
+  }
+  
+  .search-results {
+    max-height: 400px;
+    &__item a:hover {
+      background: #F9F9F9;
+      span {
+        display:inline-block;
+      }
+    }
+  }
+
+  #search-reset {
+    cursor: pointer;
+    user-select: none;
+  }
     // tooltipping
 .tippy-tooltip {
     border-radius: 0px;
 }
+
 .tippy-content {
     color: white;
 }
