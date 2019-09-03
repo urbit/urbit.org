@@ -85,5 +85,3 @@ We will backport these exploratory developments into Landscape as they continue 
 Most importantly, we’ll continue to iterate on how we onboard new developers. [Hoon School](https://urbit.org/hoonschool) continues to evolve; its first cohort is thriving and friendly. We have a dedicated cast of teachers and ongoing access to much of the Urbit team through this stream.
 
 If you’d like to join us here, you’ll discover a computer that you can learn and master from the bottom up. Right now, it is a labyrinth for the intrepid; but for the future, and forever, it is _mappable_. A landscape, after all, doesn’t show a single leaf, but the earth and the horizon ahead.
-
-**Matilde Park** `~haddef-sigwen`
