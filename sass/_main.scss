@@ -1,5 +1,42 @@
+// importing typography and parent styles
 @import "indigo";
 @import url('https://rsms.me/inter/inter-ui.css');
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-extralight.woff");
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-light.woff");
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-regular.woff");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-medium.woff");
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-bold.woff");
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "Source Code Pro";
+    src: url("https://storage.googleapis.com/media.urbit.org/fonts/scp-black.woff");
+    font-weight: 700;
+  }
 
 // layout
 
@@ -22,6 +59,9 @@ nav {
     &.full-left {
         margin-left: -32px;
         padding-left: 32px;
+    }
+    &.no-break {
+        min-width: 168px;
     }
 }
 
@@ -92,7 +132,8 @@ nav ul.docs {
 #js-search-window-toggle {
     position: relative;
     display: block;
-    width: calc(100% - 64px);
+    width: 80%;
+    min-width: 110px;
     text-align: left;
     background: transparent;
     span#search-icon {
@@ -203,4 +244,17 @@ input[type="search"] {
     .top-alert {
         margin: 0 -32px 1rem -32px;
         padding: 0.3rem 32px;
+    }
+
+    // code blocks
+    pre, pre span {
+        @extend .mono;
+        background-color: #f9f9f9 !important;
+        color: black !important;
+    }
+    // code in headers
+    h1 code, h2 code, h3 code {
+        @extend .red4;
+        background-color: transparent;
+        font-weight: 600;
     }
