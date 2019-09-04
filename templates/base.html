@@ -15,10 +15,16 @@
     <style type="text/css">
     	#mc_embed_signup{clear:left; width:100%;}
     	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-    	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+         
+         /* external link css need template processing */ 
+    a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
+        content: "↗";
+    }
     </style>
     <link rel="stylesheet" href="/indigo.css">
     <link rel="stylesheet" href="/styles.css">
+    <!-- analytics -->
     <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
