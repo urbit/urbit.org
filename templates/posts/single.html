@@ -21,7 +21,7 @@
               <span class="mono f5">
                 {% if page.taxonomies.posts %}
                   {% for post in page.taxonomies.posts %}
-                    <a class="mono f5" href="{{ get_taxonomy_url(kind="posts", name=post | safe) }}">
+                    <a class="mono f5 ml2" href="{{ get_taxonomy_url(kind="posts", name=post | safe) }}">
                       {{ post | lower }}
                     </a>
                   {% endfor %}
