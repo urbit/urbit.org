@@ -2,7 +2,7 @@
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
 <nav class="home mt6">
-  <p class="mb6 mt6">Urbit is your last computer</p>
+  <h1 class="mb6 mt6 fw-regular">Urbit is your last computer</h1>
       <h3>What is Urbit?</h3>
   <ul> 
     <li>Project Overview</li>
@@ -31,10 +31,10 @@
   <section class="mt6 mb6"><h3>Latest Posts</h3>
         {% set s = get_section(path="posts/_index.md") %}
         {% for page in s.pages | slice(end=2) %}
-            <a class="block fw-bold mt4 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
-            <address class="mono block mv1">{{ page.extra.ship }}</address>
-            <time class="mono mr3">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-            <a class="mono" href="/posts/{{page.taxonomies.posts[0] | lower}}">
+            <a class="block fw-bold mt6 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
+            <address class="mono block mv2">{{ page.extra.ship }}</address>
+            <time class="mono mv2 mr3">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+            <a class="mono mv2" href="/posts/{{page.taxonomies.posts[0] | lower}}">
               {{ page.taxonomies.posts[0] | lower}}
             </a>
         {% endfor %}
