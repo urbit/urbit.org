@@ -33,7 +33,7 @@
         {% for page in s.pages | slice(end=2) %}
             <a class="block fw-bold mt4 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
             <address class="mono block mv1">{{ page.extra.ship }}</address>
-            <time class="mono mr3">{{ page.date | date(format="~%Y.%m.%d") }}</time>
+            <time class="mono mr3">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
             <a class="mono" href="/posts/{{page.taxonomies.posts[0] | lower}}">
               {{ page.taxonomies.posts[0] | lower}}
             </a>

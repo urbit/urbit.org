@@ -17,7 +17,7 @@
             <li class="mb6 mt6">
               <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
               <p class="mb2 mt2">{{ page.description }}</p>
-              <span class="mono f5">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+              <span class="mono f5">&#126;{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
               <span class="mono f5">
                 {% if page.taxonomies.posts %}
                   {% for post in page.taxonomies.posts %}

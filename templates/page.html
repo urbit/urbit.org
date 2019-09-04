@@ -23,7 +23,7 @@
               <address class="mono">{{ page.extra.ship }}</address>
             {% endif %}
             {% if page.date %}
-              <time class="mono block f5">~{{page.date}}</time>
+              <time class="mono block f5">~{{page.date | date(format="~%Y.%-m.%-d") }}</time>
             {% endif %}
           {% endif %}
         </article>
