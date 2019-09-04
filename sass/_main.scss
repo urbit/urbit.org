@@ -75,7 +75,7 @@ aside {
 
 article {
     // default
-    grid-area: auto / 4 / auto / 9;
+    grid-area: auto / 4 / auto / 10;
     // links on body text
     a {
         @extend .bb1, .b-black;
