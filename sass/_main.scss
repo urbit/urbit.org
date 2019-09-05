@@ -52,7 +52,6 @@ body {
 
 nav {
     font-size: 1rem;
-    grid-area: auto / 1 / auto / 4;
     line-height: 1.33;  
     // If you need to flush the nav to break
     // the body's margin, use this:
@@ -69,13 +68,8 @@ nav {
     }
 }
 
-aside {
-    grid-area: auto / 7 / auto / 9; 
-}
-
 article {
     // default
-    grid-area: auto / 4 / auto / 10;
     // links on body text
     a {
         @extend .bb1, .b-black;
@@ -84,13 +78,12 @@ article {
         }
     }
     // post directories
-    &.post-list {
-        grid-area: auto / 4 / auto / 12;
-    }
     li {
         margin: 1rem;
     }
 }
+
+// essay template 
 
 body.essay {
     h1 {
@@ -114,6 +107,12 @@ body.essay {
     img {
         display: block;
         margin: 0 auto;
+    }
+}
+
+// updates template
+body.updates {
+    main {
     }
 }
 

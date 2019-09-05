@@ -11,16 +11,16 @@
 
 <!-- header -->
 <!-- content -->
-{% if page.taxonomies.posts %}
-<nav class="mt6">
+{% if page.components[0] %}
+<nav class="mt6 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
-  <a href="/posts/{{page.taxonomies.posts[0] | lower}}">
-    {{ page.taxonomies.posts[0] }}
+  <a href="/{{ page.components[0] }}">
+    {{ page.components[0] | capitalize }}
   </a>
 </nav>
 {% endif %}
-        <article class="mt6 mb6">
+        <article class="mt6 mb6 full-ns c4-10-lg">
           <h1>{{ page.title }}</h1>
           <!-- body -->
           {{ page.content | safe }}
