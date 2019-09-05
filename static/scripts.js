@@ -1,5 +1,3 @@
-
-
 function initHotKeys() {
 
   var bodyEl = document.body;
@@ -325,10 +323,10 @@ if (document.readyState === "complete" ||
 //      docsNav[link].scrollIntoView()
 //    }
 //  }
-//}
+//} 
 
 if (window.location.href.includes("docs")) {
-  docsNavScroll();
+//  docsNavScroll();
   tippy('.tooltip', {
     content(reference) {
       const title = reference.getAttribute('title')
