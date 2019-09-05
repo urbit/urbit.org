@@ -30,7 +30,7 @@ Urbit has been in “research mode” for most of its history, but the system ha
 
 Urbit’s kernel is graduating from its rebellious period, however its _userspace_ has remained embryonic for most of its history. The project of building an application model has been restarted and rescoped into _aspects_ that could weather the chaotic growth of the kernel, but it would never quite serve as an interface to the entire operating system. Due to one of our latest vane refactors, it’s becoming possible to start that work in earnest.
 
-Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves an ship’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
+Alongside the latest release of Landscape came the rewrite of the [`%eyre`](https://urbit.org/docs/learn/arvo/eyre/) vane, which serves a ship’s files and applications over HTTP. Among the improvements came the decision to move from serving from one ‘/web’ folder by default to an application-specific endpoint. 
 
 That is, a Hoon application, upon being started, now tells Eyre it wants to serve _these files_ at _this endpoint_ over HTTP and Eyre facilitates that.
 
@@ -80,7 +80,7 @@ It should be easy to share whatever data with your friends as you like; to permi
 
 It should also be easy to read, annotate and discuss a shared book with a specific set of friends; or only allow another set of people to see files in a specific directory if they meet specified requirements.
 
-We will backport these exploratory developments into Landscape as they continue and evolve. Even in the kernel, as we refactor [Gall](https://urbit.org/docs/learn/arvo/gall/) the userspace handler vane, and standardise new, streamlined practices for writing Hoon in user applications. Take, for example, the [async monad](https://groups.google.com/a/urbit.org/forum/#!topic/dev/DDG6gHSG1Lc), which allows you to avoid dealing with moves or handling each response in separate parts of the application. User applications and Hoon should be both laconic and accessible, and we’re reifying that.
+We will backport these exploratory developments into Landscape as they continue and evolve. This, of course, includes kernel work, as we refactor [Gall](https://urbit.org/docs/learn/arvo/gall/), the userspace handler vane, and in the process, standardise streamlined practices for writing Hoon in user applications. Take, for example, the [async monad](https://groups.google.com/a/urbit.org/forum/#!topic/dev/DDG6gHSG1Lc), which allows you to avoid dealing with moves or handling each response in separate parts of the application. User applications and Hoon should be both laconic and accessible, and we’re reifying that.
 
 Most importantly, we’ll continue to iterate on how we onboard new developers. [Hoon School](https://urbit.org/hoonschool) continues to evolve; its first cohort is thriving and friendly. We have a dedicated cast of teachers and ongoing access to much of the Urbit team through this stream.
 
