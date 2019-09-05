@@ -17,10 +17,7 @@
     	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
          
-         /* external link css need template processing */ 
-    a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
-        content: "↗";
-    }
+         {% block templatestyles %} {% endblock templatestyles%}
     </style>
     <link rel="stylesheet" href="/indigo.css">
     <link rel="stylesheet" href="/styles.css">
@@ -39,8 +36,9 @@
       })();
     </script>
   </head>
-  <body>
-    <!-- content -->
+  <body {% block bodyclasses %} {% endblock bodyclasses %}>
+    {% include "partials/search-overlay.html" %}
+      <!-- content -->
     {% block content %}
     {% endblock content %}
     <!-- scripts -->

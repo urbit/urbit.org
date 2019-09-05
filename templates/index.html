@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+<!--External links are differentiated on home page.-->
+{% block templatestyles %}
+a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
+  content: "↗";
+}
+{% endblock templatestyles %}
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
 <nav class="home mt6">
