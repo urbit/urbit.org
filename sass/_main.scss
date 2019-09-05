@@ -92,6 +92,31 @@ article {
     }
 }
 
+body.essay {
+    h1 {
+        @extend .fw-thin, .f1;
+        text-transform: uppercase;
+    }
+    &:not(.bg-white) {
+        * {
+            color: inherit;
+        }
+        p a {
+            border-bottom: 1px solid;
+        }
+        nav span, nav a:not(.section) {
+            color: rgba(0,0,0,0.4);
+        }
+        nav a.section {
+            color: inherit;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 // components
     // ul reset
 ul {

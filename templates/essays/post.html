@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} 
+    {{ page.title }} 
+{% endblock title %}
+{% block bodyclasses %}
+    class="essay 
+    {% if page.extra.classes %} 
+        {{ page.extra.classes }}
+        {% else %}
+        bg-white
+    {% endif %}"
+{% endblock bodyclasses %}
+
+{% block content %}
+<!-- header -->
+<!-- content -->
+<nav class="mt6">
+  <a class="gray3" href="/">Urbit</a> 
+  <span class="gray3"> / </span>
+  <a class="section" href="/essays">
+    Essays
+  </a>
+</nav>
+        <article class="mt6 mb6">
+          <h1 class="mb6 t-center">{{ page.title }}</h1>
+          {% if page.extra.author %} 
+          <span rel="author"> {{ page.extra.author }} </span> 
+          {% if page.extra.ship %} 
+            <address class="mono">{{ page.extra.ship }}</address>
+          {% endif %}
+          {% if page.date %}
+            <time class="mono block mv1 gray4 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+          {% endif %}
+        {% endif %}
+          <!-- body -->
+          {{ page.content | safe }}
+        </article>
+{% endblock content %}

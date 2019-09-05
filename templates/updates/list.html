@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Updates {% endblock title %}
+{% block content %}
+<!-- header -->
+<nav class="mt6">
+  <a class="gray3" href="/">Urbit</a> 
+  <span class="gray3"> / </span>
+  <a href="/updates">
+    Updates
+  </a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+      <article class="mt6 mb6 post-list">
+        <h1 class="mb8">Updates</h1>
+        <ul class="posts">
+          {% set posts = get_section(path="updates/_index.md") %}
+          {% for page in posts.pages %}
+          <li class="mb6 mt6">
+            <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <p class="mb2 mt2">{{ page.description }}</p>
+            <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+            <span class="mono f5">
+                  <a class="mono f5 ml2" href="/updates">
+                   updates
+                  </a>
+              {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
+            </span>
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+{% endblock content %}

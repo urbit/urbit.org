@@ -5,6 +5,7 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
   content: "↗";
 }
 {% endblock templatestyles %}
+
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
 <nav class="home mt6">
@@ -14,7 +15,7 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
     <li>Project Overview</li>
     <li>Interface</li>
     <li>Infrastructure</li>
-    <li>Azimuth</li>
+    <li><a href="https://azimuth.network">Azimuth</a></li>
   </ul>
   <h3 class="mt6">Contributing</h3>
   <ul>
@@ -24,8 +25,8 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
   </ul>
   <h3 class="mt6">Learn</h3>
   <ul>
-    <li><a href="/posts/essays">Essays</a></li>
-    <li>Media</li>
+    <li><a href="/essays">Essays</a></li>
+    <li><a href="/media">Media</a></li>
     <li><a href="/faq">FAQ</a></li>
   </ul>
   <h3 class="mt6">Developers</h3>
@@ -35,13 +36,22 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
 </nav>
 <aside class="mt6">
   <section class="mt6 mb6"><h3>Latest Posts</h3>
-        {% set s = get_section(path="posts/_index.md") %}
-        {% for page in s.pages | slice(end=2) %}
+        {% set s = get_section(path="updates/_index.md") %}
+        {% set e = get_section(path="essays/_index.md") %}
+        {% set allposts = s.pages 
+          | concat (with=e.pages) 
+          | sort(attribute="date") 
+          | reverse 
+          %}
+        {% for page in allposts 
+          | slice (end=2) 
+          %}
             <a class="block fw-bold mt6 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
             <address class="mono block mv2">{{ page.extra.ship }}</address>
-            <time class="mono mv2 mr3">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-            <a class="mono mv2" href="/posts/{{page.taxonomies.posts[0] | lower}}">
-              {{ page.taxonomies.posts[0] | lower}}
+            <time class="mono mv2 mr3">{{ page.date 
+                                          | date(format="~%Y.%-m.%-d") }}</time>
+            <a class="mono mv2" href="/{{page.components[0] | lower}}">
+              {{ page.components[0] | lower}}
             </a>
         {% endfor %}
   </section>
