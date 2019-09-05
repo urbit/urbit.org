@@ -1,25 +1,23 @@
 {% extends "base.html" %}
-
+{% block bodyclasses %}class="bg-black"{% endblock bodyclasses %}
 {% block content %}
-<div>
-  <div>
-    <div>
-      <h1>Error 404</h1>
-      <p>Sorry, but the page you requested doesn't exist.</p>
-      <ul>
-        {% for item in config.extra.urbit_menu %}
-          <li>
-            <h2>
-              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                {{ item.name }}
-              </a>
-            </h2>
-          </li>
-        {% endfor %}
-      </ul>
-      <!-- footer -->
-      {% include "partials/footer.html" %}
-    </div>
-  </div>
-</div>
+<nav class="mt6">
+    <a class="gray3" href="/">Urbit</a> 
+    <span class="gray3"> / </span>
+    <a class="white" href="/404">
+      404
+    </a>
+    <button id="js-search-window-toggle" class="mt6 mb6" type="button"  style="outline:none">
+        <span id="search-icon" class="f3 gray3">⚲</span><span class="ml3 gray3">Search</span></span>
+      </button>
+  </nav>
+<main class="fourth-2">
+  <h1 class="white fixed fw-thin" 
+    style="font-size: 6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);">
+    404
+</h1>
+</main>
 {% endblock content %}
