@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block title %} {{ page.title }} {% endblock title %}
+{% block description %}
+  {% if page.description %}
+    {{ page.description }}
+    {% else %}
+      {{ config.description }}
+    {% endif %}
+  {% endblock description %}
 {% block content %}
 
 <!-- header -->
