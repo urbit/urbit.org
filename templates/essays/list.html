@@ -11,19 +11,15 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <article class="mt6 mb6 full c4-12-lg">
-        <h1 class="mb8">Essays</h1>
+      <article class="mt6-lg mb6 full c4-12-lg">
         <ul class="posts">
           {% set posts = get_section(path="essays/_index.md") %}
           {% for page in posts.pages %}
-          <li class="mb6 mt6">
+          <li class="mb8">
             <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
             <p class="mb2 mt2">{{ page.description }}</p>
             <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
             <span class="mono f5">
-                  <a class="mono f5 ml2" href="/essays">
-                   essays
-                  </a>
               {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
             </span>
           </li>

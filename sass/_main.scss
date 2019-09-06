@@ -79,7 +79,24 @@ article {
     }
     // post directories
     li {
-        margin: 1rem;
+        margin: 0rem 1rem 1rem 1rem;
+    }
+}
+
+footer nav {
+    &.previous p:first-of-type::after {
+        content: "-->";
+        font-size: 1.25rem;
+        position: absolute;
+        right: -36px;
+        top: 13px;
+    }
+    &.next p:first-of-type::before {
+        content: "<--";
+        font-size: 1.25rem;
+        position: absolute;
+        left: -36px;
+        top: 13px;
     }
 }
 
@@ -150,10 +167,6 @@ address {
     // post and nav lists
 ul.posts, nav ul {
     list-style-type: none;
-}
-
-ul.posts li {
-    margin: 2rem 0 2rem 0;
 }
 
 nav ul.docs {
