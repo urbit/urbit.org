@@ -167,6 +167,11 @@ nav ul.docs {
     line-height: 30px;
 }
 
+    // pagination
+nav.previous, nav.next {
+    max-width: 40% !important;
+}
+
     // search button and overlay
 #js-search-window-toggle {
     position: relative;
