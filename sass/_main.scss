@@ -80,9 +80,6 @@ article {
     li {
         margin: 0rem 1rem 1rem 1rem;
     }
-    & > p {
-        @extend .pl4, .pr4;
-    }
 }
 
 footer nav {
