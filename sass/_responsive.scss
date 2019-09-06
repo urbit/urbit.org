@@ -1,7 +1,13 @@
 // The cascading isn't operating as expected using just indigo here. :(
-@media all and (min-width: 550px) {
+@media all and (max-width: 1259px) {
+    nav.previous, nav.next {
+        max-width: 40% !important;
+    }
+}
+@media all and (min-width: 1260px) {
     nav.previous, nav.next {
         width: auto !important;
+        max-width: auto;
     }
     nav.previous {
         right: 16px !important;
