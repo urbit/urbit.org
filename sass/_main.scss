@@ -43,8 +43,7 @@
 body {
     @extend .sans;
     &:not(.primer) {
-        @extend .grid12;
-        margin: 0 32px;
+        @extend .grid12, .mh4, .mh7-ns;
     }
     font-size: 1rem;
     color: #000;
@@ -81,6 +80,9 @@ article {
     li {
         margin: 0rem 1rem 1rem 1rem;
     }
+    & > p {
+        @extend .pl4, .pr4;
+    }
 }
 
 footer nav {
@@ -106,6 +108,7 @@ body.essay {
     h1 {
         @extend .fw-thin, .f1;
         text-transform: uppercase;
+        max-width: 95vw;
     }
     &:not(.bg-white) {
         * {
@@ -124,12 +127,6 @@ body.essay {
     img {
         display: block;
         margin: 0 auto;
-    }
-}
-
-// updates template
-body.updates {
-    main {
     }
 }
 

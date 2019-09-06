@@ -38,23 +38,6 @@
           <!-- body -->
           {{ page.content | safe }}
 
-          <footer class="relative">{% if page.earlier %}
-            <a class="bb0" href="{{page.earlier.permalink}}">
-              <nav class="previous mv6 absolute right4 f4 t-right">
-                <p class="mb0 f5">Previous Post:</p>
-                <p class="fw-bold f4 mb0 mt0">{{page.earlier.title}}</p>
-                <time class="mono block f5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
-              </nav>
-            </a>
-              {% endif %}
-
-              {% if page.later %}
-              <nav class="next mv6 absolute left4 f4">
-                <p class="mb0">Next Post:</p>
-                <a class="fw-bold bb0" href="{{page.later.permalink}}">{{page.later.title}}</a>
-                <time class="mono block f5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
-              </nav>
-              {% endif %}
-            </footer>
+          {% include "partials/pagination.html" %}
         </article>
 {% endblock content %}

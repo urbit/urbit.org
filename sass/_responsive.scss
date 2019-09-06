@@ -1,0 +1,12 @@
+// The cascading isn't operating as expected using just indigo here. :(
+@media all and (min-width: 550px) {
+    nav.previous, nav.next {
+        width: auto !important;
+    }
+    nav.previous {
+        right: 16px !important;
+    }
+    nav.next {
+        left: 16px !important;
+    }
+}
