@@ -103,8 +103,8 @@ footer nav {
 
 body.essay {
     h1 {
-        @extend .fw-thin, .f1;
-        text-transform: uppercase;
+        @extend .f1;
+        font-weight: 300;
         max-width: 95vw;
     }
     &:not(.bg-white) {
