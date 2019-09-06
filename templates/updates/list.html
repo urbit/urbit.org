@@ -3,7 +3,7 @@
 {% block bodyclasses %}class="updates"{% endblock bodyclasses %}
 {% block content %}
 <!-- header -->
-<nav class="mt6 full-ns fourth-1-md fourth-1-lg">
+<nav class="mt6 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/updates">
@@ -12,7 +12,7 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <main class="mt6 mb6 full-ns c4-10-lg">
+      <main class="mt6 mb6 full c4-10-lg">
         <h1 class="mb8">Updates</h1>
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
