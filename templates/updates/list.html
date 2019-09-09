@@ -15,7 +15,7 @@
       <main class="mt6 mb6 full c4-10-lg">
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
-          <article class="mt6 mb6">
+          <article class="mb6">
               <h1>{{ page.title }}</h1>
               <!-- body -->
               {{ page.content | safe }}
