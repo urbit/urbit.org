@@ -11,7 +11,15 @@
 
 <!-- header -->
 <!-- content -->
-{% if page.title %}
+{% if page.components[1] %}
+<nav class="mt6 full fourth-1-md fourth-1-lg">
+  <a class="gray3" href="/">Urbit</a> 
+  <span class="gray3"> / </span>
+  <a href="/{{ page.components[0] }}">
+    {{ page.components[0] | capitalize }}
+  </a>
+</nav>
+{% else %}
 <nav class="mt6 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
