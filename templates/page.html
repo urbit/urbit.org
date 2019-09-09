@@ -18,6 +18,9 @@
   <a href="/{{ page.components[0] }}">
     {{ page.components[0] | capitalize }}
   </a>
+
+  {% include "partials/navigation-search.html" %}
+
 </nav>
 {% else %}
 <nav class="mt6 full fourth-1-md fourth-1-lg">
@@ -26,6 +29,9 @@
   <a href="/{{ page.components[0] }}">
     {{ page.title }}
   </a>
+
+  {% include "partials/navigation-search.html" %}
+
 </nav>
 {% endif %}
         <article class="mt6 mb6 full-ns c4-10-lg">
