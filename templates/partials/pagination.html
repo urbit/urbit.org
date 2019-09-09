@@ -1,9 +1,9 @@
-<footer class="relative">{% if page.earlier %}
+<footer class="relative mt9">{% if page.earlier %}
         <a class="bb0" href="{{page.earlier.permalink}}">
           <nav class="previous mv6 absolute right7 f4 t-right">
             <p class="mb0 f5">Previous Post:</p>
             <p class="fw-bold f5 f4-ns mb0 mt0">{{page.earlier.title}}</p>
-            <time class="mono block f5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
+            <time class="mono block f5 mb9">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
           </nav>
         </a>
           {% endif %}
@@ -13,7 +13,7 @@
           <nav class="next mv6 absolute left4-ns left6 f4">
             <p class="mb0 f5">Next Post:</p>
             <p class="fw-bold f5 f4-ns mb0 mt0">{{page.later.title}}</p>
-            <time class="mono block f5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
+            <time class="mono block f5 mb9">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
           </nav>
         </a>
           {% endif %}
