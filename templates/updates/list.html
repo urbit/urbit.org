@@ -15,8 +15,8 @@
       <main class="mt6 mb6 full c4-10-lg">
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
-          <article class="mb6">
-              <h1>{{ page.title }}</h1>
+          <article class="mb6 relative">
+              <h1>{{ page.title }} <a class="absolute right0 fw-regular" href="#more-updates">Go to older updates</a></h1>
               <!-- body -->
               {{ page.content | safe }}
               {% if page.extra.author %} 
@@ -30,7 +30,7 @@
               {% endif %}
             </article>
           {% endfor %}
-          <h2 class="mt10 mb6">More Updates</h2>
+          <h2 id="more-updates" class="mt10 mb6">More Updates</h2>
           <ul class="posts">
           {% for page in posts.pages | slice (start=1) %}
           <li class="mb6 mt6">
