@@ -1,84 +1,9 @@
 +++
 title = "FAQ"
+template = "page_indiced.html"
 +++
 
-## Contents
-
-<details><summary>The Urbit Project</summary>
-
-- [What is Urbit?](#what-is-urbit)
-- [How secure is Urbit right now?](#how-secure-is-urbit)
-- [How can I contribute to Urbit?](#contribute)
-- [What is Tlon?](#what-is-tlon)
-- [Who works at Tlon?](#who-works-at-tlon)
-
-</details>
-
-
-<details><summary>Azimuth</summary>
-
-- [What is Azimuth?](#what-is-azimuth)
-- [What are stars, galaxies, and planets?](#stars-galaxies-planets)
-- [How many planets, stars, and galaxies are active?](#how-many-planets-stars-galaxies)
-- [What are comets and moons?](#comets-moons)
-- [What is a `@p`? Why is my username generated for me?](#what-is-@p)
-- [Can I change my `@p`?](#change-my-@p)
-- [How do I get an identity?](#get-an-identity)
-- [How do I transfer an identity to someone else?](#transfer-identity)
-- [What is the best way to access Azimuth?](#access-azimuth)
-
-</details>
-
-<details><summary>Urbit HD Wallet</summary>
-
-- [What is the Urbit HD Wallet?](#urbit-hd-wallet)
-- [What is a master ticket?](#master-ticket)
-- [What is an ownership address?](#ownership-address)
-- [What are proxies?](#proxies)
-- [What are seeds?](#seeds)
-- [What does it mean to “set public keys”?](#set-public-keys)
-- [What do I do if I want to own multiple points?](#multiple-points)
-- [How should I take care of my Urbit HD Wallet?](#custody)
-- [I have a galaxy or star with lockup conditions. How does this work?](#lockup-conditions)
-
-</details>
-
-<details><summary>Arvo</summary>
-
-- [What is Arvo?](#what-is-arvo)
-- [What is unique about Arvo?](#what-is-unique-about-arvo)
-- [How is Arvo connected to Ethereum?](#arvo-ethereum)
-- [Will the Arvo network survive if Ethereum dies?](#if-ethereum-dies)
-- [How do I install Arvo?](#install-arvo)
-- [How do I use Arvo?](#use-arvo)
-- [How do over-the-air updates work?](#over-the-air-updates)
-- [What is Landscape?](#what-is-landscape)
-- [I have a point, now what?](#now-what)
-
-</details>
-
-<details><summary>Grants</summary>
-
-- [What are the different types of grants?](#grants-1)
-- [How do I get a gift?](#grants-2)
-- [How often are gifts awarded?](#grants-3)
-- [How large are gifts?](#grants-31)
-- [What happens if a user does not complete a proposal but meets some milestones?](#grants-4)
-- [Do I have to pay taxes on stars?](#grants-5)
-- [Can I create a bounty?](#grants-6)
-- [How are proposals approved?](#grants-7)
-- [If I win a proposal, do I have an exclusive claim on the project?](#grants-8)
-- [Will milestones be embedded in a smart contract?](#grants-9)
-- [Does reputation play a role in the assessment of grants?](#grants-10)
-- [I completed a proposal. When will I receive payment?](#grants-11)
-- [Can I see the proposals of others that have been accepted?](#grants-12)
-- [How do I safely store my stars?](#grants-13)
-- [Can I delegate a bounty or proposal to someone else?](#grants-14)
-- [Do I need to sign a contract?](#grants-15)
-
-</details>
-
-## The Urbit project
+## The Urbit Project
 
 ### What is Urbit? {#what-is-urbit}
 
@@ -374,7 +299,7 @@ We recommend storing each star in its own Ethereum wallet. The private keys to t
 
 No. Not unless explicitly authorized by Tlon.
 
-## Do I need to sign a contract? {#grants-15}
+### Do I need to sign a contract? {#grants-15}
 
 After you are approved to work on a bounty or a proposal, you will be sent a contract that you'll need to sign. You don't need to sign a contract to receive a gift, though.
 

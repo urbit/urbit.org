@@ -159,7 +159,7 @@ address {
 }
 
     // post and nav lists
-ul.posts, nav ul {
+ul.posts, nav ul, nav li {
     list-style-type: none;
 }
 
@@ -306,4 +306,12 @@ h1 code, h2 code, h3 code {
     // hoon school
 iframe#apply {
     width: 100%;
+}
+    // indice pages
+details.page-indiced li {
+    list-style-type: none;
+}
+
+body.page-indiced h3 {
+    @extend .gray4;
 }
