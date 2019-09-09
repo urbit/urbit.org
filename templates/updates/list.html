@@ -30,7 +30,7 @@
               {% endif %}
             </article>
           {% endfor %}
-          <h2 class="mt8 mb6">More Updates</h2>
+          <h2 class="mt10 mb6">More Updates</h2>
           <ul class="posts">
           {% for page in posts.pages | slice (start=1) %}
           <li class="mb6 mt6">
@@ -38,7 +38,9 @@
               <p class="mb2 mt2">{{ page.description }}</p>
               <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
               <span class="mono f5">
-                {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
+                {% if page.extra.ship %}
+                  <address class="mono f5 ml2">{{ page.extra.ship }}</address>
+                {% endif %}
               </span>
             </li>
         {% endfor %}
