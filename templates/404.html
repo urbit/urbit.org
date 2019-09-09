@@ -1,20 +1,21 @@
 {% extends "base.html" %}
-{% block bodyclasses %}class="bg-black"{% endblock bodyclasses %}
+{% block title %} 404 {% endblock title %}
 {% block content %}
 <nav class="mt6">
     <a class="gray3" href="/">Urbit</a> 
     <span class="gray3"> / </span>
-    <a class="white" href="/404">
+    <a href="/404">
       404
     </a>
     {% include "partials/navigation-search.html" %}
   </nav>
 <main class="fourth-2">
-  <h1 class="white fixed fw-thin" 
+  <h1 class="fixed fw-thin" 
     style="font-size: 6rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);">
+    transform: translate(-50%, -50%);
+    font-feature-settings: 'zero' 1;">
     404
 </h1>
 </main>
