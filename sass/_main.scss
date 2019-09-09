@@ -285,20 +285,25 @@ input[type="search"] {
 }
 
     // top alert on homepage
-    .top-alert {
-        margin: 0 -32px 1rem -32px;
-        padding: 0.3rem 32px;
-    }
+.top-alert {
+    margin: 0 -32px 1rem -32px;
+    padding: 0.3rem 32px;
+}
 
     // code blocks
-    pre, pre span {
-        @extend .mono;
-        background-color: #f9f9f9 !important;
-        color: black !important;
-    }
+pre, pre span {
+    @extend .mono;
+    background-color: #f9f9f9 !important;
+    color: black !important;
+}
+
     // code in headers
-    h1 code, h2 code, h3 code {
-        @extend .red4;
-        background-color: transparent;
-        font-weight: 600;
-    }
+h1 code, h2 code, h3 code {
+    @extend .red4;
+    background-color: transparent;
+    font-weight: 600;
+}
+    // hoon school
+iframe#apply {
+    width: 100%;
+}
