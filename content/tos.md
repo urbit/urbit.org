@@ -1,8 +1,8 @@
 +++
-title = "Urbit Website Terms of Use"
+title = "Terms of Use"
 +++
 
-Last Updated: September 24, 2018,
+Last Updated: September 24, 2018
 
 Welcome, and thank you for your interest in Tlon Corporation ('*Tlon*,' '*we*,' or '*us*') and our website at urbit.org, along with our related websites and services (collectively, the "Site"). These Terms of Use are a legally binding contract between you and Tlon regarding your use of the Site.
 
