@@ -8,32 +8,49 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
 
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
-<nav class="home full fourth-1-md fourth-1-lg mt4">
-  <h1 class="mb2 mt2 fw4">Urbit is your last computer</h1>
+<nav class="home full fourth-1-md fourth-1-lg mt4 mb5">
+  <h1 class="mb4 mt2 fw4">Urbit is your last computer</h1>
       <h3>What is Urbit?</h3>
   <ul> 
-    <li>Project Overview</li>
+    <li>Introduction</li>
     <li>Interface</li>
     <li>Infrastructure</li>
-    <li><a href="https://azimuth.network">Azimuth</a></li>
   </ul>
-  <h3 class="mt2">Contributing</h3>
+  <li class="mt4"><a class="fw6" href="/faq/">FAQ</a></li>
+  <li class="mt3"><a class="fw6" href="/updates/">Updates</a></li>
+  <li class="mt3"><a class="fw6" href="/essays">Essays</a></li>
+  <li class="mt3"><a class="fw6" href="/media">Media</a></li>
+  <h3 class="mt4">Contributing</h3>
   <ul>
     <li>How can I help?</li>
-    <li>Operating Galaxies and Stars</li>
-    <li>Governance</li>
+    <li>Galaxies and Stars</li>
+    <li>Developing on Urbit</li>
+    <li><a href="https://grants.urbit.org">Grants and Bounties</a></li>
   </ul>
-  <h3 class="mt2">Learn</h3>
+  <h3 class="mt4">Try Urbit</h3>
   <ul>
-    <li><a href="/essays">Essays</a></li>
-    <li><a href="/media">Media</a></li>
-    <li><a href="/faq/">FAQ</a></li>
+    <li>Install</li>
+    <li>Using Landscape</li>
+    <li>Using CLI</li>
+    <li>Using Bridge</li>
+    <li>Invite Friends</li>
   </ul>
-  <h3 class="mt2">Developers</h3>
+  <h3 class="mt4">Operations</h3>
   <ul>
-    <li><a href="/docs">Documentation</a></li>
+    <li>Urbit Administration</li>
+    <li>Creating a Comet</li>
+    <li>DNS Proxying</li>
+    <li>Messaging</li>
+    <li>Shell</li>
+    <li>Filesystem</li>
+  </ul>
+  <h3 class="mt4">Develop</h3>
+  <ul>
+    <li>Creating a Development Ship</li>
+    <li>Community Tutorials</li>
   </ul>
 </nav>
+<!-- "Latest posts" sidebar. Latest mockups don't have this. Delete if entering production.
 <aside class="mt4 fourth-3-md fourth-3-lg full">
   <section class="mt2 mb2"><h3>Latest Posts</h3>
         {% set s = get_section(path="updates/_index.md") %}
@@ -56,8 +73,48 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
         {% endfor %}
   </section>
 </aside>
+-->
       <!-- footer -->
-      {% include "partials/footer.html" %}
+      <footer class="full-bleed mt4 grid12 bg-black white full">
+        <nav class="home mt4 mb4 full fourth-1-md fourth-1-lg">
+          <p class="mt5 mb5">Urbit is built by Tlon</p>
+          <h2 class="mb3">Company</h2>
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li>Careers</li>
+          <li><a href="https://tlon.io">Tlon.io</a></li>
+
+          <h2 class="mt4">Need Help?</h2>
+          <li><a href="mailto:support@urbit.org">support@urbit.org↗</a></li>
+          <li><a href="https://twitter.com/urbit">twitter.com/urbit</a></li>
+          <li><a href="https://github.com/urbit">github.com/urbit</a></li>
+        </nav>
+        <aside class="fourth-3-md fourth-3-lg full mt4">
+          <!-- In the name of lining it up with "Company", gotta break the
+          powers of two. -->
+          <h2 id="updates" class="mt2">
+            Updates
+          </h2>
+          <p class="lh-copy">Every month we send an email with community events and what we're up to.</p>
+          <iframe name="nothing" style="display:none;"></iframe>
+      <form action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;amp;id=be143888d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+        <div class="input-group" id="mc_embed_signup_scroll">
+          <div class="mc-field-group">
+            <small class="mb1 dib">Receiving Email Address</small>
+            <input class="bg-black white b--white ba pa3 w-100 mb2" type="email" name="EMAIL" id="mce-EMAIL" placeholder="your@email.com">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div id="mce-error-response" class="response" style="display:none"></div>
+            <div id="mce-success-response" class="response" style="display:none"></div>
+          </div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_972a03db9e0c6c25bb58de8c8_be143888d2" tabindex="-1" value=""></div>
+          <button id="mc-embedded-subscribe" class="bg-white mb4 justify-between black w-100 tl" style="font-family: 'Inter', san-serif; padding: 16px; -webkit-appearance: none;" type="submit" name="subscribe">
+            <span class="text-500">Subscribe</span> <span class="fr pr1">-></span>
+          </button>
+        </div>
+      </form>
+        </aside>
+      </footer>
     </div>
   </div>
 </div>

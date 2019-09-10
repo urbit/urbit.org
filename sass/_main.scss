@@ -63,10 +63,14 @@ nav {
     &.no-break {
         min-width: 168px;
     }
-    &.home ul li {
+    &.home li:not(.mt4):not(.mt3) {
         margin-top: 8px;
         margin-bottom: 8px;
     }
+}
+.full-bleed {
+    margin: 0 -32px 0 -32px;
+    padding: 0 32px 0 32px;
 }
 
 a {
@@ -386,7 +390,7 @@ body.page-indiced {
         @extend .gray2;
     }
     nav:not(.search-overlay) {
-        max-height: 100vh;
+        max-height: 100%;
         overflow-y: scroll;
     }
     a.current {
