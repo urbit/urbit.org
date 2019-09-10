@@ -15,9 +15,9 @@
         <ul class="posts">
           {% set posts = get_section(path="essays/_index.md") %}
           {% for page in posts.pages %}
-          <li class="mb3">
-            <h2 class="mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            <p class="mb2 mt2">{{ page.description }}</p>
+          <li class="mb4">
+            <h2 class="f4 fw4"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <p class="mt0">{{ page.description }}</p>
             <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
             <span class="mono f5">
               {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}

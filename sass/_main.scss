@@ -153,6 +153,12 @@ ul {
     padding-inline-end: 0;
 }
 
+    // p reset
+ul p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
     // images for posts
 img {
     max-width: 100%;
