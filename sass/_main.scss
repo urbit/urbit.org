@@ -115,17 +115,23 @@ body.essay {
         max-width: 95vw;
     }
     &:not(.bg-white) {
-        * {
+        *:not(.search-overlay, nav span) {
             color: inherit;
         }
         p a {
             border-bottom: 1px solid;
         }
         nav span, nav a:not(.section) {
-            color: rgba(125,125,125,0.4);
+            color: rgba(175,175,175,0.4);
         }
         nav a.section {
             color: inherit;
+        }
+        // We want the search to not inherit the colors from custom styles
+        // on essays. Thus, *very selective styles*.
+        .search-overlay, #search-results ul.search-results__items li a,
+                         #search-results ul.search-results__items li span {
+            color: black;
         }
     }
     img {
