@@ -348,6 +348,42 @@ details.page-indiced li {
     list-style-type: none;
 }
 
-body.page-indiced h3 {
-    @extend .gray2;
+details {
+    & > summary {
+        cursor: default;
+        list-style: none;
+        display: inline-block;
+        vertical-align: bottom;
+        &:focus {
+            outline: 0;
+        }
+        &::-webkit-details-marker {
+            display: none;
+        }
+        &::before {
+            content: "›";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            @extend .gray1;
+            font-family: "Inter UI", sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+    &[open] > summary::before {
+        content: "› ";
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+}
+
+body.page-indiced {
+    h3 {
+        @extend .gray2;
+    }
+    nav:not(.search-overlay) {
+        position: fixed;
+        max-width: 20%;
+    }
 }
