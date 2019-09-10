@@ -101,6 +101,7 @@ footer nav {
         position: absolute;
         right: -36px;
         top: 13px;
+        font-family: "Inter UI", sans-serif;
     }
     &.next p:first-of-type::before {
         content: "<--";
@@ -108,6 +109,7 @@ footer nav {
         position: absolute;
         left: -36px;
         top: 13px;
+        font-family: "Inter UI", sans-serif;
     }
 }
 
