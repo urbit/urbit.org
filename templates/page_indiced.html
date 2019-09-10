@@ -38,7 +38,7 @@
 {% if h2.children %}
 <details class="page-indiced"><summary>{{ h2.title }}</summary>
     {% for h3 in h2.children %}
-  <li class="ml3 mv1"><a href="{{h3.permalink}}">{{h3.title}}</a></li>
+  <li class="ml3 mv1"><a href="{{h3.permalink | safe}}">{{h3.title}}</a></li>
     {% endfor %}
 </details>
 {% else %}

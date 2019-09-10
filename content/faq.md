@@ -57,13 +57,13 @@ Moons are 64 bits, issued by planets, and have names like `~doznec-salfun-naptul
 
 Comets are 128 bits and have no parents. They can be launched by anyone. They are temporary, disposable identities. Being disposable and essentially unlimited, they will likely not be trusted by default by others on the Arvo network, though you shouldn't have any problem until the network grows much larger. They have long, hard-to-memorize names, like `~racmus-mollen-fallyt-linpex--watres-sibbur-modlux-rinmex`.
 
-### What is a `@p`? Why is my username generated for me? {#what-is-@p}
+### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
 A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the urbit address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
-### Can I change my `@p`? {#change-my-@p}
+### Can I change my `@p`? {#change-my-patp}
 
 Unfortunately not, since there is a 1:1 mapping between name and point.
 

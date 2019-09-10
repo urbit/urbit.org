@@ -314,18 +314,7 @@ if (document.readyState === "complete" ||
   });
 }
 
-// Scroll to current document in nav list.
-// let docsNavScroll = function() {
-//  let docsNav = document.querySelectorAll("ul.content-nav__index a")
-//  for (let link in docsNav) {
-//    if (window.location.href.includes(docsNav[link].href)) {
-//      docsNav[link].scrollIntoView()
-//    }
-//  }
-//} 
-
 if (window.location.href.includes("docs")) {
-//  docsNavScroll();
   tippy('.tooltip', {
     content(reference) {
       const title = reference.getAttribute('title')
@@ -335,4 +324,47 @@ if (window.location.href.includes("docs")) {
     animateFill: false,
     animation: 'fade'
   })
+}
+
+// same-page navigation on-scroll behaviour
+
+if (document.body.classList.contains("page-indiced")) {
+let h2 = document.getElementsByTagName("h2");
+let h3 = document.getElementsByTagName("h3");
+let all = document.querySelectorAll("nav details li a");
+let headers = document.querySelectorAll("details summary");
+
+// smooth scrolling on click
+all.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    let target = document.querySelector(event.target.hash);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  all.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+
+});
+
 }

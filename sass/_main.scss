@@ -391,4 +391,7 @@ body.page-indiced {
         max-height: 100vh;
         overflow-y: scroll;
     }
+    a.current {
+        font-weight: 600;
+    }
 }
