@@ -383,6 +383,5 @@ window.addEventListener("scroll", event => {
 //      summary.parentElement.open = true;
 //    }
 //  })
-//});
-
-}
+//
+})};
