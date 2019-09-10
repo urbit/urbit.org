@@ -349,6 +349,9 @@ details.page-indiced li {
 }
 
 details {
+    // overflow: scroll on the nav for these indices
+    // cuts off the open chevron. thus:
+    padding-left: 2px;
     & > summary {
         cursor: default;
         list-style: none;
@@ -385,5 +388,7 @@ body.page-indiced {
     nav:not(.search-overlay) {
         position: fixed;
         max-width: 20%;
+        max-height: 100vh;
+        overflow-y: scroll;
     }
 }
