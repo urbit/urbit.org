@@ -354,10 +354,12 @@ window.addEventListener("scroll", event => {
 
   all.forEach(link => {
     let section = document.querySelector(link.hash);
+    let sectionChildren = document.querySelector(link.hash).nextElementSibling;
 
     if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
+      ((section.offsetTop <= fromTop) ||
+      (sectionChildren.offsetTop <= fromTop)) &&
+      (section.offsetTop + section.offsetHeight + sectionChildren.offsetHeight > fromTop)
     ) {
       link.classList.add("current");
     } else {
