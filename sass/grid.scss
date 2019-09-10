@@ -44,7 +44,7 @@
     grid-area: auto / 10 / auto / 13;
   }
   
-  @media only screen and (min-width: 550px) {
+  @media only screen and (min-width: 34.375em) {
     .full-ns {
       grid-area: auto / 1 / auto / 13;
     }
@@ -68,7 +68,7 @@
     }
   }
   
-  @media only screen and (min-width: 750px) and (max-width: 960px) {
+  @media only screen and (min-width: 46.875em) and (max-width: 60em) {
     .full-md {
       grid-area: auto / 1 / auto / 13;
     }
@@ -92,7 +92,7 @@
     }
   }
   
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 60em) {
     .full-lg {
       grid-area: auto / 1 / auto / 13;
     }
