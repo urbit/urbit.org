@@ -182,13 +182,12 @@ function formatSearchResultItem(item, terms) {
   li.appendChild(createA);
   var teaserTitle = formatSearchResultTitle(item);
   li.classList.add("search-results__item");
-  li.classList.add("ph3");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
   createA.setAttribute('class','no-underline db pl1 pv2');
-  createA.innerHTML = `<span class="capitalize">${teaserTitle}</span>`;
-  createA.innerHTML += `<span class='dn arrow fr'>→</span>`;
-  createA.innerHTML += `<div class="truncate pr2">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.innerHTML = `<span class="capitalize ph3">${teaserTitle}</span>`;
+  createA.innerHTML += `<span class='dn arrow fr'>↩</span>`;
+  createA.innerHTML += `<div class="truncate pr2 ph3">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 
