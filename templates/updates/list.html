@@ -34,8 +34,8 @@
           <ul class="posts">
           {% for page in posts.pages | slice (start=1) %}
           <li class="mb4 mt4">
-              <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
-              <p class="mb2 mt2">{{ page.description }}</p>
+              <h2 class="f4 fw4"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+              <p class="mv2">{{ page.description }}</p>
               <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
               <span class="mono f5">
                 {% if page.extra.ship %}
