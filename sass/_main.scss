@@ -1,4 +1,5 @@
 // importing typography and parent styles
+@import "grid";
 @import "indigo";
 @import url('https://rsms.me/inter/inter-ui.css');
 
@@ -41,9 +42,10 @@
 // layout
 
 body {
-    @extend .sans;
+    font-family: "Inter UI", -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
     &:not(.primer) {
-        @extend .grid12, .mh4, .mh7-ns;
+        @extend .grid12, .mh4;
     }
     font-size: 1rem;
     color: #000;
@@ -67,11 +69,17 @@ nav {
     }
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 article {
     // default
     // links on body text
+    @extend .lh-copy;
     a {
-        @extend .bb1, .b-black;
+        @extend .bb, .b--black;
         &.mono {
             border-bottom: 0;
         }
@@ -103,8 +111,7 @@ footer nav {
 
 body.essay {
     h1 {
-        @extend .f1;
-        font-weight: 300;
+        @extend .f1, .fw3;
         max-width: 95vw;
     }
     &:not(.bg-white) {
@@ -143,13 +150,23 @@ img {
 
     // flatten headers
 h1, h2, h3, h4, h5 {
-    @extend .fw-bold;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @extend .fw6;
     font-size: 1rem;
+}
+
+h1, .f1 {
+    @extend .lh-solid;
+}
+
+h2, .f2, h3, .f3 {
+    @extend .lh-title;
 }
 
     // author and ship styling
 span[rel=author] {
-    font-weight: 600;
+    @extend .fw6;
     margin-right: 5px;
 }
 
@@ -174,6 +191,8 @@ nav.previous, nav.next {
 
     // search button and overlay
 #js-search-window-toggle {
+    border: 0;
+    font-family: "Inter UI", sans-serif;
     position: relative;
     display: block;
     width: 80%;
@@ -197,8 +216,8 @@ nav.previous, nav.next {
 .has-active-search-window {
     .search-overlay {
         display: block;
-        margin-left: -32px;
-        padding-left: 32px;
+        margin: 0 -32px 0 -32px;
+        padding: 0 32px 0 32px;
         height: 100vh;
     }
 }
@@ -263,10 +282,18 @@ input[type="search"] {
   
   .search-results {
     max-height: 400px;
+    ul {
+        position: relative; 
+    }
     &__item a:hover {
       background: #F9F9F9;
       span {
-        display:inline-block;
+          display: inline-block;
+          &.arrow {
+              display: inline;
+              position: absolute;
+              right: 20px;
+          }
       }
     }
   }
@@ -292,14 +319,17 @@ input[type="search"] {
 
     // code blocks
 pre, pre span {
-    @extend .mono;
+    font-family: "Source Code Pro", monospace;
     background-color: #f9f9f9 !important;
     color: black !important;
+}
+.mono {
+    font-family: "Source Code Pro", monospace;
 }
 
     // code in headers
 h1 code, h2 code, h3 code {
-    @extend .red4;
+    @extend .red3;
     background-color: transparent;
     font-weight: 600;
 }
@@ -313,5 +343,5 @@ details.page-indiced li {
 }
 
 body.page-indiced h3 {
-    @extend .gray4;
+    @extend .gray2;
 }

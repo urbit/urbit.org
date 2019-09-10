@@ -3,7 +3,7 @@
 {% block bodyclasses %}class="updates"{% endblock bodyclasses %}
 {% block content %}
 <!-- header -->
-<nav class="mt6 full fourth-1-md fourth-1-lg">
+<nav class="mt4 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/updates">
@@ -12,11 +12,11 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <main class="mt6 mb6 full c4-10-lg">
+      <main class="mt4 mb4 full c4-10-lg">
           {% set posts = get_section(path="updates/_index.md") %}
           {% for page in posts.pages | slice (end=1) %}
           <article class="mb6 relative">
-              <h1>{{ page.title }} <a class="absolute right0 fw-regular" href="#more-updates">Go to older updates</a></h1>
+              <h1>{{ page.title }} <a class="absolute right-0 fw4" href="#more-updates">Go to older updates</a></h1>
               <!-- body -->
               {{ page.content | safe }}
               {% if page.extra.author %} 
@@ -25,15 +25,15 @@
                   <address class="mono">{{ page.extra.ship }}</address>
                 {% endif %}
                 {% if page.date %}
-                  <time class="mono block f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+                  <time class="mono db f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
                 {% endif %}
               {% endif %}
             </article>
           {% endfor %}
-          <h2 id="more-updates" class="mt10 mb6">More Updates</h2>
+          <h2 id="more-updates" class="mt5 mb3">More Updates</h2>
           <ul class="posts">
           {% for page in posts.pages | slice (start=1) %}
-          <li class="mb6 mt6">
+          <li class="mb4 mt4">
               <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
               <p class="mb2 mt2">{{ page.description }}</p>
               <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>

@@ -13,7 +13,7 @@
 <!-- header -->
 <!-- content -->
 {% if page.title %}
-<nav class="mt6 full fourth-1-md fourth-1-lg">
+<nav class="mt4 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}">
@@ -23,7 +23,7 @@
   {% include "partials/navigation-search.html" %}
 
 {% else %}
-<nav class="mt6 full fourth-1-md fourth-1-lg">
+<nav class="mt4 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}">
@@ -38,7 +38,7 @@
 {% if h2.children %}
 <details class="page-indiced"><summary>{{ h2.title }}</summary>
     {% for h3 in h2.children %}
-  <li class="ml6 mv1"><a href="{{h3.permalink}}">{{h3.title}}</a></li>
+  <li class="ml3 mv1"><a href="{{h3.permalink}}">{{h3.title}}</a></li>
     {% endfor %}
 </details>
 {% else %}
@@ -46,35 +46,18 @@
 {% endif %}
 {% endfor %}
 </nav>
-        <article class="mt6 mb6 full-ns c4-10-lg">
+        <article class="mt4 mb4 full-ns c4-10-lg">
           {% if page.extra.author %} 
-          <span class="mt2 inline-block" rel="author"> {{ page.extra.author }} </span> 
+          <span class="mt2 dib" rel="author"> {{ page.extra.author }} </span> 
           {% if page.extra.ship %} 
             <address class="mono">{{ page.extra.ship }}</address>
           {% endif %}
           {% if page.date %}
-            <time class="mono block mv1 gray4 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
+            <time class="mono db mv1 gray4 f5">{{page.date | date(format="~%Y.%-m.%-d") }}</time>
           {% endif %}
         {% endif %}
           <!-- body -->
           {{ page.content | safe }}
-          <footer class="relative">{% if page.earlier %}
-              <a class="bb0" href="{{page.earlier.permalink}}">
-                <nav class="previous mv6 absolute right4 f4 t-right">
-                  <p class="mb0 f5">Previous Post:</p>
-                  <p class="fw-bold f4 mb0 mt0">{{page.earlier.title}}</p>
-                  <time class="mono block f5">{{page.earlier.date | date(format="~%Y.%-m.%-d") }}</time>
-                </nav>
-              </a>
-                {% endif %}
-  
-                {% if page.later %}
-                <nav class="next mv6 absolute left4 f4">
-                  <p class="mb0">Next Post:</p>
-                  <a class="fw-bold bb0" href="{{page.later.permalink}}">{{page.later.title}}</a>
-                  <time class="mono block f5">{{page.later.date | date(format="~%Y.%-m.%-d") }}</time>
-                </nav>
-                {% endif %}
-              </footer>
+          {% include "partials/pagination.html" %}
         </article>
 {% endblock content %}

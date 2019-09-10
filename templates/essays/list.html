@@ -2,7 +2,7 @@
 {% block title %} Essays {% endblock title %}
 {% block content %}
 <!-- header -->
-<nav class="mt6 full fourth-1-md fourth-1-lg">
+<nav class="mt4 full fourth-1-md fourth-1-lg">
   <a class="gray3" href="/">Urbit</a> 
   <span class="gray3"> / </span>
   <a href="/essays">
@@ -11,12 +11,12 @@
   {% include "partials/navigation-search.html" %}
 </nav>
 <!-- content -->
-      <article class="mt6-lg mb6 full c4-12-lg">
+      <article class="mt4-l mt4-xl mb2 full c4-12-lg">
         <ul class="posts">
           {% set posts = get_section(path="essays/_index.md") %}
           {% for page in posts.pages %}
-          <li class="mb8">
-            <h2 class="mb1"><a class="bb0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+          <li class="mb3">
+            <h2 class="mb1"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
             <p class="mb2 mt2">{{ page.description }}</p>
             <time class="mono f5">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
             <span class="mono f5">

@@ -171,7 +171,7 @@ function formatSearchResultTitle(item) {
   // last directory is in 2nd to last element of array
   var lastPartTitle = item.doc.title;
 
-  var fullTitle = firstPartTitle + '<span class="gray90 inline-block pl2">' + ' / ' + lastPartTitle + '</span>';
+  var fullTitle = firstPartTitle + '<span class="gray1 dib pl2">' + ' / ' + lastPartTitle + '</span>';
 
   return fullTitle; 
 }
@@ -185,10 +185,10 @@ function formatSearchResultItem(item, terms) {
   li.classList.add("ph3");
   var hrefA = item.ref;
   createA.setAttribute('href', hrefA);
-  createA.setAttribute('class','no-underline block pl6 pv3');
-  createA.innerHTML = `<span class="fs45 capitalize">${teaserTitle}</span>`;
-  createA.innerHTML += `<span class='pr7 fs5 none float-right'>→</span>`;
-  createA.innerHTML += `<div class="fs35 truncate mr10">${makeTeaser(item.doc.body, terms)}</div>`;
+  createA.setAttribute('class','no-underline db pl1 pv2');
+  createA.innerHTML = `<span class="capitalize">${teaserTitle}</span>`;
+  createA.innerHTML += `<span class='dn arrow fr'>→</span>`;
+  createA.innerHTML += `<div class="truncate pr2">${makeTeaser(item.doc.body, terms)}</div>`;
   return li;
 }
 

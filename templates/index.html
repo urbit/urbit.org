@@ -8,8 +8,8 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
 
 {% block title %} {{ section.title }} {% endblock title %}
 {% block content %}
-<nav class="home full fourth-1-md fourth-1-lg mt6">
-  <h1 class="mb6 mt6 fw-regular">Urbit is your last computer</h1>
+<nav class="home full fourth-1-md fourth-1-lg mt4">
+  <h1 class="mb2 mt2 fw4">Urbit is your last computer</h1>
       <h3>What is Urbit?</h3>
   <ul> 
     <li>Project Overview</li>
@@ -17,25 +17,25 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
     <li>Infrastructure</li>
     <li><a href="https://azimuth.network">Azimuth</a></li>
   </ul>
-  <h3 class="mt6">Contributing</h3>
+  <h3 class="mt2">Contributing</h3>
   <ul>
     <li>How can I help?</li>
     <li>Operating Galaxies and Stars</li>
     <li>Governance</li>
   </ul>
-  <h3 class="mt6">Learn</h3>
+  <h3 class="mt2">Learn</h3>
   <ul>
     <li><a href="/essays">Essays</a></li>
     <li><a href="/media">Media</a></li>
-    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/faq/">FAQ</a></li>
   </ul>
-  <h3 class="mt6">Developers</h3>
+  <h3 class="mt2">Developers</h3>
   <ul>
     <li><a href="/docs">Documentation</a></li>
   </ul>
 </nav>
-<aside class="mt6 fourth-3-md fourth-3-lg full">
-  <section class="mt6 mb6"><h3>Latest Posts</h3>
+<aside class="mt4 fourth-3-md fourth-3-lg full">
+  <section class="mt2 mb2"><h3>Latest Posts</h3>
         {% set s = get_section(path="updates/_index.md") %}
         {% set e = get_section(path="essays/_index.md") %}
         {% set allposts = s.pages 
@@ -46,9 +46,9 @@ a[href*="//"]:not([href*="{{config.base_url | safe}}"])::after {
         {% for page in allposts 
           | slice (end=2) 
           %}
-            <a class="block fw-bold mt6 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
-            <address class="mono block mv2">{{ page.extra.ship }}</address>
-            <time class="mono mv2 mr3">{{ page.date 
+            <a class="db fw6 mt3 mb1" href="{{ page.permalink }}">{{ page.title }}</a>
+            <address class="mono db mv1">{{ page.extra.ship }}</address>
+            <time class="mono mv1 mr3">{{ page.date 
                                           | date(format="~%Y.%-m.%-d") }}</time>
             <a class="mono mv2" href="/{{page.components[0] | lower}}">
               {{ page.components[0] | lower}}
