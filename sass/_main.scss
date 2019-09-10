@@ -386,8 +386,6 @@ body.page-indiced {
         @extend .gray2;
     }
     nav:not(.search-overlay) {
-        position: fixed;
-        max-width: 20%;
         max-height: 100vh;
         overflow-y: scroll;
     }
