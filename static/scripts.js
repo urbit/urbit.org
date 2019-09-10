@@ -367,6 +367,22 @@ window.addEventListener("scroll", event => {
     }
   });
 
-});
+  // this is honestly weird UX when selecting a link,
+  // as every header flies open as you scroll.
+  // for later discussion and experimentation --
+  // may just need debouncing.
+  // Also still working out the logic for closing other summary
+  // headers as you scroll.
+  
+//  headers.forEach(summary => {
+//    let thisH2 = document.querySelector("h2#" + CSS.escape(summary.id));
+//    if (
+//      (thisH2.offsetTop <= fromTop) &&
+//      (thisH2.offsetTop + thisH2.offsetHeight > fromTop)
+//    ) {
+//      summary.parentElement.open = true;
+//    }
+//  })
+//});
 
 }
