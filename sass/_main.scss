@@ -42,7 +42,7 @@
 // layout
 
 body {
-    font-family: "Inter UI", -apple-system, sans-serif;
+    font-family: "Inter", -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     &:not(.primer) {
         @extend .grid12, .mh4;
@@ -198,7 +198,7 @@ nav.previous, nav.next {
     // search button and overlay
 #js-search-window-toggle {
     border: 0;
-    font-family: "Inter UI", sans-serif;
+    font-family: "Inter", sans-serif;
     position: relative;
     display: block;
     width: 80%;
@@ -369,7 +369,7 @@ details {
             vertical-align: middle;
             margin-right: 0.5rem;
             @extend .gray1;
-            font-family: "Inter UI", sans-serif;
+            font-family: "Inter", sans-serif;
             font-weight: 400;
             font-size: 1.5rem;
         }
