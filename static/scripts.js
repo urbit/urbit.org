@@ -331,7 +331,7 @@ if (window.location.href.includes("docs")) {
 if (document.body.classList.contains("page-indiced")) {
 let h2 = document.getElementsByTagName("h2");
 let h3 = document.getElementsByTagName("h3");
-let all = document.querySelectorAll("nav details li a");
+let all = document.querySelectorAll("nav li a");
 let headers = document.querySelectorAll("details summary");
 
 // smooth scrolling on click

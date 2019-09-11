@@ -336,17 +336,22 @@ input[type="search"] {
 }
 
     // code blocks
+pre {
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 1.25rem;
+}
 pre, pre span {
     font-family: "Source Code Pro", monospace;
     background-color: #f9f9f9 !important;
     color: black !important;
+    overflow-x: scroll;
 }
 .mono {
     font-family: "Source Code Pro", monospace;
 }
 
     // code in headers
-h1 code, h2 code, h3 code {
+h1 code, h2 code, h3 code, h4 code {
     @extend .red3;
     background-color: transparent;
     font-weight: 600;
@@ -365,6 +370,7 @@ details {
     // cuts off the open chevron. thus:
     padding-left: 2px;
     & > summary {
+        @extend .fw6, .gray2;
         cursor: default;
         list-style: none;
         display: inline-block;
@@ -386,6 +392,9 @@ details {
             font-size: 1.5rem;
         }
     }
+    &[open] > summary {
+        @extend .fw6, .black;
+    }
     &[open] > summary::before {
         content: "› ";
         display: inline-block;
@@ -397,6 +406,9 @@ body.page-indiced {
     h3 {
         @extend .gray2;
     }
+    h4 {
+        @extend .gray1;
+    }
     nav:not(.search-overlay) {
         max-height: 100%;
         overflow-y: scroll;
@@ -405,3 +417,21 @@ body.page-indiced {
         font-weight: 600;
     }
 }
+
+// youtube
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    }
+    
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
