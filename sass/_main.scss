@@ -418,6 +418,36 @@ body.page-indiced {
     }
 }
 
+// doc-specific chevrons
+
+nav.docs:not(.mobile) {
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    width: 25vw;
+}
+nav.docs details {
+    summary {
+    @extend .fw4, .black;   
+    }
+    & > summary::before {
+        content: "› ";
+        display: inline-block;
+        transform: rotate(90deg);
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        @extend .gray1;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    &[open] > summary::before {
+        content: "› ";
+        display: inline-block;
+        transform: rotate(-90deg);
+    }
+}
+
 // youtube
 
 .video-container {
