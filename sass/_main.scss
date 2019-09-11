@@ -217,6 +217,9 @@ nav.previous, nav.next {
     min-width: 110px;
     text-align: left;
     background: transparent;
+    &.dn {
+        display: none;
+    }
     span#search-icon {
         display: inline-block;
         transform: rotate(-45deg);
