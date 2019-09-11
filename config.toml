@@ -29,24 +29,9 @@ build_search_index = true
 #       {name = "authors"}, # Basic definition: no RSS or pagination
 #     ]
 #
-taxonomies = [
-    {name = "posts", rss = true},
-]
+
 
 [extra]
-urbit_menu = [
-  {url = "$BASE_URL", name = "Urbit"},
-  {url = "$BASE_URL/primer/", name = "Primer"},
-  {url = "$BASE_URL/posts/", name = "Posts"},
-  {url = "$BASE_URL/docs/", name = "Docs"},
-]
-
-urbit_footer = [
-  {url = "$BASE_URL/faq/", name = "FAQ"},
-  {url = "$BASE_URL/tos/", name = "Terms of Service"},
-  {url = "$BASE_URL/privacy/", name = "Privacy Policy"},
-  {url = "$BASE_URL/bounties/", name = "Bug Bounties"},
-]
 
 docs_number_chapters = true
 

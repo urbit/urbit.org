@@ -2,10 +2,10 @@
 title = "Blueprint 2017 Talks: Galen Wolfe-Pauly on the Distributed Web"
 date = 2017-11-20
 description = "Galen presents to IDEO on Urbit and decentralized systems."
-[taxonomies]
-posts = ["Media"]
 [extra]
-author = "Tlon"
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
+youtube = "9cXTGW9J9a0"
 +++
 {{ youtube(id="9cXTGW9J9a0") }}
 

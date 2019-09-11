@@ -2,10 +2,10 @@
 title = "LambdaConf 2018: Ted Blackman - Ford: Urbit's Build System"
 date = 2018-12-20
 description = "Ted presents a technical overview of Ford, Urbit's build system, at LambdaConf 2018."
-[taxonomies]
-posts = ["Media"]
 [extra]
-author = "Tlon"
+author = "Ted Blackman"
+ship = "~rovnys-ricfer"
+youtube = "5ZAFEylHdiU"
 +++
 {{ youtube(id="5ZAFEylHdiU") }} 
 
