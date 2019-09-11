@@ -212,14 +212,10 @@ nav.previous, nav.next {
     border: 0;
     font-family: "Inter", sans-serif;
     position: relative;
-    display: block;
     width: 80%;
     min-width: 110px;
     text-align: left;
     background: transparent;
-    &.dn {
-        display: none;
-    }
     span#search-icon {
         display: inline-block;
         transform: rotate(-45deg);
