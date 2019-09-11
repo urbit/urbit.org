@@ -418,13 +418,21 @@ body.page-indiced {
     }
 }
 
-// doc-specific chevrons
+// doc-specific navigation
 
+select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: "Inter UI", sans-serif;
+}
 nav.docs:not(.mobile) {
     height: 100vh;
     position: fixed;
     overflow-y: scroll;
     width: 25vw;
+    max-width: 300px;
 }
 nav.docs details {
     summary {

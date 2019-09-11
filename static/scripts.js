@@ -385,3 +385,11 @@ window.addEventListener("scroll", event => {
 //  })
 //
 })};
+
+let docsSelect = document.getElementById('docsSelect');
+let goTo = function() {
+  let url = docsSelect.options[docsSelect.selectedIndex].value;
+  document.location.assign(url);
+}
+
+docsSelect.addEventListener('change', goTo);
