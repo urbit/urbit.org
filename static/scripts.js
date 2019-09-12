@@ -328,7 +328,9 @@ if (window.location.href.includes("docs")) {
   let docsSelect = document.getElementById('docsSelect');
   let goTo = function() {
     let url = docsSelect.options[docsSelect.selectedIndex].value;
-    document.location.assign(url);
+    if (url.startsWith("http")) {
+      document.location.assign(url);
+    }
   }
 
   docsSelect.addEventListener('change', goTo);

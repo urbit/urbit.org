@@ -70,20 +70,27 @@
     {% set index = get_section(path="docs/_index.md") %}
     {% for s in index.subsections %}
     {% set subsection = get_section(path=s) %}
+    <option> </option>
     <option>{{ subsection.title }}</option>
+    <option>---</option>
     {% if subsection.pages %}
       {% for page in subsection.pages %}
       <option value="{{ page.permalink }}">{{ page.title }}</option>
       {% endfor %}
       {% for y in subsection.subsections %}
       {% set subsubsection = get_section(path=y) %}
+      <option> </option>
+      <option>{{ subsubsection.title }}</option>
+      <option>---</option>
         {% if subsubsection.pages %}
           {% for page in subsubsection.pages %}
           <option value="{{ page.permalink }}">{{ page.title }}</option>
           {% endfor %}
       {% for x in subsubsection.subsections %}
       {% set subsubsubsection = get_section(path=x) %}
+      <option> </option>
       <option>{{ subsubsubsection.title }}</option>
+      <option>---</option>
         {% if subsubsubsection.pages %}
           {% for page in subsubsubsection.pages %}
           <option value="{{ page.permalink }}">{{ page.title }}</option>
