@@ -1,0 +1,857 @@
+[
+    {
+      "name": "dot",
+      "symbol": ".",
+      "usage": "Nock",
+      "link": "./docs/reference/hoon-expressions/rune/dot.md",
+      "desc": "Runes used for carrying out Nock operations in Hoon."
+    },
+    {
+      "name": "dotket",
+      "symbol": ".^",
+      "usage": "Nock",
+      "link": "../content/docs/reference/hoon-expressions/rune/dot.md#dotket",
+      "desc": "`[%dtkt p=spec q=hoon]`: load from the Arvo namespace with a fake Nock instruction: 'Nock `12`''."
+    },
+    {
+      "name": "dotlus",
+      "symbol": ".+",
+      "usage": "Nock",
+      "link": "../content/docs/reference/hoon-expressions/rune/dot.md#dotlus",
+      "desc": "`[%dtls p=hoon]`: increment an atom with Nock `4`."
+    },
+    {
+      "name": "dottar",
+      "symbol": ".*",
+      "usage": "Nock",
+      "link": "../content/docs/reference/hoon-expressions/rune/dot.md#dottar",
+      "desc": "`[%dttr p=hoon q=hoon]`: evaluate with Nock `2`."
+    },
+    {
+      "name": "dottis",
+      "symbol": ".=",
+      "usage": "Nock",
+      "link": "../content/docs/reference/hoon-expressions/rune/dot.md#dottis",
+      "desc": "`[%dtts p=hoon q=hoon]`: test for equality with Nock `5`."
+    },
+    {
+      "name": "dotwut",
+      "symbol": ".?",
+      "usage": "Nock",
+      "link": "../content/docs/reference/hoon-expressions/rune/dot.md#dotwut",
+      "desc": "`[%dtwt p=hoon]`: test for cell or atom with Nock `3`."
+    },
+    {
+      "name": "zap",
+      "symbol": "!",
+      "usage": "wild",
+      "link": "./docs/reference/hoon-expressions/rune/zap.md",
+      "desc": "Wildcard category. Expressions that don't fit anywhere else go here."
+    },
+    {
+      "name": "zapban",
+      "symbol": "!>",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zapban",
+      "desc": "`[%zpgr p=hoon]`: wrap a noun in its type."
+    },
+    {
+      "name": "zapcol",
+      "symbol": "!:",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zapcol",
+      "desc": "`[%dbug p=hoon]`: turn on stack trace"
+    },
+    {
+      "name": "zapdot",
+      "symbol": "!.",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zapdot",
+      "desc": "Turn off stack trace for a subexpression `p`"
+    },
+    {
+      "name": "zaptis",
+      "symbol": "!=",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zaptis",
+      "desc": "`[%zpts p=hoon]`: make the Nock formula for a Hoon expression."
+    },
+    {
+      "name": "zapwut",
+      "symbol": "!?",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zapwut",
+      "desc": "`[%zpwt p=@ q=hoon]`: restrict Hoon version."
+    },
+    {
+      "name": "zapzap",
+      "symbol": "!!",
+      "usage": "wild",
+      "link": "../content/docs/reference/hoon-expressions/rune/zap.md#zapzap",
+      "desc": "`[%zpzp ~]`: crash."
+    },
+    {
+      "name": "tis",
+      "symbol": "=",
+      "usage": "Subject Modification",
+      "link": "./docs/reference/hoon-expressions/rune/tis.md",
+      "desc": "Runes used to modify the subject."
+    },
+    {
+      "name": "tisban",
+      "symbol": "=>",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisban",
+      "desc": "`[%tsgr p=hoon q=hoon]`: compose two expressions."
+    },
+    {
+      "name": "tisbar",
+      "symbol": "=|",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisbar",
+      "desc": "`[%tsbr p=spec q=hoon]`: combine a default type value with the subject."
+    },
+    {
+      "name": "tiscol",
+      "symbol": "=:",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tiscol",
+      "desc": "`[%tscl p=(list (pair wing hoon)) q=hoon]`: change multiple legs in the subject."
+    },
+    {
+      "name": "tiscom",
+      "symbol": "=,",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tiscom",
+      "desc": "`[%tscm p=hoon q=hoon]`: expose namespace"
+    },
+    {
+      "name": "tisdot",
+      "symbol": "=.",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisdot",
+      "desc": "`[%tsdt p=wing q=hoon r=hoon]`: change one leg in the subject."
+    },
+    {
+      "name": "tishep",
+      "symbol": "=-",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tishep",
+      "desc": "`[%tshp p=hoon q=hoon]`: combine a new noun with the subject, inverted."
+    },
+    {
+      "name": "tisket",
+      "symbol": "=^",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisket",
+      "desc": "`[%tskt p=skin q=wing r=hoon s=hoon]`: pin the head of a pair; change"
+    },
+    {
+      "name": "tisled",
+      "symbol": "=<",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisled",
+      "desc": "`[%tsgl p=hoon q=hoon]`: compose two expressions, inverted."
+    },
+    {
+      "name": "tislus",
+      "symbol": "=+",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tislus",
+      "desc": "`[%tsls p=hoon q=hoon]`: combine a new noun with the subject."
+    },
+    {
+      "name": "tismic",
+      "symbol": "=;",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tismic",
+      "desc": "`[%tssm p=skin q=hoon r=hoon]`: combine a named noun with the subject, possibly with type annotation; inverted order."
+    },
+    {
+      "name": "tisfas",
+      "symbol": "=/",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tisfas",
+      "desc": "`[%tsfs p=skin q=hoon r=hoon]`: combine a named noun with the subject, possibly with type annotation."
+    },
+    {
+      "name": "tissig",
+      "symbol": "=~",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tissig",
+      "desc": "`[%tssg p=(list hoon)]`: compose many expressions."
+    },
+    {
+      "name": "tistar",
+      "symbol": "=*",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tistar",
+      "desc": "`[%tstr p=term q=hoon r=hoon]`: define an alias."
+    },
+    {
+      "name": "tiswut",
+      "symbol": "=?",
+      "usage": "Subject Modification",
+      "link": "../content/docs/reference/hoon-expressions/rune/tis.md#tiswut",
+      "desc": "`[$tswt p=wing q=hoon r=hoon s=hoon]`: conditionally change one leg in the subject."
+    },
+    {
+      "name": "wut",
+      "symbol": "?",
+      "usage": "Conditionals",
+      "link": "./docs/reference/hoon-expressions/rune/wut.md",
+      "desc": "Runes used for branching on conditionals."
+    },
+    {
+      "name": "wutban",
+      "symbol": "?>",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutban",
+      "desc": "`[%wtbn p=hoon q=hoon]`: positive assertion."
+    },
+    {
+      "name": "wutbar",
+      "symbol": "?|",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutbar",
+      "desc": "`[%wtbr p=(list hoon)]`: logical OR."
+    },
+    {
+      "name": "wutcol",
+      "symbol": "?:",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutcol",
+      "desc": "`[%wtcl p=hoon q=hoon r=hoon]`: branch on a boolean test."
+    },
+    {
+      "name": "wutdot",
+      "symbol": "?.",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutdot",
+      "desc": "`[%wtdt p=hoon q=hoon r=hoon]`: branch on a boolean test, inverted."
+    },
+    {
+      "name": "wuthep",
+      "symbol": "?-",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wuthep",
+      "desc": "`[%wthp p=wing q=(list (pair spec value))]`: switch against a union, with no default."
+    },
+    {
+      "name": "wutket",
+      "symbol": "?^",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutket",
+      "desc": "`[%wtkt p=wing q=hoon r=hoon]`: branch on whether a wing"
+    },
+    {
+      "name": "wutled",
+      "symbol": "?<",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutled",
+      "desc": "`[%wtgl p=hoon q=hoon]`: negative assertion."
+    },
+    {
+      "name": "wutlus",
+      "symbol": "?+",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutlus",
+      "desc": "`[%wtls p=wing q=hoon r=(list (pair spec hoon))]`: switch against"
+    },
+    {
+      "name": "wutpad",
+      "symbol": "?&",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutpad",
+      "desc": "`[%wtpd p=(list hoon)]`: logical AND."
+    },
+    {
+      "name": "wutsig",
+      "symbol": "?~",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutsig",
+      "desc": "`[%wtsg p=wing q=hoon r=hoon]`: branch on whether a wing of the subject is null."
+    },
+    {
+      "name": "wuttis",
+      "symbol": "?=",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wuttis",
+      "desc": "`[%wtts p=spec q=wing]`: test pattern match."
+    },
+    {
+      "name": "wutvat",
+      "symbol": "?@",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutvat",
+      "desc": "`[%wtpt p=wing q=hoon r=hoon]`: branch on whether a wing of the subject is an atom."
+    },
+    {
+      "name": "wutzaps",
+      "symbol": "?!",
+      "usage": "Conditionals",
+      "link": "../content/docs/reference/hoon-expressions/rune/wut.md#wutzaps",
+      "desc": "`[%wtzp p=hoon]`: logical NOT."
+    },
+    {
+      "name": "bar",
+      "symbol": "|",
+      "usage": "Cores",
+      "link": "./docs/reference/hoon-expressions/rune/bar.md",
+      "desc": "Runes used to produce cores."
+    },
+    {
+      "name": "barcab",
+      "symbol": "|_",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barcab",
+      "desc": "Produce a **door** (a core with a sample)."
+    },
+    {
+      "name": "barcen",
+      "symbol": "|%",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barcen",
+      "desc": "Produce a core, `[battery payload]`."
+    },
+    {
+      "name": "barcol",
+      "symbol": "|:",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barcol",
+      "desc": "Produce a gate with a custom sample."
+    },
+    {
+      "name": "bardot",
+      "symbol": "|.",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#bardot",
+      "desc": "Produce a trap (a core with one arm `$`)."
+    },
+    {
+      "name": "barhep",
+      "symbol": "|-",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barhep",
+      "desc": "Produce a trap (a core with one arm `$`) and evaluate it."
+    },
+    {
+      "name": "barket",
+      "symbol": "|^",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barket",
+      "desc": "Produce a core whose battery includes a `$` arm and compute the latter."
+    },
+    {
+      "name": "barsig",
+      "symbol": "|~",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barsig",
+      "desc": "Produce an iron gate."
+    },
+    {
+      "name": "bartar",
+      "symbol": "|*",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#bartar",
+      "desc": "Produce a wet gate (one-armed core with sample)."
+    },
+    {
+      "name": "bartis",
+      "symbol": "|=",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#bartis",
+      "desc": "Produce a gate (a one-armed core with a sample)."
+    },
+    {
+      "name": "barvat",
+      "symbol": "|@",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barvat",
+      "desc": "Produce a 'wet' core `[battery payload]`."
+    },
+    {
+      "name": "barwut",
+      "symbol": "|?",
+      "usage": "Cores",
+      "link": "../content/docs/reference/hoon-expressions/rune/bar.md#barwut",
+      "desc": "Produce a lead trap."
+    },
+    {
+      "name": "lus",
+      "symbol": "+",
+      "usage": "Arms",
+      "link": "./docs/reference/hoon-expressions/rune/lus.md",
+      "desc": "Runes used to define arms in a core."
+    },
+    {
+      "name": "lusbar",
+      "symbol": "+|",
+      "usage": "Arms",
+      "link": "../content/docs/reference/hoon-expressions/rune/lus.md#lusbar",
+      "desc": "Chapter label."
+    },
+    {
+      "name": "lusbuc",
+      "symbol": "+$",
+      "usage": "Arms",
+      "link": "../content/docs/reference/hoon-expressions/rune/lus.md#lusbuc",
+      "desc": "Produce a structure arm (type definition)."
+    },
+    {
+      "name": "luslus",
+      "symbol": "++",
+      "usage": "Arms",
+      "link": "../content/docs/reference/hoon-expressions/rune/lus.md#luslus",
+      "desc": "Produce a normal arm."
+    },
+    {
+      "name": "lustar",
+      "symbol": "+*",
+      "usage": "Arms",
+      "link": "../content/docs/reference/hoon-expressions/rune/lus.md#lustar",
+      "desc": "Produce a type constructor arm."
+    },
+    {
+      "name": "col",
+      "symbol": ":",
+      "usage": "Cells",
+      "link": "./docs/reference/hoon-expressions/rune/col.md",
+      "desc": "Runes used to produce cells, which are pairs of nouns."
+    },
+    {
+      "name": "colcab",
+      "symbol": ":_",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#colcab",
+      "desc": "`[%clcb p=hoon q=hoon]`; construct a cell, inverted."
+    },
+    {
+      "name": "colcol",
+      "symbol": "::",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#colcol",
+      "desc": "Code comment"
+    },
+    {
+      "name": "colhep",
+      "symbol": ":-",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#colhep",
+      "desc": "`[%clhp p=hoon q=hoon]`: construct a cell (2-tuple)."
+    },
+    {
+      "name": "colket",
+      "symbol": ":^",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#colket",
+      "desc": "`[%clkt p=hoon q=hoon r=hoon s=hoon]`: construct a quadruple (4-tuple)."
+    },
+    {
+      "name": "collus",
+      "symbol": ":+",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#collus",
+      "desc": "`[%clls p=hoon q=hoon r=hoon]`: construct a triple (3-tuple)."
+    },
+    {
+      "name": "colsig",
+      "symbol": ":~",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#colsig",
+      "desc": "`[%clsg p=(list hoon)]`: construct a null-terminated list."
+    },
+    {
+      "name": "coltar",
+      "symbol": ":*",
+      "usage": "Cells",
+      "link": "../content/docs/reference/hoon-expressions/rune/col.md#coltar",
+      "desc": "`[%cltr p=(list hoon)]`: construct an n-tuple."
+    },
+    {
+      "name": "cen",
+      "symbol": "%",
+      "usage": "Calls",
+      "link": "./docs/reference/hoon-expressions/rune/cen.md",
+      "desc": "Runes used for making function calls in Hoon."
+    },
+    {
+      "name": "cencab",
+      "symbol": "%_",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cencab",
+      "desc": "Resolve a wing with changes, preserving type."
+    },
+    {
+      "name": "cencol",
+      "symbol": "%:",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cencol",
+      "desc": "Call a gate with many arguments."
+    },
+    {
+      "name": "cendot",
+      "symbol": "%.",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cendot",
+      "desc": "Call a gate (function), inverted."
+    },
+    {
+      "name": "cenhep",
+      "symbol": "%-",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cenhep",
+      "desc": "Call a gate (function)."
+    },
+    {
+      "name": "cenket",
+      "symbol": "%^",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cenket",
+      "desc": "Call gate with triple sample."
+    },
+    {
+      "name": "cenlus",
+      "symbol": "%+",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#cenlus",
+      "desc": "Call gate with a cell sample."
+    },
+    {
+      "name": "censig",
+      "symbol": "%~",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#censig",
+      "desc": "Evaluate an arm in a door."
+    },
+    {
+      "name": "centar",
+      "symbol": "%*",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#centar",
+      "desc": "Evaluate an expression, then resolve a wing with changes."
+    },
+    {
+      "name": "centis",
+      "symbol": "%=",
+      "usage": "Calls",
+      "link": "../content/docs/reference/hoon-expressions/rune/cen.md#centis",
+      "desc": "Resolve a wing with changes."
+    },
+    {
+      "name": "ket",
+      "symbol": "^",
+      "usage": "Casts",
+      "link": "./docs/reference/hoon-expressions/rune/ket.md",
+      "desc": "Runes that let us adjust types without violating type constraints."
+    },
+    {
+      "name": "ketbar",
+      "symbol": "^|",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketbar",
+      "desc": "`[%ktbr p=hoon]`: convert a gold core to an iron core (contravariant)."
+    },
+    {
+      "name": "ketcol",
+      "symbol": "^:",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketcol",
+      "desc": "`[%ktcl p=spec]`: 'factory' gate for type `p`."
+    },
+    {
+      "name": "ketdot",
+      "symbol": "^.",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketdot",
+      "desc": "`[%ktdt p=hoon q=hoon]`: typecast on value produced by passing `q` to `p`."
+    },
+    {
+      "name": "kethep",
+      "symbol": "^-",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#kethep",
+      "desc": "`[%kthp p=spec q=hoon]`: typecast by explicit type label."
+    },
+    {
+      "name": "ketlus",
+      "symbol": "^+",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketlus",
+      "desc": "`[%ktls p=hoon q=hoon]`: typecast by inferred type."
+    },
+    {
+      "name": "ketpad",
+      "symbol": "^&",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketpad",
+      "desc": "`[%ktpd p=hoon]`: convert a core to a zinc core (covariant)."
+    },
+    {
+      "name": "ketsig",
+      "symbol": "^~",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketsig",
+      "desc": "`[%ktsg p=hoon]`: fold constant at compile time."
+    },
+    {
+      "name": "kettar",
+      "symbol": "^*",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#kettar",
+      "desc": "`[%kttr p=spec]`: Produce example type value."
+    },
+    {
+      "name": "kettis",
+      "symbol": "^=",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#kettis",
+      "desc": "`[%ktts p=skin q=hoon]`: Bind name to a value."
+    },
+    {
+      "name": "ketwut",
+      "symbol": "^?",
+      "usage": "Casts",
+      "link": "../content/docs/reference/hoon-expressions/rune/ket.md#ketwut",
+      "desc": "`[%ktwt p=hoon]`: convert any core to a lead core (bivariant)."
+    },
+    {
+      "name": "buc",
+      "symbol": "$",
+      "usage": "Structures",
+      "link": "./docs/reference/hoon-expressions/rune/buc.md",
+      "desc": "Runes used for defining custom types."
+    },
+    {
+      "name": "buccab",
+      "symbol": "$_",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#buccab",
+      "desc": "`[%bscb p=hoon]`: structure that normalizes to an example."
+    },
+    {
+      "name": "buccen",
+      "symbol": "$%",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#buccen",
+      "desc": "`[%bscn p=(list spec)]`: structure which recognizes a union tagged by head atom."
+    },
+    {
+      "name": "buccol",
+      "symbol": "$:",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#buccol",
+      "desc": "`[%bscl p=(list spec)]`: form a cell type."
+    },
+    {
+      "name": "buchep",
+      "symbol": "$-",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#buchep",
+      "desc": "`[%bshp p=spec q=spec]`: structure that normalizes to an example gate."
+    },
+    {
+      "name": "bucket",
+      "symbol": "$^",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#bucket",
+      "desc": "`[%bskt p=spec q=spec]`: structure which normalizes a union tagged by head depth (cell)."
+    },
+    {
+      "name": "bucsig",
+      "symbol": "$~",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#bucsig",
+      "desc": "`[%bssg p=hoon q=spec]`: define a custom type default value"
+    },
+    {
+      "name": "bucvat",
+      "symbol": "$@",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#bucvat",
+      "desc": "`[%bsvt p=spec q=spec]`: structure which normalizes a union tagged by head depth (atom)."
+    },
+    {
+      "name": "buctis",
+      "symbol": "$=",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#buctis",
+      "desc": "`[%bsts p=skin q=spec]`: structure which wraps a face around another structure."
+    },
+    {
+      "name": "bucwut",
+      "symbol": "$?",
+      "usage": "Structures",
+      "link": "../content/docs/reference/hoon-expressions/rune/buc.md#bucwut",
+      "desc": "`[%bswt p=(list spec)]`: form a type from a union of other types."
+    },
+    {
+      "name": "mic",
+      "symbol": ";",
+      "usage": "Make",
+      "link": "./docs/reference/hoon-expressions/rune/mic.md",
+      "desc": "Miscellaneous useful macros."
+    },
+    {
+      "name": "miccol",
+      "symbol": ";:",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#miccol",
+      "desc": "`[%mccl p=hoon q=(list hoon)]`: call a binary function as an n-ary function."
+    },
+    {
+      "name": "miclus",
+      "symbol": ";+",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#miclus",
+      "desc": "make a single XML node (Sail)"
+    },
+    {
+      "name": "micmic",
+      "symbol": ";;",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#micmic",
+      "desc": "`[%mcmc p=spec q=hoon]`: normalize with a mold, asserting fixpoint."
+    },
+    {
+      "name": "micfas",
+      "symbol": ";/",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#micfas",
+      "desc": "`[%mcnt p=hoon]`: tape as XML element."
+    },
+    {
+      "name": "micsig",
+      "symbol": ";~",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#micsig",
+      "desc": "`[%mcsg p=hoon q=(list hoon)]`: glue a pipeline together with a"
+    },
+    {
+      "name": "mictar",
+      "symbol": ";*",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#mictar",
+      "desc": "make a list of XML nodes from complex Hoon expression (Sail)"
+    },
+    {
+      "name": "mictis",
+      "symbol": ";=",
+      "usage": "Make",
+      "link": "../content/docs/reference/hoon-expressions/rune/mic.md#mictis",
+      "desc": "make a list of XML nodes (Sail)"
+    },
+    {
+      "name": "sig",
+      "symbol": "~",
+      "usage": "Hints",
+      "link": "./docs/reference/hoon-expressions/rune/sig.md",
+      "desc": "Runes that use Nock `11` to pass non-semantic info to the interpreter."
+    },
+    {
+      "name": "sigban",
+      "symbol": "~>",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigban",
+      "desc": "`[%sgbn p=$@(term [p=term q=hoon]) q=hoon]`: raw hint, applied"
+    },
+    {
+      "name": "sigbar",
+      "symbol": "~|",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigbar",
+      "desc": "`[%sgbr p=hoon q=hoon]`: tracing printf."
+    },
+    {
+      "name": "sigbuc",
+      "symbol": "~$",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigbuc",
+      "desc": "`[%sgbs p=term q=hoon]`: profiling hit counter."
+    },
+    {
+      "name": "sigcab",
+      "symbol": "~_",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigcab",
+      "desc": "`[%sgcb p=hoon q=hoon]`: user-formatted tracing printf."
+    },
+    {
+      "name": "sigcen",
+      "symbol": "~%",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigcen",
+      "desc": "`[%sgcn p=term q=wing r=(list [term hoon]) s=hoon]`: jet registration."
+    },
+    {
+      "name": "sigled",
+      "symbol": "~<",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigled",
+      "desc": "`[%sgld p=$@(term [p=term q=hoon]) q=hoon]`: raw hint, applied to
+      product."
+    },
+    {
+      "name": "siglus",
+      "symbol": "~+",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#siglus",
+      "desc": "`[%sgls p=hoon]`: cache a computation."
+    },
+    {
+      "name": "signet",
+      "symbol": "~/",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#signet",
+      "desc": "`[%sgnt p=term q=hoon]`: jet registration for gate with"
+    },
+    {
+      "name": "sigpad",
+      "symbol": "~&",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigpad",
+      "desc": "`[%sgpd p=hoon q=hoon]`: debugging printf."
+    },
+    {
+      "name": "sigtis",
+      "symbol": "~=",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigtis",
+      "desc": "`[%sgts p=hoon q=hoon]`: detect duplicate."
+    },
+    {
+      "name": "sigwut",
+      "symbol": "~?",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigwut",
+      "desc": "`[%sgwt p=hoon q=hoon r=hoon]`: conditional debug printf."
+    },
+    {
+      "name": "sigzap",
+      "symbol": "~!",
+      "usage": "Hints",
+      "link": "../content/docs/reference/hoon-expressions/rune/sig.md#sigzap",
+      "desc": "`[%sgzp p=hoon q=hoon]`: print type on compilation fail."
+    },
+    {
+      "name": "terminators",
+      "symbol": "--,",
+      "usage": "Terminators",
+      "link": "./docs/reference/hoon-expressions/rune/terminators.md",
+      "desc": "Runes used to terminate expressions."
+    },
+    {
+      "name": "hephep",
+      "symbol": "--",
+      "usage": "Terminators",
+      "link": "../content/docs/reference/hoon-expressions/rune/terminators.md#hephep",
+      "desc": "The `--` rune is used to indicate the end of a core expression."
+    },
+    {
+      "name": "tistis",
+      "symbol": "==",
+      "usage": "Terminators",
+      "link": "../content/docs/reference/hoon-expressions/rune/terminators.md#tistis",
+      "desc": "The `==` rune is used to indicate the end of a 'jogging' or 'running' series of Hoon expressions."
+    }
+  ]
