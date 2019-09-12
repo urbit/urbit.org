@@ -1,0 +1,66 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: hoon
+file_extensions:
+  - hoon
+  - hook
+scope: source.hoon
+contexts:
+  main:
+    - match: "::"
+      comment: comment
+      push:
+        - meta_scope: comment.line.hoon
+        - match: \n
+          pop: true
+    - match: \s*"""
+      comment: doqbloq
+      push:
+        - meta_scope: string.double.hoon
+        - match: \s*"""
+          pop: true
+    - match: \s*'''
+      comment: soqbloq
+      push:
+        - meta_scope: string.double.hoon
+        - match: \s*'''
+          pop: true
+    - match: \"
+      comment: tape
+      push:
+        - meta_scope: string.double.hoon
+        - match: \"
+          pop: true
+        - match: '\\.|[^"]'
+    - match: \'
+      comment: cord
+      push:
+        - meta_scope: string.single.hoon
+        - match: \'
+          pop: true
+        - match: '\\.|[^'']'
+    - match: "[a-z]([a-z0-9-]*[a-z0-9])?/"
+      comment: arm
+      scope: constant.character.hoon
+    - match: '\+[-+]  (?=[a-z]([a-z0-9-]*[a-z0-9])?)'
+      comment: arm
+      push:
+        - meta_content_scope: entity.name.function.hoon
+        - match: "(?![a-z0-9-])"
+          pop: true
+    - match: "%[a-z]([a-z0-9-]*[a-z0-9])?"
+      comment: cube
+      scope: constant.character.hoon
+    - match: "@[a-z]([a-z0-9-]*[a-z0-9])?"
+      comment: odor
+      scope: storage.type.hoon
+    - match: '[+\-|$%:.#^~;=?!_,&@\/<>%*]'
+      comment: rune
+      scope: keyword.control.hoon
+    - match: ;script(type "text/coffeescript")
+      comment: rune
+      push:
+        - meta_scope: keyword.control.hoon
+        - match: "=="
+          pop: true

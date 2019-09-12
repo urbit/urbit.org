@@ -14,7 +14,7 @@ Comet names aren't quite as memorable as others, but they're disposable identiti
 
 To boot your comet, go into the command line and run the following command from the directory that was created during Urbit installation:
 
-```
+```sh
 $ urbit -c mycomet
 ```
 

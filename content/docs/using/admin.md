@@ -16,13 +16,13 @@ You can force-quit your urbit with `Ctrl-z` from anywhere.
 
 To restart your urbit simply pass the name of your pier:
 
-```
+```sh
 $ urbit some-planet
 ```
 
 or
 
-```
+```sh
 $ urbit comet
 ```
 
@@ -30,7 +30,7 @@ $ urbit comet
 
 To log an urbit's command line output to a file, use `script`:
 
-```
+```sh
 $ script urbit.log urbit your-urbit
 ```
 
@@ -44,21 +44,21 @@ To move a pier, simply move the contents of the directory it lives in.
 To keep these files as small as possible we usually use the `--sparse`
 option in `tar`. With a pier `your-urbit/`, something like this should work:
 
-```
+```sh
 tar -Scvzf ~/your-urbit.tar.gz ~/your-urbit/
 scp your-old-server:~/your-urbit.tar.gz your-new-server:~
 ```
 
 Then to unzip it, on your other Unix server, run:
 
-```
+```sh
 tar xfvz your-urbit.tar.gz
 ```
 
 Delete the tar file, and, after installing Urbit on your new server,
 start your urbit back up with:
 
-```
+```sh
 urbit your-urbit
 ```
 
@@ -165,13 +165,13 @@ and does not need editing to be used with the `-k` option.
 You can use the resulting output in the same installation flow from the
 [Booting a Ship](@/docs/getting-started/booting-a-ship.md) guide, following the same scheme as for booting a planet. That scheme is:
 
-```
+```sh
 $ urbit -w <moonname> -G <key> -c <piername>
 ```
 
 or
 
-```
+```sh
 $ urbit -w <moonname> -k <keyfile> -c <piername>
 ```
 
@@ -180,13 +180,13 @@ the resulting directory is a rather unwieldy moon name.
 
 Here's how an example moon might be booted:
 
-```
+```sh
 $ urbit -w faswep-navred-sampel-palnet -G <key> -c mymoon
 ```
 
 or
 
-```
+```sh
 $ urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
 ```
 

@@ -10,7 +10,7 @@ Because such a ship has no presence on the network, you don't need an Azimuth id
 
 To create a fake ship named `~zod`, run the command below. You can replace `zod` with any valid Urbit ship-name.
 
-```
+```sh
 urbit -F zod
 ```
 
@@ -64,6 +64,6 @@ You can turn your ship off with `ctrl-d` from the Talk or Dojo prompts.
 
 To restart your ship, simply pass the name of your pier:
 
-```
+```sh
 urbit some-planet
 ```

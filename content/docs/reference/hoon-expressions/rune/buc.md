@@ -57,7 +57,7 @@ Irregular: `*` makes `%noun`, `^` makes `%cell`, `?` makes
 
 ##### Expands to
 
-```
+```hoon
 |=(* p)
 ```
 
@@ -158,7 +158,7 @@ Irregular (structure mode): `[a b c]` is `$:(a b c)`.
 
 ##### Expands to
 
-```
+```hoon
 $_  ^|
 |=(p $:q)
 ```
@@ -230,7 +230,7 @@ The product of `p`.
 
 Regular: **2-fixed**.
 
-```
+```hoon
 $~  p=hoon  q=spec
 ```
 
@@ -320,7 +320,7 @@ Example:
 
 ##### Expands to
 
-```
+```hoon
 |=  *
 ^=(p %-(q +6))
 ```

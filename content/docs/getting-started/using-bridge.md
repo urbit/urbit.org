@@ -53,7 +53,7 @@ If you just accepted a point, you'll be returned to your point screen. Notice th
 
 Click the link that says `Set network keys`. The field that is presented in the resulting page expects a 32-byte hexadecimal string. If it's filled already, no action is required. If this is empty, you will need to generate such a string. You can generate this data any way you please, but in the terminal on MacOS or Linux, you can write
 
-```
+```sh
 hexdump -n 32 -e '4/4 "%08X"' /dev/random
 ```
 

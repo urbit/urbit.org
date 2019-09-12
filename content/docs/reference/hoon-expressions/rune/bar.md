@@ -21,7 +21,7 @@ Produce a **door** (a core with a sample).
 
 Regular:
 
-```
+```hoon
 |_  a=spec
 ++  b=term  c=hoon
 ++  d=term  e=hoon
@@ -48,7 +48,7 @@ The context of the door is the subject of the `|_` expression.
 
 ##### Expands to
 
-```
+```hoon
 =|  a=spec
 |%
 ++  b=term  c=hoon
@@ -86,7 +86,7 @@ A trivial door:
 
 A more interesting door, from the kernel library:
 
-```
+```hoon
 ++  ne
   |_  tig=@
   ++  d  (add tig '0')
@@ -111,7 +111,7 @@ Produce a core, `[battery payload]`.
 
 Regular:
 
-```
+```hoon
 |%
 ++  a=term  b=hoon
 ++  c=term  d=hoon
@@ -171,7 +171,7 @@ Produce a gate with a custom sample.
 
 Regular:
 
-```
+```hoon
 |:  a=hoon  b=hoon
 ```
 
@@ -187,7 +187,7 @@ AST:
 
 ##### Expands to
 
-```
+```hoon
 =>  ^~  a
   |.  b
 ```
@@ -219,7 +219,7 @@ Produce a trap (a core with one arm `$`).
 
 Regular:
 
-```
+```hoon
 |.  a=hoon
 ```
 
@@ -237,7 +237,7 @@ The payload of the core is the subject of the `|.` expression.
 
 ##### Expands to
 
-```
+```hoon
 |%  ++  $  a=hoon
 --
 ```
@@ -287,7 +287,7 @@ Produce a trap (a core with one arm `$`) and evaluate it.
 
 Regular:
 
-```
+```hoon
 |-  a=hoon
 ```
 
@@ -303,7 +303,7 @@ A `|-` expression produces a core with one arm named `$` and immediately evaluat
 
 ##### Expands to
 
-```
+```hoon
 =<($ |.(a=hoon))
 ```
 
@@ -343,7 +343,7 @@ Produce a core whose battery includes a `$` arm and compute the latter.
 
 Regular:
 
-```
+```hoon
 |^  a=hoon
 ++  b=term  c=hoon
 ++  d=term  e=hoon
@@ -366,7 +366,7 @@ A `|^` expression produces a multi-arm core whose battery includes a `$` arm, wh
 
 ##### Expands to
 
-```
+```hoon
 =>  |%
     ++  $  a=hoon
     ++  b=term  c=hoon
@@ -402,7 +402,7 @@ Produce an iron gate.
 
 Regular:
 
-```
+```hoon
 |~  a=spec  b=hoon
 ```
 
@@ -418,7 +418,7 @@ A `|~` expression produces an iron gate.  `a` defines the sample, and `b` define
 
 ##### Expands to
 
-```
+```hoon
 ^|  |=(a b)
 ```
 
@@ -441,7 +441,7 @@ Produce a wet gate (one-armed core with sample).
 
 Regular:
 
-```
+```hoon
 |*  a=spec  b=hoon
 ```
 
@@ -457,7 +457,7 @@ A `|*` expression produces a wet gate.  `a` defines the gate's sample, and `b` i
 
 ##### Expands to
 
-```
+```hoon
 =|  a
 |@
 ++  $
@@ -507,7 +507,7 @@ Produce a gate (a one-armed core with a sample).
 
 Regular:
 
-```
+```hoon
 |=  a=spec  b=hoon
 ```
 
@@ -525,7 +525,7 @@ The product of a `|=` expression is a dry **gate**, i.e., a Hoon function.
 
 ##### Expands to
 
-```
+```hoon
 =|  a=spec
 |%  ++  $  b=hoon
 --
@@ -567,7 +567,7 @@ Produce a 'wet' core `[battery payload]`.
 
 Regular:
 
-```
+```hoon
 |@
 ++  a=term  b=hoon
 ++  c=term  d=hoon
@@ -600,7 +600,7 @@ Produce a lead trap.
 
 Regular:
 
-```
+```hoon
 |?  a=hoon
 ```
 
@@ -616,7 +616,7 @@ A `|?` expression produces a lead trap (i.e., a lead core with one arm named `$`
 
 ##### Expands to
 
-```
+```hoon
 ^?  |.  a
 ```
 

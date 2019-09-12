@@ -293,7 +293,7 @@ The Hoon standard library is a compilation of generally useful Hoon gates (funct
 
 It's important to know about standard library functions, because they make certain tasks much easier, and spare you from having to write the code itself. If you did not use the `add` library function, for example, you would have to write out code like this every time you wanted to find the sum of two numbers:
 
-```
+```hoon
 ++  add
   ~/  %add
   |=  [a=@ b=@]

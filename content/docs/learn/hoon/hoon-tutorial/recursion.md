@@ -20,7 +20,7 @@ recursive `gate` (Hoon's equivalent of a function) to perform the relevant
 computation. Save the code below as `factorial.hoon` in your ship's `/gen`
 directory.
 
-```
+```hoon
 |=  n=@ud
 ?:  =(n 1)
   1
@@ -124,7 +124,7 @@ frame that simply has its values replaced with each recursion.
 With a bit of refactoring, we can write a version of our factorial gate that
 _is_ tail-recursive and can take advantage of this feature:
 
-```
+```hoon
 |=  n=@ud
 =/  t=@ud  1
 |-
@@ -142,7 +142,7 @@ point.
 We then evaluate `n` to see if it is 1. If it is we return the value of `t`. In
 the case that `n` is anything other than 1, we perform our recursion:
 
-```
+```hoon
 $(n (dec n), t (mul t n))
 ```
 

@@ -6,7 +6,7 @@ template = "doc.html"
 Let's create a state machine in Hoon that models the functionality of a traffic
 light. Save the code below as `traffic.hoon` in your `/gen` directory.
 
-```
+```hoon
 :-  %say
 |=  *
 :-  %noun
@@ -29,7 +29,7 @@ light. Save the code below as `traffic.hoon` in your `/gen` directory.
 
 Let's look at the code piece-by-piece.
 
-```
+```hoon
 :-  %say
 |=  *
 :-  %noun
@@ -40,7 +40,7 @@ Here's the boilerplate code to designate our generator as being a
 it allows us to run the generator without any arguments. It's otherwise not
 relevant to the functionality of our program.
 
-```
+```hoon
 =+  |%
     ++  state  ?(%red %yellow %green)
     --
@@ -60,7 +60,7 @@ Having new types in a separate core is a common idiom in Hoon programs that allo
 the compiler to do [constant folding](https://en.wikipedia.org/wiki/Constant_folding),
 which improves performance.
 
-```
+```hoon
 =/  current-state=state  %red
 ```
 
@@ -69,7 +69,7 @@ the arm in previous code chunk - and gives it a default value. Because we are
 putting this noun into the subject, it will be available for use in the
 `traffic-light` core we are about to create.
 
-```
+```hoon
 =+  ^=  traffic-light
     |%
     ++  look  current-state
@@ -105,7 +105,7 @@ its parent core. where we defined the arms `look` and `set`. The `( )` then
 lists changes to the core we would like to make as we produce a new one. You
 will often see `+>.$` used in this way.
 
-```
+```hoon
 =+  a=traffic-light
 =+  b=traffic-light
 ```
@@ -115,7 +115,7 @@ noun to the head of the subject. In this case, we are adding two nouns, one with
 the face `a` and a second with the face `b`. These two nouns will be copies of
 the `traffic-light` core, with all the bits we previously created.
 
-```
+```hoon
 =.  a  (set.a %yellow)
 ```
 
@@ -123,7 +123,7 @@ the `traffic-light` core, with all the bits we previously created.
 and give that the argument of `%yellow`. Remember that we are actually producing
 a new core in the gate, so we have to then assign that back to the face `a`.
 
-```
+```hoon
 [current-state.a current-state.b]
 ```
 

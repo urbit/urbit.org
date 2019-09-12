@@ -34,7 +34,7 @@ As noted, this is a simplified version of `type`.  We undo and
 explain the simplifications in the [advanced types](@/docs/reference/hoon-expressions/advanced.md)
 section.
 
-```
+```hoon
 +$  term  @tas
 +$  type  $~  %noun
           $@  $?  %noun

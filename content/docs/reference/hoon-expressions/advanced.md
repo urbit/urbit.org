@@ -12,7 +12,7 @@ large functions.  Don't worry about them for a little while.
 
 ## The Full Version of `$type`
 
-```
+```hoon
 +$  type  $~  %noun
           $@  $?  %noun
                   %void

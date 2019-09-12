@@ -18,19 +18,19 @@ Miscellaneous useful macros.
 
 Regular form:
 
-```
+```hoon
 %-(p a %-(p b %-(p c ...)))
 ```
 
 Irregular form:
 
-```
+```hoon
 (p a (p b (p c ...)))
 ```
 
 ##### Desugaring
 
-```
+```hoon
 |-
 ?~  q  !!
 ?~  t.q  !!
@@ -70,7 +70,7 @@ A `marl`, i.e., a list of `manx`.  A `manx` is a noun that represents a single X
 
 **1-fixed**
 
-```
+```hoon
 ;+  p=hoon
 ```
 
@@ -123,7 +123,7 @@ One interesting thing about Sail is that it allows you to use complex Hoon expre
 
 ##### Expands to
 
-```
+```hoon
 =+  a=(p q)
 ?>  =(`*`a `*`q)
 a
@@ -165,7 +165,7 @@ Fails because not a fixpoint:
 
 ##### Expands to
 
-```
+```hoon
 ~[%$ ~[%$ 'p']]
 ```
 
@@ -193,14 +193,14 @@ The gates in `q` are composed together using the gate `p` as an intermediate fun
 
 `;~(a b c)` expands to
 
-```
+```hoon
 |=  arg=*
 (a (b arg) c(+6 arg))
 ```
 
 `;~(a b c d)` expands to
 
-```
+```hoon
 |=  arg=*
 %+  a (b arg)
 =+  arg=arg
@@ -209,7 +209,7 @@ The gates in `q` are composed together using the gate `p` as an intermediate fun
 
 ##### Desugaring
 
-```
+```hoon
 ?~  q  !!
 |-
 ?~  t.q  i.q
@@ -286,7 +286,7 @@ A `marl`, i.e., a list of `manx`.  A `manx` is a noun that represents a single X
 
 **1-fixed**
 
-```
+```hoon
 ;*  p=hoon
 ```
 
@@ -338,7 +338,7 @@ A `marl`, i.e., a list of `manx`.  A `manx` is a noun that represents a single X
 
 **running**
 
-```
+```hoon
 ;=  p=hoon  q=hoon  ...  z=hoon  ==
 ```
 

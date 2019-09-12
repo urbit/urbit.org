@@ -90,7 +90,7 @@ ford: %ride failed to execute:
 
 ##### Expands to
 
-```
+```hoon
 ^+(%:(p q) q)
 ```
 
@@ -98,7 +98,7 @@ ford: %ride failed to execute:
 
 Regular: **2-fixed**.
 
-```
+```hoon
 ^.  p=hoon  q=hoon
 ```
 
@@ -131,7 +131,7 @@ mint-vain
 
 ##### Expands to
 
-```
+```hoon
 ^+(^*(p) q)
 ```
 
@@ -275,7 +275,7 @@ A default value (i.e., 'bunt value') of the type `p`.
 
 Regular: **1-fixed**.
 
-```
+```hoon
 ^*  p=spec
 ```
 
@@ -287,7 +287,7 @@ Irregular: `*p`.
 
 Regular:
 
-```
+```hoon
 > ^*  @
 0
 
@@ -303,7 +303,7 @@ Regular:
 
 Irregular:
 
-```
+```hoon
 > *@
 0
 

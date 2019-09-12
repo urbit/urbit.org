@@ -27,13 +27,13 @@ Run the command below, except with `sample-planet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your
 keyfile:
 
-```
+```sh
 ./urbit -w sample-planet -k path/to/my-planet.key
 ```
 
 Or, if you'd prefer to copy your key in, you can run:
 
-```
+```sh
 ./urbit -w sample-planet -G rAnDoMkEy
 ```
 
@@ -94,7 +94,7 @@ You can toggle between the Dojo and Talk (chat) prompts with `ctrl-x`. You can t
 
 To restart your ship, simply pass the name of your pier:
 
-```
+```sh
 ./urbit some-planet
 ```
 

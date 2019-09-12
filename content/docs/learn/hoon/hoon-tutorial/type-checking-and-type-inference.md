@@ -179,7 +179,7 @@ By now you've used the `|=` rune to define several gates.  This rune is used to 
 
 The first subexpression after the `|=` defines the sample type.  Any faces used in this definition have the type declared for it in this definition.  Consider again the addition function:
 
-```
+```hoon
 |=  [a=@ b=@]                                           ::  take two @
 ^-  @                                                   ::  output is one @
 ?:  =(b 0)                                              ::  if b is 0
@@ -412,7 +412,7 @@ nest-fail
 
 Nouns can be understood as binary trees in which each 'leaf' of the tree is an atom.  Let's look at a program that takes a noun and returns the number of leaves in it, i.e., the number of atoms.
 
-```
+```hoon
 |=  a=*                                                 ::  1
 ^-  @                                                   ::  2
 ?@  a                                                   ::  3
@@ -441,7 +441,7 @@ We have been careful to use `-.a` and `+.a` only on a branch for which `a` is pr
 
 Here's a program that counts the number of cells in a noun:
 
-```
+```hoon
 |=  a=*                                                 ::  1
 =|  c=@                                                 ::  2
 |-  ^-  @                                               ::  3
@@ -501,7 +501,7 @@ To illustrate: let's say that `b` is the list of the atoms `11`, `22`, and `33`.
 
 Here's a program that takes atoms `a` and `b` and returns a list of all atoms from `a` to `b`:
 
-```
+```hoon
 |=  [a=@ b=@]                                           ::  1
 ^-  (list @)                                            ::  2
 ?:  (gth a b)                                           ::  3
@@ -528,7 +528,7 @@ Where are all the `i`s and `t`s???  For the sake of neatness the Hoon pretty-pri
 
 In fact, we could have left out the `i` and `t` faces in the program itself:
 
-```
+```hoon
 |=  [a=@ b=@]                                           ::  1
 ^-  (list @)                                            ::  2
 ?:  (gth a b)                                           ::  3
@@ -579,7 +579,7 @@ Hoon will infer that `b` either is or isn't null based on which `?~` branch is e
 
 The `?~` is especially useful for working with lists.  Is a list null, or not?  You probably want to do different things based on the answer to that question.  Here's a program using `?~` to calculate the number of items in a list of atoms:
 
-```
+```hoon
 |=  a=(list @)                                          ::  1
 =|  c=@                                                 ::  2
 |-  ^-  @                                               ::  3
@@ -609,7 +609,7 @@ Save the above code as `lent.hoon` in your urbit's pier and run it from the dojo
 
 Here's a program that takes a noun and returns a list of its 'leaves' (atoms) in order of their appearance:
 
-```
+```hoon
 |=  a=*                                                           ::  1
 =/  lis=(list @)  ~                                               ::  2
 |-  ^-  (list @)                                                  ::  3
