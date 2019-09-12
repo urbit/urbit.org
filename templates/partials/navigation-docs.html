@@ -20,11 +20,11 @@
         {% set index = get_section(path="docs/_index.md") %}
         {% for s in index.subsections %}
         {% set subsection = get_section(path=s) %}
-        <details class="mt2">
+        <details class="mt1">
           <summary>{{ subsection.title }}</summary>
           {% if subsection.pages %}
             {% for page in subsection.pages %}
-            <li class="mt1">
+            <li class="ml2 mt1">
               <a href="{{ page.permalink}}">
                 {{ page.title }}
               </a>
@@ -36,7 +36,7 @@
                 <summary>{{ subsubsection.title }}</summary>
                 {% if subsubsection.pages %}
                   {% for page in subsubsection.pages %}
-                  <li class="mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                  <li class="ml2 mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
                   {% endfor %}
                   {% for x in subsubsection.subsections %}
                     {% set subsubsubsection = get_section(path=x) %}
@@ -44,7 +44,7 @@
                       <summary>{{ subsubsubsection.title }}</summary>
                       {% if subsubsubsection.pages %}
                         {% for page in subsubsubsection.pages %}
-                        <li class="mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                        <li class="ml2 mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
                         {% endfor %}
                       {% endif %}
                     </details>

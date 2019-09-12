@@ -448,9 +448,13 @@ nav.docs details {
         font-weight: 400;
         font-size: 1.5rem;
     }
+    &[open] > summary {
+        @extend .fw6;
+    }
     &[open] > summary::before {
         content: "› ";
         display: inline-block;
+        margin-right: 0.5rem;
         transform: rotate(-90deg);
     }
 }
