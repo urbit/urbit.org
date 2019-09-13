@@ -42,7 +42,7 @@
 // layout
 
 body {
-    font-family: "Inter", -apple-system, sans-serif;
+    font-family: "Inter", "Inter UI", -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     &:not(.primer) {
         @extend .grid12, .mh4;
