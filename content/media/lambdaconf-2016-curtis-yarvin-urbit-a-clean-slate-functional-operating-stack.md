@@ -2,6 +2,7 @@
 title = "LambdaConf 2016: Curtis Yarvin - Urbit: A Clean Slate Functional Operating Stack"
 date = 2016-09-28
 description = "Curtis presents a comprehensive technical overview of Urbit at LambdaConf 2016."
+aliases = ["/posts/lambdaconf-2016-curtis-yarvin-urbit-a-clean-slate-functional-operating-stack/"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

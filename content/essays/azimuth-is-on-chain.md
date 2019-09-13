@@ -2,7 +2,7 @@
 title = "Azimuth is On-Chain"
 date = 2019-01-14
 description = "The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post."
-aliases = ["/posts/essays/azimuth-is-on-chain"]
+aliases = ["/posts/essays/azimuth-is-on-chain", "/posts/azimuth-is-on-chain"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

@@ -2,7 +2,7 @@
 title = "The State of Landscape"
 date = 2019-05-16
 description = "An update on the state of Landscape and the Urbit network."
-aliases = ["/posts/essays/the-state-of-landscape"]
+aliases = ["/posts/essays/the-state-of-landscape", "/posts/the-state-of-landscape"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

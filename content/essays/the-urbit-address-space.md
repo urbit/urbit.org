@@ -2,7 +2,7 @@
 title = "The Urbit Address Space"
 date = 2016-05-16
 description = "An overview of Urbit's cryptographic address space."
-aliases = ["/posts/essays/the-urbit-address-space"]
+aliases = ["/posts/essays/the-urbit-address-space", "/posts/the-urbit-address-space"]
 [extra]
 author = "Galen Wolfe-Pauly + Curtis Yarvin"
 ship = "~ravmel-ropdyl + ~sorreg-namtyv"

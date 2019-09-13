@@ -2,7 +2,7 @@
 title = "Azimuth as Multipass"
 date = 2019-05-16
 description = "What if everyone had a single 'civilizational key'?"
-aliases = ["/posts/essays/azimuth-as-multipass/"]
+aliases = ["/posts/essays/azimuth-as-multipass/", "/posts/azimuth-as-multipass"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

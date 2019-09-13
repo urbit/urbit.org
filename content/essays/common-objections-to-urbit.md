@@ -2,7 +2,7 @@
 title = "Common Objections to Urbit"
 date = 2016-06-28
 description = "Some common objections to Urbit, discussed."
-aliases = ["/posts/essays/common-objections-to-urbit"]
+aliases = ["/posts/essays/common-objections-to-urbit", "/posts/common-objections-to-urbit"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

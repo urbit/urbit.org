@@ -2,7 +2,7 @@
 title = "Landscape: A Portrait"
 date = 2019-09-03
 description = "On the latest Urbit user interface, and the interfaces to come."
-aliases = ["/posts/essays/landscape-a-portrait/"]
+aliases = ["/posts/essays/landscape-a-portrait/", "/posts/landscape-a-portrait"]
 [extra]
 author = "Matilde Park"
 ship = "~haddef-sigwen"

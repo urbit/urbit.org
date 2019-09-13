@@ -2,7 +2,7 @@
 title = "Azimuth Security Bounty Program"
 date = 2019-07-22
 description = "Inviting you (and your friends) to help us make Azimuth as secure as possible."
-aliases = ["/posts/essays/azimuth-security-bounty-program"]
+aliases = ["/posts/essays/azimuth-security-bounty-program", "/posts/azimuth-security-bounty-program"]
 [extra]
 author = "Anthony Arroyo"
 ship = "~poldec-tonteg"

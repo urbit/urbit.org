@@ -2,7 +2,7 @@
 title = "A Founder's Farewell"
 date = 2019-01-14
 description = "My goal was always to fire myself at the first possible opportunity. I'm super happy to reach it."
-aliases = ["/posts/essays/a-founders-farewell"]
+aliases = ["/posts/essays/a-founders-farewell", "/posts/a-founders-farewell"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

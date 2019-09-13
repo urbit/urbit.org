@@ -2,7 +2,7 @@
 title = "Interim Constitution"
 date = 2016-05-16
 description = "The governing rules for the early days of the Urbit network."
-aliases = ["/posts/essays/interim-constitution"]
+aliases = ["/posts/essays/interim-constitution", "/posts/interim-constitution"]
 [extra]
 author = "Tlon"
 ship = ""

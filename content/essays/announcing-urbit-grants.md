@@ -2,7 +2,7 @@
 title = "Announcing: Urbit Grants Program"
 date = 2019-08-06
 description = "Announcing Urbit Grants, a way to earn stars through contributing."
-aliases = ["/posts/essays/announcing-urbit-grants"]
+aliases = ["/posts/essays/announcing-urbit-grants", "/posts/announcing-urbit-grants"]
 [extra]
 author = "Robert Mariani"
 ship = "~lodleb-ritrul"

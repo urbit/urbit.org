@@ -2,7 +2,7 @@
 title = "Magic"
 date = 2016-05-16
 description = "A thought-experiment to explain the Urbit user experience."
-aliases = ["/posts/essays/magic"]
+aliases = ["/posts/essays/magic", "/posts/magic"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

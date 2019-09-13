@@ -2,7 +2,7 @@
 title = "An Urbit Overview"
 date = 2016-05-11
 description = "A high-level overview of Urbit."
-aliases = ["/posts/essays/an-urbit-overview"]
+aliases = ["/posts/essays/an-urbit-overview", "/posts/an-urbit-overview"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

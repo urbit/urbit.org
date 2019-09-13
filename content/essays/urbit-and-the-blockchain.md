@@ -2,7 +2,7 @@
 title = "Urbit and the Blockchain Wars"
 date = 2017-09-25
 description = "A bit about the 'idea maze' of choosing to bootstrap from Ethereum"
-aliases = ["/posts/essays/urbit-and-the-blockchain"]
+aliases = ["/posts/essays/urbit-and-the-blockchain", "/posts/urbit-and-the-blockchain", "/blog/2017.9-critique/"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

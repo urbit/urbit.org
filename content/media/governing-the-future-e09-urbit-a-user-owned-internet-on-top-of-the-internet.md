@@ -2,6 +2,7 @@
 title = "Governing the Future E09: Urbit – A User Owned Internet on top of the Internet"
 date = 2017-08-10
 description = "Galen talks with Hampus Jakobsson about Urbit on the Governing the Future podcast."
+aliases = ["/posts/governing-the-future-e09-urbit-a-user-owned-internet-on-top-of-the-internet/"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

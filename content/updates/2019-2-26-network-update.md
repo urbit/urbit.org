@@ -2,6 +2,7 @@
 title = "~2019.2.26 Network Update"
 date = 2019-02-26
 description = "A short update on network status as of ~2019.2.26."
+aliases = ["/posts/2019-2-26-network-update/"]
 [extra]
 author = "Anthony"
 ship = "~poldec-tonteg"

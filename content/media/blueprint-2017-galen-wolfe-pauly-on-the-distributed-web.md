@@ -2,6 +2,7 @@
 title = "Blueprint 2017 Talks: Galen Wolfe-Pauly on the Distributed Web"
 date = 2017-11-20
 description = "Galen presents to IDEO on Urbit and decentralized systems."
+aliases = ["/posts/blueprint-2017-galen-wolfe-pauly-on-the-distributed-web/"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

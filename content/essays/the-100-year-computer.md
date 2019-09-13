@@ -2,7 +2,7 @@
 title = "The 100-Year Computer"
 date = 2019-05-14
 description = "One way to think about Urbit: as a \"100-year computer.\""
-aliases = ["/posts/essays/the-100-year-computer/"]
+aliases = ["/posts/essays/the-100-year-computer/", "/posts/the-100-year-computer"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

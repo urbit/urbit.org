@@ -2,7 +2,7 @@
 title = "What is Urbit For?"
 date = 2016-05-11
 description = "A vision of the Urbit-powered future."
-aliases = ["/posts/essays/what-is-urbit-for"]
+aliases = ["/posts/essays/what-is-urbit-for", "/posts/what-is-urbit-for"]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

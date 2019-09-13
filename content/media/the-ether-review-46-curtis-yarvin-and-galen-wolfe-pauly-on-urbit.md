@@ -2,8 +2,7 @@
 title = "The Ether Review #46: Curtis Yarvin & Galen Wolfe-Pauly on Urbit"
 date = 2016-10-24
 description = "Curtis and Galen talk about Urbit on The Ether Review podcast."
-[taxonomies]
-posts = ["Media"]
+aliases = ["/posts/the-ether-review-46-curtis-yarvin-and-galen-wolfe-pauly-on-urbit/"]
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"

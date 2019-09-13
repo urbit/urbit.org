@@ -2,7 +2,7 @@
 title = "Toward a Frozen Operating System"
 date = 2017-05-10
 description = "Is it possible to freeze an entire OS?"
-aliases = ["/posts/essays/toward-a-frozen-operating-system"]
+aliases = ["/posts/essays/toward-a-frozen-operating-system", "/posts/toward-a-frozen-operating-system"]
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"
