@@ -314,6 +314,12 @@ input[type="search"] {
       }
     }
   }
+  .glossary-results__item {
+    padding: 0 1rem 0 1rem;
+    &:hover {
+        background-color: #F9F9F9; 
+      }
+  }
 
   #search-reset {
     cursor: pointer;

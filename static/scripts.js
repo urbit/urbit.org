@@ -199,7 +199,9 @@ function initSearch() {
   if (!searchInput) {
     return;
   }
-
+  var glossaryResults = document.querySelector(".glossary-results");
+  var glossaryResultsHeader = document.querySelector(".glossary-results__header");
+  var glossaryResultsItem = document.querySelector(".glossary-results__item");
   var searchResults = document.querySelector(".search-results");
   var searchResultsHeader = document.querySelector(".search-results__header");
   var searchResultsItems = document.querySelector(".search-results__items");
@@ -254,7 +256,7 @@ function initSearch() {
 
   searchInput.addEventListener("keyup", debounce(function() {
     inputReset.style.display="block";
-
+    glossaryResults.style.display="none";
     searchResultsHeader.value = "";
     var term = searchInput.value.trim();
     /*
@@ -270,6 +272,17 @@ function initSearch() {
     if (term === "") {
       inputReset.style.display="none";
       return;
+    }
+
+    for (let rune of runes) {
+      if (rune.symbol === term) {
+        glossaryResults.style.display="block";
+        glossaryResultsItem.innerHTML = `
+        <h3 class="black"><code class="red3 mr1">${rune.symbol}</code> ${rune.name}</h3>
+        <p class="black">${rune.desc}</p>
+        <a href="${rune.link}" class="db tr black fw5">Read more in Documentation -></a>
+        `
+      }
     }
 
     var results = index.search(term, options).filter(function (r) {
