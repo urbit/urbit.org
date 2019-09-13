@@ -20,31 +20,54 @@
         {% set index = get_section(path="docs/_index.md") %}
         {% for s in index.subsections %}
         {% set subsection = get_section(path=s) %}
-        <details class="mt1">
+        <details {% if current_url is containing(subsection.path) %}
+                  open
+                 {% endif %}
+         class="mt1">
           <summary>{{ subsection.title }}</summary>
           {% if subsection.pages %}
             {% for page in subsection.pages %}
             <li class="ml2 mt1">
-              <a href="{{ page.permalink}}">
+              <a 
+              {% if current_url == page.permalink %}
+                class="fw6"
+              {% endif %}
+              href="{{ page.permalink }}">
                 {{ page.title }}
               </a>
             </li>
             {% endfor %}
             {% for y in subsection.subsections %}
             {% set subsubsection = get_section(path=y) %}
-              <details class="ml2 mt1">
+              <details {% if current_url is containing(subsubsection.path) %}
+                        open
+                       {% endif %}
+               class="ml2 mt1">
                 <summary>{{ subsubsection.title }}</summary>
                 {% if subsubsection.pages %}
                   {% for page in subsubsection.pages %}
-                  <li class="ml2 mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                  <li class="ml2 mt1">
+                    <a
+                    {% if current_url == page.permalink %}
+                      class="fw6"
+                    {% endif %}
+                    href="{{ page.permalink }}">{{ page.title }}</a></li>
                   {% endfor %}
                   {% for x in subsubsection.subsections %}
                     {% set subsubsubsection = get_section(path=x) %}
-                    <details class="ml2 mt1">
+                    <details {% if current_url is containing(subsubsubsection.path) %}
+                             open
+                             {% endif %}
+                    class="ml2 mt1">
                       <summary>{{ subsubsubsection.title }}</summary>
                       {% if subsubsubsection.pages %}
                         {% for page in subsubsubsection.pages %}
-                        <li class="ml2 mt1"><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                        <li class="ml2 mt1">
+                          <a
+                          {% if current_url == page.permalink %}
+                            class="fw6"
+                          {% endif %}
+                          href="{{ page.permalink }}">{{ page.title }}</a></li>
                         {% endfor %}
                       {% endif %}
                     </details>
