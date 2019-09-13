@@ -49,10 +49,10 @@ var runes = [
       "desc": "Wildcard category. Expressions that don't fit anywhere else go here."
     },
     {
-      "name": "zapban",
+      "name": "zapgar",
       "symbol": "!>",
       "usage": "wild",
-      "link": "/docs/reference/hoon-expressions/rune/zap/#zapban",
+      "link": "/docs/reference/hoon-expressions/rune/zap/#zapgar",
       "desc": "<code>[%zpgr p=hoon]</code>: wrap a noun in its type."
     },
     {
@@ -98,10 +98,10 @@ var runes = [
       "desc": "Runes used to modify the subject."
     },
     {
-      "name": "tisban",
+      "name": "tisgar",
       "symbol": "=>",
       "usage": "Subject Modification",
-      "link": "/docs/reference/hoon-expressions/rune/tis/#tisban",
+      "link": "/docs/reference/hoon-expressions/rune/tis/#tisgar",
       "desc": "<code>[%tsgr p=hoon q=hoon]</code>: compose two expressions."
     },
     {
@@ -147,10 +147,10 @@ var runes = [
       "desc": "<code>[%tskt p=skin q=wing r=hoon s=hoon]</code>: pin the head of a pair; change"
     },
     {
-      "name": "tisled",
+      "name": "tisgal",
       "symbol": "=<",
       "usage": "Subject Modification",
-      "link": "/docs/reference/hoon-expressions/rune/tis/#tisled",
+      "link": "/docs/reference/hoon-expressions/rune/tis/#tisgal",
       "desc": "<code>[%tsgl p=hoon q=hoon]</code>: compose two expressions, inverted."
     },
     {
@@ -203,10 +203,10 @@ var runes = [
       "desc": "Runes used for branching on conditionals."
     },
     {
-      "name": "wutban",
+      "name": "wutgar",
       "symbol": "?>",
       "usage": "Conditionals",
-      "link": "/docs/reference/hoon-expressions/rune/wut/#wutban",
+      "link": "/docs/reference/hoon-expressions/rune/wut/#wutgar",
       "desc": "<code>[%wtbn p=hoon q=hoon]</code>: positive assertion."
     },
     {
@@ -245,10 +245,10 @@ var runes = [
       "desc": "<code>[%wtkt p=wing q=hoon r=hoon]</code>: branch on whether a wing"
     },
     {
-      "name": "wutled",
+      "name": "wutgal",
       "symbol": "?<",
       "usage": "Conditionals",
-      "link": "/docs/reference/hoon-expressions/rune/wut/#wutled",
+      "link": "/docs/reference/hoon-expressions/rune/wut/#wutgal",
       "desc": "<code>[%wtgl p=hoon q=hoon]</code>: negative assertion."
     },
     {
@@ -287,10 +287,10 @@ var runes = [
       "desc": "<code>[%wtpt p=wing q=hoon r=hoon]</code>: branch on whether a wing of the subject is an atom."
     },
     {
-      "name": "wutzaps",
+      "name": "wutzap",
       "symbol": "?!",
       "usage": "Conditionals",
-      "link": "/docs/reference/hoon-expressions/rune/wut/#wutzaps",
+      "link": "/docs/reference/hoon-expressions/rune/wut/#wutzap",
       "desc": "<code>[%wtzp p=hoon]</code>: logical NOT."
     },
     {
@@ -749,10 +749,10 @@ var runes = [
       "desc": "Runes that use Nock <code>11</code> to pass non-semantic info to the interpreter."
     },
     {
-      "name": "sigban",
+      "name": "siggar",
       "symbol": "~>",
       "usage": "Hints",
-      "link": "/docs/reference/hoon-expressions/rune/sig/#sigban",
+      "link": "/docs/reference/hoon-expressions/rune/sig/#siggar",
       "desc": "<code>[%sgbn p=$@(term [p=term q=hoon]) q=hoon]</code>: raw hint, applied"
     },
     {
@@ -784,10 +784,10 @@ var runes = [
       "desc": "<code>[%sgcn p=term q=wing r=(list [term hoon]) s=hoon]</code>: jet registration."
     },
     {
-      "name": "sigled",
+      "name": "siggal",
       "symbol": "~<",
       "usage": "Hints",
-      "link": "/docs/reference/hoon-expressions/rune/sig/#sigled",
+      "link": "/docs/reference/hoon-expressions/rune/sig/#siggal",
       "desc": "<code>[%sgld p=$@(term [p=term q=hoon]) q=hoon]</code>: raw hint, applied to product."
     },
     {
