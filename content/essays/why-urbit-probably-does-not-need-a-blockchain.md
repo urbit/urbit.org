@@ -2,7 +2,7 @@
 title = "Why Urbit Probably Doesn't Need a Blockchain"
 date = 2016-07-14
 description = "Urbit (probably) doesn't need a blockchain, because the Urbit address-space PKI is a special case of a consensus ledger."
-aliases = ["/posts/essays/why-urbit-probably-does-not-need-a-blockchain/", "/posts/why-urbit-probably-does-not-need-a-blockchain/"]
+aliases = ["/posts/essays/why-urbit-probably-does-not-need-a-blockchain/", "/posts/why-urbit-probably-does-not-need-a-blockchain/", "/blog/blockchain/"]
 [extra]
 author = "Curtis Yarvin"
 ship = "~sorreg-namtyv"

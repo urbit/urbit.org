@@ -2,7 +2,7 @@
 title = "Bootstrapping Urbit from Ethereum"
 date = 2017-09-20
 description = "We've decided to launch Urbit's constitution as a system of Ethereum contracts."
-aliases = ["/posts/essays/bootstrapping-urbit-from-ethereum", "/posts/bootstrapping-urbit-from-ethereum", "/blog/2017.9.20-bootstrapping-urbit-from-ethereum/"]
+aliases = ["/posts/essays/bootstrapping-urbit-from-ethereum", "/posts/bootstrapping-urbit-from-ethereum", "/blog/2017.9.20-bootstrapping-urbit-from-ethereum/", "/blog/2017.9-eth/"]
 [extra]
 author = "Curtis Yarvin + Galen Wolfe-Pauly"
 ship = "~sorreg-namtyv + ~ravmel-ropdyl"

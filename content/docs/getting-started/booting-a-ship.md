@@ -2,7 +2,9 @@
 title = "Booting a Ship"
 weight = 3
 template = "doc.html"
+aliases = ["/docs/using/setup/"]
 +++
+
 Now the rubber meets the road. You'll be booting your ship with the keyfile that you [downloaded from Bridge](@/docs/concepts/azimuth.md).
 
 Note that this document is only for booting a ship that uses the live Arvo network. If you just want to create an unnetworked ship for development purposes, read [this guide](@/docs/using/creating-a-development-ship.md) instead.
