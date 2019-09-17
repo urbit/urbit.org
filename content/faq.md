@@ -59,7 +59,7 @@ Comets are 128 bits and have no parents. They can be launched by anyone. They ar
 
 ### What is a `@p`? Why is my username generated for me? {#what-is-patp}
 
-A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to ships with special duties on the Arvo network ([stars and galaxies](@/docs/concepts/galaxies-stars-and-planets.md), respectively. Longer names like `~palfun-foslup` are identities for typical users.
+A `@p` (pronounced *pat-pee*) is a name like `~zod` or `~lodleb-ritrul` composed of pronounceable, three-letter phonemic elements like `zod`, `lod`, `leb`, `rit` and `rul`. Shorter names, such as `~zod` and `~marzod`, are assigned to ships with special duties on the Arvo network stars and galaxies, respectively. Longer names like `~palfun-foslup` are identities for typical users.
 
 These names map directly to a corresponding number in the urbit address space. Galaxies occupy the 8-bit address space, so any galaxy is actually a number between zero and 255. Stars occupy the 16-bit address space, and planets occupy the 32-bit address space.
 
@@ -89,7 +89,7 @@ We have seen publicly hosted versions of Bridge online. We strongly recommend av
 
 The Urbit Hierarchical Deterministic (HD) Wallet is a custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology used by wallet providers like Ledger, Trezor, Metamask, and MyEtherWallet. You can think of the Urbit HD wallet as a wallet of wallets, which lets you keep a single passphrase for all of your Azimuth keys. Azimuth uses multiple keys with different capabilities – a bit like permissions – so that you can keep the more valuable keys in cold storage while keeping less valuable keys, used in day-to-day operation, more easily accessible. If you're only operating a planet, you shouldn't have to worry about this: you can simply think of your "master ticket" as the password to your Azimuth point. If you're operating a star or galaxy, the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
-To learn about the specifics, check out our [HD Wallet documentation](@/docs/concepts/azimuth.md#the-urbit-hd-wallet) and the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
+The [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet.md).
 
 ### What is a master ticket? {#master-ticket}
 
@@ -203,7 +203,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your Azimuth point's networking keys. Azimuth uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/docs/getting-started/_index.md) guide to learn how to get your ship onto the Arvo network.
+See our [Getting Started](@/try.md) guide to learn how to get your ship onto the Arvo network.
 
 ### Will the Arvo network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -211,11 +211,11 @@ Yes. It would be annoying, but Azimuth would be ported to another decentralized 
 
 ### How do I install Arvo? {#install-arvo}
 
-Check out our guides [here](@/docs/getting-started/_index.md).
+Check out our guides [here](@/try.md).
 
 ### How do I use Arvo? {#use-arvo}
 
-The [Using](@/docs/using/_index.md) section of the documentation will help you out.
+The [Using](@/operations.md) section of the documentation will help you out.
 
 ### How do over-the-air updates work? {#over-the-air-updates}
 
@@ -227,9 +227,9 @@ Landscape is an experimental Arvo web interface that includes social functions s
 
 ### I have a point, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/docs/getting-started/booting-a-ship.md).  
+Follow our guide on how to boot a ship [here](@/try.md).  
 
-Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/learn/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/docs/getting-started/contributing.md).
+Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/try.md).
 
 
 ## Grants
