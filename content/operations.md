@@ -163,7 +163,7 @@ moon: ~faswep-navred-sampel-palnet
 and does not need editing to be used with the `-k` option.
 
 You can use the resulting output in the same installation flow from the
-[Booting a Ship](@/docs/getting-started/booting-a-ship.md) guide, following the same scheme as for booting a planet. That scheme is:
+[Booting a Ship](@/try.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```
 $ urbit -w <moonname> -G <key> -c <piername>
@@ -308,7 +308,7 @@ be used for that we haven't even thought of.
 
 Here we'll be discussing how to operate the default CLI frontend, Talk,
 to send and receive messages. For a more in-depth look at Hall's internals,
-take a look at its [documentation](@/docs/learn/arvo/hall.md).
+take a look at its [documentation](@/docs/arvo/hall.md).
 
 ### Quickstart
 
@@ -994,7 +994,7 @@ Tall-form Hoon may require multiple lines:
 ~your-urbit:dojo< 2
 ```
 
-Hoon uses something called [the subject](@/docs/learn/hoon/hoon-tutorial/the-subject-and-its-legs.md).
+Hoon uses something called [the subject](@/docs/hoon/hoon-tutorial/the-subject-and-its-legs.md).
 The Dojo has its own subject, and that's where Hoon's equivalent of variables,
 called faces, are stored.
 
@@ -1016,7 +1016,7 @@ Use `=dir` to set the current working directory:
 ```
 
 (`%` represents your current directory. For a complete explanation on urbit
-paths, see the [filesystem section](@/docs/using/filesystem.md))
+paths, see the [filesystem section](@/operations.md))
 
 Generators (files in `/gen`) are run with `+`:
 
@@ -1219,7 +1219,7 @@ Apps usually expect marked data, so `&` is often used here.
 
 #### `*` - Save in `%clay`
 
-Save a new `.udon` ([Udon](@/docs/using/sail-and-udon.md)) file in `web`:
+Save a new `.udon` ([Udon](@/docs/arvo/sail-and-udon.md)) file in `web`:
 
 ```
 ~your-urbit:dojo> *%/web/foo/udon '# hello'
@@ -1250,7 +1250,7 @@ Which outputs a new `urbit.pill` to `pier/.urb/put/urbit.pill`
 
 #### `&` - Mark conversion
 
-Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/using/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body` and closing tags) first, before being converted to HTML:
+Convert between marks using `&`, with the destination mark first. You can stack multiple mark conversions together, and some marks can only be converted to specific other marks. In this example, [Udon](@/docs/arvo/sail-and-udon.md#udon) is converted to `&hymn` (a mark which supplies the `html`, `head`, `body` and closing tags) first, before being converted to HTML:
 
 ```
 ~your-urbit:dojo>&html &hymn &udon ';h1#hello: hello'
