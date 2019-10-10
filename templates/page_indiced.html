@@ -12,7 +12,8 @@
 
 <!-- header -->
 <!-- content -->
-{% if page.title %}
+{% set lowercasetitle = page.title | lower %}
+{% if section or lowercasetitle == page.components[0] %}
 <nav class="mt4 pb4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
@@ -26,8 +27,11 @@
 <nav class="mt4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
-  <a href="/{{ page.components[0] }}">
-    {{ page.title }}
+  <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
+    {% if page.components[2] %}{{ page.components[1] | capitalize }}
+    {% else %}
+    {{ page.components[0] | capitalize }}
+    {% endif %}
   </a>
 
   {% include "partials/navigation-search.html" %}
@@ -47,6 +51,7 @@
 {% endfor %}
 </nav>
         <article class="mt4 mb6 c1-12 c5-10-md c4-10-lg">
+            {% if page.extra.hidetitle %} {% else %}<h1>{{ page.title }}</h1>{% endif %}
           {% if page.extra.author %}
           <span class="mt2 dib" rel="author"> {{ page.extra.author }} </span>
           {% if page.extra.ship %}

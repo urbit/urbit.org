@@ -1,11 +1,14 @@
 +++
-title = "Install"
+title = "Install + Setup"
+weight = 1
+description = "How to install Urbit."
 template = "page_indiced.html"
+aliases = ["/docs/getting-started/"]
 +++
 
-Urbit is not yet ready for wide use for everyday users -- but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
+Urbit is not yet ready for everyday users -- but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
 
-In order to get going on the network, you'll need an [Urbit ID](#id). To try the live network out with a disposable identity, you can always [create a comet](@/operations.md#creating-a-comet).
+In order to get going on the network, you'll need an [Urbit ID](#id). To try the live network out with a disposable identity, you can always [create a comet](@/using/operations/creating-a-comet.md).
 
 ## Getting an Urbit ID {#id}
 

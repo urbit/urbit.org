@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} {{ section.title }} {% endblock title %}
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/{{ section.components[0] }}{% if section.components[2] %}/{{ section.components[1] }}{% endif %}">
+    {{ section.title }}
+  </a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<article class="mt4 mb7 c1-12 c4-12-lg">
+  <ul class="posts">
+    {% set posts = get_section(path=section.relative_path) %}
+    {% for page in posts.pages %}
+    <li class="mb4">
+      <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+      <p class="mt0">{{ page.description }}</p>
+      <span class="mono f5">
+        {% if page.extra.ship %}<address class="mono f5 ml2">{{ page.extra.ship }}</address> {% endif %}
+      </span>
+    </li>
+    {% endfor %}
+    {% for s in posts.subsections %}
+      {% set subsection = get_section(path=s) %}
+      <li class="mb4">
+          <h2 class="f4 fw4 mt0 mb0"><a class="bb-0" href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
+          <p class="mt0">{{ subsection.description }}</p>
+        </li>    
+    {% endfor %}
+  </ul>
+</article>
+{% include "partials/footer.html" %}
+{% endblock content %}

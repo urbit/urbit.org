@@ -1,6 +1,8 @@
 +++
 title = "FAQ"
 template = "page_indiced.html"
+[extra]
+hidetitle = "true"
 +++
 
 ## Urbit
@@ -261,7 +263,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an Arvo ship (instance) is started for the first time, you must use a "keyfile" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@/install.md) guide to learn how to get your ship onto the Urbit OS / Arvo network.
+See our [Getting Started](@/using/install.md) guide to learn how to get your ship onto the Urbit OS / Arvo network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -269,11 +271,11 @@ Yes. It would be annoying, but Urbit ID / Azimuth could be ported to another dec
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](@/install.md).
+Check out our guides [here](@/using/install.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
-The [Using](@/operations.md) section of the documentation will help you out.
+The [Using](@/using/operations/_index.md) section of the documentation will help you out.
 
 ### How do over-the-air updates work? {#over-the-air-updates}
 
@@ -285,9 +287,9 @@ Landscape is an experimental Urbit OS web interface that includes social functio
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@/install.md).  
+Follow our guide on how to boot a ship [here](@/using/install.md).  
 
-Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/install.md).
+Get on the [mailing list](/../#mc_embed_signup). Learn [Hoon](@/docs/hoon/_index.md). Sign up for [Hoon School](@/hoonschool.md). [Make stuff](@/using/install.md).
 
 
 ## Urbit Grants

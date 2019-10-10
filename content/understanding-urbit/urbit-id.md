@@ -1,6 +1,6 @@
 +++
 title = "Urbit ID"
-description = "Your identity should feel like a unique and precious object you can always carry with you. So we built one."
+description = "An overview of the Urbit ID system"
 weight = 4
 +++
 
@@ -14,13 +14,13 @@ We don’t like being owned by someone else. We think your identity and wallet s
 
 Urbit ID is meant to feel like a civilizational key. If your Urbit ID were a piece of hardware, you could tap it to unlock a door, swipe it to buy a coffee, and plug it into any computer to log in. It’s a unique, beautiful, object that’s both an address and a wallet. It’s a key to a secret club and the ticket to your digital life.
 
-Your Urbit ID isn’t a physical object (yet). Instead, it’s even simpler. Your Urbit ID is a name and passkey that’s easy to memorize. 
+Your Urbit ID isn’t a physical object (yet). Instead, it’s even simpler. Your Urbit ID is a name and passkey that’s easy to memorize.
 
-If you wake up in the desert, unsure how you got there, you’ll be fine so long as you remember your Urbit ID and passkey. With it, you still own your digital identity and your digital assets. If you remember your friend’s Urbit ID you can always connect with them and send them money or messages. 
+If you wake up in the desert, unsure how you got there, you’ll be fine so long as you remember your Urbit ID and passkey. With it, you still own your digital identity and your digital assets. If you remember your friend’s Urbit ID you can always connect with them and send them money or messages.
 
-Urbit ID is a simple, decentralized system for people to own their digital addresses and crypto wallets. Urbit ID is a system owned by its users, designed to last far into the future, that’s live and usable today. 
+Urbit ID is a simple, decentralized system for people to own their digital addresses and crypto wallets. Urbit ID is a system owned by its users, designed to last far into the future, that’s live and usable today.
 
-Urbit ID is a completely separate system from Urbit OS. It’s finished and deployed to Ethereum already. We designed Urbit ID to log in to Urbit OS, but it can be used for anything. 
+Urbit ID is a completely separate system from Urbit OS. It’s finished and deployed to Ethereum already. We designed Urbit ID to log in to Urbit OS, but it can be used for anything.
 
 For those curious to understand Urbit ID a bit better, we’ll cover the basics of how Urbit ID works here; how addresses are distributed and who owns what.
 
@@ -53,7 +53,7 @@ First, there are only so many Urbit IDs, so they cost something. Since they cost
 <tr><td>1 planet</td><td><span class="fl"> =</span><span class="fr"><code>2<sup>32</sup> (4B)</code> moons</span></td></tr>
 </table>
 
-Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority. 
+Second, Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority.
 
 Urbit IDs need a sponsor even after they’re issued, but you can always change sponsors and sponsors can always reject children. This means bad actors can be banned, and abusive sponsors can be ignored. We think this strikes a nice balance between accountability and freedom.
 
@@ -67,6 +67,6 @@ Urbit ID isn’t just a design. It’s [live and deployed](https://azimuth.netwo
 
 Urbit IDs are digital property. The entire address space of Urbit IDs is like a vast territory of digital land. Over time, we’ve used this land to fund the development of Urbit as a whole by selling some of it to people we felt would be great stewards of this new frontier.
 
-When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders. Since then, that number is on the rise. 
+When we launched the Urbit ID system, in January of 2019, there were a few thousand different star and galaxy holders. Since then, that number is on the rise.
 
-The scarcity tree of Urbit ID address space drives decentralization even while the project is young, which is great. If Urbit ID is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people. 
+The scarcity tree of Urbit ID address space drives decentralization even while the project is young, which is great. If Urbit ID is going to last a long time and succeed as neutral infrastructure, it has to be owned and controlled by a wide variety of people.

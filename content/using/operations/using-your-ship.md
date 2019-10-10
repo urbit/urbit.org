@@ -1,70 +1,61 @@
 +++
-title = "Operations"
+title = "Using Your Ship"
+description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS proxy."
 template = "page_indiced.html"
-slug = "/operations/"
+weight = 2
+aliases = ["docs/using/arvo-network-dns/", "docs/using/messaging/", "docs/using/shell/", "docs/using/admin/"]
 +++
 
-## Using Bridge {#using-bridge}
+## DNS proxying {#dns-proxying}
 
-[Bridge](https://github.com/urbit/bridge) is the application we built for interacting with [Azimuth](https://azimuth.network), the Urbit PKI, and managing your Urbit ID. Importantly, Bridge also allows you to generate a keyfile that you will need to boot your ship so that it can use the Arvo network.
+We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
 
-This guide assumes that you have an Urbit ID, or that you have found someone to send an Urbit ID to your Ethereum address and are looking to claim it.
+Stars and planets follow the same process DNS proxying process, and galaxies have their own requirements. Moons and comets are not supported.
 
-### Online Bridge
+### Planets and Stars
 
-To connect to Bridge, go to [https://bridge.urbit.org](https://bridge.urbit.org) into your browser, and enter your identity's credentials in the appropriate fields. If you were invited to claim an Urbit ID, it's very likely that you received an email that would direct you to Bridge, and you can simply follow the hyperlink in that email.
+For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
 
-Once you arrive, proceed through the steps presented. You'll eventually arrive at a page with a few choices: `Invite`, `Admin`, and `Boot Arvo`. `Admin` is the only option that you're interested in right now; click on it. On the `Admin` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/install.md).
+To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
 
-### Offline Bridge
+To do so, simply run this command in your ship's Dojo:
 
-Alternatively, Bridge can be run locally. It's more complicated, but we recommend this option for managing sufficiently valuable assets, such as several stars or more. To install local Bridge, navigate to the [release page on GitHub](https://github.com/urbit/bridge/releases/). Download the `.zip` file of the latest version. After you download it, follow the instructions below.
-
-To use Bridge:
-
-- Unzip the .zip file that you downloaded (bridge-$version.zip).
-- Open up your command line interface (Terminal on OSX, Command Prompt on Windows).
-- Navigate to the bridge-$version directory, where $version is the appropriate version number.
-- Run this command: `python3 -m http.server 5000 --bind 127.0.0.1.`
-
-You can then use the Bridge app by navigating to `http://localhost:5000` in your internet browser.
-
-Note: Bridge allows you to both make reads and writes to the Ethereum blockchain. Writing to the blockchain, such as changing your networking keys, will incur a transaction cost that will require you to have some ETH in your address.
-
-Once the program is running in your browser, go through the steps presented according to the type of wallet you have. You’ll be presented with a few login options. A notable option is Urbit Master Ticket. This is for those who used our Wallet Generator software. If you bought points from an Urbit sale and then used the Wallet Generator, your networking keys will be set for you. All other login options will require you to set your own networking keys.
-
-### Accept your transfer
-
-If you were given points by Tlon you likely already fully own them. But if someone else sent you a point, then you will first need to use Bridge to accept that transfer.
-
-After you access your Ethereum address, if a point was sent to that address, you'll come to a page that has an `Incoming Transfers` header, under which is a graphic. Click the `Details ->` link under that graphic.
-
-Now you'll be on the management page of your point. The transfer isn't completed yet, so click `Accept incoming transfer`. Then check both boxes and and click their associated `Sign Transaction` and `Send Transaction` buttons.
-
-If you already own a point, click on the `Details ->` under your sigil in the `Your Points` section.
-
-### Set your networking keys
-
-If you just accepted a point, you'll be returned to your point screen. Notice that that links and buttons are now clickable. You now own this point!
-
-Click the link that says `Set network keys`. The field presented in the resulting page expects a 32-byte hexadecimal string. If it's filled already, no action is required. If it is empty, you will need to generate such a string. You can generate this data any way you please, but in the terminal on MacOS or Linux, you can write
-
-```sh
-hexdump -n 32 -e '4/4 "%08X"' /dev/random
+```
+> :dns|request
 ```
 
-and use the result.
+You'll then be prompted to enter the public IP address of your ship. You can also pass the IP address as an argument, using the .0.0.0.0 (`@if`) syntax. For example:
 
-It should be noted that setting your network keys is an event on the Ethereum network and will therefore cost a trivial, but non-zero, amount of [gas](https://github.com/ethereum/wiki/wiki/Design-Rationale#gas-and-fees) to complete.
+```
+> :dns|request .1.2.3.4
+```
 
-### Generate your keyfile
+`:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:chat-cli`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:chat-cli` message saying `awaiting response from ~zod`.
 
-From the detail page associated with your point, click the `Generate Arvo Keyfile` link and you'll be taken to a page with a field titled `Network seed`. This field should already be filled in, and should match the hexadecimal string that you entered in the previous step. If it's not filled in or does not match, fill it in with the correct string.
-Click `Generate ->`, which will download a keyfile onto your machine.
+The request will be picked up shortly, and the `ship.arvo.network` DNS record will be set to the given IP address. Once that's set up, `~zod` will be notified and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying, `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain and say `confirmed access via ship.arvo.network`.
 
-With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/install.md).
+Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend Chrome or Brave.
 
-## Using your ship {#urbit-administration}
+### Galaxies
+
+Galaxies are already required to have separate DNS entry at galaxy.urbit.org. There's no automated process for getting that binding, so if you're a galaxy-holder, get in touch with us at support@urbit.org.
+
+There is a command for galaxies that will try to re-use their already-necessary Ames DNS entry for HTTPS:
+
+```
+> :dns|auto
+```
+
+This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAIN` (currently galaxy.urbit.org), where `galaxy` is the galaxy's name minus the `~`.
+
+Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
+
+### More information
+
+Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:chat-cli` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
+
+The built-in logic for listening on port 80 is similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
+
 
 Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console.
 
@@ -201,7 +192,7 @@ moon: ~faswep-navred-sampel-palnet
 
 `<keyfile>` will be at `path/to/sampel-palnet/.urb/put/moon.key` and does not need editing to be used with the `-k` option.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/install.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>
@@ -237,82 +228,6 @@ While the Urbit network is in this alpha state, we sometimes have to reboot the 
 Because Urbit networking is stateful we call this a _continuity breach_. Everything has to be restarted from scratch. Your pier will continue to function after we have breached, but it won’t connect to the rest of the Urbit network.
 
 When this happens, back up any files you'd like to save, shut down your urbit, and recreate it (as if you were starting for the first time).
-
-## Creating a comet {#creating-a-comet}
-
-**Comets** are urbits whose names are 128-bits or 16 syllables, such as:
-
-`~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`
-
-Comet names aren't quite as memorable as others, but they're disposable identities that anyone can make for free to join the live network.
-
-### Booting a comet
-
-To boot your comet, go into the command line and run the following command from the directory that was created during Urbit installation:
-
-```sh
-$ ./urbit -c mycomet
-```
-
-This will take a few minutes and will spin out a bunch of boot messages. Toward the end, you'll see something like:
-
-```
-ames: on localhost, UDP 31337.
-http: live (insecure, public) on 8080
-http: live ("secure", public) on 8443
-http: live (insecure, loopback) on 12321
-~dasres_marzod:dojo>
-```
-
-## DNS proxying {#dns-proxying}
-
-We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
-
-Stars and planets follow the same process DNS proxying process, and galaxies have their own requirements. Moons and comets are not supported.
-
-### Planets and Stars
-
-For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
-
-To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
-
-To do so, simply run this command in your ship's Dojo:
-
-```
-> :dns|request
-```
-
-You'll then be prompted to enter the public IP address of your ship. You can also pass the IP address as an argument, using the .0.0.0.0 (`@if`) syntax. For example:
-
-```
-> :dns|request .1.2.3.4
-```
-
-`:dns`, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `%bail-early` message in `:chat-cli`; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, your local `:dns` app will send a `:chat-cli` message saying `awaiting response from ~zod`.
-
-The request will be picked up shortly, and the `ship.arvo.network` DNS record will be set to the given IP address. Once that's set up, `~zod` will be notified and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying, `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain and say `confirmed access via ship.arvo.network`.
-
-Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend Chrome or Brave.
-
-### Galaxies
-
-Galaxies are already required to have separate DNS entry at galaxy.urbit.org. There's no automated process for getting that binding, so if you're a galaxy-holder, get in touch with us at support@urbit.org.
-
-There is a command for galaxies that will try to re-use their already-necessary Ames DNS entry for HTTPS:
-
-```
-> :dns|auto
-```
-
-This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAIN` (currently galaxy.urbit.org), where `galaxy` is the galaxy's name minus the `~`.
-
-Otherwise, `:dns|auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
-
-### More information
-
-Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:chat-cli` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
-
-The built-in logic for listening on port 80 is similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
 
 ## Messaging {#messaging}
 
