@@ -175,7 +175,6 @@ body.essay {
     }
     article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
-        max-width: 30em;
     }
 }
 
