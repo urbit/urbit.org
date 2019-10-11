@@ -8,13 +8,13 @@ We live in a world dense with computers. We wake up and look at them, we see the
 
 But our computers are a mess.
 
-{{ oversize(url="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-1.svg") }}
+![](https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-1.svg)
 
 We spend all our time switching between services, juggling logins and different interfaces. And once we’re logged in, the services we use harvest our data, spy on us and often shut down with little warning.
 
 If computers are going to be a part of our lives for generations to come, we need a sound foundation for them. We need a _system_, not a grab bag of apps and services. Urbit is that system.
 
-<picture class="full mt4 mb4 c3-11-lg">
+<picture class="full mt4 mb4 c4-10-lg measure">
 <source srcset="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2.png,
 https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2%402x.png 2x">
 <img src="https://media.urbit.org/site/understanding-urbit/simple-durable-yours/sdy-2%402x.png"/>

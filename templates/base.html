@@ -45,6 +45,10 @@
       })();
     </script>
     <!-- END MATOMO -->
+    <!-- START VH UNIT BUGGYFILL -->
+    <script src="{{ get_url(path="viewport-units-buggyfill.js") | safe }}"></script>
+    <script>window.viewportUnitsBuggyfill.init();</script>
+    <!-- END VH UNIT BUGGYFILL -->
 
   </head>
   <body {% block bodyclasses %} {% endblock bodyclasses %}>

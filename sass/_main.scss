@@ -47,6 +47,9 @@ body {
     @extend .grid12, .mh4;
     font-size: 1rem;
     color: #000;
+    // Something about the main page video is causing the page to overflow.
+    max-width:100vw;
+    overflow-x:hidden;
 }
 
 nav {
@@ -143,7 +146,7 @@ footer nav {
 
 body.essay {
     h1 {
-        @extend .f1, .fw3;
+        font-size: 1rem;
         max-width: 95vw;
     }
     &:not(.bg-white) {
@@ -172,6 +175,7 @@ body.essay {
     }
     article > *:not(figure):not(picture) {
         grid-area: auto / 4 / auto / 10;
+        max-width: 30em;
     }
 }
 
@@ -538,14 +542,14 @@ hr {
 .vid-insert-wrap {
   position: relative;
   width: 100vw;
-  height: 850px;
+  height: 100vh;
 }
 
 .vid-insert {
   position: absolute;
   right: 0;
   bottom: 0;
-  // USE CONTAINER TO CONTROL HEIGHT + WIDTH
+  // Use .vid-insert-wrap to control height + width
   width: 100%;
   height: 100%;
   object-fit: cover;
