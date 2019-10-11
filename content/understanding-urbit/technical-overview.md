@@ -10,7 +10,7 @@ https://media.urbit.org/site/understanding-urbit/technical-overview/technical-ov
 <img src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-1%402x.png">
 </picture>
 
-Owning a computer, especially a server, can feel like a part time job. Urbit, on the other hand, is engineered to be maintenance free. We figure, if people are actually going to use a new computing platform, it can’t feel like work. At all.
+Owning a computer, especially a server, can feel like a job. Urbit, on the other hand, is engineered to be maintenance free. We figure that if people are actually going to use a new computing platform, it can’t feel like work. At all.
 
 So we built our whole stack, starting with the VM, to be as simple and compact as possible. Let’s take a look at what the system looks like from a technical perspective and get a feel for how it’s built.
 
@@ -24,11 +24,11 @@ All of this is implemented as a [suite of Solidity contracts](https://github.com
 
 As a compliment to Urbit ID, we implemented the [Urbit HD wallet](https://github.com/urbit/urbit-wallet-generator) which lets most people own their Urbit IDs using a simple passkey that’s easy to remember. This means you own your Urbit ID and can log in to Urbit OS with something like `~ravmel-ropdyl`, `~poldec-tonteg-palfun-foslup`.
 
-Until Urbit OS is completely secure (in the next year or so, we hope), you can interact with Urbit ID through a standalone, browser-based interface called [Bridge](https://bridge.urbit.org). Bridge lets you securely manage your keys, transfer your Urbit ID, log in to Urbit OS and so on.
+Until Urbit OS is completely secure (in the next year or so, we hope), you can interact with Urbit ID through a standalone, browser-based interface called [Bridge](https://bridge.urbit.org). Bridge lets you securely manage your keys, transfer your Urbit ID, log in to Urbit OS, and so on.
 
 ![](https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-3.svg)
 
-In the simplest terms, Urbit OS is three things: a file, a key and a program. The file is a log of everything that has ever happened to your Urbit. The key is derived from the same key you own your Urbit ID with.
+In the simplest terms, Urbit OS is three things: a file, a key, and a program. The file is a log of everything that has ever happened to your Urbit. The key is derived from the same key you own your Urbit ID with.
 
 The program is mostly Arvo — our name for the Urbit OS kernel. Arvo is implemented in Hoon, a functional language that compiles down to Nock, our tiny set of opcodes.
 
@@ -40,6 +40,6 @@ The operating system has a runtime called Vere that performs I/O for your OS. Th
 
 Nock is like a pico-Lisp with no symbols. It's a homoiconic purely functional machine code with 12 opcodes and one universal datatype, the noun: an acyclic binary tree that is either a number (which can also represent an arbitrarily large bytestream) or a cell, which is a pair of nouns.
 
-Hoon, the language in which the operating system is implemented is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock. It’s a little quirky, but at its core it’s a macro extension of Nock.
+Hoon, the language in which the operating system is implemented, is a purely functional, statically typed, strictly evaluated programming language that compiles to Nock. It’s a little quirky, but at its core it’s a macro extension of Nock.
 
 Perhaps most interesting: our whole stack (except for Nock and Vere) is designed to be updated over the air. This is what makes it possible for Urbit to be a computer for life — it can grow with you.
