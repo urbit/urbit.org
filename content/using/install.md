@@ -110,65 +110,21 @@ Either command will create a directory called `sampel-palnet/` and begin buildin
 
 When your ship is finished booting, you will see the `~sampel-palnet:dojo>` prompt. At that point, you should permanently erase your keyfile from your machine.
 
-## Basic Operations
+## The Dojo
 
-Welcome to your ship! Here's a few things you should do to become oriented. For a more complete overview of basic ship operations, see [Using Your Ship](@/using/operations/using-your-ship.md).
+Welcome to your ship! Let's try our first command in the Dojo, the Arvo command line and Hoon REPL, to get oriented.
 
-### The Dojo
-
-Let's try out the Dojo, the Arvo command line and Hoon REPL:
+Type `(add 2 2)` into the Dojo. You should see the following:
 
 ```
 ~sampel-palnet:dojo> (add 2 2)
 ```
 
-Should produce:
+When you press Enter, you should see this:
 
 ```
 > (add 2 2)
 4
 ```
 
-Good.
-
-### Mounting
-
-Your ship's filesystem being "mounted" means that its filesystem can be interacted with through Unix. This makes things much easier for you.
-
-The Arvo filesystem isn't mounted to Unix by default. Switch to the Dojo prompt and run:
-
-```
-~sampel-palnet:dojo> |mount %
-```
-
-This should produce:
-
-```
-> |mount %
->=
-```
-
-which indicates that the command was processed.
-
-`|mount %` will cause a `home/` directory to appear inside your _pier_ folder in Unix (the "pier" is our shorthand for the directory whose name corresponds to your Urbit ID). Once you've changed a file, `|commit %home` to synchronize changes to your pier.
-
-**Note:** Do not delete your pier. Doing so will make your ship unusable, because deleted piers normally cannot be recovered. The exception is during a network breach (a reset) -- in such a rare event, you must delete your pier to update your ship to the new era, and ships with previously deleted piers can be recovered.
-
-### Shutting Down and Restarting
-
-You can toggle between the Dojo and Talk (chat) prompts with `ctrl-x`. You can turn your ship off with `ctrl-d` from the Talk or Dojo prompts.
-
-To restart your ship, simply pass the name of your pier:
-
-```
-./urbit some-planet
-```
-
-### Using Landscape
-
-Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome and Brave are the recommended browsers for using Landscape. To get onto Landscape:
-
-1. Start your ship. In the boot messages, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using.
-2. If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`.
-3. Type `+code` into your ship's Dojo. Copy-paste the returned code into the field asking for it.
-4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
+Good, your Dojo is working correctly.
