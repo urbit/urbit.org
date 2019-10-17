@@ -79,7 +79,7 @@ Digital Ocean has a post on adding swap [here](https://www.digitalocean.com/comm
 
 Now the rubber meets the road. You'll be booting your ship with the keyfile that you [downloaded from Bridge](@/using/operations/using-bridge.md).
 
-Note that this document is only for booting a ship that uses the live Arvo network. If you just want to create an unnetworked ship for development purposes, read [this guide](@/using/develop.md#creating-a-development-ship) instead.
+Note that this section is only for booting a ship that uses the live Arvo network. If you just want to create an unnetworked ship for development purposes, read [this guide](@/using/develop.md#creating-a-development-ship) instead.
 
 ### Step 1: Find Your Urbit ID
 
