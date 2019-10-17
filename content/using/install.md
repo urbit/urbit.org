@@ -81,15 +81,15 @@ Now the rubber meets the road. You'll be booting your ship with the keyfile that
 
 Note that this document is only for booting a ship that uses the live Arvo network. If you just want to create an unnetworked ship for development purposes, read [this guide](@/using/develop.md#creating-a-development-ship) instead.
 
-## Step 1: Find Your Urbit ID
+### Step 1: Find Your Urbit ID
 
 This will look something like `~lodleb-ritrul`. You can see the name of your Urbit ID when you log into your wallet using the Bridge client.
 
-## Step 2: Find the path to your keyfile
+### Step 2: Find the path to your keyfile
 
 Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
-## Step 3: Run the boot command
+### Step 3: Run the boot command
 
 Type `cd` in your terminal to return to your home directory. If you want to store your ship somewhere besides your home directory, change the terminal's working directory to the desired directory.
 
