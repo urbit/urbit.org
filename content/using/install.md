@@ -119,7 +119,7 @@ Welcome to your ship! Here's a few things you should do to become oriented. For 
 Let's try out the Dojo, the Arvo command line and Hoon REPL:
 
 ```
-~sample-planet:dojo> (add 2 2)
+~sampel-palnet:dojo> (add 2 2)
 ```
 
 Should produce:
@@ -138,7 +138,7 @@ Your ship's filesystem being "mounted" means that its filesystem can be interact
 The Arvo filesystem isn't mounted to Unix by default. Switch to the Dojo prompt and run:
 
 ```
-~sample-planet:dojo> |mount %
+~sampel-palnet:dojo> |mount %
 ```
 
 This should produce:
