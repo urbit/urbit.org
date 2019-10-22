@@ -241,7 +241,7 @@ Note that largely equivalent functionality is also available through Chat's web 
 
 ### Joining a chat
 
-In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four types of chats: the _channel_ (public with blacklist), _village_ (private with whitelist), the _journal_ (publicly readable, privately writable), and the _mailbox_ (privately readable, publicly writable). But for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [manual](#messaging-manual) section later on.xxxx
+In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four "types" of chats, but for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [chat management](#chat-management) section later on.
 
 Let's join the `~dopzod/urbit-help` channel. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
 
@@ -346,7 +346,7 @@ Detailed message output will look something like this:
 let's try selecting this message!
 ```
 
-### Creating and managing chats
+### Creating and managing chats {#chat-management}
 
 As mentioned before, any urbit can host any number of chats. Existing chats can be deleted or modified with various commands. All commands in this section should be sent from the `chat-cli>` prompt.
 
