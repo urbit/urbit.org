@@ -656,14 +656,6 @@ Similar to Unix `ls`. Accepts a path.
 ~your-urbit:dojo> +ls /~talsur-todres/home/2/gen/program
 ```
 
-#### `+moon`
-
-Generates a random moon from a planet. No arguments.
-
-```
-~your-urbit:dojo> +moon
-```
-
 #### `+solid`
 
 Compile the current state of the kernel and output a
