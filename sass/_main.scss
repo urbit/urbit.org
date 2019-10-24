@@ -275,7 +275,7 @@ nav.previous, nav.next {
     background: transparent;
     span#search-icon {
       display: inline-block;
-      transform: translate(-7px, 2px) rotate(-45deg);
+      transform: translate(-4px, 2px) rotate(-45deg);
     }
     span.search-slash {
       font-size: 0.75em;
@@ -591,6 +591,6 @@ hr {
 }
 
 // hide webkit scrollbars on windows, etc
-::-webkit-scrollbar {
+nav::-webkit-scrollbar {
     display: none;
 }
