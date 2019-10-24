@@ -180,7 +180,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-To breach a moon -- that is, to reset its presence on the network so that it's as a freshly spawned ship by others -- run from the parent ship:
+To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
 
 ```
 |moon-breach ~faswep-navred-sampel-palnet
