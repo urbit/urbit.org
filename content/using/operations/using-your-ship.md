@@ -162,35 +162,35 @@ Planets can spawn moons, which are meant for connected devices: phones, smart TV
 To generate a random moon from your planet, run:
 
 ```
-~sampel-palnet:dojo> +moon
+~sampel-palnet:dojo> |moon
 moon: ~faswep-navred-sampel-palnet
-\/~.0wd.rZU67.3jSny.z1vda.7sr-s.EL1Jt.-76Nj.ugXxY.g6-Bx.HvKZl.G53oV.hPnXe.7U3E3.J4CEe.MEVuq.~08Nt\/
-  .zNT0K.k-Ab~.Nn90d.OZ2fT.-XlQQ.Cfrkf.y6~K0.2Do09.EaE3W.BSK--.5Q~9N.y3QIP.eokH-.T6lwz.gg8MX.7LU5
-  x.DJROE.IzQsy.OXOLr.IOE3a.-QI40.H5ukK.Cw-u4.uxE-y.V-o1F.Q84g0.effP0.de01g.600g1
-\/                                                                                               \/
+\/0w5cT5t.wCO6i.~e1xg.Oz0qb.QNO6I.3Kt2T.h9M9F.U3vU~.X3Qu0.gtb19.IYTkY.80kWZ.SI\/
+  EUE.DXa8i.TiDof.o3-1C.RHLKS.k81M0.ecz5o.ic0Bg.600g1
+\/                                                                                                 \/
 ```
 
-You must manually edit the output of `+moon` to get the correct format for the `<key>`:
+You must manually edit the output of `|moon` to get the correct format for the `<key>`:
 
 - strip out the `\/`
 
 - combine into one line, omitting spaces
 
-- trim the leading `~.`
-
-`<key>` would be `0wd.rZU67.3jSny.z1vda ... <snip> ... effP0.de01g.600g1`
+`<key>` would be `0w5cT5t.wCO6i.~e1xg.Oz0qb.QNO6I.3Kt2T.h9M9F.U3vU~.X3Qu0.gtb19.IYTkY.80kWZ.SIEUE.DXa8i.TiDof.o3-1C.RHLKS.k81M0.ecz5o.ic0Bg.600g1`
 in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-Another way of generating `<keyfile>` is:
+To breach a moon -- that is, to reset its presence on the network so that it works as a freshly spawned ship -- run from the parent ship:
 
 ```
-~sampel-palnet:dojo> @moon/key +moon
-moon: ~faswep-navred-sampel-palnet
+|moon-breach ~faswep-navred-sampel-palnet
 ```
 
-`<keyfile>` will be at `path/to/sampel-palnet/.urb/put/moon.key` and does not need editing to be used with the `-k` option.
+To cycle the keys of a moon without breaching, run:
+
+```
+|moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
+```
 
 You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
