@@ -1128,7 +1128,7 @@ The above command uses substitution to use your current `ship` and
 given something new. Without substitution, you would need to write:
 
 ```
-~your-urbit:dojo> =dir /~your-urbit/home/85
+~your-urbit:dojo> =dir /~your-urbit/sandbox/85
 ```
 
 Substitutions work the same way in `beak`s (the `ship/desk/case` part) and
