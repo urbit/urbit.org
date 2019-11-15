@@ -20,7 +20,7 @@ When developing, however, we recommend [booting a development ship](#creating-a-
 
 ## Core development {#core}
 
-Working on the core means improving the Urbit project itself, working with the existing community of Urbit developers. 
+Working on the core means improving the Urbit project itself, working with the existing community of Urbit developers.
 
 Just arrived and unsure what to work on? An ideal way to get started is by experimenting with the system, talking to other developers, and reading (or [contributing to](https://github.com/urbit/docs)) the [documentation](/docs/).
 
@@ -50,7 +50,7 @@ Because such a ship has no presence on the network, you don't need an Azimuth id
 To create a fake ship named `~zod`, run the command below. You can replace `zod` with any valid Urbit ship-name.
 
 ```
-urbit -F zod
+./urbit -F zod
 ```
 
 Now you should see a block of boot messages, starting with the Urbit version number. Welcome!
