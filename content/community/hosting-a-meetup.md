@@ -4,7 +4,7 @@ description = "Best practices for hosting your Urbit meetups."
 weight = 2
 +++
 
-There are already [a few](urbit.org/meetups) Urbit meetups that take place in cities around the United States. Want to start a meetup in your home town? Consider these best practices.
+There are already [a few](../meetups) Urbit meetups that take place in cities around the United States. Want to start a meetup in your home town? Consider these best practices.
 
 ### Create the Meetup Group Online
 
