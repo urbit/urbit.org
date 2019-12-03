@@ -18,11 +18,11 @@ In order to get closer to an Urbit that can last forever, we set for ourselves t
 
 But what do we mean exactly by ‘stable’? For something meant to last far into the future, stability really means *resilience*. Arvo has to both run and upgrade itself without ever breaking or falling into an unrecoverable state. 
 
-Getting Arvo to this point doesn’t quite achieve the user-level goal we’re hoping to achieve. But if you’re comfortable doing a bit of system administration, Arvo itself should need almost no maintenance.
+Getting Arvo to this point doesn’t quite achieve the user-level goal we’re hoping to achieve. But if you’re comfortable doing a bit of system administration, Arvo itself should need almost no maintenance – and from a system's level perspective, that is sufficiently stable.
 
 To achieve stability in practice Arvo needs three things:
 
-- The Arvo network (Ames) has to be stable 
+- The Arvo network (Ames) has to be reliable 
 - Arvo can’t easily fall into an unrecoverable state
 - Arvo has to have a clear and formalized upgrade mechanic
 
@@ -39,12 +39,12 @@ We managed to update this original Ames code to use Ethereum as the source of tr
 
 We’ve been working on that rewrite, codenamed Alef, for a few months now. Alef doesn’t aim to add any new functionality — it’s simply a drop-in replacement that’s cleaner and more reliable. We currently have Alef running on a testnet and sending packets with an industry-standard congestion control algorithm. There’s still some work to do, but it’s coming along nicely. Some early tests even show it to be faster, which is great.
 
-We expect to switch to Alef in a continuity breach (network reset) during this quarter. This will be a huge step toward resilience. A networking protocol we can trust to deliver updates is essential for a computer that will last a long time.
+We expect to switch to Alef in a continuity breach (network reset) during this quarter. This will be a huge step toward resilience, and accomplishes the first of our three stability criteria. A networking protocol we can trust to deliver updates is essential for a computer that will last a long time.
 
 
 ### Recoverability
 
-Another barrier to stability with existing Urbit is that a ship can, under specific conditions, fall into a terminal state. If part of your ship’s state relies on event in the future and this event crashes, then that part of the state can become unrecoverable. Consider, for example, an event that is set to be triggered by a timer. If this timer crashes, that event will never happen. This is a huge problem.
+Another barrier to stability with existing Urbit is that a ship can, under specific conditions, fall into a terminal state. If part of your ship’s state relies on an event in the future which crashes, then that part of the state can become unrecoverable. Consider, for example, an event that is set to be triggered by a timer. If this timer crashes, that event will never happen. This is a huge problem.
 
 In order to understand the difficulties with error handling and how we’re dealing with it, we have to understand the Arvo operating system. Arvo is responsible for coordinating messages being sent from the outside world (Unix in our case) and messages sent from one vane, or kernel module, to another. Both Arvo and the vanes are explicit state machines, meaning that they must specify every possible state and the transitions between them. These properties make it possible for the system to be fully updated (we’ll discuss such upgrades below).
 
@@ -63,7 +63,7 @@ In the case of a failed timer event, the error notification is routed back to th
 
 This quarter, building on previous work, we’ve built on the %crud pattern and mapped the protocols between the vanes and between arvo and vere. This allows us to make sure that %cruds are all handled (so as to avoid the crash discussed above) and, in future iterations of the vanes, know what conditions need to be accommodated to avoid introducing regressions. 
 
-By adopting this pattern and virtualizing userspace, we can make completely sure that code running in the kernel or an app can’t cause your ship to get into an inconsistent state.
+By adopting this pattern and virtualizing userspace, we can make completely sure that code running in the kernel or an app can’t cause your ship to get into an inconsistent state. This accomplishes the second of our three criteria for stability. 
 
 
 ### Telescoping Kelvins
@@ -90,6 +90,6 @@ With the recent 0.9.0 release we’ve gotten to the point where we can make almo
 
 But — in order for that scene in 2059 to actually work, these upgrade mechanisms have to be in place. As your ship upgrades itself, the system needs a way to ensure that each upgrade gets applied in a compatible way. Right now we’re careful about deploying over the air updates such that they don’t break, but that’s obviously not sustainable.
 
-Once this versioning scheme gets released later this year, there’s nothing technically preventing you from starting a late-2019 Urbit in 2039. We hope you’ll use it a lot in the interim — but this is an essential feature for a decentralized system that claims to upgrade itself. We’re really excited to get it implemented.
+Once this versioning scheme – our third criterion of stability – gets released later this year, there’s nothing technically preventing you from starting a late-2019 Urbit in 2039. We hope you’ll use it a lot in the interim — but this is an essential feature for a decentralized system that claims to upgrade itself. We’re really excited to get it implemented.
 
-These three areas of work are all due to complete later this quarter. This gets us something that’s much more resilient than what we’ve ever had before. Given a stable system, we can actually start to put some serious weight on it.
+These three areas of work are all due to complete later this quarter. Once they're implemented, Arvo will be fundamentally stable, and we can begin to put some serious weight on the system.
