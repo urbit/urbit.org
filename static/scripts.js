@@ -272,13 +272,20 @@ function initSearch() {
       return;
     }
 
-    for (let rune of runes) {
-      if (rune.symbol === term) {
+    for (let entry of glossary) {
+      if (entry.symbol === term) {
         glossaryResults.style.display="block";
         glossaryResultsItem.innerHTML = `
-        <a href="${rune.link}"><h3 class="black"><code class="red3 mr1">${rune.symbol}</code> ${rune.name}</h3>
-        <p class="black">${rune.desc}</p>
-         <span class="db tr black fw5" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
+        <a href="${entry.link}"><h3 class="black"><code class="pa0 red3 mr1">${entry.symbol}</code>${entry.name}</h3>
+        <p class="black">${entry.desc}</p>
+         <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Documentation -></span></a>
+        `
+      } else if (entry.name === term.toLowerCase()) {
+        glossaryResults.style.display="block";
+        glossaryResultsItem.innerHTML = `
+        <a href="${entry.link}"><h3 class="black">${entry.name}</h3>
+        <p class="black">${entry.desc}</p>
+         <span class="db tr black fw5 mb3" style="font-family: 'Inter UI', sans-serif;">Read more in Glossary -></span></a>
         `
       }
     }

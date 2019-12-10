@@ -1,4 +1,5 @@
-var runes = [
+var glossary = [
+  // runes
     {
       "name": "dot",
       "symbol": ".",
@@ -978,5 +979,377 @@ var runes = [
       "usage": "Ford",
       "link": "/docs/tutorials/arvo/ford/#fascen",
       "desc": "Ford rune. Propagate extra arguments into renderers."
+    }, 
+    // glossary starts here
+    {
+      "name": "ames",
+      "symbol": "",
+      "usage": "Arvo",
+      "link": "/docs/glossary/ames/",
+      "desc": "The name of the Urbit network and the vane that communicates over it."
+    },
+    {
+      "name": "aqua",
+      "symbol": "",
+      "usage": "Arvo",
+      "link": "/docs/glossary/aqua/",
+      "desc": "A virtualization tool whose primary purpose is testing and development."
+    },
+    {
+      "name": "arvo",
+      "symbol": "",
+      "usage": "Arvo",
+      "link": "/docs/glossary/arvo/",
+      "desc": "The Urbit operating system and kernel."
+    },
+    {
+      "name": "atom",
+      "symbol": "",
+      "usage": "hoon-nock",
+      "link": "/docs/glossary/atom/",
+      "desc": "The most basic data type in Hoon and Nock, a non-negative integer of any size."
+    },
+    {
+      "name": "azimuth",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/azimuth/",
+      "desc": "Urbit's identity layer, built as a suite of smart contracts on the Ethereum blockchain."
+    },
+    {
+      "name": "behn",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/behn/",
+      "desc": "Timing vane of Arvo. Allows for applications to schedule events."
+    },
+    {
+      "name": "bridge",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/bridge/",
+      "desc": "A client made for interacting with Azimuth."
+    },
+    {
+      "name": "censure",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/censure/",
+      "desc": "Allows stars and galaxies to assign negative reputation information to other points of equal or lower rank."
+    },
+    {
+      "name": "ceremony",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/ceremony/",
+      "desc": "The event that transferred custody of Azimuth identities from a centralized ledger to the Ethereum blockchain."
+    },
+    {
+      "name": "chat",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/chat/",
+      "desc": "An application that handles communication between ships."
+    },
+    {
+      "name": "claims",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/claims/",
+      "desc": "Allows Urbit identities to make publicly visible assertions about their owner."
+    },
+    {
+      "name": "clay",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/clay/",
+      "desc": "The filesystem and typed revision-control vane of Arvo."
+    },
+    {
+      "name": "comet",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/comet/",
+      "desc": "A type of ship on the Urbit network."
+    },
+    {
+      "name": "delegated sending",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/delegated-sending/",
+      "desc": "A method by which a star can distribute planets, assigning them to a delegated planet."
+    },
+    {
+      "name": "desk",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/desk/",
+      "desc": "A revision-controlled branch of the Clay filesystem."
+    },
+    {
+      "name": "dill",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/dill/",
+      "desc": "The terminal-driver vane of Arvo."
+    },
+    {
+      "name": "document vote",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/docvote/",
+      "desc": "A voting action taken by the Galactic Senate over Azimuth."
+    },
+    {
+      "name": "ecliptic",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/ecliptic/",
+      "desc": "A contract that sets the rules for what is and is not possible on Azimuth."
+    },
+    {
+      "name": "event log",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/eventlog/",
+      "desc": "A totally ordered list of every single Arvo event a ship has undergone. A ship's state is a pure function of its event log."
+    },
+    {
+      "name": "eyre",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/eyre/",
+      "desc": "The web-server vane of Arvo. Handles all HTTP messages."
+    },
+    {
+      "name": "ford",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/ford/",
+      "desc": "The build-system vane of Arvo."
+    },
+    {
+      "name": "galaxy",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/galaxy/",
+      "desc": "8-bit Urbit addresses, sitting at the top of the identity hierarchy, that vote on network changes and act as infrastructural nodes."
+    },
+    {
+      "name": "gall",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/gall/",
+      "desc": "The application-management vane of Arvo. Userspace applications are stopped, started, and sandboxed by Gall."
+    },
+    {
+      "name": "hall",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/hall/",
+      "desc": "The former messaging protocol for Arvo, no longer in use."
+    },
+    {
+      "name": "hd wallet",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/hdwallet",
+      "desc": "A system of related Ethereum addresses that store and manage an Urbit identity, each a proxy with different permissions over its management."
+    },
+    {
+      "name": "hoon",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/hoon/",
+      "desc": "A strict, higher-order typed functional programming language that compiles to Nock."
+    },
+    {
+      "name": "invite tree",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/invitetree/",
+      "desc": "The state stored by the delegated sending contract, recording who gave a planet to whom under a specific star."
+    },
+    {
+      "name": "jacque",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/jacque/",
+      "desc": "A Nock interpreter written in Java, in active development as a worker process for Vere."
+    },
+    {
+      "name": "keyfile",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/keyfile/",
+      "desc": "A piece of information used to associate a ship with an Urbit identity."
+    },
+    {
+      "name": "landscape",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/landscape/",
+      "desc": "A front-end user interface for Urbit."
+    },
+    {
+      "name": "mark",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/mark/",
+      "desc": "A file type in the Clay filesystem."
+    },
+    {
+      "name": "modulo",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/modulo/",
+      "desc": "The name of the home screen interface for Urbit within Landscape."
+    },
+    {
+      "name": "moon",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/moon/",
+      "desc": "A kind of ship on the Arvo network, issued by planets."
+    },
+    {
+      "name": "nock",
+      "symbol": "",
+      "usage": "hoon-nock",
+      "link": "/docs/glossary/nock/",
+      "desc": "A purely functional typeless programming language, and Urbit's lowest-level language."
+    },
+    {
+      "name": "noun",
+      "symbol": "",
+      "usage": "hoon-nock",
+      "link": "/docs/glossary/noun/",
+      "desc": "An atom or a cell. The basic data structure in Nock."
+    },
+    {
+      "name": "OTA",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/ota-updates/",
+      "desc": "Ships have the ability to upgrade themselves over the air. They receive updates from a sponsor star or galaxy."
+    },
+    {
+      "name": "pH",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/ph/",
+      "desc": "A Gall app that is a framework for fleet testing using Aqua."
+    },
+    {
+      "name": "pill",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/pill/",
+      "desc": "A bootstrap sequence to launch an Urbit ship for the first time."
+    },
+    {
+      "name": "planet",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/planet/",
+      "desc": "An Urbit identity at the bottom of the identity hierarchy. Issued by stars."
+    },
+    {
+      "name": "proxies",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/proxies/",
+      "desc": "Ethereum addresses in the Urbit HD Wallet that have limited powers."
+    },
+    {
+      "name": "replay",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/replay/",
+      "desc": "How Vere computes the state of a ship's Arvo instance from an event log."
+    },
+    {
+      "name": "sail",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/sailudon",
+      "desc": "A domain specific language for Hoon. Expresses XML data structures to render webpages."
+    },
+    {
+      "name": "udon",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/sailudon",
+      "desc": "A domain specific language for Hoon. Similar to Markdown."
+    },
+    {
+      "name": "senate",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/senate/",
+      "desc": "The body of all galaxies that govern Azimuth by majority vote."
+    },
+    {
+      "name": "ship",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/ship/",
+      "desc": "An instance of an Urbit computer that is a peer on the network."
+    },
+    {
+      "name": "arvo.network",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/shiparvonetwork/",
+      "desc": "A way to connect to a ship via HTTP, using DNS lookup."
+    },
+    {
+      "name": "star",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/star/",
+      "desc": "An Urbit identity sitting between stars and galaxies in the identity hierarchy. Infrastructural nodes for child planets."
+    },
+    {
+      "name": "sync",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/sync/",
+      "desc": "<code>|sync</code> sets up synchronization between two Clay desks."
+    },
+    {
+      "name": "talk",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/talk/",
+      "desc": "Urbit's first user application, sending messages between ships. No longer used, and replaced by Chat."
+    },
+    {
+      "name": "vane",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/vane/",
+      "desc": "An Arvo kernel module that performs essential system operations."
+    },
+    {
+      "name": "vere",
+      "symbol": "",
+      "usage": "arvo",
+      "link": "/docs/glossary/vere/",
+      "desc": "The Nock runtime environment and Urbit virtual machine, running on Unix."
+    },
+    {
+      "name": "vote",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/voting/",
+      "desc": "Voting is a power available to galaxies in their capacities as members of the Galactic Senate."
+    },
+    {
+      "name": "wallet generator",
+      "symbol": "",
+      "usage": "azimuth",
+      "link": "/docs/glossary/wallet-generator/",
+      "desc": "Generates an Urbit HD wallet."
     }
   ]
