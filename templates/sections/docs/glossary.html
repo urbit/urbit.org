@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %} 
+  <meta name="og:title" content="{{ section.title }} - {{ config.title }}">
+  <title>{{ section.title }} - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %} 
+  <meta name="og:description" content="From the Urbit documentation.">
+  <meta name="description" content="From the Urbit documentation.">
+{% endblock description %}
+
+{% block image %}
+  <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+<!-- header -->
+<!-- content -->
+{% include "partials/navigation-docs.html" %}
+<article class="mt4 mb6 full c4-11-lg">
+<!-- header -->
+<h1>{{ section.title }}</h1>
+<!-- body -->
+
+<div class="measure-wide mb4">
+{{ section.content | safe }}
+
+</div>
+
+{% set terms = get_section(path="docs/glossary/_index.md") %}
+{% set arvoTerms = terms.pages | filter(attribute="extra.category", value="arvo") | sort(attribute="title") %}
+{% set azimuthTerms = terms.pages | filter(attribute="extra.category", value="azimuth") | sort(attribute="title") %}
+{% set hoonNockTerms = terms.pages | filter(attribute="extra.category", value="hoon-nock") | sort(attribute="title") %}
+<div class="flex flex-wrap justify-between">
+  <div class="mt0 w-100 w-50-l w-30-xl"><a class="fw6" href="/docs/glossary/arvo/">Arvo</a>
+    <p>The Urbit OS.</p>
+  {% for term in arvoTerms %}
+  <li class="list mb1 mt1"><a href="{{term.permalink}}">{{ term.title }}</a></li>
+  {% endfor %}
+  </div>
+  <div class="mt4 mt0-l mt0-xl w-100 w-50-l w-30-xl">
+    <a class="fw6" href="/docs/glossary/azimuth">Azimuth</a>
+    <p>The Urbit identity layer.</p>
+  {% for term in azimuthTerms %}
+  <li class="list mb1 mt1"><a href="{{term.permalink}}">{{ term.title }}</a></li>
+  {% endfor %}
+  </div>
+
+  <div class="mt4 mt0-l mt0-xl w-100 w-50-l w-40-xl">
+    <a class="fw6" href="/docs/glossary/hoon">Hoon</a> <span class="fw6">+</span> <a class="fw6" href="/docs/glossary/nock">Nock</a>
+    <p>Hoon is Urbit's high-level programming language. It compiles to Nock, Urbit's low-level language.</p>
+  {% for term in hoonNockTerms %}
+  <li class="list mb1 mt1"><a href="{{term.permalink}}">{{ term.title }}</a></li>
+  {% endfor %}
+  </div>
+</div>
+{% endblock content %}
