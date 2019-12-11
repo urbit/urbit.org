@@ -2,7 +2,7 @@
 title = "Governance"
 description = "On the governance of the project, including both the senate of galaxies and the core developers."
 aliases = ["/governance"]
-weight = 3
+weight = 4
 [extra]
 hidetitle = "true"
 hideprevious = "true"
