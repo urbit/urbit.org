@@ -132,3 +132,13 @@ When you press Enter, you should see this:
 ```
 
 Good, your Dojo is working correctly.
+
+### Using Landscape
+
+Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome and Brave are the recommended browsers for using Landscape. To get onto Landscape:
+
+1. Start your ship. In the boot messages, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your ship is using.
+2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. Alternatively, you access landscape by navigating to `ship.arvo.network` into your URL bar, where `sampel-palnet` is the name of your ship, without the `~`. You will need to [set up DNS proxying](@/using/operations/using-your-ship.md#dns-proxying) to use this option.
+3. Type `+code` into your ship's Dojo. Copy-paste the returned code into the field asking for it in the browser page.
+4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
+

@@ -18,13 +18,19 @@ Turns out that getting Urbit fans together in one room is pretty fun. Here's an 
 
 Interested in hosting an Urbit event of your own? Follow our [guide to meetup best-practices](../hosting-a-meetup). Send an email to [support@urbit.org](mailto:support@urbit.org) and we'll list your meetup on this page.
 
+### Asia
+
+Location | Contact information
+:------------ | :-------------
+Moscow, RU | [Timepad](https://urbitmoscow.timepad.ru/events/)
+
 ### Europe
 
 Location | Contact information
 :------------ | :-------------
 Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/)
 
-### United States
+### North America
 
 Location | Contact information
 :------------ | :-------------
@@ -34,3 +40,10 @@ New York, NY | [Meetup.com](https://www.meetup.com/Urbit-New-York/)
 Austin, TX | [Meetup.com](https://www.meetup.com/Urbit-Austin/)
 Denton, TX | [Twitter](https://twitter.com/UrbitDFW)
 Seattle, WA | [Meetup.com](https://www.meetup.com/urbit-seattle/)
+
+
+### Oceania
+
+Location | Contact information
+:------------ | :-------------
+Sydney, AU | [Meetup.com](https://www.meetup.com/Urbit-Sydney)
