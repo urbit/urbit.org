@@ -131,7 +131,14 @@ When you press Enter, you should see this:
 4
 ```
 
-Good, your Dojo is working correctly.
+Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, so the files can be copied manipulated between Unix and your ship. To mount you ship, type `|mount %` at the Dojo prompt. 
+
+```
+|mount %
+>=
+```
+
+The `>=` output means that a command was successful. Now you can see your ship's files in its Unix directory.
 
 ### Using Landscape
 
