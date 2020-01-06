@@ -40,7 +40,7 @@ New York, NY | [Meetup.com](https://www.meetup.com/Urbit-New-York/)
 Austin, TX | [Meetup.com](https://www.meetup.com/Urbit-Austin/)
 Denton, TX | [Twitter](https://twitter.com/UrbitDFW)
 Seattle, WA | [Meetup.com](https://www.meetup.com/urbit-seattle/)
-Toronto, On | [Twitter](https://twitter.com/UrbitToronto), [Meetup.com](https://www.meetup.com/Urbit-Toronto/)
+Toronto, ON | [Twitter](https://twitter.com/UrbitToronto), [Meetup.com](https://www.meetup.com/Urbit-Toronto/)
 
 
 ### Oceania
