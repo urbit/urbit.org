@@ -66,6 +66,7 @@ To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the foll
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
+(Where `urbit` is the urbit executable downloaded with `curl` prior)
 
 ### Compile from source
 
@@ -131,7 +132,7 @@ When you press Enter, you should see this:
 4
 ```
 
-Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, so the files can be copied manipulated between Unix and your ship. To mount you ship, type `|mount %` at the Dojo prompt. 
+Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, so the files can be copied manipulated between Unix and your ship. To mount you ship, type `|mount %` at the Dojo prompt.
 
 ```
 |mount %
@@ -148,4 +149,3 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 2.  If the port given is 80, simply type `localhost` into your browser's address bar. If the given port is a different number, such as `8080`, you would type `localhost:8080`. Alternatively, you access landscape by navigating to `ship.arvo.network` into your URL bar, where `sampel-palnet` is the name of your ship, without the `~`. You will need to [set up DNS proxying](@/using/operations/using-your-ship.md#dns-proxying) to use this option.
 3. Type `+code` into your ship's Dojo. Copy-paste the returned code into the field asking for it in the browser page.
 4. You're in! Now you can explore apps such as Chat for messages, Publish for blogging, and Weather.
-

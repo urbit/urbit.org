@@ -282,6 +282,12 @@ Now, let's create a channel we can invite some friends to:
 
 Now you can tell your friends to `;join ~your-urbit/my-channel`.
 
+In order to see messages in `:chat-cli` you may need to do the following in Dojo:
+
+```
+:chat-cli %connect
+```
+
 ### Hoon
 
 You can use Chat to evaluate Hoon code and share the results with everyone in a chat. To do so, preface your Hoon with `#`.
