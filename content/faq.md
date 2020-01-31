@@ -319,47 +319,51 @@ You must complete the proposal to be guaranteed to receive the star grant. Parti
 
 However, either party may terminate a proposal on seven days’ written notice. In such a scenario, you may be paid pro rata for any portion of the proposal that has been completed.
 
-### Do I have to pay taxes on stars? {#grant-5}
-
-Yes. In the United States, stars are considered to be income. If you are American, we need your W-9 before we can pay out your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
-
-### Can I create a bounty? {#grants-6}
-
-No. Bounties are only created by Tlon, but we draw inspiration for bounties from various sources, including the community. If you want to pitch a project, use the Proposals system.
-
-### How are proposals approved? {#grants-7}
-
-The manager of the Grants program approves them after consulting with the relevant members of the engineering team. This proposal can be accepted, rejected, or accepted with changes by Tlon. The proposal’s star payout can also be adjusted.
-
-### If I win a proposal, do I have an exclusive claim on the project? {#grants-8}
-
-You have a claim to the reward of the project as long as milestones are met to the satisfaction of Tlon. However, Tlon may allow another developer to work on the same project in parallel, for a separate reward.
-
-### Will milestones be embedded in a smart contract? {#grants-9}
+### Do star rewards from grants have lockup conditions? {#grant-5}
 
 No.
 
-### Does reputation play a role in the assessment of grants? {#grants-10}
+### Do I have to pay taxes on stars? {#grant-6}
+
+Yes. In the United States, stars are considered to be income. If you are American, we need your W-9 before we can pay out your stars. If you’re not an American, you don’t need to get us any forms, but you do need to personally follow the relevant tax laws in your jurisdiction.
+
+### Can I create a bounty? {#grants-7}
+
+No. Bounties are only created by Tlon, but we draw inspiration for bounties from various sources, including the community. If you want to pitch a project, use the Proposals system.
+
+### How are proposals approved? {#grants-8}
+
+The manager of the Grants program approves them after consulting with the relevant members of the engineering team. This proposal can be accepted, rejected, or accepted with changes by Tlon. The proposal’s star payout can also be adjusted.
+
+### If I win a proposal, do I have an exclusive claim on the project? {#grants-9}
+
+You have a claim to the reward of the project as long as milestones are met to the satisfaction of Tlon. However, Tlon may allow another developer to work on the same project in parallel, for a separate reward.
+
+### Will milestones be embedded in a smart contract? {#grants-10}
+
+No.
+
+### Does reputation play a role in the assessment of grants? {#grants-11}
 
 Yes. We consider this to be a feature.
 
-### I completed a proposal. When will I receive payment? {#grants-11}
+### I completed a proposal. When will I receive payment? {#grants-12}
 
 We will pay you within a 30-day window.
 
-### Can I see the proposals of others that have been accepted? {#grants-12}
+### Can I see the proposals of others that have been accepted? {#grants-13}
 
 Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
 
-### How do I safely store my stars? {#grants-13}
+### How do I safely store my stars? {#grants-14}
 
 We recommend storing each star in its own Ethereum wallet. The private keys to these wallets should be stored on physical media that is not connected to a networked computer. Redundancies don’t hurt!
 
-### Can I delegate a bounty or proposal to someone else? {#grants-14}
+### Can I delegate a bounty or proposal to someone else? {#grants-15}
 
 No, not unless explicitly authorized by Tlon.
 
-### Do I need to sign a contract? {#grants-15}
+### Do I need to sign a contract? {#grants-16}
 
 After you are approved to work on a bounty or a proposal, you will be sent a contract that you'll need to sign. You don't need to sign a contract to receive a gift, though.
 
