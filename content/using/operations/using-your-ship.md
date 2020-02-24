@@ -8,6 +8,46 @@ aliases = ["docs/using/arvo-network-dns/", "docs/using/messaging/", "docs/using/
 hidetitle = "true"
 +++
 
+## Table of Contents
+
+- [Using your ship](#using-your-ship)
+  * [Shutdown](#shutdown)
+  * [Restart](#restart)
+  * [Logging](#logging)
+  * [Moving your pier](#moving-your-pier)
+  * [Console](#console)
+  * [Landscape](#landscape)
+  * [Moons {#moons}](#moons---moons-)
+  * [Continuity breaches](#continuity-breaches)
+  * [Life and rift number](#life-and-rift-number)
+- [DNS proxying {#dns-proxying}](#dns-proxying---dns-proxying-)
+  * [Planets and Stars](#planets-and-stars)
+  * [Galaxies](#galaxies)
+  * [More information](#more-information)
+- [Messaging {#messaging}](#messaging---messaging-)
+  * [Quickstart](#quickstart)
+  * [Joining a chat](#joining-a-chat)
+  * [Hoon](#hoon)
+  * [URLs](#urls)
+  * [Expanding messages](#expanding-messages)
+  * [Creating and managing chats {#chat-management}](#creating-and-managing-chats---chat-management-)
+  * [Configuration](#configuration)
+  * [Miscellaneous configuration](#miscellaneous-configuration)
+- [Shell {#using-the-shell}](#shell---using-the-shell-)
+  * [Quickstart](#quickstart-1)
+  * [Generators](#generators)
+  * [Hood](#hood)
+  * [Dojo manual](#dojo-manual)
+  * [Sources](#sources)
+  * [Variables](#variables)
+  * [Troubleshooting](#troubleshooting)
+- [Filesystem {#filesystem}](#filesystem---filesystem-)
+  * [Quickstart](#quickstart-2)
+  * [Clay manual](#clay-manual)
+  * [Revision-control](#revision-control)
+  * [Merge strategies](#merge-strategies)
+  * [Manipulation](#manipulation)
+
 ## Using your ship
 
 Your urbit (also called your _ship_) is a persistent Unix process that you mainly control from the console.
