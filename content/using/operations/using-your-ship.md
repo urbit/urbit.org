@@ -184,10 +184,8 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 ### Life and rift number
 
-You can check your ship's _life_ and _rift_ number by running the `+keys`
-generator. You can inspect the life and rift number of any ship by running the
-`.^(* %j /=life=/(scot %p <ship>))` and `.^(* %j /=rift=/(scot %p <ship>))`
-commands in dojo, respectively.
+You can check your ship's _life_ and _rift_ number by running `+keys our` in
+dojo. You can inspect another ship's life and rift number by running `+keys ~sampel-palnet`.
 
 ## DNS proxying {#dns-proxying}
 
