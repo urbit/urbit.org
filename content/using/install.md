@@ -17,7 +17,7 @@ For an introduction to Urbit IDs and the address space more generally, see [Urbi
 While Tlon does not currently sell or distribute Urbit IDs, there are still a few ways to get your own Urbit ID:
 
 - Getting an invitation from a friend
-- Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), or [Urbit Marketplace](https://urbitmarketplace.com/).
+- Purchasing an Urbit ID from a third party, such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
 Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
 
