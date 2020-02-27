@@ -195,9 +195,9 @@ You can find an identity's number by running ``` `@`~marzod ``` in any Dojo, whe
 4. Copy the "contract ABI" from [here](https://etherscan.io/address/ecliptic.eth#code) and paste it into the "ABI/JSON interface" field.
 5. Select the `escape()` function, passing in two arguments: your identity number, and the number of your desired sponsor.
 6. Sign and submit the transaction.
-7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by finding them on the network via chat, or joining `~dopzod/urbit-help` and asking around.
+7. Get in touch with your prospective sponsor, since they won't be notified otherwise. You can do this by contacting them on the network via chat, or joining `~dopzod/urbit-help` and asking around.
 8. Wait for your request to be accepted by the prospective sponsor. 
-9. If your reques tis not accepted by your prospective, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
+9. If your request is not accepted by your prospective, a last resort, you can make a request to escape to `~marzod`, which is operated by Tlon, the company leading the development of Urbit.
 
 ### Continuity breaches
 
