@@ -45,9 +45,9 @@ Urbit: a personal server operating function
 We provide static binaries for macOS. You can grab the latest stable release as follows:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-darwin-v0.10.3.tgz
-tar xzf urbit-darwin-v0.10.3.tgz
-cd urbit-darwin-v0.10.3
+curl -O https://bootstrap.urbit.org/urbit-v0.10.4-darwin.tgz
+tar xzf urbit-v0.10.4-darwin.tgz
+cd urbit-v0.10.4-darwin
 ./urbit
 ```
 
@@ -56,9 +56,9 @@ cd urbit-darwin-v0.10.3
 We also provide static binaries for 64-bit Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.). You can get the latest stable release similarly:
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-linux64-v0.10.3.tgz
-tar xzf urbit-linux64-v0.10.3.tgz
-cd urbit-linux64-v0.10.3
+curl -O https://bootstrap.urbit.org/urbit-v0.10.4-linux64.tgz
+tar xzf urbit-v0.10.4-linux64.tgz
+cd urbit-v0.10.4-linux64
 ./urbit
 ```
 
