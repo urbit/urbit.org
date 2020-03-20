@@ -9,27 +9,27 @@ hide_previous_title = "true"
 image = "https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth%402x.png"
 +++
 
-So who builds this thing? Where does it come from? What’s the history? 
+So who builds this thing? Where does it come from? What’s the history?
 
-Today, Urbit is built and maintained by two companies, a community of contributors and core developers, infrastructure (star) operators, and governance (galaxy) node owners. 
+Today, Urbit is built and maintained by two companies, a community of contributors and core developers, infrastructure (star) operators, and governance (galaxy) node owners.
 
 Let’s talk first about these individual groups within the Urbit community, then about the history of the project and how it came to be.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/project-history/project-status-landscape-earth@2x.png">
 
-There are currently two independent companies that work on building Urbit full-time: [Tlon](https://tlon.io/) and [urbit.live](https://urbit.live/). 
+There are currently two independent companies that work on building Urbit full-time: [Tlon](https://tlon.io/) and [urbit.live](https://urbit.live/).
 
 Tlon has been around since 2013 or so, and is primarily focussed on the development of Urbit OS and its user experience. Urbit.live was started in 2018 to make the onramp into Urbit as easy as possible. Both companies contribute regularly to the code base.
 
-Tlon was originally granted about half of the Urbit ID address space, and has used that to fund its operations so far. Over time, Tlon plans to offer hosting and services to make using Urbit as easy as possible. 
+Tlon was originally granted about half of the Urbit ID address space, and has used that to fund its operations so far. Over time, Tlon plans to offer hosting and services to make using Urbit as easy as possible.
 
 Tlon is also working to set up an urbit.org foundation. This is still in process, and is expected to happen in 2020.
 
-Urbit.live started selling Urbit IDs very early once that became possible, and also plans to offer services within the Urbit ecosystem. 
+Urbit.live started selling Urbit IDs very early once that became possible, and also plans to offer services within the Urbit ecosystem.
 
-The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~dopzod/urbit-help`, the [urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev) and on [GitHub](https://github.com/urbit).
+The community of contributors and core developers has been steadily contributing to the code base since before Tlon existed, and they’re still going strong. They can primarily be found on Urbit itself, in `~/~dopzod/urbit-help`, the [urbit-dev mailing list](https://groups.google.com/a/urbit.org/forum/#!forum/dev) and on [GitHub](https://github.com/urbit).
 
-When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself. 
+When the Urbit ID address space went on-chain in early 2019 there were about 2,000 star holders and 70 galaxy holders – that number has since grown steadily. For the most part, the best way to connect with them is through Urbit itself.
 
 <img class="ba"
 src="https://media.urbit.org/site/understanding-urbit/uu-people-history-2a.jpg"/>
@@ -54,7 +54,7 @@ Urbit starts as an open-ended personal project. An “independent study PhD” t
 
 **2008**
 
-Nock, the foundation of Urbit, works. Coming in at 32 lines of code, that’s 1 line of code every two months. 
+Nock, the foundation of Urbit, works. Coming in at 32 lines of code, that’s 1 line of code every two months.
 
 **2012**
 
@@ -90,12 +90,12 @@ urbit.live gets going and starts selling Urbit IDs to the public.
 **2019**
 
 Tlon spends the year stabilizing Arvo and building OS 1.
- 
+
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/uu-history-4.jpg"/>
 
-Building Urbit is about building a future where technology doesn’t control us. Instead, we look forward to a future where technology is simpler, more reliable and less invasive. 
+Building Urbit is about building a future where technology doesn’t control us. Instead, we look forward to a future where technology is simpler, more reliable and less invasive.
 
-Keep in touch while we make build this vision into reality by [joining our mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) or following us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit). 
+Keep in touch while we make build this vision into reality by [joining our mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&id=be143888d2) or following us on [Twitter](https://twitter.com/urbit) or [GitHub](https://github.com/urbit).
 
 If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/using/install) and consider [applying for a grant](https://grants.urbit.org/s).
 
