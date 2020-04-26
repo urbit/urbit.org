@@ -144,7 +144,7 @@ When you press Enter, you should see this:
 4
 ```
 
-Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, so the files can be copied manipulated between Unix and your ship. To mount you ship, type `|mount %` at the Dojo prompt.
+Good, your Dojo is working correctly. Now let's run our first useful command in the Dojo. The first thing you generally want to do with a new ship is to **mount** it. A ship being mounted means that it has a presence on your Unix filesystem, allowing files to be shared between Unix and your ship. To mount your ship, type `|mount %` at the Dojo prompt.
 
 ```
 |mount %
@@ -167,7 +167,7 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 Once you are in Landscape we recommend joining the Urbit Community group. You
 will need to obtain an invite, which can be had by first joining
 the `~/~dopzod/urbit-help` chat channel and asking for an invitation from there.
-This is most likely to succeed quickly during standard US west coast working hours.
+This is most likely to succeed quickly during standard US West Coast working hours.
 Once you have the invite you can accept it by navigating to your Groups by
 clicking on All Groups in the upper left hand corner of Landscape, then Manage
 All Groups, and in there you should see an invitation. From this interface you
