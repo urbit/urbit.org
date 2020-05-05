@@ -213,6 +213,28 @@ You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
 ~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md).
 
+## Running urbit as a daemon
+
+If you'd like to run Urbit in the background on some device and be able to
+summon it from anywhere via `ssh`, you should run Urbit as a daemon.
+
+To do this, you need a program that will keep a terminal session running even if
+you close out of it, called a terminal multiplexer. Some options are tmux, GNU
+Screen, and dtach.
+
+Here we explain how to use tmux to run Urbit as a daemon. On the machine you
+intend to run your ship, install tmux. Then begin a new session with `tmux new
+-s urbit`, which will create a new session named `urbit`. In that session, start
+your planet as usual and leave it in the dojo.
+
+You can then detach from the session by pressing `Ctrl+b` then `d`. From here
+you can log out from the user, but your ship will continue running as long as
+the computer is running.
+
+To get back to your urbit from a remote machine, ssh into the computer and
+login to the user you ran your ship in. Then type `tmux -a t urbit`, and your
+session including dojo will be restored.
+
 ## DNS proxying {#dns-proxying}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
