@@ -232,7 +232,7 @@ you can log out from the user, but your ship will continue running as long as
 the computer is running.
 
 To get back to your urbit from a remote machine, ssh into the computer and
-login to the user you ran your ship in. Then type `tmux -a t urbit`, and your
+login to the user you ran your ship in. Then type `tmux a -t urbit`, and your
 session including dojo will be restored.
 
 ## DNS proxying {#dns-proxying}
