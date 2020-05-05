@@ -213,7 +213,7 @@ You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
 ~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/docs/tutorials/guide-to-breaches.md).
 
-## Running urbit as a daemon
+## Running Urbit as a daemon
 
 If you'd like to run Urbit in the background on some device and be able to
 summon it from anywhere via `ssh`, you should run Urbit as a daemon.
