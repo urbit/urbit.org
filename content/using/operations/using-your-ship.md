@@ -225,7 +225,7 @@ Screen, and dtach.
 Here we explain how to use tmux to run Urbit as a daemon. On the machine you
 intend to run your ship, install tmux. Then begin a new session with `tmux new
 -s urbit`, which will create a new session named `urbit`. In that session, start
-your planet as usual and leave it in the dojo.
+your planet as usual.
 
 You can then detach from the session by pressing `Ctrl+b` then `d`. From here
 you can log out from the user, but your ship will continue running as long as
@@ -233,7 +233,7 @@ the computer is running.
 
 To get back to your urbit from a remote machine, ssh into the computer and
 login to the user you ran your ship in. Then type `tmux a -t urbit`, and your
-session including dojo will be restored.
+session will be restored.
 
 ## DNS proxying {#dns-proxying}
 
