@@ -1,7 +1,7 @@
 +++
 title = "Governance of urbit.org"
 date = 2019-01-11
-description = "On Stewardship of the Urbit project"
+description = "On Stewardship of the Urbit project."
 aliases = ["/posts/essays/governance-of-urbit", "/posts/governance-of-urbit"]
 [extra]
 author = "Erik Newton"
