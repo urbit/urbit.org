@@ -627,7 +627,7 @@ hr {
 
 .vid-insert-wrap {
   position: relative;
-  width: 100vw;
+  width: calc(100vw - 12px);
   height: 100vh;
 }
 
