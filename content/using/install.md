@@ -108,7 +108,7 @@ Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
 ### Step 3: Run the boot command
 
-If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.4-darwin` (for Mac) or `cd urbit-v0.10.4-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary. 
+If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.4-darwin` (for Mac) or `cd urbit-v0.10.4-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
 
 Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
