@@ -1,7 +1,7 @@
 +++
 title = "The Missing Middle"
 date = 2020-05-26
-description = "Urbit stars can facilitate a flexible continuum of community norms"
+description = "Urbit stars can facilitate a flexible continuum of community norms."
 [extra]
 author = "Nicholas Simmons"
 ship = "~simfur-ritwed"
