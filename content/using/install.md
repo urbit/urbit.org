@@ -127,6 +127,10 @@ Either command will create a directory called `sampel-palnet/` and begin buildin
 
 When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
 
+To shut down your ship, use `Crtl-d`. 
+
+To start your ship up again, run `./urbit sampel-palnet` from the directory where your Urbit binary is saved. Don't boot multiple instances of your ship at the same time.
+
 ## The Dojo
 
 Welcome to your ship! Let's try our first command in the Dojo, the Arvo command line and Hoon REPL, to get oriented.
