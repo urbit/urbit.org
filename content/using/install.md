@@ -157,6 +157,17 @@ Good, your Dojo is working correctly. Now let's run our first useful command in 
 
 The `>=` output means that a command was successful. Now you can see your ship's files in its Unix directory.
 
+## Updating to the binary
+
+Most updates to Urbit are downloaded and applied automatically as OTA (Over the
+Air) updates. Occasionally it would be infeasible to distribute an update this
+way, and a new `urbit` binary is released. To update to the latest binary, follow
+the same process outlined [above](#urbit) to download and extract it into a new folder
+(the binary linked on this page will always be the latest),
+then move your ship's **pier** (the folder with your ship's name) from the
+folder containing the old `urbit` binary to the folder containing the new one.
+Then delete the folder containing the old binary.
+
 ### Using Landscape
 
 Landscape is the Urbit web interface, and it's the best way to interact with your ship. Chrome and Brave are the recommended browsers for using Landscape. To get onto Landscape:
