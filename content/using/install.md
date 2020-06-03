@@ -157,11 +157,12 @@ Good, your Dojo is working correctly. Now let's run our first useful command in 
 
 The `>=` output means that a command was successful. Now you can see your ship's files in its Unix directory.
 
-## Updating to the binary
+## Updating to the latest binary
 
 Most updates to Urbit are downloaded and applied automatically as OTA (Over the
 Air) updates. Occasionally it would be infeasible to distribute an update this
-way, and a new `urbit` binary is released. To update to the latest binary, follow
+way, and a new `urbit` binary is released. This is announced in the `urbit-dev`
+Google Group when it occurs (as are all OTA updates). To update to the latest binary, follow
 the same process outlined [above](#urbit) to download and extract it into a new folder
 (the binary linked on this page will always be the latest),
 then move your ship's **pier** (the folder with your ship's name) from the
