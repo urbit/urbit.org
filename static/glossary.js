@@ -694,6 +694,13 @@ var glossary = [
     "desc": "<code>[%bssg p=hoon q=spec]</code>: define a custom type default value"
   },
   {
+    "name": "bucpam",
+    "symbol": "$&",
+    "usage": "Structures",
+    "link": "/docs/reference/hoon-expressions/rune/buc/#bucpam",
+    "desc": "<code>[%bspd p=spec q=hoon]</code>: repair a value of a tagged union type"
+  },
+  {
     "name": "bucpat",
     "symbol": "$@",
     "usage": "Structures",

@@ -48,7 +48,7 @@ Pyry Kovanen (`~dinleb-rambep`) was also awarded second prize for his reading-li
 ### Third Place: Two Stars Each
 
 
-N E Davis (`~lagreb-nocfep`) brought the heavy infrastructural artillery with Roessler, and won third prize. Roessler is actually three related Hoon tools: 
+N E Davis (`~lagrev-nocfep`) brought the heavy infrastructural artillery with Roessler, and won third prize. Roessler is actually three related Hoon tools: 
 `roessler` proper, a library for solving the differential equations producing the [Roessler attractor](https://en.wikipedia.org/wiki/R%C3%B6ssler_attractor).
 `lazytrig`, a library for transcendental functions.
 `proj-3d`, a generator that takes the 3D coordinates produced by `Roessler`. 
@@ -57,7 +57,7 @@ The Roessler project is full of cool, novel features. You might enjoy taking a l
 
 John Franklin (`~dirwex-dosrev`) also secured third place for his Notes application. True to its name, it’s a Landscape tile that allows the user to create and search notes by keyword. Look at the [code](https://github.com/jfranklin9000/notes/) and the [demo video](https://www.youtube.com/watch?v=7DurNjCFOmA).
 
-Jon (`~ribnes-fondex`) was awarded third prize for his Quadratic Voting project. It implements for Urbit ships a [quadratic voting system](https://en.wikipedia.org/wiki/Quadratic_voting), which is sort of like ranked-choice voting but allows people to express their stronger preferences. 
+Jon (`~ribnes-fonbex`) was awarded third prize for his Quadratic Voting project. It implements for Urbit ships a [quadratic voting system](https://en.wikipedia.org/wiki/Quadratic_voting), which is sort of like ranked-choice voting but allows people to express their stronger preferences. 
 
 Congratulations to the winners and to everyone who submitted—nice work!
 
