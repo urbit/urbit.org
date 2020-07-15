@@ -133,18 +133,6 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
-
-```
-|moon-breach ~faswep-navred-sampel-palnet
-```
-
-To cycle the keys of a moon without breaching, run:
-
-```
-|moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
-```
-
 You can use the resulting output in the same installation flow from the [Installing Urbit](@/using/install.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
@@ -173,6 +161,19 @@ $ ./urbit -w faswep-navred-sampel-palnet -k <keyfile> -c mymoon
 ```
 
 Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.  
+
+To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
+
+```
+|moon-breach ~faswep-navred-sampel-palnet
+```
+
+To cycle the keys of a moon without breaching, run:
+
+```
+|moon-cycle-keys ~sampel-sipnym-wicdev-wisryt
+```
+
 
 ### Escaping A Sponsor
 
