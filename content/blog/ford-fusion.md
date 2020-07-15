@@ -3,8 +3,8 @@ title = "Ford Fusion"
 date = 2020-07-15
 description = "Ford Fusion was an overhaul of Urbit's over-the-air upgrade process and a rewrite of its build system. The new update system corrects a few long-standing bugs with the previous one, and the new build system is simpler, smaller (by around 5,000 lines), and easier to manage."
 [extra]
-author = "Ted Blackman + Philip Monk"
-ship = "~rovnys-ricfer + ~wicdev-wisryt"
+author = "Ted Blackman"
+ship = "~rovnys-ricfer"
 image ="https://media.urbit.org/site/posts/essays/ford-fusion.png"
 +++
 
@@ -46,7 +46,7 @@ Consider an update system that took multiple Arvo events to complete.  An ad-hoc
 
 Note that the asynchronicity has now spread. Some effects that would normally be guaranteed to be processed synchronously might now be asynchronous.  Entropy has begun to take hold, chipping away at the set of invariants the system is capable of guaranteeing.
 
-This observation is not purely theoretical.  False modularity was the cause of internal asynchronicity in Clay where it had to wait for responses in a complex dance with Ford, which was another vane (Arvo kernel module); moving Ford into Clay allowed function calls that were synchronous from Clay’s perspective, which allowed further simplifications, culminating in about a twenty percent reduction of source code size of the Arvo kernelspace.
+This observation is not purely theoretical. False modularity was the cause of internal asynchronicity in Clay where it had to wait for responses in a complex dance with Ford, which was another vane (Arvo kernel module); moving Ford into Clay allowed function calls that were synchronous from Clay’s perspective, which allowed further simplifications, culminating in about a twenty percent reduction of source code size of the Arvo kernelspace.
 
 [Steve Yegge's "platform
 rant"](https://gist.github.com/chitchcock/1281611) describes a Bezosian
