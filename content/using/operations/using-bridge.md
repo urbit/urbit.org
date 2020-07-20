@@ -14,7 +14,7 @@ This guide assumes that you have an Urbit ID, or that you have found someone to 
 
 To connect to Bridge, go to [https://bridge.urbit.org](https://bridge.urbit.org) into your browser, and enter your identity's credentials in the appropriate fields. If you were invited to claim an Urbit ID, it's very likely that you received an email that would direct you to Bridge, and you can simply follow the hyperlink in that email.
 
-Once you arrive, proceed through the steps presented. You'll eventually arrive at a page with a few choices: `Invite`, `Admin`, and `Boot Arvo`. `Admin` is the only option that you're interested in right now; click on it. On the `Admin` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/using/install.md).
+You'll arrive at a page and see two major choices: `ID` and `OS`. `OS` is the only option that you're interested in right now; click on it. On the `OS` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/using/install.md).
 
 ### Local Bridge
 
@@ -23,7 +23,8 @@ Alternatively, Bridge can be run locally. It's more complicated, but we recommen
 To use Bridge:
 
 - Unzip the .zip file that you downloaded (bridge-$version.zip).
-- Open up your command line interface (Terminal on OSX, Command Prompt on Windows).
+- Open up your command line interface (Terminal on 
+X, Command Prompt on Windows).
 - Navigate to the bridge-$version directory, where $version is the appropriate version number.
 - Run this command: `python3 -m http.server 5000 --bind 127.0.0.1.`
 
