@@ -12,7 +12,7 @@ In order to get going on the network, you'll need an [Urbit ID](#id). To try the
 
 ## Urbit ID: An Overview {#id}
 
-Urbit works as a peer-to-peer network where fail because peers -- called **ships** -- are all associated with persistent and scarce identities that we refer to as **Urbit ID**. The Urbit ID registry is deployed on the Ethereum blockchain, and individual IDs exist as non-fungible tokens in that cryptographic ecosystem that chain.
+Urbit works as a peer-to-peer network where others fail because peers -- called **ships** -- are all associated with persistent and scarce identities that we refer to as **Urbit ID**. The Urbit ID registry is deployed on the Ethereum blockchain, and individual IDs exist as non-fungible tokens in that cryptographic ecosystem that chain.
 
 Urbit IDs function as network addresses, represented by pronounceable names like `~padmyn-pasnux`. There are a few kinds of Urbit ID, but ones meant for typical users are called **planets**. Anyone who has a planet can be thought of as a full "citizen" of the Urbit network.
 
