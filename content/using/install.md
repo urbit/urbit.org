@@ -67,18 +67,18 @@ Urbit: a personal server operating function
 ### macOS
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-v0.10.7-darwin.tgz
-tar xzf urbit-v0.10.7-darwin.tgz
-cd urbit-v0.10.7-darwin
+curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
+tar xzf urbit-v0.10.8-darwin.tgz
+cd urbit-v0.10.8-darwin
 ./urbit
 ```
 
 ### Linux (64-bit)
 
 ```sh
-curl -O https://bootstrap.urbit.org/urbit-v0.10.7-linux64.tgz
-tar xzf urbit-v0.10.7-linux64.tgz
-cd urbit-v0.10.7-linux64
+curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
+tar xzf urbit-v0.10.8-linux64.tgz
+cd urbit-v0.10.8-linux64
 ./urbit
 ```
 
@@ -128,7 +128,7 @@ Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
 ### Step 3: Run the boot command
 
-If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.7-darwin` (for Mac) or `cd urbit-v0.10.7-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
+If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.8-darwin` (for Mac) or `cd urbit-v0.10.8-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
 
 Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
