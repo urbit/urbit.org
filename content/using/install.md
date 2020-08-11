@@ -351,24 +351,26 @@ Find the absolute path to the keyfile that you downloaded from Bridge. Copy it.
 
 If you are not already within the directory you installed above, enter it by running `cd urbit-v0.10.8-darwin` (for Mac) or `cd urbit-v0.10.8-linux64` (for Linux) from where you ran the install commands. It contains your Urbit binary, and your ship will be installed here as well.
 
-Once you're inside, run the command below, except with `sampel-palnet` replaced by the name of your
+For other ships on the network to communicate with your ship, the computer it's running on needs to be able to receive inbound UDP traffic.  Therefore, it's important when running your ship locally to use the `-p ames_port` flag (replace `ames_port` with a public port number from 49152 to 65535) to specify on which port you'll receive UDP traffic, and to forward inbound UDP traffic arriving at your router on that port to your computer.
+
+Once you're inside, run the command below, except with `ames_port` replaced with a public port number, `sampel-palnet` replaced by the name of your
 Urbit identity, and `path/to/my-planet.key` replaced with the path to your keyfile:
 
 ```sh
-./urbit -w sampel-palnet -k path/to/my-planet.key
+./urbit -p ames_port -w sampel-palnet -k path/to/my-planet.key
 ```
 
 Or, if you'd prefer to copy your key in, you can run:
 
 ```sh
-./urbit -w sampel-palnet -G rAnDoMkEy
+./urbit -p ames_port -w sampel-palnet -G rAnDoMkEy
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
 When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-x` to switch into Dojo. At that point, you should permanently erase your keyfile from your machine.
 
-To shut down your ship, use `Ctrl-d`. To start your ship up again, run `./urbit sampel-palnet/` from the directory where your Urbit binary is saved. Note that in this usage, `sampel-palnet/` is the path of a folder, which by default is located in the same folder as the Urbit binary. This folder is called your ship's **pier**, and you can put it wherever you like.
+To shut down your ship, use `Ctrl-d`. To start your ship up again, run `./urbit -p ames_port sampel-palnet/` from the directory where your Urbit binary is saved, and with `ames_port` replaced with the public port number you used when first booting your ship. Note that in this usage, `sampel-palnet/` is the path of a folder, which by default is located in the same folder as the Urbit binary. This folder is called your ship's **pier**, and you can put it wherever you like.
 
 Never boot multiple instances of your ship at the same time. You can prevent this from happening on accident by only ever keeping a single copy of your pier.
 
