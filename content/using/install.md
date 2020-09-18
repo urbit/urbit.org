@@ -24,7 +24,7 @@ To start with a comet, continue below. For planet instructions, see [further bel
 
 ## Installing Urbit
 
-Regardless of your Urbit ID, you'll want the Urbit binary installed first. The Urbit binary runs on a Unix-like operating system – Ubuntu, Fedora, or macOS, for example.
+Regardless of your Urbit ID, you'll want the Urbit binary installed first. This is done via the command line. The Urbit binary runs on a Unix-like operating system – Ubuntu, Fedora, or macOS, for example.
 
 ### macOS and Linux
 
@@ -148,7 +148,7 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 
 ### Join a group
 
-Now that you're on Landscape, join the Urbit Community, a great place for newcomers to ask questions.
+Now that you're on Landscape, we recommend that you join the group called Urbit Community, a great place for newcomers to ask questions.
 
 Click the 'Groups' button on your Landscape home page, and then click the `Join Group` column. Then, enter `~bitbet-bolbel/urbit-community` into the field and press the `Join Group` button.
 
@@ -321,7 +321,7 @@ Setting up and running a star or galaxy is a little bit different from setting u
 Stars are valuable cryptographic assets. They can be bought in one of two ways.
 
 - Transacting privately with a star owner.
-- Buying a star on a marketplace like [OpenSea](https://opensea.io/collection/urbit-id)
+- Buying a star on a marketplace like [OpenSea](https://opensea.io/collection/urbit-id) or [Planet Market](https://planet.market)
 
 Galaxies are rare and extremely valuable, meaning that there is no liquid market for them. If you want to buy a galaxy, you'll have to find an individual galaxy owner and transact with them.
 
