@@ -576,23 +576,27 @@ Amazon S3, which stands for Amazon Simple Storage Service, is a technology that 
 
 Our S3 support lets you store credentials for your S3 object storage buckets on your Urbit ship; once you have done so, you will get additional functionality for uploading your own media within Chat and Groups (for avatars).
 
-### Bucket Setup
+To enable S3 support on your ship you'll need to first set up a bucket, and then add its credentials to Landscape using *either* Landscape or the Dojo.
 
-If you’re using AWS, it will have to support signature v2, not v4. We've found DigitalOcean to work well also. The bucket has to be publicly readable; allow CORS from `*` origins, and allow `*` headers. Your provider should have details on setting access permissions and CORS.
+### 1. Bucket Setup
 
-### Add your credentials: Landscape
+If you’re using AWS, it will have to support signature v2, not v4. We've found DigitalOcean's Spaces to work well also. The bucket has to be publicly readable, allow CORS from `*` origins, allow GET and PUT methods, and allow `*` headers. Your provider should have details on setting access permissions and CORS.
+
+### 2. Add your credentials: Landscape
 
 Navigate to your `https://<your-ship-url>/~profile/settings`, or click your sigil in the upper-right corner of the window. Fill out the **S3 Credentials** and **S3 Buckets** sections and you're all set!
 
-### Add your credentials: Dojo
+### 2. Add your credentials: Dojo
 
 Once you have gotten your bucket setup, poke the `s3-store` on your ship with your details. You can do this in Dojo or in web Dojo.
 
 ```
-:s3-store|set-endpoint 'endpoint.mys3provider.com’
-:s3-store|set-access-key-id ‘MYACCESSKEYID'
-:s3-store|set-secret-access-key ‘MYSECRETACCESSKEY’
-:s3-store|set-current-bucket ‘yourbucketname'
+:s3-store|set-endpoint 'endpoint.mys3provider.com'
+:: AWS endpoint example: s3-us-west-2.amazonaws.com
+:: Digital Ocean endpoint example: sfo2.digitaloceanspaces.com
+:s3-store|set-access-key-id 'MYACCESSKEYID'
+:s3-store|set-secret-access-key 'MYSECRETACCESSKEY'
+:s3-store|set-current-bucket 'yourbucketname'
 ```
 
 Done! If you need to peek at s3-store’s state, you can always run :s3-store +dbug (inside Dojo, not web Dojo, unfortunately). You’ll see the additional functionality appear in Groups and Chat.
