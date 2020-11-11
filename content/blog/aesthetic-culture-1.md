@@ -6,7 +6,7 @@ date = 2020-11-12
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."
 author = "Nikolai Mallett"
 ship = "~nartes-fasrum"
-image = "https://media.urbit.org/site/posts/essays/save-the-planet.jpg"
+image = "https://media.urbit.org/site/posts/essays/help-the-environment.jpg"
 +++
 
 *This post is the first in a series of digests centered on art produced within and about Urbit by a member of the community, ~nartes-fasrum. Monthly digests will be available within the Urbit Community group in Landscape, and will occasionally be compiled here on the blog to give you a sneak peek at some of what’s happening on the network. Enjoy! ~wolref-podlex*
