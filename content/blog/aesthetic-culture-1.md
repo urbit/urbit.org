@@ -96,4 +96,5 @@ No discussion of Urbit art would be complete without mentioning [~norsyr-'s Canv
 Something that's become quickly evident with the addition of background images to Landscape is that people love to customize their ship's appearance and make it feel more like home. To close things out, we're providing a pair of backgrounds — one darker, one lighter — for use on your ship (or your desktop, should you so desire).
 
 ![A moody Martian city](https://i.imgur.com/7Ot9Hcu.jpg)
+
 ![A bright outing in a young ship](https://i.imgur.com/wFKt2EW.jpg)
