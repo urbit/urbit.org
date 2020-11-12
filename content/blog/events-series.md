@@ -6,7 +6,14 @@ date = 2020-10-30
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."
 author = "Lane Rettig"
 ship = "~naplet-hildec"
+image = "https://media.urbit.org/site/posts/essays/bau.jpg"
 +++
+
+<br>
+
+![people gathered](https://media.urbit.org/site/posts/essays/bau.jpg)
+
+<br>
 
 *TL;DR: Urbit is launching a series of community events, the first of which is a developer call taking place on Thursday, November 5 at 9am PT. [Sign up here](https://www.meetup.com/urbit-sf/events/274279522/), and read on for all of the details.*
 
