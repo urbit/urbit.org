@@ -2,18 +2,11 @@
 title = "Interplanetary Commerce"
 slug = "interplanetary-commerce"
 date = 2020-10-20
-description = "The way we see it, hosting is the most important thing, next to Landscape, that Tlon can do to help Urbit continue toward widespread adoption."
+description = "We invite entrepreneurs of all stripes to join in the feeding frenzy."
 [extra]
 author = "Christian Langalis"
 ship = "~pindut-timmut"
-image ="https://storage.googleapis.com/media.urbit.org/site/posts/essays/200930-hosting-by-tlon.jpg"
 +++
-
-<br>
-
-![Ocean](https://storage.googleapis.com/media.urbit.org/site/posts/essays/200930-hosting-by-tlon.jpg)
-
-<br>
 
 One year ago, we started [integrating](https://urbit.org/blog/urbit-and-bitcoin/) Bitcoin into Urbit to be an OS-level primitive for money. Our initial goal: building a wallet equally sovereign and ergonomic. The first public version, releasing in Q1 2021, will have a broad set of capabilities including ship-to-ship payments, hardware wallet support, and full node integration. 
 
