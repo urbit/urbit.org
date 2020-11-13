@@ -35,7 +35,7 @@ To that end, I wrote [the Art by Urbit proposal](https://grants.urbit.org/propos
 
 A sweet poem about the potential for Martian felines is theirs as well:
 
-[! A brief poem regarding cats on Mars](https://pbs.twimg.com/media/Ef_KTbqWAAAHN-k.jpg)
+![A brief poem regarding cats on Mars](https://pbs.twimg.com/media/Ef_KTbqWAAAHN-k.jpg)
 
 ## ~litmus-ritten
 
