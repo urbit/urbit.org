@@ -232,6 +232,8 @@ Or, if you'd prefer to copy your key in, you can run:
 
 Either command will create a directory called `sampel-palnet/` and begin building your ship. It may take a few minutes.
 
+Dojo might be unresponsive for some time (minutes) during first boot, for example you might see a `<<http>>` or `<<behn>>` spinner and keyboard is unresponsive.
+
 When your ship is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo.
 
 To shut down your ship, use `Ctrl-D`. To start your ship up again, run the following from your `urbit` directory:
