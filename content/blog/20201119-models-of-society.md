@@ -1,9 +1,8 @@
 +++
 title = "Models of Society"
-description = ""
+description = "Conversations compose society. What composes conversation&mdash;how do we digitize it in a way that enhances society without imposing upon it? How do we form this new medium, both to facilitate natural human behavior and to inspire the best of it?"
 date = 2020-11-19
 [extra]
-description = ""
 author = "Tyler Shuster"
 ship = "~radbur-sivmus"
 image = "https://media.urbit.org/site/posts/essays/cochno-stone.png"
