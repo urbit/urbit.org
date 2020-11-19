@@ -578,15 +578,15 @@ Our S3 support lets you store credentials for your S3 object storage buckets on 
 
 To enable S3 support on your ship you'll need to first set up a bucket, and then add its credentials to Landscape using *either* Landscape or the Dojo.
 
-### 1. Bucket Setup
+### Bucket Setup
 
 If you’re using AWS, it will have to support signature v2, not v4. We've found DigitalOcean's Spaces to work well also. The bucket has to be publicly readable, allow CORS from `*` origins, allow GET and PUT methods, and allow `*` headers. Your provider should have details on setting access permissions and CORS.
 
-### 2. Add your credentials: Landscape
+### Add your credentials: Landscape
 
 Navigate to your `https://<your-ship-url>/~profile/settings`, or click your sigil in the upper-right corner of the window. Fill out the **S3 Credentials** and **S3 Buckets** sections and you're all set!
 
-### 2. Add your credentials: Dojo
+### Add your credentials: Dojo
 
 Once you have gotten your bucket setup, poke the `s3-store` on your ship with your details. You can do this in Dojo or in web Dojo.
 
