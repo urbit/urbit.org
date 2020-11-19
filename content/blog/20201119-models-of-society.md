@@ -1,18 +1,12 @@
 +++
 title = "Models of Society"
-description = "Conversations compose society. What composes conversation&mdash;how do we digitize it in a way that enhances society without imposing upon it? How do we form this new medium, both to facilitate natural human behavior and to inspire the best of it?"
+description = "Conversations compose society. What composes conversation — how do we digitize it in a way that enhances society without imposing upon it? How do we form this new medium, both to facilitate natural human behavior and to inspire the best of it?"
 date = 2020-11-19
 [extra]
 author = "Tyler Shuster"
 ship = "~radbur-sivmus"
 image = "https://media.urbit.org/site/posts/essays/cochno-stone.png"
 +++
-
-<br>
-
-![Ludovic Maclellan Mann examining the Cochno Stone](https://media.urbit.org/site/posts/essays/cochno-stone.png)
-
-<br>
 
 *I had used Facebook and Google for my entire adult life. I knew they were toxic but I didn't know why. For a few weeks I tried to create a website that would scrape data from Facebook’s API and push data back, puppetting it from my own server. But as I stared headlong into the ever-shifting darkness of the modern web, I despaired and abandoned my attempt. Less than a year later I heard about Urbit. Technically, it went way over my head&mdash;but socially I knew exactly what it was, what it always had to be, why it was a discovery and not an invention, a place and not a product. I've watched the settlers there for four years, only just now using the opportunity of the pandemic to swim to this new landscape and gaze upon this young nation, this digital city, this urbis ec bit. I do not work for Tlon. I just live here.*
 
@@ -21,6 +15,12 @@ image = "https://media.urbit.org/site/posts/essays/cochno-stone.png"
 All people like to talk. Society is built by talking. In this&mdash;the year of our Lord two thousand and twenty&mdash;for many (maybe most) talking means typing on computers: handheld, laptop, or desktop. Computers can do all sorts of interesting things, like aid in designing buildings or simulate protein folding&mdash;fundamentally, a computer is a machine for doing math really fast. But computers can be networked, which turns them into tools for communication. Because society runs on talking and because computers enable us to do that, the most common thing that computers end up doing is to transmit human thoughts in text. Normal people call this writing, which is a kind of talking. Let’s call it messaging. When we think about building a good computer&mdash;and computer network&mdash;one that serves society in the best ways needs to do messaging well. Only a small percentage of people will regularly do anything else. (Urbit does serve those needs but I will leave that explanation to more capable minds.)
 
 ## Modes of Messaging
+
+<br>
+
+![Ludovic Maclellan Mann examining the Cochno Stone](https://media.urbit.org/site/posts/essays/cochno-stone.png)
+
+<br>
 
 In general, technology serves humanity as a kind of appendage&mdash;instead of thinking new thoughts or acting on its own, it does what we command. Technology never creates new social structures&mdash;it merely makes existing ones easier, or it facilitates the creation of new ones. We use our tools to expand our capacities, and once we are capable of doing more, we can imagine new things to do. Inventing the wheel did not invent motorized transportation&mdash;but it did facilitate it and it was a necessary step, even an inspirational one. Similarly, the invention of writing made new forms of human interaction and new tools for organization possible.
 
