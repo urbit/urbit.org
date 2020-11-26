@@ -40,14 +40,14 @@ Users hosted by Tlon will not need to take any action. We’re handling everythi
 
 ## I’m self-hosted—what do I need to do?
 
-Follow these steps:
-1. Download your [keyfile from Bridge](https://urbit.org/using/install/#keyfile).
-2. Shut down your ship
-3. [Archive and move your old pier](https://urbit.org/using/operations/using-your-ship/#moving-your-pier) (this is the directory that contains your urbit event log)
-4. [Download the latest version](@/using/install.md#macos-and-linux) of the urbit binary
-5. [Boot your ship with the new keyfile](https://urbit.org/using/install/#boot-your-planet)
+Simply use the `flagday` tool that we will provide. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data.
 
-If you are using the `flagday` tool that we will provide, it will perform all of these actions on your behalf, as well as exporting and reimporting your data.
+If you want to do the work manually, follow these steps:
+1. Download your [keyfile from Bridge](@/using/install/#keyfile).
+2. Shut down your ship.
+3. [Archive and move your old pier](@/using/operations/using-your-ship/#moving-your-pier) (this is the directory that contains your urbit event log).
+4. [Download the latest version](@/using/install.md#macos-and-linux) of the urbit binary.
+5. [Boot your ship with the new keyfile](@/using/install/#boot-your-planet).
 
 ## What happens to my data?
 
