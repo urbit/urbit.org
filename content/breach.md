@@ -26,17 +26,13 @@ No. A network breach subsumes all personal breaches, so please don’t also perf
 
 ## What can I expect?
 
-If you are using hosting, your ship will process the breach automatically.  If you are using a self-hosted ship, you need to affirmatively perform the breach using the instructions below.
+If you are using a self-hosted ship, you need to affirmatively perform the breach using the instructions below. If you are using hosting, your ship will process the breach automatically.
 
 In either case, the breach will render your ship unavailable for roughly one hour.
 
 ## Do I need to do anything with Bridge/Ethereum?
 
 There are no Ethereum transactions necessary for this breach.
-
-## I’m hosted by Tlon, or someone else—what do I need to do?
-
-Users hosted by Tlon will not need to take any action. We’re handling everything on our end. If you’re hosted by another provider, you should contact that provider for instructions.
 
 ## I’m self-hosted—what do I need to do?
 
@@ -48,6 +44,10 @@ If you want to do the work manually, follow these steps:
 3. [Archive and move your old pier](https://urbit.org/using/operations/using-your-ship/#moving-your-pier) (this is the directory that contains your urbit event log).
 4. [Download the latest version](@/using/install.md#macos-and-linux) of the urbit binary.
 5. [Boot your ship with the new keyfile](https://urbit.org/using/install/#boot-your-planet).
+
+## I’m hosted by Tlon, or someone else—what do I need to do?
+
+Users hosted by Tlon will not need to take any action. We’re handling everything on our end. If you’re hosted by another provider, you should contact that provider for instructions.
 
 ## What happens to my data?
 
@@ -64,5 +64,3 @@ We are optimistic that this will be our last breach, as all future updates to th
 ## What happens if I don’t breach?
 
 Your Urbit will fall out of communication with the rest of the Urbit network which has performed the breach. This means that updates (OTAs) will no longer process and you won’t be able to communicate with anyone else on the network.
-
-
