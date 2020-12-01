@@ -13,7 +13,7 @@ This tool and documentation on its usage will be made available on or before ~20
 
 This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/tloncorporation/).
 
-*If you are self-hosting your ship, following these instructions is mandatory in order to communicate with the rest of the network.* Read on for more details.
+*If you are self-hosting your ship, following these instructions is mandatory in order to communicate with the rest of the network.*
 
 ## When is the next breach?
 
