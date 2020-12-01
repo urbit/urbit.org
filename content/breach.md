@@ -3,9 +3,25 @@ title = "~2020.12 Network Breach"
 template = "page_indiced.html"
 +++
 
+## TL;DR
+
+A network breach is coming up on ~2020.12.7.
+
+Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`.
+
+This tool and documentation on its usage will be made available on or before ~2020.12.4.
+
+This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/tloncorporation/).
+
+*If you are self-hosting your ship, following these instructions is mandatory in order to communicate with the rest of the network.* Read on for more details.
+
 ## When is the next breach?
 
-The next breach is scheduled for early December.
+The target date is Monday December 7th, but it may happen on Tuesday December 8th.
+
+## How do I get updates about what's going on throughout the process?
+
+We'll be adding new information to this document as soon as there's anything to share. Updates will be broadcasted via Twitter [here](https://twitter.com/tloncorporation/) as well.
 
 ## What is a “network breach”?
 
@@ -36,7 +52,9 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
-Simply use the `flagday` tool that we will provide. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data.
+Simply use the `flagday` tool that will be provided. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data.
+
+`flagday` will become available for use on or before ~2020.12.4.
 
 If you want to do the work manually, follow these steps:
 1. Download your [keyfile from Bridge](https://urbit.org/using/install/#keyfile).
@@ -64,3 +82,7 @@ We are optimistic that this will be our last breach, as all future updates to th
 ## What happens if I don’t breach?
 
 Your Urbit will fall out of communication with the rest of the Urbit network which has performed the breach. This means that updates (OTAs) will no longer process and you won’t be able to communicate with anyone else on the network.
+
+## How do I get help if I need it?
+
+If you're in a tight spot or confused, reach out to us at support@urbit.org.
