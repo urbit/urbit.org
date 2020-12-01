@@ -57,4 +57,6 @@ The combination of version negotiation and data migration should afford us the a
 
 We have been working with auditors since this summer and should have a report ready to publish in the next few weeks. Both version negotiation and data migration are in testing and are ready to be deployed.
 
-By year’s end, we’ll put up another post summarizing our fixes and collecting all the references to these projects. Then, in the first week of 2021, we’ll hold a galaxy vote to ratify that these projects are complete.
+Our goal is to have all of this work complete by `~2020.12.10`. This means we should be able to start a galaxy vote right around that time. Galaxy votes (as specified in the contracts) run for a month, which should have this whole process ending on `~2021.1.10`.
+
+It's going to be an exciting couple of weeks!
