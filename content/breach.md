@@ -50,7 +50,7 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
-**Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. You can find the `flagday` script [here](https://gist.github.com/philipcmonk/8e3d095b9545069237c759cd9aad32c2). Usage instructions are provided in the comments at the top of the file. It's safe to use `flagday` now, but **it's not necessary to do so until after the breach.**
+**Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. You can find the `flagday` script [here](https://gist.github.com/philipcmonk/8e3d095b9545069237c759cd9aad32c2). Usage instructions are provided in the comments at the top of the file. **It's not necessary to run `flagday` until after the breach**. It's safe to try it out now to get comfortable with the process if you want, but you'll have to run it again after the breach.
 
 Alternatively, you can perform the migration manually (see below).
 
