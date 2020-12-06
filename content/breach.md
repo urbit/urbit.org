@@ -5,11 +5,9 @@ template = "page_indiced.html"
 
 ## TL;DR
 
-A network breach is coming up on ~2020.12.7.
+A network breach is coming up on Tuesday, ~2020.12.8.
 
-Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`.
-
-This tool and documentation on its usage will be made available on or before ~2020.12.4.
+Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday` (details below).
 
 This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/tloncorporation/).
 
@@ -17,7 +15,7 @@ This document will be kept up-to-date throughout the process, and updates will b
 
 ## When is the next breach?
 
-The target date is Monday December 7th, but it may happen on Tuesday December 8th.
+The target date is Tuesday December 8th, but it may happen on Tuesday December 8th.
 
 ## How do I get updates about what's going on throughout the process?
 
@@ -52,11 +50,14 @@ There are no Ethereum transactions necessary for this breach.
 
 ## I’m self-hosted—what do I need to do?
 
-Simply use the `flagday` tool that will be provided. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data.
+**Simply use the `flagday` tool that we have provided**. It will perform all the relevant actions on your behalf, as well as exporting and reimporting your data. You can find the `flagday` script [here](https://gist.github.com/philipcmonk/8e3d095b9545069237c759cd9aad32c2). Usage instructions are provided in the comments at the top of the file. It's safe to use `flagday` now, but **it's not necessary to do so until after the breach.**
 
-`flagday` will become available for use on or before ~2020.12.4.
+Alternatively, you can perform the migration manually (see below).
 
-If you want to do the work manually, follow these steps:
+## Can I perform the migration manually?
+
+Yes—follow these steps:
+
 1. Download your [keyfile from Bridge](https://urbit.org/using/install/#keyfile).
 2. Shut down your ship.
 3. [Archive and move your old pier](https://urbit.org/using/operations/using-your-ship/#moving-your-pier) (this is the directory that contains your urbit event log).
