@@ -5,6 +5,8 @@ template = "page_indiced.html"
 
 ## TL;DR
 
+*Last updated ~2020.12.6*
+
 A network breach is coming up on Tuesday, ~2020.12.8.
 
 Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday` (details below).
@@ -15,7 +17,7 @@ This document will be kept up-to-date throughout the process, and updates will b
 
 ## When is the next breach?
 
-The target date is Tuesday December 8th, but it may happen on Tuesday December 8th.
+The target date is Tuesday December 8th.
 
 ## How do I get updates about what's going on throughout the process?
 
@@ -56,7 +58,7 @@ Alternatively, you can perform the migration manually (see below).
 
 ## Can I perform the migration manually?
 
-Yes—follow these steps:
+Yes, by following these steps (note that these steps **will not** back up your data as is the case with `flagday`):
 
 1. Download your [keyfile from Bridge](https://urbit.org/using/install/#keyfile).
 2. Shut down your ship.
