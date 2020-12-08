@@ -7,7 +7,7 @@ template = "page_indiced.html"
 
 *Last updated ~2020.12.8*
 
-A network breach is happening this afternoon (in Pacific Time), ~2020.12.8.
+A network breach is happening this morning at 10am PST (~2020.12.8).
 
 Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Details on its usage can be found below.
 
@@ -17,7 +17,7 @@ This document will be kept up-to-date throughout the process, and updates will b
 
 ## When is the next breach?
 
-Today.
+Today at 10am PST (~2020.12.8).
 
 ## How do I get updates about what's going on throughout the process?
 
