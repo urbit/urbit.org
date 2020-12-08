@@ -7,11 +7,11 @@ template = "page_indiced.html"
 
 *Last updated ~2020.12.7*
 
-A network breach is coming up on Tuesday, ~2020.12.8.
+A network breach is coming up on Tuesday, ~2020.12.8 at 10am PST.
 
 Unlike past breaches, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Currently a test version of `flagday` and details about its usage can be found below.
 
-This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/tloncorporation/).
+This document will be kept up-to-date throughout the process, and updates will be issued via Twitter [here](https://twitter.com/zodisok/).
 
 *If you are self-hosting your ship, following these instructions is mandatory in order to communicate with the rest of the network.*
 
@@ -21,7 +21,7 @@ The target date is Tuesday December 8th.
 
 ## How do I get updates about what's going on throughout the process?
 
-We'll be adding new information to this document as soon as there's anything to share. Updates will be broadcasted via Twitter [here](https://twitter.com/tloncorporation/) as well.
+We'll be adding new information to this document as soon as there's anything to share. Updates will be broadcasted via Twitter [here](https://twitter.com/zodisok/) as well.
 
 ## What is a “network breach”?
 
