@@ -32,16 +32,16 @@ Regardless of your Urbit ID, you'll want the Urbit binary installed first. The U
 #macOS:
 mkdir urbit
 cd urbit
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-darwin.tgz
-tar xzf urbit-v0.10.8-darwin.tgz
-./urbit-v0.10.8-darwin/urbit
+wget --content-disposition https://urbit.org/install/mac/latest
+tar zxvf ./darwin.tgz --strip=1
+./urbit
 
 #Linux:
 mkdir urbit
 cd urbit
-curl -O https://bootstrap.urbit.org/urbit-v0.10.8-linux64.tgz
-tar xzf urbit-v0.10.8-linux64.tgz
-./urbit-v0.10.8-linux64/urbit
+wget --content-disposition https://urbit.org/install/linux64/latest
+tar zxvf ./linux64.tgz --strip=1
+./urbit
 ```
 
 Once you've followed the appropriate install instructions, you can check if everything went right by running the `./urbit` command. Installation was successful if you get a block of output that begins with the line below:
