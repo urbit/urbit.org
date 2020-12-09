@@ -47,10 +47,11 @@ Since Arvo is still quite young, we can’t quite get to all the thornier aspect
 That said, our userspace infrastructure is maturing, so we could at least organise the APIs to those agents; and we could at least slow the development cycle on those agents in favour of the more flexible components of the stack. The front-end specific features, for example, can be deployed on different ships without side effects for other users.
 
 So now, before we could launch a stable stream, we had some things to do first:
-**We wanted to provide assurance that the userspace suite is relatively stable.** All our remaining stores (invite-store, metadata-store, and contact-store) needed to be modernised to use the same libraries and utilities inside Arvo as newer userspace applications.
-**We wanted all our applications to be using graph-store.** If we were going to migrate the entire network to a new userspace model, we shouldn’t undermine the new release cycle process and make it more difficult to test and deploy to meet higher user expectations. We needed to  migrate everything first.
-**We wanted to release the notification-store**. After the October 2020 groups release, Landscape simply wouldn’t be complete without it.
-Finally, **we wanted all of Landscape to use the [Indigo component library](https://github.com/urbit/indigo-react).** Landscape shipped with each application using its own build with handwritten, bespoke DOM components. Once we moved to a single-page application architecture in June 2020, we wanted the same guaranteed consistency for both back-end and front-end code.
+
+- **We wanted to provide assurance that the userspace suite is relatively stable.** All our remaining stores (invite-store, metadata-store, and contact-store) needed to be modernised to use the same libraries and utilities inside Arvo as newer userspace applications.
+- **We wanted all our applications to be using graph-store.** If we were going to migrate the entire network to a new userspace model, we shouldn’t undermine the new release cycle process and make it more difficult to test and deploy to meet higher user expectations. We needed to  migrate everything first.
+- **We wanted to release the notification-store**. After the October 2020 groups release, Landscape simply wouldn’t be complete without it.
+- Finally, **we wanted all of Landscape to use the [Indigo component library](https://github.com/urbit/indigo-react).** Landscape shipped with each application using its own build with handwritten, bespoke DOM components. Once we moved to a single-page application architecture in June 2020, we wanted the same guaranteed consistency for both back-end and front-end code.
 
 Most of these are now accomplished; the remaining tasks are awaiting some final tests and UX work. We’re aiming for a stable stream of Landscape to deploy **December 11, 2020**.
 
