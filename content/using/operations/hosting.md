@@ -83,10 +83,11 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
- - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled.
+ - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web ports when the firewall is enabled.
    ```
    $ sudo ufw allow OpenSSH
    $ sudo ufw allow www
+   $ sudo ufw allow https
    ```
  - Next we'll turn on the firewall.
    ```
@@ -101,7 +102,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
 Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/using/install.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
  - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/docs/tutorials/guide-to-breaches.md) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
- - Next we're going to install Urbit on the server and permit it to bind to the web port:
+ - Next we're going to install Urbit on the server and permit it to bind to the web ports:
    ```
    $ ssh your_user@your_domain
    $ mkdir urbit
