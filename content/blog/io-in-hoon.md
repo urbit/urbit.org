@@ -280,7 +280,7 @@ We're in a bit of a bind, though: Jael has to be a state machine. The solution i
 
 This thread has a definite purpose: given the most recent block number we already know about, fetch all the PKI transactions since then. The function signature is:
 
-  syncEthereum oldBlockNumber -> IO [newBlockNumber, newTxs]
+    syncEthereum oldBlockNumber -> IO [newBlockNumber, newTxs]
 
 Jael runs this thread every five minutes and, if it succeeds, then we update our block number and PKI state. If the thread fails, gets stuck, or we need to upgrade it, we just kill the old thread and start a new one. Again, a few extra HTTP requests don’t matter.
 
