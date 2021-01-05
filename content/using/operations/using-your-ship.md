@@ -1349,50 +1349,7 @@ Example:
 
 ### Merge strategies
 
-`%init` - used if it's the first commit to a desk. Also can be used to
-"reinitialize" a desk – revision numbers keep going up, but the new
-revision isn't necessarily a descendent of the previously numbered
-version, allowing merges to be rerun.
-
-`%this` - keep what's in Bob's desk, but join the ancestry.
-
-`%that` - take what's in Alice's desk, but join the ancestry. This is
-the reverse of `%this`. This is different from `%init` because the new
-commit has both sides in its ancestry.
-
-`%fine` - "fast-forward" merge. This succeeds if and only if one head is in the
-ancestry of the other.
-
-`%meet`, `%mate`, and `%meld` - find the most recent common ancestor to
-use as our merge base.
-
-A `%meet` merge only succeeds if the changes from the merge base to
-Alice's head (hereafter, "Alice's changes") are in different files than
-Bob's changes. In this case, the parents are both Alice's and Bob's
-heads, and the data is the merge base plus Alice's changed files plus
-Bob's changed files.
-
-A `%mate` merge attempts to merge changes to the same file when both
-Alice and Bob change it. If the merge is clean, we use it; otherwise, we
-fail. A merge between different types of changes – for example,
-deleting a file vs changing it – is always a conflict. If we succeed,
-the parents are both Alice's and Bob's heads, and the data is the merge
-base plus Alice's changed files plus Bob's changed files plus the merged
-files.
-
-A `%meld` merge will succeed even if there are conflicts. If there are
-conflicts in a file, then we use the merge base's version of that file,
-and we produce a set of files with conflicts. The parents are both
-Alice's and Bob's heads, and the data is the merge base plus Alice's
-changed files plus Bob's changed files plus the successfully merged
-files plus the merge base's version of the conflicting files.
-
-`%auto` - meta-strategy. Check to see if Bob's desk exists, and if it
-doesn't we use an `%init` merge. Otherwise, we progressively try
-`%fine`, `%meet`, and `%mate` until one succeeds. If none succeed, we
-merge Bob's desk into a scratch desk. Then, we merge Alice's desk into
-the scratch desk with the `%meld` option to force the merge. Finally, we
-annotate any conflicts, if we know how.
+See [@/docs/tutorials/arvo/clay.md#merge-strategies](Clay merge strategies).
 
 ### Manipulation
 

@@ -32,7 +32,7 @@ Regardless of your Urbit ID, you'll want the Urbit binary installed first. The U
 #macOS:
 mkdir urbit
 cd urbit
-wget --content-disposition https://urbit.org/install/mac/latest
+curl -JLO https://urbit.org/install/mac/latest
 tar zxvf ./darwin.tgz --strip=1
 ./urbit
 
@@ -55,15 +55,13 @@ To access your Urbit via HTTP on port 80 on Ubuntu, you may need to run the foll
 sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
-(Where `urbit` is the urbit executable downloaded with `curl` prior)
+(Where `urbit` is the urbit executable downloaded with `wget` prior)
 
 ### Windows
 
 > Please note that this method of installing Urbit is experimental, and we may not be able to assist you if you encounter issues related to WSL 2.
 
-These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS.
-
-Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above.
+Urbit cannot run on Windows itself, but there is a convenient way to run a Linux distro using the [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) on Windows 10. Install the Windows Subsystem for Linux 2 and open a Linux terminal in Windows, then follow the Linux installation instructions above. These instructions have been tested and verified for WSL 2 + Ubuntu 18.04 LTS, as demonstrated in `~sitful-hatred`'s step-by-step setup guide [here](https://subject.network/posts/urbit-wsl2/).
 
 For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
 
@@ -259,7 +257,7 @@ First shut down your ship, by running the following in dojo (or with `Ctrl-D`).
 Next download and extract the most recent binary from inside your `urbit` directory:
 ```sh
 #macOS:
-wget --content-disposition https://urbit.org/install/mac/latest
+curl -JLO https://urbit.org/install/mac/latest
 tar zxvf ./darwin.tgz --strip=1
 
 #Linux:
