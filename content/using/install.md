@@ -81,7 +81,7 @@ To boot a comet, go into the command line and run the following command from the
 ./urbit -c mycomet
 ```
 
-Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, will spin out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
+Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, it will spit out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
 
 ```
 ames: on localhost, UDP 31337.
