@@ -127,6 +127,27 @@ Good, your Dojo is working correctly. Now let's run our first useful command in 
 
 The `>=` output means that a command was successful. Now you can see your ship's files in its Unix directory.
 
+### Updating your comet
+
+The Urbit binary comes with a somewhat recent release of the Urbit OS, but ships can update automatically ("over the air"), so new binaries aren't necessary every time it's updated. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
+
+You can enable updates for your comet by typing `|ota (sein:title our now our) %kids` into Dojo and pressing Enter.
+
+```
+> |ota (sein:title our now our) %kids
+>=
+```
+
+If you want to make sure you'll get updates, you can check by typing `|ota` with no arguments:
+
+```
+~sampel_marzod:dojo> |ota
+OTAs enabled from %kids on ~marzod
+use |ota %disable or |ota ~sponsor %kids to reset it
+> |ota
+>=
+```
+
 ### Using Landscape
 
 Landscape is the Urbit web interface, and it's the best way to interact with your ship. To access Landscape:
