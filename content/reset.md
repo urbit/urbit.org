@@ -5,7 +5,7 @@ template = "page_indiced.html"
 
 ## TL;DR
 
-*Last updated ~2020.1.14*
+*Last updated ~2021.1.14*
 
 A network reset happened on ~2020.12.8 — you may need to take action.
 
