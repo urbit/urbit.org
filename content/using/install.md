@@ -6,9 +6,9 @@ template = "page_indiced.html"
 aliases = ["/docs/getting-started/"]
 +++
 
-Urbit is not for everyday users yet — but if you're technically inclined or generally intrepid, feel free to try it out. It's a good place to explore.
+This guide covers how to set up and install your own Urbit. Running Urbit on your own is somewhat technical, so if you're not technically inclined you may want to consider a [hosting provider](#hosting-providers).
 
-## Overview
+## Overview 
 
 There are two major components of the Urbit ecosystem: **Urbit OS** and **Urbit ID**.
 
@@ -146,23 +146,34 @@ From the Urbit Community group you can join a variety of chatrooms, notebooks, a
 
 ## Setting up a planet {#id}
 
-If you have an Urbit ID, you'll use the [Bridge](https://bridge.urbit.org) client to get your ship's *keyfile* before you can [boot your ship](#booting-your-ship).  Your keyfile is a cryptographic secret that allows your Urbit instance to authenticate itself on the network, so it is required the first time you boot your ship. Your keyfile is deterministically derived from your other cryptographic secrets.
+There are two options for getting started with a planet. You can purchase an Urbit ID on your own and run Urbit yourself, or you can purchase a planet and hosting services through a [hosting provider](#hosting-providers).
 
-### Purchase an Urbit ID
+### Acquire an Urbit ID
 
-Tlon doesn't currently sell or distribute Urbit IDs, but there are a few ways to get your own:
+There are a few ways to get an Urbit ID:
 
 - Getting an invitation from a friend.
-- Purchasing an Urbit ID, including hosting, from a third-party turnkey solution such as [geturbitid.com](https://www.geturbitid.com/).
-- Manually setting up and hosting an Urbit ID purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), or [Urbit Marketplace](https://urbitmarketplace.com/).
+- Purchasing an Urbit ID, including hosting, from a [hosting provider](#hosting-providers) such as [geturbitid.com](https://www.geturbitid.com/).
+- Manually setting up and hosting an Urbit ID purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
 Note that when you buy a planet, you should ensure with the provider that the star is operating. If you already have a planet and need to escape a non-operational star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
 
-Tlon occasionally selects candidates to distribute invitations, and users operating galaxies and stars can spawn and distribute a finite number of stars and planets, respectively.
+### Hosting Providers {#hosting-providers}
+
+Hosting providers will often sell you a planet and run your ship for you in a data center. This simplifies the process of setting up and maintaining your Urbit, but the service will probably cost a regular fee.
+
+Urbit is designed to be portable. This means that if you sign up for hosting now but later want to cease service and run your Urbit yourself, you should be able to work with your hosting provider to obtain all of your data and boot your ship back up without losing anything.
+
+Utilizing hosting does mean that you're trusting your provider with your data, but so long as you have an Urbit ID, you'll always own your identity.
+
+Current hosting providers are:
+
+- [Tlon Corporation](https://tlon.io): Tlon is the creator of Landscape and is primarily responsible for the creation and maintenance of the Urbit project itself.
+- [Get an Urbit ID](https://www.geturbitid.com/): Get an Urbit ID was the first hosting provider and is run by a member of the Urbit community.
 
 ### About your Urbit ID wallet
 
-Your Urbit ID is actually yours. As long as you control its cryptographic secrets, nobody can take it away from you. That's why it's important to know a little bit about the cryptographic architecture of Urbit secrets.
+Your Urbit ID is yours. As long as you control its cryptographic secrets, nobody can take it away from you. That's why it's important to know a little bit about the cryptographic architecture of Urbit secrets.
 
 Urbit ID secrets operate as a system of separate but hierarchically related Ethereum key-pairs. For any given ID, this system of key-pairs is referred to as a **Hierarchical Deterministic (HD) Wallet**. the Urbit HD wallet. Each of these Ethereum addresses have different powers over the same identity, from setting networking keys for communicating in the Urbit network to transferring ownership of identities. Important elements of the HD wallet:
 
