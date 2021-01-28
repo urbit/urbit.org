@@ -31,72 +31,6 @@ We encourage outside contributors to become a part of the project. The best way 
 
 [Tlon](https://tlon.io), a San Francisco-based company, is the primary developer of Urbit, along with [various independent developers](https://github.com/urbit/urbit/graphs/contributors) and [urbit.live](https://urbit.live).
 
-## Objections to Urbit
-
-### Who is Curtis? {#who-is-curtis}
-
-Urbit started back in 2002 as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
-
-In early 2019, Curtis left the Urbit project and gave all of his voting interest (both as address space and voting shares in the company) back to Tlon. He retains a non-voting, minority interest in both the address space and the company — but is not involved in the day-to-day development or operations.
-
-Curtis laid the foundation for Urbit by delivering its first prototype but, since 2013, it has been refined and almost entirely rewritten by a community of developers. No one working on Urbit today had anything to do with Curtis’s writing. For the most part, we couldn’t be less interested in it.
-
-The community of people who build Urbit have widely varied ways of thinking and looking at the world, but they all share two things: the desire to build neutral infrastructure for all people and to think from first principles about hard problems. We welcome spirited debate and disagreement as a primary tool for refining our work. Successful infrastructure, we think, serves all people — no matter their background, culture, or worldview.
-
-### Why aren't there more planets? {#more-planets}
-
-Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID simply expands by squaring the size of the last tier. That is, there are <span class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md), <span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span> [planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons are tethered to their planet, unlike stars and planets.
-
-This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
-
-The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
-
-The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
-
-It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
-
-(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
-
-### Why do you use Ethereum? {#why-eth}
-
-In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most widely deployed, most secure, and best documented general purpose blockchain, and it remains so today. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
-
-One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be completely secure.
-
-### Why is is currently expensive to acquire a planet?
-
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
-
-Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
-
-In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
-
-We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
-
-### Why is Hoon so weird? {#why-hoon}
-
-There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](@/docs/glossary/hoon.md), for the most part, is weird by design, but there are a few things about it we’d like to clean up.
-
-The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical language. But the learning curve can be a bit high.
-
-The standard library and naming is something we’ve discussed changing, and it could happen. It’s definitely up for debate whether or not the four-letter naming convention works well. The vanes (kernel modules) have largely moved away from this convention.
-
-The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
-
-Another option is to treat [Urbit as an API](@/using/integrating-api.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
-
-### What is the point of Nock? {#why-nock}
-
-The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
-
-It’s true that Nock, without jets, is slow. With the ability to call out to a native function, it’s not so bad. This is done by our runtime, [Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
-
-### Can I host my Urbit with someone else? {#why-hosting}
-
-Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) to proivde hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
-
-Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low friction process thanks to Urbit's deterministic design.
-
 ## Urbit ID
 
 ### What is Urbit ID? {#what-is-urbit-id}
@@ -396,3 +330,69 @@ Here are a few important points from the bounty and proposal contracts:
 - **Governing law:** The agreement is governed by the laws of the State of California.
 
 Note that these paraphrased points are just for summarization purposes. The language in contract that you receive and sign is the only source of authority for the grant agreement.
+
+## Miscellaneous
+
+### Who is Curtis? {#who-is-curtis}
+
+Urbit started back in 2002 as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
+
+In early 2019, Curtis left the Urbit project and gave all of his voting interest (both as address space and voting shares in the company) back to Tlon. He retains a non-voting, minority interest in both the address space and the company — but is not involved in the day-to-day development or operations.
+
+Curtis laid the foundation for Urbit by delivering its first prototype but, since 2013, it has been refined and almost entirely rewritten by a community of developers. No one working on Urbit today had anything to do with Curtis’s writing. For the most part, we couldn’t be less interested in it.
+
+The community of people who build Urbit have widely varied ways of thinking and looking at the world, but they all share two things: the desire to build neutral infrastructure for all people and to think from first principles about hard problems. We welcome spirited debate and disagreement as a primary tool for refining our work. Successful infrastructure, we think, serves all people — no matter their background, culture, or worldview.
+
+### Why aren't there more planets? {#more-planets}
+
+Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID simply expands by squaring the size of the last tier. That is, there are <span class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md), <span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span> [planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons are tethered to their planet, unlike stars and planets.
+
+This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
+
+The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
+
+The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
+
+It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
+
+(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
+
+### Why do you use Ethereum? {#why-eth}
+
+In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most widely deployed, most secure, and best documented general purpose blockchain, and it remains so today. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
+
+One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be completely secure.
+
+### Why is is currently expensive to acquire a planet?
+
+As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
+
+Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
+
+In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
+
+We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
+
+### Why is Hoon so weird? {#why-hoon}
+
+There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](@/docs/glossary/hoon.md), for the most part, is weird by design, but there are a few things about it we’d like to clean up.
+
+The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical language. But the learning curve can be a bit high.
+
+The standard library and naming is something we’ve discussed changing, and it could happen. It’s definitely up for debate whether or not the four-letter naming convention works well. The vanes (kernel modules) have largely moved away from this convention.
+
+The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
+
+Another option is to treat [Urbit as an API](@/using/integrating-api.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
+
+### What is the point of Nock? {#why-nock}
+
+The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
+
+It’s true that Nock, without jets, is slow. With the ability to call out to a native function, it’s not so bad. This is done by our runtime, [Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
+
+### Can I host my Urbit with someone else? {#why-hosting}
+
+Yes, [Tlon](@/blog/hosting-the-future.md) and [a few others](@/blog/providers.md) began [accepting signups](https://tlon.io) to proivde hosting service in 2020. Under this arrangement, Tlon does all the work of setting up cloud infrastructure and getting your planet up and running, making getting started with Urbit as simple as signing up for an ordinary online service.
+
+Should you one day wish to run your Urbit yourself, any hosting provider ought to offer you the ability to download your [ship](@/docs/glossary/ship.md)'s [pier](@/docs/glossary/pier.md) to your own device and do so. This is a very low friction process thanks to Urbit's deterministic design.
