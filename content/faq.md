@@ -43,6 +43,16 @@ Urbit IDs come in three classes: galaxies, stars, and planets. The length of an 
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the [Urbit OS](#what-is-arvo) network they provide routing and are responsible for distributing software updates.
 
+### Why is is currently expensive to acquire a planet?
+
+As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
+
+Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
+
+In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
+
+We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
+
 ### What is Azimuth? {#what-is-azimuth}
 
 [Azimuth](@/docs/glossary/azimuth.md) is what we call the set of Ethereum contracts that make up a general-purpose decentralized PKI ("public key infrastructure") utilized by Urbit ID. It keeps a record of which Ethereum addresses own which Urbit planets, stars, and galaxies, as well as the public keys associated with those ships.
@@ -92,6 +102,20 @@ Access the Ethereum address that holds the identity you wish to transfer via [Br
 We recommended using [Bridge](https://bridge.urbit.org) for all Urbit ID-related operations. It’s great for managing your identities, as well as for viewing information about identities you don’t own.
 
 Be careful about using online versions of Bridge not hosted on urbit.org. Since Bridge touches your private keys, it can also steal them.
+
+### Why aren't there more planets? {#more-planets}
+
+Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID simply expands by squaring the size of the last tier. That is, there are <span class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md), <span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span> [planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons are tethered to their planet, unlike stars and planets.
+
+This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
+
+The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
+
+The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
+
+It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
+
+(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
 ## Urbit HD Wallet
 
@@ -343,35 +367,11 @@ Curtis laid the foundation for Urbit by delivering its first prototype but, sinc
 
 The community of people who build Urbit have widely varied ways of thinking and looking at the world, but they all share two things: the desire to build neutral infrastructure for all people and to think from first principles about hard problems. We welcome spirited debate and disagreement as a primary tool for refining our work. Successful infrastructure, we think, serves all people — no matter their background, culture, or worldview.
 
-### Why aren't there more planets? {#more-planets}
-
-Urbit is designed to be as simple as possible. The sponsorship tree for Urbit ID simply expands by squaring the size of the last tier. That is, there are <span class="mono">2<sup>8</sup> (256)</span> [galaxies](@/docs/glossary/galaxy.md), <span class="mono">(2<sup>8</sup>)<sup>2</sup> = 2<sup>16</sup> (~65K)</span> [stars](@/docs/glossary/star.md), <span class="mono">(2<sup>16</sup>)<sup>2</sup> = 2<sup>32</sup> (~4B)</span> [planets](@/docs/glossary/planet.md). There are <span class="mono">2<sup>64</sup></span> [moons](@/docs/glossary/moon.md) — but moons are tethered to their planet, unlike stars and planets.
-
-This pattern exists because it’s a simple way to enforce the scarcity of addresses and build a friendly network. When a tier of the address space begins to be populated, we start populating the next tier down. When Urbit nears the limit of <span class="mono">2<sup>32</sup> (4B)</span> planets, we’ll figure out a way to populate the <span class="mono">2<sup>64</sup></span> moons. The galaxies that govern the Urbit ID contracts can always vote to upgrade them — and we expect that they will.
-
-The problem with populating the moons now is that <span class="mono">2<sup>64</sup></span> is a *really, really big* number. We’ll need some way of differentiating between humans and their devices (to prevent devices turning into rogue botnets). But that’s a hard problem, and we prefer to start with the simplest possible solution before solving hard problems. The current scheme works. Once we need to update it, we’ll figure it out.
-
-The number of addresses is in a sort of 'Goldilocks zone' for preventing spam. Too many addresses will result in them being very cheap and thus spammers can just acquire more once they get blocked. Too few addresses and they end up too expensive for the average user. The technical term for what the finite address space bestows upon the network is [Sybil resistance](https://en.wikipedia.org/wiki/Sybil_attack), a very important property for any decentralized network.
-
-It’s also worth noting that, while there are almost 8B people on Earth, there are almost certainly not 8B internet users. Facebook has about 2.5B users, Apple has about 1B. Urbit has a long way to go before we get close to <span class="mono">2<sup>32</sup></span>.
-
-(For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
-
 ### Why do you use Ethereum? {#why-eth}
 
 In 2019 (when [Azimuth](#what-is-azimuth) was launched), Ethereum was the most widely deployed, most secure, and best documented general purpose blockchain, and it remains so today. Using Ethereum is a practical engineering choice. It’s the best way to bootstrap real cryptographic ownership. We’re not specifically interested in Ethereum one way or the other.
 
 One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#what-is-arvo) itself. But the first challenge is getting Urbit OS to be completely secure.
-
-### Why is is currently expensive to acquire a planet?
-
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
-
-Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
-
-In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
-
-We understand that this is an enormous frustration, and will keep this section updated as we get closer to resolving it.
 
 ### Why is Hoon so weird? {#why-hoon}
 
