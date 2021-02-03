@@ -21,7 +21,7 @@ Urbit cannot run on Windows itself, but there is a convenient way to run Linux u
 
 For performance reasons, do not install Urbit in the mounted Windows volume, but install it in the Linux file system. For example, in your home directory, which can be navigated to by entering `cd ~`.
 
-### macOS
+### macOS {#macos-and-linux}
 
 ```sh
 mkdir urbit
@@ -59,7 +59,7 @@ If you just want to try Urbit out, you can use a comet. They disposable, free id
 
 To start with a comet, continue below. For planet instructions, see further below.
 
-## Booting a comet
+## Booting a comet {#comet}
 
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
@@ -87,7 +87,7 @@ To start your planet up again, run the following from your `urbit` directory (no
 ./urbit mycomet
 ```
 
-### Updating your comet
+### Updating your comet {#updating}
 
 The Urbit binary comes with a somewhat recent release of the Urbit OS, but ships can update automatically ("over the air"), so new binaries aren't necessary every time it's updated. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
@@ -110,7 +110,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 
 Now that you’re up and running, skip ahead to the Setup guide.
 
-## Booting a planet
+## Booting a planet {#boot-your-planet}
 
 There are two options for getting started with a planet. You can purchase one on your own and run Urbit yourself, or you can purchase a planet and hosting services through a [hosting provider](#hosting-providers).
 
@@ -154,7 +154,7 @@ If you received an email invite to Urbit, the master ticket should be a .pdf fil
 3. Once you're logged in, click the "OS" option.
 4. Click the "Download Arvo Keyfile" button. If this is grayed out, click on "Reset Networking Keys", then click on "Reset Networking Keys" on the following page, validate the transaction using your wallet, and then click "Send Trasaction". Once the transaction is complete, the "Download Arvo Keyfile" button should be available for you to press. You should receive a `.key` file that contains the secret needed to boot your planet. Hold onto this file.
 
-### Run the boot command
+### Run the boot command {#the-dojo}
 
 Navigate to your `urbit` directory.
 
