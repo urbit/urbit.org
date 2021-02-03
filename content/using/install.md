@@ -6,7 +6,7 @@ template = "page_indiced.html"
 aliases = ["/docs/getting-started/"]
 +++
 
-This guide covers how to install and set up your own planet, but installation for a star is exactly the same. You will first install the Urbit binary, then you will either boot a comet or a planet.  It's not too difficult, but if you would prefer to have someone run your urbit for you, consider a [hosting provider](#hosting-providers).
+This guide covers how to install and set up your own planet (or comet), but installation for a star is exactly the same. You will first install the Urbit binary, then you will either boot a comet or a planet.  It's not too difficult, but if you would prefer to have someone run your urbit for you, consider a [hosting provider](#hosting-providers).
 
 
 ## Installing Urbit
@@ -53,7 +53,7 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 ```
 (Where `urbit` is the urbit executable downloaded with `wget` prior)
 
-Now, you either want to boot either a comet or a planet.
+### Choose to boot a comet or a planet
 
 If you just want to try Urbit out, you can use a comet. They disposable, free identities, that are good for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible resident. Their long names (example: `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`) make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
 
@@ -77,11 +77,17 @@ http: live (insecure, loopback) on 12321
 ~sampel_marzod:dojo>
 ```
 
-When your planet is finished booting, you will see either the `~sampel_marzod:dojo>` or `~sampel_marzod:chat-cli/` prompt. If you see `:chat-cli`, press `Ctrl-X` to switch into Dojo (the Urbit command line).
+When your comet is finished booting, you will see either the `~sampel_marzod:dojo>` or `~sampel_marzod:chat-cli/` prompt. If you see `:chat-cli`, press `Ctrl-X` to switch into Dojo (the Urbit command line).
+
+Get your password to log into landscape (the Urbit web interface) by typing:
+
+```sh
++code
+```
 
 To exit Urbit, use `Ctrl-D` or enter `|exit` into Dojo.
 
-To start your planet up again, run the following from your `urbit` directory (note the lack of `-c` argument):
+To start your comet up again, run the following from your `urbit` directory (note the lack of `-c` argument):
 
 ```sh
 ./urbit mycomet
