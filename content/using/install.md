@@ -1,5 +1,5 @@
 +++
-title = "Install + Setup"
+title = "Urbit Quickstart Guide"
 weight = 1
 description = "How to install Urbit."
 template = "page_indiced.html"
@@ -55,13 +55,11 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 
 Now, you either want to boot either a comet or a planet.
 
-## Choose a comet or a planet
-
 If you just want to try Urbit out, you can use a comet. They disposable, free identities, that are good for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible resident. Their long names (example: `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`) make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
 
 To start with a comet, continue below. For planet instructions, see further below.
 
-### Booting a comet
+## Booting a comet
 
 To boot a comet, go into the command line and run the following command from the `urbit` directory you created during [Urbit installation](#installing-urbit):
 
@@ -69,7 +67,7 @@ To boot a comet, go into the command line and run the following command from the
 ./urbit -c mycomet
 ```
 
-Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, will spin out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
+Since your identity on the network is not verified, it may take up to an hour to generate your comet. As it boots, it will spit out a bunch of boot messages and create a directory called `mycomet`. Toward the end of the boot process, you'll see something like:
 
 ```
 ames: on localhost, UDP 31337.
@@ -89,11 +87,33 @@ To start your planet up again, run the following from your `urbit` directory (no
 ./urbit mycomet
 ```
 
+### Updating your comet
+
+The Urbit binary comes with a somewhat recent release of the Urbit OS, but ships can update automatically ("over the air"), so new binaries aren't necessary every time it's updated. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
+
+You can enable updates for your comet by typing `|ota (sein:title our now our) %kids` into Dojo and pressing Enter.
+
+```
+> |ota (sein:title our now our) %kids
+>=
+```
+
+If you want to make sure you'll get updates, you can check by typing `|ota` with no arguments:
+
+```
+~sampel_marzod:dojo> |ota
+OTAs enabled from %kids on ~marzod
+use |ota %disable or |ota ~sponsor %kids to reset it
+> |ota
+>=
+```
+
 Now that you’re up and running, skip ahead to the Setup guide.
 
 ## Booting a planet
 
 There are two options for getting started with a planet. You can purchase one on your own and run Urbit yourself, or you can purchase a planet and hosting services through a [hosting provider](#hosting-providers).
+
 
 ### Purchase a planet
 
@@ -192,7 +212,7 @@ The first thing you generally want to do with a new planet is to **mount** it. A
 
 The `>=` output means that a command was successful. Now you can see your planet's files in its directory.
 
-To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) here.
+To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/tutorials/arvo/clay.md).
 
 ### Using Landscape
 

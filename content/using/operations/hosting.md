@@ -10,7 +10,25 @@ hidetitle = "true"
 ## Hosting Your Ship In The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
-Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
+Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when <<<<<<< do-ufw-https
+87
+ 
+ - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web ports when the firewall is enabled.
+88
+ 
+   ```
+89
+ 
+   $ sudo ufw allow OpenSSH
+90
+ 
+   $ sudo ufw allow www
+91
+ 
+   
+92
+ 
+=======your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
 
 This guide uses Digital Ocean as the cloud provider, but others can be used. 
 
@@ -83,11 +101,13 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
    $ sudo ufw app list
    ```
+   
  - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled,
  as well as opening a port that we'll later specify for your urbit to use to communicate directly with other ships.
    ```
    $ sudo ufw allow OpenSSH
    $ sudo ufw allow www
+   $ sudo ufw allow https
    $ sudo ufw allow 34543/udp
    ```
  Note that you can choose any port in place of 34543 for Ames. Just be sure to pass the same port via the `-p` option when starting your ship.
@@ -105,7 +125,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
 Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/using/install.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
  - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/docs/tutorials/guide-to-breaches.md) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
- - Next we're going to install Urbit on the server and permit it to bind to the web port:
+ - Next we're going to install Urbit on the server and permit it to bind to the web ports:
    ```
    $ ssh your_user@your_domain
    $ mkdir urbit
