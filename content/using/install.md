@@ -123,7 +123,7 @@ There are a few ways to get your own planet:
 - Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers) such as [geturbitid.com](https://www.geturbitid.com/).
 - Manually setting up and hosting an planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), or [Urbit Marketplace](https://urbitmarketplace.com/).
 
-Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](@/using/operations/using-your-planet.md#escape).
+Note that when you buy a planet, you should ensure with the provider that your parent star is operating. If you need to escape a non-operational star, see [Escaping A Sponsor](@/using/operations/using-your-ship.md#escape).
 
 ### Hosting Providers {#hosting-providers}
 
