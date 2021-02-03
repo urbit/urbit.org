@@ -1,5 +1,5 @@
 +++
-title = "Urbit Quickstart Guide"
+title = "Install + Setup"
 weight = 1
 description = "How to install Urbit."
 template = "page_indiced.html"
@@ -149,7 +149,7 @@ There is a guide for [hosting your planet on DigitalOcean](@/using/operations/ho
 
 If you received an email invite to Urbit, the master ticket should be a .pdf file in the passport folder inside the archive that you downloaded. **If you bought your planet or someone sent you one you probably do not have a master ticket.**
 
-1. Connect to [Bridge](https://bridge.urbit.org).
+1. Connect to [Bridge](https://bridge.urbit.org). (Bridge is like an Urbit wallet)
 2. Enter the name of your planet and the associated master ticket if you have one. Click the "Metamask, Mnemonic, Hardware Wallet..." button if you don't have a master ticket.
 3. Once you're logged in, click the "OS" option.
 4. Click the "Download Arvo Keyfile" button. If this is grayed out, click on "Reset Networking Keys", then click on "Reset Networking Keys" on the following page, validate the transaction using your wallet, and then click "Send Trasaction". Once the transaction is complete, the "Download Arvo Keyfile" button should be available for you to press. You should receive a `.key` file that contains the secret needed to boot your planet. Hold onto this file.
@@ -235,6 +235,6 @@ From the Urbit Community group you can join a variety of chatrooms, notebooks, a
 
 Now that you’re up and running, take some time to deepen your understanding by checking out some of our other guides:
 
-- [Host your Ship in the Cloud](@/using/operations/hosting): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
-- [Read the Operations Manual](@/using/operations/using-your-ship): Become an expert pilot by learning to use your ship.
-- [Learn to Develop on Urbit](@/using/develop): Learn how to contribute to or develop on Urbit.
+- [Host your Ship in the Cloud](@/using/operations/hosting.md): Follow this guide to set your ship up to run as a cloud server, accessible from anywhere.
+- [Read the Operations Manual](@/using/operations/using-your-ship.md): Become an expert pilot by learning to use your ship.
+- [Learn to Develop on Urbit](@/using/develop.md): Learn how to contribute to or develop on Urbit.
