@@ -235,7 +235,7 @@ Landscape is the Urbit web interface, and it's the best way to interact with you
 
 Now that you're on Landscape, join the Urbit Community, a great place for newcomers to ask questions.
 
-Click the 'Groups' button on your Landscape home page, and then click the `Join Group` column. Then, enter `~bitbet-bolbel/urbit-community` into the field and press the `Join Group` button.
+Click the `Join a Group` button, then enter `~bitbet-bolbel/urbit-community` into the field and press the `Join Group` button.
 
 From the Urbit Community group you can join a variety of chatrooms, notebooks, and collections.
 
