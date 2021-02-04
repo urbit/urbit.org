@@ -122,7 +122,6 @@ Now that you’re up and running, skip ahead to the [Setup guide](#setup).
 
 There are two options for getting started with a planet. You can purchase one on your own and run Urbit yourself, or you can purchase a planet and hosting services through a [hosting provider](#hosting-providers).
 
-
 ### Purchase a planet
 
 There are a few ways to get your own planet:
@@ -166,8 +165,7 @@ If you received an email invite to Urbit, the master ticket should be a .pdf fil
 
 Navigate to your `urbit` directory.
 
-Open your keyfile (it is just a text file) and copy the key inside.  Paste it into the following command, with `sampel-palnet` replaced by the name of your
-planet.  **Do not include the tilde in your planet name.**
+Open your keyfile (it is just a text file) and copy the key inside.  Paste it into the following command, with `sampel-palnet` replaced by the name of your planet.  **Do not include the tilde in your planet name.**
 
 ```sh
 ./urbit -w sampel-palnet -G rAnDoMkEy
@@ -227,7 +225,7 @@ To understand what happened with this command, read more about Urbit’s filesys
 Landscape is the Urbit web interface, and it's the best way to interact with your planet. To access Landscape:
 
 1. Start your planet. In the boot messages, look for a line that says something like `http: live (insecure, public) on 80`. The number given is the port that your planet is using.
-2.  If the port given is 80, and you are running Urbit on your personal computer, simply type `localhost` into your browser's address bar. If you are running urbit on a cloud server, type the ip of your cloud server.  If the given port is a different number, such as `8080`, you would type `localhost:8080` or `your-cloud-ip:8080`. You'll be met with a login prompt.
+2. If the port given is 80, and you are running Urbit on your personal computer, simply type `localhost` into your browser's address bar. If you are running urbit on a cloud server, type the ip of your cloud server.  If the given port is a different number, such as `8080`, you would type `localhost:8080` or `your-cloud-ip:8080`. You'll be met with a login prompt.
 3. Type your password you got from running `+code` above.
 4. You're in! Now you can explore groups, join chat channels, share links, and much more.
 

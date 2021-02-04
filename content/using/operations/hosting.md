@@ -10,25 +10,7 @@ hidetitle = "true"
 ## Hosting Your Ship In The Cloud
 The goal of this guide is to have clear and easy to follow best practices for deploying an Urbit node to a server you control in the cloud. Deploying in the cloud allows you to access your Urbit from any device.
 
-Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when <<<<<<< do-ufw-https
-87
- 
- - Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web ports when the firewall is enabled.
-88
- 
-   ```
-89
- 
-   $ sudo ufw allow OpenSSH
-90
- 
-   $ sudo ufw allow www
-91
- 
-   
-92
- 
-=======your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
+Most Urbit users start out running their ship locally on one machine in order to play with it, but this means when your machine is offline your Urbit node is offline too (and can't get updates). You can also only access your Urbit from that one machine.
 
 This guide uses Digital Ocean as the cloud provider, but others can be used. 
 
