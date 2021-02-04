@@ -77,7 +77,7 @@ http: live (insecure, loopback) on 12321
 ~sampel_marzod:dojo>
 ```
 
-When your comet is finished booting, you will see either the `~sampel_marzod:dojo>` or `~sampel_marzod:chat-cli/` prompt. If you see `:chat-cli`, press `Ctrl-X` to switch into Dojo (the Urbit command line).
+When your comet is finished booting, you will see `~sampel_marzod:dojo>` (Dojo: the Urbit command line).
 
 Get your password to log into landscape (the Urbit web interface) by typing:
 
@@ -179,7 +179,7 @@ Or you can copy the keyfile into the current directory and run:
 
 Either command will create a directory called `sampel-palnet/` and begin building your planet. It may take a few minutes.
 
-When your planet is finished booting, you will see either the `~sampel-palnet:dojo>` or `~sampel-palnet:chat-cli/` prompt. If you're seeing `:chat-cli` press `Ctrl-X` to switch into Dojo (the Urbit command line).
+When your planet is finished booting, you will see `~sampel-palnet:dojo>` (Dojo: the Urbit command line).
 
 Get your password to log into landscape (the Urbit web interface) by typing:
 
