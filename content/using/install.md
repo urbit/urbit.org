@@ -222,7 +222,7 @@ The `>=` output means that a command was successful. Now you can see your planet
 
 To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/tutorials/arvo/clay.md).
 
-### Using Landscape #{using-landscape}
+### Using Landscape
 
 Landscape is the Urbit web interface, and it's the best way to interact with your planet. To access Landscape:
 
