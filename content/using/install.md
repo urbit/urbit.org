@@ -239,7 +239,7 @@ Click the `Join a Group` button, then enter `~bitbet-bolbel/urbit-community` int
 
 From the Urbit Community group you can join a variety of chatrooms, notebooks, and collections.
 
-## Next Steps
+### Next Steps
 
 Now that you’re up and running, take some time to deepen your understanding by checking out some of our other guides:
 
