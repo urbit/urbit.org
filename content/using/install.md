@@ -23,6 +23,8 @@ For performance reasons, do not install Urbit in the mounted Windows volume, but
 
 ### macOS {#macos-and-linux}
 
+**The macOS binary does not work on M1 macs.  Sorry.  We're working on an M1 release**
+
 ```sh
 mkdir urbit
 cd urbit
