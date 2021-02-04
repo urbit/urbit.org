@@ -147,7 +147,7 @@ Current hosting providers are:
 - [Get an Urbit ID](https://www.geturbitid.com/): Get an Urbit ID was the first hosting provider and is run by a member of the Urbit community.
 
 
-### Choose to run your planet on your computer or on a cloud service #{local-or-cloud}
+### Choose to run your planet on your computer or on a cloud service
 
 Urbit must run on an existing computer somewhere.  Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
 
