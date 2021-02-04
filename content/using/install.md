@@ -57,9 +57,9 @@ sudo setcap 'cap_net_bind_service=+ep' /path/to/urbit
 
 ### Choose to boot a comet or a planet
 
-If you just want to try Urbit out, you can use a comet. They disposable, free identities, that are good for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible resident. Their long names (example: `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`) make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
+If you just want to try Urbit out, you can use a comet. These are disposable, free identities, that are good for people who are new to Urbit and want to check out the network, but they aren't good for building a reputation as a friendly and responsible resident. Their long names (example: `~dasres-ragnep-lislyt-ribpyl--mosnyx-bisdem-nidful-marzod`) make them difficult to remember—and some communities ban comets to prevent spam—but they're still a good way to see what Urbit is about before buying your own planet.
 
-To start with a comet, continue below. For planet instructions, see further below.
+To start with a comet, continue below. For planet instructions, see [further below](#boot-your-planet).
 
 ## Booting a comet {#comet}
 
@@ -116,7 +116,7 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 >=
 ```
 
-Now that you’re up and running, skip ahead to the Setup guide.
+Now that you’re up and running, skip ahead to the [Setup guide](#setup).
 
 ## Booting a planet {#boot-your-planet}
 
@@ -147,7 +147,7 @@ Current hosting providers are:
 - [Get an Urbit ID](https://www.geturbitid.com/): Get an Urbit ID was the first hosting provider and is run by a member of the Urbit community.
 
 
-### Choose to run your planet on your computer or on a cloud service
+### Choose to run your planet on your computer or on a cloud service #{local-or-cloud}
 
 Urbit must run on an existing computer somewhere.  Most users run their planet on their personal computer, but we recommend eventually using a cloud service (Digital Ocean, Linode, etc) because it allows your planet to be accessed from anywhere on multiple devices. Hosting your planet in the cloud also allows it to always be online and ready for automatic updates. You are welcome to run from your personal computer and switch to the cloud later...all without losing any data!
 
@@ -179,7 +179,7 @@ Or you can copy the keyfile into the current directory and run:
 ./urbit -w sampel-palnet -k ./my-planet.key
 ```
 
-Either command will create a directory called `sampel-palnet/` and begin building your planet. It may take a few minutes.
+Either command will create a directory called `sampel-palnet/` and begin booting your planet. It may take a few minutes.
 
 When your planet is finished booting, you will see `~sampel-palnet:dojo>` (Dojo: the Urbit command line).
 
@@ -209,7 +209,7 @@ Delete the keyfile with the command below:
 rm ./my-planet.key
 ```
 
-## Setup
+## Setup {#setup}
 
 The first thing you generally want to do with a new planet is to **mount** it. A planet being mounted means that it can be seen by Linux, allowing files to be shared between it and your planet. To mount your planet, type `|mount %` at the Dojo prompt.
 
@@ -222,7 +222,7 @@ The `>=` output means that a command was successful. Now you can see your planet
 
 To understand what happened with this command, read more about Urbit’s filesystem (called “clay”) [here](@/docs/tutorials/arvo/clay.md).
 
-### Using Landscape
+### Using Landscape #{using-landscape}
 
 Landscape is the Urbit web interface, and it's the best way to interact with your planet. To access Landscape:
 
