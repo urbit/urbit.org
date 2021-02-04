@@ -155,7 +155,7 @@ There is a guide for [hosting your planet on DigitalOcean](@/using/operations/ho
 
 ### Get your keyfile {#keyfile}
 
-If you received an email invite to Urbit, the master ticket should be a .pdf file in the passport folder inside the archive that you downloaded. **If you bought your planet or someone sent you one you probably do not have a master ticket.**
+If you received an email invite to Urbit, the master ticket should be a .pdf file in the passport folder inside the archive that you downloaded. **If you bought your planet or someone sent you one you probably do not have a master ticket, and you probably don't need one.  Do not issue a new master ticket unless you are sure you need to.**
 
 1. Connect to [Bridge](https://bridge.urbit.org). (Bridge is like an Urbit wallet)
 2. Enter the name of your planet and the associated master ticket if you have one. Click the "Metamask, Mnemonic, Hardware Wallet..." button if you don't have a master ticket.
