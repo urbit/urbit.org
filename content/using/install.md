@@ -197,7 +197,15 @@ use |ota %disable or |ota ~sponsor %kids to reset it
 >=
 ```
 
-### Purchase a Permanent Identity {#planet}
+### Read More about the Dojo {#the-dojo}
+
+The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
+
+- [Basic Operations](/using/operations/using-your-ship)
+- [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
+- [Glossary Entry](/docs/glossary/dojo)
+
+### Purchase a Permanent Identity {#boot-your-planet}
 
 You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network. A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
