@@ -3,6 +3,7 @@ title = "Setting up Your Planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
 template = "page_indiced.html"
+aliases = ["/using/install.md#boot-your-planet", "/using/install.md#the-dojo"]
 +++
 
 A planet is a permanent Urbit identity. It can never be taken from you, and its reputation will be tied to your own. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](/using/install), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
