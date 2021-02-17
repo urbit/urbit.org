@@ -143,7 +143,7 @@ To boot a comet, go into the command line and run the following command from the
 ~/urbit/urbit -c mycomet
 ```
 
-It may take a while to load the comet. This comes along with it being free. It won't take more than an hour, but will probably only take a few minutes. When it's done you'll some messages ending like this:
+It may take a while to load the comet (probably only take a few minutes, but it could take longer). This comes along with it being free. When it's done you'll some messages ending like this:
 
 ```
 ames: on localhost, UDP 31337.
@@ -178,7 +178,7 @@ At the moment, the most common way to use Urbit is through a web app named Lands
 
 ### Updating your comet {#updating}
 
-The Urbit binary comes with a somewhat recent release of the Urbit OS, but ships can update automatically ("over the air"), so new binaries aren't necessary every time it's updated. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
+The Urbit application comes with a recent release of the Urbit OS, but automatic updates ("over the air") can be enabled so new binaries aren't necessary for each update. Planets have automatic updates enabled by default, but this is not the case for comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
 You can enable updates for your comet by typing `|ota (sein:title our now our) %kids` into Dojo and pressing Enter.
 
