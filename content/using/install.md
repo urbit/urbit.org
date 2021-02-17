@@ -118,7 +118,7 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 ***
 
-**Planets** are scarce (this prevents spamming, among other things) and usually require a price to acquire. As plans for Urbit come to fruition, most people will use these.
+**Planets** are scarce (this prevents spamming, among other things) and usually require a price to acquire. This is the recommended way to run Urbit, but it's a bit more involved.
 
 A planet name looks like `~sampel-palnet`.
 
@@ -207,6 +207,8 @@ The dojo is Urbit's command line. You can use it to control your ship, or to exe
 
 ### Purchase a Permanent Identity {#boot-your-planet}
 
-You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network. A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
+You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network.
+
+A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
 [To read instructions on how to purchase and use a planet, visit this page](/using/planet).
