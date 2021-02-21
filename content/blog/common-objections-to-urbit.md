@@ -309,7 +309,7 @@ It's very important that Urbit in 2116 be fully decentralized.
 For Urbit in 2016, pretending to be decentralized would be a joke
 at best, and a hoax at worst.  And of course, no one can DAO us
 -- since the property system is still just a central registry.
-Among other things, we check it into Github.  Github is not a
+Among other things, we check it into GitHub.  GitHub is not a
 blockchain -- but still, good luck with that.
 
 ## <a name="sand"></a>Sandstorm/IPFS/Ethereum is way ahead of Urbit.
@@ -628,7 +628,7 @@ much sense to restrict this security state to code within Urbit.
 The Urbit interpreter `vere` runs as a Unix daemon that
 implements the FUSE user-level filesystem protocol, and maps the
 data on your services into the Unix filesystem.  For example, one
-of our demos lets you `ls` your Github issues.
+of our demos lets you `ls` your GitHub issues.
 
 So it's straightforward to build, for instance, a Python app that
 uses Urbit as a gateway to mash up a bunch of web services.  As a

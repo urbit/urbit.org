@@ -178,5 +178,5 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
  [DO SSL Config]: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
  [Urbit Basic Cloud Install]: https://medium.com/@urbitlive/hello-world-urbit-edition-install-boot-and-run-your-urbit-planet-on-a-10-cloud-server-b9579745b9a8
  [DO Initial Setup]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
- [Blog Github]: https://github.com/zalberico/zalberico.github.io
+ [Blog GitHub]: https://github.com/zalberico/zalberico.github.io
 

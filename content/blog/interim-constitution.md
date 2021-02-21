@@ -136,7 +136,7 @@ the interests of the republic and Urbit as a whole.
 Externally, these galaxies are held by Tlon; internally, they are
 managed and voted by Tlon.  Once the republic acquires a legal
 identity and an independent human organization, Tlon pledges to
-donate the `urbit.org` galaxies, the DNS domain, and the Github
+donate the `urbit.org` galaxies, the DNS domain, and the GitHub
 `urbit` account to it.
 
 ## First consuls

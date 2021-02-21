@@ -157,7 +157,7 @@ The final step, using the tool we built, was to hand select individual phoneme s
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
-Once we had selected the final set, we went about compiling the `sigil-js` library that’s now publicly available. This turned out to be fairly technically complex due to the different ways SVG is handled between browsers and Figma — but the end result is a single Javascript library you can use to embed an SVG in almost any context on a web page. See it in action and browse the available sigils [here](https://sigil.azimuth.network). If you're technically inclined, the [source](https://github.com/urbit/sigil-js) can be found on Github.
+Once we had selected the final set, we went about compiling the `sigil-js` library that’s now publicly available. This turned out to be fairly technically complex due to the different ways SVG is handled between browsers and Figma — but the end result is a single Javascript library you can use to embed an SVG in almost any context on a web page. See it in action and browse the available sigils [here](https://sigil.azimuth.network). If you're technically inclined, the [source](https://github.com/urbit/sigil-js) can be found on GitHub.
 
 <br /><br />
 

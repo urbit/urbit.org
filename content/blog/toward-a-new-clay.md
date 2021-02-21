@@ -40,7 +40,7 @@ spartan than `bzr`.
 
 (In fact, it's really too spartan to fully use at the moment.  We
 ourselves still use `%clay` mainly as a distribution system, and
-do all internal development on Github.  This is because the
+do all internal development on GitHub.  This is because the
 present `%clay` lacks a few little conveniences, like commit
 messages.  See upgrades, below.)
 

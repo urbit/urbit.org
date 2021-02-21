@@ -34,7 +34,7 @@ for this reason alone.  (That said, Ethereum may be less exposed to Chinese
 politics.)
 
 We chose ETH because it is the strongest *computational* chain.  It is certainly
-stronger than the way we're storing the Urbit land registry now: Github, plus
+stronger than the way we're storing the Urbit land registry now: GitHub, plus
 internal records.
 
 Urbit is not endorsing Ethereum.  Urbit is not creating any appreciable monetary
@@ -58,7 +58,7 @@ wasn't between a blockchain and nothing.  It was a choice between 21st-century
 tools and 20th-century tools.
 
 The current Urbit land registry is divided into parts stored in various places:
-Github commits, database records held by Tlon Corporation, and insecure keys on
+GitHub commits, database records held by Tlon Corporation, and insecure keys on
 a test network.  This might have been fine, for us, in 2015.  In 2017, it's
 borderline unacceptable.
 
@@ -182,7 +182,7 @@ friend help.
 
 Bitcoin maximalists understand that all monetary energy should concentrate in a
 single currency.  But land isn't money.  And the technical details of the
-implementation of the Urbit registry -- whether `OP_RETURN`, Ethereum, or Github
+implementation of the Urbit registry -- whether `OP_RETURN`, Ethereum, or GitHub
 -- have no effect on Bitcoin supply and demand.
 
 ## Another reminder
