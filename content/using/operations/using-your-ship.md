@@ -251,7 +251,7 @@ To enable SSL on your ship, use the `acme` agent, which will request a certifica
 > |start %acme
 ```
 
-Then, you need to provide the path to request the SSL certificate for by poking the `acme` agent. The path format is `/tld/your_domain/your_subdomain`, so if your domain is `sampel-palnet.arvo.network`, you'd use it like so:
+Next, provide the path for the SSL certificate by poking the `acme` agent. The path format is `/tld/your_domain/your_subdomain`, so if your domain is `sampel-palnet.arvo.network`, you'd use it like so:
 
 ```
 > :acme &path /network/arvo/sampel-palnet
