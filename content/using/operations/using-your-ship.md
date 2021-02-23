@@ -243,7 +243,7 @@ The request will be picked up shortly, and the `ship.arvo.network` DNS record wi
 
 Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend Chrome or Brave.
 
-#### Configuring SSL
+### Configuring SSL
 
 To enable SSL on your ship, use the `acme` agent, which will request a certificate through Let's Encrypt. First, make sure the agent is started:
 
