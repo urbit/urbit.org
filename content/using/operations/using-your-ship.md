@@ -243,6 +243,20 @@ The request will be picked up shortly, and the `ship.arvo.network` DNS record wi
 
 Great! You're set up now. Try accessing your `ship.arvo.network` in your browser to use Landscape; we recommend Chrome or Brave.
 
+#### Configuring SSL
+
+To enable SSL on your ship, use the `acme` agent, which will request a certificate through Let's Encrypt. First, make sure the agent is started:
+
+```
+> |start %acme
+```
+
+Then, you need to provide the path to request the SSL certificate for by poking the `acme` agent. The path format is `/tld/your_domain/your_subdomain`, so if your domain is `sampel-palnet.arvo.network`, you'd use it like so:
+
+```
+> :acme &path /network/arvo/sampel-palnet
+```
+
 ### Galaxies
 
 Galaxies are already required to have separate DNS entry at galaxy.urbit.org. There's no automated process for getting that binding, so if you're a galaxy-holder, get in touch with us at support@urbit.org.
@@ -257,11 +271,9 @@ This will make HTTP-requests to self-check availability over `galaxy.$AMES-DOMAI
 
 Otherwise, `-dns-auto` works the same as `:dns|ip` does with stars and planets: if it's available or unavailable, Chat messages, and so on.
 
-### More information
+### Ports
 
-Configuring a ship's domain causes the `:acme` app to request an HTTPS certificate for that domain from LetsEncrypt. Note that LetsEncrypt also requires that the HTTP server be listening on port 80. If the certificate request fails, `:acme` will send a `:chat-cli` message with an explanation. Once the certificate is successfully retrieved, `:acme` will install it, causing the HTTP servers to restart. A secure server will be started on port 443 (the HTTPS default) if it's available. Otherwise, it will try 8443, and then increment to the next port until it can successfully bind one.
-
-The built-in logic for listening on port 80 is similar. Urbit tries to bind port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
+The built-in logic for listening on port 80 is to try to bind to port 80; if it cannot, it tries 8080, then increments until it can bind a port. Port 80 is available to unprivileged process on recent version of macOS. Otherwise, the process needs to either be run as root, or be given special permission (CAP\_NET_BIND on Linux).
 
 ## Messaging {#messaging}
 
