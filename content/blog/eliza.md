@@ -1,7 +1,7 @@
 +++
 title = "Eliza"
+date = 2021-02-23
 description = "Building things, even Calm™ things, makes noise."
-date = 2021-2-23
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"
