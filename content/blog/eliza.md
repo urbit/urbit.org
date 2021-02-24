@@ -5,12 +5,12 @@ date = 2021-2-23
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"
-image = "https://media.urbit.org/site/posts/essays/valleys.png"
+image = "https://media.urbit.org/site/posts/essays/valleys.jpg"
 +++
 
 <br>
 
-![valleys](https://media.urbit.org/site/posts/essays/valleys.png)
+![valleys](https://media.urbit.org/site/posts/essays/valleys.jpg)
 
 <br>
 
