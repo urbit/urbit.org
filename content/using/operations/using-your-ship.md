@@ -287,7 +287,7 @@ The most common use for `:chat-cli` right now is, of course, communicating in gr
 
 In `:chat-cli`, any kind of medium for a message is called a _chat_. There are four "types" of chats, but for now we'll be dealing with the _channel_, a publicly accessible chatroom for general use. We'll discuss the other three kinds in the [chat management](#chat-management) section later on.
 
-Join the Urbit Community from Dojo using `:group-store|join ~bitbet-bolbel/urbit-community`. Once you've joined, join the General chat from chat-cli. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
+Join the Urbit Community from Dojo using `:group-view &group-view-action [%join [~bitbet-bolbel %urbit-community] ~bitbet-bolbel]`. Once you've joined, join the General chat from chat-cli. Use `ctrl-x` to switch from the Dojo prompt to the Chat prompt.
 
 Then:
 
