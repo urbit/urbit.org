@@ -1,16 +1,16 @@
 +++
 title = "After the Machine War"
 description = "The date is January 1, 2050. The place, New York City. The vibe...subdued."
-date = 2021-03-12
+date = 2021-03-15
 [extra]
 author = "Simon Kovacs"
 ship = "~bacbec-lormur"
-image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/they-live.png"
+image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin-wall.jpeg"
 +++
 
 <br>
 
-![they-live](https://storage.googleapis.com/media.urbit.org/site/posts/essays/they-live.png)
+![berlin-wall](https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin-wall.jpeg)
 
 <br>
 
