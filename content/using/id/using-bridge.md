@@ -14,7 +14,7 @@ This guide assumes that you have an Urbit ID, or that you have found someone to 
 
 To connect to Bridge, go to [https://bridge.urbit.org](https://bridge.urbit.org) into your browser, and enter your identity's credentials in the appropriate fields. If you were invited to claim an Urbit ID, it's very likely that you received an email that would direct you to Bridge, and you can simply follow the hyperlink in that email.
 
-You'll arrive at a page and see two major choices: `ID` and `OS`. `OS` is the only option that you're interested in right now; click on it. On the `OS` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/getting-started.md).
+You'll arrive at a page and see two major choices: `ID` and `OS`. `OS` is the only option that you're interested in right now; click on it. On the `OS` page, click the `Download Arvo Keyfile` button. Once you have downloaded the keyfile, you can exit Bridge and proceed to [install the Urbit binary](@/getting-started/_index.md).
 
 ### Local Bridge
 
@@ -72,7 +72,7 @@ It should be noted that setting your network keys is an event on the Ethereum ne
 From the detail page associated with your point, click the `Generate Arvo Keyfile` link and you'll be taken to a page with a field titled `Network seed`. This field should already be filled in, and should match the hexadecimal string that you entered in the previous step. If it's not filled in or does not match, fill it in with the correct string.
 Click `Generate ->`, which will download a keyfile onto your machine.
 
-With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/getting-started.md).
+With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](@/getting-started/_index.md).
 
 ### Escaping your sponsor {#escaping-your-sponsor}
 

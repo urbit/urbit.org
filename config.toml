@@ -2,26 +2,22 @@
 # Used in RSS by default
 title = "Urbit"
 description = "Urbit is a personal server built from scratch."
-
 # The default language, used in RSS
 default_language = "en"
-
 # The URL the site will be built for
 base_url = "https://urbit.org"
-
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
 # Whether to generate a RSS feed automatically
 generate_feed = true
 
 [markdown]
 # A list of directories used to search for additional `.sublime-syntax` files.
+# TODO: syntax highlighting is currently broken on 0.13.0, but works on zola@next
+# see: https://github.com/getzola/zola/issues/1309
 extra_syntaxes = ["syntaxes"]
-
 # Whether to do syntax highlighting
 highlight_code = true
-
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_theme = "demain"
 
@@ -32,6 +28,5 @@ build_search_index = true
 # You can put any kind of data here. The data
 # will be accessible in all templates
 [extra]
-
 author = "urbit.org"
 docs_number_chapters = true

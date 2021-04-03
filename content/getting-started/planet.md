@@ -2,10 +2,9 @@
 title = "Setting up Your Planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
-template = "page/getting_started.html"
 +++
 
-A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/getting-started.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
+A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/getting-started/_index.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
 
 ### Purchase a planet {#purchase}
 

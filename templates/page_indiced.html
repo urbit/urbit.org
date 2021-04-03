@@ -55,7 +55,7 @@
 
 {% endif %}
 
-{% for h2 in toc %}
+{% for h2 in page.toc %}
 {% if h2.children %}
 <details class="dn mw5-xl mt2 mw5-l db-xl page-indiced f6"><summary>{{ h2.title }}</summary>
     {% for h3 in h2.children %}
