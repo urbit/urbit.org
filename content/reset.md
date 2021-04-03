@@ -64,7 +64,7 @@ relevant actions on your behalf, as well as exporting and reimporting your data.
 
 To use `flagday`, run the following:
 
-```shell
+```sh
 curl https://bootstrap.urbit.org/flagday.sh > flagday.sh; chmod 755 ./flagday.sh; ./flagday.sh PIER_DIRECTORY
 ```
 
@@ -77,8 +77,8 @@ Yes, by following these steps (note that these steps **will not** back up your d
 1. Download your [keyfile from Bridge](https://urbit.org/getting-started/#keyfile).
 2. Shut down your ship.
 3. [Archive and move your old pier](@/using/os/getting-started.md#moving-your-pier) (this is the directory that contains your urbit event log).
-4. [Download the latest version](@/getting-started.md#macos-and-linux) of the urbit binary.
-5. [Boot your ship with the new keyfile](@/getting-started.md#boot-your-planet).
+4. [Download the latest version](@/getting-started/_index.md#macos-and-linux) of the urbit binary.
+5. [Boot your ship with the new keyfile](@/getting-started/_index.md#boot-your-planet).
 
 ## I’m hosted by Tlon, or someone else—what do I need to do?
 
