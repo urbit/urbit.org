@@ -1,3 +1,4 @@
+# See: https://www.getzola.org/documentation/getting-started/configuration/
 # Used in RSS by default
 title = "Urbit"
 description = "Urbit is a personal server built from scratch."
@@ -12,30 +13,25 @@ base_url = "https://urbit.org"
 compile_sass = true
 
 # Whether to generate a RSS feed automatically
-generate_rss = true
+generate_feed = true
+
+[markdown]
+# A list of directories used to search for additional `.sublime-syntax` files.
+extra_syntaxes = ["syntaxes"]
 
 # Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
-extra_syntaxes = ["syntaxes"]
+
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_theme = "demain"
 
+[slugify]
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-# The taxonomies to be rendered for that site and their configuration
-# Example:
-#     taxonomies = [
-#       {name = "tags", rss = true}, # each tag will have its own RSS feed
-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
-#       {name = "authors"}, # Basic definition: no RSS or pagination
-#     ]
-#
-
-
+# You can put any kind of data here. The data
+# will be accessible in all templates
 [extra]
 
+author = "urbit.org"
 docs_number_chapters = true
-
-[extra.author]
-name = "urbit.org"
