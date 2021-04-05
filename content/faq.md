@@ -43,11 +43,12 @@ Urbit IDs come in three classes: galaxies, stars, and planets. The length of an 
 
 Planets are intended for everyday use by individuals, and there are 4.3 billion of them (two to the 32nd power). Stars and galaxies, on the other hand, are meant to act as network infrastructure: on the [Urbit OS](#what-is-arvo) network they provide routing and are responsible for distributing software updates.
 
-### Why is is currently expensive to acquire a planet?
+### Why is is currently expensive to acquire a planet? {#gas-prices}
 
-As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
+As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. Ethereum is going through some growing pains, and this is an issue for every
+smart contract on the network. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
 
-Ethereum is going through some growing pains, and this is an issue for every smart contract on the network. Thankfully, there are a number of possible solutions, under the moniker of "Layer 2", and Tlon considers it a top priority to implement one and are working towards this goal every day. We do not yet have a timeline on when it will be ready, but when it does we expect the gas fees to be at least 100x cheaper.
+Tlon is aggressively pursuing a solution we call "naive rollups" which we predict to reduce gas costs by a factor of at least 100. We cannot give a precise estimate on when this will be complete, but it is top priority and this solution was chosen in part for the speed with which it can be implemented without sacrificing security. If you'd like to know more, we recommend watching this [Developer Call](https://www.youtube.com/watch?v=CKuHXrdkIw0) with `~wicdev-wisryt`.
 
 In the meantime, we recommend either using the network as a [comet](@/docs/glossary/comet.md), or signing up with a [hosting provider](#why-hosting), which includes a free planet.
 
@@ -237,7 +238,7 @@ All events are logged to disk, so you can always restore the system to a previou
 
 When an [Arvo](@/docs/glossary/arvo.md) ship (instance) is started for the first time you must use a "[keyfile](@/docs/glossary/keyfile.md)" containing the private keys for your identity's networking keys. Urbit ID uses the Ethereum blockchain as its decentralized ledger.
 
-See our [Getting Started](@@/getting-started/planet.md.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
+See our [Getting Started](@/getting-started/planet.md) guide to learn how to get your ship onto the Urbit OS / [Ames](@/docs/glossary/ames.md) network.
 
 ### Will the Urbit OS network survive if Ethereum dies? {#if-ethereum-dies}
 
@@ -245,7 +246,7 @@ Yes. It would be annoying, but Urbit ID / [Azimuth](@/docs/glossary/azimuth.md) 
 
 ### How do I install Urbit OS? {#install-urbit-os}
 
-Check out our guides [here](@@/getting-started/planet.md.md).
+Check out our guides [here](@/getting-started.md).
 
 ### How do I use Urbit OS? {#use-urbit-os}
 
@@ -261,7 +262,7 @@ Your sponsor, a star or galaxy that your ship is connected to, may send you new 
 
 ### I have an Urbit ID, now what? {#now-what}
 
-Follow our guide on how to boot a ship [here](@@/getting-started/planet.md.md).
+Follow our guide on how to boot a ship [here](@/getting-started/planet.md).
 
 Get on the [mailing list](https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=be143888d2). Learn [Hoon](@/docs/hoon/hoon-school/_index.md). Sign up for [Hooniversity](https://hooniversity.org/). [Make stuff](https://grants.urbit.org).
 
@@ -387,7 +388,7 @@ Another option is to treat [Urbit as an API](@/docs/arvo/eyre/using-eyre.md), wh
 
 ### What is the point of Nock? {#why-nock}
 
-The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
+The primary technical reason it is difficult for the individual to run a personal server is that modern computing architectures are not deterministic. What solves a problem for one person is not guaranteed to work on another person's computer, even if they are using identical hardware. [Nock](@/docs/glossary/nock.md) solves this problem. It provides a single computing foundation for the whole network, so that difficult issues that arise when running a server need only to be solved once and the solution is guaranteed to work for everyone on the network.
 
 It’s true that Nock, without jets, is slow. With the ability to call out to a native function, it’s not so bad. This is done by our runtime, [Vere](@/docs/glossary/vere.md), a Nock interpreter written in C.
 

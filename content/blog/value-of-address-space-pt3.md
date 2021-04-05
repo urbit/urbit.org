@@ -14,6 +14,8 @@ image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg
 
 <br>
 
+*This is the third in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 2](https://urbit.org/blog/value-of-address-space-pt2/).*
+
 It has been some time since we revisited this series of posts, so let’s start with a summary. 
 
 Our framework for understanding the value of Urbit address space is that it’s useful, it’s rare, it’s easy to exchange, and the more that people use it, the more useful it becomes. Let’s briefly review each concept in a little more detail.

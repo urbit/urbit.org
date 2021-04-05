@@ -14,6 +14,8 @@ image ="https://media.urbit.org/site/posts/essays/value-of-address-space-pt2.jpg
 
 <br>
 
+*This is the second in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 3](https://urbit.org/blog/value-of-address-space-pt3/).*
+
 ## Measuring value
 
 Value and price are distinct concepts that often get conflated. In our view, Urbit address space has value for four fundamental reasons: it’s scarce; it has utility; it has some limited liquidity; and it has network effect. Price, on the other hand, is always a function of supply and demand, and it's not something we – as builders – concern ourselves with very much. Let’s take a look at these fundamentals within the Urbit ecosystem.
