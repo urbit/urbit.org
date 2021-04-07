@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <meta name="og:title" content="Events - {{ config.title }}">
+  <title>Events - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="Events facilitated by the Urbit Foundation.">
+  <meta name="description" content="Events facilitated by the Urbit Foundation.">
+{% endblock description %}
+
+{% block content %}
+{% set posts = get_section(path="events/_index.md") %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/events/">Events</a>
+
+  {% include "partials/navigation-search.html" %}
+
+</nav>
+<section class="full c4-12-lg measure-wide pt4">
+
+  <section id="upcoming">
+    <h2 class="mb4">Upcoming Events</h2>
+  </section>
+
+  <section id="past">
+    <h2 class="mb4">Past Events</h2>
+  </section>
+
+  {% for page in posts.pages %}
+    <article data-date="{{ page.date }}" id="{{ page.slug }}" class="mb4">
+      <a href="{{ page.permalink }}" class="no-underline bb-0">
+        <h1>{{ page.title }}</h1>
+        {% if page.extra.image %}
+          <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }}</time><br />
+        <span class="author f6">{{ page.extra.host }}</span>
+      </a>
+    </article>
+  {% endfor %}
+
+  <script>
+    const upcoming = document.getElementById('upcoming');
+    const past = document.getElementById('past');
+    const upcomingEvents = [];
+    const pastEvents = [];
+    Array.from(document.querySelectorAll('article[data-date')).forEach(function (article) {
+      article.parentElement.removeChild(article);
+      const articleDate = Date.parse(article.dataset.date);
+      if(articleDate - Date.now() > 0) {
+        upcomingEvents.push([articleDate, article]);
+      } else {
+        pastEvents.push([articleDate, article]);
+      }
+    });
+
+    upcomingEvents.sort(function (articleA, articleB) {
+      return articleA[0] - articleB[0];
+    });
+
+    pastEvents.sort(function (articleA, articleB) {
+      return articleB[0] - articleA[0];
+    });
+
+    upcomingEvents.forEach(function (event) {
+      upcoming.appendChild(event[1]);
+    });
+
+    pastEvents.forEach(function (event) {
+      past.appendChild(event[1]);
+    });
+  </script>
+</section>
+
+{% endblock content %}

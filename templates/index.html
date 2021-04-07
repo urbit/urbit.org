@@ -105,23 +105,31 @@
 </section>
 
 <section class="full c2-7-md c3-7-lg mt5">
-  <h1 class="mb3">Understanding Urbit</h1>
-    <p class="lh-copy mt1">This sequence of posts will give you a high-level overview of Urbit. They take about 20 minutes to read.</p>
-  <ul class="list">
-    <li class="mt3">
-      <a class="b--black bb" href="/understanding-urbit/">Introduction</a>
-    </li>
-    {% set posts = get_section(path="understanding-urbit/_index.md") %} {%
-    for page in posts.pages %}
-    <li class="mt3">
-      <a
-        class="b--black bb"
-        href="{{ page.permalink }}">
-        {{ page.title }}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  <h1 class="mb3">Events</h1>
+  <p class="lh-copy mt1">Find scheduled announcements, developer calls, and meetups in our <a class="bb" href="/events">events</a>.</p>
+  {% set s = get_section(path="events/_index.md") %}
+  {% set allposts = s.pages
+            | sort(attribute="date")
+            | reverse
+            %}
+  {% for page in allposts | slice (end=2) %}
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb4 list">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        {% if page.extra.image %}
+        <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+        {% elif page.extra.description %}
+        <p class="lh-copy mt1">{{ page.extra.description }}</p>
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}
+            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
+          {% endif %}
+        </span>
+      </li>
+    </a>
+  {% endfor %}
 </section>
 
 <section class="full c7-12-md c7-11-lg mv5">

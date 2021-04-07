@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "partials/pagination.html" as pagination %}
 {% block title %}
   <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
   <title>{{ page.title }} - {{ config.title }}</title>
@@ -62,7 +63,7 @@
 
   {{ page.content | safe }}
 
-  {% include "partials/pagination.html" %}
+  {{ pagination::pagination(page=page) }}
 </article>
 <section class="full c4-12-lg lh-copy mt6 mb4 measure-wide">
     <iframe name="nothing" style="display:none;"></iframe>

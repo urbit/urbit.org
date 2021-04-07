@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "partials/pagination.html" as pagination %}
 <!-- JAL(2021.3.12) This page is a hack in order to get the title set properly in the /getting-started/planet route because I'm a Zola noob. -->
 {% block bodyclasses %}class="page-indiced"{% endblock bodyclasses %}
 
@@ -63,6 +64,6 @@
         {% endif %}
           <!-- body -->
           {{ page.content | safe }}
-          {% include "partials/pagination.html" %}
+          {{ pagination::pagination(page=page) }}
         </article>
 {% endblock content %}

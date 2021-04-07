@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "partials/pagination.html" as pagination %}
 {% block bodyclasses %}class="page-indiced"{% endblock bodyclasses %}
 
 {% block title %}
@@ -80,6 +81,6 @@
         {% endif %}
           <!-- body -->
           {{ page.content | safe }}
-          {% include "partials/pagination.html" %}
+          {{ pagination::pagination(page=page) }}
         </article>
 {% endblock content %}
