@@ -1,0 +1,27 @@
+.event .metadata > * {
+  
+  &::after {
+    content: ' / ';
+  }
+  &:nth-last-child(2)::after,
+  &:nth-last-child(1)::after {
+    content: '';
+  }
+}
+
+#event_months {
+  ol {
+    height: 0;
+    overflow: hidden;
+    &.current,
+    &:hover {
+      height: auto;
+    }
+  }
+  li:hover ol {
+    height: auto;
+  }
+  a.current {
+    font-weight: bold;
+  }
+}

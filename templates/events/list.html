@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
 
 {% block title %}
   <meta name="og:title" content="Events - {{ config.title }}">
@@ -13,33 +14,35 @@
 {% block content %}
 {% set posts = get_section(path="events/_index.md") %}
 <!-- header -->
-<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
   <a href="/events/">Events</a>
 
   {% include "partials/navigation-search.html" %}
 
+  <ol id="event_months" class="pa0" style="position: sticky; top: 0;"></ol>
+
 </nav>
-<section class="full c4-12-lg measure-wide pt4">
+<section class="full c4-12-lg pt4">
 
-  <section id="upcoming">
-    <h2 class="mb4">Upcoming Events</h2>
-  </section>
+  <section id="upcoming" class="grid12"></section>
 
-  <section id="past">
-    <h2 class="mb4">Past Events</h2>
-  </section>
+  <section id="past" class="grid12"></section>
 
   {% for page in posts.pages %}
-    <article data-date="{{ page.date }}" id="{{ page.slug }}" class="mb4">
-      <a href="{{ page.permalink }}" class="no-underline bb-0">
-        <h1>{{ page.title }}</h1>
+    <article data-date="{{ page.date }}" id="event-{{ page.slug }}" class="event mb4 c1-10-lg full {% if page.extra.pinned %}bg-gray4 na3 pa3{% endif %}">
+      <a href="{{ page.permalink }}" class="no-underline bb-0 grid12">
+        <h1 class="full">{{ page.title }}</h1>
+        <div class="measure-wide full c1-8-lg">
+          {% if page.extra.description %}
+            <p class="lh-copy">{{ page.extra.description }}</p>
+          {% endif %}
+          {{ macros::event_metadata(page=page, classes="mt2")}}
+        </div>
         {% if page.extra.image %}
-          <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+          <img class="db mv2 h4 ba obj-cover full c8-13-lg" src="{{ page.extra.image }}" />
         {% endif %}
-        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }}</time><br />
-        <span class="author f6">{{ page.extra.host }}</span>
       </a>
     </article>
   {% endfor %}
@@ -67,14 +70,88 @@
       return articleB[0] - articleA[0];
     });
 
+    const upcomingHeader = document.createElement('h2');
+    upcomingHeader.className = 'mb4 full';
+    upcomingHeader.innerText = 'Upcoming Events';
+    upcoming.appendChild(upcomingHeader);
+
     upcomingEvents.forEach(function (event) {
       upcoming.appendChild(event[1]);
     });
+
+    const pastHeader = document.createElement('h2');
+    pastHeader.className = 'mb4 full';
+    pastHeader.innerText = 'Past Events';
+    past.appendChild(pastHeader);
 
     pastEvents.forEach(function (event) {
       past.appendChild(event[1]);
     });
   </script>
-</section>
 
+  <script>
+    const monthMap = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+    const wrapper = document.getElementById('event_months');
+    const years = {};
+    Array.from(document.querySelectorAll('article[data-date]')).forEach(function (event) {
+      const date = new Date(Date.parse(event.dataset.date));
+      const year = date.getFullYear();
+      if (!years.hasOwnProperty(year)) {
+        years[year] = {};
+      }
+      const month = date.getMonth();
+      if (!years[year].hasOwnProperty(month)) {
+        years[year][month] = [];
+      }
+      years[year][month].push(event.id);
+    });
+    Object.keys(years).reverse().forEach(function (year) {
+      const yearItem = document.createElement('li');
+      yearItem.className = 'pt2';
+      const header = document.createElement('span');
+      header.className = 'f5';
+      header.innerText = year;
+      yearItem.appendChild(header);
+      const monthList = document.createElement('ol');
+      monthList.className = 'pa0 months';
+      yearItem.appendChild(monthList);
+      Object.keys(years[year]).reverse().forEach(function (month) {
+        const monthItem = document.createElement('li');
+        monthItem.className = 'pt1';
+        const header = document.createElement('span');
+        header.className = 'f6';
+        header.innerText = monthMap[month];
+        monthItem.appendChild(header);
+        const articleList = document.createElement('ol');
+        articleList.className = 'pa0 articles';
+        monthItem.appendChild(articleList);
+        monthList.appendChild(monthItem);
+        years[year][month].forEach(function (id) {
+          const articleItem = document.createElement('li');
+          const link = document.createElement('a');
+          link.className = 'bb f6 gray1';
+          link.href = `#${id}`;
+          link.innerText = document.getElementById(id).querySelector('h1').innerText;
+          articleItem.appendChild(link);
+          articleList.appendChild(articleItem);
+        });
+      });
+      wrapper.appendChild(yearItem);
+    });
+  </script>
+</section>
+{% include "partials/footer.html" %}
 {% endblock content %}

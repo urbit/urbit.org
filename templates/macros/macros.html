@@ -1,0 +1,11 @@
+{% macro event_metadata(page, classes="") %}
+  <span class="metadata measure-wide db relative {{ classes }}">
+    {% if page.extra.location %}
+      <span class="f6 gray1">{{ page.extra.location }}</span>
+    {% endif %}
+    {% if page.extra.registration_url and false %}
+      <a href="{{ page.extra.registration_url | safe}}" target="_blank" class="f6 gray2">34 attending</a>
+    {% endif %}
+    <time class="mono f6 gray2 fr">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }} </time>
+  </span>
+{% endmacro event_metadata %}

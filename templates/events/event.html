@@ -52,12 +52,31 @@
   {% endif %}
   
   {% if page.extra.registration_url %}
-    <a class="f6" target="_blank" href="{{ page.extra.registration_url }}">Register for this event</a>
+  <!-- TODO only show this if it's in the future. This build of tera doesn't support casting to int, so we have to use JS -->
+    <a class="f6" target="_blank" href="{{ page.extra.registration_url }}" id="rsvp" data-date="{{ page.date }}">RSVP Here</a>
+    <script>
+      const rsvp = document.getElementById('rsvp');
+      if (Date.now() > Date.parse(rsvp.dataset.date)) {
+        rsvp.style.display = 'none';
+      }
+    </script>
   {% endif %}
 
   <!-- body -->
+  <span id="rsvp_count"></span>
   {{ page.content | safe }}
   {{ pagination::pagination(page=page, type="Event") }}
+
+  {% if page.extra.registration_url %}
+  <script>
+    //fetch(`{{ page.extra.registration_url | replace(from="www", to="api") | safe}}`)
+    //  .then(response => response.json())
+    //  .then(response => {
+    //    console.log('response', response);
+    //    document.getElementById('rsvp_count').innerText = response.yes_rsvp_count;
+    //  });
+  </script>
+  {% endif %}
 </article>
 
 {% endblock content %}

@@ -371,13 +371,50 @@ if (window.location.href.includes("docs")) {
   docsNavScroll();
 }
 
+var getParents = function (elem, selector) {
+
+  // Element.matches() polyfill
+  if (!Element.prototype.matches) {
+    Element.prototype.matches =
+      Element.prototype.matchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector ||
+      Element.prototype.oMatchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      function(s) {
+        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+          i = matches.length;
+        while (--i >= 0 && matches.item(i) !== this) {}
+        return i > -1;
+      };
+  }
+
+  // Set up a parent array
+  var parents = [];
+
+  // Push each parent element to the array
+  for ( ; elem && elem !== document; elem = elem.parentNode ) {
+    if (selector) {
+      if (elem.matches(selector)) {
+        parents.push(elem);
+      }
+      continue;
+    }
+    parents.push(elem);
+  }
+
+  // Return our parent array
+  return parents;
+
+};
+
+
+
+
 // same-page navigation on-scroll behaviour
 
-if (document.body.classList.contains("page-indiced")) {
-  let h2 = document.getElementsByTagName("h2");
-  let h3 = document.getElementsByTagName("h3");
-  let all = document.querySelectorAll("nav li a");
-  let headers = document.querySelectorAll("details summary");
+if (document.body.classList.contains("page-indiced") || document.getElementById("event_months")) {
+  let all = document.querySelectorAll("nav.fixed-xl li a");
 
   // smooth scrolling on click
   all.forEach(link => {
@@ -391,26 +428,30 @@ if (document.body.classList.contains("page-indiced")) {
     });
   });
 
-  let lastId;
-  let cur = [];
-
   window.addEventListener("scroll", event => {
     let fromTop = window.scrollY;
-
+    let current;
     all.forEach(link => {
+      if (!link.hash) return;
       let section = document.querySelector(link.hash);
       let sectionChildren = document.querySelector(link.hash).nextElementSibling;
+      if (!sectionChildren) sectionChildren = section;
 
       if (
         ((section.offsetTop <= fromTop) ||
           (sectionChildren.offsetTop <= fromTop)) &&
         (section.offsetTop + section.offsetHeight + sectionChildren.offsetHeight > fromTop)
+        && !current
       ) {
-        link.classList.add("current");
-      } else {
-        link.classList.remove("current");
+        current = link;
       }
     });
+    if (current) {
+      Array.from(document.querySelectorAll('.current')).forEach(current => current.classList.remove('current'));
+      const parents = getParents(current, 'ol');
+      current.classList.add('current');
+      parents.forEach(current => current.classList.add('current'));
+    }
   })
 };
 

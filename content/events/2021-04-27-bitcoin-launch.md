@@ -2,12 +2,15 @@
 title = "Bitcoin Launch"
 date = 2021-04-27
 [extra]
+pinned = false
+pinned = true
 host = "Urbit Foundation"
 time = "09:00 PST"
-location = ""
+location = "Online Event"
 image = "https://secure.meetupstatic.com/photos/event/4/d/c/9/highres_495019913.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
 guests = "~timluc-miptev"
+description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
 +++
 
 Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC.

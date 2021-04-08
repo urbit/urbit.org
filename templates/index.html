@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
+
 <!--External links are differentiated on home page.-->
 {% block templatestyles %}
 
@@ -56,8 +58,67 @@
   </ul>
 </section>
 
+<section class="full c7-12-md c7-11-lg mb5">
+  {% set s = get_section(path="events/_index.md") %}
+  {% set pins = s.pages
+    | filter(attribute="extra.pinned", value=true)
+    | sort(attribute="date")
+    | reverse
+    %}
+  {% set allposts = s.pages
+            | sort(attribute="date")
+            | filter(attribute="extra.pinned", value=false)
+            | concat(with=pins)
+            | reverse
+            %}
+  {% for page in allposts | slice (end=2) %}
+    <li class="mb4 list event">
+      <a class="bb-0" href="{{ page.permalink }}">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        {% if page.extra.description %}
+          <p class="lh-copy mt1">{{ page.extra.description }}</p>
+        {% endif %}
+      </a>
+      {{ macros::event_metadata(page=page)}}
+    </li>
+  {% endfor %}
+  <a href="/events" class="bb">View more events</a>
+</section>
 
-<section class="full lh-copy c7-12-md c7-11-lg" id="follow">
+
+
+<section class="full c2-7-md c3-7-lg mt5">
+  <h1 class="mb3">Latest Posts</h1>
+  <p class="lh-copy mt1">We regularly write posts on our <a class="bb" href="/blog">blog</a> about what we're working on.</p>
+  {% set s = get_section(path="updates/_index.md") %}
+  {% set e = get_section(path="blog/_index.md") %}
+  {% set allposts = s.pages
+            | concat (with=e.pages)
+            | sort(attribute="date")
+            | reverse
+            %}
+  {% for page in allposts | slice (end=2) %}
+  <li class="mb4 list">
+        <a class="bb-0" href="{{ page.permalink }}">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        {% if page.extra.image %}
+        <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
+        {% elif page.extra.description %}
+        <p class="lh-copy mt1">{{ page.extra.description }}</p>
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}
+            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
+          {% endif %}
+        </span>
+      </a>
+      </li>
+  {% endfor %}
+</section>
+
+
+<section class="full lh-copy c7-12-md c7-11-lg mt5" id="follow">
   <p class="lh-copy mt1 mb3">
       We send regular updates about our project. Enter your email to get them.
     </p>
@@ -104,63 +165,6 @@
   </p>
 </section>
 
-<section class="full c2-7-md c3-7-lg mt5">
-  <h1 class="mb3">Events</h1>
-  <p class="lh-copy mt1">Find scheduled announcements, developer calls, and meetups in our <a class="bb" href="/events">events</a>.</p>
-  {% set s = get_section(path="events/_index.md") %}
-  {% set allposts = s.pages
-            | sort(attribute="date")
-            | reverse
-            %}
-  {% for page in allposts | slice (end=2) %}
-    <a class="bb-0" href="{{ page.permalink }}">
-      <li class="mb4 list">
-        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
-        {% if page.extra.image %}
-        <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
-        {% elif page.extra.description %}
-        <p class="lh-copy mt1">{{ page.extra.description }}</p>
-        {% endif %}
-        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-        <span class="mono f6">
-          {% if page.extra.ship %}
-            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
-          {% endif %}
-        </span>
-      </li>
-    </a>
-  {% endfor %}
-</section>
-
-<section class="full c7-12-md c7-11-lg mv5">
-  <h1 class="mb3">Latest Posts</h1>
-  <p class="lh-copy mt1">We regularly write posts on our <a class="bb" href="/blog">blog</a> about what we're working on.</p>
-  {% set s = get_section(path="updates/_index.md") %}
-  {% set e = get_section(path="blog/_index.md") %}
-  {% set allposts = s.pages
-            | concat (with=e.pages)
-            | sort(attribute="date")
-            | reverse
-            %}
-  {% for page in allposts | slice (end=2) %}
-    <a class="bb-0" href="{{ page.permalink }}">
-      <li class="mb4 list">
-        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
-        {% if page.extra.image %}
-        <img class="db mv2 obj-cover h4 w-50 ba" src="{{ page.extra.image }}" />
-        {% elif page.extra.description %}
-        <p class="lh-copy mt1">{{ page.extra.description }}</p>
-        {% endif %}
-        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
-        <span class="mono f6">
-          {% if page.extra.ship %}
-            <address class="mono f6 mh2">{{ page.extra.ship }}</address>
-          {% endif %}
-        </span>
-      </li>
-    </a>
-  {% endfor %}
-</section>
 
 {% include "partials/footer.html" %}
 {% endblock content %}
