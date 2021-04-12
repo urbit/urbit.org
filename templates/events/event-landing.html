@@ -1,0 +1,26 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<article class="event mt4 mb4 c1-13">
+
+  {{ page.content | safe }}
+
+  <!-- {% if page.extra.image %}
+    <img class="db mv2 obj-cover w-20 center" src="{{ page.extra.image }}" />
+  {% endif %} -->
+  
+  {% if page.extra.registration_url %}
+  <!-- TODO only show this if it's in the future. This build of tera doesn't support casting to int, so we have to use JS -->
+    <a target="_blank" href="{{ page.extra.registration_url }}" id="rsvp" data-date="{{ page.date }}">RSVP</a>
+    <script>
+      const rsvp = document.getElementById('rsvp');
+      if (Date.now() > Date.parse(rsvp.dataset.date)) {
+        rsvp.style.display = 'none';
+      }
+    </script>
+  {% endif %}
+  
+</article>
+
+{% endblock content %}
