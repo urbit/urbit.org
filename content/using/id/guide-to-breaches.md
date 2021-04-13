@@ -34,7 +34,7 @@ personal breach, follow the steps below.
 - Download your new keyfile following these instructions: [Generate your
   keyfile](@/using/id/using-bridge.md#generate-your-keyfile).
 - Delete or archive your old [pier](@/docs/glossary/pier.md).
-- Proceed to [boot your ship](@/getting-started.md#boot-your-planet) with the new keyfile.
+- Proceed to [boot your ship](@/getting-started/_index.md#boot-your-planet) with the new keyfile.
 - Delete your keyfile after successfully booting.
 - Rejoin your favorite chat channels and subscriptions.
 
@@ -57,7 +57,7 @@ you are transferring to another address you own. The process here is slightly di
   keyfile](@/using/id/using-bridge.md#generate-your-keyfile). The option
   whether or not to breach is in the Accept your Transfer step.
 - Delete or archive your old [pier](@/docs/glossary/pier.md).
-- Proceed to [boot your ship](@/getting-started.md#boot-your-planet) with the new keyfile.
+- Proceed to [boot your ship](@/getting-started/_index.md#boot-your-planet) with the new keyfile.
 - Delete your keyfile after successfully booting.
 - Rejoin your favorite chat channels and subscriptions.
 
@@ -85,6 +85,6 @@ If a network breach is happening, follow the steps below.
 
 - Delete your old Urbit binary.
 - Delete or archive your old pier.
-- Download the new Urbit binary by following the instructions in the [Install page](@/getting-started.md).
+- Download the new Urbit binary by following the instructions in the [Install page](@/getting-started/_index.md).
 - Create a new pier by booting your ship with your key, according to the instructions on the install page. (Note: You do _not_ need to use a new key to boot into a new continuity era.)
 - Rejoin your favorite chat channels and subscriptions.

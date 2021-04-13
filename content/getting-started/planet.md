@@ -2,10 +2,9 @@
 title = "Setting up Your Planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
-template = "page/getting_started.html"
 +++
 
-A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/getting-started.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
+A planet is a permanent Urbit identity. Like all Urbit identities, they can never be taken away from you. Unlike comets which are free, planets are designed for use well into the future. If you're not yet familiar with the Urbit network, please follow the [Getting Started guide](@/getting-started/_index.md), which will explain the basics and walk you through using a free identity. This guide explains the next steps.
 
 ### Purchase a planet {#purchase}
 
@@ -48,36 +47,40 @@ If you received an email invite to Urbit, the master ticket should be a .pdf fil
 
 ### Run the boot command {#the-dojo}
 
-Navigate to your `urbit` directory.
+For other ships on the network to communicate with your ship, the computer it's
+running on needs to be able to receive inbound UDP traffic. Therefore, it's
+important when running your ship locally to use the `-p ames_port` flag (replace
+`ames_port` with a public port number from 49152 to 65535) to specify on which
+port you'll receive UDP traffic, and to forward inbound UDP traffic arriving at
+your router on that port to your computer.
 
-Open your keyfile (it is just a text file) and copy the key inside.  Paste it into the following command, with `sampel-palnet` replaced by the name of your planet.  **Do not include the tilde in your planet name.**
+Navigate to your `urbit` directory. Open your keyfile (it is just a text file)
+and copy the key inside. Paste it into the following command, except with
+`ames_port` replaced with a public port number, and `sampel-palnet` replaced by
+the name of your planet. **Do not include the tilde in your planet name.**
 
 ```sh
-./urbit -w sampel-palnet -G rAnDoMkEy
+./urbit -p ames_port -w sampel-palnet -G rAnDoMkEy 
 ```
 
 Or you can copy the keyfile into the current directory and run:
 
 ```sh
-./urbit -w sampel-palnet -k ./my-planet.key
+./urbit -p ames_port -w sampel-palnet -k ./my-planet.key 
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin booting your planet. It may take a few minutes.
 
 When your planet is finished booting, you will see `~sampel-palnet:dojo>` (Dojo: the Urbit command line).
 
-Get your password to log into landscape (the Urbit web interface) by typing:
-
-```sh
-+code
-```
+To log into [Landscape](@/docs/glossary/landscape.md), check out the directions [here](/getting-started/#using-landscape).
 
 To shut down your planet, use `Ctrl-D`.
 
-To start your planet up again, run the following from your `urbit` directory.
+To start your planet up again, run the following from your `urbit` directory, with `ames_port` replaced with the public port number you used when first booting your ship.
 
 ```sh
-./urbit sampel-palnet
+./urbit -p ames_port sampel-palnet
 ```
 
 Note that `sampel-palnet/` is the path of a folder, which we just created in your `urbit` directory. This folder is called your planet's **pier**, and it holds all of your data.

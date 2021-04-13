@@ -743,6 +743,13 @@ var glossary = [
     "desc": "<code>[%mccl p=hoon q=(list hoon)]</code>: call a binary function as an n-ary function."
   },
   {
+    "name": "micgal",
+    "symbol": ";<",
+    "usage": "Make",
+    "link": "/docs/reference/hoon-expressions/rune/mic/#micgal",
+    "desc": "<code>[%mcgl p=spec q=hoon r=hoon s=hoon]</code>: monadic do notation."
+  },
+  {
     "name": "miclus",
     "symbol": ";+",
     "usage": "Make",
@@ -900,128 +907,37 @@ var glossary = [
     "name": "fas",
     "symbol": "/",
     "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#ford-runes",
+    "link": "/docs/arvo/ford/#ford-runes",
     "desc": "Runes specific to Ford, not considered to be Hoon runes."
   },
   {
     "name": "faslus",
     "symbol": "/+",
     "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#faslus",
+    "link": "/docs/arvo/ford/#ford-runes",
     "desc": "Ford rune. Import from <code>lib/</code>"
   },
   {
     "name": "fashep",
     "symbol": "/-",
     "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fashep",
+    "link": "/docs/arvo/ford/#ford-runes",
     "desc": "Ford rune. Import from <code>sur/</code>"
-  },
-  {
-    "name": "fassig",
-    "symbol": "/~",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fassig",
-    "desc": "Ford rune. Twig by hand."
-  },
-  {
-    "name": "fasfas",
-    "symbol": "//",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasfas",
-    "desc": "Ford rune. Include a file by relative path."
   },
   {
     "name": "fastis",
     "symbol": "/=",
     "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fastis",
+    "link": "/docs/arvo/ford/#ford-runes",
     "desc": "Ford rune. Wrap a face around an included horn."
   },
   {
-    "name": "fascol",
-    "symbol": "/:",
+    "name": "fastar",
+    "symbol": "/*",
     "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fascol",
-    "desc": "Ford rune. Evaluate at path, and <code>/mark/</code> at current path"
+    "link": "/docs/arvo/ford/#ford-runes",
+    "desc": "Ford rune. Import file, convert to mark, and wrap a face."
   },
-  {
-    "name": "faszap",
-    "symbol": "/!",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#faszap",
-    "desc": "Ford rune. <code>/!mark/</code> evaluates as Hoon, then passes through mark."
-  },
-  {
-    "name": "faspam",
-    "symbol": "/&",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#faspam",
-    "desc": "Ford rune. Pass through a series of marks."
-  },
-  {
-    "name": "fasbar",
-    "symbol": "/|",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasbar",
-    "desc": "Ford rune. Short-circuiting 'or' "
-  },
-  {
-    "name": "fascab",
-    "symbol": "/_",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fascab",
-    "desc": "Ford rune. Runs horns on files in the current directory."
-  },
-  {
-    "name": "fasmic",
-    "symbol": "/;",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasmic",
-    "desc": "Ford rune. Operate on."
-  },
-  {
-    "name": "fascom",
-    "symbol": "/,",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fascom",
-    "desc": "Ford rune. Switch by path."
-  },
-  {
-    "name": "fasdot",
-    "symbol": "/.",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasdot",
-    "desc": "Ford rune. Produces a list from a sequence of horns."
-  },
-  {
-    "name": "fasket",
-    "symbol": "/^",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasket",
-    "desc": "Ford rune. Casts the result of a horn to a mold."
-  },
-  {
-    "name": "fashax",
-    "symbol": "/#",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fashax",
-    "desc": "Ford rune. Inserts a dependency hash."
-  },
-  {
-    "name": "fasbuc",
-    "symbol": "/$",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fasbuc",
-    "desc": "Ford rune. Process extra arguments."
-  },
-  {
-    "name": "fascen",
-    "symbol": "/%",
-    "usage": "Ford",
-    "link": "/docs/tutorials/arvo/ford/#fascen",
-    "desc": "Ford rune. Propagate extra arguments into renderers."
-  }, 
   // glossary starts here
   {
     "name": "ames",
