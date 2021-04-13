@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "partials/pagination.html" as pagination %}
 {% block title %}
   <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
   <title>{{ page.title }} - {{ config.title }}</title>
@@ -62,6 +63,6 @@
 
   {{ page.content | safe }}
 
-  {% include "partials/pagination.html" %}
+  {{ pagination::pagination(page=page) }}
 </article>
 {% endblock content %}
