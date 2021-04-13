@@ -10,6 +10,7 @@ image = "https://marpem-files.sfo2.digitaloceanspaces.com/radbur-sivmus/2021.4.0
 registration_url = "https://www.meetup.com/urbit-sf/events/277261928/"
 guests = "Tyler Brown Cifu Shuster (~radbur-sivmus)"
 description = "In this talk, Tyler Brown Cifu Shuster (~radbur-sivmus) explains how to use Javascript tools to develop a client for Urbit."
+youtube = "avLSSdb2VLM"
 +++
 
 Urbit provides a powerful and extensible platform for all kinds of app development. It can serve as a general-purpose datastore, decentralized network, and identity solution for a variety of front-end applications. The client that ships with Urbit, Landscape, provides one example of the kind of applications that can be built on the platform. However, other developers can use the same tools used to create Landscape to power their own interfaces and clients for Urbit.

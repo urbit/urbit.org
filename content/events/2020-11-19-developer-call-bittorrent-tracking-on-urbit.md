@@ -9,6 +9,7 @@ time = "09:00 PST"
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/274650693/"
+youtube = "cvx2UV6TJ5I"
 +++
 
 Developer calls are focused on the technologies that underpin Urbit, from the top of the stack to the very bottom. They’re an opportunity for the people developing and contributing to Urbit to share their knowledge and expertise, including things that typically don’t make it into the docs, such as how and why Urbit works the way it does.

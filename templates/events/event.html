@@ -36,7 +36,16 @@
 <article class="mt4 mb4 c1-13 c4-12-lg measure-wide">
   {% if page.extra.hidetitle %} {% else %}<h1>{{ page.title }}</h1>{% endif %}
 
-  {% if page.extra.image %}
+  {% if page.extra.youtube %}
+    <div class="video-container mv4">
+      <iframe class="w-100" height=auto
+        src="https://www.youtube.com/embed/{{page.extra.youtube}}"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+      </iframe>
+    </div>
+  {% elif page.extra.image %}
     <img class="db mv2 obj-cover w-100 ba" src="{{ page.extra.image }}" />
   {% endif %}
 
@@ -61,6 +70,8 @@
       }
     </script>
   {% endif %}
+
+  
 
   <!-- body -->
   <span id="rsvp_count"></span>

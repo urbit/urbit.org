@@ -9,9 +9,8 @@ time = "17:00 PST"
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/8/600_492480008.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/273439025/"
+youtube = "w3qKe_WZr50"
 +++
-
-Stream is now live: <a href="https://www.youtube.com/watch?v=w3qKe_WZr50" class="embedded">https://www.youtube.com/watch?v=w3qKe_WZr50</a>
 
 -------
 

@@ -9,6 +9,7 @@ time = "09:00 PST"
 location = "Online event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/276692816/"
+youtube = "CKuHXrdkIw0"
 +++
 
 Urbit engineer Philip Monk will be discussing the solution space to scaling Azimuth, the infrastructure for Urbit ID that's built on Ethereum.

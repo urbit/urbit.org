@@ -9,16 +9,12 @@ time = "19:00 PST"
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
+youtube = "71ViyftPkGk"
 +++
 
 Join us as we launch Urbit OS1!
 
 The presentation will begin at 7pm Pacific.
-
-Youtube Live Stream:
-
-{{ youtube(id="71ViyftPkGk") }}
-
 
 Join the live conversation on Urbit itself: `~/~dopzod/os1-premiere`
 
