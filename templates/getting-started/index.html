@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+  <meta name="og:title" content="Getting Started - {{ config.title }}">
+  <title>Getting Started - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="Urbit is a new kind of computer.">
+  <meta name="description" content="Urbit is a new kind of computer.">
+{% endblock description %}
+
+{% block image %}
+  <meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/getting-started/">
+    Getting Started
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/getting-started/">Introduction</a></li>
+  {% set posts = get_section(path="getting-started/_index.md") %}
+  {% for directorypage in posts.pages %}
+    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+  {% endfor %}
+
+</nav>
+<!-- content -->
+<article class="mt4 mb6 full c4-12-lg measure-wide">
+  <!-- header -->
+  <h1>{{ section.title }}</h1>
+  <!-- body -->
+    {{ section.content | safe }}
+</article>
+{% endblock content %}

@@ -103,7 +103,7 @@ Continuing to follow the DO docs we're going to configure the ufw firewall.
    ```
 
 ## Installing Urbit
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/getting-started.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
+Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](@/getting-started/_index.md). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
  - **WARN**: Since Urbit is p2p you don't want to ever run two copies of your ship simultaneously. This is because other nodes that interact with each of your copies will be confused by which one is the most up to date. If you end up accidentally doing this you'll have to do a 'personal breach' described in the [guide to breaches](@/using/id/guide-to-breaches.md) to fix things.
  - The first thing you're going to want to do is shut down your local ship, either with control-d or `|exit` in dojo.
  - Next we're going to install Urbit on the server and permit it to bind to the web ports:
@@ -166,7 +166,7 @@ On iOS you can save a website to your homescreen as an icon. If you do this for 
    - [Digital Ocean Nginx Installation][DO Nginx Install]
    - [Digital Ocean Nginx Config][DO Nginx Config]
    - [Digital Ocean SSL Cert Setup][DO SSL Config]
-   - [Urbit Install Docs](@/getting-started.md)
+   - [Urbit Install Docs](@/getting-started/_index.md)
    - [Urbit Basic Cloud Install][Urbit Basic Cloud Install]
 
  [Gandi]: https://www.gandi.net/

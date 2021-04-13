@@ -43,7 +43,7 @@ OS 1 is a minimal, multipurpose interface for bringing a group together to chat,
 
 We built OS 1 for ourselves. We were sick of using centralized, mainstream software. We didn’t want to be stuck switching between bloated, monolithic services in order to keep in touch and move our work forward. We were done relying on some third party to take care of our community—so we exited to Urbit, and it feels good.
 
-If you’re curious to get a complete overview of OS 1, check out [this post](https://urbit.org/blog/introducing-os1/), watch the [release event](https://www.youtube.com/watch?v=71ViyftPkGk&feature=youtu.be&t=3963) or feel free to [boot a node](@/getting-started.md#comet) to come talk to us. 
+If you’re curious to get a complete overview of OS 1, check out [this post](https://urbit.org/blog/introducing-os1/), watch the [release event](https://www.youtube.com/watch?v=71ViyftPkGk&feature=youtu.be&t=3963) or feel free to [boot a node](@/getting-started/_index.md#comet) to come talk to us. 
 
 (Running Urbit still requires a little fiddling around in the command-line, so it’s not for everyone—but we do have [plans for that to improve](https://urbit.org/blog/providers/).)
 
