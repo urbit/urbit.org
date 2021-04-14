@@ -19,5 +19,7 @@ Raghu is a software engineer at Hudson River Trading who is perhaps best known f
 
 As usual, there'll be an opportunity to jump on the call with us afterward to ask questions and hang out.
 
-Original mailing list discussion of 3rd party software distribution: https://groups.google.com/a/urbit.org
-ucal: https://github.com/taalhavras/ucal
+## Resources 
+
+- [Original mailing list discussion of 3rd party software distribution](https://groups.google.com/a/urbit.org)
+- [ucal](https://github.com/taalhavras/ucal)
