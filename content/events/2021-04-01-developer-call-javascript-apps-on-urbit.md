@@ -1,5 +1,5 @@
 +++
-title = "JavaScript Apps on Urbit"
+title = "Developer Call: JavaScript Apps on Urbit"
 date = 2021-04-01
 [extra]
 pinned = false
