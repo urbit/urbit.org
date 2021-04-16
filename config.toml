@@ -13,6 +13,12 @@ generate_feed = true
 build_search_index = true
 feed_filename = "rss.xml"
 
+# I18n
+# 'en' is defined implicitly by the default_language setting above
+languages = [
+    {code = "es", feed = false, search = true}
+]
+
 [markdown]
 # A list of directories used to search for additional `.sublime-syntax` files.
 # TODO: syntax highlighting is currently broken on 0.13.0, but works on zola@next
