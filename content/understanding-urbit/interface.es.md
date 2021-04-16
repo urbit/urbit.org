@@ -41,31 +41,31 @@ OS 1 es una interfaz mínima y multipropósito para reunir a un grupo para charl
 
 <img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png">
 
-We built OS 1 for ourselves. We were sick of using centralized, mainstream software. We didn’t want to be stuck switching between bloated, monolithic services in order to keep in touch and move our work forward. We were done relying on some third party to take care of our community—so we exited to Urbit, and it feels good.
+Creamos OS 1 para nosotros. Estábamos hartos de usar software convencional y centralizado. No queríamos quedarnos estancados cambiando entre servicios monolíticos e inflados para mantenernos en contacto y hacer avanzar nuestro trabajo. Dejamos de depender de un tercero para cuidar de nuestra comunidad, así que salimos a Urbit y se siente bien.
 
-If you’re curious to get a complete overview of OS 1, check out [this post](https://urbit.org/blog/introducing-os1/), watch the [release event](https://www.youtube.com/watch?v=71ViyftPkGk&feature=youtu.be&t=3963) or feel free to [boot a node](@/getting-started/_index.md#comet) to come talk to us. 
+Si tiene curiosidad por obtener una descripción general completa de OS 1, consulte [esta publicación](https://urbit.org/blog/introducing-os1/), vea el [evento de lanzamiento](https://www.youtube.com/watch?v=71ViyftPkGk&feature=youtu.be&t=3963) o no dudes en [iniciar un nodo](@getting-started/_index.md#comet) para hablar con nosotros.
 
-(Running Urbit still requires a little fiddling around in the command-line, so it’s not for everyone—but we do have [plans for that to improve](https://urbit.org/blog/providers/).)
+(Ejecutar Urbit aún requiere un poco de manipulación en la línea de comandos, por lo que no es para todos, pero tenemos [planes para que eso mejore](https://urbit.org/blog/providers/)).
 
-Our target with OS 1 was to produce the [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) of cloud computers. Something bordering on simplistic, but still nice to use. We hit that target, but it’s just the first milestone. Let’s talk a bit about how Landscape grows and matures at a high level (for more specifics on the near-to-medium term, check out [the roadmap](https://urbit.org/understanding-urbit/roadmap/)).
+Nuestro objetivo con OS 1 era producir el [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) de computadoras en la nube. Algo que raya en lo simplista, pero aún así es agradable de usar. Logramos ese objetivo, pero es solo el primer hito. Hablemos un poco sobre cómo el paisaje crece y madura a un alto nivel (para obtener más detalles sobre el corto y mediano plazo, consulte [la hoja de ruta](https://urbit.org/understanding-urbit/roadmap/)).
 
 <img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png">
 
-Landscape has two basic building blocks: groups and modules. A group is exactly what it sounds like: one or more people. A module is sort of like an app without the data lock-in. A module is just a tool for getting something done, like ‘tasks’, ‘links’ or ‘votes’ that’s shared by a group. 
+El paisaje tiene dos bloques de construcción básicos: grupos y módulos. Un grupo es exactamente lo que parece: una o más personas. Un módulo es como una aplicación sin el bloqueo de datos. Un módulo es solo una herramienta para hacer algo, como "tareas", "enlaces" o "votos" que comparte un grupo.
 
-To give a few simple examples, a group of family members may just chat and share photos. A group of traders might share annotated research, watch the markets, and manage payments on a blockchain. 
+Para dar algunos ejemplos simples, un grupo de miembros de la familia puede simplemente charlar y compartir fotos. Un grupo de comerciantes puede compartir investigaciones anotadas, observar los mercados y administrar pagos en una cadena de bloques.
 
-Today, Landscape only has a few modules that come out of the box: chat, links, and publish. Our plan is to keep expanding this suite such that the default suite of modules feels like a nicely balanced toolkit for building community and staying connected. We’d also like to make it easy for anyone to build their own module and share it with others directly over Urbit’s network. 
+Hoy, Landscape solo tiene algunos módulos que vienen de fábrica: chat, enlaces y publicación. Nuestro plan es seguir expandiendo esta suite de tal manera que la suite predeterminada de módulos se sienta como un conjunto de herramientas bien equilibrado para construir una comunidad y mantenerse conectado. También nos gustaría facilitar que cualquiera pueda crear su propio módulo y compartirlo con otros directamente a través de la red de Urbit.
 
-The idea is this: any community should be able to customize their digital environment freely. For most users, this is just about choosing the right modules. For anyone with a bit of free time, adding your own modules should only be as difficult as building a simple webapp.
+La idea es la siguiente: cualquier comunidad debería poder personalizar libremente su entorno digital. Para la mayoría de los usuarios, se trata solo de elegir los módulos adecuados. Para cualquier persona con un poco de tiempo libre, agregar sus propios módulos debería ser tan difícil como crear una aplicación web simple.
 
-When we look forward to what we can do with Landscape in the future, it’s hard to see ourselves going back to the tools we use today. The centralized services we have now are like broadcast media: they’re for distributing content from a producer to a bunch of followers. 
+Cuando esperamos lo que podemos hacer con Landscape en el futuro, es difícil volver a las herramientas que usamos hoy. Los servicios centralizados que tenemos ahora son como medios de difusión: sirven para distribuir contenido de un productor a un grupo de seguidores.
 
-Landscape is for everything else. Landscape is for actual two-way communication.
+El paisaje es para todo lo demás. El paisaje es para una comunicación bidireccional real.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png">
 
-Our desire to build a single place to work together isn’t driven just by convenience 
-(although it is quite convenient). The way we see it, [real communities need to have real ownership over the spaces they inhabit](https://urbit.org/blog/urbit-is-for-communities/). When communities use industrial-grade, one-size-fits-all software they feel as sterile as the software they use. That world always felt a bit like living in a planned community. We’d rather live in the countryside.
+Nuestro deseo de construir un solo lugar para trabajar juntos no se basa solo en la conveniencia
+(aunque es bastante conveniente). A nuestro modo de ver, [las comunidades reales deben tener una propiedad real sobre los espacios que habitan](https://urbit.org/blog/urbit-is-for-communities/). Cuando las comunidades utilizan software de calidad industrial y de talla única, se sienten tan estériles como el software que utilizan. Ese mundo siempre se sintió un poco como vivir en una comunidad planificada. Preferimos vivir en el campo.
 
-We think Landscape can evolve into something even *more* powerful, cleaner, and more satisfying to use. Landscape is neither a social network nor productivity software. Landscape isn’t centrally controlled or passively surveilled. Landscape is something entirely new. It’s software that’s tailored to the people who use it, by the people who use it.
+Creemos que Landscape puede evolucionar hasta convertirse en algo incluso * más * potente, más limpio y más satisfactorio de usar. Landscape no es una red social ni un software de productividad. El paisaje no se controla de forma centralizada ni se vigila de forma pasiva. El paisaje es algo completamente nuevo. Es un software que se adapta a las personas que lo usan, por las personas que lo usan.
