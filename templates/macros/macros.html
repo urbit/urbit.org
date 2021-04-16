@@ -9,3 +9,27 @@
     <time class="mono f6 gray2 fr">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }} </time>
   </span>
 {% endmacro event_metadata %}
+
+<!-- Show a language selector when localized content is available -->
+<!-- example: {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }} -->
+{% macro language_selector(current_url, multilan=true) %}
+  {% if config.languages and multilan %}
+    <small class="multilingual">
+      {% set deflang = true %}
+      {% for lang in config.languages %}
+        {% if current_url is not containing(lang.code) %}
+          <a href="{{ current_url | replace(from=config.base_url, to=config.base_url ~ "/" ~ lang.code) }}">{{ lang.code }}</a>
+        {% else %}
+          {{ lang.code }}
+          {% set_global deflang = false %}
+        {% endif %}
+      {% endfor %}
+
+      {% if deflang %}
+        | {{ config.default_language }}
+      {% else %}
+        | <a href="{{ current_url | replace(from=lang ~ "/", to="") }}">{{ config.default_language }}</a>
+      {% endif %}
+    </small>
+  {% endif %}
+{% endmacro language_selector %}

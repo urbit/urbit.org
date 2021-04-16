@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "partials/pagination.html" as pagination %}
+{% import "macros/macros.html" as macros %}
 
 {% block title %}
   <meta name="og:title" content="{{ page.title }} - {{ config.title }}">
@@ -37,19 +38,21 @@
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
   <a class="gray3" href="/">Urbit</a>
   <span class="gray3"> / </span>
-  <a class="section" href="/{{ page.components[0] }}">
-    {% set sectionname = get_section(path=page.components[0] ~ "/_index.md") %}
-    {{ sectionname.title }}
+  {% set parent_index = page.ancestors | length - 1 %}
+  {% set parent_section = get_section(path=page.ancestors[parent_index]) %}
+
+  <a class="section" href="{{ parent_section.permalink }}">
+    {{ parent_section.title }}
   </a>
 
   {% include "partials/navigation-search.html" %}
-  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="/understanding-urbit/">Introduction</a></li>
-  {% set posts = get_section(path="understanding-urbit/_index.md") %}
-  {% for directorypage in posts.pages %}
-    {% if directorypage.title == page.title %}
-  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{ parent_section.permalink }}">Introduction</a></li>
+  {% for section_page in parent_section.pages %}
+    {% if section_page.title == page.title %}
+      <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="{{section_page.permalink}}">{{section_page.title}}</a></li>
     {% else %}
-    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+      <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{section_page.permalink}}">{{section_page.title}}</a></li>
     {% endif %}
   {% endfor %}
 </nav>
@@ -69,6 +72,10 @@
   {% if page.extra.readtime %}
   <span class="dib mono{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
   {% endif %}
+
+  {% block language_selector %}
+  {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }}
+  {% endblock language_selector %}
 
     {{ page.content | safe }}
 
