@@ -138,7 +138,7 @@ philosophy, and so any involvement of Urbit with IoT will soundly reject all of
 these weaknesses as nonstarters.
 
 However, it's important to understand why the current IoT model works like this
-at all. I claim that it ultimately stems from the fact that today's IoT products
+at all. I posit that it ultimately stems from the fact that today's IoT products
 are primitive moons for which you do not operate the parent planet. On Earth,
 almost every IoT device is necessarily married with the Software as a Service
 (SaaS) paradigm because people don't have personal servers that could do all the
@@ -166,12 +166,15 @@ For web-exposed devices, Urbit offers the same security guarantees that it does
 for your personal computer: everything is end-to-end encrypted by default. Urbit
 still has a while to go before we can truly declare it secure, but when it is
 there, you'll be assured the same level of protection for your devices that your
-Urbit has.
+Urbit has. The Urbit ID system also allows one to match public keys with
+devices, allowing devices to have self-authenticating identities, the importance
+of which was pointed out by Vint Cerf
+[here](https://cacm.acm.org/magazines/2018/12/232883-self-authenticating-identifiers/fulltext).
 
 Urbit has many other features that make it well-suited for IoT, above and beyond
-just eliminating the SaaS model. Many of these additional advantages derive from
-the fact that Urbit is a [solid state
-interpreter](@/docs/arvo/overview/#solid-state-interpreter) and that
+just eliminating the SaaS model and providing self-authenticating identities.
+Many of these additional advantages derive from the fact that Urbit is a [solid
+state interpreter](@/docs/arvo/overview/#solid-state-interpreter) and that
 [Ames](@/docs/glossary/ames.md) is a network of solid-state interpreters
 equipped with cryptographic identity. We explore this in the next section.
 
