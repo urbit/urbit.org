@@ -55,6 +55,11 @@
       <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{section_page.permalink}}">{{section_page.title}}</a></li>
     {% endif %}
   {% endfor %}
+  <div class="lang-picker-wrapper gray3">
+    {% block language_selector %}
+    {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }}
+    {% endblock language_selector %}      
+  </div>
 </nav>
 
   <article class="full c4-12-lg measure-wide">
@@ -72,10 +77,6 @@
   {% if page.extra.readtime %}
   <span class="dib mono{% if page.date %} ml2{% endif %} gray2 f5">{{ page.reading_time }}m read</span>
   {% endif %}
-
-  {% block language_selector %}
-  {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }}
-  {% endblock language_selector %}
 
     {{ page.content | safe }}
 

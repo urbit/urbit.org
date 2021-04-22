@@ -20,13 +20,13 @@
         {% if current_url is not containing(lang.code) %}
           <a href="{{ current_url | replace(from=config.base_url, to=config.base_url ~ "/" ~ lang.code) }}">{{ lang.code }}</a>
         {% else %}
-          {{ lang.code }}
+        <span class="selected-language">{{ lang.code }}</span>
           {% set_global deflang = false %}
         {% endif %}
       {% endfor %}
 
       {% if deflang %}
-        | {{ config.default_language }}
+        | <span class="selected-language">{{ config.default_language }}</span>
       {% else %}
         | <a href="{{ current_url | replace(from=lang ~ "/", to="") }}">{{ config.default_language }}</a>
       {% endif %}
