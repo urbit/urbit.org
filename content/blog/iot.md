@@ -1,37 +1,43 @@
 +++
 title = "Lunar Urbit and the Internet of Things"
-date = 2019-11-27
+date = 2021-04-23
 description = "Potential future usecases of moons for industry and consumers"
 [extra]
 author = "Jonathan Paprocki"
 ship = "~datnut-pollen"
-image = ""
+image = "https://media.urbit.org/site/posts/essays/phobos.jpeg"
 +++
 
+<br>
+
+![phobos](https://media.urbit.org/site/posts/essays/phobos.jpeg)
+
+<br>
+
 Each of the ~4B 32-or-fewer-bit or [Azimuth](@/docs/glossary/azimuth.md)
-identities - namely [planets](@/docs/glossary/planet.md),
-[stars](@/docs/glossary/star.md), and [galaxies](@/docs/glossary/galaxy.md), may
-spawn ~4B 64-bit child identities known as [moons](@/docs/glossary/moon.md).
+identities, namely [planets](@/docs/glossary/planet.md),
+[stars](@/docs/glossary/star.md), and [galaxies](@/docs/glossary/galaxy.md),
+may spawn ~4B 64-bit child identities known as [moons](@/docs/glossary/moon.md).
 Moons are the totally undeveloped wild outback of Urbit, with a story waiting to
 be told that promises to be just as enormous in scale as the cloud personal
-computing story told by planets, and possibly even more so. In this post, I
+computing story told by planets, and possibly even more so. In this post, we
 review the prehistory of moons on Earth, give a snapshot of how moons are being
 utilized on Mars in 2021, cover existing issues with consumer IoT and how Urbit
 resolve them, and then go on to speculate what the lunar locus of the Urbit ID
 address space may develop into in the future. To keep the futurist scope
-limited, I primarily speculate on the usage of moons in (industrial) internet of
-things settings, especially with respect to agriculture, and how they may
+limited, we primarily speculate on the usage of moons in (industrial) internet
+of things settings, especially with respect to agriculture, and how they may
 manifest as the workhorse collection unit of decentralized data markets.
 
 For those unfamiliar, moons differ from all other
-[ships](@/docs/glossary/ship.md) in that they are not independent identities,
-free to behave on the network however they please. Instead, their cryptographic
+[ships](@/docs/glossary/ship.md) in that they are not independent identities
+with total sovereignty over their data and keys. Instead, their cryptographic
 keys are issued and controlled by their parent identity. The relationship
 between the keys of a parent ship and its moons are analogous to the
 relationship between primary keys and subkeys in a system like
 [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy). The parent may revoke
 or change its child moons' keys at any time. A typical relationship between a
-planet and a moon may be one of a person and their smartphone. If you lose your
+planet and a moon may be one of a human and their smartphone. If you lose your
 phone, you don't want someone able to start pretending they are you, operating
 one of your moons, on the network. The planet is able to revoke the keys, and
 the moon stored on the phone becomes inert, no longer able to communicate with
@@ -42,17 +48,19 @@ new one elsewhere. Moons possess no such freedom.
 
 ### Lunar prehistory
 
+![luna](https://media.urbit.org/site/posts/essays/luna.jpg)
+
 It may come as a surprise to you that you are already very familiar with moon
 identities - they've just never been explained to you in such terms because
 their existence on Earth is obscured. Moons, in fact, are not a new concept at
-all. Virtually your entire experience of the internet on Earth in the modern
-era is the experience of someone who possesses a large quantity of moons
-subordinate to planets who mostly refuse to talk to one another. The feeling you
-get of constantly moving between silos, juggling accounts, not controlling your
-own data, etc. is a direct result of the fact that, on Earth, you only possess
+all. Virtually your entire experience of the internet on Earth in the modern era
+is the experience of someone who possesses a large quantity of moons subordinate
+to planets who mostly refuse to talk to one another. The feeling you get of
+constantly moving between silos, juggling accounts, not controlling your own
+data, etc. is a direct result of the fact that, on Earth, you only possess
 moons. No planets.
 
-I'm speaking, of course, of the client-server relationship. In Martian
+We're speaking, of course, of the client-server relationship. In Martian
 terminology, the Facebooks, Twitters, and Googles of the world are planets, and
 accounts held with these services may be thought of as moons subordinate to
 those planets. Your account with these megacorps is only yours for as long as
@@ -87,15 +95,17 @@ surveillance-industrial complex will meet its end in the near future.
 
 ### Moons in the early Martian era
 
+![sputnik](https://media.urbit.org/site/posts/essays/sputnik.jpg)
+
 In 2021, moons are mostly unused on Urbit. There's a smattering of minor use
 cases which we'll describe here, but they represent only a tiny fraction of
 their ultimate potential.
 
 Tlon recently launched a survey bot called [Eliza](@/blog/eliza.md), which was
-initially a comet. We frequently got questions on whether Eliza was actually Tlon's
-bot, because it could just as easily be a malicious actor posing as Tlon. We
-soon plan to relaunch Eliza as a moon of `~zod`. This is to establish that the
-bot is indeed official - only someone with access to `~zod` is capable of
+initially a comet. We frequently got questions on whether Eliza was actually
+Tlon's bot, because it could just as easily be a malicious actor posing as Tlon.
+We soon plan to relaunch Eliza as a moon of `~zod`. This is to establish that
+the bot is indeed official - only someone with access to `~zod` is capable of
 creating a moon of `~zod`, and so a moon of `~zod` automatically carries with it
 a cryptographic guarantee that you are communicating with an official digital
 representative of Tlon. On Earth, something like this would need to be
@@ -108,8 +118,8 @@ on Urbit.
 We see folks using moons as backup identities, in case they cannot or don't want
 to access their primary planet for one reason or another. Again, since anyone
 may verify the parent of a moon, the moon inherits the reputation of its parent.
-These backups could be vanity identities - for instance, every
-`~sampel-palnet` has underneath it a moon named `~master-sampel-palnet`[^0].
+These backups could be vanity identities - for instance, every `~sampel-palnet`
+has underneath it a moon named `~master-sampel-palnet`[^0].
 
 Some use moons to host group(s). Hosting a group inevitably means that that ship
 will process more network traffic, and a heavily trafficked group may impact a
@@ -126,15 +136,17 @@ moons, so as not to risk the parent ship if something were to go wrong.
 
 ### Internet of Things
 
+![telstar](https://media.urbit.org/site/posts/essays/telstar.jpg)
+
 Now we start to look torwards the future by examining the problems faced by IoT
 in the present, and speculating on how Urbit might solve them.
 
 The Internet of Things is much maligned by technologists as a privacy, security,
 and maintenance nightmare. These products usually depend on phoning home to
 perform their service, which is inevitably a funnel by which personal data is
-harvested, an attack surface for hackers to gain access to your home network, and
-a single point of failure which may render the device useless, all in one! One
-need look no further than the recent [Ubiquiti
+harvested, an attack surface for hackers to gain access to your home network,
+and a single point of failure which may render the device useless, all in one!
+One need look no further than the recent [Ubiquiti
 breach](https://krebsonsecurity.com/2021/03/whistleblower-ubiquiti-breach-catastrophic/)
 to see all of these failure modes happening on a massive scale, and this is par
 for course. This sort of dynamic is completely antithetical to the Urbit
@@ -142,15 +154,15 @@ philosophy, and so any involvement of Urbit with IoT will soundly reject all of
 these weaknesses as nonstarters.
 
 However, it's important to understand why the current IoT model works like this
-at all. I posit that it ultimately stems from the fact that today's IoT products
-are primitive moons for which you do not operate the parent planet. On Earth,
-almost every IoT device is necessarily married with the Software as a Service
-(SaaS) paradigm because most people don't have personal servers that could do
-all the grunt work actually necessary for an IoT device to operate. This is not
-the _only_ reason for this - it's also just more profitable to collect consumer
-data. However, it's the SaaS aspects which make the whole thing such a
-catastrophic mess. If the server that your device phones home to is your own,
-there is no loss of control over personal data. If the network on which the
+at all. we posit that it ultimately stems from the fact that today's IoT
+products are primitive moons for which you do not operate the parent planet. On
+Earth, almost every IoT device is necessarily married with the Software as a
+Service (SaaS) paradigm because most people don't have personal servers that
+could do all the grunt work actually necessary for an IoT device to operate.
+This is not the _only_ reason for this - it's also just more profitable to
+collect consumer data. However, it's the SaaS aspects which make the whole thing
+such a catastrophic mess. If the server that your device phones home to is your
+own, there is no loss of control over personal data. If the network on which the
 device operates is local, hackers cannot access it from the web. If your
 internet connection is lost, the devices still work since they do not require an
 internet connection to function. And if the manufacturer goes out of business,
@@ -167,12 +179,12 @@ security-conscious people would never consider using them at all, since they are
 inevitably presented as SaaS that requires intimate knowledge of your devices
 and their stored data. Recommendation engines such as the one used by YouTube
 are offer helpful guidance towards content you'll find appealing, but they're
-also designed to keep you hooked to the service as long as possible. 
-These kinds of programs can be tremendously helpful, but they're dystopian when
-they come saddled with anti-consumer subroutines. Since your Urbit
-belongs to you, it can never act against your own interests without your
-consent. In our lunar vision, we imagine that your digital personal AI assistant
-will live on one of your moons rather than on megacorp's cloud.
+also designed to keep you hooked to the service as long as possible. These kinds
+of programs can be tremendously helpful, but they're dystopian when they come
+saddled with anti-consumer subroutines. Since your Urbit belongs to you, it can
+never act against your own interests without your consent. In our lunar vision,
+we imagine that your digital personal AI assistant will live on one of your
+moons rather than on megacorp's cloud.
 
 For web-exposed devices, Urbit offers the same security guarantees that it does
 for your personal computer: everything is end-to-end encrypted by default. Urbit
@@ -205,11 +217,13 @@ you're making our job simpler.
 Urbit has many other features that make it well-suited for IoT, above and beyond
 just eliminating the SaaS model and providing self-authenticating identities.
 Many of these additional advantages derive from the fact that Urbit is a [solid
-state interpreter](@/docs/arvo/overview/#solid-state-interpreter) and that
+state interpreter](@/docs/arvo/overview.md#solid-state-interpreter) and that
 [Ames](@/docs/glossary/ames.md) is a network of solid-state interpreters
 equipped with cryptographic identity. We explore this in the next section.
 
 ### Future lunar cosmotechnics
+
+![farm](https://media.urbit.org/site/posts/essays/farm.jpg)
 
 We now polish off the old crystal ball and imagine how the usage of Martian
 lunar technology may develop over time once it becomes widely exposed to the
@@ -219,9 +233,9 @@ rather than a prescriptive and exhaustive one. This picture will necessarily be
 biased by my personal proclivities and expertise, or lack thereof.
 
 Any discussion on the future of moons is incomplete without mentioning the
-possibility of [lunar emancipation](@/faq/#more-planets) to increase the number
-of planets. This fascinating topic sees regular discussion on Urbit Community,
-but is beyond the scope of this article.
+possibility of [lunar emancipation](https://urbit.org/faq/#more-planets) to
+increase the number of planets. This fascinating topic sees regular discussion
+on Urbit Community, but is beyond the scope of this article.
 
 To avoid completely open-ended and rambling discussion, we narrow our scope to a
 particular context that seems both within close reach and which exhibits many of
@@ -248,18 +262,20 @@ has famously been at the center of the controversy around the right to repair.
 Farmers have lost the ability to repair their own equipment due to vendor locks
 and a dependency on phoning home. Furthermore, any suite of sensor products
 designed to gather important data such as genomics, hydrology, soil health,
-weather, etc, inevitably is designed to only work with other products by
-the same vendor. It's the same story all over again - you have a bunch of
-primitive moons belonging to different planets, and no planet to call your own.
+weather, etc, inevitably is designed to only work with other products by the
+same vendor. It's the same story all over again - you have a bunch of primitive
+moons belonging to different planets, and no planet to call your own.
 
 Again, Urbit resolves these issues in the same fashion as above, and there is no
 need to step through the argument again. One might argue that using Urbit is
 another form of vendor lock-in - but this is evaluating Urbit at the incorrect
-level. Since Urbit is an operating system, its functionality may be extended and
-modified arbitrarily. _Some_ operating system is necessary - that fact can never
-be escaped. But you can escape from systems that do not grant you the freedom to
-modify it to your heart's content. Thus Urbit offers the maximum possible
-freedom.
+level. Since Urbit is an open source operating system, its functionality may be
+extended and modified arbitrarily by any party. _Some_ system is necessary -
+that fact can never be escaped. But you can escape from systems that do not
+grant you the freedom to modify it to your heart's content, and that requires
+one to use open source software. Thus we do not consider using open source
+software to be a form of lock-in, or at least a much milder and inescapable form
+of lock-in as compared to something like Apple's walled garden.
 
 So let us focus on the additional meritorious aspects of Urbit (or more
 generally, solid state interpreter networks) that propel it above and beyond
@@ -267,19 +283,21 @@ merely escaping the antifeature pit of modern IoT.
 
 #### Solid state interpreter networks
 
+![cubesats](https://media.urbit.org/site/posts/essays/cubesats.jpg)
+
 Urbit is the world's first solid-state interpreter (SSI). This concept is
 summarized in the [white paper](https://media.urbit.org/whitepaper.pdf) as
 follows:
 
 > Imagine it as a chip. Plug this chip into power and network; packets go in and
-> out, sometimes changing its state. The chip never loses data and has no concept
-> of a reboot; every packet is an ACID transaction.
+> out, sometimes changing its state. The chip never loses data and has no
+> concept of a reboot; every packet is an ACID transaction.
 
 Also,
 
-> Briefly, an SSI is an interpreter which is also a database. In more
-> depth, an SSI combines three properties: uniform persistence, source 
-> independent packet networking, and high-level determinism.
+> Briefly, an SSI is an interpreter which is also a database. In more depth, an
+> SSI combines three properties: uniform persistence, source independent packet
+> networking, and high-level determinism.
 
 We do not wish to segue into a lengthy examination of what this really means -
 that's what the white paper is for - but we will attempt to explain why these
@@ -341,12 +359,14 @@ elapses between sending and receiving.
 
 #### P2P data markets
 
+![knots](https://media.urbit.org/site/posts/essays/knots.jpeg)
+
 As was mentioned above, today's IoT devices ferry all sorts of your personal
 data to megacorp, where they package it and sell it to the highest bidder. While
 it is difficult to imagine that most individuals would get much out of selling
 their own personal data, industrial scale data such as that collected on
-digitized farms could be quite valuable. Here we briefly examine how Urbit
-can be utilized to populate and facilitate a market for such things.
+digitized farms could be quite valuable. Here we briefly examine how Urbit can
+be utilized to populate and facilitate a market for such things.
 
 All data collected by your moons may be digitally signed by that moon, ensuring
 you and anyone else of the exact origin of that data. This is one advantage of
@@ -388,22 +408,23 @@ reader about the possibilities of IoT and SSI networks.
 We end our discussion with an adaptation of a scenario that I borrow from my
 brief time working on [Ceptr](http://ceptr.org/) in 2018 that begins to show dim
 outlines of how a lunar IoT-connected world evokes phantoms of the properties of
-a hypothetical "global nervous system". This example is purposefully mundane to
-illustrate how deficient our Earth systems are, and while it is possible to
-accomplish in theory, it is impractical on a wide scale due to the numerous
-problems with IoT discussed here. Imagine that you suffer headaches from low
-atmospheric pressure. You'd like to know when a low-pressure front is an hour
-away from you so that you can pre-emptively take aspirin to prevent the
-headache. Your personal digital assistant, running on Urbit, can then
-periodically query sensors in your region hooked up to moons for weather data to
-predict whether or not you will be soon be passing through a low pressure front.
-This could be a free service, or paid for automatically with cryptocurrency
-microtransactions. This task will someday be trivial on Mars, and is merely a
-stone's throw away from a vast and undiscovered universe of other possibilities
-unlocked by SSI networks.
+a hypothetical ["global nervous
+system"](https://en.wikipedia.org/wiki/Global_brain). This example is
+purposefully mundane to illustrate how deficient our Earth systems are, and
+while it is possible to accomplish in theory, it is impractical on a wide scale
+due to the numerous problems with IoT discussed here. Imagine that you suffer
+headaches from low atmospheric pressure. You'd like to know when a low-pressure
+front is an hour away from you so that you can pre-emptively take aspirin to
+prevent the headache. Your personal digital assistant, running on Urbit, can
+then periodically query sensors in your region hooked up to moons for weather
+data to predict whether or not you will be soon be passing through a low
+pressure front. This could be a free service, or paid for automatically with
+cryptocurrency microtransactions. This task will someday be trivial on Mars, and
+is merely a stone's throw away from a vast and undiscovered universe of other
+possibilities unlocked by SSI networks.
 
 
 [^0]: Of course, all moon names have four words, not three. What the fourth word
     needs to be for only three words to display is a matter of Urbit lore that
-    is more fun to discover yourself than have it told to you, so I won't spoil
+    is more fun to discover yourself than have it told to you, so we won't spoil
     it here.
