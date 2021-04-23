@@ -10,7 +10,7 @@ image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277674273/"
 guests = "Edward Amsden (~ritpub-sipsyl)"
 description = "Video chat on Urbit? It's nearly here with WebRTC."
-youtube = "XFct6JZHPCO"
+youtube = "XFct6JZHPC0"
 +++
 
 Video chat on Urbit? It's nearly here using the WebRTC protocol. Edward Amsden (~ritpub-sipsyl) will be giving us a look at the WebRTC Airlock library that he has developed that handles all the hard parts of WebRTC. This will allow developers to simply call or answer calls by ship or app name. Edward will also be giving us a live text-based demo of WebRTC on urbit. Please join us for an exciting presentation.
