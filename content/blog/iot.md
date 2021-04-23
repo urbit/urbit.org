@@ -8,18 +8,19 @@ ship = "~datnut-pollen"
 image = ""
 +++
 
-Each of the ~4B 32-bit [Azimuth](@/docs/glossary/azimuth.md) identities - namely
-planets, stars, and galaxies, may spawn ~4B 64-bit child identities known as
-[moons](@/docs/glossary/moon.md). Moons are the totally undeveloped wild outback
-of Urbit, with a story waiting to be told that promises to be just as enormous
-in scale as the cloud personal computing story told by planets, and possibly
-even more so. In this post, I review the prehistory of moons on Earth, give a
-snapshot of how moons are being utilized on Mars in 2021, and then go on to
-speculate what the lunar locus of the Urbit ID address space may develop into in
-the future. To keep scope limited, I primarily speculate on the usage of moons
-in (industrial) internet of things settings, especially with respect to
-agriculture, and how they may manifest as the workhorse collection unit of
-decentralized data markets.
+Each of the ~4B 32-or-fewer-bit or [Azimuth](@/docs/glossary/azimuth.md)
+identities - namely [planets](@/docs/glossary/planet.md),
+[stars](@/docs/glossary/star.md), and [galaxies](@/docs/glossary/galaxy.md), may
+spawn ~4B 64-bit child identities known as [moons](@/docs/glossary/moon.md).
+Moons are the totally undeveloped wild outback of Urbit, with a story waiting to
+be told that promises to be just as enormous in scale as the cloud personal
+computing story told by planets, and possibly even more so. In this post, I
+review the prehistory of moons on Earth, give a snapshot of how moons are being
+utilized on Mars in 2021, and then go on to speculate what the lunar locus of
+the Urbit ID address space may develop into in the future. To keep scope
+limited, I primarily speculate on the usage of moons in (industrial) internet of
+things settings, especially with respect to agriculture, and how they may
+manifest as the workhorse collection unit of decentralized data markets.
 
 For those unfamiliar, moons differ from all other
 [ships](@/docs/glossary/ship.md) in that they are not independent identities,
