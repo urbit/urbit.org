@@ -23,4 +23,4 @@ As usual, there'll be an opportunity to jump on the call with us afterward to as
 ## Resources 
 
 - [Urbit WebRTC on GitHub](https://github.com/black-river-software/urbit-webrtc)
-- Check out WebRTC progress reports on ~ritpub-sipsyl/webrtc-on-urbit
+- Check out WebRTC progress reports on `~ritpub-sipsyl/webrtc-on-urbit`
