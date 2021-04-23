@@ -91,3 +91,30 @@ The daily work of building a new OS from scratch is so engaging and exciting tha
 
 [...]
 ```
+
+## Localization
+
+Zola supports [multilingual content](https://www.getzola.org/documentation/content/multilingual/).
+
+To translate a page:
+
+1. Fork the repo
+2. Add a new entry to the `languages` array in `config.toml` (if it's not already there)
+```toml
+# 'en' is defined implicitly by the default_language setting
+languages = [
+  {code = "es", feed = false, search = true},
+  {code = "ko", feed = false, search = false},
+  # ... add the new language here
+]
+```
+3. Copy and rename an existing file with the corresponding language code like so:
+```sh
+cp content/faq.md content/faq.[language code].md
+```
+For example, to translate the FAQ into Korean:
+```sh
+cp content/faq.md content/faq.ko.md
+```
+4. Open the new file in an editor and translate the body copy and front matter. When it's ready, push it to your fork and open a PR against this repo.
+
