@@ -57,7 +57,7 @@
   {% endfor %}
   <div class="lang-picker-wrapper gray3">
     {% block language_selector %}
-    {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }}
+    {{ macros::language_selector(current_page=page) }}
     {% endblock language_selector %}      
   </div>
 </nav>

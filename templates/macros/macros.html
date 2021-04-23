@@ -11,25 +11,22 @@
 {% endmacro event_metadata %}
 
 <!-- Show a language selector when localized content is available -->
-<!-- example: {{ macros::language_selector(current_url=page.permalink, multilan=page.translations | length > 1) }} -->
-{% macro language_selector(current_url, multilan=true) %}
-  {% if config.languages and multilan %}
+<!-- example: {{ macros::language_selector(current_page=page) }} -->
+<!-- see: https://www.getzola.org/documentation/templates/pages-sections/#translated-content -->
+{% macro language_selector(current_page) %}
+  {% set translations = current_page.translations %}
+  {% if translations | length > 1 %}
     <small class="multilingual">
-      {% set deflang = true %}
-      {% for lang in config.languages %}
-        {% if current_url is not containing(lang.code) %}
-          <a href="{{ current_url | replace(from=config.base_url, to=config.base_url ~ "/" ~ lang.code) }}">{{ lang.code }}</a>
-        {% else %}
-        <span class="selected-language">{{ lang.code }}</span>
-          {% set_global deflang = false %}
+      {% for translation in translations | sort(attribute="lang") %}
+        {% set link_class = "" %}
+        {% if translation.permalink == current_page.permalink %}
+          {% set link_class = "selected-language" %}
+        {% endif %}
+        <a href="{{ translation.permalink }}" class="{{ link_class }}">{{ translation.lang }}</a>
+        {% if not loop.last %}
+          |
         {% endif %}
       {% endfor %}
-
-      {% if deflang %}
-        | <span class="selected-language">{{ config.default_language }}</span>
-      {% else %}
-        | <a href="{{ current_url | replace(from=lang ~ "/", to="") }}">{{ config.default_language }}</a>
-      {% endif %}
     </small>
   {% endif %}
 {% endmacro language_selector %}
