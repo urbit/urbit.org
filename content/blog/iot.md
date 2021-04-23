@@ -188,7 +188,7 @@ speculation, and I only aim to paint a small glimpse of a potential future
 rather than a prescriptive and exhaustive one. This picture will necessarily be
 biased by my personal proclivities and expertise, or lack thereof.
 
-Any discuss on the future of moons is incomplete without mentioning the
+Any discussion on the future of moons is incomplete without mentioning the
 possibility of [lunar emancipation](@/faq/#more-planets) to increase the number
 of planets, but we leave this to the side for our discussion.
 
@@ -321,7 +321,7 @@ computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation),
 [ring signatures](https://en.wikipedia.org/wiki/Ring_signature), and even
 [homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
 offer a variety of ways in which data may be shared in an IoT context with
-mathematical guarantees on how much privacy is maintained. This are perhaps less
+mathematical guarantees on how much privacy is maintained. This is perhaps less
 relevant in the context of agricultural IoT, where personal private data is
 absent, but we mention them here to invite further speculation from the reader
 about the possibilities of IoT and Urbit.
