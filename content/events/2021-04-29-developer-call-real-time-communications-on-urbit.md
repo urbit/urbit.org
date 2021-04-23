@@ -22,5 +22,5 @@ As usual, there'll be an opportunity to jump on the call with us afterward to as
 
 ## Resources 
 
-- [Original mailing list discussion of 3rd party software distribution](https://groups.google.com/a/urbit.org)
-- [ucal](https://github.com/taalhavras/ucal)
+- [github] https://github.com/black-river-software/urbit-webrtc
+- Check out WebRTC progress reports on ~ritpub-sipsyl/webrtc-on-urbit
