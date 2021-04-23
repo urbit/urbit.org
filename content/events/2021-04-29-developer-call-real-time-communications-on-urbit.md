@@ -9,7 +9,7 @@ location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/277674273/"
 guests = "Edward Amsden (~ritpub-sipsyl)"
-description = "Video chat on Urbit? It's nearly here with WebRTC.
+description = "Video chat on Urbit? It's nearly here with WebRTC."
 youtube = "XFct6JZHPCO"
 +++
 
