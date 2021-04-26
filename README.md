@@ -94,27 +94,66 @@ The daily work of building a new OS from scratch is so engaging and exciting tha
 
 ## Localization
 
-Zola supports [multilingual content](https://www.getzola.org/documentation/content/multilingual/).
+Urbit.org supports multilingual content. If you're familiar with the command line, see the [Zola docs](https://www.getzola.org/documentation/content/multilingual/) for a guide on adding new content.
 
-To translate a page:
+### Translating with Github
 
-1. Fork the repo
-2. Add a new entry to the `languages` array in `config.toml` (if it's not already there)
+For those more comfortable with a UI, it is also possible to add and edit content with Github.
+
+Before making your first contribution, you will need to [fork this repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+
+#### Language Code
+
+Zola uses 2 character language codes as defined [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Find the code for your language, you will use it in the next steps.
+
+#### Finding Files
+
+Most files you will want to translate are in the `content` directory. 
+
+If you are having trouble finding a file, take advantage of the Github search by querying "in this repository":
+
+![image](https://user-images.githubusercontent.com/16504501/116117448-1ba14080-a671-11eb-867b-a8836be7b8d5.png)
+
+#### Support A New Language
+
+If you're adding a new language to the project, you will also need to update the `config.toml` file.
+
+Is it already there? Proceed to the next step. Otherwise, add a new entry to the `languages` array in `config.toml`
 ```toml
-# 'en' is defined implicitly by the default_language setting
 languages = [
   {code = "es", feed = false, search = true},
   {code = "ko", feed = false, search = false},
   # ... add the new language here
 ]
 ```
-3. Copy and rename an existing file with the corresponding language code like so:
-```sh
-cp content/faq.md content/faq.[language code].md
+
+#### Add A New File
+
+Find the existing English file you would like to translate by browsing or searching the Urbit.org source files on Github.
+
+As an example, let's say we want to translate the *Interface* page to Spanish.
+
+![image](https://user-images.githubusercontent.com/16504501/116119368-3674b480-a673-11eb-8d10-7282b99438c4.png)
+
+
+Use the UI to add a **New File**:
+
+![image](https://user-images.githubusercontent.com/16504501/116119768-a2efb380-a673-11eb-86c2-06333d3ba79a.png)
+
+And give the new file the same name as the source, but with the language code added to the name. Here's the `interface.md` example, for Spanish (which has a language code of `es`):
+
+source file:
 ```
-For example, to translate the FAQ into Korean:
-```sh
-cp content/faq.md content/faq.ko.md
+interface.md
 ```
-4. Open the new file in an editor and translate the body copy and front matter. When it's ready, push it to your fork and open a PR against this repo.
+
+new translation file:
+```
+interface.es.md
+```
+
+Here is a screenshot showing the new name:
+![image](https://user-images.githubusercontent.com/16504501/116119899-c74b9000-a673-11eb-9cd7-5e9a6d0b82c9.png)
+
+Finally, copy and paste the English content into this new document, make your changes, and submit with the green "Propose New File" button
 
