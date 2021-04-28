@@ -1,7 +1,6 @@
 +++
 title = "Bitcoin Launch"
 date = 2021-04-27
-template = "events/event-landing.html"
 [extra]
 pinned = true
 host = "Urbit Foundation"
@@ -9,14 +8,15 @@ time = "12:00pm PDT"
 location = "Online Event"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/20210413-bitcoin-header.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
+youtube = "_aRnfacZPto"
 guests = "~timluc-miptev"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
 +++
 
-<h1>Bitcoin + Urbit</h1>
+Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC.
 
-<img class="center black" src="https://storage.googleapis.com/media.urbit.org/site/events/20210413-bitcoin-event.svg" />
+We’d like to take a moment to show it off, and discuss the future of commerce on Urbit. First, Christian and Josh will demo the wallet, then, our good friend Marty Bent will moderate a panel with Christian, Tim, and Ed. We will have time at the end for questions.
 
-<h2 class="center">OTA Launch Event: <span class="btc-orange">2021.04.27</span></h2>
+The event will have a live stream on Youtube, and a live-chat on Urbit, links to come.
 
-<h2 class="center">First 300 signups receive a free Urbit ID and 3 months of Tlon Hosting</h2>
+Join the Bitcoin dev conversation in the Urbitcoiners group: [~pindet-timmut/urbitcoin-cash](web+urbitgraph://group/~pindet-timmut/urbitcoin-cash)
