@@ -2,7 +2,7 @@
 title = "Bitcoin Launch"
 date = 2021-04-27
 [extra]
-pinned = true
+pinned = false
 host = "Urbit Foundation"
 time = "12:00pm PDT"
 location = "Online Event"
