@@ -9,7 +9,7 @@ location = "Online Event"
 image = "https://storage.googleapis.com/media.urbit.org/site/events/20210413-bitcoin-header.png"
 registration_url = "https://www.meetup.com/urbit-sf/events/276741426/"
 youtube = "_aRnfacZPto"
-guests = "~timluc-miptev"
+guests = "Marty Bent"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
 +++
 
