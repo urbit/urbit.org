@@ -30,7 +30,7 @@ and future state of Urbit.
 
 Today we will review the prehistory of moons on Earth, give a snapshot of how
 moons are being utilized on Urbit in 2021, cover existing issues with consumer
-IoT and how Urbit resolves them, and speculate what the lunar locus of the Urbit
+IoT and how Urbit resolves them, and speculate on what the lunar locus of the Urbit
 ID address space may become in the future. To keep the futurist scope limited,
 we primarily speculate on the usage of moons in (industrial) internet of things
 settings, especially with respect to agriculture, and how they may manifest as
@@ -59,9 +59,9 @@ new one elsewhere. Moons possess no such freedom.
 
 It may come as a surprise to you that you are already very familiar with moon
 identities—they've just never been explained as such because the context in
-which that terminology makes sense didn't before Urbit. Moons, in fact, are not
+which that terminology makes sense didn't exist before Urbit. Moons, in fact, are not
 a new concept at all. Virtually your entire experience of the internet in the
-modern era is the experience of someone who possesses some nubmer of moons
+modern era is the experience of someone who possesses some number of moons
 subordinate to planets who mostly refuse to talk to one another. The feeling you
 get of constantly moving between silos, juggling accounts, not controlling your
 own data, etc., is a direct result of the fact that, on Earth, you only possess
