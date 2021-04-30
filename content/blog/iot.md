@@ -191,15 +191,15 @@ still has a while to go before we can truly declare it secure, but once it is
 there, you'll be assured the same level of protection for your devices that your
 Urbit has.
 
-[Vint Cerf](https://en.wikipedia.org/wiki/Vint_Cerf) has unwittingly taken the
-effort to outline the case for a system like Urbit ID for IoT use
+[Vint Cerf](https://en.wikipedia.org/wiki/Vint_Cerf) has outlined the case for a
+system like Urbit ID for IoT use
 [here](https://cacm.acm.org/magazines/2018/12/232883-self-authenticating-identifiers/fulltext).
-The short version is that the Urbit ID system allows one to match public
-keys with devices, bestowing devices with self-authenticating identities. This
-allows one to trust the communications received from the device to whatever
-degree the private key is held secure. IP addresses, GPS coordinates, MAC
-addresses, etc., are not sufficient to generate high levels of trust—they're
-all temporary, easily spoofed, or both.
+The short version is that the Urbit ID system allows one to match public keys
+with devices, bestowing devices with self-authenticating identities. This allows
+one to trust the communications received from the device to whatever degree the
+private key is held secure. IP addresses, GPS coordinates, MAC addresses, etc.,
+are not sufficient to generate high levels of trust—they're all temporary,
+easily spoofed, or both.
 
 > One might imagine applying this to the Internet of Things (IOT) in which the
 > IOT device self-generates a public- and private-key pair and registers the
@@ -210,8 +210,7 @@ all temporary, easily spoofed, or both.
 > the now-configured IOT device. Both ends can verify they are talking to the
 > originally configured devices, assuming no device has lost its private key.
 
-Here, the hub or controller that he refers to would be your planet. Thanks, Vint;
-you're making our job simpler.
+Here, the hub or controller that he refers to would be your planet.
 
 Urbit has many other features that make it well-suited for IoT, above and beyond
 eliminating the SaaS model and providing self-authenticating identities.
