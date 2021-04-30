@@ -1,6 +1,6 @@
 +++
 title = "Lunar Urbit and the Internet of Things"
-date = 2021-04-26
+date = 2021-04-30
 description = "Potential future usecases of moons for industry and consumers"
 [extra]
 author = "Jonathan Paprocki"
