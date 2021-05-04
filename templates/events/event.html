@@ -49,15 +49,16 @@
     <img class="db mv2 obj-cover w-100 ba" src="{{ page.extra.image }}" />
   {% endif %}
 
-  {% if page.extra.author %}
-    <span class="mt2 dib" rel="author"> {{ page.extra.author }} </span>
-    {% if page.extra.ship %}
-      <address class="mono">{{ page.extra.ship }}</address>
-    {% endif %}
-  {% endif %}
-
   {% if page.date %}
     <time class="mono db mv1 gray2 f5">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }}</time>
+  {% endif %}
+
+  {% if page.extra.host %}
+    <span class="mt2 dib gray2" rel="host">Hosted by {{ page.extra.host }}</span><br />
+  {% endif %}
+
+  {% if page.extra.guests %}
+    <span class="mt2 dib gray2" rel="guest">Guest: {{ page.extra.guests }} </span><br />
   {% endif %}
   
   {% if page.extra.registration_url %}

@@ -70,7 +70,7 @@ A personal breach is when a ship tells the rest of the network to treat it as th
 
 Personal breaches often fix connectivity issues, but should only be used as a
 last resort. To find out how to perform a personal breach, check out our [Guide
-to Breaches](../guide-to-breaches). Before taking such a drastic measure, try
+to Breaches](@/using/id/guide-to-breaches.md). Before taking such a drastic measure, try
 other methods in this guide. You can also ask for help on
 in the Help channel in the Urbit Community group at `~bitbet-bolbel/urbit-community` or, failing that, in the `#ship-starting-support`
 channel in our [Discord server](https://discord.gg/n9xhMdz).
