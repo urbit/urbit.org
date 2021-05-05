@@ -34,7 +34,7 @@ A few years ago, while he was writing the book, I was a regular reader of Dreher
 
 [There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, *Live Not By Lies*. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
 
-As I said in my last answer I grew up with a counter-cultural mindset. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
+My upbringing was conservative Christian and self-consciously counter-cultural. I've inherited that understanding of what it means to be a Christian in an increasingly secular world. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
 
 I don’t claim to know the answers to these questions.
 
