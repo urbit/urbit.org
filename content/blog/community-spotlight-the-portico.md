@@ -6,6 +6,9 @@ description = “Interview with The Portico founder Josh Reagan”
 author = “~tirwyd-sarmes”
 image = “https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg”
 +++
+
+![](https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg)
+
 *One of the most striking things about Urbit is the ideological diversity between communities. The Community Spotlight blog series will focus on various Urbit communities via interviews with founding members.*
 For the first week of the Community Spotlight series, I (~tirwyd-sarmes) will be speaking with Josh Reagan (~taglux-nidsep). Josh is the founder of The Portico, an Urbit community of Eastern Orthodox Christians.
 The Portico is a very active group with conversations taking place over multiple channels. There are channels for posting Orthodox iconography, discussing the broader Christian culture war, and just talking about Orthodoxy in general. Of particular interest is Josh’s “Euthyphro” blog series which investigates the relationship between logic and the Orthodox faith. This is a topic that Josh is well qualified to talk about: he has a PhD in Philosophy from Rice University. His dissertation on the epistemology of logic and truth-preservation was titled "Knowing Your Limits: Logic for Limited Beings”. Josh is also the co-author of a forthcoming textbook on formal logic.
