@@ -232,7 +232,7 @@ contracts.
 
 We want to keep this post brief and non-technical, so that's all we'll say about
 it for now. To find out more, you have a few directions to go on. We held a
-[Developer Call](@/events/developer-call-scaling-azimuth/) where
+[Developer Call](@/events/2021-03-04-developer-call-scaling-azimuth.md) where
 `~wicdev-wisryt` outlines the design in much more technical detail, and also
 explains why we decided to utilize our own design rather than other known layer
 2 solutions such as [Optimistic
