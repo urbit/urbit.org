@@ -45,6 +45,8 @@ Planets are intended for everyday use by individuals, and there are 4.3 billion 
 
 ### Why is is currently expensive to acquire a planet? {#gas-prices}
 
+For the latest on this topic, see our recent blog post: [The Gang Solves the Gas Crisis](@/blog/rollups.md).
+
 As of early 2021, if you try to acquire a planet from a market, you will likely encounter an enormous "gas price" fee. Ethereum is going through some growing pains, and this is an issue for every
 smart contract on the network. This fee is unrelated to Urbit specifically, rather it results from how Ethereum transactions are paid for. The gas fee does not go to the person selling you the planet, nor to the market, nor to anybody associated with Urbit - it goes to the "miners" processing all Ethereum transactions.
 
