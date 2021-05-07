@@ -76,6 +76,7 @@ in the Help channel in the Urbit Community group at `~bitbet-bolbel/urbit-commun
 channel in our [Discord server](https://discord.gg/n9xhMdz).
 
 ### Reset `+code`
+**WARNING:** Do not reset your +code if you are using a hosted ship. You will be locked out. Please contact your hosting provider for more information.
 
 You login to Landscape using the camel-case phrase obtained from dojo by
 entering `+code`. For security reasons you may wish to change this code
