@@ -1,5 +1,5 @@
 +++
-title = "Understanding Urbit"
+title = "Forstå Urbit"
 sort_by = "weight"
 template = "understanding-urbit/list.html"
 page_template = "understanding-urbit/post.html"
