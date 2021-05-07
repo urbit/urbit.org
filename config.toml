@@ -16,7 +16,7 @@ feed_filename = "rss.xml"
 # I18n
 # 'en' is defined implicitly by the default_language setting above
 languages = [
-    {code = "no", feed = false, search = true}
+    {code = "no", feed = false, search = false}
 ]
 
 [markdown]

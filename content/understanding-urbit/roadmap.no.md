@@ -28,71 +28,71 @@ Når Urbit modnes, vil nok andre fullverdige digitale miljøer dukke opp – men
 
 ![Landscape](https://storage.googleapis.com/media.urbit.org/tlon/landscape.jpg)
 
-Today, we pour all of our focus into making Landscape a comfortable place for digital communities to call home, starting with our own. This effort forces us to mature the entire stack, from the interpreter to the interface. 
+I dag legger vi hele vårt fokus i å gjøre Landscape til et komfortabelt sted for digitale samfunn å høre hjemme, med utgangspunkt i vårt eget miljø. Denne innsatsen tvinger oss til å modne hele programvare-stacken, fra 'interpreter' til brukergrensesnitt.
 
-Let’s walk through the next few phases of Landscape to get a sense of where we are and where we’re headed.
-
-<br>
-
-![The current state of Landscape/OS1](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
-
-### Today: Landscape OS 1.N
-
-We built OS 1 for ourselves, because we wanted to use a communication tool that we can trust and put our system to work for real. 
-
-Today we use OS 1 every day to chat, write, and share links. It’s a calm, minimalist tool that gets us one step away from the ads, tracking, distraction and disruption of mainstream software. (We won’t get into the details of OS 1 here, but you can check out [this post](https://urbit.org/blog/introducing-os1/) for a walkthrough. You’re also welcome to try [booting a node yourself](https://urbit.org/getting-started/).)
-
-The first version of OS 1 shipped in March and we’ve been improving it continuously ever since. OS 1 now runs on a much faster, more reliable Urbit OS kernel and network. The interface itself has been cleaned up and made vastly more efficient. If we weren’t so busy, we would have called it OS 1.12 by now. 
-
-Our initial goal was just to get ourselves living on Urbit everyday. We achieved that, and managed to see quite a few other communities pop up along the way. We made enormous progress, but our system isn’t refined or reliable enough. It also still needs a thorough security audit (which we’re already working on).
-
-OS 1 was a huge step forward. Let’s talk about what’s next.
+La oss gå gjennom de neste fasene av Landscape for å få en følelse av hvor vi er og hvor vi er på vei.
 
 <br>
 
-![A speculative interface for Landscape S2](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
+![Nåværende tilstand av Landscape/OS1](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-3.png)
 
-## Late 2020: Landscape S2
+### I dag: Landscape OS 1.N
 
-**It’s weird to have both ‘Urbit OS’ and a client called ‘OS 1’. After OS 1 we’re going to move to a different naming scheme for Landscape—starting with Landscape S2.**
+Vi bygde OS 1 for oss selv, fordi vi ønsket å bruke et kommunikasjonsverktøy som vi kan stole på og sette systemet vårt i arbeid på ekte.
 
-OS 1 is nice, but it’s only usable by explorers, tinkerers, and hobbyists. It’s rough around the edges. You have to *want* to use Urbit as much as we do.
+I dag bruker vi OS 1 hver dag for å chatte, skrive og dele lenker. Det er et rolig, minimalistisk verktøy som får oss et skritt unna annonsene, sporing, distraksjon og forstyrrelse av vanlig programvare. (Vi kommer ikke inn på detaljene i OS 1 her, men du kan sjekke ut [dette innlegget](https://urbit.org/blog/introducing-os1/) for en gjennomgang. Du er også velkommen til å prøve å [starte en node selv](https://urbit.org/getting-started/).)
 
-Landscape S2 is much more comfortable. Landscape S2 has a polished, groups-oriented interface, a much more robust data storage format, significant gains in performance and memory management, and a much more reliable way to migrate your data.
+Den første versjonen av OS 1 ble sendt i mars, og vi har forbedret den kontinuerlig siden den gang. OS 1 kjører nå på en mye raskere, mer pålitelig Urbit OS-kjerne og nettverk. Grensesnittet i seg selv er ryddet opp og gjort mye mer effektivt. Hvis vi ikke hadde det så travelt, hadde vi kalt det OS 1.12 nå.
 
-Most importantly, Landscape S2 has a completely redesigned invitation and onboarding process that will arrive in tandem with a [hosting service](https://tlon.io) from Tlon. (Last we heard there are a few others working on Urbit hosting as well—we’ll link to them as soon as they’re ready.)
+Vårt første mål var bare å få oss selv til å bruke Urbit hver dag. Vi oppnådde det, og så mange andre samfunn dukke opp underveis. Vi gjorde enorme fremskritt, men systemet vårt er ikke raffinert eller pålitelig nok enda. Det trengs også fortsatt en grundig sikkerhetsrevisjon (som vi allerede jobber med).
 
-This means you can easily invite a friend from within Landscape and have them up and running in a few minutes without ever leaving a browser. Every conventional app does this already, of course, but none of them can offer the simplicity and clarity of running on Urbit OS. 
-
-We know that getting onto the network can be difficult for less technical users. Everyone currently has to run and care for their own node. With easy onboarding we can use Landscape to start building the communities that never really felt at home on these conventional, one-size-fits-all platforms: the-contemporary-monastery, music-in-the-age-of-COVID, and so on.
-
-We’re planning to share the hosted version of S2 with a few small communities to test it out and put it through the paces. If you’re curious, [let us know](https://tlon.io).
+OS 1 var et stort skritt fremover. La oss snakke om hva som er neste.
 
 <br>
 
-![A speculative payments interface](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
+![Et spekulativt grensesnitt for Landscape S2](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png)
 
-## Early 2021: Landscape S3
+## Sent i 2020: Landscape S2
 
-Landscape S3 will be a tool for communicating and working together that we can enthusiastically invite others to use. 
+**Det er rart å ha både 'Urbit OS' og en klient som heter 'OS 1'. Etter OS 1 skal vi gå over til et annet navneskjema for Landscape – som starter med Landscape S2.**
 
-A native desktop and mobile app, Landscape S3 will be supported by at least one host (Tlon) for easy inviting and onboarding that can support urbit-to-urbit crypto payments. With the addition of basic commerce, Landscape S3 will be a comprehensive environment for communities to make their own.
+OS 1 er fint, men det kan bare brukes av utforskere, tinkere og hobbyister. Det er grovt rundt kantene. Du må *ønske* å bruke Urbit like mye som vi gjør.
 
-Perhaps most importantly, Landscape 3 will be backed by a fully audited networking protocol. We’re in the process of auditing our networking now and, once complete, we can be confident that communication over Urbit is secure. 
+Landscape S2 er mye mer behagelig. Landscape S2 har et polert, gruppeorientert grensesnitt, et mye mer robust datalagringsformat, betydelige gevinster i ytelse og minnehåndtering, og en mye mer pålitelig måte å migrere dataene dine på.
 
-Landscape inherits the benefits of Urbit itself: simplicity, durability, and a real sense of ownership. These come out of the box, from the beginning, but supporting a fully-featured interface makes a lot of demands of a new stack. By Landscape 3 our interface and infrastructure will have matured to the point that it can be confidently held up against alternatives.
+Viktigst, Landscape S2 har en fullstendig redesignet invitasjons- og onboarding-prosess som vil lanseres sammen med en [hostingtjeneste](https://tlon.io) fra Tlon. (Sist vi hørte er detogså noen andre som jobber med Urbit-hosting - vi vil koble dem til så snart de er klare.)
+
+Dette betyr at du enkelt kan invitere en venn fra Landscape og ha dem i gang på Urbit i løpet av noen minutter uten å forlate nettleseren. Hver konvensjonell app gjør selvfølgelig dette allerede, men ingen av dem kan tilby enkelheten og klarheten ved å kjøre på Urbit OS.
+
+Vi vet at det å komme inn på nettverket kan være vanskelig for mindre tekniske brukere. Alle må for tiden kjøre og ta vare på sin egen node. Med enkel onboarding kan vi bruke Landscape til å begynne å bygge samfunnene som aldri følte seg hjemme på disse konvensjonelle en-størrelse-passer-alle plattformene: det moderne klosteret, musikken i COVID-alderen og så videre.
+
+Vi planlegger å dele den hostede versjonen av S2 med noen få små grupper for å teste den og legge den gjennom trinnene. [Gi oss beskjed](https://tlon.io) hvis du er nysgjerrig.
 
 <br>
 
-![A landscape](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
+![Et spekulativt betalingsgrensesnitt](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-4.jpg)
 
-## 2021 and beyond
+## Tidlig 2021: Landscape S3
 
-Our goal with Landscape is to give communities the tools they deserve to customize their digital environments. By Landscape S3, our interface and infrastructure will truly support this.
+Landscape S3 vil være et verktøy for å kommunisere og samarbeide som vi entusiastisk kan invitere andre til å bruke.
 
-But Landscape in early 2021 will likely still only come with a few modules out of the box. Our major next step during 2021 is to make it easy for anyone to add their own modules and for developers to build and publish their own. Enabling third-party development will really enable Urbit-centric communities to tailor their own software. 
+En innebygd datamaskin- og mobilapp, Landscape S3, vil bli støttet av minst en vert (Tlon) for enkel invitasjon og ombordstigning som kan støtte urbit-til-urbit-kryptobetalinger. Med tillegg av grunnleggende handel, vil Landscape S3 være et omfattende miljø for samfunn å lage sine egne.
+
+Kanskje viktigst, Landscape 3 vil bli støttet av en fullstendig revidert nettverksprotokoll. Vi er i ferd med å revidere nettverket vårt nå, og når vi er ferdige, kan vi være sikre på at kommunikasjon via Urbit er sikker.
+
+Landscape arver fordelene med selve Urbit: enkelhet, holdbarhet og en reell følelse av eierskap. Disse kommer ut av esken, fra begynnelsen, men det å støtte et fullverdig grensesnitt stiller mange krav til en ny programvare-stack. Ved Landscape 3 vil grensesnittet og infrastrukturen ha modnet til det punktet at det trygt kan holdes oppe mot alternativer.
+
+<br>
+
+![Landscape](https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-roadmap-5.jpg)
+
+## 2021 og utover
+
+Målet vårt med Landscape er å gi lokalsamfunn verktøyene de fortjener for å tilpasse sine digitale miljøer. Fra Landscape S3 og utover vil vårt grensesnitt og infrastruktur virkelig støtte dette.
+
+Men Landscape i begynnelsen av 2021 vil trolig fortsatt bare komme med noen få moduler ut av esken. Vårt største neste trinn i 2021 er å gjøre det enkelt for alle å legge til sine egne moduler og for utviklere å bygge og publisere sine egne. Aktivering av tredjepartsutvikling vil virkelig gjøre det mulig for Urbit-sentriske samfunn å skreddersy sin egen programvare.
 
 
-We can’t cover everything about Landscape in a short post, nor about how the community works or evolves what we do. If you’re curious to learn more, try [booting a node](https://urbit.org/getting-started/) and joining the Urbit Community group where most of us hang out. That’s where we hang out most of the time, but you can also find us working in public on [GitHub](https://github.com/urbit) and on the [urbit-dev](https://groups.google.com/a/urbit.org/g/dev) mailing list.
+Vi kan ikke dekke alt om landskap i et kort innlegg, og heller ikke om hvordan samfunnet fungerer eller utvikler det vi gjør. Hvis du er nysgjerrig på å lære mer, kan du prøve å [starte en node](https://urbit.org/getting-started/) og bli med i Urbit Community-gruppen der de fleste av oss henger sammen. Det er der vi henger mesteparten av tiden, men du kan også finne oss som jobber offentlig på [GitHub](https://github.com/urbit) og på [urbit-dev-epostlisten](https://groups.google.com/a/urbit.org/g/dev).
 
-For now, let’s move on to who builds this thing and where it came from.
+For nå, la oss gå videre til hvem som bygger denne tingen og hvor den kom fra.

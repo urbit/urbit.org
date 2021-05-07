@@ -31,7 +31,7 @@ Since the Urbit ID registry is live and deployed you can even [look at the chain
 
 Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
-Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2<sup>8</sup> (256) galaxies. Each galaxy issues 2<sup>8</sup> stars, making a total of 2<sup>16</sup> (65K). Stars then each can issue 2<sup>16</sup> planets, making for 2<sup>32</sup> (~4B). As you might expect, each planet issues 2<sup>32</sup> moons.
+Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2<sup>8</sup> (256) galaxies. Each galaxy issues 2<sup>8</sup> stars, making a total of 2<sup>16</sup> (65K). Stars then each can issue 2<sup>16</sup> planets, making for 2<sup>32</sup> (~ 4B). As you might expect, each planet issues 2<sup>32</sup> moons.
 
 You can also call stars ‘infrastructure nodes’ and galaxies ‘governance nodes’, since those are more descriptive names for their roles. Stars help route packets, kind of like an ISP. And galaxies are a bit like DNS root servers or ICANN members. The difference, of course, is that Urbit IDs are owned cryptographically by many different people and accrue reputation independently.
 
@@ -41,7 +41,7 @@ And that's it. It's a simple system. What's important is why it is the way it is
 
 At a high level, there are three important things to understand about the overall Urbit ID system design.
 
-First, scarcity: there are only 2<sup>32</sup> (~4B) Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. When you meet a stranger with an Urbit ID, you know they have some skin in the game (even without leaking personal data in either direction). That said, each Urbit ID is purely pseudonymous, so `~dalwel-fadrun` for example, is proof of some stake in the network, but not much more.
+First, scarcity: there are only 2<sup>32</sup> (~ 4B) Urbit IDs, so they cost something. Since they cost something, people are less likely to use them to spam or abuse the network. When you meet a stranger with an Urbit ID, you know they have some skin in the game (even without leaking personal data in either direction). That said, each Urbit ID is purely pseudonymous, so `~dalwel-fadrun` for example, is proof of some stake in the network, but not much more.
 
 Second, decentralization: Urbit IDs are distributed by a sponsorship tree. Each sponsor issues a fixed number of addresses. Since there are lots of sponsors, there are lots of ways to get an Urbit ID — not just one central authority. Once you get one, it’s yours forever.
 
