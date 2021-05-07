@@ -1,13 +1,13 @@
 +++
-title = "~2020.12 Network Reset"
+title = "\~2020.12 Network Reset"
 template = "page_indiced.html"
 +++
 
 ## TL;DR
 
-*Last updated ~2021.1.14*
+*Last updated \~2021.1.14*
 
-A network reset happened on ~2020.12.8 — you may need to take action.
+A network reset happened on \~2020.12.8 — you may need to take action.
 
 Unlike past resets, this one comes with a tool to export and reimport all of your data so that you don't lose anything; we call it `flagday`. Details on its usage can be found below.
 
@@ -15,7 +15,7 @@ Unlike past resets, this one comes with a tool to export and reimport all of you
 
 ## When was the last network reset?
 
-On Tuesday, ~2020.12.8.
+On Tuesday, \~2020.12.8.
 
 ## How do I get updates about what's going on throughout the process?
 

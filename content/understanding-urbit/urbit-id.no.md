@@ -17,7 +17,7 @@ Let’s talk first about what an Urbit ID is and what it does. Then we’ll cove
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
 
-Urbit ID-en din er et kort navn på fire stavelser som `~ ravmel-ropdyl` som du eier med en åtte stavelses hovednøkkel som `~ palfun-foslup-fallyn-balfus`. Dette navnet og nøkkelen lar deg logge på Urbit OS, og den brukes til å kryptere pakker du sender over Urbit-nettverket. Snart vil det også være en hovednøkkel som gjør det mulig å holde og sende Bitcoin og andre kryptovalutaer. Urbit ID og passkey tilhører deg som alle andre kryptografiske eiendeler. Ingen kan ta dem fra deg (bare sørg for å oppbevare nøkkelen trygt).
+Urbit ID-en din er et kort navn på fire stavelser som `~ravmel-ropdyl` som du eier med en åtte stavelses hovednøkkel som `~palfun-foslup-fallyn-balfus`. Dette navnet og nøkkelen lar deg logge på Urbit OS, og den brukes til å kryptere pakker du sender over Urbit-nettverket. Snart vil det også være en hovednøkkel som gjør det mulig å holde og sende Bitcoin og andre kryptovalutaer. Urbit ID og passkey tilhører deg som alle andre kryptografiske eiendeler. Ingen kan ta dem fra deg (bare sørg for å oppbevare nøkkelen trygt).
 
 Urbit ID-registeret er live og deploy-et til Ethereum blockchain. Urbit ID er ikke spesielt bundet med Ethereum – en dag vil vi at den skal være vert for selve Urbit OS. Urbit ID er også den eneste komponenten i stakken som bruker Ethereum – Urbit OS-noden din er host-et uansett hvor du velger plassere den. Den primære funksjonen til Urbit ID-registeret er å holde oversikt over hvem som eier hva, å spesifisere hvilke nøkler som er tilknyttet hvilke navn, og å håndheve reglene for adressefordeling. Vi kommer nærmere inn på detaljene nedenfor.
 
@@ -31,7 +31,7 @@ Siden Urbit ID-registeret er live og deploy-et, kan du til og med [se på kjeden
 
 Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
 
-Urbit ID-er distribueres av et sponsortre. På toppen av treet er det 2<sup>8</sup> (256) galakser. Hver galakse utsteder 2<sup>8</sup> stjerner, og utgjør totalt 2<sup>16</sup> (65K). Stjerner kan deretter utstede 2<sup>16</sup> planeter, noe som gir 2<sup>32</sup> (~ 4B). Som du kanskje forventer, utsteder hver planet 2<sup>32</sup> måner.
+Urbit ID-er distribueres av et sponsortre. På toppen av treet er det 2<sup>8</sup> (256) galakser. Hver galakse utsteder 2<sup>8</sup> stjerner, og utgjør totalt 2<sup>16</sup> (65K). Stjerner kan deretter utstede 2<sup>16</sup> planeter, noe som gir 2<sup>32</sup> (\~4B). Som du kanskje forventer, utsteder hver planet 2<sup>32</sup> måner.
 
 Du kan også kalle stjerner 'infrastrukturnoder' og galakser 'styringsnoder', siden det er mer beskrivende navn for deres roller. Stjerner hjelper med å rute pakker, som en ISP. Og galakser er litt som DNS-rotservere eller ICANN-medlemmer. Forskjellen er selvfølgelig at Urbit ID-er eies kryptografisk av mange forskjellige mennesker og påløper omdømme uavhengig.
 
@@ -41,7 +41,7 @@ Og det er det. Det er et enkelt system. Det som er viktig er hvorfor det er slik
 
 På et høyt nivå er det tre viktige ting å forstå om den generelle Urbit ID-systemdesignen.
 
-For det første knapphet: det er bare 2<sup>32</sup> (~ 4B) Urbit ID-er, så de koster noe. Siden de koster noe, bruker folk mindre sannsynlighet for å spam eller misbruke nettverket. Når du møter en fremmed med en Urbit ID, vet du at de har litt 'skin in the game' (selv uten å lekke personlige data i begge retninger). Når det er sagt, er hver Urbit-ID rent pseudonym, så for eksempel er `~dalwel-fadrun` et bevis på en viss andel i nettverket, men ikke mye mer.
+For det første knapphet: det er bare 2<sup>32</sup> (\~4B) Urbit ID-er, så de koster noe. Siden de koster noe, bruker folk mindre sannsynlighet for å spam eller misbruke nettverket. Når du møter en fremmed med en Urbit ID, vet du at de har litt 'skin in the game' (selv uten å lekke personlige data i begge retninger). Når det er sagt, er hver Urbit-ID rent pseudonym, så for eksempel er `~dalwel-fadrun` et bevis på en viss andel i nettverket, men ikke mye mer.
 
 For det andre, desentralisering: Urbit-ID-er distribueres av et sponsortre. Hver sponsor utsteder et fast antall adresser. Siden det er mange sponsorer, er det mange måter å få en Urbit ID – ikke bare en sentral myndighet. Når du har fått en, er den din for alltid.
 

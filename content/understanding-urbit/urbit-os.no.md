@@ -9,50 +9,50 @@ hide_previous_title = "true"
 image = "https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg"
 +++
 
-For the most part, we use our laptops simply as access points to MEGACORP services. Our phones are the same. These services are amazing and convenient. But for that convenience we’ve traded away control, ownership and privacy. The way we live our digital lives is completely out of our hands. 
+For det meste bruker vi bærbare datamaskiner kun som tilgangspunkter til MEGACORP-tjenester. Telefonene våre er de samme. Disse tjenestene er fantastiske og praktiske. Men prisen for den bekvemmeligheten er mangel på kontroll, eierskap og personvern. Måten vi lever på våre digitale liv er helt ute av våre hender.
 
 <img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-5.jpg">
 
-Today’s MEGACORP monopolies retain their control because of one central technical advantage: they make the server side usable. 
+Dagens MEGACORP-monopol beholder kontrollen på grunn av en sentral teknisk fordel: de gjør serveren brukbar.
 
-Urbit OS is built to break these monopolies at this central point of control. Urbit OS makes the server side usable for individuals without the need for MEGACORP to run their software. 
+Urbit OS er bygget for å bryte monopolene på dette sentrale kontrollpunktet. Urbit OS gjør serversiden brukbar for enkeltpersoner uten at MEGACORP trenger å kjøre programvaren.
 
-We’ve already been through this before. In 1974 a computer was a mainframe the size of a room and was shared by hundreds of people. By 1984 a computer was the size of a desk and everyone had their own PC. The PC was more flexible and more fun, so it won by a wide margin. Then, with the rise of the internet, the PC’s flexibility slowly became irrelevant. 
+Vi har allerede vært gjennom dette før. I 1974 var en datamaskin en mainframe på størrelse med et rom og ble delt av hundrevis av mennesker. I 1984 var en datamaskin på størrelse med et skrivebord, og alle hadde sin egen PC. PC-en var mer fleksibel og morsommere, så den vant med stor margin. Da, med fremveksten av internett, ble PCens fleksibilitet sakte irrelevant.
 
-Today, we’re more or less back to the timesharing model of the 1970s. Urbit OS is the PC to MEGACORP’s mainframe. It’s more flexible, more fun, and most of all, poised to capture the everyday creativity of the individual.
+I dag er vi mer eller mindre tilbake til timesharing-modellen fra 1970-tallet. Urbit OS er PCen til MEGACORPs hovedramme. Det er mer fleksibelt, morsommere og mest av alt, forberedt på å fange individets hverdagskreativitet.
 
-Let’s talk about how we think we’re going to pull this off from a technical standpoint, and our vision for using Urbit. 
+La oss snakke om hvordan vi tror vi skal trekke dette ut fra et teknisk synspunkt, og vår visjon om å bruke Urbit.
 
-If you’d like to skip ahead to what Urbit will be like to use [go ahead](/understanding-urbit/interface). Or if you’re someone who just wants to head to the source, [it’s here](https://github.com/urbit/urbit#urbit). In that case you may also want to [read the docs](https://urbit.org/docs/) to get up and running.
+Hvis du vil hoppe videre til hvordan Urbit vil være å bruke [gå videre](/understanding-urbit/interface). Eller hvis du er noen som bare ønsker å gå til kilden, [se her](https://github.com/urbit/urbit#urbit). I så fall vil du kanskje også [lese dokumentasjonen](https://urbit.org/docs/) for å komme i gang.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/technical-overview/technical-overview-kernel@2x.png">
 
-Urbit OS is a completely new, carefully architected software stack: a VM, programming language, and kernel designed to run software for an individual. Urbit OS is a program that runs on almost any cloud server, most laptops and many phones: anything with Unix and an internet connection. 
+Urbit OS er en helt ny, nøye arkitektert programvare-stack: en VM, programmeringsspråk og en kjerne designet for å kjøre programvare for en person. Urbit OS er et program som kjører på nesten hvilken som helst skyserver, de fleste bærbare datamaskiner og mange telefoner: alt med Unix og en internettforbindelse.
 
-The main thing to understand about our ‘overlay OS’, as we call it, is that the foundation is a single, simple function. This function is the Urbit OS virtual machine. We call it ‘Nock’. The entire Urbit OS system compiles down to Nock, and Nock is just 33 lines of code.
+Det viktigste å forstå om vårt 'overlay OS', som vi kaller det, er at fundamentet er en enkelt, enkel funksjon. Denne funksjonen er den virtuelle Urbit OS-maskinen. Vi kaller det 'Nock'. Hele Urbit OS-systemet kompileres ned til Nock, og Nock er bare 33 linjer med kode.
 
-Nock is similar in spirit to WASM or the JVM: it’s a uniform machine code for every Urbit [ship](https://urbit.org/docs/glossary/ship/). A frozen foundation makes for some nice features: 
+Nock ligner i sin ånd WASM eller JVM: det er en ensartet maskinkode for hvert Urbit [skip](https://urbit.org/docs/glossary/ship/). Et frossent fundament gir noen fine funksjoner:
 
-The state of your Urbit OS is a pure function of its event history. It’s auditable, inspectable, repeatable. You can actually trust it.
-Writing decentralized apps becomes vastly simpler than in the old world, since every node computes exactly the same way.
-The entire Urbit OS stack, from programming language to applications, is upgradeable over the network. For ordinary users, this makes for almost no system administration.
+Tilstanden til Urbit OS er en ren funksjon av hendelseshistorikken. Det er kontrollerbart, inspiserbart, repeterbart. Du kan faktisk stole på det.
+Å skrive desentraliserte apper blir langt enklere enn i den gamle verden, siden hver node fungerer nøyaktig på samme måte.
+Hele Urbit OS-stacken, fra programmeringsspråk til applikasjoner, kan oppgraderes over nettverket. For vanlige brukere gir dette nesten ingen systemadministrasjon.
 
-Since Nock is a protocol for computing itself, any two nodes on the Urbit network can easily share data, communicate and connect their software. 20th century systems could never do this without a MEGACORP acting as the intermediary.
+Siden Nock er en datamaskin-protokoll i seg selv, kan to noder på Urbit-nettverket enkelt dele data, kommunisere og koble programvare. Systemer fra det 20. århundre kunne aldri gjøre dette uten at en MEGACORP fungerte som mellomledd.
 
 <img class="full ba w-100 mv4" src="https://media.urbit.org/site/understanding-urbit/network-os/urbit-os-diagram-apart.svg"/>
 
-On top of this tiny VM we built a self-hosting, purely functional programming language, a kernel written in that language and a set of kernel modules that serve all the needs of personal computing. Specifically: a filesystem, build system, application sandbox, secret storage, web server, terminal driver and a networking protocol. 
+På toppen av denne lille VM-en bygde vi et selv-hosting, rent funksjonelt programmeringsspråk, en kjerne skrevet på det språket og et sett med kjernemoduler som tjener alle behovene til personlig databehandling. Spesielt: et filsystem, byggesystem, applikasjonssandkasse, hemmelig lagring, webserver, terminaldriver og en nettverksprotokoll.
 
-This sounds like a lot — but the whole stack is incredibly compact. The whole system clocks in at around 50K lines of code. We’ve seen individual developers understand the entire thing. Who is the last person you met that actually understands their entire computer? Urbit OS is like the 1968 Porsche 911 of operating systems: extremely simple, elegant, and built for the individual.
+Dette høres ut som mye – men hele programvare-stacken er utrolig kompakt. Hele systemet er på rundt 50K linjer med kode. Vi har sett at individuelle utviklere har mulighet til å forstår hele greia. Hvem er den siste personen du møtte som faktisk forstår hele datamaskinen? Urbit OS er som 1968 Porsche 911 for operativsystemer: ekstremt enkel, elegant og bygget for enkeltpersoner.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/project-history/uu-os-4.jpg">
 
-But why did we build all this technology? 
+Men hvorfor bygde vi all denne teknologien?
 
-First and foremost, to deliver a better user experience. Urbit OS alone is just a new layer for personal computing in the cloud. But with this new layer we open up the possibility of building a completely unified interface for people to compute in the cloud. (If you’d like to skip to how we envision that interface, [go for it](/understanding-urbit/interface).)
+Først og fremst for å levere en bedre brukeropplevelse. Urbit OS alene er kun et nytt lag for personlig databehandling i skyen. Men med dette nye laget åpner vi muligheten for å bygge et helt enhetlig grensesnitt for personlig databehandling i skyen. (Hvis du vil hoppe til hvordan vi ser for oss dette grensesnittet, [se her](/understanding-urbit/interface).)
 
-From a broader perspective, it’s clear that connected computing is important and that it’s here to stay. We just want it to be as calm, simple and reliable as possible, and we don’t think that can happen using existing technology. 
+Fra et bredere perspektiv er det klart at tilkoblet databehandling er viktig, og at det er kommet for å bli. Vi vil bare at det skal være så rolig, enkelt og pålitelig som mulig, og vi tror ikke det kan skje ved hjelp av eksisterende teknologi.
 
-All of Urbit is built to function as a single stack, and we think that building a useful product is the best way to mature the system as a whole. That said, each component of this system can be used on its own. Don’t like our client? That’s okay, you can build your own. Don’t want to use Urbit OS? No problem — you can use Urbit ID as an authentication system for some other OS, or for anything, really. 
+Hele Urbit er bygget for å fungere som en enkelt stack, og vi tror at å bygge et nyttig produkt er den beste måten å modne systemet som en helhet. Når det er sagt, kan hver komponent i dette systemet brukes alene. Liker du ikke klienten vår? Det er greit, du kan bygge din egen. Vil du ikke bruke Urbit OS? Ikke noe problem – du kan bruke Urbit ID som et autentiseringssystem for et annet operativsystem, eller hva som helst.
 
-Speaking of Urbit ID, let’s talk about what that actually is.
+Når vi snakker om Urbit ID, la oss snakke om hva det faktisk er.
