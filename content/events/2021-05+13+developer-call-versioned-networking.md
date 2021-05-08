@@ -19,5 +19,3 @@ that ensures our servers reliably stay connected. Liam Fitzgerald (~hastuc-dibtu
 Liam is an Interface Engineer working at Tlon working on the Landscape team. He will be discussing networking userspace applications in depth and going into detail about the new versioning system.
 
 As usual, there will be an opportunity to jump on the call with us afterward to ask questions and hang out.
-
-+++
