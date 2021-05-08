@@ -15,7 +15,7 @@
     <a target="_blank" href="{{ page.extra.registration_url }}" id="rsvp" data-date="{{ page.date }}">RSVP</a>
     <script>
       const rsvp = document.getElementById('rsvp');
-      if (Date.now() > Date.parse(rsvp.dataset.date)) {
+      if (Date.now() > Date.parse(`${rsvp.dataset.date}T23:59:59`)) {
         rsvp.style.display = 'none';
       }
     </script>
