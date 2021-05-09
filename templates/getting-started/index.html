@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
+
 {% block title %}
   <meta name="og:title" content="Getting Started - {{ config.title }}">
   <title>Getting Started - {{ config.title }}</title>
@@ -29,6 +31,11 @@
   {% for directorypage in posts.pages %}
     <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
   {% endfor %}
+  <div class="lang-picker-wrapper gray3">
+    {% block language_selector %}
+    {{ macros::language_selector(current_page=posts) }}
+    {% endblock language_selector %}
+  </div>
 
 </nav>
 <!-- content -->

@@ -1,0 +1,77 @@
++++
+title = "Introduksjon"
+description = "Introduksjon til Urbit"
+weight = 0
+[extra]
+flatten_pagination = "true"
+hide_next_title = "true"
+hide_previous_title = "true"
++++
+
+Vi tror internett ikke kan reddes. Slik ting går, vil MEGACORP alltid kontrollere appene og tjenestene våre fordi vi ikke lenger kan kjøre dem selv.
+
+Den eneste veien ut av dette rotet er med en helt ny plattform som eies og kontrolleres av brukerne.
+
+<img class="full ba mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-0.jpg">
+
+
+Urbit er et nytt operativsystem og peer-to-peer-nettverk som er enkelt av design, bygget for å vare evig og 100% eid av brukerne. Under panseret er Urbit en programvarestabel fra blanke ark som er kompakt nok til at en enkelt utvikler kan forstå og kontrollere den fullstendig.
+
+Vi bygde denne nye programvarestabelen for å gi folk et enkelt integrert verktøy for å kommunisere og bygge lokalsamfunn – et verktøy de kan stole på, kontrollere og utvide etter eget ønske. Vi vil fjerne den forferdelige brukeropplevelsen av den nåværende 'frankenstack' av apper og tjenester som vi alle bruker i dag.
+
+Urbit er designet for å bli et effektivt, tilpassbart produktivitetsverktøy for samarbeidspartnere og et rolig, ikke-invasivt kommunikasjonsverktøy for venner og familier.
+
+Dette høres sannsynligvis ambisiøst ut, så la oss se konkret på (1) Urbit som et stykke teknologi og (2) Urbit som en brukeropplevelse.
+
+1 - Teknologi
+
+Teknisk sett er Urbit to komponenter: Urbit OS og Urbit ID.
+
+Begge er fullstendig [open](https://github.com/urbit/urbit) [source](https://github.com/urbit/azimuth) og MIT lisensiert.
+
+<img class="full w-100 mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-2.svg"/>
+
+
+Urbit OS er en ny, nøye arkitektert programvarestabel: en VM, programmeringsspråk og kjerne designet for å kjøre programvare for en person.
+
+Urbit OS er et program som kjører på nesten hvilken som helst skyserver, de fleste bærbare datamaskiner og mange telefoner: alt med Unix og en internettforbindelse. Urbit OS er fullstendig forseglet fra systemet det kjører på, som WASM eller JVM. Noen ganger kaller vi det et 'overlay OS'.
+
+I en Urbit-verden har hver person sin egen Urbit OS-node, eller ‘urbit’. Din Urbit er sikker og privat for deg og helt under din kontroll. Når du vil koble deg til andre, kobler du deg direkte til deres Urbit - i stedet for å gå gjennom en sentralisert tjeneste.
+
+Hvis du er nysgjerrig på å dykke enda dypere inn i Urbit OS, kan du gjerne [gå videre](@/understanding-urbit/urbit-os).
+
+<img class="full w-100 mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-3.svg"/>
+
+Urbit ID er et identitets- og autentiseringssystem spesielt designet for å fungere med Urbit OS. Når du starter eller logger på Urbit OS, bruker du Urbit ID.
+
+Urbit ID-en din er et kort, minneverdig navn (som `~ravmel-ropdyl`) som er et brukernavn, nettverksadresse og kryptolommebok i ett. Den er registrert i en blockchain, du eier den med en nøkkel, og ingen kan ta den fra deg. Urbit-ID er kryptografisk eiendom.
+
+Urbit-ID er ikke penger, men de er knappe, så hver koster noe. Dette betyr at når du møter en fremmed på Urbit-nettverket, har de litt 'skin in the game' og er mindre sannsynlig å være en bot eller en spammer.
+
+Urbit ID-systemet er live og distribuert, og vi planlegger ikke å endre det så mye. Det fungerer bra. Hvis du er nysgjerrig på å dykke nærmere inn i detaljene, kan du gå videre til [dette innlegget](@/understanding-urbit/urbit-id).
+
+2 - Brukeropplevelse
+
+Vi vil at Urbit skal være et enkelt, intuitivt grensesnitt for hele ditt digitale liv.
+
+<img class="full ba mb4" src="https://media.urbit.org/site/understanding-urbit/uu-intro-4.png"/>
+
+
+Gjennom årene har Urbit blitt bygget offentlig som et open source-prosjekt. Alle kan [bli med i nettverket](@/getting-started/) og sjekke hva vi holder på med. Det er litt som å logge på IRC tidlig på 90-tallet.
+
+Tidlig i 2020 lanserte vi Urbit OS 1: et minimalt grensesnitt for gruppekommunikasjon, og vårt første komplette grensesnitt. OS 1 er et verktøy for å chatte, dele notater og lenker, og holde kontakten.
+
+OS 1 er det første skrittet mot et virkelig komplett OS for en nettverksverden.
+
+Over tid vil Urbit vokse til et system som kan samle alle våre forskjellige kommunikasjonsmåter: chat, betalinger, dokumenter, bilder, biometriske data. Vi ønsker at enkeltpersoner og deres lokalsamfunn både skal kunne kontrollere programvaren sin via kildekoden og i aksjon gjennom et enkelt grensesnitt.
+
+Vi ønsker å legge igjen en verden av apper og tjenester for en der vi kan bringe alt sammen på ett sted. Og på den måten kan vanlige brukere lage tilpassede digitale miljøer for sine venner og lokalsamfunn.
+
+<img class="full ba mb4" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/intro/intro-6.jpg"/>
+
+
+For å se hvordan vi kommer dit, la oss gå gjennom disse to delene av ny teknologi hver for seg, Urbit OS og Urbit ID. Vi snakker deretter om vår visjon for fremtiden og hvordan vi kommer dit.
+
+For tekniske personer er det viktig å merke seg at Urbit som en stabel på ingen måte er nødvendig å brukes sammen. Liker du ikke klienten vår? Bygg gjerne din egen. Akkurat som Urbit ID-systemet? Ikke noe problem - bruk det!
+
+Til syvende og sist tror vi at ny teknologi mest sannsynlig vil bli adoptert hvis den kan gi en mye, mye bedre brukeropplevelse. Så det er det vi fokuserer på å skape.
