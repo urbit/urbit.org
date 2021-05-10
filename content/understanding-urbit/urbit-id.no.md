@@ -13,7 +13,7 @@ Forutsatt at Urbit OS er enkelt nok til at en vanlig bruker kan eie og operere, 
 
 Urbit ID er svaret på alle disse spørsmålene. Urbit ID er en desentralisert infrastruktur for adressering og offentlig-nøkkel designet for Urbit OS.
 
-Let’s talk first about what an Urbit ID is and what it does. Then we’ll cover our design goals and how the system works overall.
+La oss først snakke om hva en Urbit ID er og hva den gjør. Deretter vil vi dekke designmålene våre og hvordan systemet fungerer generelt.
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-cards%402x.png">
 
@@ -29,7 +29,7 @@ Siden Urbit ID-registeret er live og deploy-et, kan du til og med [se på kjeden
 
 <img class="ba" src="https://media.urbit.org/site/understanding-urbit/urbit-id/urbit-id-paperwallet%402x.png">
 
-Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is `3,509,632,436`, for example.
+Hver Urbit ID er egentlig bare et tall. Fra dette tallet genererer vi et uttalt navn og en visuelt identifiserbar sigil. `~dalwel-fadrun` er for eksempel `3.509.632.436`.
 
 Urbit ID-er distribueres av et sponsortre. På toppen av treet er det 2<sup>8</sup> (256) galakser. Hver galakse utsteder 2<sup>8</sup> stjerner, og utgjør totalt 2<sup>16</sup> (65K). Stjerner kan deretter utstede 2<sup>16</sup> planeter, noe som gir 2<sup>32</sup> (~ 4B). Som du kanskje forventer, utsteder hver planet 2<sup>32</sup> måner.
 

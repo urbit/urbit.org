@@ -93,6 +93,6 @@ Målet vårt med Landscape er å gi lokalsamfunn verktøyene de fortjener for å
 Men Landscape i begynnelsen av 2021 vil trolig fortsatt bare komme med noen få moduler ut av esken. Vårt største neste trinn i 2021 er å gjøre det enkelt for alle å legge til sine egne moduler og for utviklere å bygge og publisere sine egne. Aktivering av tredjepartsutvikling vil virkelig gjøre det mulig for Urbit-sentriske samfunn å skreddersy sin egen programvare.
 
 
-Vi kan ikke dekke alt om landskap i et kort innlegg, og heller ikke om hvordan samfunnet fungerer eller utvikler det vi gjør. Hvis du er nysgjerrig på å lære mer, kan du prøve å [starte en node](https://urbit.org/getting-started/) og bli med i Urbit Community-gruppen der de fleste av oss henger sammen. Det er der vi henger mesteparten av tiden, men du kan også finne oss som jobber offentlig på [GitHub](https://github.com/urbit) og på [urbit-dev-epostlisten](https://groups.google.com/a/urbit.org/g/dev).
+Vi kan ikke dekke alt om Landscape i et kort innlegg, og heller ikke om hvordan samfunnet fungerer eller utvikler det vi gjør. Hvis du er nysgjerrig på å lære mer, kan du prøve å [starte en node](https://urbit.org/getting-started/) og bli med i Urbit Community-gruppen der de fleste av oss henger sammen. Det er der vi henger mesteparten av tiden, men du kan også finne oss som jobber offentlig på [GitHub](https://github.com/urbit) og på [urbit-dev-epostlisten](https://groups.google.com/a/urbit.org/g/dev).
 
 For nå, la oss gå videre til hvem som bygger denne tingen og hvor den kom fra.

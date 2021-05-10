@@ -101,7 +101,7 @@ Det første du vanligvis vil gjøre med en ny planet er å **montere** den. En p
 
 `> =` betyr at kommandoen var vellykket. Nå kan du se planetens filer i katalogen.
 
-For å forstå hva som skjedde med denne kommandoen, les mer om Urbits filsystem (kalt "“clay”") [her](@/docs/arvo/clay/clay.md).
+For å forstå hva som skjedde med denne kommandoen, les mer om Urbits filsystem (kalt "clay") [her](@/docs/arvo/clay/clay.md).
 
 ## Oppdatering {#updating}
 
