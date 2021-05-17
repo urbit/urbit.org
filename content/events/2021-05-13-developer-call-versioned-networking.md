@@ -4,7 +4,7 @@ date = 2021-05-13
 [extra]
 pinned = false
 host = "Josh Lehman (~wolref-podlex)"
-time = "09:00 PST"
+time = "16:00 PST"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"
