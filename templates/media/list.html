@@ -25,9 +25,17 @@
 </nav>
 <!-- content -->
 <article class="mt4 mb4 c1-13 c4-10-lg measure-wide">
-  <ul class="posts">
     {% set posts = get_section(path="media/_index.md") %}
+
+  <p>Follow <a href="https://www.youtube.com/channel/UCNYIS9_SktINCC9yqO4CFZw">Urbit</a> and <a href="https://www.youtube.com/channel/UCyBGqTPD2uj9kbEJsxWnRxQ">Tlon</a> on Youtube for interviews, developer calls, launches, and more.</p>
+
+    <details open>
+    <summary style="cursor:pointer;"><h2 style="display:inline;">2021</h2></summary>
+    <br><br>
+    <ul class="posts">
     {% for page in posts.pages %}
+    {% set pagedate = page.date | date(format="%Y") %}
+    {% if pagedate == "2021" %}
     <li>
       <h2 class="f5 fw6 mt0 mb2"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
 
@@ -71,11 +79,129 @@
       <p class="mt0">{{ page.description }}</p>
       <span class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
       <span class="mono f6">
-        {% if page.extra.ship %}<span class="mono f6 ml2">{{ page.extra.ship }}</span> {% endif %}
+      {% if page.extra.ship %}<span class="mono f6 ml2">{{ page.extra.ship }}</span> {% endif %}
       </span>
     </li>
+    {% endif %}
     {% endfor %}
-  </ul>
+    </ul>
+    </details>
+
+    <details>
+    <summary style="cursor:pointer;"><h2 style="display:inline;">2020</h2></summary>
+    <br><br>
+    <ul class="posts">
+    {% for page in posts.pages %}
+    {% set pagedate = page.date | date(format="%Y") %}
+    {% if pagedate == "2020" %}
+    <li>
+      <h2 class="f5 fw6 mt0 mb2"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+
+      {% if page.extra.youtube %}
+      <div class="video-container mb2">
+          <iframe class="w-100" height=auto
+            src="https://www.youtube.com/embed/{{page.extra.youtube}}"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen>
+          </iframe>
+        </div>
+      {% endif %}
+
+      {% if page.extra.soundcloud %}
+      <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="{{page.extra.soundcloud}}">
+      </iframe>
+      {% endif %}
+
+      {% if page.extra.libsyn %}
+      <iframe
+        style="border: none"
+        src="{{page.extra.libsyn}}"
+        height="90"
+        width="100%"
+        scrolling="no"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        oallowfullscreen
+        msallowfullscreen>
+      </iframe>
+      {% endif %}
+
+      <p class="mt0">{{ page.description }}</p>
+      <span class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
+      <span class="mono f6">
+      {% if page.extra.ship %}<span class="mono f6 ml2">{{ page.extra.ship }}</span> {% endif %}
+      </span>
+    </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    </details>
+
+    <details>
+    <summary style="cursor:pointer;"><h2 style="display:inline;">2019 & Earlier</h2></summary>
+    <br><br>
+    <ul class="posts">
+    {% for page in posts.pages %}
+    {% set pagedate = page.date | date(format="%Y") %}
+    {% if pagedate != "2021" and pagedate != "2020" %}
+    <li>
+      <h2 class="f5 fw6 mt0 mb2"><a class="bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+
+      {% if page.extra.youtube %}
+      <div class="video-container mb2">
+          <iframe class="w-100" height=auto
+            src="https://www.youtube.com/embed/{{page.extra.youtube}}"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen>
+          </iframe>
+        </div>
+      {% endif %}
+
+      {% if page.extra.soundcloud %}
+      <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="{{page.extra.soundcloud}}">
+      </iframe>
+      {% endif %}
+
+      {% if page.extra.libsyn %}
+      <iframe
+        style="border: none"
+        src="{{page.extra.libsyn}}"
+        height="90"
+        width="100%"
+        scrolling="no"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        oallowfullscreen
+        msallowfullscreen>
+      </iframe>
+      {% endif %}
+
+      <p class="mt0">{{ page.description }}</p>
+      <span class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</span>
+      <span class="mono f6">
+      {% if page.extra.ship %}<span class="mono f6 ml2">{{ page.extra.ship }}</span> {% endif %}
+      </span>
+    </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    </details>
 </article>
 {% include "partials/footer.html" %}
 {% endblock content %}

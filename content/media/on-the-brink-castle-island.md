@@ -8,7 +8,6 @@ ship = "~pindet-timmut + ~tacryt-socryp"
 libsyn = "https://html5-player.libsyn.com/embed/episode/id/11959088/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
 +++
 
-"Christian Langalis and Logan Allen from Tlon join the show to discuss Urbit, the ambitious and somewhat mysterious computing project that they work on. We discuss how Bitcoin and Urbit could be mutually beneficial, how Urbit might free us from the tyrannical tech oligopolies, and why a from-scratch rewrite of Unix and the computing stack is necessary."
-
-
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/11959088/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+"Christian Langalis and Logan Allen from Tlon join the show to discuss Urbit, the ambitious and somewhat mysterious computing project that they work on. We discuss how Bitcoin and Urbit could be mutually beneficial, how Urbit might free us from the tyrannical tech oligopolies, and why a from-scratch rewrite of Unix and the computing stack is necessary."
