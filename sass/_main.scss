@@ -670,3 +670,10 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom-style: none;
     }
 }
+
+// language picker
+div.lang-picker-wrapper {
+  a.selected-language {
+    font-weight: bold;
+  }
+}

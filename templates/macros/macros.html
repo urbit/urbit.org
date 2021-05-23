@@ -9,3 +9,24 @@
     <time class="mono f6 gray2 fr">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }} </time>
   </span>
 {% endmacro event_metadata %}
+
+<!-- Show a language selector for current page when localized content is available -->
+<!-- example: {{ macros::language_selector(current_page=page) }} -->
+<!-- see: https://www.getzola.org/documentation/templates/pages-sections/#translated-content -->
+{% macro language_selector(current_page) %}
+  {% set translations = current_page.translations %}
+  {% if translations | length > 1 %}
+    <small class="multilingual">
+      {% for translation in translations | sort(attribute="lang") %}
+        {% set link_class = "" %}
+        {% if translation.permalink == current_page.permalink %}
+          {% set link_class = "selected-language" %}
+        {% endif %}
+        <a href="{{ translation.permalink }}" class="{{ link_class }}">{{ translation.lang }}</a>
+        {% if not loop.last %}
+          |
+        {% endif %}
+      {% endfor %}
+    </small>
+  {% endif %}
+{% endmacro language_selector %}
