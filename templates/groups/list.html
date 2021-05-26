@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+  <meta name="og:title" content="Groups - {{ config.title }}">
+  <title>Groups - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="A selection of public groups running on Urbit.">
+  <meta name="description" content="A selection of public groups running on Urbit.">
+{% endblock description %}
+
+{% block content %}
+{% set posts = get_section(path="community/groups/_index.md") %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/community">Community</a>
+  <span class="gray3"> / </span>
+  <a href="/community/groups/">Groups</a>
+
+  {% include "partials/navigation-search.html" %}
+
+  <ol id="event_months" class="pa0" style="position: sticky; top: 0;"></ol>
+
+</nav>
+<section class="full c4-12-lg pt4 lh-copy">
+
+  <p>Anyone can host their own group using Urbit.</p>
+
+  <p>Below we've selected a handful of public groups to give you a good idea of the communities that people are forming.</p>
+
+  <p class="mb4">If you're already running Urbit, click &ldquo;Visit&rdquo; to view the group in your client.</p>
+
+
+  {% for page in posts.pages %}
+    <article data-date="{{ page.date }}" id="event-{{ page.slug }}" class="group mb4 c1-10-lg full">
+      <div class="grid12">
+        <h1 class="full"><a class="no-underline bb-0" href="{{ page.permalink }}">{{ page.title }}</a></h1>
+        <div class="measure-wide full c1-8-lg">
+          {% if page.extra.description %}
+            <p class="lh-copy">{{ page.extra.description }}</p>
+          {% endif %}
+
+          {% if page.extra.path %}
+            <a href="web+urbitgraph://group/{{ page.extra.path }}">Visit</a>
+          {% endif %}
+        </div>
+        {% if page.extra.image %}
+          <img class="db mv2 h4 ba obj-cover full c8-13-lg" src="{{ page.extra.image }}" />
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+
+
+
+  
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}
