@@ -1,5 +1,5 @@
 +++
-title = “Bitcoin Wallet Disclaimers
+title = "Bitcoin Wallet Disclaimers"
 +++
 
 
