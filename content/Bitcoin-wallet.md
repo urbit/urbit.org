@@ -28,7 +28,7 @@ The Urbit Bitcoin Wallet and its related components are experimental pieces of s
 
 No guarantees are made about the security of this software. It may contain vulnerabilities that could lead to loss of funds. This wallet software has not had a formal security security audit. 
 
-You can read about the security audit for Urbit's networking protocol in this [post](https://urbit.org/blog/security-audit/) This audit does not encompass the wallet, except to the extent that the wallet operates on Urbit's networking architecture.
+You can read about the security audit for Urbit's networking protocol in this [post](https://urbit.org/blog/security-audit/). This audit does not encompass the wallet, except to the extent that the wallet operates on Urbit's networking architecture.
 
 If you decide to use this wallet, please store responsible amounts of Bitcoin, and use best security practices. The developers of this software cannot help you recover your keys / funds, if lost. 
 
