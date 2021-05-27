@@ -35,7 +35,7 @@ If you decide to use this wallet, please store responsible amounts of Bitcoin, a
 
 ### License
 
-With the exception of its external dependencies, this software is a component of Urbit, and is released under Urbit's MIT License, reproduced below.Â  [View Original](https://raw.githubusercontent.com/urbit/urbit/master/LICENSE.txt)
+With the exception of its external dependencies, this software is a component of Urbit, and is released under Urbit's MIT License, reproduced below.  [View Original](https://raw.githubusercontent.com/urbit/urbit/master/LICENSE.txt)
 
 The MIT License (MIT)
 
