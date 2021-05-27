@@ -14,7 +14,7 @@ You should verify your version of this Bitcoin wallet. To do so, follow the inst
 
 Instructions reproduced here: 
 
-"To verify your version of the bitcoin wallet, run the following command in the dojo:
+To verify your version of the bitcoin wallet, run the following command in the dojo:
 `> +btc-wallet-check`
 It should return with the following hash:
 `0v9t022.n8kv1.5emkt.s2p9i.hvsa9`
