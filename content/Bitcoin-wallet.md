@@ -3,7 +3,6 @@ title = "Bitcoin Wallet Disclaimers"
 +++
 
 
-### Bitcoin Wallet Disclaimers
 
 The latest Urbit release includes a native Bitcoin wallet. Please read the following security recommendations and disclaimers carefully. Urbit.org cannot recover any lost keys.
 
