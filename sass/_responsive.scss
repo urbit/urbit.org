@@ -16,18 +16,12 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(1fr);
   }
-  #hero {
-    background-blend-mode: soft-light;
-  }
 }
 
 // custom L breakpoint classes
 @media screen and (min-width: 46.875em) and (max-width: 60em) {
     .white-l {
         color: #fff;
-    }
-    #hero {
-      background-blend-mode: soft-light;
     }
 }
 
