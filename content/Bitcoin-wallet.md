@@ -22,7 +22,9 @@ It should return with the following hash:
 
 ### Statement
 
-The Urbit Bitcoin Wallet and its related components are experimental pieces of software. You are free to review their code before using: [Wallet](https://github.com/urbit/urbit/blob/master/pkg/bitcoin-wallet/README.md) [Node Provider Agents](https://github.com/timlucmiptev/btc-agents)
+The Urbit Bitcoin Wallet and its related components are experimental pieces of software. You are free to review the open-source code before using: 
+- [Wallet](https://github.com/urbit/urbit/blob/master/pkg/bitcoin-wallet/README.md) 
+- [Full Node Provider Agents](https://github.com/timlucmiptev/btc-agents)
 
 No guarantees are made about the security of this software. It may contain vulnerabilities that could lead to loss of funds. This wallet software has not had a formal security security audit. 
 
