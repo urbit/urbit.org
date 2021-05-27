@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% import "macros/macros.html" as macros %}
 
-<!--External links are differentiated on home page.-->
 {% block templatestyles %}
 
 {% endblock templatestyles %}
@@ -35,7 +34,7 @@
 </section>
 
 <section class="full c2-12-md c2-12-lg mb6">
-<div id="hero" class="tc tl-m tl-l tl-xl bg-gray7 ba b--gray5 bw2 w-100 pv6 br4">
+<div id="hero" class="tc tl-m tl-l tl-xl bg-white ba b--gray5 bw2 w-100 pv6 br4">
   <div class="ml0 ml6-m ml6-l ml6-xl">
     <div class="tc dib">
     <h1 class="tracked-tight dib" style="font-size: 100px;">Port</h1>
@@ -46,44 +45,41 @@
             Download for macOS
           </a>
         </div>
+        <a class="f6 db mv3 fw6 gray6" href="/getting-started/cli">Other platforms (CLI)</a>
       </div>
     </div>
   </div>
 </div>
-</section>
-
-<section class="full c2-12-md c3-11-lg mb6">
-  <h1 class="mb5 gray6 f3">Own Urbit</h1>
-  <div class="ba b--transparent bw2 br4 bg-yellow3-new h5 mb5">
-  </div>
-  <p class="mv0 f3 fw6">Urbit is a network owned by the people who use it.</p>
+<a class="db tc f6 fw6 yellow3-new mv3" href="https://github.com/urbit/urbit">View the Urbit source</a>
 </section>
 <section class="full c2-12-md c3-11-lg mb6">
   <h1 class="mb5 gray6 f3">Build on Urbit</h1>
-  <p class="mt0 mb4 f3 fw6 measure-wide">Urbit is a full-stack reinvention of the personal computer written using two new programming languages:</p>
-  <p class="mv0 f3 fw6"><a class="yellow3-new" href="/docs/glossary/nock/">Nock</a>, a 12-opcode assembly language and instruction set</p>
-  <p class="mv0 f3 fw6"><a class="yellow3-new" href="/docs/glossary/hoon/">Hoon</a>, a functional LISP-like language built to extend Nock</p>
+  <p class="mt0 f4 lh-copy">Urbit is a full-stack reinvention of the personal computer written in a handful of new programming languages: <a class="fw6 bb-0" href="/docs/glossary/nock/">Nock</a>, a 12-opcode assembly language and instruction set, and <a class="fw6 bb-0" href="/docs/glossary/hoon">Hoon</a>, a functional LISP-like language built to extend Nock.</p>
+  <p class="f4 lh-copy">Together, these languages have been used to build a variety of subsystems that comprise a general-purpose peer-to-peer
+  virtual computer.</p>
+  <p class="f4 lh-copy">It’s a lot of fun, and more exciting than building on Unix-like systems.</p>
+  <p class="f4 lh-copy">You can get started learning how to contribute to the project, or view a variety of <a class="fw6 bb-0" href="https://github.com/urbit/awesome-urbit#http-apis-airlock">libraries</a> for building on Urbit using the languages you already know.</p>
 </section>
 <section class="full c2-12-md c3-11-lg mb6">
   <h1 class="mb5 gray6 f3">Urbit Grants</h1>
-  <div class="ba b--green2-faded bw2 br4 bg-green2-faded mb4 flex flex-column flex-row-l flex-row-xl justify-between pa3 items-center">
+  <div class="ba b--green2-faded bw2 br4 bg-green2-faded mb4 flex flex-column flex-row-l flex-row-xl justify-between pa3 ph4 items-center">
     <div class="tc">
       <h1 class="green2-new f3">200+</h1>
-      <h1 class="green2-new f3">Urbit stars awarded</h1>
+      <h1 class="green2-lighter f3">Urbit stars awarded</h1>
     </div>
     <div class="h3 bg-green2-faded dn db-l db-xl" style="width:0.5rem;"></div>
     <div class="tc mv4 mv0-l mv0-xl">
       <h1 class="green2-new f3">$1,000,000+</h1>
-      <h1 class="green2-new f3">USD rewarded</h1>
+      <h1 class="green2-lighter f3">USD rewarded</h1>
     </div>
     <div class="h3 bg-green2-faded dn db-l db-xl" style="width:0.5rem;"></div>
     <div class="tc">
       <h1 class="green2-new f3">90+</h1>
-      <h1 class="green2-new f3">Grants & Bounties</h1>
+      <h1 class="green2-lighter f3">Grants & Bounties</h1>
     </div>
   </div>
-  <div class="ba b--green2-faded bw2 br4 bg-green2-faded mb4 flex flex-column flex-row-l flex-row-xl justify-between pa3 items-center">
-    <h1 class="f4">We regularly give away address space to reward community contributions, including education, promotion, and development.</h1>
+  <div class="mb4">
+    <p class="f4 lh-copy">We regularly give away address space to reward community contributions, including education, promotion, and development.</p>
     <a class="bg-green2-new white br3 pv3 ph4 dib flex-shrink-0 mt4 mt0-l mt0-xl" href="/grants">Learn more about Urbit Grants</a>
   </div>
 </section>
