@@ -1,19 +1,19 @@
 +++
 title = "Apprenticeship: 3rd Party Software Distribution"
-date = 2021-05-27
+date = 2021-02-01
 [taxonomies]
 grant_type = ["apprenticeships"]
 grant_category = ["App Dev: Core"]
 [extra]
 image = ""
 description = "3rd party software distribution infrastructure"
-reward = 
+reward = 5
 mentor = "~wolref-podlex"
 assignee = "~sovmep-ripsum"
-completed = true
-work_request_link = "
-https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0024&prefill_Grant+Name=3rd%20Party%20Software%20Distibution"
+completed = false
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0025"
 +++
+
 ## Scope
 
 Ultimate goal: 3rd party software distribution
