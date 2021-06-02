@@ -1,53 +1,54 @@
 +++
 title = "Calendar UI"
-date = 2020-07-16
+date = 2021-01-01
 [taxonomies]
-grant_type = ["proposals"]
-grant_category = ["App Dev: Arvo"]
+grant_type = ["bounties"]
+grant_category = ["App Dev: Other"]
 [extra]
 image = ""
-description = "Build a Landscape-native calendar UI"
-reward = 2
-assignee = "finled-bansel"
-id = "1555464949"
-completed = false
-link = ""
+description = "Develop a UI for improved access to the Calendar Gall app"
+reward = 3 
+assignee = "~fabnev-hinmur"
+grants_id = "B0014"
+completed = true
 +++
 
-# Purpose
 
-A calendar is an indispensible personal tool to many people. A [previous proposal](https://grants.urbit.org/proposals/1851255517) has started work on an Urbit-native calendar. This previous proposal seeks to create a parser and a Gall agent to manage the data layer of a calendar app.
+## Purpose
 
-The current proposal aims to create a Landscape tile and app to improve the accessibility of a Calendar Gall app. The Calendar UI will provide several screens to interact with the calendar. These are a monthly view, a daily view and a page to create new events.
+A calendar is an indispensible personal tool to many people. A previous proposal has started work on an Urbit-native calendar.
+This previous proposal seeks to create a parser and a Gall agent to manage the data layer of a calendar app.
 
-# Implementation and deliverables
+The current proposal aims to create a Landscape tile and app to improve the accessibility of a Calendar Gall app.
+The Calendar UI will provide several screens to interact with the calendar. These are a daily view, weekly view, monthly view,
+and yearly view, along with pages to create and edit calendars and events.
 
-The UI will be backed by the calendar app implementation described in the aforementioned previous proposal. In order to allow the parallel implementation of a UI and the Gall app, this proposal will be executed in two stages.
+## Deliverables
 
-The first stage is the development of working prototypes of the screens that the calendar will initially support. These include:
- - a monthly view with clickable dates to daily views;
- - a daily view that lists the events in chronological order with a short description
- - a form to create new events with fields for the required properties per RFC 5545.
+The UI will be backed by the Gall calendar app implementation (now known as 'ucal') mentioned above. The UI design will be
+based on the Google Calendar layout and built with components from the Indigo-react library.
 
-The deliverables will be functional web pages that can be integrated with Landscape. The screens will be built entirely with components from the [Indigo-react](https://github.com/urbit/indigo-react) library.
-The UI will be built with the assumption that event participants are ships.
+The UI will be written in Typescript with the React framework, following the Landscape structure as much as possible. The goal is to have a UI that can be incorporated as part of Landscape if desired.
 
-The second stage is to integrate the screens with the Gall agent implemented as part of the first proposal. This takes a dependency on a correctly functioning calendar Gall app. The requisite
+List of Features:
 
-# Basis for future integration
+1. Daily View
+2. Weekly View
+3. Monthly View
+4. Yearly View
+5. Create / Edit Calendar View
+6. Create / Edit Event View
+7. Full CRUD operations for calendars
+8. Full CRUD operations for events
+9. Toggle calendar display
 
-These pages can provide the basis for UX experiments and integrations with other parts of Landscape. One possibility is to integrate notebook posts with the timeline of a calendar, allowing a temporal exploration of the notebook posts a ship has seen.
+## Future features
+
+There will be additional UI features necessary to allow users to interact with other ships' calendars. Specifically, retrieving events that a user is invited to, RSVPing to events, subscribing to other ships' calendars, modifying other calendars with requisite permissions, and perhaps requesting additional permissions on other calendars. Many of these features are in progress but still require significant development and testing.
+
 
 ## Milestones
 
-
-### Functional pages
-1 stars
-Build the necessary pages that will allow Landscape to interact with a Calendar Gall app
-
-
-### Working integration with Gall app
-1 stars
-Fully capable of importing an .ics calendar, creating new events, looking through existing events in the calendar of a ship.
+Completion of all 9 features: 3 stars
 
     
