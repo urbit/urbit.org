@@ -69,7 +69,7 @@ be a comet. Anything wider than 128 bits is not a valid urbit ID.
 
 Now that we've seen how individual IDs are assigned into classes, let's have a
 look at how they are arranged into a hierarchy. For this section onward, we'll
-use hex notation (e.g. `0xff.00.ff`) instead of binary notation.
+use hex notation (e.g. `0xff.00ff`) instead of binary notation.
 
 In general, the wider classes are considered to "nest" under the narrower
 classes, according to the value of the ID's low half. That is, a star is a child
