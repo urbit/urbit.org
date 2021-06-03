@@ -2,7 +2,7 @@
 title = "Calendar UI"
 date = 2021-01-01
 [taxonomies]
-grant_type = ["bounties"]
+grant_type = ["proposals"]
 grant_category = ["App Dev: Other"]
 [extra]
 image = ""
