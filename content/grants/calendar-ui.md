@@ -9,7 +9,7 @@ image = ""
 description = "Develop a UI for improved access to the Calendar Gall app"
 reward = 3 
 assignee = "~fabnev-hinmur"
-grants_id = "B0014"
+grants_id = ""
 completed = true
 +++
 
