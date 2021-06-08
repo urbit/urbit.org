@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+  <meta name="og:title" content="Grants - {{ config.title }}">
+  <title>Grants - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="Grants facilitated by the Urbit Foundation.">
+  <meta name="description" content="Grants facilitated by the Urbit Foundation.">
+{% endblock description %}
+
+{% block content %}
+{% set posts = get_section(path="grants/_index.md") %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/grants/">Grants</a>
+
+  {% include "partials/navigation-search.html" %}
+
+</nav>
+<section class="full c4-10-lg pt4 lh-copy">
+
+  <h1>Urbit Grants Program</h1>
+
+  <p>Urbit is a community project. While anyone can contribute, we help focus development and reward exceptional contribution through our grants program.</p>
+
+  <p>We reward contributors in four different ways:</p>
+  <ul class='list'>
+    <li class="mb2"><a class="b bb" href="/grants/proposals">Proposals</a> from community members to work on their own projects</li>
+    <li class="mb2"><a class="b bb" href="/grants/bounties">Bounties</a> for specific work needed by the Urbit Foundation</li>
+    <li class="mb2"><a class="b bb" href="/grants/apprenticeships">Apprenticeships</a> for projects undertaken with a mentor</li>
+    <li class="mb2"><a class="b bb" href="/grants/gifts">Gifts</a> given post facto for exceptional contributions</li>
+  </ul>
+
+  <div class="flex tc mv5 flex-wrap">
+    <figure class="flex-auto">
+      <span class="f2">&gt;200</span>
+      <figcaption class="f5">Stars Awarded</figcaption>
+    </figure>
+    <figure class="flex-auto">
+      <span class="f2" id="worth">&gt;400</span>
+      <figcaption class="f5">Different Contributors</figcaption>
+    </figure>
+    <figure class="flex-auto">
+      <span class="f2">&gt;45</span>
+      <figcaption class="f5">Active Projects</figcaption>
+    </figure>
+  </div>
+
+  <p>Contributors of all types have access to a wide variety of resources while working on projects, including a supportive team at urbit.org, Tlon developers, and community mentors.</p>
+
+  <blockquote class="pa4 ba">&ldquo;I paid off my student loans through the Urbit grants program, and had fun doing it!&rdquo;<br /><cite class="mono">~radbur-sivmus</cite></blockquote>
+
+  <h2 class="mt5">Featured grants</h2>
+
+  <p>These grants should give you a general idea of what kind of work we reward:</p>
+
+  <div class="grid12">
+
+    <div class="c1-13 c1-6-md c1-5-lg flex items-stretch pv3">
+      {% set page = get_page(path="grants/bitcoin-full-node-provider-and-wallet.md") %}
+      {{ macros::grant(page=page, mode="mini") }}
+    </div>
+
+    <div class="c1-13 c6-13-md c5-9-lg flex items-stretch pv3">
+      {% set page = get_page(path="grants/webrtc-gall-agent-and-external-app.md") %}
+      {{ macros::grant(page=page, mode="mini") }}
+    </div>
+
+    <div class="c1-13 c1-13-md c9-13-lg flex items-stretch pv3">
+      {% set page = get_page(path="grants/urbian-a-customized-linux-distribution-for-urbit-appliances.md") %}
+      {{ macros::grant(page=page, mode="mini") }}
+    </div>
+
+  </div>
+
+  <h2 class="mt5">Available and Closed Grants</h2>
+  
+  <ul class="flex flex-wrap mv5">
+    {% set categories = get_taxonomy(kind="grant_category") %}
+    {% for category in categories.items %}
+      <li style="flex: 0 1 15rem;" class="f5 flex items-center"><a href="{{ category.permalink }}" class="bb">{{ category.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% for page in posts.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}

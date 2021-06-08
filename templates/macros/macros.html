@@ -9,3 +9,57 @@
     <time class="mono f6 gray2 fr">{{ page.date | date(format="~%Y.%-m.%-d") }} {{ page.extra.time }} </time>
   </span>
 {% endmacro event_metadata %}
+
+{% macro reward(page) %}
+  {{ page.extra.reward }} star{% if page.extra.reward > 1 %}s{% endif %} {% if not page.extra.assignee %}reward{% else %}{% if page.extra.completed %}awarded{% else %}pending{% endif %}{% endif %}
+{% endmacro reward %}
+
+{% macro grant(page, mode="full", classes="") %}
+  {% if mode == "mini" %}
+    <article data-date="{{ page.date }}" id="grant-{{ page.slug }}" class="grant flex items-stretch {{ classes }}">
+      <a href="{{ page.permalink }}" class="no-underline bb-0 flex flex flex-column justify-between">
+        <h1>{{ page.title }}</h1>
+        <div class="lh-copy">
+          {% if page.extra.description %}
+            <p>{{ page.extra.description }}</p>
+          {% endif %}
+        </div>
+        <div class="gray3">
+          {% if page.extra.reward %}
+            <span>{{ macros::reward(page=page) }}</span>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+  {% else %}
+    <article data-date="{{ page.date }}" id="grant-{{ page.slug }}" class="grant {{ classes }} {% if page.extra.pinned %}bg-gray4 na3 pa3{% endif %}">
+      <div class="grid12">
+        <h1 class="full"><a href="{{ page.permalink }}" class="no-underline bb-0">{{ page.title }}</a></h1>
+        <div class="full c1-8-lg lh-copy">
+          {% if page.extra.description %}
+            <p>{{ page.extra.description }}</p>
+          {% endif %}
+        </div>
+        {% if page.extra.image %}
+          <img class="db mv2 h4 ba obj-cover full c8-13-lg" src="{{ page.extra.image }}" />
+        {% endif %}
+        <div class="full flex flex-wrap">
+          {% for category in page.taxonomies.grant_category %}
+            <a href="{{ get_taxonomy_url(kind="grant_category", name=category, lang=page.lang) }}" class="mr3 gray1">{{ category }}</a>
+          {% endfor %}
+          {% if page.extra.reward %}
+            <span class="mr3 gray1">{{ macros::reward(page=page) }}</span>
+          {% endif %}
+          {% if page.extra.assignee %}
+            <span class="mr3 gray1 mono">{{ page.extra.assignee }}</span>
+          {% endif %}
+          {% if page.extra.work_request_link and not page.extra.assignee %}
+            <a href="{{ page.extra.work_request_link  }}" target="_blank">
+              Apply for this grant
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endif %}
+{% endmacro grant %}

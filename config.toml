@@ -11,6 +11,11 @@ compile_sass = true
 # Whether to generate a RSS feed automatically
 generate_feed = true
 build_search_index = true
+taxonomies = [
+  { name = "grant_type" },
+  { name = "grant_category" },
+  { name = "post_type" }
+]
 feed_filename = "rss.xml"
 
 [markdown]

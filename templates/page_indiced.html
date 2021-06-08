@@ -46,9 +46,9 @@
   <span class="gray3"> / </span>
   <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
     {% if page.components[2] %}
-    {{ page.components[1] | capitalize }}
+    {{ page.components[1] | replace(from="-", to=" ") | title }}
     {% else %}
-    {{ page.components[0] | capitalize }}
+    {{ page.components[0] | replace(from="-", to=" ") | title }}
     {% endif %}
   </a>
 

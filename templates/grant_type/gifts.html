@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Gifts Archive - {{ config.title }}">
+<title>Gifts - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Gifts Archive">
+<meta name="description" content="Urbit Gifts Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+  {% set taxonomy = get_taxonomy(kind="post_type") %}
+  {% for t in taxonomy.items %}
+    {% if t.name == 'gifts' %}
+      {% set_global term = t %}
+    {% endif %}
+  {% endfor %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Gifts</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Gifts</h1>
+  <ul class="posts measure-wide">
+    {% for page in term.pages %}
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb4">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        <p class="mt0">{{ page.description }}</p>
+        {% if page.extra.image %}
+        <img class="pv2 obj-cover h5 w-100" src="{{ page.extra.image }}"/>
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}<address class="mono f6 ml2">{{ page.extra.ship }}</address> {% endif %}
+        </span>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+{% include "partials/footer.html" %}
+{% endblock content %}

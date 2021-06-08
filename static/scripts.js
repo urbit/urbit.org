@@ -344,6 +344,19 @@ let docsNavScroll = function () {
   }
 }
 
+if (document.body.classList.contains("index")) {
+  tippy('.tooltip', {
+    content(reference) {
+      const title = reference.getAttribute('title')
+      reference.removeAttribute('title')
+      return title
+    },
+    animateFill: false,
+    animation: 'fade',
+    placement: 'bottom'
+  })
+}
+
 if (window.location.href.includes("docs")) {
   // tooltip behaviour for standard library page
   tippy('.tooltip', {
@@ -454,12 +467,3 @@ if (document.body.classList.contains("page-indiced") || document.getElementById(
     }
   })
 };
-
-let oceanvid = document.getElementById("ocean");
-
-if ((oceanvid !== null) && (window.innerWidth > window.innerHeight)) {
-  oceanvid.innerHTML = `<source
-  src="https://media.urbit.org/site/sea30-1440.mp4"
-  type="video/mp4"/>
-  Your browser does not support the video tag.`
-}

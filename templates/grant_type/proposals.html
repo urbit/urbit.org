@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Proposals Archive - {{ config.title }}">
+<title>Proposals - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Proposals Archive">
+<meta name="description" content="Urbit Proposals Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+  {% set taxonomy = get_taxonomy(kind="grant_type") %}
+  {% for t in taxonomy.items %}
+    {% if t.name == 'proposals' %}
+      {% set_global term = t %}
+    {% endif %}
+  {% endfor %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Proposals</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Proposals</h1>
+  <p>Community members may submit proposals for a wide range of projects that contribute to Urbit. Past proposals have spanned a wide range of topics: </p>
+  <ul class="list mb2">
+    <li>Development projects, like <a class="bb" href="/grants/webrtc-gall-agent-and-external-app/" target="_blank">WebRTC integration</a></li>
+    <li>
+      <a class="bb" target="_blank" href="/grants/a-book-about-urbit/">
+        A book about Urbit
+      </a>
+    </li>
+    <li>
+      Creation of
+      <a class="bb" target="_blank" href="/grants/urbit-explainer-video/">
+        video
+      </a>
+      <a class="bb" target="_blank" href="/grants/comprehensive-local-server-and-mum-explanation-video/">
+        content
+      </a>
+    </li>
+    <li>
+      <a class="bb" target="_blank" href="/grants/urbit-event-series/">
+        Production of events
+      </a>
+    </li>
+    <li>
+      <a class="bb" target="_blank" href="/grants/urbit-online-meetup/">
+        Hosting meetups
+      </a>
+    </li>
+    <li>
+      <a class="bb" target="_blank" href="/grants/graph-store-documentation-guide/">
+        Writing documentation
+      </a>
+    </li>
+    <li>
+      <a class="bb" target="_blank" href="/grants/hoon-001-learner-efficiency-and-early-learner-resources/">
+        Educational materials
+      </a>
+    </li>
+  </ul>
+
+  <p>Proposals are more likely to be approved if their relevance to the project is made clear, their scope is clearly defined, the proposer is qualified, and it's obvious that a lot of thought has gone into the idea.</p>
+
+  <a class="b bb" href="https://airtable.com/shrCi54rEDxgSZr3z" target="_blank">
+    Propose a project
+  </a>
+
+  {% for page in term.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Apprenticeships Archive - {{ config.title }}">
+<title>Apprenticeships - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Apprenticeships Archive">
+<meta name="description" content="Urbit Apprenticeships Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+  {% set taxonomy = get_taxonomy(kind="grant_type") %}
+  {% for t in taxonomy.items %}
+    {% if t.name == 'apprenticeships' %}
+      {% set_global term = t %}
+    {% endif %}
+  {% endfor %}
+
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Apprenticeships</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Apprenticeships</h1>
+  <p>
+    We often get inbound inquiries that go something like: "I'm somewhat
+    familiar with Hoon and I've gone through all the tutorials. What's a project
+    I can work on?" Apprenticeships are our answer to that.
+  </p>
+  <p>
+    Apprenticeships onboard developers to the Urbit programming community. This
+    community has a wide variety of tasks, and uses multiple languages to
+    program the runtime and frontends, although Urbit userspace and kernel work
+    is always Hoon.
+  </p>
+  <p>
+    There are two kinds of apprenticeships: <b>userspace apprenticeships</b>,
+    which are oriented towards developers that are looking to build applications
+    on Urbit&mdash;and <b>kernelspace apprenticeships</b>, which are oriented
+    towards more experienced Urbit developers that want to take a stab at
+    working on Urbit core directly.
+  </p>
+  <p>Apprenticeships proceed in two stages:</p>
+  <ol>
+    <li>The prospective apprentice interviews with a Foundation director.</li>
+    <li>If interview is passed, the apprentice works with an Urbit core or
+    userspace developer. The apprentice works on a specific scope of work under
+    the tutelage of the developer.</li>
+  </ol>
+  <p>The developer offers guidance and review of the project, and the apprentice
+  contributes directly to the Urbit project. The apprentice also receives
+  compensation in the form of address space when the project is completed. After
+  that, the apprentice should be equipped to contribute further to substantial
+  grants or even apply for a job in some cases.</p>
+  <p>The resource we are trying to grow is developers, not lines of code. As a
+  result, apprentice projects can be focused more on developer onboarding than
+  immediate utility to Urbit, in order to speed the learning process. Check out
+  available apprenticeships below:</p>
+
+  {% for page in term.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}

@@ -11,10 +11,17 @@
     }
 }
 
+@media screen and (max-width: 46.874em) {
+  .community {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1fr);
+  }
+}
+
 // custom L breakpoint classes
 @media screen and (min-width: 46.875em) and (max-width: 60em) {
-    .white-l { 
-        color: #fff; 
+    .white-l {
+        color: #fff;
     }
 }
 

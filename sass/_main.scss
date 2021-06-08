@@ -314,6 +314,15 @@ nav ul.docs {
     line-height: 30px;
 }
 
+.doc {
+    > *:not(pre) {
+        @extend .measure-wide;
+    }
+    pre {
+        max-width: 60em;
+    }
+}
+
     // pagination
 nav.previous, nav.next {
     max-width: 40% !important;
@@ -452,6 +461,12 @@ pre {
     padding: 1.25rem;
     overflow-x: scroll;
     @extend .bg-gray5;
+
+    code {
+        overflow: scroll;
+        white-space: pre;
+        padding: 0;
+    }
 }
 
 code, .code, .mono {
@@ -607,6 +622,9 @@ iframe.arena-iframe {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
+    &.index {
+      padding-bottom: 14.25rem;
+    }
 }
 
 .video-container iframe,
@@ -670,3 +688,34 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom-style: none;
     }
 }
+
+  .yellow2-new {
+    color: #FFC700;
+  }
+
+  .bg-yellow3-new {
+    background-color: #D7AC14;
+  }
+
+  .yellow3-new {
+    color: #D7AC14;
+  }
+
+  .bg-yellow3-faded {
+    background-color: rgba(#D7AC14,0.05);
+  }
+
+  .bg-gray7 {
+    background-color: #EFEEEC;
+  }
+
+  .gray8 {
+    color: #bfbebd;
+  }
+
+    #hero {
+            background-image: url(https://media.urbit.org/port.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+     }

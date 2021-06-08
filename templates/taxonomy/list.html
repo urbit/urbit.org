@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+<meta name="og:title" content="{{ taxonomy.name | capitalize }} - {{ config.title }}">
+<title>{{ taxonomy.name | capitalize }} - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="{{ taxonomy.name | capitalize }} archive">
+<meta name="description" content="{{ taxonomy.name | capitalize }} archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<article class="mt4 mb4 c1-13 c4-12-lg">
+  <h1>Grant Type: {{ taxonomy.name | capitalize }}</h1>
+  <ul class="posts measure-wide">
+    {% for term in terms %}
+      <li><a href="{{ term.permalink }}">{{ term.name }}</a> ({{ term.pages | length }} posts)</li>
+    {% endfor %}
+  </ul>
+</article>
+{% include "partials/footer.html" %}
+{% endblock content %}

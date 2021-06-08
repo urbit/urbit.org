@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+<meta name="og:title" content="Bounties Archive - {{ config.title }}">
+<title>Bounties - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit Bounties Archive">
+<meta name="description" content="Urbit Bounties Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+  {% set taxonomy = get_taxonomy(kind="grant_type") %}
+  {% for t in taxonomy.items %}
+    {% if t.name == 'bounties' %}
+      {% set_global term = t %}
+    {% endif %}
+  {% endfor %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">Bounties</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<section class="full c4-10-lg pt4 lh-copy">
+  <h1>Bounties</h1>
+  <p>Bounties are specific, tightly-scoped pieces of work that we at the Urbit Foundation think are of high value to the ecosystem at large. They're frequently development-focused, but also often relate to marketing, community-building or technical writing.</p>
+  <p>Bounties are usually competitive&mdash;worker requests should provide plenty of information about why the requester is right candidate for the job.</p>
+  {% for page in term.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}

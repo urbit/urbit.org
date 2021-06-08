@@ -1,5 +1,5 @@
 +++
-title = "Setting up Your Planet"
+title = "Setting up your planet"
 weight = 1
 description = "Getting started with a permanent Urbit identity."
 +++
@@ -60,13 +60,13 @@ and copy the key inside. Paste it into the following command, except with
 the name of your planet. **Do not include the tilde in your planet name.**
 
 ```sh
-./urbit -p ames_port -w sampel-palnet -G rAnDoMkEy 
+./urbit -p ames_port -w sampel-palnet -G rAnDoMkEy
 ```
 
 Or you can copy the keyfile into the current directory and run:
 
 ```sh
-./urbit -p ames_port -w sampel-palnet -k ./my-planet.key 
+./urbit -p ames_port -w sampel-palnet -k ./my-planet.key
 ```
 
 Either command will create a directory called `sampel-palnet/` and begin booting your planet. It may take a few minutes.

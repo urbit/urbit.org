@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+<meta name="og:title" content="{{ term.name | capitalize }} Archive - {{ config.title }}">
+<title>{{ term.name | capitalize }} - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+<meta name="og:description" content="Urbit {{ term.name | capitalize }} Archive">
+<meta name="description" content="Urbit {{ term.name | capitalize }} Archive">
+{% endblock description %}
+
+{% block image %}
+<meta name="twitter:image" content="https://media.urbit.org/logo/urbit-logo-card.png">
+{% endblock image %}
+
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  {% include "partials/navigation-search.html" %}
+</nav>
+<!-- content -->
+<article class="mt4 mb4 c1-13 c4-12-lg">
+  <ul class="posts measure-wide">
+    {% for page in term.pages %}
+    <a class="bb-0" href="{{ page.permalink }}">
+      <li class="mb4">
+        <h2 class="f5 fw6 mt0 mb1">{{ page.title }}</h2>
+        <p class="mt0">{{ page.description }}</p>
+        {% if page.extra.image %}
+        <img class="pv2 obj-cover h5 w-100" src="{{ page.extra.image }}"/>
+        {% endif %}
+        <time class="mono f6">{{ page.date | date(format="~%Y.%-m.%-d") }}</time>
+        <span class="mono f6">
+          {% if page.extra.ship %}<address class="mono f6 ml2">{{ page.extra.ship }}</address> {% endif %}
+        </span>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+</article>
+{% include "partials/footer.html" %}
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "macros/macros.html" as macros %}
+
+{% block title %}
+  <meta name="og:title" content="Grants - {{ config.title }}">
+  <title>Grants - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="Grants facilitated by the Urbit Foundation.">
+  <meta name="description" content="Grants facilitated by the Urbit Foundation.">
+{% endblock description %}
+
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a class="gray3" href="/grants/">Grants</a>
+  <span class="gray3"> / </span>
+  <a href="{{ current_url }}">{{ term.name | capitalize }}</a>
+
+  {% include "partials/navigation-search.html" %}
+
+</nav>
+<section class="full c4-12-lg pt4">
+
+  <h1 class="mb4">{{ term.name | capitalize }} Grants</h1>
+
+  {% for page in term.pages %}
+    {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+  {% endfor %}
+
+</section>
+{% include "partials/footer.html" %}
+{% endblock content %}

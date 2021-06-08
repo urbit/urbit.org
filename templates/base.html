@@ -30,12 +30,11 @@
     <style type="text/css">
       /* Mailchimp style overrides */
     	#mc_embed_signup{clear:left; width:100%;}
-      {% block templatestyles %} {% endblock templatestyles%}
+      {% block templatestyles %} {% endblock templatestyles %}
     </style>
     <link rel="stylesheet" href="/indigo.css">
     <link rel="stylesheet" href="/styles.css">
     <!-- END CSS -->
-
     <!-- START MATOMO -->
     <script type="text/javascript">
       var _paq = window._paq || [];
@@ -61,6 +60,7 @@
     {% include "partials/search-overlay.html" %}
     {% block content %}
     {% endblock content %}
+    <script type="text/javascript" src="/detect.js"></script>
     {% if config.build_search_index %}
     <script type="text/javascript" src="{{ get_url(path="glossary.js") | safe }}"></script>
     <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
@@ -68,6 +68,6 @@
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@4"></script>
     {% endif %}
-    <script src="{{ config.base_url }}/scripts.js"></script>
+    <script src="/scripts.js"></script>
   </body>
 </html>
