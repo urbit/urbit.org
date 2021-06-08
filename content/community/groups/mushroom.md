@@ -2,7 +2,7 @@
 +++
 title = "Mushroom"
 weight = 42
-draft = true
+draft = false
 [extra]
 image = ""
 path = "~hallen-solpem/mushroom"

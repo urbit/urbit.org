@@ -1,8 +1,8 @@
 
 +++
-title = "~sitsev-lomrem/the-great-outdoors"
+title = "The Great Outdoors"
 weight = 51
-draft = true
+draft = false
 [extra]
 image = "https://i.ibb.co/p2MZsWK/tgo2.jpg"
 path = "~sitsev-lomrem/the-great-outdoors"

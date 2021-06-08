@@ -1,8 +1,8 @@
 
 +++
-title = "~tidrel-tabpub/freeside-mars"
+title = "Freesize Mars"
 weight = 1
-draft = true
+draft = false
 [extra]
 image = ""
 path = "~tidrel-tabpub/freeside-mars"

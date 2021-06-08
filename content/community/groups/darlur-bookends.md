@@ -1,8 +1,8 @@
 
 +++
-title = "~darlur/bookends"
+title = "Bookends"
 weight = 49
-draft = true
+draft = false
 [extra]
 image = "https://cdn-images-1.medium.com/fit/t/2400/1008/0"
 path = "~darlur/bookends"

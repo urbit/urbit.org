@@ -1,8 +1,8 @@
 
 +++
-title = "~bollug-worlus/cycloids"
+title = "Cycloids"
 weight = 65
-draft = true
+draft = false
 [extra]
 image = "https://images2.imgbox.com/53/bb/ujH0B5H7_o.png"
 path = "~bollug-worlus/cycloids"

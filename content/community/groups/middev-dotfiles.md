@@ -2,7 +2,7 @@
 +++
 title = "~middev/dotfiles"
 weight = 8
-draft = true
+draft = false
 [extra]
 image = "https://archiv.nyc3.digitaloceanspaces.com/littel-wolfur/2020.11.02..01.09.32-image.png"
 path = "~middev/dotfiles"

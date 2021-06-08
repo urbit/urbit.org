@@ -1,8 +1,8 @@
 
 +++
-title = "~topnup-firber/the-portico"
+title = "The Portico"
 weight = 112
-draft = true
+draft = false
 [extra]
 image = "https://joyintruth.com/wp-content/uploads/2017/10/Hosios_Loukas_nave_south_east_conch_-_John_Chrysostom_-_detail_1920.jpg"
 path = "~topnup-firber/the-portico"

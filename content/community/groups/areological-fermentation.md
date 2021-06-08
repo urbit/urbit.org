@@ -2,7 +2,7 @@
 +++
 title = "Areological Fermentation"
 weight = 44
-draft = true
+draft = false
 [extra]
 image = ""
 path = "~rapfyr-diglyt/areological-fermentation"

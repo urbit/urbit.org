@@ -1,8 +1,8 @@
 
 +++
-title = "~sapsyp-rolrex/african-discussion/"
+title = "African Discussion"
 weight = 45
-draft = true
+draft = false
 [extra]
 image = ""
 path = "~sapsyp-rolrex/african-discussion/"

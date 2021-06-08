@@ -1,8 +1,8 @@
 
 +++
-title = "~rosmur-hobrem/the-japanese-language"
+title = "The Japanese Language"
 weight = 21
-draft = true
+draft = false
 [extra]
 image = ""
 path = "~rosmur-hobrem/the-japanese-language"

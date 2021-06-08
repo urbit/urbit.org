@@ -2,7 +2,7 @@
 +++
 title = "Puppers and Doggos"
 weight = 101
-draft = true
+draft = false
 [extra]
 image = ""
 path = ""

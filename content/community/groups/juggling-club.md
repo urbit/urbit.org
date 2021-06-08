@@ -2,7 +2,7 @@
 +++
 title = "Juggling Club"
 weight = 68
-draft = true
+draft = false
 [extra]
 image = ""
 path = ""

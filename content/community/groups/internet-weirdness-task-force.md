@@ -2,7 +2,7 @@
 +++
 title = "Internet Weirdness Task Force"
 weight = 62
-draft = true
+draft = false
 [extra]
 image = "https://i.imgur.com/Db2XXMo.png"
 path = ""
