@@ -12,7 +12,9 @@
 {% endblock description %}
 
 {% block content %}
-{% set posts = get_section(path="grants/_index.md") %}
+{% set aposts = get_section(path="grants/apprenticeships/_index.md") %}
+{% set bposts = get_section(path="grants/bounties//_index.md") %}
+{% set pposts = get_section(path="grants/proposals//_index.md") %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
   <a class="gray3" href="/">Urbit</a>
@@ -87,7 +89,19 @@
     {% endfor %}
   </ul>
 
-  {% for page in posts.pages %}
+  {% for page in aposts.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+
+  {% for page in bposts.pages %}
+    {% if not page.extra.canceled %}
+      {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
+    {% endif %}
+  {% endfor %}
+
+  {% for page in pposts.pages %}
     {% if not page.extra.canceled %}
       {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
     {% endif %}
