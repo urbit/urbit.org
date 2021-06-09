@@ -11,7 +11,7 @@ reward = 5
 mentor = "~wolref-podlex"
 assignee = "~sovmep-ripsum"
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0025"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0025"
 +++
 
 ## Scope

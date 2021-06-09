@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0018&prefill_Grant+Name=Marketplace"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0018&prefill_Grant+Name=Marketplace"
 +++
 
 A marketplace in which users can post goods for sale and browse goods for sale by other users. Probably similar in feel to Craigslist. A lot of design will be required here, since the space of possible things to make is very big.

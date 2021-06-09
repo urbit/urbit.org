@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0021&prefill_Grant+Name=Heads-up%20poker"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0021&prefill_Grant+Name=Heads-up%20poker"
 +++
 
 A fun client app that would be a good way to get acquainted with Urbit's networking and p2p abilities. While it would be possible to create a fully decentralized version that uses [mental poker](https://en.wikipedia.org/wiki/Mental_poker) [algorithms](https://github.com/kripod/mental-poker) to make the game fully p2p, it is probably more tractable initially to implement the game with a centralized server.

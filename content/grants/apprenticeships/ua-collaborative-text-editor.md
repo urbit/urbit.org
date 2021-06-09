@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0019&prefill_Grant+Name=Collaborative%20text%20editor%20and%20annotator"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0019&prefill_Grant+Name=Collaborative%20text%20editor%20and%20annotator"
 +++
 
 A line-based editor for looking at text and code. Can be organized by projects. Allows multiple people to edit, but can use locking for now. 

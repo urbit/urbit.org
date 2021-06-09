@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0022&prefill_Grant+Name=Filesharer"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0022&prefill_Grant+Name=Filesharer"
 +++
 
 An application that allows peers to upload files to managed storage, either on or off Urbit, and share files with each other.  Can also add direct file-sharing via something like WebRTC in the future when that's ready.

@@ -11,7 +11,7 @@ reward = 1
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0020&prefill_Grant+Name=Invoice%20system"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0020&prefill_Grant+Name=Invoice%20system"
 +++
 
 A system to request and record payments made and received. Currently, Urbit ships can send payments to each other via Bitcoin, record who made the payment, and verify its presence. However, there is no system to link those payments to records of what they were for.
