@@ -4,7 +4,6 @@ weight = 1
 description = "A comprehensive guide to creating a grant proposal."
 +++
 
-
 The Urbit project relies on our community to help realize its potential. While the Foundation specifies the direction of 
 development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This
 guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project.
