@@ -12,7 +12,10 @@
 {% endblock description %}
 
 {% block content %}
-{% set posts = get_section(path="grants/_index.md") %}
+{% set aposts = get_section(path="grants/apprenticeships/_index.md") %}
+{% set bposts = get_section(path="grants/bounties//_index.md") %}
+{% set pposts = get_section(path="grants/proposals//_index.md") %}
+{% set posts = aposts.pages | concat(with=bposts.pages) | concat(with=pposts.pages) %}
 <!-- header -->
 <nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl fixed-xl">
   <a class="gray3" href="/">Urbit</a>
@@ -62,17 +65,17 @@
   <div class="grid12">
 
     <div class="c1-13 c1-6-md c1-5-lg flex items-stretch pv3">
-      {% set page = get_page(path="grants/bitcoin-full-node-provider-and-wallet.md") %}
+      {% set page = get_page(path="grants/bounties/bitcoin-full-node-provider-and-wallet.md") %}
       {{ macros::grant(page=page, mode="mini") }}
     </div>
 
     <div class="c1-13 c6-13-md c5-9-lg flex items-stretch pv3">
-      {% set page = get_page(path="grants/webrtc-gall-agent-and-external-app.md") %}
+      {% set page = get_page(path="grants/proposals/webrtc-gall-agent-and-external-app.md") %}
       {{ macros::grant(page=page, mode="mini") }}
     </div>
 
     <div class="c1-13 c1-13-md c9-13-lg flex items-stretch pv3">
-      {% set page = get_page(path="grants/urbian-a-customized-linux-distribution-for-urbit-appliances.md") %}
+      {% set page = get_page(path="grants/proposals/urbian-a-customized-linux-distribution-for-urbit-appliances.md") %}
       {{ macros::grant(page=page, mode="mini") }}
     </div>
 
@@ -87,7 +90,7 @@
     {% endfor %}
   </ul>
 
-  {% for page in posts.pages %}
+  {% for page in posts | sort(attribute="date") | reverse %}
     {% if not page.extra.canceled %}
       {{ macros::grant(page=page, classes="full c1-10-lg mv5")}}
     {% endif %}

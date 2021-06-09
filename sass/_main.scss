@@ -314,6 +314,15 @@ nav ul.docs {
     line-height: 30px;
 }
 
+.doc {
+    > *:not(pre) {
+        @extend .measure-wide;
+    }
+    pre {
+        max-width: 60em;
+    }
+}
+
     // pagination
 nav.previous, nav.next {
     max-width: 40% !important;
@@ -452,6 +461,12 @@ pre {
     padding: 1.25rem;
     overflow-x: scroll;
     @extend .bg-gray5;
+
+    code {
+        overflow: scroll;
+        white-space: pre;
+        padding: 0;
+    }
 }
 
 code, .code, .mono {

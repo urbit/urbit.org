@@ -216,7 +216,7 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
-~sampel-palnet`. For information on what life and rift are, see [Guide to Breaches](@/using/id/guide-to-breaches.md).
+~sampel-palnet`. For information on what life and rift are, see [Life and Rift](@/docs/azimuth/life-and-rift.md).
 
 ## DNS proxying {#dns-proxying}
 
