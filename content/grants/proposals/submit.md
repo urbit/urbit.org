@@ -5,27 +5,27 @@ description = "A comprehensive guide to creating a grant proposal."
 +++
 
 
-The Urbit project relies on our community to help realize its potential. While the Foundation specifys the direction of 
+The Urbit project relies on our community to help realize its potential. While the Foundation specifies the direction of 
 development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This
 guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project.
 
 ### Types of Proposals
 
 While we will entertain just about any idea that comes from the community, we are particularly interested in "capital goods":
-projects that extend usability or add tooling to the platform. Recent examples are 
-[Bitcoin wallet](../bitcoin-full-node-provider-and-wallet) integration, [WebRTC](../webrtc-gall-agent-and-external-app)
-implementation, or the [Urbit Large File Sytem](../urbit-lfs-filehosting) project.   
+projects that help the largest number of people or add tooling to the platform. Recent examples are 
+[Bitcoin](../bitcoin-full-node-provider-and-wallet) integration, [WebRTC](../webrtc-gall-agent-and-external-app)
+integration, or the [Urbit Large File Storage](../urbit-lfs-filehosting) project.   
 
 Proposal types include:
 
- - Core Development - low level network or kernaldevelopment
+ - Core Development - low level network or kernal development
  - Application Development - userspace development of specific applications
  - Developer Tools - Libraries, APIs, unit tests, etc.
- - Design Work - overall website design work
- - Documentation - writing guides and website content
+ - Design Work - design work for the urbit.org website
+ - Documentation - writing guides or website content
  - Community - organizing events and meetups, staffing the help desk
 
-We have need for lots of different skill sets - not just technical.
+We have need for lots of different skill sets&mdash;not just coding.
 
 
 ### Proposal Format
@@ -52,8 +52,8 @@ Your proposal should include the following sections:
 Once you have your proposal in order, submit it using the **[Propose a Project](https://airtable.com/shrCi54rEDxgSZr3z)** form. 
 From this point, your project will go through these stages:
 
- - **Draft**: You will schedule a meeting with a team member to discuss your proposal in detail. There may be some modifications 
-requested to get approval. Once we come to agreement you will create markdown for your project by 
+ - **Draft**: A team member will reach out to schedule a meeting with you to discuss your proposal in detail. There may be
+ some modifications requested to get approval. Once we come to agreement you will create markdown for your project by 
 [downloading the template](https://drive.google.com/file/d/1a2zZXxmzcME5vJHDpLpKtExcqzg-V3rD/view?usp=sharing), editing it with 
 your proposal information, then submitting a [pull request](https://github.com/urbit/urbit.org/compare) against the urbit.org repo
  on [github](https://github.com/urbit/urbit.org).
