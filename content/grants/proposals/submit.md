@@ -12,13 +12,13 @@ guide will describe the different types of proposals, the requested format, and 
 ### Types of Proposals
 
 While we will entertain just about any idea that comes from the community, we are particularly interested in "capital goods":
-projects that help the largest number of people or add tooling to the platform. Recent examples are 
-[Bitcoin](../bitcoin-full-node-provider-and-wallet) integration, [WebRTC](../webrtc-gall-agent-and-external-app)
+projects that provide new capabilities to the widest number of users or developers or add tooling to the platform. Recent 
+examples are [Bitcoin](../bitcoin-full-node-provider-and-wallet) integration, [WebRTC](../webrtc-gall-agent-and-external-app)
 integration, or the [Urbit Large File Storage](../urbit-lfs-filehosting) project.   
 
 Proposal types include:
 
- - Core Development - low level network or kernal development
+ - Core Development - kernal or runtime development
  - Application Development - userspace development of specific applications
  - Developer Tools - Libraries, APIs, unit tests, etc.
  - Design Work - design work for the urbit.org website
