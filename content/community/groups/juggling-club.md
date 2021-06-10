@@ -5,7 +5,7 @@ weight = 68
 draft = false
 [extra]
 image = ""
-path = ""
+path = "~lomped-firser/juggling-club "
 +++
 
 Juggling and juggling related content 

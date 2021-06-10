@@ -1,7 +1,7 @@
 
 +++
-title = "Freesize Mars"
-weight = 1
+title = "Freeside Mars"
+weight = 2
 draft = false
 [extra]
 image = ""

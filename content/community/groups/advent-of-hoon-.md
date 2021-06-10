@@ -5,7 +5,7 @@ weight = 61
 draft = false
 [extra]
 image = "https://yosoyubik.fra1.digitaloceanspaces.com/norsyr-torryn/2021.4.14..12.46.31-Screen"
-path = ""
+path = "~norsyr-torryn/advent-of-hoon"
 +++
 
 

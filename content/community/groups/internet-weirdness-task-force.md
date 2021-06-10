@@ -5,7 +5,7 @@ weight = 62
 draft = false
 [extra]
 image = "https://i.imgur.com/Db2XXMo.png"
-path = ""
+path = "~litmus-ritten/internet-weirdness-task-force"
 +++
 
 

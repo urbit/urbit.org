@@ -5,7 +5,7 @@ weight = 33
 draft = false
 [extra]
 image = "https://i.gyazo.com/cc6ba88c61a2734fcecda4e34fb0b8dd.gif"
-path = ""
+path = "~dasfeb/smol-computers"
 +++
 
 
