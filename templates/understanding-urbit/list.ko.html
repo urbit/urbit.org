@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}
+  <meta name="og:title" content="Understanding Urbit - {{ config.title }}">
+  <title>Understanding Urbit - {{ config.title }}</title>
+{% endblock title %}
+
+{% block description %}
+  <meta name="og:description" content="Urbit is a new kind of computer.">
+  <meta name="description" content="Urbit is a new kind of computer.">
+{% endblock description %}
+
+{% block image %}
+  <meta name="twitter:image" content="https://media.urbit.org/site/understanding-urbit/intro/intro-0.jpg">
+{% endblock image %}
+
+{% block content %}
+<!-- header -->
+<nav class="mt4 full fourth-1-lg mb3 mb0-m mb0-l mb0-xl absolute-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/understanding-urbit/">
+    Understanding Urbit
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+
+  <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="fw6 f6" href="/understanding-urbit/">Introduction</a></li>
+  {% set posts = get_section(path="understanding-urbit/_index.md") %}
+  {% for directorypage in posts.pages %}
+    <li class="dn mw5-xl mw5-l db-xl page-indiced mv2"><a class="f6" href="{{directorypage.permalink}}">{{directorypage.title}}</a></li>
+  {% endfor %}
+
+</nav>
+<!-- content -->
+<section class="full c4-12-lg measure-wide">
+  <h1 id="introduction" class="mb4 full mt4 ">소개</h1>
+  <p class="full mt0 mb4 mb4-xl lh-copy">흔히 인터넷은 구원될 수 없다고 생각합니다. 이대로 가다가는 초거대기업(MEGACORP)이 우리의 애플리케이션과 서비스를 지배하게 되고 말 것입니다. 우리가 애플리케이션과 서비스 실행 능력을 상실했기 때문입니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">이 상황을 벗어날 유일한 방법은 완전히 새로운 플랫폼을 만들어 사용자가 소유하고 제어할 수 있도록 하는 것입니다.</p>
+  <img class="full ba mb4" src="./Understanding Urbit - Urbit_files/intro-0.jpg">
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗은 새로운 운영 체제 및 피어 투 피어 네트워크로, 설계가 단순하고 영구적이며 100% 사용자가 소유한다. 내부적으로는 개별 개발자가 쉽게 이해하고 제어할 수 있도록 백지 상태에서 만든 소프트웨어 스택입니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">이 새로운 스택을 만든 목적은 하나의 통합된 도구로 소통하고 커뮤니티를 만들도록 하기 위해서입니다. 믿을 만하고, 제어 가능하며, 원하는 대로 확장할 수 있는 도구 말입니다. 어빗은 오늘날 모두가 사용하는 애플리케이션과 서비스의 현재 기반인 ‘프랑켄스택(frankenstack)’을 통해 겪은 부정적 사용자 경험에서 벗어나고자 합니다.  </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">또한 어빗은 공동작업자에게는 효율적이며 사용자 맞춤형 생산적인 도구가 되고, 가족 및 친구에게는 조용하고 침해받지 않는 소통 도구가 되고자 합니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">말도 안 되는 소리로 들릴지도 모르니 구체적으로 다음 두 가지에 대해 이야기해 봅시다. (1) 어빗의 기술 역할  (2) 어빗의 사용자 환경 역할 </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy b">1 - 어빗의 기술적인 부분</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">엄밀히 말하면, 어빗은 두 가지 요소로 이루어져 있습니다. 어빗 OS와 어빗ID가 그것입니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 OS와 어빗 ID는 완전히 <a class="bb" href="https://github.com/urbit/urbit">오픈</a> <a class="bb" href="https://github.com/urbit/azimuth">소스</a>이며 MIT 라이선스가 있습니다.</p>
+  <img class="full w-100 mb4" src="./Understanding Urbit - Urbit_files/uu-intro-2.svg">
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 OS는 신중하게 설계된 새로운 소프트웨어 스택입니다. 가상 머신(VM), 프로그래밍 언어와 커널은 개별 사용자들이 소프트웨어를 실행할 수 있도록 설계되었습니다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 OS는 거의 모든 클라우드 서버, 노트북은 물론 여러 핸드폰에서도 실행되는 프로그램입니다. 유닉스 및 인터넷 연결이 가능한 장비라면 가능합니다. 어빗 OS는 거의 모든 클라우드 서버와 노트북, 핸드폰에서 실행됩니다. 유닉스 및 인터넷이 연결되는 장비라면 실행 가능합니다. 어빗 OS는 WASM 또는 JVM과 마찬가지로 실행중인 시스템에서 완전히 봉쇄됩니다. 따라서 ‘overlay OS(덮어씌우는 OS)’라고도 불립니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 세상에서는 각 사람이 어빗 OS 노드(어빗)를 소유합니다. 개인의 어빗은 안전하고 비공개이며 완전히 개인이 통제합니다. 타인과 연결하고 싶으면 중앙집중화된 서비스를 사용할 필요 없이 해당 사용자와 직접 연결하면 됩니다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 OS에 대해 더 자세히 알고 싶다면 <a class="bb" href="https://urbit.org/understanding-urbit/urbit-os">를 건너뛰어</a>로 가십시오.</p>
+  <img class="full w-100 mb4" src="./Understanding Urbit - Urbit_files/uu-intro-3.svg">
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 OS에 부팅하거나 로그인할 때 어빗 ID를 사용하면 됩니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 ID는 짧고 기억하기 쉬우며 (예: <code>~ravmel-ropdyl</code>)사용자 이름인 동시에 네트워크 주소이자 암호화폐 지갑으로도 사용된다. 어빗 ID가 블록체인에 등록되어 있을 때 아이디의 소유자가 키도 소유하므로 누구도 ID를 빼앗을 수 없다. 어빗 ID는 암호화 재산이다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 ID는 돈은 아니지만 희귀하기 때문에 가치가 있습니다. 따라서 어빗 네트워크에서 마주치게 되는 사람은 어빗 ID가 가지는 가치로 인해 자연스레 책임감을 느끼게 되므로, 봇이나 스팸일 가능성이 낮습니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗 ID 시스템은 활성 상태로 배포되어 있으며 앞으로 많은 변경은 필요없다고 생각합니다. 이미 잘 작동되고 있기 때문입니다. 자세한 내용이 궁금하시면 <a class="bb" href="https://urbit.org/understanding-urbit/urbit-id">이 게시물</a>로 이동하세요.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy b">2 - 사용자 경험</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">우리는 어빗이 사용자의 전체 디지털 생활을 위한 유일하며 단순한 인터페이스가 되기를 바랍니다.</p>
+  <img class="full ba mb4" src="./Understanding Urbit - Urbit_files/uu-intro-4.png">
+  <p class="full mt0 mb4 mb4-xl lh-copy">수년에 걸쳐 어빗은 오픈 소스 프로젝트로 구축되었습니다. 따라서 누구나 <a class="bb" href="https://urbit.org/using/install/">네트워크에 가입</a>하여 우리가 하고 있는 일을 확인할 수 있습니다. 마치 90년대 초에 인터넷 릴레이 챗(IRC)에 로그인하는 것과 비슷합니다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">2020년 초반, 우리는 그룹 소통을 위한 최소한의 인터페이스인 어빗 OS 1을 출시했습니다. OS 1은 채팅, 노트 및 링크 공유, 연결을 유지하는 도구입니다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">OS 1은 네트워크 세상에서 진정한 의미의 완전한 OS로 향하는 첫걸음이라고 할 수 있습니다. </p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">어빗은 차차 모든 소통 방식들(예:채팅, 결제, 서류, 이미지, 생체 인식 데이터)을 한데 모을 수 있는 시스템으로 성장할 것입니다. 우리는 개인과 개인 커뮤니티가 자신의 소프트웨어를 소스코드와 인터페이스를 통해 스스로 통제할 수 있게 되기를 바랍니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">우리는 모든 것을 한 곳에 모을 수 있는 애플리케이션과 서비스의 세계를 만들고 싶습니다. 그렇게 되면 일반 사용자도 친구나 커뮤니티를 위한 맞춤형 디지털 환경을 만들 수 있게 될 것입니다.</p>
+  <img class="full ba mb4" src="./Understanding Urbit - Urbit_files/intro-6.jpg">
+  <p class="full mt0 mb4 mb4-xl lh-copy">이 목표를 어떻게 이룰 수 있을지 알아보기 위해서는 다음의 두 가지 새로운 기술, 어빗 OS와 어빗 ID를 하나씩 살펴볼 필요가 있습니다. 그런 다음 우리의 비전과 비전을 이룰 방법에 대해 이야기하겠습니다.</p>
+  <p class="full mt0 mb4 mb4-xl lh-copy">기술자들은 어빗의 소프트웨어 스택을 구지 함께 사용하지 않아도 된다는 사실을 알아 두시면 좋겠습니다. 클라이언트가 마음에 안 드세요? 그렇다면 직접 클라이언트를 구축하십시오. 어빗 ID 시스템만 마음에 드신다고요? 망설이지 말고 사용하세요!
+  <p class="full mt0 mb4 mb4-xl lh-copy">새로운 기술은 훨씬 더 나은 사용자 경험을 제공할 수 있을 때 채택될 가능성이 높다고 생각합니다. 따라서 우리는 좋은 사용자 경험을 제공하는 데 집중하고 있습니다.</p>
+</section>
+
+<footer class="relative mt4 c4-12-lg full measure-wide">
+    {% set posts = get_section(path="understanding-urbit/_index.md") %}
+    {% for directorypage in posts.pages | slice (end=1) %}
+    <a href="{{directorypage.permalink}}">
+      <nav class="previous absolute right-2 t-right">
+        <p data-flat="true" class="mt5 relative mb6">{{directorypage.title}}</p>
+      </nav>
+    </a>
+    {% endfor %}
+</footer>
+
+{% include "partials/subscribe-form.html" %}
+
+{% endblock content %}
