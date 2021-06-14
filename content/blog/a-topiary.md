@@ -1,6 +1,6 @@
 +++
 title = "A Topiary: Hypertext and Urbit"
-date = 2021-05-24
+date = 2021-06-14
 description = "A brief history of hypertext and Urbit networking"
 [extra]
 author = "Reid Scoggin"
