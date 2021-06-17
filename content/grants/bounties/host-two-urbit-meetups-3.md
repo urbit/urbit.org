@@ -9,8 +9,8 @@ image = ""
 description = "Host two Urbit meetups in your city."
 reward = 1
 assignee = "yosoyubik"
-id = "1574784178"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 

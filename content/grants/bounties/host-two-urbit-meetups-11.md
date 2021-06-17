@@ -9,8 +9,8 @@ image = ""
 description = "Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word."
 reward = 1
 assignee = "Thomas"
-id = "1314014268"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 

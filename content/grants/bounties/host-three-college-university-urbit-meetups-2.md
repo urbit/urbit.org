@@ -9,8 +9,8 @@ image = ""
 description = "Hold a meetup and presentation about Urbit."
 reward = 1
 assignee = "kirk-hutchison"
-id = "167729270"
-completed = false
+id = ""
+completed = true
 link = ""
 +++
 

@@ -1,43 +1,44 @@
 +++
-title = "Host Two Urbit Meetups (2)"
-date = 2019-11-19
+title = "Host Two Urbit Meetups (12)"
+date = 2021-06-15
 [taxonomies]
 grant_type = ["bounties"]
 grant_category = ["Community"]
 [extra]
 image = ""
-description = "Host two Urbit meetups in your city."
+description = "Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word."
 reward = 1
-assignee = "Matthew Levan, nforbes6"
+assignee = ""
 id = ""
-completed = true
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0031&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2812%29"
+completed = false
 link = ""
 +++
 
 #### Background
 
-Tlon is not Urbit; Urbit is owned by its community.  So we want to decenter the Urbit brand into cities outside of San Francisco, and watch the community’s independent visions of the project take wing. 
+Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word.
 
 #### Bounty Description
 
 This bounty is to host an Urbit meetup in your city. The meetup should meet the following criteria:
 
-- The meetup must be public, and there must be a public web link for joining (like meetup.com
+- The meetup must be public, and there must be a public web link for joining (like meetup.com)
 - The meetup must have a presentation or talk about Urbit. 
 - The presentation or talk must be recorded and posted publicly online.
 - You must promote the event vigorously; social media, a website, etc. Email support@urbit.org if you want a signal boost.
 - You must host at least two meetups.
 
-You should go into this bounty with the mindset of creating a regularly scheduled meetup, one that might become the nucleus of your city’s Urbit community. Also, email support@tlon.io once you've hosted a meetup, and we will add you to your [list of active meetups](https://urbit.org/community/meetups/)!
+You should go into this bounty with the mindset of creating a regularly scheduled meetup, one that might become the nucleus of your city's Urbit community. Also, email support@tlon.io once you've hosted a meetup, and we will add you to your [list of active meetups](https://urbit.org/community/meetups/)!
 
 #### Resources
 
-Check it out our [guide](https://urbit.org/community/hosting-a-meetup/) to best practices for Urbit meetups.
+Check out our [guide](https://urbit.org/community/hosting-a-meetup/) to best practices for Urbit meetups.
 
 #### Contribution Guidelines
 - Do not begin work until your request to claim this bounty is accepted. 
 - When applying to work on the bounty, tell us a little about yourself and mention which city you'd be hosting the meetups in.
-- Proof of the meetups happening will be determined by the recordings of the presentations. Email links to these recordings to grants@tlon.io.
+- Proof of the meetups happening will be determined by the recordings of the presentations. Email links to these recordings to grants@urbit.org.
 - You have 100 days from the time of approval to complete this bounty.
 
 ## Milestones
