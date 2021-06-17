@@ -11,7 +11,7 @@ reward = 3
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0032&prefill_Grant+Name=Bitcoin%20Wallet%20Maintenance"
 +++
 
 # Overview
