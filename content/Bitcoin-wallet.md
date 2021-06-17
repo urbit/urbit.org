@@ -16,7 +16,7 @@ Run `|start %btc-wallet` in the dojo. In the first row of tiles on Landscape you
 
 Clicking on the Landscape tile will take you to the Bitcoin Wallet application, where you can view your balance and send bitcoin. All that you'll need to do is enter the recipient's Urbit ID (if they have configured the wallet using the above steps) or a Bitcoin address.
 
-If you are interested in [being a provider](https://subject.network/posts/btc-wallet-config/#connecting-a-provider-to-a-full-node) or [running a bitcoin full node](https://subject.network/posts/pi-fullnode-urbit/#bitcoind) on the Urbit network please check out ~sitful-hatred’s excellent tutorials.
+If you are interested in [being a provider](https://subject.network/posts/btc-wallet-config/#connecting-a-provider-to-a-full-node) or [running a bitcoin full node](https://subject.network/posts/pi-fullnode-urbit/#bitcoind) on the Urbit network please check out `~sitful-hatred`’s excellent tutorials.
 
 ### Verify
 
