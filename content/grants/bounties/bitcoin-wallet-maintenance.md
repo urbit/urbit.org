@@ -1,27 +1,36 @@
 +++
-title = "Bitcoin Wallet Maintenance"
+title = "Bitcoin Wallet maintenance"
 date = 2021-06-17
 [taxonomies]
 grant_type = ["bounties"]
 grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
-description = "Maintain the Urbit Bitcoin Wallet at a high level of useability and also add significant features to it over time."
-reward = 1
-mentor = "~timluc-miptev"
+description = "Help us maintain the Bitcoin Wallet."
+reward = 3
 assignee = ""
-id = ""
 completed = false
-link = ""
+work_request_link = ""
 +++
-The Urbit Bitcoin Wallet has been integrated into the core distribution, and its maintenance is now passing back to the community via the Urbit.org Foundation.
 
-Our goal is to maintain this product at a high level of useability and also add significant features to it over time. We want usage to become ubiquitous and easy within Urbit, while integrating without outside wallets/signing devices and internal applications.
+# Overview
 
-If you have strong development skills and are looking for your entry an `impact` within Urbit, this is the project to be on.  There will likely be multiple people working on these tasks, so feel free to apply.
+The Urbit Bitcoin Wallet has been integrated into the core distribution, and its
+maintenance is now passing back to the community via the Urbit Foundation.
 
-## types of work
+Our goal is to maintain this product at a high level of usability and also add
+significant features to it over time. We want usage to become ubiquitous and
+easy within Urbit, while integrating without outside wallets/signing devices and
+internal applications.
+
+If you have strong development skills and are looking to make an impact with
+your Urbit development, this is the project to be on. We'll likely recruit more
+than one contributor for this role.
+
+## Types of work
+
 The below is a non-exhaustive list of the types of work we will need:
+
 * hardware wallet support
 * progress meters for wallet scanning
 * performance improvements for Bitcoin providers
@@ -29,20 +38,23 @@ The below is a non-exhaustive list of the types of work we will need:
 * shoe CLI interface for terminal usage in Urbit
 * general maintenance as bugs arise
 
-## requirements
-### skills
-* JS frontend logic (should have substantial experience)
-*or*
-* Hoon (for backend maintenance and improvement)
-Both are great. We do not need design work per se, since we do have access to some Foundation and Tlon designer time as needed.
+## Requirements
 
-### time
-* Availability
-  - at least 10 hours/week
-  - 2-3 months minimum
-  - weekly check-in meeting with ~timluc-miptev (Foundation director)
+### Skills
+
+* Experience with modern React, or
+* Hoon experience (for backend maintenance and improvement)
+
+Having both skills is great.
+
+### Time Commitment
+
+- at least 10 hours/week
+- 2-3 months minimum
+- weekly check-in meeting with `~timluc-miptev` (Technical Director at Urbit Foundation)
 
 ## Compensation
+
 * 1 star per month initially (assuming ~10 hours/week part-time)
-* more stars can be negotiated if the developer has greater availability and can commit more time
-    
+* more stars can be negotiated if the developer has greater availability and can
+  commit more time
