@@ -1,5 +1,5 @@
 +++
-title = "Bitcoin Wallet maintenance"
+title = "Bitcoin Wallet Maintenance"
 date = 2021-06-17
 [taxonomies]
 grant_type = ["bounties"]
