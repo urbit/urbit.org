@@ -8,9 +8,9 @@ The latest Urbit release includes a native Bitcoin wallet. Please read the follo
 
 ### Instructions
 
-Run `|start %btc-wallet` in the dojo. After refreshing Landscape, you should now see an orange bitcoin tile in the top row. Clicking on it will prompt a two-step process:
+Run `|start %btc-wallet` in the dojo. In the first row of tiles on Landscape you should now see an orange bitcoin tile. Clicking on it will prompt a two-step process:
 
-1. Enter a provider who is connected to a full-node (such as `~zod`). The provider will maintain a synced Bitcoin ledger, index your public addresses to determine your balance, and process your transactions.
+1. Enter a provider who is connected to a full-node (such as `~matwet`). The provider will maintain a synced Bitcoin ledger, index your public addresses to determine your balance, and process your transactions.
 
 2. The next step is to provide an extended public key (or xpub). Providing your xpub allows the Bitcoin Wallet to automatically generate new public addresses (called *child public keys*—you can learn more about this [here](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)) when bitcoin is sent to your ship. To provide an xpub you can either enter your master ticket (which can be downloaded from [Bridge](https://bridge.urbit.org)), or directly import your xpub (such as from a hardware wallet like [Ledger](https://support.ledger.com/hc/en-us/articles/360011069619-Extended-public-key) or [Trezor](https://wiki.trezor.io/User_manual:Displaying_account_public_key_(XPUB))).
 
