@@ -8,6 +8,7 @@ grant_category = ["App Dev: Arvo"]
 image = ""
 description = "Help us maintain the Bitcoin Wallet."
 reward = 3
+mentor = "~timluc-miptev"
 assignee = ""
 completed = false
 work_request_link = ""
