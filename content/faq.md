@@ -394,7 +394,7 @@ The standard library and naming is something we’ve discussed changing, and it 
 
 The right way to think about Hoon is as the ‘C of Urbit’. It’s a bare bones language that gets you pretty close to Nock. Eventually, we’ll probably implement more expressive languages that compile to Urbit. But for now, satisfy your curiosity and [sign up for Hooniversity](https://hooniversity.org/), a community led Hoon educational organization.
 
-Another option is to treat [Urbit as an API](@/docs/arvo/eyre/using-eyre.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
+Another option is to treat [Urbit as an API](@/docs/arvo/eyre/external-api-ref.md), which allows one to use common languages such as Python and Javascript to build userspace programs. For now this option is not as powerful as Hoon, but there is still a lot that a developer without the time or inclination to learn Hoon can do.
 
 ### What is the point of Nock? {#why-nock}
 
