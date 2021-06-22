@@ -16,7 +16,7 @@ link = ""
 
 ## Vision
 
-This proposed project will produce API in Python language to interact with Urbit ship over HTTP with these [guidelines][airlock_requirements_link] in mind.
+This proposed project will produce an API in Python language to interact with Urbit ship over HTTP with these [guidelines][airlock_requirements_link] in mind.
 
 [airlock_requirements_link]: https://docs.google.com/document/d/1no5oos_NE8LrUWz7iG9SKZMTIzruZVevZQ75nD5OHmI/edit
 
@@ -32,7 +32,7 @@ This will be done using the structure of [urbit http java api][urbit_http_api_ja
 
 ## Me 
 
-I have used Python programming language for 5+ years now. I have used Python for a wide range of tasks like scientific computing, machine learning, batch scripting etc. I am currently in the 4th year of my PhD program. I am also a contributor to an open source Python project UQpy as part of my PhD.
+I have been programming in Python for 5+ years now. I have used Python for a wide range of tasks like scientific computing, machine learning, batch scripting etc. I am currently in the 4th year of my PhD program. I am also a contributor to an open source Python project UQpy as part of my PhD.
 
 
 ## Milestones
