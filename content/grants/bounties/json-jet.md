@@ -39,9 +39,11 @@ Completing this bounty will have an immediate impact on the perceived speed of t
 * Check-in with a Foundation director as needed
 * [Writing Jets Guide](https://urbit.org/docs/vere/jetting/)
 * [Unofficial Jets Tutorial](https://gist.github.com/sigilante/3f9d13423a48a3d71041c938691d1f33)
+* [JSON Test Suite](https://github.com/nst/JSONTestSuite)
 
 ## Milestone: Completion, 1 star
-- jet is implemented and passes all tests
+- jet is implemented
+- passes all tests, producing same results in jetted and unjetted mode
 - Tlon engineer gives final approval on merging jet into core
 
     
