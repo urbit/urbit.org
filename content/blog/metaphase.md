@@ -14,7 +14,15 @@ image = "https://media.urbit.org/site/posts/essays/metaphase.jpg"
 
 <br>
 
-*Previous versions of this essay specified the stream deploy date as December 11, 2020; then December 18, 2020. This has been amended to the actual date of release, with our sincere apologies. For new readers, you can opt into the dev stream by running `|ota ~lomlyx-lopsem-nidsut-tomdun %kids` (you may have to resolve a merge conflict using `|merge %home ~lomlyx-lopsem-nidsut-tomdun %kids, =gem %take-that`). We will surface this option more broadly in a future settings overhaul.*
+*Previous versions of this essay specified the stream deploy date as December 11, 2020; then December 18, 2020. This has been amended to the actual date of release, with our sincere apologies. For new readers, you can opt into the dev stream by running:*
+
+```
+|ota ~hanruc-nalfus-nidsut-tomdun %kids 
+|merge %home ~hanruc-nalfus-nidsut-tomdun %kids, =gem %take-that
+|merge %kids ~hanruc-nalfus-nidsut-tomdun %kids, =gem %take-that
+```
+
+*We will surface this option more broadly in a future settings overhaul.*
 
 A few weeks ago, the Landscape team — those of us building Tlon’s suite of userspace applications on top of Urbit— deployed our first over-the-air update for notifications. This is a big leap forward for us. Of course, getting notifications inside Landscape itself is a big deal, but getting a push notification on your phone, or an email digest based on activity inside Urbit is now just one step away, a weekend project for a hobby developer, not an indeterminate number of steps away.
 
