@@ -1,6 +1,7 @@
 # intermediate
 *.swo
 *.swp
+*~undo-tree~
 *.o
 /outside/**/*.a
 /outside/re2/obj
