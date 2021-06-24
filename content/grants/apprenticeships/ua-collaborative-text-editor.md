@@ -1,5 +1,5 @@
 +++
-title = "Apprenticeship: Collaborative text editor and annotator"
+title = "Userspace Apprenticeship: Collaborative text editor and annotator"
 date = 2021-05-27
 [taxonomies]
 grant_type = ["apprenticeships"]

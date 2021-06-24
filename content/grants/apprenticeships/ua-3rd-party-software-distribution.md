@@ -1,5 +1,5 @@
 +++
-title = "Apprenticeship: 3rd Party Software Distribution"
+title = "Kernel Apprenticeship: 3rd Party Software Distribution"
 date = 2021-02-01
 [taxonomies]
 grant_type = ["apprenticeships"]

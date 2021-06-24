@@ -1,5 +1,5 @@
 +++
-title = "Apprenticeship: Contacts App"
+title = "Userspace Apprenticeship: Contacts App"
 date = 2021-06-17
 [taxonomies]
 grant_type = ["apprenticeships"]
