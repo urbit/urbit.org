@@ -68,7 +68,7 @@ Delete the tar file, and, after installing Urbit on your new server, start your 
 
 ### Hardware requirements
 
-Urbit can run on any x86 computer (unofficial, unsupported [ARM binaries](https://botter-nidnul.github.io/AArch64_Urbit_Static_Binaries.html) are also available), ideally with at least 2GB of RAM.
+Urbit can run on any x86 computer (unofficial, unsupported [ARM binaries] (https://botter-nidnul.github.io/AArch64_Urbit_Static_Binaries.html) are also available), ideally with at least 2GB of RAM.
 
 Urbit maintains a persistent log of the history of your ship. Eventually this log will be automatically trimmed when necessary, but for now it only increases in size. An actively used planet will consume 5-50 GB of storage space per year of operation.
 
@@ -109,7 +109,7 @@ Ctrl-y    Yank from kill buffer
 
 ### Updates
 
-By default, you will automatically receive updates ([OTAs](@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo](@/docs/glossary/dojo.md).
+By default, you will automatically receive updates ([OTAs] (@/docs/glossary/ota-updates.md)) from your sponsor. To check your OTA source, run `|ota` in the [dojo] (@/docs/glossary/dojo.md).
 
 If for some reason (for example, if your sponsor is out of date), you can switch OTA sources by running `|ota ~otasrc %kids` in the dojo, where `~otasrc` is the ship from which you want to receive updates. It is a good idea to contact the source ship and ask permission to sync from them.
 
@@ -117,15 +117,15 @@ If OTAs are not succeeding, or if you are on an version of Urbit before the `|ot
 
 #### Additional OTA Troubleshooting
 Please check the Support Wiki for additional OTA troubleshooting, such as:
-[OTA 1.0.71 failed](https://github.com/urbit/support/wiki/OTA-1.0.71-failed), 
-[Missing OTA](https://github.com/urbit/support/wiki/Missing-OTA),
+[OTA 1.0.71 failed] (https://github.com/urbit/support/wiki/OTA-1.0.71-failed), 
+[Missing OTA] (https://github.com/urbit/support/wiki/Missing-OTA),
 [Stuck flow preventing planets from receiving
-OTAs](https://github.com/urbit/support/wiki/Stuck-flow-preventing-planets-from-receiving-OTAs),
-and [No content shows in Links page after OTA](https://github.com/urbit/support/wiki/No-content-shows-in-Links-page-after-OTA).
+OTAs] (https://github.com/urbit/support/wiki/Stuck-flow-preventing-planets-from-receiving-OTAs),
+and [No content shows in Links page after OTA] (https://github.com/urbit/support/wiki/No-content-shows-in-Links-page-after-OTA).
 
 ### Landscape
 
-On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
+On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS] (#dns-proxying).
 
 Once running, you can sign into Landscape, your ship’s web interface, from `http://localhost` or `https://your-urbit.arvo.network`. Since our HTTPS isn't audited / battle tested, we just call it "secure" HTTPS. You can find that on `8443`. Or `8444` (and so on) if you're already running something on `8443`.
 
@@ -154,7 +154,7 @@ in this example.
 
 Put `<key>` in a file and that file becomes `<keyfile>`.
 
-You can use the resulting output in the same installation flow from the [Installing Urbit](@/getting-started/_index.md) guide, following the same scheme as for booting a planet. That scheme is:
+You can use the resulting output in the same installation flow from the [Installing Urbit] (@/getting-started/_index.md) guide, following the same scheme as for booting a planet. That scheme is:
 
 ```sh
 $ ./urbit -w <moonname> -G <key> -c <piername>
@@ -201,8 +201,8 @@ To cycle the keys of a moon without breaching, run:
 To use the network as a planet or star, you must be sponsored by an active star
 or galaxy, respectively. If your sponsor isn't suiting your needs, you can
 escape to a different one. This can be done with
-[Bridge](https://bridge.urbit.org/) following the instructions
-[here](@/using/id/using-bridge.md#escaping-your-sponsor).
+[Bridge] (https://bridge.urbit.org/) following the instructions
+[here] (@/using/id/using-bridge.md#escaping-your-sponsor).
 
 ### Continuity breaches
 
@@ -216,7 +216,7 @@ When this happens, back up any files you'd like to save, shut down your urbit, a
 
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
-~sampel-palnet`. For information on what life and rift are, see [Life and Rift](@/docs/azimuth/life-and-rift.md).
+~sampel-palnet`. For information on what life and rift are, see [Life and Rift] (@/docs/azimuth/life-and-rift.md).
 
 ## DNS proxying {#dns-proxying}
 
