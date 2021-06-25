@@ -8,7 +8,7 @@ grant_category = ["App Dev: Other"]
 image = ""
 description = "Write a generator that exports chat data into a CSV."
 reward = 1
-assignee = ""
+assignee = "~hosted-fornet"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0015&prefill_Grant+Name=Analytics%20Script"
 +++

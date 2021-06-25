@@ -15,14 +15,6 @@ Combining a deterministic operating system ([Urbit OS](#what-is-arvo) / Arvo) an
 
 The connected world anticipated by Urbit is a much friendlier one, much like the early Internet, where collegial discussion and collaboration was the norm. Problems that are unsolvable without large-scale political centralization in our current internet – data breaches, spam, fake reviews, malware-spreading, harassment – become tractable when individuals control their computing again. You have one login for everything. You own and control all of your software and all of your data by default. Software is designed around the friendships, families, communities, and organizations you're already a part of – not the other way around.
 
-### How secure is Urbit right now? {#how-secure-is-urbit}
-
-[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
-
-In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
-
-Looking to the future, Tlon has plans to begin working to make Urbit secure against attacks from quantum computers in 2021.
-
 ### How can I contribute to Urbit? {#contribute}
 
 We encourage outside contributors to become a part of the project. The best way to do this is to check out [Urbit](https://github.com/urbit) on GitHub, look at the pinned repositories, and check out our [Contributing](https://urbit.org/docs/getting-started/develop) guide. After you've gotten familiar with the system, feel free to open issues and make pull requests.
@@ -120,7 +112,23 @@ It’s also worth noting that, while there are almost 8B people on Earth, there 
 
 (For more background on why Urbit ID is the way it is, read [this](/understanding-urbit/urbit-id/).)
 
-## Urbit HD Wallet
+## Urbit Security
+
+### How secure is Urbit right now? {#how-secure-is-urbit}
+
+We consider some parts of Urbit to be secure, while other parts still need some work and external auditing. For technical details on Urbit's cryptosystems, see the [documentation](@/docs/system-overview/cryptography.md).
+
+[Urbit ID](#what-is-urbit-id) / [Azimuth](#what-is-azimuth), Urbit's identity layer, is live on the Ethereum blockchain and has been audited by Open Zeppelin, Blockchain at Berkeley, and Bloctrax.
+
+In late 2020, Urbit's [Ames](@/docs/glossary/ames.md) networking protocol was audited by [Leviathan Security](https://www.leviathansecurity.com/). You can read about this milestone [here](@/blog/security-and-continuity.md).
+
+The security of the runtime, [Vere](@/docs/vere/_index.md), has not yet been adequately assessed or systematically hardened.
+
+All communication on Urbit is end-to-end encrypted. However, the [event log](@/docs/glossary/eventlog.md) is not encrypted at rest but we plan to give users that option in the future.
+
+Tlon keeps a quantum computing expert on staff and understands that post-quantum cryptographic methods must be implemented sooner than later, since any data not already encrypted using these methods is at risk of being collected and decrypted once sufficiently powerful quantum computers exist. [NIST](https://www.nist.gov/) anticipates the release of their preliminary findings on [post-quantum cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) around the end of 2021, with full guidelines following in 2024. Tlon will develop a strategy for post-quantum encryption for Urbit following their recommendations.
+
+Thus, while Urbit is probably more secure and private than most digital communication channels, we cannot yet consider it impervious to a dedicated attacker. If you are a cybersecurity expert looking for work, please drop us a line at `apply@tlon.io`.
 
 ### What is the Urbit HD Wallet? {#urbit-hd-wallet}
 

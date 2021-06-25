@@ -21,7 +21,7 @@ put up to an [upgrade proposal vote](@/docs/glossary/upgrade.md) by the
 last for 30 days (June 20th) or until an absolute majority is reached. We’d like
 to take this opportunity to discuss two things. [First](#changelist), what the
 proposed changes are, and [second](#senate), a review of how Urbit governance
-works and where we’re at with respect to the decentralization process.
+works and where we’re at in the decentralization process.
 
 Before we dive into what the proposed changes are, let’s review what the Senate
 is actually capable of changing. Urbit ID is really two sets of smart contracts:
@@ -41,7 +41,7 @@ according to the governance rules we [detail below](#senate).
 
 ## Changelist {#changelist}
 
-The currently open vote to Ecliptic contains the following changes: 
+The Galactic Senate is voting on the following changes to Ecliptic: 
 
 - Fixed ERC721 compatibility 
 - Self-modifying proxies 
@@ -49,7 +49,7 @@ The currently open vote to Ecliptic contains the following changes:
 
 ### Fixed ERC721 compatibility
 
-The contract definition of the Ecliptic includes various functions and events
+In Ecliptic, the contract includes various functions and events
 that make it conform to the ERC721 (non-fungible token) standard. However, two
 events have [ever so slightly
 non-confirming](https://github.com/urbit/azimuth/issues/8) descriptions. This
@@ -66,7 +66,7 @@ Owners of Azimuth assets are allowed to configure "proxy addresses" for those
 assets: Ethereum addresses allowed to act "as" the owner, but only for a subset
 of operations. For example, setting the management proxy will let you change
 your networking keys and sponsor using that address, just like your ownership
-address can. This is useful for keeping the ownership keys in very cold storage,
+address can. This is useful for keeping the ownership keys in very cold storage
 while still letting you perform lower-value operations.
 
 Currently, only the ownership address is allowed to change proxy addresses.
@@ -83,7 +83,7 @@ storage.
 
 [The Claims
 contract](https://github.com/urbit/azimuth/blob/master/contracts/Claims.sol)
-lets asset managers associate various attestations with their identity. For
+lets asset managers associate various "claims" with their identity. For
 example, an Ethereum address to send donations to, or proving ownership of a
 Twitter account.
 
@@ -99,10 +99,10 @@ fresh with a new contract that contains [the
 fix](https://github.com/urbit/azimuth/pull/32) for the described bug.
 
 The reason we must do an Ecliptic upgrade to switch to a new Claims contract, is
-that it is tied in with the logic for transferring an asset. If the asset is
+that it is tied in with the logic for transferring an asset. If an asset is
 flagged for "reset" (common when transferring to/from someone other than
 yourself), its configured proxies, networking keys and claims are cleared during
-transfer. As such, the Ecliptic will need to know about the address of the new
+transfer. As such, Ecliptic will need to know about the address of the new
 Claims contract.
 
 ## Urbit Governance {#senate}
@@ -111,12 +111,9 @@ Claims contract.
 
 The ultimate goal of Urbit is to become a digital republic manifested as a peer
 to peer network owned and controlled by its users. The goal of Tlon, then, is to
-become a company which builds products for Urbit rather than being the primary
+become one of many companies who build products for Urbit rather than being the primary
 driving force behind its development. We’d like to take this opportunity to
-spell out our perspective on where we’re at in that process. We’ve already
-written a good deal about Urbit governance in the past on this blog, so we avoid
-rehashing too much, but the first contract upgrade is an apt time for a routine
-checkup. Here are some previous posts that are relevant, but please note that
+spell out our perspective on where we’re at in that process. Here are some previous posts that are relevant, but please note that
 some of them are several years old and as such may not accurately reflect our
 current position, but still serve as useful historical markers. We hope to
 revisit and refresh these documents soon. 
@@ -134,7 +131,7 @@ urbit.org](@/blog/governance-of-urbit.md)
 
 The Galactic Senate is composed of all [galaxy](@/docs/glossary/galaxy.md)
 holders, which at present consists of more than 100 individuals and a few
-organizations, including Tlon and the Urbit.org Foundation. Using the Azimuth
+organizations, including Tlon and the Urbit Foundation. Using the Azimuth
 voting contract, the Senate can present and vote on two kinds of proposals:
 [document proposals](@/docs/glossary/docvote.md) and [upgrade
 proposals](@/docs/glossary/upgrade.md). Thus far, all matters which the Senate
@@ -167,13 +164,13 @@ primarily driven by selling or giving away these galaxies. On [June 1,
 > contributed code or services, won a contest, or were just in the right place
 > at the right time.
 
-In the period since then leading up to the present, Tlon has sold a number of
-its galaxies to fund development, and others have changed hands, to the point
+Since then, Tlon has sold a number of
+its galaxies to fund development and others have changed hands to the point
 that Tlon and urbit.org no longer possess a majority share of galaxies. In
 January 2019, [Curtis gave all of his galaxies](@/blog/a-founders-farewell.md) to
 Tlon when he left the project. In August 2020 we shared an update on the [known
 distribution of address space](@/blog/value-of-address-space-pt3.md), where
-Curtis’ galaxies are marked as Tlon’s “naked galaxies”. Since then, Tlon
+Curtis’ galaxies are marked as Tlon’s “naked galaxies”. Shortly thereafter, Tlon
 disbursed its naked galaxies among the employees that wanted one who did not
 already possess one, thus removing Tlon and urbit.org’s controlling share of the
 Senate. Galaxies held by current and former Tlon employees are entirely
@@ -184,9 +181,7 @@ near future.
 Distribution of stars is much more difficult to know. There is an active market
 for stars on [OpenSea](https://opensea.io/collection/urbit-id), so we know that
 they are changing hands frequently, but checking the number of distinct Ethereum
-addresses that hold stars does not tell you very much information since there
-are many legitimate reasons one person might hold each of their stars at
-different addresses.
+addresses that hold stars does not tell you very much information since a single person can control multiple adresses.
 
 ### Software and smart contracts
 
@@ -195,13 +190,18 @@ Governance](https://urbit.org/blog/the-dao-as-a-lesson-in-decentralized-governan
 we are keenly aware of the threat of _decentralization theater_. Urbit has
 undergone steady progress towards decentralization, and with the developments we
 outline below, it’s never been more clear that the project is beginning to leave
-the cradle of Tlon. It’s also important to note that decentralization of a
-project is always a procession away from an initial centralized state⁠—you cannot
+the cradle of Tlon. It’s also important to note that the decentralization of a
+project is always a movement away from an initial centralized state⁠—you cannot
 go from A to Z without first traversing every letter in between. While Urbit was
-centralized during its earliest stages, the journey towards a network owned and
+centralized at the beginning, the journey towards a network owned and
 controlled by the users is now well underway.
 
-In the past, nearly all Urbit software was written by Tlon. While Tlon is still the only corporation actively updating Urbit’s MIT-licensed open source software, namely [Vere](@/docs/glossary/vere.md) (the runtime), and [Arvo](@/docs/glossary/arvo.md) (the kernel), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).  
+In the past, nearly all Urbit software was written by Tlon. While Tlon is still
+the only corporation actively updating Urbit’s MIT-licensed open source
+software, namely [Vere](@/docs/glossary/vere.md) (the runtime),
+[Arvo](@/docs/glossary/arvo.md) (the kernel),
+[Landscape](@/docs/glossary/landscape.md) (the client), and
+[Bridge](@/docs/glossary/bridge.md) (the ID manager), unaffiliated individuals have been making enormous contributions to Urbit over the past couple of years via the [grants program](https://grants.urbit.org/history). Recent examples include the [Bitcoin node and wallet integration](https://github.com/urbit/urbit/pull/4940), [WebRTC integration](https://grants.urbit.org/proposals/21131866-webrtc-gall-agent-and-external-app), [Port, an Urbit installer and ship manager](https://github.com/arthyn/port), and [`|fuse`, an important primitive for 3rd party software distribution](https://github.com/urbit/urbit/pull/4820).  
 
 The only real power Tlon holds over Urbit is the ability to push [OTA
 updates](@/docs/glossary/ota-updates.md) via `~zod`, and suggest that people
@@ -252,11 +252,7 @@ Urbit would be that the Senate makes sweeping changes to the PKI and invites a
 schism like that outlined above.
 
 For these reasons, there are strong disincentives for any one organization or
-individual to acquire too many galaxies. The more galaxies one party possesses,
-the fewer there are with strong incentives to stimulate efforts to build on the
-network, reducing the value of holding that space, and the greater the risk that
-the users will perceive this as a power grab by a party without their interests
-in mind. This is in contrast to real-life republics, where there is little risk
+individual to acquire too many galaxies. If galaxy ownership becomes more centralized, individuals will be less incentivized to build on the network which will reduce the value of address space. Furthermore, such centralization might provoke a fork if such centralized powers are perceived as malicious by the users. This is in contrast to real-life republics, where there is little risk
 for one party to accumulate as much power as they can manage since the cost to
 the citizens to overthrow that power is enormous. Thus, only especially
 egregious displays of power ever result in rebellion. Within the Urbit republic,
@@ -277,20 +273,18 @@ With (ii), we see this to be the case on many early blockchain projects where
 power is shared by the developers and the miners, but what each is capable of
 doing has never been codified, and thus users of the blockchain can never have a
 great deal of certainty of what changes might occur in the future. This doesn’t
-guarantee a bad outcome, but it does create more wariness for individuals to
-contribute to a project when they cannot know whether they really have a say in
-its direction. Recognizing this issue, many newer blockchain and
+guarantee a bad outcome, but it does create more wariness among developers when they cannot know whether they really have a say in
+the project's direction. Recognizing this issue, many newer blockchain and
 blockchain-adjacent projects have built-in governance mechanisms that lay out
 exactly what an individual can expect should they join and contribute to that
 network.
 
-As for (i), with Urbit being a wholly new kind of network, it would take some
-incredible luck and crystal ball gazing to get the PKI exactly right on the very
+As for (i), with Urbit being a wholly new kind of network, it would take
+incredible luck to get the PKI exactly right on the very
 first try without ever needing another modification. Thus, some mechanism was
 needed to guarantee that the PKI’s logic could be altered. Leaving control of
-Azimuth in the hands of Tlon would have just granted Tlon dictatorial power and
-a future that becomes more uncertain the further one gazes. There’s certainly
-room to argue that the Galactic Senate is not a perfect system, but our interim
+Azimuth in the hands of Tlon would have just granted Tlon dictatorial power, which Tlon nor Urbit users desired. There’s certainly
+room to argue that the Galactic Senate is not a perfect system: our interim
 constitution did outline potential roles for stars and planets to play in
 governance in the future, so there is ample opportunity for the system to evolve
 in response to the will of the users. As always, it is important to keep in mind
