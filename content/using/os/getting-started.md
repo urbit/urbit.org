@@ -1,6 +1,6 @@
 +++
 title = "Getting Started"
-description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS proxy."
+description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS entry."
 template = "doc.html"
 weight = 1
 aliases = ["docs/using/messaging/", "docs/using/admin/"]
@@ -125,7 +125,7 @@ and [No content shows in Links page after OTA](https://github.com/urbit/support/
 
 ### Landscape
 
-On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also proxy web domains through Urbit's own servers. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-proxying).
+On startup Urbit tries to bind to `localhost:80`. If you're already running something on port `80` -- such as any other HTTP server, or another urbit -- you'll find the urbit that you just started on `8080`, `8081`, and so on. For planets only, we also provide web domains through Urbit's own domain. Any planet `~your-urbit` is also at `your-urbit.arvo.network`, but only after you [set up DNS](#dns-setup).
 
 Once running, you can sign into Landscape, your ship’s web interface, from `http://localhost` or `https://your-urbit.arvo.network`. Since our HTTPS isn't audited / battle tested, we just call it "secure" HTTPS. You can find that on `8443`. Or `8444` (and so on) if you're already running something on `8443`.
 
@@ -218,15 +218,15 @@ You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys
 ~sampel-palnet`. For information on what life and rift are, see [Life and Rift](@/docs/azimuth/life-and-rift.md).
 
-## DNS proxying {#dns-proxying}
+## DNS setup {#dns-setup}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface.
 
-Stars and planets follow the same process DNS proxying process, and galaxies have their own requirements. Moons and comets are not supported.
+Stars and planets follow the same process DNS request process, and galaxies have their own requirements. Moons and comets are not supported.
 
 ### Planets and Stars
 
-For a planet or star's DNS proxying request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
+For a planet or star's DNS request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80.
 
 To get `ship.arvo.network` on a planet or star, you must set up DNS routing with its parent ship by starting the `:dns` app.
 
