@@ -3,7 +3,7 @@ title = "Runtime Apprenticeship: Improve Page Tracking"
 date = 2021-06-24
 [taxonomies]
 grant_type = ["apprenticeships"]
-TODO: grant_category = ["App Dev: Arvo"]
+grant_category = ["App Dev: Arvo"]
 [extra]
 image = ""
 description = "Improve Page Tracking"
@@ -11,7 +11,7 @@ reward = 1
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false
-work_request_link = TODO
+work_request_link = ""
 +++
 
 ### Improve Page Tracking
