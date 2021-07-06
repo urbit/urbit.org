@@ -1,6 +1,6 @@
 +++
 title = "What's in a @p?"
-date = 2021-06-01
+date = 2021-07-06
 description = "An exploration of Urbit's identity system"
 aliases = ["/posts/essays/whats-in-a-p", "/posts/whats-in-a-p"]
 [extra]
