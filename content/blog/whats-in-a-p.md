@@ -104,8 +104,8 @@ Next is the second-lowest byte, `0x20` (or 32 in decimal). We look this up in th
 
 So putting these together in order from high to low, we get `hol` and `sun`. Pairing them up and adding a tilde at the beginning, we get `~holsun`. If we try this conversion in the dojo, by running <code>&#96;@p&#96;0x200f</code>, we do indeed get `~holsun`.
 
-
-The above chart (courtesy of ~nodreb-borrus) shows the 256 possible suffixes. The first 256 addresses (galaxies) all have @ps which are a suffix. ![]https://media.urbit.org/site/posts/essays/nodreb-borrus-suffix-chart.png
+![](https://media.urbit.org/site/posts/essays/nodreb-borrus-suffix-chart.png)
+The above chart (courtesy of ~nodreb-borrus) shows the 256 possible suffixes. The first 256 addresses (galaxies) all have @ps which are a suffix. 
 
 
 ### Name Obfuscation
