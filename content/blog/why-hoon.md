@@ -125,15 +125,15 @@ Hoon and Nock have several unusual properties:
   environment are just Nock trees. We even have a statically typed
   metacircular interpreter called <code>+mule</code>. We run userspace code
   metacircularly with negligible performance overhead because of Urbit's
-  jet system. In Lisp "eval is evil" is a common saying but, in Urbit,
+  jet system. In Lisp, "eval is evil" is a common saying, but in Urbit,
   eval is a first-class feature.
 
 - **Universally serializable**. There's one serialization format, called
   "jam", for any piece of code or data in the system. This makes it so
   that deserialization has just one function, a few hundred lines of C,
   as its security attack surface. It also facilitates portability of
-  the virtual machine state, and it turns out to be useful in a bunch of
-  places in the system.
+  the virtual machine state, since this function can be called on the
+  top-level VM state itself to generate a portable snapshot.
 
 - **Jetted**. A jet is a piece of code that the Nock interpreter has that
   reimplements a Nock function in some other, faster language. The `+dec`
@@ -183,8 +183,8 @@ Hoon and Nock have several unusual properties:
   consists of the standard library (itself a stack of cores), and
   possibly a "sample" (function argument).
 
-- **The type system has several unusual features**. It's intentional, in
-  the sense that all constructs are first-class and can be down-cast to
+- **The type system has several unusual features**. It's intensional, in
+  the sense that all constructs are first-class and can be up-cast to
   `noun`, Hoon's "any" or "top" type that matches all Nock nouns. Types
   are also used as scopes, so they store all of Hoon's variable names
   and docstrings. The type system uses an unusual macro-like feature
