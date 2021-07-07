@@ -45,8 +45,6 @@ We built OS 1 for ourselves. We were sick of using centralized, mainstream softw
 
 If you’re curious to get a complete overview of OS 1, check out [this post](https://urbit.org/blog/introducing-os1/), watch the [release event](https://www.youtube.com/watch?v=71ViyftPkGk&feature=youtu.be&t=3963) or feel free to [boot a node](@/getting-started/_index.md) to come talk to us.
 
-(Running Urbit still requires a little fiddling around in the command-line, so it’s not for everyone—but we do have [plans for that to improve](https://urbit.org/blog/providers/).)
-
 Our target with OS 1 was to produce the [Nokia 3310](https://en.wikipedia.org/wiki/Nokia_3310) of cloud computers. Something bordering on simplistic, but still nice to use. We hit that target, but it’s just the first milestone. Let’s talk a bit about how Landscape grows and matures at a high level (for more specifics on the near-to-medium term, check out [the roadmap](https://urbit.org/understanding-urbit/roadmap/)).
 
 <img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/understanding-urbit/uu-interface-4.png">
