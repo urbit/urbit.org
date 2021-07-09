@@ -8,8 +8,6 @@ hide_next_title = "true"
 hide_previous_title = "true"
 +++
 
-# Roadmap: Landscape 1 → 3
-
 Let’s talk about where we’d like Urbit to go and how we’re going to get there.
 
 We’re working to build Urbit ID + Urbit OS into a human-scale replacement for the industrial-grade software stack that powers our centralized apps and services today. In time, we want Urbit to be as robust as Unix and the internet protocol suite that today’s stack rests on. We look forward to a future where Urbit is a standardized, unremarkable, ubiquitous computing substrate used and owned by everyone.
