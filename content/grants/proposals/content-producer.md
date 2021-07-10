@@ -5,10 +5,13 @@ date = 2021-07-08
 grant_type = ["proposals"]
 grant_category = ["Documentation"]
 [extra]
+image = ""
 description = "Work with the content manager in producing content"
 reward = 3
 assignee = "~sitful-hatred"
+id = ""
 completed = false
+link = ""
 +++
 
 ## Vision
