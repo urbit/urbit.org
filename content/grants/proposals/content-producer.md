@@ -23,4 +23,14 @@ Work with the content manager in producing specific pieces of content for the Ur
 
 ## Milestones
 
-4 published projects per star up to a total of 3 stars.
+### 4 Completed Projects
+
+1 Star
+
+### 4 Completed Projects
+
+1 Star
+
+### 4 Completed Projects
+
+1 Star
