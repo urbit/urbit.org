@@ -719,3 +719,57 @@ h1, h2, h3, h4, h5, h6 {
             background-size: contain;
             background-repeat: no-repeat;
      }
+
+
+#groups .grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, 10rem);
+  grid-template-rows: 10rem;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  justify-content: center;
+  max-height: 36rem;
+  overflow: hidden;
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+#groups .group {
+    position: relative;
+}
+
+#groups .group::before {
+    content: "";
+      padding-bottom: 100%;
+      display: block;
+}
+
+#groups .group a {
+    position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: calc(100% - 2rem);
+      word-wrap: break-word;
+      height: 100%;
+}
+
+#groups .gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 62%;
+    background: linear-gradient(to top, white 25%, rgba(255,255,255, 0));
+    bottom: 0;
+    pointer-events: none;
+}
+
+#groups .cta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    text-align: center;
+    padding: 16px;
+}

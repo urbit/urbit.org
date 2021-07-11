@@ -1,0 +1,51 @@
+{% extends "page.html" %}
+{% import "partials/pagination.html" as pagination %}
+
+{% block content %}
+
+<!-- header -->
+<!-- content -->
+{%- set lowercasetitle = page.title | lower | split(pat=" ") | join(sep="") -%}
+{% if section or lowercasetitle == page.components[0] %}
+<nav class="mt4 pb4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/{{ page.components[0] }}">
+    {{ page.title }}
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+</nav>
+{% else %}
+<nav class="mt4 fixed-xl full fourth-1-md fourth-1-lg page-indiced mb3 mb0-m mb0-l mb0-xl">
+  <a class="gray3" href="/">Urbit</a>
+  <span class="gray3"> / </span>
+  <a href="/{{ page.components[0] }}{% if page.components[2] %}/{{ page.components[1] }}{% endif %}">
+    {% if page.components[2] %}{{ page.components[1] | capitalize }}
+    {% else %}
+    {{ page.components[0] | capitalize }}
+    {% endif %}
+  </a>
+
+  {% include "partials/navigation-search.html" %}
+
+</nav>
+
+{% endif %}
+
+<article class="mt4 mb4 c1-13 c4-12-lg measure-wide">
+  {% if page.extra.hidetitle %} {% else %}<h1>{{ page.title }}</h1>{% endif %}
+
+  {% if page.extra.image %}
+    <img class="db mv2 obj-cover w-100 ba" src="{{ page.extra.image }}" />
+  {% endif %}
+  
+  {{ page.content | safe }}
+
+  {% if page.extra.path %}
+    <a href="web+urbitgraph://group/{{ page.extra.path }}">Visit in Landscape</a>
+  {% endif %}
+
+</article>
+
+{% endblock content %}
