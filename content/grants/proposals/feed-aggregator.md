@@ -69,31 +69,26 @@ We'll have a tutorial but the app is quite self-explanatory. Documentation for p
 * As a developer I will be able to:
   - Make plugins to integrate a data source into UTw. Basically just a custom scraper (a way of telling UTw how to fetch and render the data).
 
-## resources
+## Resources
 
 We Have been in contact with ~timluc-miptev and ~tacryt-socryp.
 
 
 ## Milestones
 
-### Basic microblog 
-1 star
+### Basic microblog - 1 star
 Basic microblog functionality implemented with integrated Twitter client.
 
-### Twitter integration 
-1 star
+### Twitter integration - 1 star
 Twitter Login implemented, enabling cross-posting and import-export of data between Urbit and Twitter.
 
-### Graph-Store integration 
-1 star
+### Graph-Store integration - 1 star
 Full Urbit graph-store interaction implemented: live DMs, share-to-chat, export-to-notebook and collection.
 
-### Email/RSS integration 
-1 star
+### Email/RSS integration - 1 star
 Email and RSS feed importing implemented.
 
-### Plugin creation
-1 star
+### Plugin creation - 1 star
 Plugin system implemented, enabling developers to integrate any data feed into the app.
 
 
