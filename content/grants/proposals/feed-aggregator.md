@@ -35,7 +35,7 @@ The interface (as of now) follows TweetDeck; a deck of multiple columns, each di
 
 Target user is any social media user who wants their data in a single dashboard, most especially people who like microblogging and would enjoy a way of easily sharing or commenting on their own data to their followers.
 
-* What does it enable to be further built afterwards, and how does this advance Urbit's strategic goals?
+### Plugin Framework
 
 A plugin system will allow data fetching and interaction from virtually infinite internet data sources. This achieves one of the earliest goals of Urbit, aggregation of internet data in a single private interface, where data is under your own control. It also essentially kills Twitter; it replicates all its functionality, and then some.
 
