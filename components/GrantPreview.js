@@ -2,7 +2,8 @@ import classnames from "classnames";
 import Link from "next/link";
 
 export default function GrantPreview({ grant }) {
-  const isOpen = !grant.extra.completed && grant.extra.assignee === "";
+  const isCompleted = grant.extra.completed;
+  const isOpen = !isCompleted && grant.extra.assignee === "";
   const type = grant.taxonomies.grant_type;
 
   const className = classnames({
@@ -23,7 +24,7 @@ export default function GrantPreview({ grant }) {
               {grant.title}
             </h3>
             <div className={`bg-gray text-wall badge-sm ml-2`}>
-              {isOpen ? "Open" : "Completed"}
+              {!isCompleted ? (isOpen ? "Open" : "In Progress") : "Completed"}
             </div>
           </div>
           <p className="mb-4">{grant.extra.description}</p>
