@@ -301,11 +301,7 @@ Implicitly, all readers are given permission to get any book when granted access
 
 -   `+is-allowed` is used in `+on-watch` [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L118), where it only allows a ship to subscribe to a library if it passes the permissions check
 -   It is also used [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L304) and [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L315), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
--   Some of the more ad-hoc/implicit permission rules are implemented at the following locations
-    + https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323
-    + https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49
-    + https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264
-    + https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299
+-   Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323) [2](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49) [3](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264) [4](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299)]
 
 ## Is this the only way to do it?
 
