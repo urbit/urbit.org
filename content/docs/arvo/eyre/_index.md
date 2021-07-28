@@ -14,18 +14,18 @@ An overview of Eyre and its capabilities.
 
 Details of Eyre's external API including the channel system's JSON API.
 
-## [Internal API Reference](@/docs/arvo/eyre/tasks.md)
+## [Internal API Reference](/docs/arvo/eyre/tasks)
 
 The `task`s Eyre takes and the `gift`s it returns.
 
-## [Scry Reference](@/docs/arvo/eyre/scry.md)
+## [Scry Reference](/docs/arvo/eyre/scry)
 
 The scry endpoints of Eyre.
 
-## [Data Types](@/docs/arvo/eyre/data-types.md)
+## [Data Types](/docs/arvo/eyre/data-types)
 
 Reference documentation of the various data types used by Eyre.
 
-## [Examples](@/docs/arvo/eyre/examples.md)
+## [Examples](/docs/arvo/eyre/examples)
 
 Practical examples of the different ways of using Eyre.
