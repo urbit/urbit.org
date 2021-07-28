@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here are all of Eyre's scry endpoints. There's not too many and they mostly deal with either CORS settings or aspects of the state of connections.
 
-The first few have a `care` of `x` and are a scry like `.^(<type> %ex /=//=/<some-path>)` (note the empty `desk`). The rest have no `care` and the tag replaces the `desk` like `.^(<type> %e /=<something>=)`.
+The first few have a `care` of `x` and are a scry like `.^({TYPE} %ex /=//=/{SOME-PATH})` (note the empty `desk`). The rest have no `care` and the tag replaces the `desk` like `.^({TYPE} %e /={SOMETHING}=)`.
 
 All examples are run from the dojo.
 
@@ -46,9 +46,9 @@ An `x` scry with a `path` of `/cors/approved` will return the `set` of approved 
 approved={~~http~3a.~2f.~2f.foo~.example}
 ```
 
-## `/cors/approved/<origin>`
+## `/cors/approved/{ORIGIN}`
 
-An `x` scry whose `path` is `/cors/approved/<origin>` tests whether the given origin URL is in the `approved` set of the CORS registry. The type returned is a simple `?`.
+An `x` scry whose `path` is `/cors/approved/{ORIGIN}` tests whether the given origin URL is in the `approved` set of the CORS registry. The type returned is a simple `?`.
 
 The origin URL is a `@t`, but since `@t` may not be valid in a path, it must be encoded in a `@ta` using `+scot` like `(scot %t 'foo')` rather than just `'foo'`.
 
@@ -75,9 +75,9 @@ An `x` scry with a `path` of `/cors/rejected` will return the `set` of rejected 
 rejected={~~http~3a.~2f.~2f.bar~.example}
 ```
 
-## `/cors/rejected/<origin>`
+## `/cors/rejected/{ORIGIN}`
 
-An `x` scry whose `path` is `/cors/rejected/<origin>` tests whether the given origin URL is in the `rejected` set of the CORS registry. The type returned is a simple `?`.
+An `x` scry whose `path` is `/cors/rejected/{ORIGIN}` tests whether the given origin URL is in the `rejected` set of the CORS registry. The type returned is a simple `?`.
 
 The origin URL must be a cord-encoded `@t` rather than just the plain `@t`, so you'll have to do something like `(scot %t 'foo')` rather than just `'foo'`.
 
@@ -93,11 +93,11 @@ The origin URL must be a cord-encoded `@t` rather than just the plain `@t`, so y
 %.n
 ```
 
-## `/authenticated/cookie/<cookie>`
+## `/authenticated/cookie`
 
-An `x` scry whose `path` is `/authenticated/cookies/<cookie>` tests whether the given cookie is currently valid. The type returned is a `?`.
+An `x` scry whose `path` is `/authenticated/cookie/{COOKIE}` tests whether the given cookie is currently valid. The type returned is a `?`.
 
-The cookie must be the full cookie including the `urbauth-<ship>=` part. The cookie must be a cord-encoded `@t` rather than just a plain `@t`, so you'll have to do something like `(scot %t 'foo')` rather than just `'foo'`.
+The cookie must be the full cookie including the `urbauth-{SHIP}=` part. The cookie must be a cord-encoded `@t` rather than just a plain `@t`, so you'll have to do something like `(scot %t 'foo')` rather than just `'foo'`.
 
 ### Examples
 
@@ -145,7 +145,7 @@ A scry with `bindings` in place of the `desk` in the `beak` will return all open
 
 ## `%authentication-state`
 
-A scry with `authentication-state` in place of the `desk` in the `beak` will return authentication details of all current sessions. The type returned is a [$authentication-state](/docs/arvo/eyre/data-types#authentication-state). The `p` field is the cookie sans the `urbauth-<ship>=` part.
+A scry with `authentication-state` in place of the `desk` in the `beak` will return authentication details of all current sessions. The type returned is a [$authentication-state](/docs/arvo/eyre/data-types#authentication-state). The `p` field is the cookie sans the `urbauth-{SHIP}=` part.
 
 ### Example
 
