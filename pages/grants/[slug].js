@@ -37,8 +37,10 @@ export default function Grant({ post, markdown, search, similarGrants }) {
         <Header search={search} />
         <Section narrow short>
           <h1>{post.title}</h1>
-          {post.extra.author ? (
-            <div className="type-ui text-gray mt-4">{post.extra.author}</div>
+          {post.extra.assignee ? (
+            <div className="type-ui text-gray mt-4">
+              Grantee: {post.extra.assignee}
+            </div>
           ) : null}
           {post.extra.ship ? (
             <div className="type-ui text-gray font-mono">{post.extra.ship}</div>
