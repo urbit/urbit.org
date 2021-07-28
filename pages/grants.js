@@ -137,19 +137,24 @@ export default function Grants({
                 at urbit.org, Tlon developers, and community mentors.
               </p>
             </div>
-            <TableOfContents staticPosition noh3s />
           </div>
-          <div className="p-8 bg-wall flex flex-col w-full rounded-lg space-y-4">
-            <p>
-              <i>
-                “I paid off my student loans through the Urbit grants program,
-                and had fun doing it!”
-              </i>
-            </p>
-            <p>
-              — Urbit Community Member{" "}
-              <pre className="ml-6">~radbur-sivmus</pre>
-            </p>
+
+          <div className="flex flex-wrap">
+            <Link href="#find-a-grant">
+              <button className="button-lg bg-green text-white mr-2">
+                View Grants
+              </button>
+            </Link>
+            <Link href="#proposals">
+              <button className="button-lg bg-blue text-white mr-2">
+                Submit a Proposal
+              </button>
+            </Link>
+            <Link href="#gifts">
+              <a className="button-lg bg-ultraDeepWall text-white mr-2">
+                Recent Gifts
+              </a>
+            </Link>
           </div>
         </Section>
         {
@@ -188,7 +193,7 @@ export default function Grants({
         }
         <Section wide>
           <h2 id="find-a-grant" className="pb-8">
-            Find A Grant
+            Find a Grant
           </h2>
           <h5 className="text-black font-semibold my-2">Work Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
