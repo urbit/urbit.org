@@ -141,7 +141,7 @@ export default function Grants({
         {
           // Heading and introduction
         }
-        <Section wide>
+        <Section wide short>
           <div className="flex flex-column justify-between pb-16">
             <div>
               <h1 className="pb-16">Grants</h1>
@@ -157,7 +157,6 @@ export default function Grants({
               </p>
             </div>
           </div>
-
           <div className="flex flex-wrap">
             <Link href="#find-a-grant">
               <button className="button-lg bg-green text-white mr-2">
@@ -179,7 +178,7 @@ export default function Grants({
         {
           // Featured Grants
         }
-        <Section wide>
+        <Section wide short>
           <div className="measure pb-16">
             <h2 className="pb-16" id="featured">
               Featured Grants
