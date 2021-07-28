@@ -51,7 +51,7 @@ An HTTP connection that is currently open. The [$action](#action) is how it's be
 +$  authentication-state  sessions=(map @uv session)
 ```
 
-This represents the authentication state of all sessions. It maps session cookies (without the `urbauth-<ship>=` prefix) to [$session](#session)s.
+This represents the authentication state of all sessions. It maps session cookies (without the `urbauth-{SHIP}=` prefix) to [$session](#session)s.
 
 ### `$session`
 
