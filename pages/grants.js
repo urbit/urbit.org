@@ -71,45 +71,64 @@ export default function Grants({
 }) {
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
+  const [includeOpen, setIncludeOpen] = useState(true);
   const [includeCompleted, setIncludeCompleted] = useState(false);
+  const [includeInProgress, setIncludeInProgress] = useState(false);
   const [tab, setTab] = useState(0);
   const post = {
     title: "Grants",
     description: "Contribute to the Urbit project while earning address space.",
   };
 
-  const postsByCompletion = posts.filter((post) => {
-    return includeCompleted
-      ? true
-      : !post.extra.completed && post.extra.assignee === "";
+  const annotatedPosts = posts.map((post) => {
+    if (post.extra.completed) {
+      return { ...post, status: "completed" };
+    } else if (post.extra.assignee && post.extra.assignee.length > 0) {
+      return { ...post, status: "wip" };
+    } else {
+      return { ...post, status: "open" };
+    }
   });
 
-  const filteredPosts = postsByCompletion.filter((post) => {
+  const byStatus = (post) => {
+    return (
+      (includeOpen ? post.status === "open" : false) ||
+      (includeCompleted ? post.status === "completed" : false) ||
+      (includeInProgress ? post.status === "wip" : false)
+    );
+  };
+
+  const postsByStatus = annotatedPosts.filter(byStatus);
+
+  const filteredPosts = annotatedPosts.filter((post) => {
     // Posts are returned if they match both the selected category and selected tags, or if the user has no category filters set.
     const hasCategory = post.taxonomies.grant_category.some((category) =>
       activeTags.includes(category)
     );
+
     const noTagsSelected = activeTags.length === 0;
     const hasType = post.taxonomies.grant_type.some((type) =>
       activeTypes.includes(type)
     );
 
-    return (hasCategory || noTagsSelected) && hasType;
+    return (hasCategory || noTagsSelected) && byStatus(post) && hasType;
   });
 
-  const allCount = postsByCompletion.length;
+  const allCount = postsByStatus.length;
 
   const counts = {
-    Bounty: postsByCompletion.filter((post) =>
+    Bounty: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Bounty")
     ).length,
-    Apprenticeship: postsByCompletion.filter((post) =>
+    Apprenticeship: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Apprenticeship")
     ).length,
-    Proposal: postsByCompletion.filter((post) =>
+    Proposal: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Proposal")
     ).length,
   };
+
+  console.log(activeTags);
 
   return (
     <Container>
@@ -188,9 +207,75 @@ export default function Grants({
             })}
           </div>
         </Section>
-        {
-          // Find a Grant
-        }
+        {/* Submit a proposal */}
+        <Section wide>
+          <h2 className="mb-16" id="proposals">
+            Proposals
+          </h2>
+          <p className="mb-8">
+            Contributors are also welcome to have their personal projects
+            considered as a proposal. If you'd like to propose a project for the
+            grants program, first review our
+            <a href="/grant-submission-guide">submission guide</a>, and feel
+            free to{" "}
+            <a href="https://airtable.com/shrCi54rEDxgSZr3z">
+              submit your proposal
+            </a>
+            .
+          </p>
+
+          <Link href="#find-a-grant">
+            <button
+              className="button-lg bg-blue text-white mr-2"
+              onClick={() => {
+                setIncludeInProgress(true);
+                setIncludeCompleted(true);
+                setTypes(["Proposal"]);
+              }}
+            >
+              View Proposals
+            </button>
+          </Link>
+        </Section>
+        {/* Gift Grants */}
+        <Section wide>
+          <div className="pb-16">
+            <h2 className="pb-16" id="gifts">
+              Gifts
+            </h2>
+            <p className="mb-8">
+              Gifts are given post-facto for exceptional contributions.
+            </p>
+            {/* Uncomment once people added to content/gifts folder. */}
+            {/* {gifts.map((e) => {
+              return (
+                <div className="bg-wall rounded-xl p-4 my-8 flex justify-between">
+                <p className="font-semibold">
+                  {e.name}
+                </p>
+                <p>{e.planet}</p>
+                <p>{e.date}</p>
+                <a className="type-p" href={e.link}>Link</a>
+                </div>
+              )
+            })} */}
+            <div className="flex flex-wrap">
+              <PostPreview
+                post={giftPosts[0]}
+                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
+                key={giftPosts[0].slug}
+                section={giftPosts[0].section}
+              />
+              <PostPreview
+                post={giftPosts[1]}
+                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
+                key={giftPosts[1].slug}
+                section={giftPosts[1].section}
+              />
+            </div>
+          </div>
+        </Section>
+        {/*  Find a Grant */}
         <Section wide>
           <h2 id="find-a-grant" className="pb-8">
             Find a Grant
@@ -252,9 +337,25 @@ export default function Grants({
             <div className="pb-8 flex items-center">
               <button
                 className="mr-4 badge-sm bg-black text-white"
+                onClick={() => setIncludeOpen(!includeOpen)}
+              >
+                {includeOpen ? "Exclude Open" : "Include Open"}
+              </button>
+
+              <button
+                className="mr-4 badge-sm bg-black text-white"
                 onClick={() => setIncludeCompleted(!includeCompleted)}
               >
                 {includeCompleted ? "Exclude Completed" : "Include Completed"}
+              </button>
+
+              <button
+                className="mr-4 badge-sm bg-black text-white"
+                onClick={() => setIncludeInProgress(!includeInProgress)}
+              >
+                {includeInProgress
+                  ? "Exclude In Progress"
+                  : "Include In Progress"}
               </button>
 
               <h4>
@@ -266,63 +367,6 @@ export default function Grants({
           {filteredPosts.map((post) => {
             return <GrantPreview grant={post} />;
           })}
-        </Section>
-        {/* Submit a proposal */}
-        <Section wide>
-          <h2 className="mb-16" id="proposals">
-            Proposals
-          </h2>
-          <p className="mb-8">
-            Contributors are also welcome to have their personal projects
-            considered as a proposal. If you'd like to propose a project for the
-            grants program, first review our
-            <a href="/grant-submission-guide">submission guide</a>, and feel
-            free to{" "}
-            <a href="https://airtable.com/shrCi54rEDxgSZr3z">
-              submit your proposal
-            </a>
-            .
-          </p>
-        </Section>
-        {
-          // Gift Grants
-        }
-        <Section wide>
-          <div className="pb-16">
-            <h2 className="pb-16" id="gifts">
-              Gifts
-            </h2>
-            <p className="mb-8">
-              Gifts are given post-facto for exceptional contributions.
-            </p>
-            {/* Uncomment once people added to content/gifts folder. */}
-            {/* {gifts.map((e) => {
-              return (
-                <div className="bg-wall rounded-xl p-4 my-8 flex justify-between">
-                <p className="font-semibold">
-                  {e.name}
-                </p>
-                <p>{e.planet}</p>
-                <p>{e.date}</p>
-                <a className="type-p" href={e.link}>Link</a>
-                </div>
-              )
-            })} */}
-            <div className="flex flex-wrap">
-              <PostPreview
-                post={giftPosts[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={giftPosts[0].slug}
-                section={giftPosts[0].section}
-              />
-              <PostPreview
-                post={giftPosts[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={giftPosts[1].slug}
-                section={giftPosts[1].section}
-              />
-            </div>
-          </div>
         </Section>
       </SingleColumn>
       <Footer />
