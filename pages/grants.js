@@ -128,8 +128,6 @@ export default function Grants({
     ).length,
   };
 
-  console.log(activeTags);
-
   return (
     <Container>
       <Head>
@@ -229,6 +227,7 @@ export default function Grants({
               onClick={() => {
                 setIncludeInProgress(true);
                 setIncludeCompleted(true);
+                setTab(1);
                 setTypes(["Proposal"]);
               }}
             >
