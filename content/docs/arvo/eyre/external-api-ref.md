@@ -4,31 +4,9 @@ weight = 2
 template = "doc.html"
 +++
 
-# Contents
+This document contains reference information about Eyre's external APIs including [the channel system](#channels) and [scries](#scry). Each section will also have practical examples in the [Examples](/docs/arvo/eyre/examples) document.
 
-- [Introduction](#introduction)
-- [Authentication](#authentication)
-- [Channels](#channels)
-  - [HTTP Requests](#http-requests)
-  - [Actions](#actions)
-    - [Poke](#poke)
-    - [Subscribe](#subscribe)
-    - [Ack](#ack)
-    - [Unsubscribe](#unsubscribe)
-    - [Delete Channel](#delete-channel)
-  - [Responses](#responses)
-    - [Poke Ack](#poke-ack)
-    - [Watch Ack](#watch-ack)
-    - [Diff](#diff)
-    - [Quit](#quit)
-- [Scry](#scry)
-- [Spider](#spider)
-
-# Introduction
-
-This document contains reference information about Eyre's external APIs including [the channel system](#channels) and [scries](#scry). Each section will also have practical examples in the [Examples](@/docs/arvo/eyre/examples.md) document.
-
-# Authentication
+## Authentication
 
 To use Eyre's channel system, run threads or perform scries you must first obtain a session cookie by authenticating with the following HTTP request:
 
@@ -36,7 +14,7 @@ To use Eyre's channel system, run threads or perform scries you must first obtai
 | ----------- | -------------------------------------- | ---------- | ----------------------------------------------------------------------------------- |
 | `POST`      | `password=lidlut-tabwed-pillex-ridrup` | `/~/login` | The password is your web login code which can be obtained with `+code` in the dojo. |
 
-See the [examples](@/docs/arvo/eyre/examples.md#authenticating) for an example of how to do this using the curl.
+See the [examples](/docs/arvo/eyre/examples#authenticating) for an example of how to do this using the curl.
 
 Eyre's response will include a `set-cookie` header like:
 
@@ -50,7 +28,7 @@ The `urbauth-{...}` cookie provided must be included in a `cookie` header with a
 cookie: urbauth-~zod=0v4.ilskp.psv00.t09r0.l8rps.3n97v
 ```
 
-# Channels
+## Channels
 
 Eyre's channel system is the primary way of interacting with Gall agents from outside of Urbit.
 
@@ -73,9 +51,9 @@ All the events that Eyre sends you on a channel must be [ack](#ack)ed so that Ey
 
 When you're finished with a channel, you can send Eyre a [delete action](#delete-channel) to close it.
 
-See the [Using the Channel System](@/docs/arvo/eyre/examples.md#using-the-channel-system) section of the [Examples](@/docs/arvo/eyre/examples.md) document for a practical example.
+See the [Using the Channel System](/docs/arvo/eyre/examples#using-the-channel-system) section of the [Examples](/docs/arvo/eyre/examples) document for a practical example.
 
-## HTTP Requests
+### HTTP Requests
 
 [Actions](#actions) are sent to Eyre in HTTP PUT requests:
 
@@ -102,7 +80,7 @@ This is for poking a Gall agent.
 | `mark`   | String    | `'helm-hi'`   | Type of data. Must correspond to a mark definition in `/mar`. |
 | `json`   | Any       | `'hello'`     | Actual payload. Any JSON type, determined by app.             |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -115,7 +93,7 @@ This is for poking a Gall agent.
 }
 ```
 
-**Response**
+#### Response
 
 Eyre will send a [poke ack](#poke-ack) as an SSE event on the channel event stream.
 
@@ -131,7 +109,7 @@ This is for subscribing to a watch `path` of a Gall agent.
 | `app`    | String    | `'graph-store'` | Name of the gall agent to which you're subscribing. |
 | `path`   | String    | `'/updates'`    | The path to watch. Depends on the app.              |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -143,7 +121,7 @@ This is for subscribing to a watch `path` of a Gall agent.
 }
 ```
 
-**Response**
+#### Response
 
 Eyre will send back a [watch ack](#watch-ack). If subscribing was successful, you will also begin receiving any [diff](#diff)s sent by the Gall agent on the specified `path`.
 
@@ -157,7 +135,7 @@ This is for acknowledging an SSE event. If you `ack` one event, you also implici
 | `action`   | String    | `'ack'`       | The kind of action.                                      |
 | `event-id` | Number    | `7`           | ID of SSE event up to which you're acknowledging receipt |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -167,7 +145,7 @@ This is for acknowledging an SSE event. If you `ack` one event, you also implici
 }
 ```
 
-**Response**
+#### Response
 
 Eyre will not respond to an `ack` action.
 
@@ -181,7 +159,7 @@ This is for unsubscribing from a Gall agent watch `path` to which you've previou
 | `action`       | String    | `unsubscribe` | The kind of action.                                        |
 | `subscription` | Number    | `2`           | Request ID of the initial `subscribe` action from earlier. |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -191,7 +169,7 @@ This is for unsubscribing from a Gall agent watch `path` to which you've previou
 }
 ```
 
-**Response**
+#### Response
 
 Eyre will not respond to an `unsubscribe` action.
 
@@ -204,7 +182,7 @@ This is for deleting the channel itself.
 | `id`     | Number    | `5`           | ID for keeping track of sent messages. |
 | `action` | String    | `'delete'`    | The kind of action.                    |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -213,7 +191,7 @@ This is for deleting the channel itself.
 }
 ```
 
-**Response**
+#### Response
 
 Eyre will not respond to a `delete` action.
 
@@ -223,7 +201,7 @@ Eyre will not respond to a `delete` action.
 
 This acknowledgement comes in response to a [poke](#poke) action. A poke ack with an `ok` key means the poke succeeded. A poke ack with an `err` key means the poke failed.
 
-**Positive Poke Ack**
+#### Positive Poke Ack
 
 | Key        | JSON Type | Example Value | Description                                  |
 | ---------- | --------- | ------------- | -------------------------------------------- |
@@ -231,7 +209,7 @@ This acknowledgement comes in response to a [poke](#poke) action. A poke ack wit
 | `id`       | Number    | `1`           | Request ID of the `poke` being acknowledged. |
 | `response` | String    | `'poke'`      | The kind of action being acknowledged.       |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -241,7 +219,7 @@ This acknowledgement comes in response to a [poke](#poke) action. A poke ack wit
 }
 ```
 
-**Negative Poke Ack**
+#### Negative Poke Ack
 
 | Key        | JSON Type | Example Value    | Description                                                           |
 | ---------- | --------- | ---------------- | --------------------------------------------------------------------- |
@@ -249,7 +227,7 @@ This acknowledgement comes in response to a [poke](#poke) action. A poke ack wit
 | `id`       | Number    | `1`              | Request ID of the `poke` being acknowledged.                          |
 | `response` | String    | `'poke'`         | The kind of action being acknowledged.                                |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -259,7 +237,7 @@ This acknowledgement comes in response to a [poke](#poke) action. A poke ack wit
 }
 ```
 
-**Action Required**
+#### Action Required
 
 You must ack the event.
 
@@ -267,7 +245,7 @@ You must ack the event.
 
 This acknowledgement comes in response to a [subscribe](#subscribe) action. A watch ack with an `ok` key means the subscription was successful. A watch ack with an `err` key means the subscription failed.
 
-**Positive Watch Ack**
+#### Positive Watch Ack
 
 | Key        | JSON Type | Example Value | Description                                   |
 | ---------- | --------- | ------------- | --------------------------------------------- |
@@ -275,7 +253,7 @@ This acknowledgement comes in response to a [subscribe](#subscribe) action. A wa
 | `id`       | Number    | `2`           | Request ID of the initial `subscribe` action. |
 | `response` | String    | `'subscribe'` | The kind of action being acknowledged.        |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -285,7 +263,7 @@ This acknowledgement comes in response to a [subscribe](#subscribe) action. A wa
 }
 ```
 
-**Negative Watch Ack**
+#### Negative Watch Ack
 
 | Key        | JSON Type | Example Value    | Description                                                           |
 | ---------- | --------- | ---------------- | --------------------------------------------------------------------- |
@@ -293,7 +271,7 @@ This acknowledgement comes in response to a [subscribe](#subscribe) action. A wa
 | `id`       | Number    | `2`              | Request ID of the initial `subscribe` action.                         |
 | `response` | String    | `'subscribe'`    | The kind of action being acknowledged.                                |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -303,7 +281,7 @@ This acknowledgement comes in response to a [subscribe](#subscribe) action. A wa
 }
 ```
 
-**Action Required**
+#### Action Required
 
 You must ack the event.
 
@@ -317,7 +295,7 @@ All `fact`s sent by a Gall agent on the `path` to which you've subscribed are de
 | `id`       | Number    | `3`              | Request ID of the initial `subscribe` action from earlier.   |
 | `response` | String    | `'diff'`         | The kind of response. All `fact`s are marked `'diff'`.       |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -327,7 +305,7 @@ All `fact`s sent by a Gall agent on the `path` to which you've subscribed are de
 }
 ```
 
-**Action Required**
+#### Action Required
 
 You must [ack](#ack) each `diff` that comes in the event stream.
 
@@ -340,7 +318,7 @@ A `quit` comes in when a subscription has been ended. You may be intentionally k
 | `id`       | Number    | `4`           | Request ID of the initial `subscribe` action. |
 | `response` | String    | `'quit'`      | The kind of response.                         |
 
-**Example**
+#### Example
 
 ```json
 {
@@ -349,11 +327,11 @@ A `quit` comes in when a subscription has been ended. You may be intentionally k
 }
 ```
 
-**Action Required**
+#### Action Required
 
 You must ack the event and you may wish to try and re[subscribe](#subscribe).
 
-# Scry
+## Scry
 
 A scry is a read-only request for some data.
 
@@ -374,8 +352,8 @@ The `{mark}` is the type you want returned. It needn't just be `json` as with th
 
 If your session cookie is invalid or missing, Eyre will respond with a 403 Forbidden status. If the scry endpoint cannot be found, Eyre will respond with a 404 Missing status. If the `mark` conversions can't be done, Eyre will respond with a 500 Internal Server Error status. Otherwise, Eyre will respond with a 200 OK status with the requested data in the body of the HTTP response.
 
-See the [Scrying](@/docs/arvo/eyre/examples.md#scrying) section of the [Examples](@/docs/arvo/eyre/examples.md) document for a practical example.
+See the [Scrying](/docs/arvo/eyre/examples#scrying) section of the [Examples](/docs/arvo/eyre/examples) document for a practical example.
 
-# Spider
+## Spider
 
-See the [HTTP API](@/docs/userspace/threads/http-api.md) section of the [Threads](@/docs/userspace/threads/overview.md) documentation.
+See the [HTTP API](/docs/userspace/threads/http-api) section of the [Threads](/docs/userspace/threads/overview) documentation.
