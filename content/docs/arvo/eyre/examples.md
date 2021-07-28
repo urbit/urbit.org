@@ -4,29 +4,17 @@ weight = 6
 template = "doc.html"
 +++
 
-# Contents
-
-- [Introduction](#introduction)
-- [Authenticating](#authenticating)
-- [Using the Channel System](#using-the-channel-system)
-- [Scrying](#scrying)
-- [Direct HTTP Handling With Gall Agents](#direct-http-handling-with-gall-agents)
-- [Generators](#generators)
-- [Managing CORS Origins](#managing-cors-origins)
-
-# Introduction
-
 This documents contains practical examples of the various ways of interacting with Eyre.
 
-General documentation of the `task`s and methods described here are available in the [External API Reference](@/docs/arvo/eyre/external-api-ref.md) document and the [Internal API Reference](@/docs/arvo/eyre/tasks.md) document.
+General documentation of the `task`s and methods described here are available in the [External API Reference](/docs/arvo/eyre/external-api-ref) document and the [Internal API Reference](/docs/arvo/eyre/tasks) document.
 
-# Authenticating
+## Authenticating
 
-In most cases we must obtain a valid session cookie by [authenticating](@/docs/arvo/eyre/external-api-ref.md#authentication) with our web login code (which can be obtained by running `+code` in the dojo) before we can use Eyre's interfaces (such as the channel system or scry interface).
+In most cases we must obtain a valid session cookie by [authenticating](/docs/arvo/eyre/external-api-ref#authentication) with our web login code (which can be obtained by running `+code` in the dojo) before we can use Eyre's interfaces (such as the channel system or scry interface).
 
 Here we'll try authenticating with the default fakezod code.
 
-Using `curl` in the unix terminal, we'll make an HTTP POST request with `"password=<code>"` in the body:
+Using `curl` in the unix terminal, we'll make an HTTP POST request with `"password=CODE"` in the body:
 
 ```
 curl -i localhost:8080/~/login -X POST -d "password=lidlut-tabwed-pillex-ridrup"
@@ -44,9 +32,9 @@ set-cookie: urbauth-~zod=0v3.j2062.1prp1.qne4e.goq3h.ksudm; Path=/; Max-Age=6048
 
 The `urbauth-....` cookie can be now be included in subsequent requests (e.g. to the channel system) by providing it in a Cookie HTTP header.
 
-# Using The Channel System
+## Using The Channel System
 
-Here we'll look at a practical example of Eyre's channel system. You can refer to the [Channels](@/docs/arvo/eyre/external-api-ref.md#channels) section of the [External API Reference](@/docs/arvo/eyre/external-api-ref.md) document for relevant details.
+Here we'll look at a practical example of Eyre's channel system. You can refer to the [Channels](/docs/arvo/eyre/external-api-ref#channels) section of the [External API Reference](/docs/arvo/eyre/external-api-ref) document for relevant details.
 
 First, we must obtain a session cookie by [authenticating](#authenticating). You will be copying the entry of the `set-cookie` field into the `--cookie` field in subsequent commands.
 
@@ -54,7 +42,7 @@ Now that we have our cookie, we can try poking an app & simultaneously opening a
 
 We'll do this with an HTTP PUT request, and we'll include the cookie we obtained when we authenticated in the `Cookie` header. The URL path we'll make the request to will be `http://localhost:8080/~/channel/mychannel`. The last part of the path is the channel `UID` - the name for our new channel. Normally you'd use the current unix time plus a hash to ensure uniqueness, but in this case we'll just use `mychannel` for simplicity.
 
-The data will be a JSON array containing a [poke](@/docs/arvo/eyre/external-api-ref.md#poke) `action`:
+The data will be a JSON array containing a [poke](/docs/arvo/eyre/external-api-ref#poke) `action`:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -76,7 +64,7 @@ Now we can connect to the `mychannel` channel we opened. We do this with an HTTP
 curl -i --cookie "urbauth-~zod=0v3.j2062.1prp1.qne4e.goq3h.ksudm" http://localhost:8080/~/channel/my-channel
 ```
 
-Eyre will respond with an HTTP status code of 200 and a `content-type` of `text/event-stream`, indicating an SSE (Server Sent Event) stream. It will also send us any pending events on the channel - in this case the poke ack as a [poke](@/docs/arvo/eyre/external-api-ref.md#poke-ack) `response` for our original poke:
+Eyre will respond with an HTTP status code of 200 and a `content-type` of `text/event-stream`, indicating an SSE (Server Sent Event) stream. It will also send us any pending events on the channel - in this case the poke ack as a [poke](/docs/arvo/eyre/external-api-ref#poke-ack) `response` for our original poke:
 
 ```
 HTTP/1.1 200 ok
@@ -97,7 +85,7 @@ Normally this event stream would be handled by an EventSource object or similar 
 
 Leaving the event stream connection open, in another shell session on unix we'll try subscribing to the watch path of a Gall agent - the `/updates` watch path of `graph-store` in this case.
 
-We'll do this in the same way as the initial poke, except this time it will be a [subscribe](@/docs/arvo/eyre/external-api-ref.md#subscribe) `action`:
+We'll do this in the same way as the initial poke, except this time it will be a [subscribe](/docs/arvo/eyre/external-api-ref#subscribe) `action`:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -109,21 +97,21 @@ curl --header "Content-Type: application/json" \
 
 Notice we've incremented the `id` to `2`. Eyre doesn't require IDs to be sequential, merely numerical and unique, but sequential IDs are typically the most practical.
 
-Back in the event stream, we'll see a positive watch ack as a [subscribe](@/docs/arvo/eyre/external-api-ref.md#watch-ack) `response`, meaning the subscription has been successful:
+Back in the event stream, we'll see a positive watch ack as a [subscribe](/docs/arvo/eyre/external-api-ref#watch-ack) `response`, meaning the subscription has been successful:
 
 ```
 id: 1
 data: {"ok":"ok","id":2,"response":"subscribe"}
 ```
 
-Now we'll try trigger an event on our event stream. In fakezod's Landscape, create a new chat channel named "test". You should see the `add-graph` `graph-update` come through on our channel in a [diff](@/docs/arvo/eyre/external-api-ref.md#diff) `response`:
+Now we'll try trigger an event on our event stream. In fakezod's Landscape, create a new chat channel named "test". You should see the `add-graph` `graph-update` come through on our channel in a [diff](/docs/arvo/eyre/external-api-ref#diff) `response`:
 
 ```
 id: 2
 data: {"json":{"graph-update":{"add-graph":{"graph":{},"resource":{"name":"test-1183","ship":"zod"},"mark":"graph-validator-chat","overwrite":false}}},"id":2,"response":"diff"}
 ```
 
-All events we receive must be `ack`ed so Eyre knows we've successfully received them. To do this we'll send an [ack](@/docs/arvo/eyre/external-api-ref.md#ack) `action` which specifies the `event-id` of the event in question - `2` in this case:
+All events we receive must be `ack`ed so Eyre knows we've successfully received them. To do this we'll send an [ack](/docs/arvo/eyre/external-api-ref#ack) `action` which specifies the `event-id` of the event in question - `2` in this case:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -135,7 +123,7 @@ curl --header "Content-Type: application/json" \
 
 This same pattern would be repeated for all subsequent events. Note that when you `ack` one event, you also implicitly `ack` all previous events, so in this case event `1` will also be `ack`ed.
 
-When we're finished, we can unsubscribe from `graph-store` `/update`. We do this by sending Eyre a [unsubscribe](@/docs/arvo/eyre/external-api-ref.md#unsubscribe) `action`, and specify the request ID of the original `subscribe` `action` in the `subscription` field - `2` in our case:
+When we're finished, we can unsubscribe from `graph-store` `/update`. We do this by sending Eyre a [unsubscribe](/docs/arvo/eyre/external-api-ref#unsubscribe) `action`, and specify the request ID of the original `subscribe` `action` in the `subscription` field - `2` in our case:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -147,7 +135,7 @@ curl --header "Content-Type: application/json" \
 
 Unlike `poke` and `subscribe` actions, Eyre doesn't acknowledge `unsubscribe`s, but we'll now have stopped receiving updates from `graph-store`.
 
-Finally, let's close the channel itself. We can do this simply by sending Eyre a [delete](@/docs/arvo/eyre/external-api-ref.md#delete-channel) `action`:
+Finally, let's close the channel itself. We can do this simply by sending Eyre a [delete](/docs/arvo/eyre/external-api-ref#delete-channel) `action`:
 
 ```
 curl --header "Content-Type: application/json" \
@@ -159,9 +147,9 @@ curl --header "Content-Type: application/json" \
 
 With our channel deleted, we can now close the connection on the client side.
 
-# Scrying
+## Scrying
 
-Here we'll look at performing scries through Eyre. You can refer to the [Scry](@/docs/arvo/eyre/external-api-ref.md#scry) section of the [External API Reference](@/docs/arvo/eyre/external-api-ref.md) document for relevant details.
+Here we'll look at performing scries through Eyre. You can refer to the [Scry](/docs/arvo/eyre/external-api-ref#scry) section of the [External API Reference](/docs/arvo/eyre/external-api-ref) document for relevant details.
 
 First we must obtain a session cookie by [authenticating](#authenticating).
 
@@ -213,13 +201,13 @@ content-type: text/html
 <html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>There was an error while handling the request for /foo/bar/baz.json.</p><code>no scry result</code></body></html>
 ```
 
-# Direct HTTP Handling With Gall Agents
+## Direct HTTP Handling With Gall Agents
 
 In many cases you'll just want to interact with Gall agents through the JSON API of the channel system, but it's also possible to bypass all that and just deal with HTTP requests directly. Here we'll take a look at how that practically works.
 
-You can refer to the [%connect](@/docs/arvo/eyre/tasks.md#connect) section of the [Internal API Reference](@/docs/arvo/eyre/tasks.md) document for relevant details.
+You can refer to the [%connect](/docs/arvo/eyre/tasks#connect) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
-Here's a Gall agent that demonstrates this method. It binds the URL path `/foo`, serves `<h1>Hello, World!</h1>` for GET requests and a `405` error for all others. It also prints debug information to the terminal as various things happen.
+Here's a Gall agent that demonstrates this method. It binds the URL path `/foo`, serves `Hello, World!` for GET requests and a `405` error for all others. It also prints debug information to the terminal as various things happen.
 
 Note that this example does a lot of things manually for demonstrative purposes. In practice you'd likely want to use a library like `/lib/server.hoon` to cut down on boilerplate code.
 
@@ -336,7 +324,7 @@ activated app home/eyre-agent
 [unlinked from [p=~zod q=%eyre-agent]]
 ```
 
-Now, first we need to bind a URL to our app. In the `++ on-poke` arm, our agent will send a [%connect](@/docs/arvo/eyre/tasks.md#connect) `task` to Eyre when poked with `%bind`:
+Now, first we need to bind a URL to our app. In the `++ on-poke` arm, our agent will send a [%connect](/docs/arvo/eyre/tasks#connect) `task` to Eyre when poked with `%bind`:
 
 ```hoon
   %noun
@@ -436,11 +424,11 @@ Eyre subscribed to /http-response/~.eyre_0v3.1knjk.l544e.5uds6.fn9l2.f8929.
 
 This is a very rudimentary app but it demonstrates the basic mechanics of dealing with HTTP requests and serving responses.
 
-# Generators
+## Generators
 
 Here we'll look at running a generator via Eyre. Eyre doesn't have a mediated JSON API for generators, instead it just passes through the HTTP request and returns the HTTP response composed by the generator.
 
-You can refer to the [%serve](@/docs/arvo/eyre/tasks.md#serve) section of the [Internal API Reference](@/docs/arvo/eyre/tasks.md) document for relevant details.
+You can refer to the [%serve](/docs/arvo/eyre/tasks#serve) section of the [Internal API Reference](/docs/arvo/eyre/tasks) document for relevant details.
 
 Here's a very simple generator that will just echo back the body of the request (if available) along with the current datetime. You can save it in the `/gen` directory and `|commit %home`.
 
@@ -475,7 +463,7 @@ The sample of the second nested gate must be:
 [authenticated=? =request:http]
 ```
 
-The return type of the generator must be [simple-payload:http](@/docs/arvo/eyre/data-types.md#simple-payload-http). If you look at our example generator you'll see it meets these requirements.
+The return type of the generator must be [$simple-payload:http](/docs/arvo/eyre/data-types#simple-payloadhttp). If you look at our example generator you'll see it meets these requirements.
 
 Because generators return the entire HTTP message as a single `simple-payload`, Eyre can calculate the `content-length` itself and automatically add the header.
 
@@ -485,7 +473,7 @@ In order to make our generator available, we must bind it to a URL path. To do t
 [%serve =binding =generator]
 ```
 
-The [binding](@/docs/arvo/eyre/data-types.md#binding) specifies the site and URL path, and the [generator](@/docs/arvo/eyre/data-types.md#generator) specifies the `desk`, the `path` to the generator, and arguments. Note that the passing of arguments to the generator by Eyre is not currently implemented, so you can just leave that as `~` since it won't do anything.
+The [$binding](/docs/arvo/eyre/data-types#binding) specifies the site and URL path, and the [$generator](/docs/arvo/eyre/data-types#generator) specifies the `desk`, the `path` to the generator, and arguments. Note that the passing of arguments to the generator by Eyre is not currently implemented, so you can just leave that as `~` since it won't do anything.
 
 Let's bind our generator to the `/mygen` URL path with the `|pass` command in the dojo:
 
@@ -516,9 +504,9 @@ Content-Length: 41
 blah blah blah
 ```
 
-# Managing CORS Origins
+## Managing CORS Origins
 
-Here we'll look at approving and rejecting a CORS origin by passing Clay a [%approve-origin](@/docs/arvo/eyre/tasks.md#approve-origin) `task` and [%reject-origin](@/docs/arvo/eyre/tasks.md#reject-origin) `task` respectively.
+Here we'll look at approving and rejecting a CORS origin by passing Clay a [%approve-origin](/docs/arvo/eyre/tasks#approve-origin) `task` and [%reject-origin](/docs/arvo/eyre/tasks#reject-origin) `task` respectively.
 
 In this example we'll use more manual methods for demonstrative purposes but note there are also the `|cors-approve` and `|cors-reject` generators to approve/reject origins from the dojo, and the `+cors-registry` generator for viewing the CORS configuration.
 
@@ -528,7 +516,7 @@ First, using `|pass` in the dojo, let's approve the origin `http://foo.example` 
 |pass [%e [%approve-origin 'http://foo.example']]
 ```
 
-Now if we scry for the [approved](@/docs/arvo/eyre/scry.md#cors-approved) CORS `set`:
+Now if we scry for the [approved](/docs/arvo/eyre/scry#cors-approved) CORS `set`:
 
 ```
 > .^(approved=(set @t) %ex /=//=/cors/approved)
@@ -566,7 +554,7 @@ Now we'll try rejecting an `origin`. Back in the dojo, let's `|pass` Eyre a `%re
 |pass [%e [%reject-origin 'http://bar.example']]
 ```
 
-If we scry for the [rejected](@/docs/arvo/eyre/scry.md#cors-rejected) CORS `set`:
+If we scry for the [rejected](/docs/arvo/eyre/scry#cors-rejected) CORS `set`:
 
 ```
 > .^(rejected=(set @t) %ex /=//=/cors/rejected)
@@ -615,7 +603,7 @@ Connection: close
 Server: urbit/vere-1.5
 ```
 
-Now if we scry for the [requests](@/docs/arvo/eyre/scry.md#cors-requests) CORS `set`:
+Now if we scry for the [requests](/docs/arvo/eyre/scry#cors-requests) CORS `set`:
 
 ```
 > .^(requests=(set @t) %ex /=//=/cors/requests)
