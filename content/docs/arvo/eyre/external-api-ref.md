@@ -338,7 +338,7 @@ A scry is a read-only request for some data.
 A scry takes the form of an [authenticated](#authentication) HTTP GET request to a URL path with the following format:
 
 ```
-http{s}://{host}/~/scry/{app}{path}.{mark}
+http{s}://{host}/~/scry/{app}/{path}.{mark}
 ```
 
 The `{app}` is the name of the Gall agent you want to query, for example `graph-store`.
