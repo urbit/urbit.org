@@ -2,7 +2,7 @@
 title = "Urbit HTTP API for Python"
 date = 2021-06-22
 [taxonomies]
-grant_type = ["proposals"]
+grant_type = ["Proposal"]
 grant_category = ["App Dev:Other"]
 [extra]
 image = ""
