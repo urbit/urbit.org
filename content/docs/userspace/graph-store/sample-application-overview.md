@@ -7,7 +7,7 @@ insert_anchor_links = "right"
 +++
 
 
-## What is *Library*?
+## *Library*
 
 Library is a sample social media application in which you can create a collection of books, called a library, which can contain any number of books. 
 You can share individual collections per-ship. The creator of the collection has de-facto admin powers; he is the only one who can add or remove books to/from the library, 
@@ -24,7 +24,7 @@ Using this application, you can:
 You can find the source code at https://github.com/ynx0/library.  <!-- todo make this point to https://github.com/ynx0/library/ once branch is merged --> Before continuing with this overview, it is recommended to download the application and play around with it. You can find a detailed usage guide [here](https://github.com/ynx0/library/blob/master/README.md).
 
 
-## How is the project structured?
+## Project Structure
 
 Here is the directory structure of our app.
 ```
@@ -58,9 +58,9 @@ Here is the directory structure of our app.
 - [`install.sh`](https://github.com/ynx0/library/blob/master/install.sh) is a script that automates copying the source files into a ship's pier / home desk.
 
 
-## How does it achieve its functionality?
+## Implementation Summary
 
-As seen above, we have created a custom `%graph-store` validator to define our application's schema, and have also created a custom gall agent, called `%library-proxy`, which sends `%graph-store` updates between the host ship and subscribers.
+The project contains a custom `%graph-store` validator tht specifies the application's schema and a custom gall agent, called `%library-proxy`, which sends `%graph-store` updates between the host ship and subscribers.
 The gall agent also generates `%graph-store` updates based on commands and actions that a user issues. Commands can only be issued to a proxy by the ship owner, 
 while actions can be issued by any ship, but may fail based on permissions. A host ship's `%library-proxy` talks to the subscriber ship's `%library-proxy` through the normal gall app channels (pokes/peeks) 
 to send them any updates that have taken place on the library graph. It is the host's responsibility to forward all relevant updates to subscribers 
@@ -76,30 +76,31 @@ Here are the proxy's responsibilities:
 -   **Graph store update proxying** - handles the networking and subscription logic required to send graph store updates between host and subscriber
 -   **Access control** - allows or denies ships access to libraries, checks for proper permissions before processing a `command` or `action`
 
-## How does the app interact with `%graph-store`?
+## Interaction with `%graph-store`
 
-The app subscribes to graph store on init on path `/updates`, meaning it will be notified of every single update that occurs to `%graph-store`. (*Recall the type of graph-update, defined [here](https://github.com/urbit/urbit/blob/ceed4b78d068d7cb70350b3cd04e7525df1c7e2d/pkg/arvo/sur/graph-store.hoon#L29), the reference for which can be found [here](https://urbit.org/docs/userspace/graph-store/data-structure-overview/#update-part-1)*). Since `%graph-store` registers all validators under the path `%/graph/validator/<name of app>/hoon`, we don't have to do anything special to register our validator. We just need to correctly name our file, and provide an `+graph-indexed-post` arm which should perform all schema validation.
+There are a couple of ways that our application uses and interacts with `%graph-store`.
+Firstly, the app subscribes to `%graph-store` in `+on-init` on path `/updates`, meaning it will be notified of every single `graph-update` that occurs on the local ship. (*Recall the type of `graph-update`, defined [here](https://github.com/urbit/urbit/blob/ceed4b78d068d7cb70350b3cd04e7525df1c7e2d/pkg/arvo/sur/graph-store.hoon#L29), the reference for which can be found [here](https://urbit.org/docs/userspace/graph-store/data-structure-overview/#update-part-1)*). We also define a validator for our application that `%graph-store` uses for every *Library* graph. Since `%graph-store` registers all validators under the path `%/graph/validator/<name of app>/hoon`, we don't have to do anything special to register our validator. We just need to correctly name our file, and provide an `+graph-indexed-post` arm which should perform all schema validation.
 
-### How does it synchronize graph data between ships?
+### Synchronizing Graphs Between Ships
 
-An owner is responsible for forwarding any updates to clients. Whenever the `%library-proxy` gall agent receives an update from it's local `%graph-store`, it checks to see whether it's for a graph it owns or not. If it's not, we skip sending out updates since we don't own the resource\*. If it is, then we generate cards to poke each subscriber with that same graph update. This logic occurs within the agent's `+on-watch` arm, with the logic residing in the `handle-outgoing-graph-update` arm, found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L350).
+An owner is responsible for forwarding any updates to clients. Whenever the `%library-proxy` gall agent receives an update from it's local `%graph-store`, it checks to see whether it's for a graph it owns or not. If it's not, we skip sending out updates since we don't own the resource\*. If it is, then we generate cards to poke each subscriber with that same `graph-update`. This logic occurs within the agent's `+on-watch` arm, with the logic residing in the `handle-outgoing-graph-update` arm, found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L350).
 
-On the receiving end, since we know that we are not the source of the graph store, we handle the update in the `handle-incoming-graph-store` helper arm, which makes sure to only process and forward graph store updates to local graph store that are sent by the owner, and no one else. Once it passes this permissions check, it is poked into the local graph like any other graph-update.
+On the receiving end, since we know that we are not the source of the `graph-update`, we handle the update in the `handle-incoming-graph-store` helper arm, which makes sure to only process and forward graph store updates to local graph store that are sent by the owner, and no one else. Once it passes this permissions check, it is poked into the local graph like any other graph-update.
 
 \**One could imagine a gossip style protocol where the data is like a fact so it doesn't matter where it came from, but in this app the library host is defined as the source of truth.*
 
-## What data do we deal with and how is it represented?
+## Data Model
 
 There are two main application-side data structures that we define.
 The first type is [`book`](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L4-L9) which contains a title and an isbn.
 The second type is a [`comment`](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L3), which is just a simple string of text,
 meant to represent a comment on any given book.
 
-### How do you store your application data if we can only store limited data types in a node's content?
+### Representing Data using `%graph-store`
 
-The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we'll have to create an ad-hoc representation that we can cleanly convert to an from our own data types and `%graph-store` types. The conversion code can be seen [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19), where each arm takes in either a `book` or a `comment` and spits out a `(list content)`.
+The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we create an ad-hoc representation that we can cleanly convert to and from our own data types and `%graph-store` types. The conversion code can be seen [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19), where each arm takes in either a `book` or a `comment` and spits out a `(list content)`.
 
-### How is the application data structured using graph-store objects?
+## Organizing Data within `%graph-store`
 
 We define 3 core structures:
 
@@ -109,14 +110,14 @@ We define 3 core structures:
 
 We then define the layout of the data as follows:
 
-*   Library
+* Library
     - Book
         + Metadata Revision Container
-            *   Specific Metadata Revision
+            * Specific Metadata Revision
         + Comments Container
             * Specific Comment
 
-Every graph created with the `%graph-validator-library` is a library graph, and thus it has the following characteristics:
+Every graph created with the `%graph-validator-library` is a *Library* graph, and thus it has the following characteristics:
 
 -   Every Library graph represents a library, or a collection of books
 -   Every top level node in a library represents a book and all related contents
@@ -256,8 +257,7 @@ To make things more concrete, let's look at an example of an actual graph.
 * Every comment has an index of the datetime of when it was posted.
 * The metadata revisions are a single incrementing number starting from 1, so the initial metadata has a revision count of `1`, and a subsequent edit has a revision count of `2`, and so on.
 
-### How is the app's schema enforced on a given graph?
-
+### Schema Enforcement
 
 Recall that in `%graph-store`, all data that is to be added to a graph passes through our custom validator.
 Take a moment to read through it and cross-check your understanding with the following explanation.
@@ -271,9 +271,9 @@ Take a moment to read through it and cross-check your understanding with the fol
     We then use two helper arms `+is-title-valid` and `+is-isbn-valid` to validate the two values. For us, any title value is accepted, while only strings with length 10 or 13 are valid ISBNs.
    (We don't do any true ISBN validation for simplicity's sake)
 
-## How does it handle access control/permissioning?
+## Access Control
 
-### What are the rules of the permissioning system?
+### Rules
 
 There are explicit access control rules called `policy`s, (defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L47-L51))
 which are set by the user per-library at the time of creation (stored [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L187)).
@@ -282,17 +282,17 @@ These specify who can or cannot gain access to a library.
 There are also implicit rules, defined as follows:
 
 For any given library that one owns,
--   An owner can:
+- An owner can:
     + add a top level book node to any library
     + add a metadata revision to any book
     + add or remove any comment on any book
--   A reader, that is, a another ship granted access to the library, can:
+- A reader, that is, a another ship granted access to the library, can:
     + add a comment to any book that they have requested
     + remove any comment that they are the author of
 
 Implicitly, all readers are given permission to get any book when granted access to the library.
 
-### Where and how is the permissioning logic implemented?
+### Implementation
 
 - `policies` (defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L46)) is a map between the names of libraries that we own and what policy should be enforced on each one.
   It is a part of the agent state, shown  [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L14).
@@ -303,25 +303,23 @@ Implicitly, all readers are given permission to get any book when granted access
 -   It is also used [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L304) and [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L315), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
 -   Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323) [2](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49) [3](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264) [4](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299)]
 
-## Is this the only way to do it?
+## Alternative Methods
 
-**TL;DR**: No. The subscription logic and permissioning logic are up to the application developer to define and implement.
-
+There are a number of architectural decisions made in our application that may not be suitable for other projects.
 Many decisions made such as the definition of the schema, the user-facing and inter-proxy API, and the permissioning model could be done differently.
 For instance, many decisions in the schema and thus the validator were made to keep the schema simple. One could imagine allowing any content type and amount,
 while right now it is restricted to a single text content, and stricter validation of or a custom for the ISBN.
 The subscription model is also just one way to handle subscriptions and by no means the only one.
-The permissioning scheme was also implemented relatively simple; it has some limitiations, like the fact that you cannot change the permissions after creating the a library,
-or the fact that there are only 3 policy types.
+The permissioning scheme was also implemented relatively simple; it has some limitations, like the fact that you cannot change the permissions after creating the a library, or the fact that there are only 3 policy types.
 
-### How does the approach that %library-proxy takes differ from the existing graph push/pull hooks?
+### Comparison between `%library-proxy` and `%graph-push-hook`
 
-`%library-proxy` performs the functions of both graph push hook and graph pull hook.
-Graph pull hook is responsible for asking other graph-push-hooks for graph data,
-by trying to initiate a subscription on the host ship's graph-push-hook,which the host only allows if they have permissions.
-When it succeeds, graph-push-hook then sends out all graph-updates to those subscribers who need to hear about it.
-Graph pull hook then merges in graph updates it hears into the local graph store.
-So far, all the functionality is in line with %library-proxy.
+`%library-proxy` performs the functions of both `%graph-push-hook` and `%graph-pull-hook`.
+`%graph-pull-hook` is responsible for asking other `%graph-push-hook`s for graph data 
+by trying to initiate a subscription on the host ship's `%graph-push-hook`, which the host only allows if they have permissions.
+When it succeeds, `%graph-push-hook` then sends out all `graph-updates` to those subscribers who need to hear about it.
+`%graph-pull-hook` then merges in graph updates it hears into the local `%graph-store`.
+So far, all the functionality is in line with `%library-proxy`.
 
 The two main places where the hooks differ is in their choice of permissioning model and subscription model.
 To know whether a person is allowed to access a resource, pull hook uses checks to see whether they are a member of a group, while `%library-proxy` uses its own policy type.
