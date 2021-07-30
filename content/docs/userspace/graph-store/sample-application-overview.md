@@ -98,7 +98,22 @@ meant to represent a comment on any given book.
 
 ### Representing Data using `%graph-store`
 
-The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we create an ad-hoc representation that we can cleanly convert to and from our own data types and `%graph-store` types. The conversion code can be seen [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19), where each arm takes in either a `book` or a `comment` and spits out a `(list content)`.
+The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we create an ad-hoc representation that we can cleanly convert to and from our own data types and `%graph-store` types. 
+
+Here is the conversion code: [(link)](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19)
+
+```
+++  make-meta-contents
+  |=  [=book:library]
+  ^-  (list content)
+  ~[[%text title.book] [%text isbn.book]]
+++  make-comment-contents
+  |=  [comment-text=comment:library]
+  ^-  (list content)
+  ~[[%text comment-text]]
+```
+
+Each arm takes in either a `book` or a `comment`, our application specific data type, and spits out a `(list content)`, which is the type that a `node` uses to store its content.
 
 ### Organizing Data within `%graph-store`
 
@@ -259,8 +274,8 @@ To make things more concrete, let's look at an example of an actual graph.
 
 ### Schema Enforcement
 
-Recall that in `%graph-store`, all data that is to be added to a graph passes through our custom validator.
-Take a moment to read through it and cross-check your understanding with the following explanation.
+Recall that when using `%graph-store`, all data that is to be added to a graph passes through our [custom validator](https://github.com/ynx0/library/blob/master/mar/graph/validator/library.hoon).
+Take a moment to read through it and cross-check your understanding with the following summary.
 
 **Validator logic summary**
 
@@ -279,6 +294,15 @@ There are explicit access control rules called `policy`s, (defined [here](https:
 which are set by the user per-library at the time of creation (stored [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L187)).
 These specify who can or cannot gain access to a library.
 
+Here's what `policy` looks like:
+```
++$  policy
+  $%  [%open ~]                      ::  any ship is allowed
+      [%children ~]                  ::  any children (i.e. moons) are allowed
+      [%whitelist ships=(set ship)]  ::  any ships in the provided set are allowed
+  ==
+```
+
 There are also implicit rules, defined as follows:
 
 For any given library that one owns,
@@ -294,14 +318,28 @@ Implicitly, all readers are given permission to get any book when granted access
 
 ### Implementation
 
-- `policies` (defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L46)) is a map between the names of libraries that we own and what policy should be enforced on each one.
-  It is a part of the agent state, shown  [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L14).
+- `policies` is a `(map @tas policy)`. That is, a map between the names of libraries that we own and what policy should be enforced on each one and is a part of the agent state (shown [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L14)).
 
--   The `+is-allowed` arm implements each policy's behavior, and can be found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L21)
+- The `+is-allowed` arm, (found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L21))
+  implements each `policy`'s behavior, and is reproduced below.
+  ```
+  ++  is-allowed
+    |=  [requester=ship host=ship =policy:library]
+    ^-  ?
+    ?:  =(requester host)  :: host is always allowed
+      %.y
+    ?-  -.policy
+        %open       %.y
+        %children   (team:title host requester)
+        %whitelist  (~(has in ships.policy) requester)
+    ==
+  ```
+  Given the host ship of a resource and the policy to be enforced for a resource, `+is-allowed` returns a boolean for whether or not a requesting ship should be  allowed access to that resource.
 
--   `+is-allowed` is used in `+on-watch` [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L118), where it only allows a ship to subscribe to a library if it passes the permissions check
--   It is also used [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L304) and [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L315), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
--   Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323) [2](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49) [3](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264) [4](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299)]
+
+- `+is-allowed` is used in `+on-watch` [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L118), where it only allows a ship to subscribe to a library if it passes the permissions check.
+- It is also used [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L304) and [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L315), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
+- Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323) [2](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49) [3](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264) [4](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299)]
 
 ## Alternative Methods
 
