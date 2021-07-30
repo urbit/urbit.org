@@ -100,7 +100,7 @@ meant to represent a comment on any given book.
 
 The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we create an ad-hoc representation that we can cleanly convert to and from our own data types and `%graph-store` types. The conversion code can be seen [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19), where each arm takes in either a `book` or a `comment` and spits out a `(list content)`.
 
-## Organizing Data within `%graph-store`
+### Organizing Data within `%graph-store`
 
 We define 3 core structures:
 
