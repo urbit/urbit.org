@@ -204,7 +204,7 @@ Lets us adjust types without violating type constraints.
 
 ### `^:` ketcol
 
-[docs](/docs/hoon/reference/rune/ket.md#ketcol) \\,
+[docs](/docs/hoon/reference/rune/ket#ketcol) \\,
 
 `[%ktcl p=spec]`: mold gate for type `p`.
 
@@ -224,7 +224,7 @@ Irregular: `` `p`q ``
 
 ### `^*` kettar
 
-[docs](/docs/hoon/reference/rune/ket.md#kettar) \\\*
+[docs](/docs/hoon/reference/rune/ket#kettar) \\\*
 
 `[%kttr p=spec]`: produce bunt value of mold.
 

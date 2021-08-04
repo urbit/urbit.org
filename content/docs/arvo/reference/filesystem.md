@@ -20,7 +20,7 @@ definitions in `/lib`, for example.
 - `/lib` contains libraries that may be shared by multiple agents, threads,
   generators, etc. However, this is not the location of the standard libraries
   (see `/sys`). Libraries are imported from `/lib` with `/+`.
-- `/mar` contains [mark](/docs/arvo/clay/architecture.md#marks) definitions.
+- `/mar` contains [mark](/docs/arvo/clay/architecture#marks) definitions.
 - `/sur` contains shared [structure](/docs/hoon/reference/rune/) definitions.
   Whenever you expect structures to be used by code across multiple files, it
   is recommended to place their shared structures in `/sur`. Structures are
@@ -60,7 +60,7 @@ give a brief description of each of them.
   vanes, as well as a few functions. In particular, this includes the
   definitions of the `card`s utilized by each vane, each of which are
   documented in their respective documentation. `lull.hoon` is loaded by the
-  kernel during the [larval stage](/docs/arvo/overview.md#larval-stage-core)
+  kernel during the [larval stage](/docs/arvo/overview#larval-stage-core)
   in order to prepare to create the vanes. `arvo.hoon` is the subject of `lull.hoon`.
 - `zuse.hoon` is the Arvo standard library. It consists primarily of functions
   shared by the kernel and vanes, such as the ones related to

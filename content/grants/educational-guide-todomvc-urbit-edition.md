@@ -61,7 +61,7 @@ using it.
 
 This section is fairly straightforward, as it has been covered many times
 before. ~timluc-miptev's gall guide has a [great
-overview](https://github.com/timlucmiptev/gall-guide/blob/master/workflow.md#three-workflow-options)
+overview](https://github.com/timlucmiptev/gall-guide/blob/master/workflow#three-workflow-options)
 of how to work with fake ships efficiently, and the existing documentation has
 plenty of material material.
 

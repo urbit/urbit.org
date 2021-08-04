@@ -135,7 +135,7 @@ The 32-bit header is given by the following data, presented in order:
  - 2 bits: sender address size
  - 2 bits: receiver address size
  - 20 bits: checksum (truncated insecure hash of the body, done with
-   [`+mug`](/docs/hoon/reference/stdlib/2e.md#mug)
+   [`+mug`](/docs/hoon/reference/stdlib/2e#mug)
  - 1 bit: is this relayed? (if set, `origin` will be present in the body)
 
  Every packet sent between ships is encrypted except for self-signed attestation packets from 128-bit comets.
@@ -167,7 +167,7 @@ order:
  filtering of honest packets sent to or from a stale life.
  
  The ciphertext is formed by `+jam`ming a `$shut-packet` and then encrypting
- using [`+en:sivc:aes:crypto`](/docs/arvo/reference/cryptography.md#en).
+ using [`+en:sivc:aes:crypto`](/docs/arvo/reference/cryptography#en).
 
 ### Packeting
 

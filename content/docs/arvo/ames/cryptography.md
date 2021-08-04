@@ -37,7 +37,7 @@ The encrypted payload of each packet is a `$shut-packet`, which is the `+jam` of
 a cell with the `bone`, message number, and message fragment or ack (see
 [Ames](/docs/arvo/ames/ames) for more information on packet structure). The
 message fragment is signed using the authentication key. It is encrypted using
-[`+en:crub:crypto`](/docs/arvo/reference/cryptography.md#en) found in
+[`+en:crub:crypto`](/docs/arvo/reference/cryptography#en) found in
 `sys/zuse.hoon`, which utilizes the 256-bit AES-SIV algorithm.
 
 ## Diffie-Hellman key exchange {#key-exchange}
@@ -45,7 +45,7 @@ message fragment is signed using the authentication key. It is encrypted using
 For each foreign ship a given ship has communicated with, `$ames-state` contains a
 `$peer-state`, inside which the `$symmetric-key` (an atom which nests under
 `@uw`) is utilized for encrypting all Ames packets shared between the two ships.
-The `symmetric-key` is derived using [`+shar:ed:crypto`](/docs/arvo/reference/cryptography.md#ed) found in `sys/zuse.hoon`,
+The `symmetric-key` is derived using [`+shar:ed:crypto`](/docs/arvo/reference/cryptography#ed) found in `sys/zuse.hoon`,
 which is an arm utilized for generating the symmetric key for elliptic curve
 [Diffie-Hellman key
 exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)
@@ -62,7 +62,7 @@ its identity with an "attestation packet". This is an unencrypted packet whose
 payload is the comet's signature created with its private key. This is the only
 circumstance under which a ship will send an unencrypted packet. The signature
 is generated with
-[`+sign:as:crub`](/docs/arvo/reference/cryptography.md#sign-as) found in
+[`+sign:as:crub`](/docs/arvo/reference/cryptography#sign-as) found in
 `sys/zuse.hoon`.
 
 Upon hearing an attestation packet, the receiving ship will generate a symmetric
@@ -77,7 +77,7 @@ with a non-comet. This is a technical limitation with a planned workaround.
 ## `+acru:ames` {#crypto-core}
 
 The `+crypto-core` in `$ames-state` is an `+acru:ames` core, a
-[lead](/docs/hoon/reference/advanced.md#dry-polymorphism-and-core-nesting-rules)
+[lead](/docs/hoon/reference/advanced#dry-polymorphism-and-core-nesting-rules)
 interface core for asymmetric cryptosuites found in `sys/lull.hoon` which
 handles encryption, decryption, signing, and verifying. In practice, the only
 cryptosuite in use is [`+crub:crypto`](#crub), which implements [Suite B
@@ -112,7 +112,7 @@ Cryptography](https://en.wikipedia.org/wiki/NSA_Suite_B_Cryptography).
 As the `+acru` core is merely an interface, the details on how it is implemented
 may vary according to the cryptosuite. We summarize what each
 core is utilized for here, but see
-[`crub:crypto`](/docs/arvo/reference/cryptography.md#crub) for more details on
+[`crub:crypto`](/docs/arvo/reference/cryptography#crub) for more details on
 how the specific cryptosuite utilized by Ames is implemented.
 
 #### `+as:acru`
