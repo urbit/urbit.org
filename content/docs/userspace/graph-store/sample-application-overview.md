@@ -66,14 +66,14 @@ The project contains a custom `%graph-store` validator tht specifies the applica
 The gall agent also generates `%graph-store` updates based on commands and actions that a user issues. Commands can only be issued to a proxy by the ship owner, 
 while actions can be issued by any ship, but may fail based on permissions. A host ship's `%library-proxy` talks to the subscriber ship's `%library-proxy` through the normal gall app channels (pokes/peeks) 
 to send them any updates that have taken place on the library graph. It is the host's responsibility to forward all relevant updates to subscribers 
-(kept track of in a data structure defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L14-L15)),
+(kept track of in a data structure defined [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/sur/library.hoon#L14-L15)),
 while subscribers must only trust graph updates that it receives from the owner of that resource.
 
 Here are the proxy's responsibilities:
 
 -   **Application-specific API** - presents an interface for a user to interact with both his/her own library proxy and others' by directly defining and implementing a user-facing API as pokes and scries, 
-    as opposed to forcing the user to deal with the graph-store API directly. The `command`/`action`/`response` poke types are defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L19-L44),
-    while the scries are defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/app/library-proxy.hoon#L137).
+    as opposed to forcing the user to deal with the graph-store API directly. The `command`/`action`/`response` poke types are defined [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/sur/library.hoon#L17-L42),
+    while the scries are defined [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L132).
 -   **Graph store update creation** - creates the appropriate graph update for a given user-facing action
 -   **Graph store update proxying** - handles the networking and subscription logic required to send graph store updates between host and subscriber
 -   **Access control** - allows or denies ships access to libraries, checks for proper permissions before processing a `command` or `action`
@@ -85,7 +85,7 @@ Firstly, the app subscribes to `%graph-store` in `+on-init` on path `/updates`, 
 
 ### Synchronizing Graphs Between Ships
 
-An owner is responsible for forwarding any updates to clients. Whenever the `%library-proxy` gall agent receives an update from it's local `%graph-store`, it checks to see whether it's for a graph it owns or not. If it's not, we skip sending out updates since we don't own the resource\*. If it is, then we generate cards to poke each subscriber with that same `graph-update`. This logic occurs within the agent's `+on-watch` arm, with the logic residing in the `handle-outgoing-graph-update` arm, found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L350).
+An owner is responsible for forwarding any updates to clients. Whenever the `%library-proxy` gall agent receives an update from it's local `%graph-store`, it checks to see whether it's for a graph it owns or not. If it's not, we skip sending out updates since we don't own the resource\*. If it is, then we generate cards to poke each subscriber with that same `graph-update`. This logic occurs within the agent's `+on-watch` arm, with the logic residing in the `handle-outgoing-graph-update` arm, found [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L345).
 
 On the receiving end, since we know that we are not the source of the `graph-update`, we handle the update in the `handle-incoming-graph-store` helper arm, which makes sure to only process and forward graph store updates to local graph store that are sent by the owner, and no one else. Once it passes this permissions check, it is poked into the local graph like any other graph-update.
 
@@ -94,15 +94,15 @@ On the receiving end, since we know that we are not the source of the `graph-upd
 ## Data Model
 
 There are two main application-side data structures that we define.
-The first type is [`book`](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L4-L9) which contains a title and an isbn.
-The second type is a [`comment`](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L3), which is just a simple string of text,
+The first type is [`book`](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/sur/library.hoon#L4-L9) which contains a title and an isbn.
+The second type is a [`comment`](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/sur/library.hoon#L3), which is just a simple string of text,
 meant to represent a comment on any given book.
 
 ### Representing Data using `%graph-store`
 
 The data types we defined for our application do not fit within `%graph-store` out of the box. `%graph-store` doesn't allow arbitrarily typed data in a node's content field, so we create an ad-hoc representation that we can cleanly convert to and from our own data types and `%graph-store` types. 
 
-Here is the conversion code: [(link)](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L12-L19)
+Here is the conversion code: [(link)](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/lib/library.hoon#L12-L19)
 
 ```
 ++  make-meta-contents
@@ -292,8 +292,8 @@ Take a moment to read through it and cross-check your understanding with the fol
 
 ### Rules
 
-There are explicit access control rules called `policy`s, (defined [here](https://github.com/ynx0/library/blob/2b75bc6fd6c31d9c9eddd26c156db39f866258eb/sur/library.hoon#L47-L51))
-which are set by the user per-library at the time of creation (stored [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L187)).
+There are explicit access control rules called `policy`s, (defined [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/sur/library.hoon#L45-L49))
+which are set by the user per-library at the time of creation (stored [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L179)).
 These specify who can or cannot gain access to a library.
 
 Here's what `policy` looks like:
@@ -320,9 +320,9 @@ Implicitly, all readers are given permission to get any book when granted access
 
 ### Implementation
 
-- `policies` is a `(map @tas policy)`. That is, a map between the names of libraries that we own and what policy should be enforced on each one and is a part of the agent state (shown [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L14)).
+- `policies` is a `(map @tas policy)`. That is, a map between the names of libraries that we own and what policy should be enforced on each one and is a part of the agent state (shown [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L13)).
 
-- The `+is-allowed` arm, (found [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/lib/library.hoon#L21))
+- The `+is-allowed` arm, (found [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/lib/library.hoon#L21))
   implements each `policy`'s behavior, and is reproduced below.
   ```
   ++  is-allowed
@@ -339,9 +339,9 @@ Implicitly, all readers are given permission to get any book when granted access
   Given the host ship of a resource and the policy to be enforced for a resource, `+is-allowed` returns a boolean for whether or not a requesting ship should be  allowed access to that resource.
 
 
-- `+is-allowed` is used in `+on-watch` [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L118), where it only allows a ship to subscribe to a library if it passes the permissions check.
-- It is also used [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L304) and [here](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L315), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
-- Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L323) [2](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L49) [3](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L264) [4](https://github.com/ynx0/library/blob/4c47fdd88dc0f41b3d611192b2f77dddbddc226f/app/library-proxy.hoon#L299)]
+- `+is-allowed` is used in `+on-watch` [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L113), where it only allows a ship to subscribe to a library if it passes the permissions check.
+- It is also used [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L299) and [here](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L310), so that when a ship wants to know about what libraries and books exist, only data they are allowed to see gets revealed to them.
+- Some of the more ad-hoc/implicit permission rules are implemented at the following locations: [[1](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L318) [2](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L48) [3](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L256) [4](https://github.com/ynx0/library/blob/9104145bb24e8ec949a5e9685139665b07161dd6/app/library-proxy.hoon#L299)]
 
 ## Alternative Methods
 
