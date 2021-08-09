@@ -5,7 +5,6 @@ template = "doc.html"
 aliases = ["/docs/learn/arvo/clay/"]
 +++
 
-
 Our filesystem.
 
 `%clay` is version-controlled, referentially-transparent, and global.
@@ -56,3 +55,7 @@ Details of the various `task`s you can use to interact with Clay.
 [Examples](/docs/arvo/clay/examples)
 
 Example usage of the various Clay `task`s.
+
+[Marks](/docs/arvo/clay/marks/marks)
+
+Details of `mark`s as well as a guide to writing them and their usage.

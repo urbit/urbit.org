@@ -23,7 +23,7 @@ state is persistent.
 In a more traditional OS, everything in RAM can be erased at any
 time by power failure, and is always erased on reboot. Thus, a
 primary purpose of a filesystem is to ensure files persist across
-power failures and reboots.  In Arvo, both power failures and
+power failures and reboots. In Arvo, both power failures and
 reboots are special cases of suspending computation, which is
 done safely since our event log is already persistent. Therefore,
 Clay is not needed in Arvo for persistence. Why, then, do we have a
@@ -37,7 +37,7 @@ tree. It is easy and intuitive to read from and write to a
 filesystem tree.
 
 Second, Clay has a distributed revision-control system baked into
-it.  Traditional filesystems are not revision controlled, so
+it. Traditional filesystems are not revision controlled, so
 userspace software -- such as git -- is written on top of them to
 do so. Clay natively provides the same functionality as modern
 DVCSes, and more.
@@ -101,25 +101,25 @@ the topmost commit is always numbered, and every numbered commit
 is an ancestor of every later numbered commit.
 
 There are three ways to refer to particular commits in the
-revision history.  Firstly, one can use the revision number.
+revision history. Firstly, one can use the revision number.
 Secondly, one can use any absolute time between the one numbered
 commit and the next (inclusive of the first, exclusive of the
 second). Thirdly, every `desk` has a `map` of labels to revision
 numbers. These labels may be used to refer to specific commits.
 
 Additionally, Clay is a global filesystem, so data on other urbits
-is easily accessible the same way as data on our local urbit.  In
+is easily accessible the same way as data on our local urbit. In
 general, the path to a particular revision of a `desk` is
-`/~urbit-name/desk-name/revision`.  Thus, to get `/try/readme/md`
+`/~urbit-name/desk-name/revision`. Thus, to get `/try/readme/md`
 from revision 5 of the home `desk` on `~sampel-sipnym`, we refer to
-`/~sampel-sipnym/home/5/try/readme/md`.  Clay's namespace is thus
+`/~sampel-sipnym/home/5/try/readme/md`. Clay's namespace is thus
 global and referentially transparent.
 
 ### A Typed Filesystem
 
 Since Clay is a general filesystem for storing data of arbitrary
 types, in order to revision control correctly it needs to be
-aware of types all the way through.  Traditional revision control
+aware of types all the way through. Traditional revision control
 does an excellent job of handling source code, so for source code
 we act very similar to traditional revision control. The
 challenge is to handle other data similarly well.
@@ -145,7 +145,7 @@ branches and merged at will.
 Suppose Alice is tasked with touching up a picture, improving the
 color balance, adjusting the contrast, and so forth, while Bob
 has the job of cropping the picture to fit where it's needed and
-adding textual overlay.  Without type-aware revision control,
+adding textual overlay. Without type-aware revision control,
 these changes must be made serially, requiring Alice and Bob to
 explicitly coordinate their efforts. With type-aware revision
 control, these operations may be performed in parallel, and then
@@ -168,87 +168,11 @@ different sentences may be flagged as a conflict. In general,
 prose should be diffed by sentence, not by line.
 
 As far as we are aware, Clay is the first generalized,
-type-aware revision control system.  We'll go into the workings
+type-aware revision control system. We'll go into the workings
 of this system in some detail.
 
 ### Marks
 
-Central to a typed filesystem is the idea of types. In Clay, we
-call these `mark`s. A `mark` is a file that defines a type,
-conversion routines to and from the `mark`, and diff, patch, and
-merge routines.
-
-For example, a `%txt` mark may be a list of lines of text, and it
-may include conversions to `%mime` to allow it to be serialized
-and sent to a browser or to the Unix filesystem. It will also
-include Hunt-McIlroy diff, patch, and merge algorithms.
-
-A `%json` `mark` would be defined as a JSON object in the code, and
-it would have a parser to convert from `%txt` and a printer to
-convert back to `%txt`. The diff, patch, and merge algorithms are
-fairly straightforward for JSON, though they're very different
-from the text ones.
-
-More formally, a `mark` is a core with three [arms](/docs/glossary/arm/): `+grab`,
-`+grow`, and `+grad`. In `+grab` is a series of functions to
-convert from other `mark`s to the given `mark`.  In `+grow` is a
-series of functions to convert from the given `mark` to other
-`mark`s. In `+grad` is `+diff`, `+pact`, `+join`, and `+mash`, and
-`+form`.
-
-The types are as follows, in an informal pseudocode:
-
-```
-    ++  grab:
-      ++  mime: <mime> -> <mark-type>
-      ++  txt: <txt> -> <mark-type>
-      ...
-    ++  grow:
-      ++  mime: <mark-type> -> <mime>
-      ++  txt: <mark-type> -> <txt>
-      ...
-    ++  grad
-      ++  form: <mark-type>
-      ++  diff: (<mark-type>, <mark-type>) -> <diff-type>
-      ++  pact: (<mark-type>, <diff-type>) -> <mark-type>
-      ++  join: (<diff-type>, <diff-type>) -> <diff-type> or NULL
-      ++  mash: (<diff-type>, <diff-type>) -> <diff-type>
-```
-
-These types are basically what you would expect. Not every `mark`
-has each of these functions defined -- all of them are optional
-in the general case.
-
-In general, for a particular `mark`, the `+grab` and `+grow` entries
-(if they exist) should be inverses of each other.
-
-In `+grad`, `+diff` takes two instances of a `mark` and produces a diff of them
-whose `mark` is given by `+form`. `+pact` takes an instance of a `mark` and
-patches it with the given diff. `+join` takes two diffs and attempts to merge
-them into a single diff. If there are conflicts, it produces null. `+mash` takes
-two diffs and forces a merge, annotating any conflicts.
-
-In general, if `+diff` called with A and B produces diff D, then
-`+pact` called with A and D should produce B. Also, if `+join`
-of two diffs does not produce null, then `+mash` of the same
-diffs should produce the same result.
-
-Alternately, instead of `+diff`, `+pact`, `+join`, and
-`+mash`, a `mark` can provide the same functionality by defining
-`+grad` to be the name of another `mark` to which we wish to
-delegate the revision control responsibilities. Then, before
-running any of those functions, Clay will convert to the other
-`mark`, and convert back afterward. For example, the `%hoon` `mark`
-is revision-controlled in the same way as `%txt`, so its `+grad`
-is simply `++  grad  %txt`. Of course, `+txt` must be defined in
-`+grow` and `+grab` as well.
-
-Every file in Clay has a `mark`, and that `mark` must have a
-fully-functioning `+grad`. `Mark`s are used for more than just
-Clay, and other `mark`s don't need a `+grad`, but if a piece of
-data is to be saved to Clay, we must know how to revision-control
-it.
-
-Additionally, if a file is to be synced out to Unix, then it must
-have conversion routines to and from the `%mime` `mark`.
-
+Central to a typed filesystem is the idea of file types. In Clay, we
+call these `mark`s. See the [Marks](/docs/arvo/clay/marks/marks)
+section for more details.
