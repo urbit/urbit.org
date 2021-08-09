@@ -18,7 +18,7 @@ blah,blah,blah
 
 There is a little complexity surrounding special characters in fields and line endings, but otherwise the only other rule is that all rows must have the same number of fields. You can refer to [RFC4180 on the IETF website](https://datatracker.ietf.org/doc/html/rfc4180) for more details.
 
-The simplest way to represent such a structure in urbit is as a `(list (list @t))` like:
+The simplest way to represent such a structure in Hoon is as a `(list (list @t))` like:
 
 ```hoon
 [['foo' 'bar' 'baz' ~] ['blah' 'blah' 'blah' ~] ['1' '2' '3' ~] ~]
