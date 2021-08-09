@@ -4,7 +4,7 @@ weight = 3
 template = "doc.html"
 +++
 
-In the last document, [Writing Marks](/docs/arvo/clay/marks/writing-marks), we walked through writing `mark` files and touched on how Clay handles them. They needn't just be left to background Vane processes though, you can also use them yourself in your code.
+In the last document, [Writing Marks](/docs/arvo/clay/marks/writing-marks), we walked through writing `mark` files and touched on how Clay handles them. They needn't just be left to background vane processes though, you can also use them yourself in your code.
 
 There are two kinds of cores that Clay can build for you: A `mark` conversion gate and a `mark` core. Each has two kinds: Statically typed and dynamically typed. Clay has a `care` for producing each of these:
 
