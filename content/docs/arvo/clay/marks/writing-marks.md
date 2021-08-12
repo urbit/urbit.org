@@ -68,7 +68,7 @@ The `%mime` `mark` is used by Clay to store and convert `$mime` data. It's an im
 
 So with the nature of the `%mime` `mark` hopefully now clear, the reason we want conversion methods to and from `%mime` in our `%csv` `mark` is so we can import CSV files from Unix and vice versa.
 
-Since a CSV file on Unix will just be a long string with ASCII or UTF-8 encoding, we can treat `q.q` in the `$mime` as a `cord`, and thus write a parser to convert it to a `(list (list @t))`. For this, I've created a `csv.hoon` library, which you can view in full on the [Examples](/docs/arvo/clay/marks/examples#libcsvhoon) page.
+Since a CSV file on Unix will just be a long string with ASCII or UTF-8 encoding, we can treat `q.q` in the `$mime` as a `cord`, and thus write a parser to convert it to a `(list (list @t))`. For this purpose, here's a library: `csv-mark.hoon`, which you can view in full on the [Examples](/docs/arvo/clay/marks/examples#libcsv-markhoon) page. Note there's already a `csv.hoon` library in `/lib`, but we're creating a separate one for demonstrative purposes here.
 
 The library contains four functions:
 
@@ -102,7 +102,7 @@ Let's try the library in the dojo. After we've added it to `/lib` and run `|comm
 With that working, we can add an import for our library to our `%csv` `mark` defintion and add a `+mime` arm to both our `+grab` and `+grow` arms:
 
 ```hoon
-/+  *csv
+/+  *csv-mark
 |_  csv=(list (list @t))
 ++  grab
   |%
@@ -179,16 +179,16 @@ So now our `%csv` `mark` lets us move data in and out of Urbit. In the next sect
 
 So far we've just delegated `+grad` functions to the `%noun` `mark`, but now we'll look at writing our own.
 
-For demonstrative purposes I've just poached the algorithms used in the `+grad` arm of the `%txt` `mark` and modified them to take our `(list (list @t))` type instead of a `wain`. It's not the most efficient algorithm for a CSV file but it'll do the job.
+For demonstrative purposes, we can just poach the algorithms used in the `+grad` arm of the `%txt` `mark` and modify them to take our `(list (list @t))` type instead of a `wain`. It's not the most efficient algorithm for a CSV file but it'll do the job.
 
 Our diff format will be a `(urge:clay (list @t))`, and we'll use some `differ` functions from `zuse.hoon` like `+loss`, `+lusk` and `+lurk` to produce diffs and apply patches.
 
-The [csv.hoon library](/docs/arvo/clay/marks/examples#lib-csv-hoon) we imported also contains a `+csv-join` function which we'll use in the `+join` arm, just to save space here.
+The [csv-mark.hoon library](/docs/arvo/clay/marks/examples#libcsv-markhoon) we imported also contains a `+csv-join` function which we'll use in the `+join` arm, just to save space here.
 
 Here's the new `%csv` `mark` defintion:
 
 ```hoon
-/+  *csv
+/+  *csv-mark
 |_  csv=(list (list @t))
 ++  grab
   |%

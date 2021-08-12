@@ -6,7 +6,7 @@ template = "doc.html"
 
 These are the files used in the [Writing Marks](/docs/arvo/clay/marks/writing-marks) guide.
 
-## `/lib/csv/hoon`
+## `/lib/csv-mark/hoon`
 
 ```hoon
 |%
