@@ -8,7 +8,9 @@ Clay is a typed filesystem, and we call these file types `mark`s. When talking a
 
 For example, a `%txt` `mark` defines the type of a `%txt` file as a `wain` (a `(list @t)`). It defines a conversion function to a `%mime` `mark` to allow it to be serialized and sent to a browser or to the Unix filesystem. It also includes Hunt-McIlroy diff, patch, and merge algorithms. Conversion functions will be different for different `mark`s, as will things like diff algorithms. An image file like a `%png`, for example, just replaces the old blob of data with the new one rather than implementing a complex binary diff and patch algorithm, so how these functions are implemented depends on the file type and use case.
 
-More formally, a `mark` is a door (a core with a sample) with three arms: `+grab`, `+grow`, and `+grad`. The door's sample defines its type. In `+grab` is a series of functions to convert from other `mark`s to the given `mark`. In `+grow` is a series of functions to convert from the given `mark` to other `mark`s. In `+grad` is `+diff`, `+pact`, `+join`, `+mash`, and `+form`.
+`mark` files are stored in the `/mar` directory. The `path` of the `%txt` `mark`, for example, is `/mar/txt/hoon`.
+
+A `mark` is a door (a core with a sample) with three arms: `+grab`, `+grow`, and `+grad`. The door's sample defines its type. In `+grab` is a series of functions to convert from other `mark`s to the given `mark`. In `+grow` is a series of functions to convert from the given `mark` to other `mark`s. In `+grad` is `+diff`, `+pact`, `+join`, `+mash`, and `+form`.
 
 Here's its basic structure in an informal pseudocode:
 
