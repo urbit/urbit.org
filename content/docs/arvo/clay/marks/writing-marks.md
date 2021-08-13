@@ -18,11 +18,13 @@ blah,blah,blah
 
 There is a little complexity surrounding special characters in fields and line endings, but otherwise the only other rule is that all rows must have the same number of fields. You can refer to [RFC4180 on the IETF website](https://datatracker.ietf.org/doc/html/rfc4180) for more details.
 
-The simplest way to represent such a structure in Hoon is as a `(list (list @t))` like:
+We'll represent such a structure in Hoon as a `(list (list @t))` like:
 
 ```hoon
 [['foo' 'bar' 'baz' ~] ['blah' 'blah' 'blah' ~] ['1' '2' '3' ~] ~]
 ```
+
+We could perhaps create the type with a `$|` rune to include row-length validation in the mold itself, but a `(list (list @t))` is simpler for demonstrative purposes.
 
 ## A simple mark
 
@@ -68,7 +70,9 @@ The `%mime` `mark` is used by Clay to store and convert `$mime` data. It's an im
 
 So with the nature of the `%mime` `mark` hopefully now clear, the reason we want conversion methods to and from `%mime` in our `%csv` `mark` is so we can import CSV files from Unix and vice versa.
 
-Since a CSV file on Unix will just be a long string with ASCII or UTF-8 encoding, we can treat `q.q` in the `$mime` as a `cord`, and thus write a parser to convert it to a `(list (list @t))`. For this purpose, here's a library: `csv-mark.hoon`, which you can view in full on the [Examples](/docs/arvo/clay/marks/examples#libcsv-markhoon) page. Note there's already a `csv.hoon` library in `/lib`, but we're creating a separate one for demonstrative purposes here.
+Since a CSV file on Unix will just be a long string with ASCII or UTF-8 encoding, we can treat `q.q` in the `$mime` as a `cord`, and thus write a parser to convert it to a `(list (list @t))`. For this purpose, here's a library: `csv-mark.hoon`, which you can view in full on the [Examples](/docs/arvo/clay/marks/examples#libcsv-markhoon) page.
+
+Note there's already a different `csv.hoon` library in `/lib`, but we'll use a separate one for our purposes here.
 
 The library contains four functions:
 
