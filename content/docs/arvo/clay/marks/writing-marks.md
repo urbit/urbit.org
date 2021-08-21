@@ -72,8 +72,6 @@ So with the nature of the `%mime` `mark` hopefully now clear, the reason we want
 
 Since a CSV file on Unix will just be a long string with ASCII or UTF-8 encoding, we can treat `q.q` in the `$mime` as a `cord`, and thus write a parser to convert it to a `(list (list @t))`. For this purpose, here's a library: `csv.hoon`, which you can view in full on the [Examples](/docs/arvo/clay/marks/examples#libcsvhoon) page.
 
-Note there's already a different `csv.hoon` library in `/lib`, but we'll use a separate one for our purposes here.
-
 The library contains four functions:
 
 - `+de-csv` - Parse a CSV `cord` to a `(list (list @t))`.
