@@ -1,3 +1,15 @@
++++
+title = "An Interview with UrbitHost"
+date = 2021-08-19
+description = "Interview with the founder of UrbitHost ~lavlyn-litmeg"
+[extra]
+author = "Matt"
+ship = "~tirwyd-sarmes"
+image = "https://media.urbit.org/site/posts/essays/urbithost.png"
++++
+
+![](https://media.urbit.org/site/posts/essays/urbithost.png)
+
 **An Interview with UrbitHost**
 
 Urbit has been making great strides to become accessible to those who are non-technical. Port enables a user to launch their Urbit ID from their personal computer without any knowledge of the command line. However, you only have access while you are running Port, which means you can&#39;t do things like check your DMs while on the move.

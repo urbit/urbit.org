@@ -1,3 +1,15 @@
++++
+title = "State of Urbit"
+date = 2021-08-24
+description = "A year in review"
+[extra]
+author = "Galen Wolfe-Pauly"
+ship = "~ravmel-ropdyl"
+image = "https://media.urbit.org/site/posts/essays/cities-6.jpg"
++++
+
+![](https://media.urbit.org/site/posts/essays/cities-6.jpg)
+
 In the past year, as Urbit has become more reliable and easier to use, we find that we&#39;re spending almost all of our time on the network. We&#39;ve disappeared into the system we&#39;ve been building, and it&#39;s a pleasure to be on Urbit. There&#39;s nowhere else we&#39;d rather be.
 
 If you&#39;re on the network with us you can see the system being built and getting better in real time. Bug fixes and new features appear on your ship constantly. The community is actively planning the future of the system \*using the system itself\*. At Tlon, we have the unparalleled pleasure of working on the system, _on the system_. This feels great, but for those of you who aren&#39;t on the network, it can look as if we&#39;ve disappeared.
