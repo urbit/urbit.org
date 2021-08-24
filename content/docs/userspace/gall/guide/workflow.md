@@ -4,7 +4,6 @@ weight = 2
 template = "doc.html"
 +++
 
-# Workflow Setup and Basic App Installation
 To make Gall apps, it's important to work with your environment, not fight it.
 Below we outline your main workflow options.
 

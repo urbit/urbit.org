@@ -1,6 +1,9 @@
-+++ title = "Overview" weight = 1 template = "doc.html" +++
++++
+title = "Overview"
+weight = 1
+template = "doc.html"
++++
 
-# The Complete Guide to Gall: Overview
 This guide will give you a full, working knowledge of every aspect of creating
 Gall modules in Urbit. Over the course of the guide, we will build up a code
 review/homework submission app that uses all aspects of Gall and a Landscape

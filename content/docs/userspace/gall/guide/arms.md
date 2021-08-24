@@ -1,10 +1,9 @@
 +++
 title = "The 10 Arms of Gall: App Structure"
-weight = 2
+weight = 3
 template = "doc.html"
 +++
 
-# The 10 Arms of Gall: App Structure
 Every Gall app (also known as an agent) contains a core with exactly 10 arms.
 Each of those arms is responsible for handling certain types of messages that
 Gall feeds in to our agent.
