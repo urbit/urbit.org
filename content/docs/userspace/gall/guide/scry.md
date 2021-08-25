@@ -1,5 +1,5 @@
 +++
-title = "`on-peek` and scry"
+title = "`+on-peek` and scry"
 weight = 5
 template = "doc.html"
 +++
