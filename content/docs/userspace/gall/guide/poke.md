@@ -4,7 +4,7 @@ weight = 4
 template = "doc.html"
 +++
 
-eack in the [App Structure lesson](/docs/userspace/gall/guide/arms), we said
+Back in the [App Structure lesson](/docs/userspace/gall/guide/arms), we said
 that the `+on-poke` and `+on-watch` arms listen for input/calls. We're going to
 use them both to do that in this lesson, as well as work with the `+on-agent`
 and `+on-leave` arms that handle responses from those calls.
