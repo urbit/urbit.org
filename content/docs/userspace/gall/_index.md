@@ -12,9 +12,17 @@ Gall is the Arvo vane that manages userspace applications.
 
 Overview of the Gall vane.
 
-## [Tutorial](/docs/userspace/gall/tutorial)
+## [Guide](/docs/userspace/gall/guide/overview)
 
-Tutorial for writing Gall agents.
+Extensive guide to writing Gall agents.
+
+## [Data Types](/docs/userpsace/gall/data-types)
+
+Data types used by Gall.
+
+## [Troubleshooting and FAQ](/docs/userspace/gall/troubleshooting)
+
+Common issues encountered when writing Gall agents and how to solve them.
 
 ## [API Reference](/docs/userspace/gall/gall-api)
 

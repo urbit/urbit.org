@@ -10,8 +10,11 @@ review/homework submission app that uses all aspects of Gall and a Landscape
 frontend.
 
 This guide is for anyone with an intermediate knowledge of Hoon (Hoon School 101
-should be enough). To write Gall apps that interact with the frontend, you'll
-also need some knowledge of Javascript.
+should be enough to get started, but Hoon 201 is better). Some knowledge of how
+Arvo works is helpful as well, such as [pass/give
+semantics](/docs/arvo/overview#types) and
+[marks](/docs/arvo/clay/architecture#marks). To write Gall apps that interact
+with the frontend, you'll also need some knowledge of Javascript.
 
 ## Table of Contents
 
@@ -31,9 +34,9 @@ also need some knowledge of Javascript.
 * [Types Used in Gall Apps](/docs/userspace/gall/data-types)
 
 ## What Is Gall?
-Gall is a program (OS kernel or "vane") that runs in the background on Urbit's
-operating system, Arvo. It manages most of the programs you think of as Urbit's
-apps.
+Gall is a program (OS kernel module or "vane") that runs in the background on
+Urbit's operating system, Arvo. It manages most of the programs you think of as
+Urbit's apps.
 
 ### Platforms, Not Just Applications
 
