@@ -8,7 +8,7 @@ For nearly all Gall apps, you'll want to use some outside libraries, your own
 types, and static resources (like HTML and image files). To do this, you need to
 use Arvo's Ford build system, which Gall automatically calls for you whenever it
 sees certain runes in your app files. Ford is part of
-[Clay](@/docs/arvo/clay/overview.md), Arvo's filesystem vane.
+[Clay](@/docs/arvo/clay/overview), Arvo's filesystem vane.
 
 There are four Ford runes, and you'll see some of them at the top of nearly all
 Gall apps. They must always be given in the following order:
@@ -94,8 +94,8 @@ Marks have two primary use cases:
 2. Sending data to Gall apps
 
 We'll work with files in this lesson, and then once we get to
-[poke](/docs/userspace/gall/guide/poke.md) and [JSON &
-channels](/docs/userspace/gall/guide/chanel.md), we'll see how marks help us for
+[poke](/docs/userspace/gall/guide/poke) and [JSON &
+channels](/docs/userspace/gall/guide/chanel), we'll see how marks help us for
 the data-sending use case.
 
 ### Example 1: Two Ways to Open an HTML File

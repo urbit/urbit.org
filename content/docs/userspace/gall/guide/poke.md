@@ -4,7 +4,7 @@ weight = 4
 template = "doc.html"
 +++
 
-eack in the [App Structure lesson](/docs/userspace/gall/guide/arms.md), we said
+eack in the [App Structure lesson](/docs/userspace/gall/guide/arms), we said
 that the `+on-poke` and `+on-watch` arms listen for input/calls. We're going to
 use them both to do that in this lesson, as well as work with the `+on-agent`
 and `+on-leave` arms that handle responses from those calls.
@@ -94,9 +94,9 @@ We've used this syntax a lot in prior lessons, and it's time to walk through how
 
 When you type `:poketime %print-state` in the dojo, it sends a `poke` to the
 agent `%poketime`. `+on-poke` expects a `mark` and a `vase`. You can read more
-about these in [Gall Types](/docs/userspace/gall/guide/appendix/gall_types.md),
+about these in [Gall Types](/docs/userspace/gall/guide/appendix/gall_types),
 but a `mark` is a `@tas` representing a Ford mark as we saw in the [prior
-lesson](/docs/userspace/gall/guide/ford.md), and a vase is the data structure
+lesson](/docs/userspace/gall/guide/ford), and a vase is the data structure
 created by running `!>(some-data)`. Its head is a type, and its tail is a noun.
 
 There are two formats you can type at the dojo after `:agent-name` (`:poketime`
@@ -166,7 +166,7 @@ source is us or one of our moons, and then we return the card below:
 ```
 
 (You can look at the [Gall
-Types](/docs/userspace/gall/guide/appendix/gall_types.md) appendix to see full
+Types](/docs/userspace/gall/guide/appendix/gall_types) appendix to see full
 details on `card` format).
 
 That poke is processed by Gall and sent to us. Note that there is *nothing*
@@ -193,7 +193,7 @@ want to handle the `%poke-ack`--this is just for demonstration of all the
 possibilities.
 
 It's considered best practice to switch first on the wire, and then on the sign
-(see [here in B3 for discussion](/docs/development/precepts.md)).
+(see [here in B3 for discussion](/docs/development/precepts)).
 So we switch on the wire, match `[%pokepath ~]`, and then match when the head of
 `sign` is `%poke-ack`.
 
@@ -228,7 +228,7 @@ In `poketime.hoon`, we define a tagged union that has those 7 possibilities:
 
 And now, in order to send a custom mark called `poketime-action`, we created
 `mar/poketime/action` ([recall that in the last lesson we saw that "-" is
-treated as a sub-directory](/docs/userspace/gall/guide/ford.md)):
+treated as a sub-directory](/docs/userspace/gall/guide/ford)):
 
 ```hoon
 /-  poketime
@@ -520,7 +520,7 @@ sense now. Gall all the way down.
 ## Exercises
 
 ### Code Reading
-1. [app/chat-store.md](https://github.com/urbit/urbit/blob/b0d252fa7633ba030c555f690594d85c0d59b36f/pkg/arvo/app/chat-store.hoon)
+1. [app/chat-store](https://github.com/urbit/urbit/blob/b0d252fa7633ba030c555f690594d85c0d59b36f/pkg/arvo/app/chat-store.hoon)
   - Which `path`s does it allow subscriptions on?
   - Do any of those paths take "parameters"?
   - Do any of the paths return data immediately? Which ones, and which data?

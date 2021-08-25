@@ -70,7 +70,7 @@ to see how this pattern works in practice.
 
 If you want to learn how to build gall agents, your best bet is to first [learn
 the Hoon programming language](/docs/hoon/hoon-school/), and then follow that
-up with the [Gall guide](/docs/userspace/gall/tutorial).
+up with the [Gall guide](/docs/userspace/gall/guide/overview).
 
 ### Contribute to Urbit Core {#core}
 

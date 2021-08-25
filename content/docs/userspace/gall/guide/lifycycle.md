@@ -127,7 +127,7 @@ ford: %core on /~zod/home/0/app/lifecycle/hoon failed:
 
 What happened? This message is telling us that it can't find something in `lib`:
 `default-agen/hoon`. This is because we spelled the name wrong. We'll learn
-about libraries in the [next lesson](/docs/userspaces/galll/guide/ford.md).
+about libraries in the [next lesson](/docs/userspaces/galll/guide/ford).
 
 We need to fix the spelling mistake on the very first line of our program:
 
@@ -185,18 +185,18 @@ Let's look at the code of our `+on-init` arm:
 ```
 
 We see that it returns a `(quip card _this)`. As mentioned in the [last
-lesson](/docs/userspace/gall/guide/arms.md), this type means a `list` of `card`,
+lesson](/docs/userspace/gall/guide/arms), this type means a `list` of `card`,
 along with `_this` at the end (short for `$_(this)`: the type of `this`, our
 core).
 
 Gall arms that return this structure are passing 0 or more actions (`card`s)
 back to Gall to perform, and also return a new state of our app to Gall. You can
 see more detail on the structure of cards in the [types
-appendix](/docs/userspace/guide/appendix_types.md)--this one is an `arvo-note`.
+appendix](/docs/userspace/guide/appendix_types)--this one is an `arvo-note`.
 It starts with `%pass`, which means it's like a function call. The `%e` is for
 "Eyre", the Arvo networking vane. This is a command to listen for incoming HTTP
 requests on address `/~lifecycle` of our ship. We'll explore this more in the
-[HTTP lesson](/docs/userspace/gall/http.md).
+[HTTP lesson](/docs/userspace/gall/http).
 
 Take it as a given for now that this HTTP `card` works. What about our new state?
 
@@ -616,7 +616,7 @@ you can quickly see that things have worked. You can just add a space in that
 text and re-`commit` if you want to force re-compilation.
 
 If you want to iterate until you get your `+on-init` right, I recommend using the
-"Faster Fakeship Startup" method from the [workflow lesson](workflow.md).
+"Faster Fakeship Startup" method from the [workflow lesson](workflow).
 
 ## Exercises
 

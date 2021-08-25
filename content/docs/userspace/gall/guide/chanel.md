@@ -200,7 +200,7 @@ You interface with channel.js by calling `poke`, `subscribe` and `unsubscribe`.
 #### `poke` Response
 If the response is to a poke, its data is disregarded, and we just run the poke
 `onSuccess` function and delete the `outstandingPoke`. This is like a
-`%poke-ack` in our [prior lesson](poke.md).
+`%poke-ack` in our [prior lesson](poke).
 
 #### `subscribe` Response
 This can receive a `"quit"` response (for `kick` and `leave`) which causes it to

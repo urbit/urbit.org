@@ -321,10 +321,10 @@ scries can only be done on the current ship; you cannot scry remotely.
 
 For this exercise, you should build your own agent that you can send pokes to.
 Feel free to do the pokes as `%noun`s as in the [poke
-lesson](/docs/userspace/gall/guide/poke.md).
+lesson](/docs/userspace/gall/guide/poke).
 
 **You will likely want to use an [-L
-ship](/docs/userspace/gall/guide/workflow.md) with lots of pre-existing
+ship](/docs/userspace/gall/guide/workflow) with lots of pre-existing
 group/chat data for this exercise.**
 
 #### scry helpers

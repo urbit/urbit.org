@@ -51,7 +51,7 @@ These 2 arms handle responses to requests we make to other agents or Arvo vanes.
 ## Arm Input and Output Types
 Some arms take and return simple data types, but Gall also has a few key input
 and output types that it constantly uses. You can really drill into them
-[here](/docs/userspace/gall/guide/appendix/gall_types.md), but let's introduce a couple key ones. We'll refresh them
+[here](/docs/userspace/gall/guide/appendix/gall_types), but let's introduce a couple key ones. We'll refresh them
 and go more in depth as we explain each arm later.
 
 ### `wire` & `path`

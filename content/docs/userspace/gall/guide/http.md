@@ -78,7 +78,7 @@ endpoint. `%file-server` uses Eyre internally--after this part of the lesson,
 you'll probably be able to understand a lot of what's going on in
 `app/file-server.hoon`.
 
-Back in the [lifecycle lesson](lifecycle.md), we connected to Eyre as part of
+Back in the [lifecycle lesson](lifecycle), we connected to Eyre as part of
 our `+on-init` and `+on-load` functions. We'll do the same here, but go into a lot
 more detail.
 

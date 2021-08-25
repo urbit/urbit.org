@@ -84,7 +84,7 @@ Run `|commit %home`, and you should see:
 
 So we see here that once Gall has `start`ed an app, it auto-reloads it whenever
 a new version of that program is committed. We'll go more into this in the
-[lifecycle lesson](/docs/userspace/gall/guide/lifecycle.md)
+[lifecycle lesson](/docs/userspace/gall/guide/lifecycle)
 
 ### Troubleshooting: `:goad %force`
 In some cases, Gall will not recompile your app. This can happen after an error is introduced and not fixed. To see the error again and force recompilation, run in the dojo:
@@ -94,7 +94,7 @@ In some cases, Gall will not recompile your app. This can happen after an error 
 
 ## Using `dbug`
 In line 2 of the code, we see `%- agent:dbug`. We'll explain how this works in
-[the next lesson](/docs/userspace/gall/guide/arms.md), but for now, just know that it lets us run
+[the next lesson](/docs/userspace/gall/guide/arms), but for now, just know that it lets us run
 `:workflow +dbug` in the dojo, and see the state of the agent. `dbug` determines
 the state using the return value of our `on-save` arm.
 
@@ -161,7 +161,7 @@ Since Gall apps communicate between ships, it's sometimes useful in testing to m
 > |hi ~bus
 ::  you should see the hi confirmed
 ```
-In the example above, `~zod` and `~bus` can now see each other. We'll use this extensively starting in the [poke and watch lesson](poke.md).
+In the example above, `~zod` and `~bus` can now see each other. We'll use this extensively starting in the [poke and watch lesson](poke).
 
 ## `-L` Ships
 Sometimes you want your development ships to have large datasets, such as the
