@@ -24,11 +24,11 @@ code below to both of them.
 After the code is copied, start our Gall agent on each with `|start %poketime`
 
 * to `/app/`
-  - [poketime.hoon](/docs/userspace/gall/guide/example-code/app/poketime.hoon)
+  - [poketime.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/app/poketime.hoon)
 * to `/sur/`
-  - [poketime.hoon](/docs/userspace/gall/guide/example-code/sur/poketime.hoon)
+  - [poketime.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/sur/poketime.hoon)
 * to `/mar/poketime/`
-  - [action.hoon](/docs/userspace/gall/guide/example-code/mar/poketime/action.hoon)
+  - [action.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/mar/poketime/action.hoon)
 
 ## Preamble
 
@@ -538,7 +538,7 @@ roughly?
 ### `picky` App
 Now that we know the basics of pokes, we can write the skeleton for our chat
 admin application `picky`. Feel free to use
-`/docs/userspace/gall/guide/example-code/app/skeleton.hoon` as a quick starting
+`https://github.com/timlucmiptev/gall-guide/blob/master/example-code/app/skeleton.hoon` as a quick starting
 point.
 
 * Create an `action` tagged union in a `sur` file, and give it tagged unions for

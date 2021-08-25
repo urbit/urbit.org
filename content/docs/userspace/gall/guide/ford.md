@@ -29,14 +29,14 @@ generators. They will not work in the dojo.
 
 ## Example Code
 * to `/app/`
-  - [fordexample.hoon](/docs/userspace/gall/guide/example-code/app/fordexample.hoon)
+  - [fordexample.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/app/fordexample.hoon)
 * to `/app/fordexample/`
-  - [example.html](/docs/userspace/gall/guide/example-code/app/fordexample/example.html)
+  - [example.html](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/app/fordexample/example.html)
 * to `/mar/fordexample/`
-  - [name.hoon](/docs/userspace/gall/guide/example-code/example-code/mar/fordexample/name.hoon)
+  - [name.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/example-code/mar/fordexample/name.hoon)
 * to `/sur/`
-  - [fordexample.hoon](/docs/userspace/gall/guide/example-code/sur/fordexample.hoon)
-  - [fordexample2.hoon](/docs/userspace/gall/guide/example-code/sur/fordexample2.hoon)
+  - [fordexample.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/sur/fordexample.hoon)
+  - [fordexample2.hoon](https://github.com/timlucmiptev/gall-guide/blob/master/example-code/sur/fordexample2.hoon)
 
 Now go ahead and run `|commit %home`. You should see a message that `fordexample
 initialized successfully`.
