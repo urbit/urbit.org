@@ -4,14 +4,14 @@ template = "doc.html"
 weight = 2
 +++
 
-The Dojo is our shell; it processes system commands and returns output. It's a
-good place to quickly experiment with Urbit. On the surface the Dojo is just a
-Hoon REPL. On the inside, the Dojo is a system for operating on and transforming
+The dojo is our shell; it processes system commands and returns output. It's a
+good place to quickly experiment with Urbit. On the surface the dojo is just a
+Hoon REPL. On the inside, the dojo is a system for operating on and transforming
 data in Urbit.
 
 ### Quickstart
 
-You can use the Dojo to run arbitrary Hoon code, as well as non-Hoon system
+You can use the dojo to run arbitrary Hoon code, as well as non-Hoon system
 commands.
 
 #### Math
@@ -32,16 +32,16 @@ Tall-form Hoon may require multiple lines:
 ```
 
 Hoon uses something called [the subject](/docs/hoon/hoon-school/the-subject-and-its-legs).
-The Dojo has its own subject and that's where Hoon's equivalent of variables,
+The dojo has its own subject and that's where Hoon's equivalent of variables,
 called faces, are stored.
 
-Use `=var` to save faces to the Dojo subject.
+Use `=var` to save faces to the dojo subject.
 
 ```
 ~your-urbit:dojo> =foo (add 2 2)
 ```
 
-Note, however, that `=var` is Dojo syntax, not Hoon syntax. You cannot bind a
+Note, however, that `=var` is dojo syntax, not Hoon syntax. You cannot bind a
 face in a `.hoon` file in this way.
 
 #### System commands
@@ -76,7 +76,7 @@ Run system commands from `:hood`, like `reload`, using `|`:
 ### Generators
 
 Generators are short Hoon scripts, saved as `.hoon` files in the `/gen`
-directory. Many Dojo commands exist in the form of generators. The syntax for
+directory. Many dojo commands exist in the form of generators. The syntax for
 running a generator is `+genname` for a generator saved as `genname.hoon`.
 
 #### `+cat`
@@ -206,11 +206,11 @@ number of vane names.
 
 ---
 
-### Dojo manual
+### dojo manual
 
 #### Sources and sinks
 
-A Dojo command is either a **source** or a **sink**. A source is just something
+A dojo command is either a **source** or a **sink**. A source is just something
 that can be printed to your console or the result of some computation. A
 sink is an **effect**: a change to the filesystem, a network message, a
 change to your environment, or a typed message to an app.
@@ -231,12 +231,12 @@ Set any environment variable:
 44
 ```
 
-Make sure to note that `=var` is Dojo syntax, not Hoon syntax. You cannot bind a
+Make sure to note that `=var` is dojo syntax, not Hoon syntax. You cannot bind a
 variable in a `.hoon` file in this way.
 
 #### Special variables
 
-There are a few special variables that the Dojo maintains.
+There are a few special variables that the dojo maintains.
 
 #### `:` - Send to app
 
@@ -326,7 +326,7 @@ fintyr-haldet-fassev-solhex
 
 ### Variables
 
-You can use `=` to set an environment variable in Dojo, but there are
+You can use `=` to set an environment variable in dojo, but there are
 a few reserved names that have special uses.
 
 #### `dir`
@@ -409,5 +409,72 @@ The current urbit ship. Read-only.
 ### Troubleshooting
 
 If you encounter `%dy-edit-busy` while entering commands, it is
-because your Dojo is blocked on a timer or an HTTP request. Type backspace
-and your Dojo will end the blocked command.
+because your dojo is blocked on a timer or an HTTP request. Type backspace
+and your dojo will end the blocked command.
+
+
+## Using Generators with Gall {#gall}
+
+You can send typed pokes to Gall agent with the following syntax.
+```
+:chanel &chanel-action [%increase-counter step=9]
+```
+Gall has support for routing input to generators before passing it to the agent, and we can use this to make the above agent interactions cleaner. This particularly helps for agents that users will access via the dojo.
+
+### Gall Generator Mechanics
+Let's take an example with the `s3-store` agent. We can poke it like so:
+```
+:s3-store|set-endpoint 'myendpoint.com'
+```
+
+The above expands to "poke `%s3-store` with the output from calling `+s3-store/set-endpoint 'myendpoint.com'`." This is similar to how marks look for marks like `chanel-action` in `mar/chanel/action.hoon`.
+
+The output is passed to `+on-poke` of `s3-store` as `[mark data]`.
+
+#### Example: `gen/s3-store/set-endpoint.hoon`
+Open the file `gen/s3-store/set-endpoint.hoon`. Its code (as of this writing) is:
+```hoon
+/-  *s3
+:-  %say
+|=  $:  [now=@da eny=@uvJ =beak]
+        [[endpoint=@t ~] ~]
+    ==
+:-  %s3-action
+^-  action
+[%set-endpoint endpoint]
+```
+The arguments to this `%say` generator are:
+1. `[now=@da eny=@uvJ =beak]`, the normal environment variables passed to a `%say` generator.
+2. `[endpoint=@t ~]`, a list of arguments
+3. `~`: this generator takes no optional arguments
+
+In our example of `:s3-store|set-endpoint 'myendpoint.com'`, the generator takes `'myendpoint.com'` as the first argument, and evaluates it to `[%s3-action [%set-endpoint endpoint]]`.
+
+We can check this at the dojo by running the generator directly:
+```
+> +s3-store/set-endpoint 'myendpoint.com'
+[%set-endpoint endpoint='myendpoint.com']
+```
+Notice that the dojo automatically applies the mark to the data and removes the mark: this is a normal `%say` generator; no magic.
+
+### Raw `|` Commands
+In the dojo, any command like `|reset` or `|commit` is simply a shortcut for `:hood|reset` or `:hood|commit`. The `hood` generator is run, and then the `hood` agent processes the result.
+
+To see the commands available to `hood` and the variables for those commands, just browse the `gen/hood` directory.  Each generator file represents a command, and you can open the files to see the exact sample that each command takes.
+
+#### Example: `|commit`
+When we run `|commit %home`, that calls the generator `gen/hood/commit.hoon` with argument `%home`. It returns a cell like so:
+```
+:- %kiln-commit
+[mon auto]
+```
+So a `%home` argument returns `[%kiln-commit [%home %.n]]`. We can check this in the dojo:
+```
+> +hood/commit %home
+[%home %.n]
+```
+If run as `|commit`, the whole `[%kiln-commit [%home %.n]]` is passed as `[mark vase]` to the `+on-poke` of `hood`, from whence it is passed to [lib/hood/kiln.hoon](https://github.com/urbit/urbit/blob/35946bd168734c6d16adb61b04c314362cdf344d/pkg/arvo/lib/hood/kiln.hoon#L420). There, the mark is matched and handled.
+
+### Summary
+    You can make these simple generators for your own applications quite easily. Just follow the approach of `s3-store` above, and you can make separate `|` commands for all the actions you want your users to perform from the dojo.
+
