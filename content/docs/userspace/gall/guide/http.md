@@ -105,7 +105,7 @@ in your app to be set up for it.
 
 #### `+on-poke`
 `+on-poke` needs to handle a `%handle-http-request` mark (line 57). This allows
-it to
+it to handle http requests.
 
 The type in the vase passed is `[id=@ta =inbound-request:eyre]`. We can process
 this `inbound-request` in whatever way we want, and return a card to Eyre if we
