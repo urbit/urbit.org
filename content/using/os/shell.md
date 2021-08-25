@@ -415,7 +415,7 @@ and your dojo will end the blocked command.
 
 ## Using Generators with Gall {#gall}
 
-You can send typed pokes to Gall agent with the following syntax.
+You can send typed pokes to a Gall agent with the following syntax.
 ```
 :chanel &chanel-action [%increase-counter step=9]
 ```
