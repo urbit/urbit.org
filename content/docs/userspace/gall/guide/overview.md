@@ -16,24 +16,19 @@ also need some knowledge of Javascript.
 ## Table of Contents
 
 ### Backend Foundation (Gall 101)
-* [Workflow Setup](workflow.md)
-* [The 10 Arms of Gall: App Structure](arms.md)
-* [App Lifecycle and State](lifecycle.md)
-* [Importing Code and Static Resources](ford.md)
-* [Talk to Ships: poke, watch and marks](poke.md)
-* [scry & on-peek](scry.md)
-* [HTTP & Static Files](http.md)
-* [Call from Outside: JSON & channel.js](chanel.md)
+* [Workflow Setup](/docs/userspace/gall/guide/workflow)
+* [The 10 Arms of Gall: App Structure](/docs/userspace/gall/guide/arms)
+* [App Lifecycle and State](/docs/userspace/gall/guide/lifecycle)
+* [Importing Code and Static Resources](/docs/userspace/gall/guide/ford)
+* [Talk to Ships: poke, watch and marks](/docs/userspace/gall/guide/poke)
+* [scry & on-peek](/docs/userspace/gall/guide/scry)
+* [HTTP & Static Files](/docs/userspace/gall/guide/http)
+* [Call from Outside: JSON & channel.js](/docs/userspace/gall/guide/chanel)
 
-### Putting It All Together (Gall 201)
-* [picky backend: Chat Admin Dashboard](picky_backend.md)
-* [Store/Hook/View](hooks.md)
-* [backy: a Program to Call the Arvo OS](backy.md)
-
-### Appendix
-* [Generators in Gall](generators.md)
-* [Troubleshooting & FAQ](faq.md)
-* [Types Used in Gall Apps](gall_types.md)
+### Other Resources
+* [Generators in Gall](/using/os/shell#gall)
+* [Troubleshooting & FAQ](/docs/userspace/gall/troubleshooting)
+* [Types Used in Gall Apps](/docs/userspace/gall/data-types)
 
 ## What Is Gall?
 Gall is a program (OS kernel or "vane") that runs in the background on Urbit's
