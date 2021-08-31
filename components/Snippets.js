@@ -1,3 +1,12 @@
+import {
+  getAllEvents,
+  generateDisplayDate,
+  generateRealtimeDate,
+  formatDate,
+  formatTime,
+  formatTimeZone,
+} from "../lib/lib";
+
 export function Name({ children, className }) {
   return <b className={`font-normal ${className || ""}`}>{children}</b>;
 }
@@ -60,4 +69,39 @@ export function ShowOrHide({ children, condition }) {
     return children;
   }
   return null;
+}
+
+export function DateRange({ starts, ends, className, short }) {
+  // For events which have no end datetime
+  if (!ends.isValid) {
+    return (
+      <div>
+        <p className={className}>
+          {`${formatDate(starts)} • ${formatTime(starts)} ${formatTimeZone(
+            starts
+          )}`}
+        </p>
+      </div>
+    );
+  }
+  // For events which start and end on the same day
+  if (starts.hasSame(ends, "day")) {
+    return (
+      <div>
+        <p className={className}>
+          {`${formatDate(starts)} • ${formatTime(starts)} to ${formatTime(
+            ends
+          )} ${formatTimeZone(starts)}`}
+        </p>
+      </div>
+    );
+  }
+  // For multi-day events
+  return (
+    <div>
+      <p className={className}>{`${starts.toFormat(
+        "cccc, LLLL d"
+      )} to ${formatDate(ends)}`}</p>
+    </div>
+  );
 }

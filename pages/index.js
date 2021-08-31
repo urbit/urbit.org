@@ -17,7 +17,7 @@ import {
   formatDate,
   getOpenGrantsCount,
 } from "../lib/lib";
-import { contact } from "../lib/constants";
+import { contact, eventKeys } from "../lib/constants";
 
 export default function Home({ posts, events, openGrantsCount, search }) {
   const [tab, setTab] = useState(0);
@@ -256,21 +256,7 @@ export async function getStaticProps() {
     "blog"
   );
 
-  const events = getAllEvents(
-    [
-      "title",
-      "slug",
-      "starts",
-      "guests",
-      "hosts",
-      "registration_url",
-      "ends",
-      "timezone",
-      "youtube",
-      "image",
-    ],
-    "events"
-  );
+  const events = getAllEvents(eventKeys, "events");
 
   return {
     props: { posts, events, openGrantsCount },

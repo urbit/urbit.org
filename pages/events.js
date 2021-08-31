@@ -19,6 +19,8 @@ import {
   formatTime,
 } from "../lib/lib";
 
+import { eventKeys } from "../lib/constants";
+
 export default function Events({ events, search }) {
   const post = {
     title: "Events",
@@ -71,7 +73,7 @@ export default function Events({ events, search }) {
                 <h3 className="text-green-400">Happening Now</h3>
               </div>
               {happeningNow.map((post) => {
-                return <EventPreview big event={post} />;
+                return <EventPreview big event={post} className="mb-8" />;
               })}
             </>
           ) : null}
@@ -81,7 +83,7 @@ export default function Events({ events, search }) {
                 <h3 className="text-green-400">Coming Soon</h3>
               </div>
               {futureEvents.map((post) => {
-                return <EventPreview big event={post} />;
+                return <EventPreview big event={post} className="mb-8" />;
               })}
             </>
           ) : null}
@@ -100,23 +102,7 @@ export default function Events({ events, search }) {
 }
 
 export async function getStaticProps() {
-  const events = getAllEvents(
-    [
-      "title",
-      "ends",
-      "location",
-      "image",
-      "registration_url",
-      "youtube",
-      "description",
-      "starts",
-      "hosts",
-      "guests",
-      "dark",
-      "slug",
-    ],
-    "events"
-  );
+  const events = getAllEvents(eventKeys, "events");
 
   return {
     props: { events },
