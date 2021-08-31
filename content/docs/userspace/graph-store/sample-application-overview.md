@@ -1,5 +1,5 @@
 +++
-title = "Sample Application Overview — Library"
+title = "Sample Application: Library"
 weight = 4
 sort_by = "weight"
 template = "doc.html"
