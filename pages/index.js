@@ -1,16 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+
 import Container from "../components/Container";
 import Section from "../components/Section";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BackgroundImage from "../components/BackgroundImage";
-import TabCarousel from "../components/TabCarousel";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
+import Cross from "../components/icons/Cross";
 import {
   getAllPosts,
   getAllEvents,
@@ -18,12 +19,41 @@ import {
   getOpenGrantsCount,
 } from "../lib/lib";
 import { contact, eventKeys } from "../lib/constants";
+import { useLocalStorage } from "../lib/hooks";
+
+const Banner = ({ children, isOpen, href, dismiss }) => {
+  return (
+    <div
+      className={`w-full top-0 left-0 flex justify-center z-40 bg-green-100`}
+    >
+      <div className="w-full layout">
+        <div className=" w-full h-12 flex items-center  px-8  relative">
+          <a href={href} target="_blank">
+            {children}
+          </a>
+          <div className="absolute right-8">
+            <button
+              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              onClick={(e) => {
+                e.stopPropagation();
+                dismiss();
+              }}
+            >
+              <Cross width="10" height="10" fill="#E5F7F1" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function Home({ posts, events, openGrantsCount, search }) {
-  const [tab, setTab] = useState(0);
   const [heroButton, setHeroButton] = useState(<div />);
+  const [bannerElement, setBannerElement] = useState(null);
+  const [isBannerOpen, setBanner] = useLocalStorage("isBannerOpen", true);
 
-  const detectOS = () => {
+  const selectDownloadButton = () => {
     const agent = window.navigator.appVersion;
     if (agent.includes("Win")) {
       return (
@@ -49,8 +79,28 @@ export default function Home({ posts, events, openGrantsCount, search }) {
   };
 
   useEffect(() => {
-    setHeroButton(detectOS());
+    setHeroButton(selectDownloadButton());
   }, []);
+
+  // Use this pattern when depending on client-side state or conditions like localStorage, user OS or geolocation.
+  const selectBanner = (isBannerOpen) => {
+    if (isBannerOpen) {
+      return (
+        <Banner
+          href="http://assembly.urbit.org/"
+          dismiss={() => setBanner(false)}
+        >
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Join us October 15-17 for Assembly`}</p>
+        </Banner>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    setBannerElement(selectBanner(isBannerOpen));
+  }, [isBannerOpen]);
 
   return (
     <Container>
@@ -58,8 +108,9 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <title>urbit.org</title>
       </Head>
       <SingleColumn>
-        <Header search={search} />
+        {bannerElement}
 
+        <Header search={search} />
         {
           // Hero Statement
         }

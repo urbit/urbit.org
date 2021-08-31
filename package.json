@@ -24,6 +24,7 @@
     "fuzzy-search": "^3.2.1",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.2",
+    "luxon": "^2.0.2",
     "next": "10.2.3",
     "patch-package": "^6.4.7",
     "postcss": "^8.3.0",
@@ -31,6 +32,7 @@
     "react-dom": "17.0.2",
     "react-hotkeys": "^2.0.0",
     "react-swipeable": "^6.1.2",
+    "react-use-localstorage": "^3.5.3",
     "remark": "^13.0.0",
     "remark-gfm": "^1.0.0",
     "remark-heading-id": "^1.0.0",
@@ -39,7 +41,6 @@
     "remark-slug": "^6.0.0",
     "tailwindcss": "^2.1.4",
     "toml": "^3.0.0",
-    "luxon": "^2.0.2",
     "unified": "^9.2.1"
   },
   "devDependencies": {
