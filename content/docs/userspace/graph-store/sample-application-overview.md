@@ -7,7 +7,6 @@ insert_anchor_links = "right"
 +++
 
 
-## *Library*
 
 Library is a sample social media application in which you can create a collection of books, called a library, which can contain any number of books. 
 You can share individual collections per-ship. The creator of the collection has de-facto admin powers; he is the only one who can add or remove books to/from the library, 
