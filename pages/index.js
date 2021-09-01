@@ -12,6 +12,7 @@ import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import Cross from "../components/icons/Cross";
+import TwoUp from "../components/TwoUp";
 import {
   getAllPosts,
   getAllEvents,
@@ -23,15 +24,13 @@ import { useLocalStorage } from "../lib/hooks";
 
 const Banner = ({ children, isOpen, href, dismiss }) => {
   return (
-    <div
-      className={`w-full top-0 left-0 flex justify-center z-40 bg-green-100`}
-    >
-      <div className="w-full layout">
-        <div className=" w-full h-12 flex items-center  px-8  relative">
-          <a href={href} target="_blank">
-            {children}
-          </a>
-          <div className="absolute right-8">
+    <div className="w-full flex justify-center bg-green-100">
+      <SingleColumn>
+        <div className="w-full layout">
+          <div className="w-full  flex justify-between items-center px-4 md:px-8 py-4">
+            <a href={href} target="_blank">
+              {children}
+            </a>
             <button
               className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
               onClick={(e) => {
@@ -43,7 +42,7 @@ const Banner = ({ children, isOpen, href, dismiss }) => {
             </button>
           </div>
         </div>
-      </div>
+      </SingleColumn>
     </div>
   );
 };
@@ -107,9 +106,8 @@ export default function Home({ posts, events, openGrantsCount, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
+      {bannerElement}
       <SingleColumn>
-        {bannerElement}
-
         <Header search={search} />
         {
           // Hero Statement
@@ -248,14 +246,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <h2>Blog</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
-              <PostPreview post={posts[0]} key={posts[0].slug} />
-            </div>
-            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
-              <PostPreview post={posts[1]} key={posts[1].slug} />
-            </div>
-          </div>
+          <TwoUp>
+            <PostPreview post={posts[0]} key={posts[0].slug} />
+            <PostPreview post={posts[1]} key={posts[1].slug} />
+          </TwoUp>
+
           <Link href="/blog">
             <button className="button-lg type-ui text-white bg-green-400">
               See More
@@ -271,14 +266,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <h2>Events</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
-              <EventPreview event={events[0]} key={events[0].slug} />
-            </div>
-            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
-              <EventPreview event={events[1]} key={events[1].slug} />
-            </div>
-          </div>
+          <TwoUp>
+            <EventPreview event={events[0]} key={events[0].slug} />
+            <EventPreview event={events[1]} key={events[1].slug} />
+          </TwoUp>
+
           <Link href="/events">
             <button className="button-lg type-ui text-white bg-wall-600">
               More Events

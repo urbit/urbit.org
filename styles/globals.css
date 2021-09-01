@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600;700;800&display=swap");
 
 :root {
   --tray-time: 0ms;
@@ -9,69 +8,67 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* Make all text wall-600 by default */
   @apply text-wall-600;
 }
 
+/* Reset a tags */
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
 
-b,
-strong {
-  @apply font-semibold;
-}
-
+/* Links in p tags should be green */
 p a {
   @apply text-green-400 font-semibold;
 }
 
-button {
-  border: none;
+/* Reduce b and strong tag weight default */
+b,
+strong {
+  @apply font-semibold;
 }
 
 /* Typography */
 
 h1,
 .type-h1 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-wall-600;
+  @apply text-4xl lg:text-5xl font-extrabold leading-tight text-wall-600;
 }
 
 h2,
 .type-h2 {
-  @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  @apply text-3xl lg:text-4xl font-bold leading-tight;
 }
 
 h3,
 .type-h3 {
-  @apply text-lg md:text-xl lg:text-2xl font-semibold;
+  @apply text-xl font-semibold;
 }
 
 h4,
 .type-ui {
-  @apply text-sm md:text-base lg:text-lg font-semibold;
+  @apply text-lg font-semibold;
 }
 
-.type-ui-small {
-  @apply text-xs lg:text-base font-medium;
+h5,
+.type-h5,
+.type-bold {
+  @apply text-base font-semibold leading-relaxed;
 }
 
 p,
 .type-p {
-  @apply text-sm md:text-base lg:text-base leading-relaxed;
-}
-
-.type-bold {
-  @apply text-sm md:text-base lg:text-base font-semibold leading-relaxed;
+  @apply text-base leading-relaxed;
 }
 
 .type-sub {
-  @apply text-xs md:text-sm;
+  @apply text-sm;
 }
 
 .type-sub-bold {
-  @apply text-xs md:text-sm font-semibold;
+  @apply text-sm font-semibold;
 }
 
 code .type-code {
@@ -109,15 +106,15 @@ code .type-code {
 }
 
 .button-lg {
-  @apply flex-center px-4 lg:px-6 py-1 rounded-xl h-10 md:h-14 type-ui;
+  @apply flex-center px-6 py-1 rounded-xl h-14 type-ui;
 }
 
 .badge-sm {
-  @apply flex-center type-ui-small px-4 lg:px-4 h-8 md:h-8 rounded-full;
+  @apply flex-center text-base font-medium px-3 h-8 rounded-full;
 }
 
 .badge-lg {
-  @apply flex-center type-ui px-4 lg:px-8 h-10 md:h-12 rounded-full;
+  @apply flex-center type-ui px-5 h-12 rounded-full;
 }
 
 .button-sm:hover,

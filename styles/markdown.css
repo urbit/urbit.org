@@ -36,11 +36,11 @@
 }
 
 .markdown p {
-  @apply text-sm md:text-lg leading-relaxed;
+  @apply text-base md:text-lg leading-relaxed;
 }
 
 .markdown li {
-  @apply py-2 ml-6 text-lg;
+  @apply py-2 ml-6 text-base md:text-lg;
 }
 
 .markdown hr {

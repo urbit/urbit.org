@@ -5,7 +5,7 @@ import { contact } from "../lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-wall-100 w-full mt-48 flex justify-center">
+    <footer className="bg-wall-100 w-full flex justify-center">
       <SingleColumn>
         <Section short className="flex flex-row flex-wrap">
           <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">

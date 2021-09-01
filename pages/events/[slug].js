@@ -21,6 +21,8 @@ import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
 import Section from "../../components/Section";
+import TwoUp from "../../components/TwoUp";
+
 import {
   Person,
   ReadableList,
@@ -128,22 +130,21 @@ export default function Event({
           <Contact />
         </Section>
         <Section wide className="flex">
-          {previousEvent === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <div className="mr-4 w-1/2">
-              <h3 className="mb-2">Next Event</h3>
-              <EventPreview event={previousEvent} />
-            </div>
-          )}
-          {nextEvent === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <div className="mr-4 w-1/2">
-              <h3 className="mb-2">Previous Event</h3>
-              <EventPreview event={nextEvent} />
-            </div>
-          )}
+          <TwoUp>
+            {previousEvent ? (
+              <div>
+                <h3 className="mb-2">Next Event</h3>
+                <EventPreview event={previousEvent} />
+              </div>
+            ) : null}
+
+            {nextEvent ? (
+              <div>
+                <h3 className="mb-2">Previous Event</h3>
+                <EventPreview event={nextEvent} />
+              </div>
+            ) : null}
+          </TwoUp>
         </Section>
       </SingleColumn>
       <Footer />
