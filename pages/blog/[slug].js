@@ -18,6 +18,7 @@ import SingleColumn from "../../components/SingleColumn";
 import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
+import TwoUp from "../../components/TwoUp";
 import { decode } from "html-entities";
 
 export default function Post({
@@ -64,24 +65,14 @@ export default function Post({
           <Contact />
         </Section>
         <Section wide className="flex">
-          {previousPost === null ? (
-            <div className={"w-1/2 mr-4"} />
-          ) : (
-            <PostPreview
-              title="Previous Post"
-              post={previousPost}
-              className="mr-4 w-1/2"
-            />
-          )}
-          {nextPost === null ? (
-            <div className={"w-1/2 ml-4"} />
-          ) : (
-            <PostPreview
-              title="Next Post"
-              post={nextPost}
-              className="ml-4 w-1/2"
-            />
-          )}
+          <TwoUp>
+            {nextPost ? (
+              <PostPreview title="Next Post" post={nextPost} />
+            ) : null}
+            {previousPost ? (
+              <PostPreview title="Previous Post" post={previousPost} />
+            ) : null}
+          </TwoUp>
         </Section>
       </SingleColumn>
       <Footer />
