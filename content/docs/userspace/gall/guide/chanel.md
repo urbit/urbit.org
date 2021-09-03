@@ -218,7 +218,7 @@ an `onmessage` function to the event source to process messages back.
 
 ## `index.js`
 Now we can go through this and see how it interacts with our ship's running Gall
-app. For this part of the lesson, uopen up the Console in the developer tools of
+app. For this part of the lesson, open up the Console in the developer tools of
 your browser.
 
 Go to `localhost/~chanel/index.html`.
