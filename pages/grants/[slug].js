@@ -17,6 +17,7 @@ import Footer from "../../components/Footer";
 import SingleColumn from "../../components/SingleColumn";
 import GrantPreview from "../../components/GrantPreview";
 import Section from "../../components/Section";
+import { DateTime } from "luxon";
 
 export default function Grant({ post, markdown, search, similarGrants }) {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function Grant({ post, markdown, search, similarGrants }) {
             </div>
           ) : null}
           <div className="type-ui text-wall-500 mt-4 md:mt-8 lg:mt-10">
-            {formatDate(new Date(post.date))}
+            {formatDate(DateTime.fromISO(post.date))}
           </div>
           <div className="flex items-center flex-wrap mt-4 md:mt-8 lg:mt-10">
             {post.taxonomies.grant_type.map((category) => {
