@@ -106,12 +106,19 @@ export default function Grants({
       activeTags.includes(category)
     );
 
+    const notCanceled = !post.extra.canceled;
+
     const noTagsSelected = activeTags.length === 0;
     const hasType = post.taxonomies.grant_type.some((type) =>
       activeTypes.includes(type)
     );
 
-    return (hasCategory || noTagsSelected) && byStatus(post) && hasType;
+    return (
+      (hasCategory || noTagsSelected) &&
+      byStatus(post) &&
+      hasType &&
+      notCanceled
+    );
   });
 
   const allCount = postsByStatus.length;
