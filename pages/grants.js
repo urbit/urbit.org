@@ -135,8 +135,6 @@ export default function Grants({
     ).length,
   };
 
-  console.log(giftPosts);
-
   return (
     <Container>
       <Head>
