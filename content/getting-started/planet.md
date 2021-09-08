@@ -26,10 +26,10 @@ Using hosting does mean that you're trusting your provider with your data, but s
 
 Current hosting providers are:
 
-- [UrbitHost](https://urbithost.com)
+- [escape pod store](https://www.escapepod.store/)
 - [Third Earth](https://third.earth/)
 - [Tlon Corporation](https://tlon.io)
-- [escape pod store](https://www.escapepod.store/)
+- [UrbitHost](https://urbithost.com)
 
 ### Choose to run your planet on your computer or on a cloud service
 
