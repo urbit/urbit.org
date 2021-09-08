@@ -12,7 +12,7 @@ description = "Add array types to Hoon."
 reward = 5
 assignee = "N E Davis"
 id = "611660914"
-completed = false
+completed = true
 link = ""
 +++
 
