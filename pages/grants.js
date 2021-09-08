@@ -128,6 +128,8 @@ export default function Grants({
     ).length,
   };
 
+  console.log(giftPosts);
+
   return (
     <Container>
       <Head>
@@ -262,13 +264,13 @@ export default function Grants({
                 post={giftPosts[0]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
                 key={giftPosts[0].slug}
-                section={giftPosts[0].section}
+                section="updates"
               />
               <PostPreview
                 post={giftPosts[1]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
                 key={giftPosts[1].slug}
-                section={giftPosts[1].section}
+                section="blog"
               />
             </div>
           </div>
