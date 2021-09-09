@@ -10,7 +10,7 @@ image = "https://media.urbit.org/site/posts/essays/hl_soundcloud.jpeg"
 
 ![](https://media.urbit.org/site/posts/essays/hl_soundcloud.jpeg)
 
-*Check out the Holdersland x Urbit collection: [urbit.holders.land](urbit.holders.land)*
+*Check out the Holdersland x Urbit collection: [urbit.holders.land](http://urbit.holders.land/)*
 
 We sat down recently with Haleek Maul to discuss the current state of NFTs and the future of Urbit IDs and digital communities.
 
@@ -20,7 +20,7 @@ We built Urbit IDs for digital communities and the people they’re made of. An 
 
 Urbit IDs are evolving and generative. They’re generative because some IDs spawn additional NFTs which themselves can be bought and sold. For instance, each star can spawn 65,535 planets. The network itself is evolving, meaning that the network can be upgraded via a majority vote by galaxy holders. Urbit IDs and the Ubit network itself are inherently dynamic.
 
-At Urbit, we support communities of all kinds. We recently granted Holdersland ten Urbit IDs: four stars and six planets to be auctioned off. Haleek Maul(~fosmex-hocmel) will be creating custom artwork for each of the sigils. The proceeds of the auction will help support Holdersland in bringing blockchain technologies to the Caribbean. The auction will go live on September 16th, 2021 on [urbit.holders.land](urbit.holders.land).
+At Urbit, we support communities of all kinds. We recently granted Holdersland ten Urbit IDs: four stars and six planets to be auctioned off. Haleek Maul(~fosmex-hocmel) will be creating custom artwork for each of the sigils. The proceeds of the auction will help support Holdersland in bringing blockchain technologies to the Caribbean. The auction will go live on September 16th, 2021 on [urbit.holders.land](http://urbit.holders.land/).
 
 Without further ado, here’s Haleek Maul.
 
