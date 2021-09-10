@@ -1,6 +1,6 @@
 +++
 title = "~Home-Urbit"
-date = 2021-01-01
+date = "2021-01-01"
 [taxonomies]
 grant_type = ["Proposal"]
 grant_category = ["App Dev", "Dev tool"]
