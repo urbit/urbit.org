@@ -28,7 +28,9 @@ export default function EventPreview({ event, className, big }) {
     generateRealtimeDate(event.starts) > DateTime.now() && !inFuture;
 
   return (
-    <div className={`cursor-pointer aspect-w-5 aspect-h-4 ${className}`}>
+    <div
+      className={`cursor-pointer aspect-w-4 aspect-h-5 md:aspect-w-5 md:aspect-h-4 ${className}`}
+    >
       <div
         key={event.slug}
         className={`bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat `}

@@ -5,10 +5,10 @@ description = "Interview with the founder of UrbitHost ~lavlyn-litmeg"
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"
-image = "https://media.urbit.org/site/posts/essays/urbithost.png"
+image = "https://media.urbit.org/site/posts/essays/nasa-star-cluster.jpg"
 +++
 
-![](https://media.urbit.org/site/posts/essays/urbithost.png)
+![](https://media.urbit.org/site/posts/essays/nasa-star-cluster.jpg)
 
 **An Interview with UrbitHost**
 

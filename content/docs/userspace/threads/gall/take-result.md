@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here we've added an extra card to subscribe for the result and a couple of lines in on-agent to test if it succeeded:
 
-#### thread-starter.hoon
+#### `thread-starter.hoon`
 
 ```hoon
 /+  default-agent, dbug
@@ -71,14 +71,14 @@ Here we've added an extra card to subscribe for the result and a couple of lines
 --
 ```
 
-#### test-thread.hoon
+#### `test-thread.hoon`
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+/-  spider
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 |=  strand-input:strand
 ?+    q.arg  [~ %fail %not-foo ~]
@@ -101,9 +101,9 @@ Thread started successfully
 Thread failed: not-foo
 ```
 
-## Analysis
+### Analysis
 
-In `on-poke` we've added an extra card *before* the `%spider-start` poke to subscribe for the result:
+In `on-poke` we've added an extra card _before_ the `%spider-start` poke to subscribe for the result:
 
 ```hoon
 [%pass /thread/[ta-now] %agent [our.bowl %spider] %watch /thread-result/[tid]]

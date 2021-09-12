@@ -10,7 +10,7 @@ Jael's scry endpoints never take a `care`. The particular endpoints are specifie
 
 A `%step` scry gets the current web login code revision number. It takes your ship name as its `path` and the type returned is a `@ud`.
 
-### Example
+#### Example
 
 ```
 > .^(@ud %j /=step=/(scot %p our))
@@ -21,7 +21,7 @@ A `%step` scry gets the current web login code revision number. It takes your sh
 
 A `%code` scry gets the current web login code. It takes your ship name as its `path` and the type returned is a `@p`.
 
-### Example
+#### Example
 
 ```
 > .^(@p %j /=code=/(scot %p our))
@@ -32,7 +32,7 @@ A `%code` scry gets the current web login code. It takes your ship name as its `
 
 A `%life` scry gets the current `life` (key revision number) of a ship if known, otherwise it crashes. It takes a ship as its `path` and the type returned is a `@ud`.
 
-### Example
+#### Example
 
 ```
 > .^(@ud %j /=life=/(scot %p our))
@@ -43,7 +43,7 @@ A `%life` scry gets the current `life` (key revision number) of a ship if known,
 
 A `%lyfe` scry gets the current unitized `life` (key revision number) of a ship if known, otherwise returns `~`. It takes a ship as its `path` and the type returned is a `(unit @ud)`.
 
-### Example
+#### Example
 
 ```
 > .^((unit @ud) %j /=lyfe=/(scot %p our))
@@ -54,7 +54,7 @@ A `%lyfe` scry gets the current unitized `life` (key revision number) of a ship 
 
 A `%rift` scry gets the current `rift` (continuity number) of a ship if known, otherwise it crashes. It takes a ship as its `path` and the type returned is a `@ud`.
 
-### Example
+#### Example
 
 ```
 .^(@ud %j /=rift=/(scot %p our))
@@ -65,7 +65,7 @@ A `%rift` scry gets the current `rift` (continuity number) of a ship if known, o
 
 A `%ryft` scry gets the current unitized `rift` (continuity number) of a ship if known, otherwise it returns `~`. It takes a ship as its `path` and the type returned is a `(unit @ud)`.
 
-### Example
+#### Example
 
 ```
 > .^((unit @ud) %j /=ryft=/(scot %p our))
@@ -76,7 +76,7 @@ A `%ryft` scry gets the current unitized `rift` (continuity number) of a ship if
 
 A `%vein` scry gets your ship's private key for the specified `life`. It takes a `life` `@ud` as its `path` and the type returned is a `ring`.
 
-### Example
+#### Example
 
 ```
 > .^(@uw %j /=vein=/1)
@@ -87,7 +87,7 @@ A `%vein` scry gets your ship's private key for the specified `life`. It takes a
 
 A `%vile` scry gets your `jam`mmed private boot parameters at your ship's current `life`. It takes no additional arguments in its `path`. The type returned is a `@` which is a `jam`med [$seed](/docs/arvo/jael/data-types#seed).
 
-### Examples
+#### Examples
 
 ```
 > .^(@ %j /=vile=)
@@ -108,7 +108,7 @@ A `%vile` scry gets your `jam`mmed private boot parameters at your ship's curren
 
 A `%deed` scry gets the `life`, pubkey and maybe a signature if the ship in question is a comet. It takes the target ship and life as its `path` like `/~sampel-palnet/1` and the type returned is a `[life pass (unit @ux)]`.
 
-### Example
+#### Example
 
 ```
 > .^([life pass (unit @ux)] %j /=deed=/(scot %p our)/1)
@@ -122,7 +122,7 @@ A `%deed` scry gets the `life`, pubkey and maybe a signature if the ship in ques
 
 A `%earl` scry deterministically derives a private key for a moon. Note this is a holdover from an old version of moon infrastructure, the current `|moon` generator doesn't use this and instead generates moon private keys non-deterministically. It takes the moon name and your ship's current `life` (not the moon's `life`) as its `path` like `/~doznec-dozzod-dozzod-dozzod/1`. The type returned is a [$seed](/docs/arvo/jael/data-types#seed), the `life` of the moon in the `lyf` field of the `seed` will always be `1`.
 
-### Example
+#### Example
 
 ```
 > .^(seed:jael %j /=earl=/~doznec-dozzod-dozzod-dozzod/1)
@@ -138,7 +138,7 @@ A `%earl` scry deterministically derives a private key for a moon. Note this is 
 
 A `%sein` scry gets the sponsor for the specified ship. This scry is used implicitly by `sein:title`. It takes the target ship as its `path` and the type returned is a `@p`.
 
-### Example
+#### Example
 
 ```
 > .^(@p %j /=sein=/~sampel-palnet)
@@ -149,7 +149,7 @@ A `%sein` scry gets the sponsor for the specified ship. This scry is used implic
 
 A `%saxo` scry gets the sponsorship chain for the target ship (including the target ship itself). For example, a `%saxo` scry for a planet will return the planet, its star and the star's galaxy. This scry is used implicitly by `saxo:title`. It takes the target ship as its `path` and the type returned is a `(list @p)`.
 
-### Example
+#### Example
 
 ```
 > .^((list @p) %j /=saxo=/~sampel-palnet)
@@ -168,7 +168,7 @@ nel=(set duct)       ::  trackers of all
 
 The `yen` `jug` maps subscribed `duct`s to the `ship`s they're tracking, and `ney` is just the inverse, mapping tracked `ship`s to subscribed `duct`s. The `nel` set contains `duct`s track all public key updates.
 
-### Example
+#### Example
 
 ```
 .^([yen=(jug duct ship) ney=(jug ship duct) nel=(set duct)] %j /=subscriptions=/1)
@@ -179,7 +179,7 @@ The `yen` `jug` maps subscribed `duct`s to the `ship`s they're tracking, and `ne
 
 A `%sources` scry gets the current state of Jael's sources for PKI updates. It takes no additional arguments in its `path` and returns a [$state-eth-node](/docs/arvo/jael/data-types#state-eth-node).
 
-### Example
+#### Example
 
 ```
 > .^(state-eth-node:jael %j /=sources=)
@@ -196,7 +196,7 @@ A `%sources` scry gets the current state of Jael's sources for PKI updates. It t
 
 A `%turf` scry gets the list of domain prefixes for galaxies. It takes no additional arguments in its `path`. It returns a `(list turf)`, where a `turf` is a TLD-first `(list @t)`, so `urbit.org` as a `turf` is `~['org' 'urbit']`.
 
-### Example
+#### Example
 
 ```
 > .^((list turf) %j /=turf=)

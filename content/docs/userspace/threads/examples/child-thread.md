@@ -4,31 +4,31 @@ weight = 2
 template = "doc.html"
 +++
 
-Here's a simple example of a thread that starts another thread: 
+Here's a simple example of a thread that starts another thread:
 
-### parent.hoon
+#### `parent.hoon`
 
 ```hoon
 /-  spider
 /+  *strandio
 =,  strand=strand:spider
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  tid=tid:spider   bind:m  (start-thread %child)
 (pure:m !>(~))
 ```
 
-### child.hoon
+#### `child.hoon`
 
 ```hoon
 /-  spider
 /+  *strandio
 =,  strand=strand:spider
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 %-  (slog leaf+"foo" ~)
 (pure:m !>(~))
@@ -48,7 +48,7 @@ foo
 ;<  tid=tid:spider   bind:m  (start-thread %child)
 ```
 
-See here how we gave `start-thread` the name of the thread to run. It returns the `tid` of the thread, which we could then use to poke it or whatever. 
+See here how we gave `start-thread` the name of the thread to run. It returns the `tid` of the thread, which we could then use to poke it or whatever.
 
 `start-thread` handles creating the `tid` for the thread so is quite convenient.
 
@@ -58,15 +58,15 @@ Note that threads we start this way will be a child of the thread that started t
 
 If we want to actually get the result of the thread we started, it's slightly more complicated:
 
-### parent.hoon
+#### `parent.hoon`
 
 ```hoon
 /-  spider
 /+  *strandio
 =,  strand=strand:spider
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =bowl:spider  bind:m  get-bowl
 =/  tid  `@ta`(cat 3 'strand_' (scot %uv (sham %child eny.bowl)))
@@ -84,7 +84,7 @@ If we want to actually get the result of the thread we started, it's slightly mo
 ==
 ```
 
-###  child.hoon
+#### `child.hoon`
 
 ```hoon
 /-  spider
@@ -94,9 +94,9 @@ If we want to actually get the result of the thread we started, it's slightly mo
 |%
 ++  url  "https://www.whatsthelatestbasehash.com/"
 --
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =cord  bind:m  (fetch-cord url)
 =/  hash-as-cord  `@t`(end [3 (sub (met 3 cord) 1)] cord)
@@ -104,7 +104,7 @@ If we want to actually get the result of the thread we started, it's slightly mo
 (pure:m !>(hash))
 ```
 
-`child.hoon` simply grabs the latest base hash from https://www.whatsthelatestbasehash.com/ and returns it. 
+`child.hoon` simply grabs the latest base hash from https://www.whatsthelatestbasehash.com/ and returns it.
 
 `parent.hoon` is a bit more complicated so we'll look at it line-by-line
 
@@ -136,10 +136,10 @@ We pre-emptively subscribe for the result. Spider sends the result at `/thread-r
 
 Spider takes a poke with a mark %spider-start and a vase containing `[parent=(unit tid) use=(unit tid) file=term =vase]` to start a thread, where:
 
-* `parent` is an optional parent thread. In this case we say the parent is our tid. Specifying a parent means the child will be killed if the parent ends.
-* `use` is the thread ID for the thread we're creating
-* `file` is the filename of the thread we want to start
-* `vase` is the vase it will be given as an argument when it's started
+- `parent` is an optional parent thread. In this case we say the parent is our tid. Specifying a parent means the child will be killed if the parent ends.
+- `use` is the thread ID for the thread we're creating
+- `file` is the filename of the thread we want to start
+- `vase` is the vase it will be given as an argument when it's started
 
 ```hoon
 ;<  =cage         bind:m  (take-fact /awaiting/[tid])
@@ -164,15 +164,15 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
 
 ## Stop a thread
 
-### parent.hoon
+#### `parent.hoon`
 
 ```hoon
 /-  spider
 /+  *strandio
 =,  strand=strand:spider
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =bowl:spider  bind:m  get-bowl
 =/  tid  `@ta`(cat 3 'strand_' (scot %uv (sham %child eny.bowl)))
@@ -193,7 +193,7 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
 (pure:m !>("Done"))
 ```
 
-### child.hoon
+#### `child.hoon`
 
 ```hoon
 /-  spider
@@ -213,8 +213,8 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
   ==
 --
 ^-  thread:spider
-|=  arg=vase 
-=/  m  (strand ,vase) 
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  ~  bind:m  looper
 (pure:m !>(~))
@@ -232,6 +232,6 @@ Finally we test whether the thread produced a `%thread-done` or a `%thread-fail`
                           ==
 ```
 
-* `%spider-stop` is the mark that tells spider to kill a thread.
-* `tid` is the tid of the thread to kill
-* `%.y` tells spider to suppress traceback in the result of the killed thread. If you give it `%.n` it will include the traceback.
+- `%spider-stop` is the mark that tells spider to kill a thread.
+- `tid` is the tid of the thread to kill
+- `%.y` tells spider to suppress traceback in the result of the killed thread. If you give it `%.n` it will include the traceback.

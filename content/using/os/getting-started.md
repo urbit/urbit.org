@@ -144,16 +144,16 @@ moon: ~faswep-navred-sampel-palnet
 \/                                                                                                 \/
 ```
 
-You must manually edit the output of `|moon` to get the correct format for the `<key>`:
+You must manually edit the output of `|moon` to get the correct format for the `key`:
 
 - strip out the `\/`
 
 - combine into one line, omitting spaces
 
-`<key>` would be `0w5cT5t.wCO6i.~e1xg.Oz0qb.QNO6I.3Kt2T.h9M9F.U3vU~.X3Qu0.gtb19.IYTkY.80kWZ.SIEUE.DXa8i.TiDof.o3-1C.RHLKS.k81M0.ecz5o.ic0Bg.600g1`
+`key` would be `0w5cT5t.wCO6i.~e1xg.Oz0qb.QNO6I.3Kt2T.h9M9F.U3vU~.X3Qu0.gtb19.IYTkY.80kWZ.SIEUE.DXa8i.TiDof.o3-1C.RHLKS.k81M0.ecz5o.ic0Bg.600g1`
 in this example.
 
-Put `<key>` in a file and that file becomes `<keyfile>`.
+Put `key` in a file and that file becomes `keyfile`.
 
 You can use the resulting output in the same installation flow from the [Installing Urbit](/getting-started/) guide, following the same scheme as for booting a planet. That scheme is:
 

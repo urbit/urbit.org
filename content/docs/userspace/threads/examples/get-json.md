@@ -4,18 +4,19 @@ weight = 1
 template = "doc.html"
 +++
 
-Grabbing JSON from some url is very easy. 
+Grabbing JSON from some url is very easy.
 
 `strandio` includes the `fetch-json` function which will handle the http request and response parsing and just return unformatted json data.
 
-Here's a simple thread that will: 
+Here's a simple thread that will:
+
 - grab JSON of the latest base-hash from https://www.whatsthelatestbasehash.com/latesthash.json
 - grab JSON of a list of all base-hashes with version info from https://www.whatsthelatestbasehash.com/all.json
 - format and cast them
 - check `all.json` includes the latest base-hash
 - print the details of the latest base-hash to the dojo
 
-### latest-hash.hoon
+#### `latest-hash.hoon`
 
 ```hoon
 /-  spider
@@ -86,7 +87,7 @@ Release: https://github.com/urbit/urbit/releases/tag/urbit-os-v2.39
 ~
 ```
 
-## Analysis 
+### Analysis
 
 `fetch-json` takes a url as a tape, so we've added a core with the urls like:
 

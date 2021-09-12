@@ -4,15 +4,7 @@ weight = 50
 template = "doc.html"
 +++
 
-## Spider
-
-- [Start a thread](#start-thread)
-- [Stop a thread](#stop-thread)
-- [Subscribe to thread result](#subscribe-to-thread-result)
-- [Subscribe to thread](#subscribe-to-thread)
-- [Poke a thread](#poke-thread)
-
-### Start thread
+## Start thread
 
 Poke `spider` with mark `%spider-start` and a vase containing `start-args`:
 
@@ -34,7 +26,7 @@ Where:
 [%pass /some-path %agent [our.bowl %spider] %poke %spider-start !>([~ `tid %foo !>(~)])]
 ```
 
-### Stop thread
+## Stop thread
 
 Poke `spider` with mark `%spider-stop` and a vase containing `[tid ?]`, where:
 
@@ -47,7 +39,7 @@ Poke `spider` with mark `%spider-stop` and a vase containing `[tid ?]`, where:
 [%pass /some-path %agent [our.bowl %spider] %poke %spider-stop !>([tid %.y)]
 ```
 
-### Subscribe to thread result
+## Subscribe for result
 
 Spider will send the result on `/thread-result/[tid]` so you can subscribe there for the result. You should subscribe before starting the thread.
 
@@ -62,7 +54,7 @@ The result will have a mark of either `%thread-fail` or `%thread-done`.
 [%pass /some-path %agent [our.bowl %spider] %watch /thread-result/[tid]]
 ```
 
-### Subscribe to thread
+## Subscribe to thread
 
 You can subscribe to a thread on `/thread/[tid]/path`. Note this is for facts sent off by the thread while it's running, not the final result. The path depends on the particular thread.
 
@@ -72,7 +64,7 @@ You can subscribe to a thread on `/thread/[tid]/path`. Note this is for facts se
 [%pass /some-path %agent [our.bowl %spider] %watch /thread/[tid]/thread-path]
 ```
 
-### Poke Thread
+## Poke thread
 
 To poke a thread you poke spider with a mark of `%spider-input` and a vase of `[tid cage]`.
 

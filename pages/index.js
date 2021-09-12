@@ -1,16 +1,18 @@
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+
 import Container from "../components/Container";
 import Section from "../components/Section";
 import SingleColumn from "../components/SingleColumn";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BackgroundImage from "../components/BackgroundImage";
-import TabCarousel from "../components/TabCarousel";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
+import Cross from "../components/icons/Cross";
+import TwoUp from "../components/TwoUp";
 import {
   getAllPosts,
   getAllEvents,
@@ -19,11 +21,39 @@ import {
 } from "../lib/lib";
 import { contact, eventKeys } from "../lib/constants";
 
-export default function Home({ posts, events, openGrantsCount, search }) {
-  const [tab, setTab] = useState(0);
-  const [heroButton, setHeroButton] = useState(<div />);
+import { useLocalStorage } from "../lib/hooks";
 
-  const detectOS = () => {
+const Banner = ({ children, isOpen, href, dismiss }) => {
+  return (
+    <div className="w-full flex justify-center bg-green-100">
+      <SingleColumn>
+        <div className="w-full layout">
+          <div className="w-full  flex justify-between items-center px-4 md:px-8 py-4">
+            <a href={href} target="_blank">
+              {children}
+            </a>
+            <button
+              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
+              onClick={(e) => {
+                e.stopPropagation();
+                dismiss();
+              }}
+            >
+              <Cross width="10" height="10" fill="#E5F7F1" />
+            </button>
+          </div>
+        </div>
+      </SingleColumn>
+    </div>
+  );
+};
+
+export default function Home({ posts, events, openGrantsCount, search }) {
+  const [heroButton, setHeroButton] = useState(<div />);
+  const [bannerElement, setBannerElement] = useState(null);
+  const [isBannerOpen, setBanner] = useLocalStorage("isBannerOpen", true);
+
+  const selectDownloadButton = () => {
     const agent = window.navigator.appVersion;
     if (agent.includes("Win")) {
       return (
@@ -49,17 +79,37 @@ export default function Home({ posts, events, openGrantsCount, search }) {
   };
 
   useEffect(() => {
-    setHeroButton(detectOS());
+    setHeroButton(selectDownloadButton());
   }, []);
+
+  // Use this pattern when depending on client-side state or conditions like localStorage, user OS or geolocation.
+  const selectBanner = (isBannerOpen) => {
+    if (isBannerOpen) {
+      return (
+        <Banner
+          href="http://assembly.urbit.org/"
+          dismiss={() => setBanner(false)}
+        >
+          <p className="text-green-400 font-semibold hover:opacity-70">{`-> Join us October 15-17 for Assembly`}</p>
+        </Banner>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    setBannerElement(selectBanner(isBannerOpen));
+  }, [isBannerOpen]);
 
   return (
     <Container>
       <Head>
         <title>urbit.org</title>
       </Head>
+      {bannerElement}
       <SingleColumn>
         <Header search={search} />
-
         {
           // Hero Statement
         }
@@ -197,14 +247,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <h2>Blog</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
-              <PostPreview post={posts[0]} key={posts[0].slug} />
-            </div>
-            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
-              <PostPreview post={posts[1]} key={posts[1].slug} />
-            </div>
-          </div>
+          <TwoUp>
+            <PostPreview post={posts[0]} key={posts[0].slug} />
+            <PostPreview post={posts[1]} key={posts[1].slug} />
+          </TwoUp>
+
           <Link href="/blog">
             <button className="button-lg type-ui text-white bg-green-400">
               See More
@@ -220,14 +267,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             <h2>Events</h2>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-full md:w-1/2 pr-0 pb-8 md:pr-4">
-              <EventPreview event={events[0]} key={events[0].slug} />
-            </div>
-            <div className="w-full md:w-1/2 pl-0 pb-8 md:pl-4">
-              <EventPreview event={events[1]} key={events[1].slug} />
-            </div>
-          </div>
+          <TwoUp>
+            <EventPreview event={events[0]} key={events[0].slug} />
+            <EventPreview event={events[1]} key={events[1].slug} />
+          </TwoUp>
+
           <Link href="/events">
             <button className="button-lg type-ui text-white bg-wall-600">
               More Events

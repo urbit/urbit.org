@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here's a thread that lets you post a message to a chat in graph-store:
 
-#### post-msg.hoon
+#### `post-msg.hoon`
 
 ```hoon
 /-  spider
@@ -55,6 +55,6 @@ Save it in `/ted`, `|commit`, and run it like:
 
 (obviously change the channel name to whatever you have)
 
-## Analysis
+### Analysis
 
 Pretty simple, just use `on-poke` with an argument of `[ship term] cage` where `term` is the agent and `cage` is whatever the particular agent expects.

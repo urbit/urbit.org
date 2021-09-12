@@ -106,12 +106,19 @@ export default function Grants({
       activeTags.includes(category)
     );
 
+    const notCanceled = !post.extra.canceled;
+
     const noTagsSelected = activeTags.length === 0;
     const hasType = post.taxonomies.grant_type.some((type) =>
       activeTypes.includes(type)
     );
 
-    return (hasCategory || noTagsSelected) && byStatus(post) && hasType;
+    return (
+      (hasCategory || noTagsSelected) &&
+      byStatus(post) &&
+      hasType &&
+      notCanceled
+    );
   });
 
   const allCount = postsByStatus.length;
@@ -262,13 +269,13 @@ export default function Grants({
                 post={giftPosts[0]}
                 className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
                 key={giftPosts[0].slug}
-                section={giftPosts[0].section}
+                section="updates"
               />
               <PostPreview
                 post={giftPosts[1]}
                 className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
                 key={giftPosts[1].slug}
-                section={giftPosts[1].section}
+                section="blog"
               />
             </div>
           </div>

@@ -6,12 +6,12 @@ template = "doc.html"
 
 Here's an example of a thread that scries ames for the IP address & port of a ship and nicely prints it:
 
-#### get-ip.hoon
+#### `get-ip.hoon`
 
 ```hoon
 /-  spider
 /+  strandio
-=,  strand=strand:spider 
+=,  strand=strand:spider
 =,  strand-fail=strand-fail:libstrand:spider
 |%
 ++  process-lanes
@@ -30,9 +30,9 @@ Here's an example of a thread that scries ames for the IP address & port of a sh
   %-  (slog leaf+"{ip}:{port}" ~)
   (pure:m ~)
 --
-^-  thread:spider 
+^-  thread:spider
 |=  arg=vase
-=/  m  (strand ,vase) 
+=/  m  (strand ,vase)
 ^-  form:m
 =/  utarget  !<  (unit @p)  arg
 ?~  utarget
@@ -51,20 +51,20 @@ Save as `ted/get-ip.hoon`, `|commit %home`, and run it with `-get-ip ~bitbet-bol
 34.83.113.220:60659
 ```
 
-## Analysis
+### Analysis
 
 Here we use the `strandio` function `scry` which takes an argument of `[mold path]` where:
 
 - `mold` is the return type of the scry
 - `path` is the scry path formatted like:
-   1. vane letter and care
-   2. desk if scrying arvo or agent if scrying a gall agent
-   3. rest of path
-   
+  1.  vane letter and care
+  2.  desk if scrying arvo or agent if scrying a gall agent
+  3.  rest of path
+
 In our case the mold is `(list lane:ames)` and the path is `/ax//peers/(scot %p target)/forward-lane` like:
 
 ```hoon
 ;<  lanes=(list lane:ames)  bind:m  (scry:strandio (list lane:ames) /ax//peers/(scot %p target)/forward-lane)
 ```
 
-After that we just process the result in `++  process-lanes` and print it.
+After that we just process the result in `++ process-lanes` and print it.

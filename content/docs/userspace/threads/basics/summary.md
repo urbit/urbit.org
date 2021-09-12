@@ -42,16 +42,16 @@ Now here's a quick recap of the main points covered:
 - are conventionally given the face `m`.
 - are a core that has three main arms - `form`, `pure` and `bind`:
 
-#### form
+### form
 
 - is the mold of the strand suitable for casting
 - is the type returned by the other arms
 
-#### pure
+### pure
 
 - simply returns the `form` of a `strand` that produces pure's argument without doing any IO
 
-#### bind
+### bind
 
 - is used to chain strands together like javascript promises
 - is used in conjunction with micgal (`;<`)

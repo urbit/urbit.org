@@ -18,7 +18,7 @@ This is useful if you want to (for example) take an arbitrary number of facts.
 
 Here's an example of a thread that subscribes to `graph-store` for updates and nicely prints the messages (an extremely basic chat reader):
 
-#### chat-watch.hoon
+#### `chat-watch.hoon`
 
 ```hoon
 /-  spider
@@ -111,15 +111,15 @@ baz
 ~
 ```
 
-#### tester.hoon
+#### `tester.hoon`
 
 ```hoon
 /-  spider
 /+  *strandio
 =,  strand=strand:spider
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  tid=tid:spider   bind:m  (start-thread %tested)
 ;<  our=ship         bind:m  get-our
@@ -129,7 +129,7 @@ baz
 (pure:m !>(~))
 ```
 
-#### tested.hoon
+#### `tested.hoon`
 
 ```hoon
 /-  spider
@@ -163,9 +163,9 @@ baz
       (pure:m ~)
   ==
 --
-^-  thread:spider 
+^-  thread:spider
 |=  arg=vase
-=/  m  (strand ,vase) 
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  ~  bind:m  looper
 (pure:m !>(~))

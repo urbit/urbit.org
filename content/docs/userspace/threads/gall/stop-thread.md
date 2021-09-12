@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here we've added one last card to `on-poke` to stop the thread and a little extra to `on-agent` to print things for demonstrative purposes.
 
-#### thread-starter.hoon
+#### `thread-starter.hoon`
 
 ```hoon
 /+  default-agent, dbug
@@ -91,15 +91,15 @@ Here we've added one last card to `on-poke` to stop the thread and a little extr
 
 We've also added a `sleep` to the thread to keep it running for demonstration.
 
-#### test-thread.hoon
+#### `test-thread.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  *strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =path   bind:m  take-watch
 ;<  ~       bind:m  (send-raw-card [%give %fact ~[path] %update !>("message 1")])
@@ -141,7 +141,7 @@ Thread cancelled successfully
 Thread failed: cancelled
 ```
 
-## Analysis
+### Analysis
 
 The card we've added to our agent:
 

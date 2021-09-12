@@ -8,7 +8,7 @@ Most of the time you'll just want the final result like how we did previously. S
 
 Here we've added another card to subscribe for any facts sent by the thread and some small changes to `on-agent`:
 
-#### thread-starter.hoon
+#### `thread-starter.hoon`
 
 ```hoon
 /+  default-agent, dbug
@@ -80,15 +80,15 @@ Here we've added another card to subscribe for any facts sent by the thread and 
 
 We've also made some changes to the thread:
 
-#### test-thread.hoon
+#### `test-thread.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  *strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  =path   bind:m  take-watch
 ;<  ~       bind:m  (send-raw-card [%give %fact ~[path] %update !>("message 1")])
@@ -127,7 +127,7 @@ message 4
 Thread failed: not-foo
 ```
 
-## Analysis
+### Analysis
 
 In our agent's `on-poke` arm we've added another card to subscribe to `/thread/[tid]/updates`:
 

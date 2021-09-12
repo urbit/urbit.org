@@ -34,7 +34,7 @@ This `task` takes a [$dawn-event](/docs/arvo/jael/data-types#dawn-event) as its 
 
 You would not use this `task` manually.
 
-### Returns
+#### Returns
 
 Jael `%give`s an `%init` `gift` to Unix. This occurs after the Dill `%slip` init.
 
@@ -54,7 +54,7 @@ The `ship` field specifies the `@p` of the fake ship being created.
 
 You would not use this `task` manually.
 
-### Returns
+#### Returns
 
 Jael `%give`s a `%init` `gift` to Unix.
 
@@ -72,7 +72,7 @@ Sets the source that the public keys for a set of `ship`s should be obtained fro
 
 You are unlikely to use this `task` manually.
 
-### Returns
+#### Returns
 
 Jael will not return any `gift`s in response to a `%listen` `task`.
 
@@ -94,7 +94,7 @@ Register moon keys or otherwise administer a moon.
 
 This is what is sent to Jael by `%hood` behind the scenes when you run `|moon`, `|moon-breach` or `|moon-cycle-keys`. The `ship` field is the moon's `@p`. The [$udiff:point](/docs/arvo/jael/data-types#udiffpoint) will contain the bunt of an [$id:block](/docs/arvo/jael/data-types#idblock) (since moons aren't registered in Azimuth) and one of the `udiff` actions depending on what you want to do.
 
-### Returns
+#### Returns
 
 Jael does not return any `gift`s in response to a `%moon` `task`.
 
@@ -110,11 +110,11 @@ If you've subscribed to public or private key updates from Jael with a [%private
 
 To cancel a subscription to the ship's private keys you must leave `whos` empty like `[%nuke ~]`.
 
-### Returns
+#### Returns
 
 Jael does not return a `gift` in response to a `%nuke` `task`.
 
-### Examples
+#### Examples
 
 See the [%public-keys and %nuke](/docs/arvo/jael/examples#public-keys-and-nuke) section of the Examples document for an example of using `%nuke` to cancel a `%public-keys` subscription. See the thread in the [%private-keys](/docs/arvo/jael/examples#private-keys) example for cancelling a `%private-keys` subscription.
 
@@ -128,7 +128,7 @@ Subscribe to private key updates.
 
 Subscribe to be notified of private key updates for the local ship. The subscription will continue until Jael receives a [%nuke](#nuke) `task` to cancel it.
 
-### Returns
+#### Returns
 
 Jael responds to a `%private-keys` `task` with a `%private-keys` `gift` which looks like:
 
@@ -138,7 +138,7 @@ Jael responds to a `%private-keys` `task` with a `%private-keys` `gift` which lo
 
 The `life` is the current life of the ship and the `vein` `map` contains the private key for each life up to (and including) the current one. Upon first subscribing, Jael will immediately respond with a `%private-keys` `gift`. Then, whenever the ship's private keys are changed, it'll send a new and updated `%private-keys` `gift`.
 
-### Example
+#### Example
 
 See the [%private-keys](/docs/arvo/jael/examples#private-keys) section of the Examples document for a practical example.
 
@@ -152,7 +152,7 @@ Subscribe to public key (and related) updates from Jael.
 
 An agent or thread can subscribe to be notified of public key updates, sponsorship changes and continuity breaches for the `set` of `ship`s specified in the `ships` field. The subscription will continue until Jael receives a [%nuke](#nuke) `task` to cancel it.
 
-### Returns
+#### Returns
 
 Jael responds to a `%public-keys` `task` with `%public-keys` `gift`s which look like:
 
@@ -164,7 +164,7 @@ The [$public-keys-result](/docs/arvo/jael/data-types#public-keys-result) contain
 
 Upon subscription, Jael will immeditely respond with a `%public-keys` `gift` containing a `%full` `public-keys-result` with the public key for each `life` up until the current one for each `ship` specified in the original `task`. After than, Jael will send a `%public-keys` `gift` with either a `%diff` or `%breach` `public-keys-result` each time a change occurs for any of the `ship`s to which you're subscribed.
 
-### Example
+#### Example
 
 See the [%public-keys and %nuke](/docs/arvo/jael/examples#public-keys-and-nuke) section of the Examples document for a practical example.
 
@@ -178,7 +178,7 @@ Update private keys.
 
 This is what is sent to Jael by `%hood` when you run `|rekey`, as you must after setting new Azimuth keys or running `|cycle-moon-keys` on a moon's parent. It will update your `life` (key revision number) and private keys. The `life` field is the new `life` (typically an increment of the current `life`) and the `ring` is a private key `@`.
 
-### Returns
+#### Returns
 
 Jael does not return any `gift` in response to a `%rekey` `task`.
 
@@ -192,7 +192,7 @@ View domains.
 
 The domains returned by a `%turf` `task` are used as the base for individual galaxy domain names (e.g. from `urbit.org` you get `zod.urbit.org`, `bus.urbit.org`, etc). Jael gets these from Azimuth, then Ames gets them from Jael and passes them to the runtime, which will perform the DNS lookups and give Ames back the galaxy IP addresses. A `%turf` task takes no additional arguments. You're unlikely to use this manually - if you want the current `turf`s you'd likely want to do a [turf scry](/docs/arvo/jael/scry#turf) instead.
 
-### Returns
+#### Returns
 
 Jael will respond to a `%turf` `task` with a `%turf` `gift`, which looks like:
 
@@ -202,7 +202,7 @@ Jael will respond to a `%turf` `task` with a `%turf` `gift`, which looks like:
 
 The `turf` in the `(list turf)` is a domain as a `(list @t)`, TLD-first. The current default is `[['org' 'urbit' ~] ~]`.
 
-### Example
+#### Example
 
 See the [%turf section of the Examples document](/docs/arvo/jael/examples#turf) for a practical example.
 
@@ -216,10 +216,10 @@ Reset web login code.
 
 Jael maintains a `step` value that represents the web login code revision number, and uses it to derive the code itself. It begins at `0` and is incremented each time the code is changed. When Jael updates the web login code, it sends Eyre a `%code-changed` `task:eyre` so that Eyre can throw away all of its current cookies and sessions. A `%step` task takes no additional argument.
 
-### Returns
+#### Returns
 
 Jael does not return a `gift` in response to a `%step` `task`.
 
-### Example
+#### Example
 
 See the [%step](/docs/arvo/jael/examples#step) section of the Examples document for a practical example.

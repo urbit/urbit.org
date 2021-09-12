@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here's an example of a barebones gall agent that just starts a thread:
 
-#### thread-starter.hoon
+#### `thread-starter.hoon`
 
 ```hoon
 /+  default-agent, dbug
@@ -20,7 +20,7 @@ Here's an example of a barebones gall agent that just starts a thread:
 ++  on-init  on-init:def
 ++  on-save  on-save:def
 ++  on-load  on-load:def
-++  on-poke  
+++  on-poke
   |=  [=mark =vase]
   ^-  (quip card _this)
   ?+    mark  (on-poke:def mark vase)
@@ -60,14 +60,14 @@ Here's an example of a barebones gall agent that just starts a thread:
 
 And here's a minimal thread to test it with:
 
-#### test-thread.hoon
+#### `test-thread.hoon`
 
 ```hoon
-/-  spider 
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+/-  spider
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 |=  strand-input:strand
 ?+    q.arg  [~ %fail %not-foo ~]
@@ -109,7 +109,7 @@ Thread failed to start
 /sys/vane/gall/hoon:<[1.370 9].[1.370 37]>
 ```
 
-## Analysis
+### Analysis
 
 We can ignore the input logic, here's the important part:
 

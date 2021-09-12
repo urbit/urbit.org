@@ -6,7 +6,7 @@ template = "doc.html"
 
 Here's a modified agent that pokes our thread. I've replaced some off the previous stuff because it was getting a little unwieldly.
 
-#### thread-starter.hoon
+#### `thread-starter.hoon`
 
 ```hoon
 /+  default-agent, dbug
@@ -70,15 +70,15 @@ Here's a modified agent that pokes our thread. I've replaced some off the previo
 
 And here we've modified the thread to take the poke and return it as the result:
 
-#### test-thread.hoon
+#### `test-thread.hoon`
 
 ```hoon
-/-  spider 
+/-  spider
 /+  *strandio
-=,  strand=strand:spider 
-^-  thread:spider 
-|=  arg=vase 
-=/  m  (strand ,vase) 
+=,  strand=strand:spider
+^-  thread:spider
+|=  arg=vase
+=/  m  (strand ,vase)
 ^-  form:m
 ;<  vmsg=vase   bind:m  (take-poke %foo)
 (pure:m vmsg)
@@ -86,13 +86,12 @@ And here we've modified the thread to take the poke and return it as the result:
 
 Save them, `|commit` and run it like `:thread-starter [%test-thread %blah]`. You should see:
 
-
 ```
 Result: blah
 > :thread-starter [%test-thread %blah]
 ```
 
-## Analysis
+### Analysis
 
 In our agent we've added this card:
 
