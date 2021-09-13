@@ -1,5 +1,5 @@
 +++
-title = "﻿A Collaborative Web Mapping System for Urbit"
+title = "﻿A network enabled spatial database and demonstration app for Urbit"
 date = "2020-09-02"
 
 [taxonomies]
@@ -16,7 +16,7 @@ completed = false
 link = ""
 +++
 
-# A Collaborative Web Mapping System for Urbit
+# A network enabled spatial database and demonstration app for Urbit
 
 ##### Goal
 
@@ -24,15 +24,15 @@ Allow small scale spatial data to be stored and retrieved in Urbit, for use in l
 
 ##### Background/Motivation
 
-This proposal has grown out of a previous bounty which called for Open Street Map data to be ingested into Urbit. Through discussion it was decided that as OSM already provides a free, open and widely available base map and street network, a more useful system for Urbit would provide a method of storing spatial documents, which can overlay upon existing spatial data such as Open Street Map tiles, be collected together for use in landscape apps, and combined, shared and collaboratively edited with other ships as 'Portals'. A spatial document, for the purpose of this proposal, is a single valid GeoJSON[^1] document. A spatial document could contain a single geometry, a feature (geometry with associated properties), or a collection of features (a GeoJSON 'featurecollection'). A Portal is a collection of spatial documents, with associated metadata and can include spatial documents from multiple ships, whose owners can collaboratively edit or construct maps.
+This proposal has grown out of a previous bounty which called for Open Street Map data to be ingested into Urbit. Through discussion it was decided that as OSM already provides a free, open and widely available base map and street network, a more useful system for Urbit would provide a method of storing spatial documents, which can overlay upon existing spatial data such as Open Street Map tiles, be collected together for use in landscape apps, ...and poast .... A spatial document, for the purpose of this proposal, is a single valid GeoJSON[^1] document. A spatial document could contain a single geometry, a feature (geometry with associated properties), or a collection of features (a GeoJSON 'featurecollection').  The fridge store is a collection of poastcards, both those stored locally and those shared from other ships.
 
 ##### Overview
 
 - The proposed system will follow the Urbit store-hook-view pattern as described here https://docs.google.com/document/d/1hS_UuResG1S4j49_H-aSshoTOROKBnGoJAaRgOipf54/edit?ts=5d533e42
 
-- The system will be implemented in two stages. The first stage will implement simple spatial types and a spatial document store, demonstrate input and output of spatial data, and provide a minimal landscape app for creating and editing spatial documents, but limited to the local ship. The second stage will build on the first and provide Portals; collections of spatial documents and associated metadata, which can be shared across ships - similar to the 'canvas' landscape app (https://github.com/yosoyubik/canvas).
+- The system will be implemented in two milestones. The first milestone will implement simple spatial types and a spatial document store, demonstrate input and output of spatial data, and provide a minimal landscape app for creating and editing spatial documents, but limited to the local ship. The second milestone will build on the first and provide a network enabled store and web application for sharing 'poastcards'; spatial documents with text and an image, which can be shared with other ships and viewed through the web application ('Poast').
 
-#### Stage 1 - A spatial store, spatial types, simple demo app
+#### Milestone 1 - A spatial store, spatial types, simple demo app
 
 ##### Spatial Document Store and Tools
 
@@ -42,28 +42,32 @@ This proposal has grown out of a previous bounty which called for Open Street Ma
 - Implement a generator which can read a GeoJSON document in to the store, and can write a constructed document out of the store.
 - Implement a test suite based around GeoJSON specification and the above generator.
 
-##### Hook, View and Landscape App
+##### Hook, View and (not Landscape) App
 
 - Implement the hook and view components of store-hook-view pattern atop the spatial data store.
-- In this stage the system will only allow data to be viewed/edited on the local ship.
+- In this milestone the system will only allow data to be viewed/edited on the local ship.
 - Integrating spatial information with Landscape apps (which can render vector features using available javascript libraries/clients such as Openlayers and Leaflet).
 - Overall, somewhat like 'urlayers' hackathon project (github.com/gusmacaulay/urlayers), but with a sane data store and following the store-hook-view pattern.
 
-#### Stage 2 - A Portal Store and Collaboration System
+#### Milestone 2 - A networked spatial store, and full fledged demo app
 
-##### Store (Metadata, Portals)
+##### Network enabled store ('Fridge')
 
-- Expands on the Stage 1 architecture with additional store
-- The additional store which will house Portals. Portals consists of a map document with metadata (area of interest bounds, styling[^3], author/s etc.), and which may contain many spatial documents, which may be stored locally or on other ships.
-- It may be that the Urbit graph store is the appropriate place for this information, exploring using graph store vs a custom Portal store will be undertaken as part of Stage 2.
+- Expands on the Stage 1 architecture with an enhanced store ('Fridge') and an app ('Poast').
+- The enhanced store (a 'Fridge'), which will house 'Poastcards'. Poastcards consist of an image,text, a geometry.  A poastcard can be represented in a geojson feature, making heavy use of the the feature properties (a key value object, part of the geojson specification) to store the non-spatial information.
+- It may be that the Urbit graph store is the appropriate way to share/link Poastcards, exploring using graph store vs a custom Fridge store will be undertaken as part of Stage 2.
+- 'Poast' is a PoastCard viewing and sharing app, for landscape.  We will implement a mvp/polished demo for this milestone.
+- 'Poast' will be made available through the upcoming software distribution system as part of this milestone.
 
-##### Hook/View/App
+##### Rich demonstration App ('Poast')
 
-- A hook/view/landscape app which allows for displaying and interacting with Portals;
-  - Editing of individual Portals
-  - Sharing of Portals. As a resource owned by a ship, a Portal is somewhat analogous to a chat channel. Individual spatial documents within the Portal can come from local or foreign ship. The owner of the Portal will be able to set permissions on spatial documents within the portal.
-- The overall concept of the Portal app can be likened to the 'canvas' landscape app, but for maps and cartography. The key feature is to present a Portal map with spatial data from different ships and collaborative editing.
-
+- A hook/view/landscape app which allows for displaying and interacting with Poastcards/Fridge store;
+  - Editing/Creation of Poastcards via a web ui.
+  - Sharing of Poastcards; a Poastcard is a resource owned by a ship, once create they can be shared read-only with others.
+- The overall concept of the Poast app can be likened to the experience of sending postcards and personal letters in the pre internet era.  Unlike most present day social media, Poast will not have a feed.
+- Poast will be minimally landscape integrated, insofar is it can be launched from a tile and follow landscape styling. 
+- For this milestone only a minimal set of features will be included to allow for creating, sharing, and viewing of Poastcards.
+ 
 ##### Footnotes
 
 [^1]:
@@ -81,12 +85,13 @@ I am a beef farmer and software engineer (geospatial web applications). I work w
 
 ## Milestones
 
-### Stage 1
+### Milestone 1
 
 2 stars
 A spatial store, spatial types, simple demo landscape app
 
-### Stage 2
+### Milestone 2
 
 2 stars
-A Portal Store and Collaboration System
+A network enabled spatial store, for sharing spatial data in urbit.
+A rich demostration app, for sharing spatial data, images and text.
