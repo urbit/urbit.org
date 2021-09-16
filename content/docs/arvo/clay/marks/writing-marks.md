@@ -50,7 +50,7 @@ Next we have the `+grab` arm of our door, which contains a core with arms for co
 
 Next is the `+grow` arm which does the inverse of `+grab`, converting _from_ our `mark` _to_ another `mark`. We've also given it a `+noun` arm, this time it will simply return the door's sample named `csv`, which is of course already a `noun`.
 
-Note that the `+noun` arm is _mandatory_ in both `+grab` and `+grow`. Clay cannot build a `mark` core without it. Conversion arms for any other `mark`s apart from `%noun` are optional.
+Note that the `+noun` arm is _mandatory_ in `+grab`. Clay cannot build a `mark` core without it. Conversion arms for any other `mark`s apart from `%noun` are optional.
 
 Finally we have the `+grad` arm. This arm specifies functions for revision control like creating diffs, patching files and so on. In our case, rather than writing all those functions, we've just delegated those tasks to the `%noun` `mark`. We can do this because we've specified conversion routines to and from the `%noun` `mark` in our `+grow` and `+grab` arms. When we modify a file with a `%csv` `mark`, Clay will convert our data to a `%noun` `mark`, execute the necessary `+grad` functions from the `%noun` `mark` file, and then convert it back to a `%csv` `mark` again.
 
