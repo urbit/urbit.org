@@ -34,7 +34,7 @@ Here's its basic structure in an informal pseudocode:
   ++  mash: (<diff-type>, <diff-type>) -> <diff-type>
 ```
 
-These types are basically what you would expect. In `+grab` and `+grow`, only a `+noun` arm is mandatory, the rest are optional. In `+grad`, all arms are mandatory unless revision control is delegated to another `mark`, which we'll discuss later.
+These types are basically what you would expect. In `+grab`, only a `+noun` arm is mandatory, the rest are optional. The `+grow` arm itself is optional, as are any arms within it. In `+grad`, all arms are mandatory unless revision control is delegated to another `mark`, which we'll discuss later.
 
 In general, for a particular `mark`, the `+grab` and `+grow` entries should be inverses of each other. They needn't be symmetrical though - you may want to be able to convert from your `mark` to `%json` but not from `%json` to your `mark`, for example.
 
@@ -44,7 +44,7 @@ In `+grad`, `+diff` takes two instances of a `mark` and produces a diff of them 
 
 Alternately, instead of `+form`, `+diff`, `+pact`, `+join`, and `+mash`, a `mark` can provide the same functionality by defining `+grad` to be the name of another `mark` to which we wish to delegate the revision control responsibilities. Then, before running any of those functions, Clay will convert to the other `mark`, and convert back afterward. For example, the `%hoon` `mark` is revision-controlled in the same way as `%txt`, so its `+grad` is simply `++ grad %txt`. Of course, `+txt` must be defined in `+grow` and `+grab` as well.
 
-We mentioned that `+noun` is the only mandatory arm in `+grab` and `+grow`, but there are a couple of others that, while not mandatory, are of particular interest.
+We mentioned that `+noun` is the only mandatory arm in `+grab`, but there are a couple of others that, while not mandatory, are of particular interest.
 
 The first is a `+mime` arm for converting to and from the `%mime` `mark`. When you `|commit` a file to a `desk` mounted to Unix, Clay will receive the data as a `%mime` `mark`, and then convert it to the `mark` matching the file extension. It will perform the same operation in reverse when mounting a `desk` to Unix. For this reason, any `mark` you wish to be able to access from the Unix filesystem should have `%mime` conversion routines. In certain cases (such as the scry interface), Eyre will also need to convert your `mark` to a `%mime` in order to encode it in an HTTP response, so you may require a `+mime` arm for that reason as well.
 
