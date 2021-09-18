@@ -2,6 +2,9 @@
   "name": "urbit.org-2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "yarn": "use npm!"
+  },
   "scripts": {
     "dev": "npm run cache-posts && npm run rss && next dev",
     "build": "npm run cache-posts && npm run rss && next build",
