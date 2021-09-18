@@ -13,7 +13,7 @@
     "prepare": "husky install",
     "cache-posts": "node lib/cache.js",
     "rss": "node lib/rss.js",
-    "postinstall": "patch-package"
+    "postinstall": ""
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
