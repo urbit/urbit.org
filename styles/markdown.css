@@ -110,7 +110,7 @@
 
 .markdown pre code,
 .markdown pre[class*="language-"] code {
-  @apply p-4 md:p-8 rounded-xl;
+  @apply p-4 md:p-8 rounded-xl bg-wall-100;
 }
 
 .markdown ul {
