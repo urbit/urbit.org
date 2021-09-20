@@ -13,13 +13,15 @@
     "prepare": "husky install",
     "cache-posts": "node lib/cache.js",
     "rss": "node lib/rss.js",
-    "postinstall": ""
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
+    "@netlify/plugin-nextjs": "^3.4.2",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "autoprefixer": "^10.2.6",
     "classnames": "^2.3.1",
+    "critters": "0.0.10",
     "downshift": "^6.1.5",
     "feed": "^4.2.2",
     "fuzzy-search": "^3.2.1",
@@ -41,6 +43,7 @@
     "remark-prism": "^1.3.6",
     "remark-slug": "^6.0.0",
     "tailwindcss": "^2.1.4",
+    "toml": "^3.0.0",
     "unified": "^9.2.1"
   },
   "devDependencies": {
