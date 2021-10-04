@@ -17,7 +17,7 @@ export default function Footer() {
             </Link>
             <Link href="/using">
               <div>
-                <a className="type-bold text-wall-500">Operator's Manual</a>
+                <a className="type-bold text-wall-500">User's Manual</a>
               </div>
             </Link>
             <Link href="https://github.com/urbit/port/releases">

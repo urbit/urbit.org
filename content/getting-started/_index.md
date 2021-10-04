@@ -83,6 +83,6 @@ If you'd like to have more direct control over the Urbit virtual machine, or are
 If you haven't already done so, we recommend spending 10 minutes or so reading
 [Understanding Urbit](/understanding-urbit) to get acquainted with the project.
 Then once you've been become acquainted with your ship and explored the network
-for awhile, consider checking out the [Operator's Manual](/using) which provides
+for awhile, consider checking out the [User's Manual](/using) which provides
 guidance and reference material for operating your ship, as well as explanations
 for Urbit concepts everyone should eventually learn.

@@ -16,7 +16,7 @@ const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
-    <Link href="/using">Operator's Manual</Link>,
+    <Link href="/using">User's Manual</Link>,
   ];
   let thisLink = "/using";
   for (const path of paths) {
@@ -102,7 +102,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
   return (
     <>
       <Head>
-        <title>{data.title} • Operator's Manual • urbit.org</title>
+        <title>{data.title} • User's Manual • urbit.org</title>
         {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
@@ -113,7 +113,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
           search={search}
-          section={"Operator's Manual"}
+          section={"User's Manual"}
           params={params}
         >
           <div className="markdown">

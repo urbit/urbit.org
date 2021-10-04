@@ -1,17 +1,17 @@
 +++
-title = "Operator's Manual"
+title = "User's Manual"
 sort_by = "weight"
 template = "sections/docs/chapters.html"
 +++
 
-Welcome to the Operator's Manual for the Urbit project. This documentation is
+Welcome to the User's Manual for the Urbit project. This documentation is
 maintained by [Tlon](https://tlon.io) and the Urbit community in a public
 [Github repository](https://github.com/urbit/urbit.org). Issues and
 contributions are welcome.
 
 This documentation provides a series of guides and reference material for
 assisting you in the usage and operations of your ship. If you're looking for
-documentation on how to *develop* on Urbit, see our [development docs](/docs/).
+documentation on how to _develop_ on Urbit, see our [development docs](/docs/).
 
 ### [Urbit OS](/using/os/)
 
