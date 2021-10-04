@@ -10,7 +10,7 @@ This section describes how to interact with your running Urbit ship: this
 includes working with the filesystem, command line (`dojo`), resolving common
 issues, and more.
 
-### [Getting Started](/using/os/getting-started)
+### [Basics](/using/os/basics)
 
 An overview of common commands and useful general knowledge for operating your
 ship.

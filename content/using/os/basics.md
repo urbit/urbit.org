@@ -1,5 +1,5 @@
 +++
-title = "Getting Started"
+title = "Basics"
 description = "How to operate your ship, including using your ship's filesystem and messaging applications, starting a moon, or requesting a DNS entry."
 template = "doc.html"
 weight = 1

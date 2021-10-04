@@ -4,6 +4,11 @@
   },
   "redirects": [
     {
+      "source": "/using/os/getting-started",
+      "destination": "/using/os/basics",
+      "permanent": true
+    },
+    {
       "source": "/grants/(apprenticeships|proposals|bounties)/:page",
       "destination": "/grants/:page",
       "permanent": true
