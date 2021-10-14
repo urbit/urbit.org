@@ -1,5 +1,5 @@
 +++
-title = "Assembly Keynotes Live Stream"
+title = "Assembly Keynote Live Stream"
 starts = "2021-10-16T10:00:00"
 ends = "2021-10-16T12:00:00"
 timezone = "America/Chicago"
