@@ -7,7 +7,7 @@ location = "Online Event"
 image = ""
 registration_url = ""
 description = "Assembly Keynotes Live Stream"
-dark = False
+dark = false
 youtube = "ywj36TUtbS4"
 +++
 
