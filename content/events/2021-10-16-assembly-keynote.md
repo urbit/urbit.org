@@ -3,11 +3,11 @@ title = "Assembly Keynotes Live Stream"
 starts = "2021-10-16T10:00:00"
 ends = "2021-10-16T12:00:00"
 timezone = "America/Chicago"
-location = "Distribution Hall, 1500 East 4th St. Austin, TX"
+location = "Online Event"
 image = ""
-registration_url = "http://assembly.urbit.org/"
+registration_url = ""
 description = "Assembly Keynotes Live Stream"
-dark = true
+dark = False
 youtube = "ywj36TUtbS4"
 +++
 
