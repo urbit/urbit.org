@@ -109,7 +109,7 @@ To be able to add files easily, you'll need to mount a desk to the Unix
 filesystem. We'll use the `%base` desk throughout Hoon School since we're using
 a fake ship, but note a different one would be more suitable on a live ship. To
 mount `%base`, just run `|mount %base` in the dojo. If you look in your
-[pier](/glossary/pier), you should now see a `base` folder. Once you've added
+[pier](/docs/glossary/pier), you should now see a `base` folder. Once you've added
 the `.hoon` file in `base/gen`, you'll need to run `|commit %base` in the dojo
 so the new file is recognised by your ship. To run a generator named
 `mygen.hoon`, you would type `+mygen <argument>` in your ship's dojo. If you
