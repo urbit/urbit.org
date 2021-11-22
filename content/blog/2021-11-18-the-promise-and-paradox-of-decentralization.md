@@ -53,3 +53,5 @@ Norms are not a perfect solution to these problems (if they were, we'd only know
 (Disclosure: I'm long decentralization by way of Bitcoin and Urbit. If you're on Urbit and would like to discuss <em>The Diff</em>, go to ~lableg-tadrex/the-diff.)
 
 <sup>1.</sup> There is naturally some resistance to this, both because of conflicts with different countries' norms and with other countries' natural desire to determine their own destiny. So it's a leaky abstraction, but it gets less leaky over time as economies get more integrated and thus more of the world has to standardize. The most direct example of this is the fact that [the dollar's share of global invoices is 4.7x the US's share of global imports](https://www.economist.com/schools-brief/2020/08/27/global-trades-dependence-on-dollars-lessens-its-benefits) ($, <em>Economist</em>). In the same way that English is most likely to be the shared second language of any two randomly-selected people who don't speak it as a first language, the dollar is most likely to be the second most useful currency to anyone in a country that doesn't use dollars.
+
+Testing do not publish! - gavin
