@@ -5,11 +5,13 @@ weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
 
-The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project.
+The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project. If you want some ideas about projects that have a good lilelyhood of acceptance, take a look at the Grant Ideas notebook in the Foundation group.
 
 ### The Colony
 
 The Colony consists of invited community members that have proven track record of completing significant projects. Members of the Colony will be available to "Champion" (manage and mentor) proposals. A proposal is accepted once a Champion adopts it. The Champion will then be part of the team with the Contributor that sees the proposal through to completion.
+
+There will also be members of the Colony thar are invited to be on the Oracle team. The Oracle team is responsibile for ensuring proposals are correctly stuctured and payments meet current norms.
 
 ### Types of Proposals
 
@@ -33,21 +35,20 @@ We have need for lots of different skill sets&mdash;not just coding.
 Your proposal should include the following sections:
 
 - Project name
-- Brief description of project (ahort blurb for the thumbnail)
-- Proposal body including:
-  - Project Overview
-  - Project Scope
-  - Detailed behavior description
-  - Detailed design description
-  - Your experience
-  - Why you are the right person for this project
+- Brief description of project (short blurb for the thumbnail)
+- Project Overview
+- Project Scope
+- Detailed behavior description
+- Detailed design description
+- Your experience
+- Why you are the right person for this project
 - Milestones:
-  - Any sub-goals of project
+  - Milestones are sub-goals of project (if any)
   - Specific deliverables
-  - Expected timeframes
-  - Expected compensation in Stars
+  - Expected delivery dates
+  - Expected compensation in USD
 
-As some good examples, please take a look at these proposals to see the level of detail we are looking for:
+For some good examples, take a look at these proposals to see the level of detail we are looking for:
 
 - [WebRTC](https://urbit.org/grants/webrtc-gall-agent-and-external-app)
 - [Urbit Visor](https://urbit.org/grants/login-with-urbit)
@@ -59,7 +60,7 @@ Once you have your proposal draft, you will need to get it Championed by a membe
 
 From this point, your project will go through these stages:
 
-- **Draft**: Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payment), create the proposal markdown, then crete the Pull Request against the urbit.org website
+- **Draft**: Your proposal will be advertised to the Colony. Interested members will review it, ask questions, and offer feedback. If acceptable, a member will become your Champion. Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payments), create the proposal markdown, then crete the Pull Request against the urbit.org website
 - **Approval**: Once the proposal PR is created, the Oracle team will review for approval.
 - **Contract**: Once your proposal is approved, the PR is merged and a contract is sent for signature.
 - **Live**: When the contract is signed, you can start work on your project.
@@ -69,3 +70,9 @@ From this point, your project will go through these stages:
 
 Don't be concerned if you are unclear about any of these details. We will be happy to guide you once your project enters the
 workflow.
+
+### Other Policies
+
+Starting in December 2021, all project milestone payments will be denominated in USD and paid in WSTR.
+
+Any Contributor is limited to one active proposal/project at a time, but there may be some rare exceptions to this policy.
