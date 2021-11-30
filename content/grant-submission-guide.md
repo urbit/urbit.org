@@ -26,9 +26,9 @@ Proposal types include:
 - Design Work - design work for the urbit.org website
 - Documentation - writing guides or website content
 - Community - organizing events and meetups, staffing the help desk
-- Apprenticeship - smaller scope projects where the empahsis is on deveolping skills
+- Apprenticeship - smaller scope coding projects where the empahsis is on deveolping skills
 
-We have need for lots of different skill sets&mdash;not just coding.
+We have need for lots of different skill sets &mdash; not just coding.
 
 ### Proposal Format
 
@@ -40,8 +40,7 @@ Your proposal should include the following sections:
 - Project Scope
 - Detailed behavior description
 - Detailed design description
-- Your experience
-- Why you are the right person for this project
+- Your experience and why you are the right person for this project
 - Milestones:
   - Milestones are sub-goals of project (if any)
   - Specific deliverables
@@ -60,7 +59,7 @@ Once you have your proposal draft, you will need to get it Championed by a membe
 
 From this point, your project will go through these stages:
 
-- **Draft**: Your proposal will be advertised to the Colony. Interested members will review it, ask questions, and offer feedback. If acceptable, a member will become your Champion. Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payments), create the proposal markdown, then crete the Pull Request against the urbit.org website
+- **Draft**: Your proposal will be advertised to the Colony. Interested members will review it, ask questions, and offer feedback. If acceptable, a member will become your Champion. Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payments), create the proposal markdown, then create the Pull Request against the urbit.org website
 - **Approval**: Once the proposal PR is created, the Oracle team will review for approval.
 - **Contract**: Once your proposal is approved, the PR is merged and a contract is sent for signature.
 - **Live**: When the contract is signed, you can start work on your project.
@@ -73,6 +72,6 @@ workflow.
 
 ### Other Policies
 
-Starting in December 2021, all project milestone payments will be denominated in USD and paid in WSTR.
+- Starting in December 2021, all new project milestone payments will be denominated in USD and paid in WSTR.
 
-Any Contributor is limited to one active proposal/project at a time, but there may be some rare exceptions to this policy.
+- Any Contributor is limited to one active proposal/project at a time, but there may be some rare exceptions to this policy.
