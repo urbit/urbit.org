@@ -42,7 +42,6 @@ Your proposal should include the following sections:
 - Detailed design description
 - Your experience and why you are the right person for this project
 - Milestones:
-  - Milestones are sub-goals of project (if any)
   - Specific deliverables
   - Expected delivery dates
   - Expected compensation in USD
