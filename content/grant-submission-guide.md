@@ -5,7 +5,7 @@ weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
 
-The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project. If you want some ideas about projects that have a good lilelyhood of acceptance, take a look at the Grant Ideas notebook in the Foundation group.
+The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project. If you want some ideas about projects that have a good likelihood of acceptance, take a look at the Grant Ideas notebook in the Foundation group.
 
 ### The Colony
 
