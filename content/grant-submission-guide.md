@@ -26,7 +26,7 @@ Proposal types include:
 - Design Work - design work for the urbit.org website
 - Documentation - writing guides or website content
 - Community - organizing events and meetups, staffing the help desk
-- Apprenticeship - smaller scope coding projects where the empahsis is on deveolping skills
+- Apprenticeship - smaller scope coding projects where the emphasis is on developing skills
 
 We have need for lots of different skill sets &mdash; not just coding.
 
