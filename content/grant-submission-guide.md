@@ -60,7 +60,7 @@ Once you have your proposal draft, you will need to get it Championed by a membe
 From this point, your project will go through these stages:
 
 - **Draft**: Your proposal will be advertised to the Colony. Interested members will review it, ask questions, and offer feedback. If acceptable, a member will offer to champion your project. Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payments), and then create the Pull Request against the urbit.org website.
-- **Approval**: Once the proposal PR is created, the Oracle team will review for approval.
+- **Approval**: Once the proposal PR is created, the Foundation team will review the proposed compensation, and either sign off on the proposed amount or propose changes.
 - **Contract**: Once your proposal is approved, the PR is merged and a contract is sent for signature.
 - **Live**: When the contract is signed, you can start work on your project.
 - **Milestone**: When you complete a milestone (or the entire project), you will create an invoice an submit it using the
