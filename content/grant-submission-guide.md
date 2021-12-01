@@ -30,7 +30,7 @@ Proposal types include:
 
 We have need for lots of different skill sets &mdash; not just coding.
 
-### Proposal Format
+### Format
 
 Your proposal should include the following sections:
 
