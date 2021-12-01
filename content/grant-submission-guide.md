@@ -64,7 +64,7 @@ From this point, your project will go through these stages:
 - **Contract**: Once your proposal is approved, the PR is merged and a contract is sent for signature.
 - **Live**: When the contract is signed, you can start work on your project.
 - **Milestone**: When you complete a milestone (or the entire project), you will create an invoice an submit it using the
-  [Submit Invoice](https://airtable.com/shrXXCs1uaxtNSBcg) form. In order to submit an invoice, you will need review and approval from your Champion and two other Colony members.
+  [Submit Invoice](https://airtable.com/shrXXCs1uaxtNSBcg) form. In order to submit an invoice, you will need review and approval from your Champion and two other Colony members (your Champion will ensure that this happens).
 - **Payment**: Your payment will enter the payment queue. It can take up to 3 weeks to receive your payment, since we make transfers on the 2nd and 17th of the month. The Contributor will be paid the designated milestone payment and the Champion will recieve 20% of that value.
 
 Don't be concerned if you are unclear about any of these details. We will be happy to guide you once your project enters the
