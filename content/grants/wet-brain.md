@@ -7,9 +7,9 @@ grant_category = ["Community"]
 [extra]
 image = ""
 description = "Wet Brain Community Grant"
-reward = $12000
+reward = 0
 champion = "~riprud-tidmel"
-assignee = ""
+assignee = "Wet Brain"
 grant_id = "B0116"
 completed = false
 link = ""
