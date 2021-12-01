@@ -41,7 +41,7 @@ Your proposal should include the following sections:
 - Detailed behavior description
 - Detailed design description
 - Your experience and why you are the right person for this project
-- Milestones:
+- Milestones: incremental deliverables
   - Specific deliverables
   - Expected delivery dates
   - Requested compensation in USD
