@@ -44,7 +44,7 @@ Your proposal should include the following sections:
 - Milestones:
   - Specific deliverables
   - Expected delivery dates
-  - Expected compensation in USD
+  - Requested compensation in USD
 
 For some good examples, take a look at these proposals to see the level of detail we are looking for:
 
