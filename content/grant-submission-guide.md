@@ -16,7 +16,7 @@ There will also be members of the Colony thar are invited to be on the Oracle te
 ### Types of Proposals
 
 While we will entertain just about any idea that comes from the community, we are particularly interested in "capital goods":
-projects that provide new capabilities to the widest number of users or developers or add tooling to the platform.
+projects that provide new capabilities to the widest number of users and/or developers.
 
 Proposal types include:
 
