@@ -43,7 +43,7 @@ Your proposal should include the following sections:
 - Your experience and why you are the right person for this project
 - Milestones: incremental deliverables
   - Specific deliverables
-  - Expected delivery dates
+  - Estimated completion date
   - Requested compensation in USD
 
 For some good examples, take a look at these proposals to see the level of detail we are looking for:
