@@ -9,7 +9,7 @@ The Urbit project relies on our community to help realize its potential. While t
 
 ### The Colony
 
-The Colony consists of invited community members that have proven track record of completing significant projects. Members of the Colony will be available to "Champion" (manage and mentor) proposals. A proposal is accepted once a Champion adopts it. The Champion will then be part of the team with the Contributor that sees the proposal through to completion.
+The Colony consists of invited community members that have a proven track record of completing significant projects. Members of the Colony will be available to *champion* (manage and mentor) proposals. A proposal is accepted once a Colony member champions it. The Champion will then work with the contributor to see the proposal through to completion.
 
 There will also be members of the Colony thar are invited to be on the Oracle team. The Oracle team is responsibile for ensuring proposals are correctly stuctured and payments meet current norms.
 
