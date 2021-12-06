@@ -174,42 +174,6 @@ export default function Grants({
                 Submit a Proposal
               </button>
             </Link>
-            <Link href="#gifts">
-              <a className="button-lg bg-wall-600 text-white mr-2">
-                Recent Gifts
-              </a>
-            </Link>
-          </div>
-        </Section>
-        {
-          // Featured Grants
-        }
-        <Section wide short>
-          <div className="measure pb-16">
-            <h2 className="pb-16" id="featured">
-              Featured Grants
-            </h2>
-            <p className="mb-8">
-              These grants should give you a general idea of what kind of work
-              we reward:
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row md:space-x-4 md:space-y-0 space-y-4 space-x-0">
-            {featuredGrants.map((grant) => {
-              return (
-                <Link href={"/grants/" + grant.slug}>
-                  <div className="p-8 bg-green-100 rounded-lg w-full md:w-1/3 cursor-pointer">
-                    <h4 className="pb-4">{grant.title}</h4>
-                    <p className="text-green-400 pb-4">
-                      {grant.extra.reward} star
-                      {grant.extra.reward === 1 ? "" : "s"}{" "}
-                      {grant.extra.completed ? "awarded" : "pending"}
-                    </p>
-                    <p>{grant.extra.description}</p>
-                  </div>
-                </Link>
-              );
-            })}
           </div>
         </Section>
         {/* Submit a proposal */}
@@ -221,7 +185,7 @@ export default function Grants({
             Contributors are also welcome to have their personal projects
             considered as a proposal. If you'd like to propose a project for the
             grants program, first review our
-            <a href="/grant-submission-guide">submission guide</a>, and feel
+            <a href="/grant-submission-guide"> submission guide</a>, and feel
             free to{" "}
             <a href="https://airtable.com/shrCi54rEDxgSZr3z">
               submit your proposal
@@ -242,44 +206,6 @@ export default function Grants({
               View Proposals
             </button>
           </Link>
-        </Section>
-        {/* Gift Grants */}
-        <Section wide>
-          <div className="pb-16">
-            <h2 className="pb-16" id="gifts">
-              Gifts
-            </h2>
-            <p className="mb-8">
-              Gifts are given post-facto for exceptional contributions.
-            </p>
-            {/* Uncomment once people added to content/gifts folder. */}
-            {/* {gifts.map((e) => {
-              return (
-                <div className="bg-wall-100 rounded-xl p-4 my-8 flex justify-between">
-                <p className="font-semibold">
-                  {e.name}
-                </p>
-                <p>{e.planet}</p>
-                <p>{e.date}</p>
-                <a className="type-p" href={e.link}>Link</a>
-                </div>
-              )
-            })} */}
-            <div className="flex flex-wrap">
-              <PostPreview
-                post={giftPosts[0]}
-                className={`w-full md:w-1/2 pr-0 pb-8 md:pr-4`}
-                key={giftPosts[0].slug}
-                section="updates"
-              />
-              <PostPreview
-                post={giftPosts[1]}
-                className={`w-full md:w-1/2 pl-0 pb-8 md:pl-4`}
-                key={giftPosts[1].slug}
-                section="blog"
-              />
-            </div>
-          </div>
         </Section>
         {/*  Find a Grant */}
         <Section wide>
