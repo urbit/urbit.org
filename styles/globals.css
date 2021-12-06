@@ -110,7 +110,8 @@ code .type-code {
 }
 
 .badge-sm {
-  @apply flex-center text-base font-medium px-3 h-8 rounded-full;
+  min-height: 2rem;
+  @apply flex-center text-base font-medium px-3 rounded-full;
 }
 
 .badge-lg {
