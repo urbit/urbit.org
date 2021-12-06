@@ -7,11 +7,11 @@ description = "A comprehensive guide to creating a grant proposal"
 
 The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project. If you want some ideas about projects that have a good likelihood of acceptance, take a look at the Grant Ideas notebook in the Foundation group.
 
+Starting December 1st, 2021, we are changing our compensation policy. Rather than pay in Urbit stars, all milestones will be denominated in USD and paid at the market rate in WSTR. The maximum amount approved will be $50,000 / project and $10,000/month. If you have a proposal that exceeds these limits, we are still interested in talking with you, but we will likely use some other vehicle rather than grants.
+
 ### The Colony
 
-The Colony consists of invited community members that have a proven track record of completing significant projects. Members of the Colony will be available to *champion* (manage and mentor) proposals. A proposal is accepted once a Colony member champions it. The Champion will then work with the contributor to see the proposal through to completion.
-
-There will also be members of the Colony thar are invited to be on the Oracle team. The Oracle team is responsibile for ensuring proposals are correctly stuctured and payments meet current norms.
+The Colony consists of invited community members that have a proven track record of completing significant projects. Members of the Colony will be available to _champion_ (manage and mentor) proposals. A proposal is accepted once a Colony member champions it. The Champion will then work with the contributor to see the proposal through to completion.
 
 ### Types of Proposals
 
@@ -54,9 +54,14 @@ For some good examples, take a look at these proposals to see the level of detai
 
 ### Proposal Submission and Project Workflow
 
-Once you have your proposal draft, you will need to get it Championed by a member of the Colony. Start by creating a group on your ship named after your proposal. In this group, create a Proposal Notebook and a Discussion channel. Create a notebook entry for each of the proposal areas noted above. Notify the Foundation of your proposal by filling out the **[Propose a Project](https://airtable.com/shrgd9pQliamOFWvY)** form.
+Once you have your proposal draft, you will need to get it Championed by a member of the Colony.
 
-From this point, your project will go through these stages:
+1. Start by creating a group on your ship named after your proposal.
+2. In this group, create a Proposal Notebook and a Discussion channel.
+3. Create a notebook entry for each of the proposal areas noted above.
+4. Notify the Foundation of your proposal by filling out the **[Propose a Project](https://airtable.com/shrgd9pQliamOFWvY)** form.
+
+At that point, your project will go through the following stages:
 
 - **Draft**: Your proposal will be advertised to the Colony. Interested members will review it, ask questions, and offer feedback. If acceptable, a member will offer to champion your project. Your Champion will work with you to polish you proposal, refine milestones (intermediate deliverables along with payments), and then create the Pull Request against the urbit.org website.
 - **Approval**: Once the proposal PR is created, the Foundation team will review the proposed compensation, and either sign off on the proposed amount or propose changes.
@@ -70,7 +75,5 @@ Don't be concerned if you are unclear about any of these details. We will be hap
 workflow.
 
 ### Other Policies
-
-- Starting in December 2021, all new project milestone payments will be denominated in USD and paid in WSTR.
 
 - Any Contributor is limited to one active proposal/project at a time, but there may be some rare exceptions to this policy.
