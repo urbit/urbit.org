@@ -4,6 +4,11 @@
   },
   "redirects": [
     {
+      "source": "/grants/grant-submission-guide",
+      "destination": "/grants/proposals",
+      "permanent": true
+    },
+    {
       "source": "/using/os/getting-started",
       "destination": "/using/os/basics",
       "permanent": true
