@@ -161,7 +161,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
                 className="mt-4 md:h-16"
                 target="_blank"
                 title="Operator’s Guide"
-                caption="Own a star or galaxy? Purchasing one? This is for you."
+                caption="Own a star or galaxy? This is for you."
               >
                 <img
                   alt="Marketplace logo"
