@@ -73,7 +73,7 @@ export default function Grants({
   const [activeTypes, setTypes] = useState(types);
   const [includeOpen, setIncludeOpen] = useState(true);
   const [includeCompleted, setIncludeCompleted] = useState(false);
-  const [includeInProgress, setIncludeInProgress] = useState(false);
+  const [includeInProgress, setIncludeInProgress] = useState(true);
   const [tab, setTab] = useState(0);
   const post = {
     title: "Grants",
