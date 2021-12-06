@@ -205,11 +205,11 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section narrow>
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
-            <Link href="/grants#find-a-grant">
-              <a className="bg-green-400 text-white badge-lg">
-                {openGrantsCount} Open
-              </a>
-            </Link>
+            {/* <Link href="/grants#find-a-grant"> */}
+            {/*   <a className="bg-green-400 text-white badge-lg"> */}
+            {/*     {openGrantsCount} Open */}
+            {/*   </a> */}
+            {/* </Link> */}
           </div>
           <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
