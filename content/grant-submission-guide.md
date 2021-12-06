@@ -7,7 +7,7 @@ description = "A comprehensive guide to creating a grant proposal"
 
 The Urbit project relies on our community to help realize its potential. While the Foundation and the Community specifies the direction of development through bounties, we encourage anyone with an idea about how to improve Urbit to submit a grant proposal. This guide will describe the different types of proposals, the requested format, and the entire workflow for a successful project. If you want some ideas about projects that have a good likelihood of acceptance, take a look at the Grant Ideas notebook in the Foundation group.
 
-Starting December 1st, 2021, we are changing our compensation policy. Rather than pay in Urbit stars, all milestones will be denominated in USD and paid at the market rate in WSTR. The maximum amount approved will be $50,000 / project and $10,000/month. If you have a proposal that exceeds these limits, we are still interested in talking with you, but we will likely use some other vehicle rather than grants.
+Starting December 1st, 2021, we are changing our compensation policy. Rather than pay in Urbit stars, all milestones will be denominated in USD and paid at the market rate in WSTR. The maximum amount approved will be $50,000/project and $10,000/month. If you have a proposal that exceeds these limits, we are still interested in talking with you, but we will likely use some other vehicle rather than grants.
 
 ### The Colony
 
