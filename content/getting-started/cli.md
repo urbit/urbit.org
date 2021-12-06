@@ -75,7 +75,7 @@ There are five kinds of Urbit IDs but to get started you only need to know about
 
 **Planets** are scarce (this prevents spamming, among other things) and usually require a price to acquire. This is the recommended way to run Urbit, but it's a bit more involved.
 
-A planet name looks like `~sampel-palnet`.
+A planet name looks like `~sample-palnet`.
 
 [Follow this guide](/getting-started/planet) if you have already acquired a planet.
 
