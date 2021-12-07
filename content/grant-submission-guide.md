@@ -52,7 +52,7 @@ For some good examples, take a look at these proposals to see the level of detai
 - [Urbit Visor](https://urbit.org/grants/login-with-urbit)
 - [Urbit Meetup Bill of Materials](https://urbit.org/grants/meetup-bom)
 
-### Proposal Submission and Project Workflow
+### Submission and Workflow
 
 Once you have your proposal draft, you will need to get it Championed by a member of the Colony.
 
