@@ -7,7 +7,7 @@ template = "doc.html"
 Associated to every Azimuth point are two non-negative integers known as _life_
 and _rift_. This numbering system partition messages according to the quantity
 of networking key changes and quantity of
-[breaches](/using/id/guide-to-breaches), respectively. This is explained in
+[breaches](/using/id/guide-to-resets), respectively. This is explained in
 more detail below. These values are utilized by [Ames](/docs/arvo/ames/ames)
 and [Jael](/docs/arvo/jael/jael-api) to ensure that communication between
 ships is always done with the most recent set of networking keys, and that

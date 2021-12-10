@@ -6,6 +6,9 @@ page_template = "page_indiced.html"
 template = "getting-started/index.html"
 +++
 
+Don't know what Urbit is? Spend ten minutes or so reading our page on
+[Understanding Urbit](/understanding-urbit/).
+
 If you want to jump right in and try out Urbit with a free, disposible ID called a **Comet**, you can download the desktop app [**Port**](#port). Once installed, start it up and hit the `Start without an ID` button. It'll take a few minutes to spin up the new Comet, then click `Launch Ship into Urbit` and you'll be at the login screen. Click on `Copy Access Key` at the bottom-left, paste it into the `Access Key` field, and hit `Continue`. You'll now be at your ship's home screen and ready to explore Urbit. You can also have a look at the [Next Steps](#next-steps) section below to help you get going.
 
 If you want to get a permanent Urbit ID called a **Planet**, have a look at the [Get a planet](#get-a-planet) section below.

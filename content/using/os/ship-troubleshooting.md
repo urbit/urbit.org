@@ -26,11 +26,15 @@ An ounce of prevention is worth a pound of cure, so let's first go over some bes
 
 Once your ship has been initialized (with the `-w` variation of the `./urbit` command), you should never do so a second time. If you do initialize it anew without special measures, you will experience trouble communicating with ships on the network you had talked to before.
 
-If you accidentally did this a second time, or want to intentionally start fresh, you need to perform a [personal breach](#personal-breach), which is explained in the next section.
+If you accidentally did this a second time, or want to intentionally start
+fresh, you need to perform a [factory reset](#factory-reset), which is explained in the next section.
 
 ### Do not delete your pier
 
-Urbit is stateful, meaning that it needs to hold onto all your data. If you delete your pier and start your ship again, you won't be able to talk to any ship you've talked to before. The only solution to this is performing a [personal breach](#personal-breach).
+Urbit is stateful, meaning that it needs to hold onto all your data. If you
+delete your pier and start your ship again, you won't be able to talk to any
+ship you've talked to before. The only solution to this is performing a [factory
+reset](#factory-reset).
 
 ### Keep track of the directory that you put your ship in
 
@@ -64,13 +68,13 @@ The command takes two arguments, and comes in the form of `|knob %error-tag %lev
 
 So for example, to silence all Ames packet-related errors, try `|knob %hole %hush`.
 
-### Perform a personal breach. {#personal-breach}
+### Perform a factory reset. {#factory-reset}
 
-A personal breach is when a ship tells the rest of the network to treat it as though the ship was just started for the first time again. Any ongoing or outstanding communication is forgotten and connections are reestablished from scratch.
+A factory reset is when a ship tells the rest of the network to treat it as though the ship was just started for the first time again. Any ongoing or outstanding communication is forgotten and connections are reestablished from scratch.
 
-Personal breaches often fix connectivity issues, but should only be used as a
-last resort. To find out how to perform a personal breach, check out our [Guide
-to Breaches](/using/id/guide-to-breaches). Before taking such a drastic measure, try
+Factory resets often fix connectivity issues, but should only be used as a
+last resort. To find out how to perform a factory reset, check out our [Guide
+to Factory Resets](/using/id/guide-to-resets). Before taking such a drastic measure, try
 other methods in this guide. You can also ask for help on
 in the Help channel in the Urbit Community group at `~bitbet-bolbel/urbit-community`.
 
@@ -104,7 +108,8 @@ Since version `0.8.0`, changes no longer automatically sync between the Unix sid
 
 ### I can't communicate with anyone
 
-Maybe you booted your ship twice, or ran it using old files. If this is the case, you must perform a [personal breach](#personal-breach).
+Maybe you booted your ship twice, or ran it using old files. If this is the
+case, you must perform a [factory reset](#factory-reset).
 
 ### I don't have the latest OTA
 
@@ -119,7 +124,10 @@ own with patience. Otherwise, try the procedure outlined [here](https://github.c
 
 You may see a message like this one: `/~zod/home/~2019.7.22..18.55.46..83a3/sys/vane/ames:<[line column].[line column]>`. This is a clay path to a Hoon file, pointing to the line and column where an expression crashed. This kind of error might be accompanied by a `crud` message.
 
-This means that another ship is sending invalid packets to you. This could be because one of the ships has not updated the other ship's "life number", which is the number that starts at one and increments every time that ship performs a personal breach.
+This means that another ship is sending invalid packets to you. This could be
+because one of the ships has not updated the other ship's "rift number", which
+is the number that starts at one and increments every time that ship performs a
+factory reset.
 
 This can happen if they have the wrong keys of yours, or if you have the wrong keys of theirs. You can figure out who has the wrong keys by running this scry command in your dojo: `.^(* %j /=life=/shipname)`, where shipname is the other ship's name. Save that information. Then, go to the [Azimuth contract on Etherscan](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb#readContract), scroll down to `32. points`, and put in the hexadecimal representation of the other ship's `@p`. You can find the hexadecimal representation by running ...
 
@@ -145,7 +153,8 @@ The above commands work if you have the wrong keys of other ships. If other ship
 
 ### I can talk to some ships, but I can't talk to my sponsor and some other ships
 
-This is the result of deleting your pier and starting your ship again. To fix this, you must perform a [personal breach](#personal-breach).
+This is usually the result of deleting your pier and starting your ship again. To fix
+this, you must perform a [factory reset](#factory-reset).
 
 ## Booting Issues {#booting-issues}
 
@@ -163,7 +172,10 @@ This means that you gave your development ship an invalid `@p`. So, you will get
 
 Try bringing it back up; it will often start working just fine again.
 
-However, if you get a `bail` error again, this is a serious issue and should be reported (see below). It's advised to keep the old files around to assist issue research. If you want to get back on the network immediately, you might want to perform a [personal breach](#personal-breach).
+However, if you get a `bail` error again, this is a serious issue and should be
+reported (see below). It's advised to keep the old files around to assist issue
+research. If you want to get back on the network immediately, you might want to
+perform a [factory reset](#factory-reset).
 
 #### Making a GitHub issue out of your `bail`
 
@@ -200,7 +212,7 @@ This means that your ship ran out of memory.
 
 4. If the above succeeds, but you still get `bail: meme` immediately, or after running for a little while, please [file an issue](https://github.com/urbit/urbit/issues). If you can, run `|mass` and share its output.
 
-5. As a last resort, you may perform a [personal breach](#personal-breach).
+5. As a last resort, you may perform a [factory reset](#factory-reset).
 
 ### My ship crashed with a `bail: oops` error
 

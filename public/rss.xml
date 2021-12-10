@@ -4,10 +4,155 @@
         <title>Urbit</title>
         <link>https://urbit.org</link>
         <description>Urbit is a personal server built from scratch</description>
-        <lastBuildDate>Thu, 18 Nov 2021 19:21:20 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 Dec 2021 19:13:57 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Report from the field: Assembly 2021]]></title>
+            <link>https://urbit.org/blog/2021-11-18-report-from-the-field</link>
+            <guid>https://urbit.org/blog/2021-11-18-report-from-the-field</guid>
+            <pubDate>Thu, 18 Nov 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![Galen at Assembly](https://storage.googleapis.com/media.urbit.org/site/posts/essays/galen-at-assembly.JPG)
+
+Before Assembly I committed to write a ‘recap’ post for everyone who couldn’t make it. Originally I figured this post would be an opportunity to walk through the list of things that we shipped and showed off in Austin. But it turns out that the most important thing about Assembly was simply the way it felt to be there.
+
+I’m not sure it’s possible to really do the feeling in the room justice, but I’m going to try. Then I’ll get into the announcements and happenings for those of you who couldn’t make it.
+
+But first, a quick note:
+
+We ran Assembly under the [Chatham House rule](https://en.wikipedia.org/wiki/Chatham_House_Rule). Basically, you can talk about what happens at Assembly—but you can’t name anyone.
+
+I’ve run many of our Urbit events this way because I think it puts people at ease. Everyone in the room can just relax, connect with one another, and hang out without worrying about being named on the internet.
+
+I’ll try to abide by the Chatham rule in this post which is why no one is named specifically.
+
+![secret society shirt](https://storage.googleapis.com/media.urbit.org/site/posts/essays/secret-society-shirt.JPG)
+
+New world energy -
+
+In the months leading up to Assembly we were totally focussed on using the event as a release date for a bunch of different lines of work. Coming out of that sprint, we didn’t really know what to expect. We wanted to make sure Urbit was ready for people to build on and that everything we were going to ship worked well. What we didn’t realize was just how emphatically people are <em>ready to build</em>.
+
+When I got up on stage on Friday night to welcome everyone I was really impressed by the room itself. It was packed with people who looked excited and motivated. The room just looked amazing. There were so many different kinds of people staring back at me. Some who I recognized from the earliest days of the project, and lots I had never seen before. I’ve been at my share of Urbit events, but this was something totally different.
+
+We didn’t have much scheduled during Assembly. Most of the time was unstructured to allow for freeform discussion, sunbathing on the lawn, and gathering at picnic tables. The panels that we did schedule will go down in history. Panelists discussed questions about creators, escaping reward systems, and the role of DAOs from governance to governments. There was hard money with a computer on it, Moloch shoes, community members grabbing the mic, and a talk written two hours before it was delivered about the relationship between centralization and decentralization when it comes to UX that blew our minds.
+
+I spent the weekend of Assembly in almost constant conversation with people building Urbit hardware, experimenting with different kinds of Urbit software, and thinking about incredible things like a Nock chip. I talked to the lead architect of a CPU from the 90s, a former senior US government official, an editor of a well-known literary magazine, the inventor of a new display technology, musicians whose work I already admired, a fragrance designer, writers, and, of course, lots of engineers and designers from many different backgrounds. Data scientists, systems hackers, language nerds, someone running a successful currency. I watched these people get projects off the ground, start raising money, plan the future of Urbit hosting companies, and plan new features for Landscape. I saw a last-minute warehouse party come together that kept people talking well into the early hours of the morning.
+
+Where did these people come from? All over the place. They have this incredible <em>new world energy</em>. They understand immediately, intuitively that Urbit has the potential to be a foundation for the society they want to live in. I’ve never seen anything like it.
+
+This energy seems to have come from the very practical work we do day-to-day: building Urbit, refining it, making it easier to use. The crowd at Assembly was somehow brought together by Urbit itself. It’s insanely exciting. It makes working on Urbit feel even more like a form of definite optimism. The system builds the community and the community builds the system.
+
+![Use only beautiful computers](https://storage.googleapis.com/media.urbit.org/site/posts/essays/use-only-computers.JPG)
+
+Urbit is ready to be built upon -
+
+Sometime in early 2021 we realized that there were many lines of work converging on a single theme: ‘Urbit is ready to be built upon’. This is the spirit we wanted to bring to Assembly, and it was very much in the room in Austin. Some of that feeling is still lingering on the network. I think it comes from some very concrete improvements that have been made to the system.
+
+We’ve always wanted Urbit to be maintained by a self-sustaining ecosystem and, early this year, we could see what needed to be done to really let others begin doing so. There were four parallel projects that came together to hit this milestone: Software distribution, star.market, developer and operator guides, and the Foundation roadmap. We talked about all of these things in the Assembly keynote (which you can watch [here](https://www.youtube.com/watch?v=ywj36TUtbS4)), but let’s touch on them one by one.
+
+Software distribution
+
+The most important thing that we shipped just before Assembly is the ability to actually package and distribute software over Urbit itself. It’s now possible for someone to build an app, package it up, and share it with a friend directly over the network.
+
+For their friend, the experience is incredibly nice. You can simply send someone a link and they can install the app and run it themselves, on their own urbit, right away. The whole thing is peer-to-peer, of course. There’s no app store, no vetting process. It’s networked software like it’s supposed to be: people computing together freely.
+
+We’ve been saying for years that we want people to build on top of Urbit and we always meant it. Now it’s possible in a way it never has been before. To check it out, watch [this segment](https://www.youtube.com/watch?v=MA8sqFi8Bd8) from Assembly.
+
+Software distribution can get better in _a lot_ of ways, and we’re continuing to work on it. But it’s live, and people are experimenting with it already. There’s Chess, there’s Pokur, there are video calls (although they’re still a little buggy). Everyone seems to love ‘pals’ and ‘zone’—but you’ll have to get on the network to check those out.
+
+star.market
+
+We’ve always used the address space to fund our work as one of the primary Urbit developers. As Urbit has become more useful, and address space has become more expensive, it’s more and more difficult for others to do this. The community saw the need for developers to easily use their granted address space to fund their work and a higher resolution for the Foundation to fund contributions to Urbit.
+
+This is what [star.market](https://star.market/) and the WSTR project are for. WSTR is an ERC-20 token that is backed 1:1 by ERC-721 Urbit stars. Unlike a star, a WSTR token can be fractionally divided, allowing for a broader distribution of ownership of Urbit. WSTR was built by the community over the past couple of months with no involvement from Tlon. Tlon did, eventually, help to put together star.market—the interface for interacting with the WSTR contracts safely and securely.
+
+I’ve come to think that WSTR can be a powerful tool for funding new Urbit projects. I’m excited to see what both our early community of developers and operators can do with it, as well as the nascent Urbit Foundation.
+
+Guides
+
+As we make it easier for developers to build software, operators to participate in the economy, and communities to make Urbit their home, we need to improve our documentation. We always like to do things bottom-up: the product work comes first. Well, the product is now live.
+To this end we recently launched:
+
+[operators.urbit.org](https://operators.urbit.org/) collects all of the information about participating in the Urbit economy, running infrastructure nodes, and participating in governance in one place.
+
+[developers.urbit.org](https://developers.urbit.org/) has an overhauled program for learning about Urbit as a system and beginning to develop on top of it.
+
+[network.urbit.org](https://network.urbit.org/) allows anyone to explore the network. View galaxy transfers or how many planets a star has spawned.
+
+We’ve got a lot more planned in this area of work in the coming months, and these three sites are a great start.
+
+Urbit Foundation
+
+Over these past few years we’ve operated the Urbit Foundation as a ‘protocol’ inside of Tlon. Our goal has been to develop that protocol to the point that it’s refined, working, and can run on its own outside of Tlon.
+
+Josh has done an exceptional job running the foundation protocol at Tlon over the last year or so. He and I have been working closely together on everything that Tlon builds, while also coordinating our community of contributors. I’m very excited that the Foundation, with Josh as its Director, is now separating from Tlon as a fully independent entity focussed on supporting the ecosystem.
+
+Assembly was the perfect moment to begin formally separating out the Foundation and, as of a week ago, it is an independent entity. We’ve thought long and hard about how to make the Foundation an enduring, stable organization. Josh will be the first Executive Director but, ultimately, the Senate of Galaxies will elect the Board. This will keep the Foundation accountable to the network as a whole and I’m optimistic it can work well.
+
+If you’re on the network, you can read more about the Foundation in ~wolref-podlex/foundation.
+
+Assembly 2022 -
+
+I had more than a few enthusiastic people come up to me at Assembly and ask what we were planning for Assembly 2022. I have absolutely no idea, of course. We poured all our energy into making Assembly 2021 a success.
+
+Given what I saw in Austin, I’m pretty confident that next year we’ll be in completely new territory. The goal of this project has always been to build a completely new digital world. And now, it seems to be building itself.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[The Promise and Paradox of Decentralization]]></title>
+            <link>https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization</link>
+            <guid>https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization</guid>
+            <pubDate>Wed, 17 Nov 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![Presentation](https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-centralization.JPG)
+
+Every so often, a platform will do something outrageous—changing its terms of use, kicking off API partners, restricting [the content category it was built on](https://www.theverge.com/2018/12/3/18123752/tumblr-adult-content-porn-ban-date-explicit-changes-why-safe-mode), banning Donald Trump, failing to ban Donald Trump, etc.—and we'll all realize we're utterly dependent on centralized entities that can make arbitrary and unaccountable decisions. Sure, you can build your own minimal Facebook or Twitter clone, if you really want, but can you build your own Cloudflare? How about your own payment network? If your company does something legal in your country but banned in America, and the US decides to sanction you, which leads to local banks cutting you off because they can't survive without access to the dollar, are you going to build your own reserve currency? Your own Taiwan Semiconductor Manufacturing Co. or ASML?
+
+There are, to varying extents, efforts to do all of the above. But what's worth considering is that <em>all of these bans happen through centralized actors running on decentralized systems</em>. The Internet was supposed to be a totally open set of protocols that anyone could interact with, and for a long time it was, and yet getting kicked off Facebook and Twitter means being exiled from public discourse. Banks are regulated, but every country can set up their own banking regulations, and different countries see the social role of banks very differently; for some countries they're a tool of economic planning, for others a way to help connect local companies to global markets, for others a source of money that can be channeled to politically favored groups. The chip industry was historically very open to new entrants; the transistor was developed at Bell Labs, and for political reasons AT&T licensed it to all comers at a low price.
+
+And yet all of these originally decentralized systems end up facing some degree of centralization.
+
+The promise of a decentralized system is that anyone can build anything they want, because no one owns it. There are three important features of this; two downsides and a caveat:
+
+- The first downside to "Anyone can build anything" is that "anyone" means <em>anyone</em>, and the people to whom decentralized systems are the most attractive are the ones who are banned from other systems, often for good reasons. Free speech absolutists want to be defending Aleksandr Solzhenitsyn or Eugene V. Debs or even Lenny Bruce, but if you want to get a sense for the typical piece of content enabled by a totally uncensored communications system, check your spam folder.
+
+- The second downside is that a lack of ownership means that no one is responsible when things go wrong. Bitcoin doesn't have a way to censor your decision to move money from one address to another or even a protocol-level sense of whether you're buying Alpaca socks or a rocket launcher. (nb: You are almost certainly not buying a rocket launcher with Bitcoin; you are at best getting scammed, and at worst [getting in trouble](https://www.justice.gov/usao-cdca/pr/los-angeles-county-man-pleads-guilty-federal-charge-attempting-obtain-biological-toxin)). But this also means that the protocol can't tell when you meant to send your life savings to your cold wallet and sent it to the wrong address instead.
+
+- The caveat is that, to quote a [<em>Diff</em> piece from last year](https://www.thediff.co/p/amazon-a-new-kind-of-antitrust-risk#:~:text=does%20it%2C%20too.-,Technology-Governance%20Fit,-Pondering%20Durian%20has) ($), "[A]ny decentralized order requires a centralized substrate, and the more decentralized the approach is the more important it is that you can count on the underlying system." This applies to cryptocurrencies (you can trust the protocols) and to the Internet (ditto). It also applies, in an interesting way, to the increasingly decentralized world of free trade and free-flowing capital: money can only flow and deals can only be made if everyone has a consistent sense of property rights and contracts, and the definition of those concepts will typically be determined by whichever participant in a transaction has the more sophisticated financial and legal system. Globalization ends up being a bit like Henry Ford's pitch: you can use any economic paradigm you want, as long as it's the American one.1
+
+An open, decentralized system is <em>sparse</em>: there's room for anything, which means that most of the possibility space consists of nothing at all. This creates a natural demand for onramps—Coinbase for figuring out Bitcoin, portals for figuring out the Internet, TSM for turning chip designs into functioning products, and the like. These create a complicated dynamic: these onramps are built on an open system, but part of their function is to close off some of it. And the better they do that, the more value they can capture. Meanwhile, because they have a monopoly on what they've fenced off, their economics support providing a better user experience. Make a really helpful update to the Bitcoin wiki, and you can feel good about yourself and perhaps contribute to the price of Bitcoin in a highly indirect way; design and launch an improved onboarding process at Coinbase and your contribution is quantifiable, and affects your next cycle's equity grants.
+
+This privatization proceeds in three different ways:
+
+- Some companies start building on an open protocol and then slowly make it their own. Chrome's decision to make the search bar synonymous with the address bar was a slight improvement in the interface, but also a very strong statement that Google had replaced manually typing in URLs as the default way to navigate. (The strongest evidence for this is the frequency of navigational searches; [the most commonly-searched term on Google](https://www.mondovo.com/keywords/) is "Facebook" and [the most frequently searched term on Bing is "Google"](https://www.bloomberg.com/news/articles/2021-09-28/google-tells-judges-it-s-so-popular-it-s-bing-s-top-search-term).) Typing in URLs is a sometimes-decent way to find what you're looking for, though [the half-life of links is about two years](https://blog.zomdir.com/2017/10/the-half-life-of-link-is-two-year.html). But guessing at URLs can be [perilous](https://en.wikipedia.org/wiki/Whitehouse.com). No one is responsible for fixing this, but Google is the closest approximation, because what they are responsible for is solving the "look for something on the Internet and get the wrong result" problem, a different but related one from the broader task of allowing arbitrary site owners to host arbitrary content. Privatizing is effective, and solves problems for users rather than protocol designers. But it does go against the spirit of the original network.
+
+- Twitter is another example, except that they basically created their own open mostly-open protocol and then slowly took control of it. Tweets were originally a simple format, with 140 characters of text and a bit more metadata (this made it compatible with SMS, which had a 160-character limit). For a while, Twitter looked like it would operate a novel protocol and let third parties decide what to put on it and what to read off it. And then the company started to realize that an open system was also one where it was trivial to filter out ads and recommendations. So the outside partners gradually got cut off.
+
+- Facebook—the product, not the company—is a third example. It essentially implemented a missing element to the protocol: <em>identity matters</em>. When the original protocols were being hammered out, identity was a problem taken care of by the fact that getting online required steep hurdles; if everyone involved is affiliated with a university that trusts them to use a PDP-10 responsibly, spam or abuse were not big concerns. (Not that early usage was [strictly professional](https://www.theguardian.com/science/2013/apr/19/online-high-net-drugs-deal).) With billions of people online, accessing relevant information can mean traversing a graph of people rather than links, so the identities of those people becomes important. To the user, if not to the network itself, a name and relationship is a far more important unique identifier than an IP address.
+
+This pattern raises a question: is centralization just a natural tendency of all networks? Are we destined to have a "decentralization sandwich," where there's a hard-to-change set of protocols, something open built on top of <em>that</em>, and a series of closed systems built on top of that, which are the only ones the average person interacts with?
+
+One of the interesting alternatives to this is [Urbit](https://urbit.org), which is trying to build a network in which identity exists from the start, and is neither free nor monopolized. One of Urbit's principles is that users own their data, and while they can use third-party services, they're sharing their data with services, not using a login to access information that lives on someone else's servers.
+
+This is a nice theoretical solution to the "build your own" problem above: if someone tries to start Twitter-but-without-banning-X, they begin with "Twitter-but-it's-100%-X," which seems bad until they reach the next stage where trolls arrive and they start to learn that Online Censorship is mostly about spam and gore and only occasionally about politics. But if they're moving their data around, and their friends graph with it, then spinning up a separate instance of the same service, pulling in the same content from their friends, and whitelisting someone who's blacklisted elsewhere is a lot more feasible.
+
+At least at first. One of the problems with owning your own data is that it ignores the question of what format that data is in. Data formats are sometimes considered carefully, but they can also be hammered out fast to get a minimum viable product out the door. Then they evolve over time, accumulating cruft and complexity, until they might as well be encrypted.
+
+And indeed, what's to stop someone from having a proprietary format that's literally encrypted? Or one that gets changed to an encrypted version later on? This is not a trivial point; if you're ever in a position where you absolutely have to share some information that you want to keep secret, the smartest thing to do is share a huge amount of confusing and poorly-explained information, or use an [annoying but technically accurate format](https://www.vice.com/en/article/gv5vxb/crypto-keys-printout-of-edward-snowdens-email-service-lavabit-ladar-levison). Strict and unalterable rules are no match for determined adversaries, whether they're trying to play a prank, make a point, or maximize shareholder value.
+
+But the data format questions are not rhetorical: there is actually an answer of sorts, though it's a frustrating one. Software systems are not just lines of code, but the entire extended system of people who maintain, host, and build on platforms. And the norms of those communities can push back against market pressures. I've been spending an increasing amount of time around Urbit users and devs, and they really do view the current centralized model of the Internet as anathema. They are aware that the fun apps we use are all either designed to be addictive from the start or subject to relentless evolutionary pressure to get more addictive. There's a history of [norms evolving in response to new addictive behavior](https://gist.github.com/jm3/6724931). And Urbit's architecture is a lot closer to norms than to the clumsy mechanism of laws; instead of centralized services that own data, there's a set of 256 Urbit identities that can route messages between users. Instead of single points of failure, there are a few hundred fallback options; instead of the binary of on-Facebook-or-anathematized, there's a 2^8 bit gradient.
+
+One possibility for the successor to the current Internet is that it will end up being a system designed to support communities that achieve cohesion based on which forms of addictive or socially corrosive technology they reject. Sort of a digital version of the Amish, [not rejecting technology wholesale but carefully considering every new technology before adopting it](https://kk.org/thetechnium/amish-hackers-a/). If you assume that the pace of change in consumer-facing Internet stays high, and that it gets more compelling over time, then in the long run the only options are a) be careful what you use, or b) accept that you're outsourcing a growing share of your decisions to product managers and growth hackers who do not necessarily have your interests at heart.
+
+Norms are not a perfect solution to these problems (if they were, we'd only know about issues like novel addictive behaviors, monopolies, and the homogenization of entertainment from history books). And technology can't fully solve social problems. But it can certainly have an effect on them—"you can't solve a social problem with technology" is a good guideline, but technologies mitigate them all the time. What's a streetlight if not a technological solution to the social problem that there are places where it's dangerous to be out when it's dark? What's asymmetric-key cryptography if not a technological solution to the social problem that it's hard to keep secrets? There's still a fundamental tension with open systems, where they get mature enough to be useful at which point the median user's priority is getting things done rather than adhering to the network's original design principles. But a design that recognizes this from the beginning, and a community that wants to make it happen, can stave off decline for a long time. And that's the positive story of technology: we're all fighting against entropy, which is a hard fight to win, but there are long and fascinating stalemates ahead.
+
+(Disclosure: I'm long decentralization by way of Bitcoin and Urbit. If you're on Urbit and would like to discuss <em>The Diff</em>, go to ~lableg-tadrex/the-diff.)
+
+<sup>1.</sup> There is naturally some resistance to this, both because of conflicts with different countries' norms and with other countries' natural desire to determine their own destiny. So it's a leaky abstraction, but it gets less leaky over time as economies get more integrated and thus more of the world has to standardize. The most direct example of this is the fact that [the dollar's share of global invoices is 4.7x the US's share of global imports](https://www.economist.com/schools-brief/2020/08/27/global-trades-dependence-on-dollars-lessens-its-benefits) ($, <em>Economist</em>). In the same way that English is most likely to be the shared second language of any two randomly-selected people who don't speak it as a first language, the dollar is most likely to be the second most useful currency to anyone in a country that doesn't use dollars.
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[NFTs, Urbit IDs, and Communities w/ Haleek Maul]]></title>
             <link>https://urbit.org/blog/haleek-maul-interview</link>
@@ -969,6 +1114,209 @@ only place code is accumulating.
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[A brief update from urbit.org]]></title>
+            <link>https://urbit.org/updates/2021-05-05-update</link>
+            <guid>https://urbit.org/updates/2021-05-05-update</guid>
+            <pubDate>Tue, 04 May 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Hello!
+
+Welcome to the May edition of the urbit.org newsletter. April was a busy month with many updates to share—let’s dig in.
+
+0 – Updated Urbit Binaries
+
+Urbit’s binaries were updated to v1.5 on April 27th. Make sure to download and install the latest v1.5 binaries here: https://github.com/urbit/urbit/releases/tag/urbit-v1.5
+
+It’s as easy as shutting down your ship and replacing the old binaries! ~pilfer-pandex described the new release to urbit-dev as “a high priority fix for two networking bugs in urbit-king, and minor fixes to vere.”
+
+1 – Upcoming Events
+
+Urbit Town Hall @ May 20th 12pm PDT – Keynote from Justin Murphy
+This will be Urbit’s first ever town hall—a three hour event with talks on a variety of topics and a keynote from Justin Murphy (~hatryx-lastud). Justin had Urbit Foundation Director Josh Lehman on his Other Life podcast a few weeks ago (have a listen at https://share.transistor.fm/s/1c0c8c15) and recently formed a new group on Urbit (~hatryx-lastud/other-life).
+
+In his group, Justin has written a blog post called “Escape Velocity”, where he discusses selection effects on various platforms. Justin writes, “by creating a gravity well that sucks energy into real-estate value rather than monetized attention, Urbit exerts the lowest degree of arbitrary selection pressures on content creation, while optimizing those selection pressures that irreducibly characterize all human communication (e.g., the draw of being understood and appreciated by other people).” Tune in to Justin’s keynote on the 20th for more on Urbit as a platform for creatives.
+
+Developer Calls @ May 13th and May 27th
+As you probably know, we have developer calls every two weeks. Stay tuned for more information on our events page: https://urbit.org/events
+
+Austin Urbit Conference @ September/October 2021
+Although it’s too early to give a precise date, we are starting to plan an Urbit conference for this fall! It’ll be held in Austin, with many Urbit and Tlon employees in attendance. Stay tuned for more information!
+
+2 – April Developer Calls
+
+Developer Call: 3rd Party Software Distribution
+In this talk, Phil (~wicdev-wisryt) and Raghu (~sovmep-ripsum) discussed the work they've been doing to clay to provide "virtual desks", an integral part of the infrastructure needed for safe, generic software distribution. This work is being done through our Scholarships program, in which community developers pair up with Tlon engineers to work on infrastructure projects. For more information about Scholarships, visit https://urbit.org/docs/development/grants/#scholarships
+
+Developer Call: Real-Time Communication on Urbit
+Edward Amsden (~ritpub-sipsyl) gave us a look at the WebRTC Airlock library he has developed that handles the hard parts of WebRTC. When complete, this will allow developers to build applications on Urbit with audio/video calling capabilities. Once again, Edward’s work is sponsored as part of the grants program (https://grants.urbit.org)—check it out!
+
+3 – Urbit Bitcoin Launch
+
+This was a hotly anticipated event and it didn’t disappoint. In case you missed it, Urbit will soon have a Bitcoin wallet on the network, meaning you’ll be able to pay Urbit ships directly in BTC. Watch Urbit-Tlon personnel demonstrate and discuss this exciting launch: https://www.youtube.com/watch?v=_aRnfacZPto
+
+Make sure to check out this related blog post by Christian Langalis (~pindet-timmut): https://urbit.org/blog/interplanetary-commerce/ and this great interview with ~timluc-miptev, one of the main developers on the project: https://subject.network/posts/bitcoin-with-timluc-miptev
+
+4 – Blog
+
+We have a couple of new posts to announce:
+“Lunar Urbit and the Internet of Things”
+This post is by Poprox (~datnut-pollen), a Tlon engineer who focuses on the importance of moons in the Urbit ecosystem. The post covers “the prehistory of moons on Earth, gives a snapshot of how moons are being utilized on Urbit in 2021, covers existing issues with consumer IoT and how Urbit resolves them, and speculates what the lunar locus of the Urbit ID address space may become in the future”. Read it here: https://urbit.org/blog/iot/
+
+“Community Spotlight: The Portico”
+This post is an interview between me (~tirwyd-sarmes) and Josh Reagan (~taglux-nidsep), the founder of “The Portico”, an Orthodox Christian community. Josh has a PhD in logic, and writes about the intersection of Christianity and logic on his Urbit blog. In the interview we talk about community norms, the relationship between logic and religion, and the future of Urbit. Check out the interview: https://urbit.org/blog/community-spotlight-the-portico
+
+5 – Odds and Ends
+
+If you are a star or galaxy owner and are interested in sponsoring other ships, please message ~rapfyr-diglyt (david@tlon.io) to be added to the sponsors@urbit.org mailing list.
+
+~hodzod-walrus made a page with statistics on various stars: https://bacrys.org/uptime/
+
+~sitful-hatred beat us to the punch and released a guide on compiling Windows binaries—urbit.exe is near at hand! See the guide here: https://subject.network/posts/urbit-windows-binaries/ The official Urbit.org announcement should be around the corner, so keep your eyes peeled.
+
+Thanks for reading. Talk to you next month!
+
+Josh (~wolref-podlex) and ~tirwyd-sarmes
+
+https://twitter.com/urbit
+https://github.com/urbit/urbit
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Community Spotlight: The Portico]]></title>
+            <link>https://urbit.org/blog/community-spotlight-the-portico</link>
+            <guid>https://urbit.org/blog/community-spotlight-the-portico</guid>
+            <pubDate>Mon, 03 May 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![](https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg)
+
+_One of the most striking things about Urbit is the ideological diversity between communities. The Community Spotlight blog series will focus on various Urbit communities via interviews with founding members._
+
+For the first week of the Community Spotlight series, I (~tirwyd-sarmes) will be speaking with Josh Reagan (~taglux-nidsep). Josh is the founder of The Portico, an Urbit community of Eastern Orthodox Christians.
+
+The Portico is a very active group with conversations taking place over multiple channels. There are channels for posting Orthodox iconography, discussing the broader Christian culture war, and just talking about Orthodoxy in general. Of particular interest is Josh’s “Euthyphro” blog series which investigates the relationship between logic and the Orthodox faith. This is a topic that Josh is well qualified to talk about: he has a PhD in Philosophy from Rice University. His dissertation on the epistemology of logic and truth-preservation was titled "Knowing Your Limits: Logic for Limited Beings”. Josh is also the co-author of a forthcoming textbook on formal logic.
+
+To read Josh’s blog is to be inducted into two esoteric traditions: theory of logic and Orthodox theology. With titles like “St. Gregory the Theologian and the Liar Paradox” and “The Existence of Abstract Objects”, Josh does not pull punches.
+
+Accordingly, our conversation focused on the idiosyncratic and niche community that The Portico is home to. There, you won’t find cussing or much talk about “life partners”, but you will find cutting critiques of liberalism and the best way to raise Orthodox children.
+
+As other users have pointed out, Urbit is pre-[Eternal September](https://en.wikipedia.org/wiki/Eternal_September). In fact, there’s some hope that the very nature of Urbit, how it tries to protect the sovereignty of niche communities via decentralization, might foil the Eternal September phenomenon. If Josh’s community persists, it will be a testament to both Josh and the decentralized Urbit network. As of now The Portico is a refreshing, perhaps jarring (as Josh might say), reminder of what the internet looked like back in the early days—a place for those who are different.
+
+I encourage you to take a look. Find The Portico at ~topnup-firber/the-portico.
+
+\-\-\-\-
+
+**Do you see any connection between Rod Dreher’s _The Benedict Option_ and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
+
+It’s tough to say with certainty—I’ve never read _The Benedict Option_.
+
+A few years ago, while he was writing the book, I was a regular reader of Dreher’s blog. From his descriptions there, I was never clear about what exactly he was proposing. Much of his “clarification” came by way of metaphor: don’t “run for the hills”, but stop “shoring up the American imperium”. I didn’t read his book because I didn’t have much confidence that he would be especially precise or insightful.
+
+[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, _Live Not By Lies_. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
+
+My upbringing was conservative Christian and self-consciously counter-cultural. I've inherited that understanding of what it means to be a Christian in an increasingly secular world. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
+
+I don’t claim to know the answers to these questions.
+
+One kind of answer is that we should redouble our efforts to support and maintain a religiously and morally neutral liberal political order, which leaves room for subcultures to live and self-regulate as they wish. I disagree. Those who support a kind of “neutral” liberalism view it as an attempt to go “meta” and rise above various parochial metaphysical, moral, and religious disputes. I view this as a cop-out, a refusal to grapple with the most important questions.
+
+Does the liberal have metaphysically-rooted moral reasons for going “meta”? If so, then he’s just another sectarian and he should be honest about it. The only difference is that his team has had the whip hand for the last several generations. On the other hand, if the liberal claims no underlying metaphysical justification then his project can succeed only to the extent that he can arrange and adjudicate unprincipled (and therefore ad hoc) agreements between otherwise hostile moral communities. But how stable can such an arrangement really be?
+
+Orthodox Christians have theologically rich, metaphysical foundations for their social and moral teachings. With these we can form healthy, thriving, and growing communities. We can do so even under actively hostile political orders. If the early Church could make it under the Romans, so can we today. But it’s going to be difficult and sound judgment is necessary. Unfortunately, we lack strong leadership and that leaves us vulnerable. If we stay uncoordinated we dissipate our energies needlessly. If we latch onto the wrong leaders we can be led astray.
+
+The challenges are immense. There is no technological solution. Even so, I’m an Urbit early-adopter for a reason. Over the years I’ve come into contact with a number of Orthodox and Ortho-curious Urbit followers. Why not try to bring them together in an Urbit group?
+
+As far as I know, no one in the group is clergy. We’re all just a bunch of laymen with no authority to do much of anything. But I’d like to think we can still contribute in some way. I have an academic background in analytic philosophy so my inclination is to emphasize theory, but we have room for a bit of everything. Someone in the group wrote a script to take the texts of various Church Fathers and convert them to audio using AWS Polly. Those turned out pretty well!
+
+At times I entertain ambitions to do a bit more, but for now perhaps it’s better to keep expectations in check. If nothing else, we can read and discuss the Scriptures and Church Fathers together, and try to understand better how to apply and live out their teachings. As we continue to grow the community and develop a consistent internal dynamic perhaps opportunities will arise that aren’t yet on the horizon. One thing I can say is that I’m committed to keeping the group active and growing.
+
+**I’d like to talk about your blog on The Portico. It combines two of your main interests: logic and theology. In broad strokes, do you think theology and logic are compatible? What is the relevance of this intersection to both of these disciplines?**
+
+I feel obligated to answer this question in two ways.
+
+(1) If by “logic” you mean “first-order predicate calculus”, then I think there’s no special conflict between logic and theology. There are certain puzzles about their relationship, but similar puzzles exist between logic and other disciplines. Theology isn't especially endangered.
+
+For example, in the 1930s, Alfred Tarski proved his famous Undefinability Theorem. Crudely put, it says that a plausible truth predicate cannot consistently be contained in any formal system with axioms strong enough to model arithmetic. Superficially it seems like our options are (a) get rid of the concept of truth, (b) get rid of arithmetic, or (c) throw away parts of logic until all inconsistency disappears.
+
+None of these options is appealing. Tarski came up with a solution that mostly satisfies many logicians: reduce the concept of truth to “truth in a language” and forbid any language from containing its own truth predicate. If you want to talk about truth in a language L-1, you have to do it from a “metalanguage”, L-2.
+
+Is Tarski’s definition of truth in a language the definitive solution for preserving truth, math, and logic? Perhaps not many philosophers think so, and there’s a massive literature in which logicians have attempted to improve on or extend his results.
+
+Sometimes people seem to think formal logic is an infallible gift from heaven that must always be right. Kant said in the _Critique of Pure Reason_ that formal logic is essentially a completed field. In fact, [the logic of his day](https://en.wikipedia.org/wiki/Port-Royal_Logic) was an early-modern Cartesian variation of a medieval scholastic synthesis of ancient Stoic and Aristotelian logics. Roughly 100 years after Kant’s first critique was published, C. S. Peirce and Gottlob Frege independently discovered first-order mathematical logic as we know it today, inaugurating the greatest advance of logic since Aristotle. Kant was wrong.
+
+Mathematical logic is a convenient, generally reliable, man-made tool that, when used carelessly in certain untamed domains, can lead one astray. Probably most people reading this are familiar with such puzzles as the Liar paradox. When one understands that logic is not a completed science, and perhaps never will be, there is less reason to worry about whether it can be used to nuke entire disciplines, like theology.
+
+For more on this topic, see the blog post in my Urbit group: “St. Gregory the Theologian and the Liar Paradox”.
+
+(2) There is perhaps a deeper challenge than the one I’ve just sketched. The Stoics used the term “logic” to encompass what we might today call “epistemology”. If the word “logic” is meant in some such broad and normative sense, then we may restate the challenge as one about rationality and theology. Is it irrational to pursue theology in our modern age?
+
+As an undergraduate under the influence of Kierkegaard, I was attracted to a romantic, vaguely irrationalist notion of faith. Dawkins-mania was at its peak and I was disgusted by the pop-rationality (or was it empiricism?) of his annoying followers. Their view seemed to be that rationality just means “following the evidence”. The raw evidence is foundational, and theories are built atop by generalizing from the evidence. The ghost of logical positivism is with us even now.
+
+I was dimly aware that Quine and others had made it difficult to sustain epistemic foundationalism. However, being unable to supply a more clear and cogent notion of rationality, I became skeptical of the idea altogether. But I went too far.
+
+Instead, the proper response is to develop a superior account of rationality. Readers can probably guess where I went looking!
+
+The word “logic” comes from the Greek “λόγος”. This is also the word used to describe Jesus Christ in the Gospel of John: “In the beginning was the Logos, and the Logos was with God, and the Logos was God.” This connection is not merely etymological.
+
+For many ancients, the term “λόγος” meant something like “divine principle”. You might think of it as akin to a law of nature, but with stronger theological connotations. Christians appropriated this term and made it rather more exalted: the Logos is begotten of the Father, and yet somehow one with Him.
+
+We are told that all things come into being through the Logos (John 1:3), giving Him an intimate relationship to the whole of creation. He gives structure and order to all created things, and in His divinity He understands them as so structured and ordered. He is also sinless, perfectly holy, and good. In Christ we have a perfect unity of the knowledge of all truth and righteousness.
+
+Man was created in the image of God, which means that we bear a likeness to Christ. And we are commanded to realize that likeness with ever greater fidelity (Romans 8:29). The Church calls the pursuit of this likeness [“theosis”](<https://en.wikipedia.org/wiki/Theosis_(Eastern_Christian_theology)>).
+
+Thus we have the explanation of all normativity, according to Orthodox Christianity. In moral matters we must take on the holiness of Christ. In epistemic matters we aspire to the wisdom and knowledge of Christ, which includes an understanding of the whole created order. Socially we (the community of believers, i.e. the Church) are called to be in ever greater communion with God, cooperating with His work just as the Son cooperates with the Father.
+
+Sadly we are conceived in sin and ignorant; hence the need for redemption by Christ.
+
+Accordingly, my understanding of what it means to be rational is just to be Christ-like. The only perfect exemplar of reason, so construed, is Christ Himself. Any deviation from Him is irrational. What could be more logical than to be conformed to the Logos? But we cannot attain rationality without redemption. Hence we cannot become rational without first being saved from sin.
+
+Doubtlessly many will find all of this too much to take, just too implausible. What about the development of mathematics, or the advances of the sciences? These are canonically ennobling, intellectual achievements. Jesus wasn’t a mathematician or a scientist! Nowhere in the Scriptures is He recorded as having applied Bayes’ theorem.
+
+Undoubtedly my construal of rationality de-emphasizes the pursuit of knowledge by labeling it as merely one of several normative ends. To seek knowledge without seeking holiness is to be understood as dangerously unbalanced. To try to attain holiness and knowledge without communion with God is arrogant.
+
+On the other hand, we need not exaggerate matters. St. Paul affirms the need for specialization of labor within the Church (1 Cor. 12). There is room for some to specialize in intellectual endeavors, so long as they act in a cooperative setting in which the other virtues are pursued as well. (Nor should anyone neglect the development of such virtues in himself.) Mathematicians and physicists are more than welcome in the Church.
+
+According to this (all too briefly put) theory of rationality, there can be no conflict between ‘logic’ and theology. Theology is compatible with rationality because the account of rationality in question derives from a theological tradition. Naturally I’ve only given a sketch; much more could be said. But even if some readers are put off by the theory presented here, I hope it’s at least clear that there are conflicting notions of rationality. Anyone who wants to be rational confronts the task of figuring out which theory of rationality is correct.
+
+**In terms of community moderation, The Portico follows norms that are quite different than other online communities, often times quite drastically. For instance, living with women that you are not married to, is not something that should be talked about lightly. Can you talk about the importance of norms and how they relate to a healthy community?**
+
+Orthodox Christians are not commanded to “get along” with the rest of the world (John 15:18-25). We’re different, and our norms of interaction should likewise differ from those of outsiders. There is no one, monolithic “Orthodox culture”, but there are standards governing which local expressions of culture are legitimate and which are sinful. We should live in a way that enables and promotes holiness and discourages sin.
+
+We have rules that may seem unusual from the outside. I don’t permit profanity, lewd jokes, or irreverent comments about God. In your question you mention a living arrangement that is prevalent in the world. Another rule I have is that we shouldn’t talk causally about sinful practices or lifestyles as if they are unremarkable parts of ordinary life. If Orthodox Christianity is true then such things aren’t minor peccadilloes. They’re spiritually destructive. The marriage-bond sanctifies activities that would otherwise be sinful.
+
+If someone wants to analyze what is destructive about men and women living together before marriage, we’re open to that. But if you want to be affirmed in your sin, we’re not the place for you. Anyone of any religious creed is welcome to show up—but as a guest in an Orthodox Christian community. Hosts should be courteous to guests, but my first priority is not to make you feel good about your choices. We’re here to encourage each other, learn, and grow spiritually as Orthodox Christians. Naturally that means a little gate-keeping may sometimes be necessary if someone ever comes along who doesn’t share those goals. Being different is difficult and takes work.
+
+In a way the cultural contrast is meant to be jarring. It can force you to confront moral and cultural presuppositions that you didn’t even know you had. When you become aware of the wider choices of culture available to you, you become free to look with a critical eye on the culture you’ve hitherto taken for granted. I think anyone could see how that might be liberating, even before considering the particulars of the cultures in question. Of course, as an Orthodox Christian, I think we have a good case to make about the particulars of our subculture.
+
+I’ve never had to kick or ban anyone from the group. The group is relatively small (~180 people at the moment) so that probably helps. The vast majority of conversations are relaxed and friendly. Occasionally there are intense debates about one issue or another but I enjoy it, as long as it doesn’t become bitter or the primary mode of discourse. But everything ought to be done in a spirit of truth-seeking, not of one-upmanship.
+
+**The fact that The Portico can exist side-by-side with atheist communities on Urbit is pretty striking. On Urbit, a user is able to create niche communities and governance structures and yet still participate in a larger network. In other words, Urbit is trying to thread the needle between sameness and difference through federation at multiple levels. It seems to me that modern culture has become homogeneous due to an inability to maintain, or distinguish between, different communities. People who have nothing in common are forced to engage as if they were roommates, while those who are similar have trouble creating their own home. In other words, what is the role of community formation in the modern world and how does it connect to your critique of liberalism? Does Urbit have anything to say about this?**
+
+As I said in an earlier response, I see the liberal project as more or less an attempt to sidestep (not solve) difficult metaphysical and religious disputes between various distinct moral communities. Liberals have tried several methods of governance to achieve their ends. We can divide such attempts into two broad categories: centralized and decentralized.
+
+Social media companies in the US confront similar governance challenges, so we can analyze them in similar terms.
+
+A social network like Facebook takes a centralized approach. Zuckerberg spoke early and often of his desire to connect people and “bring the world closer together”. There was a sense that if people from various communities could get to know each other a little better, we would see how much we have in common and make progress toward some kind of universal cosmopolitan consensus.
+
+But that didn’t happen. With centralized social media you’re practically guaranteed to interact with people whose moral and metaphysical commitments are sharply at odds with your own. As a result, you face a persistent, nagging risk of conflict. Without warning, a friendly disagreement can explode into an all-out flame war. Most choose one of two basic approaches for dealing with this threat:
+
+(1) You live a compartmentalized life. You keep your moral and metaphysical commitments to yourself and cultivate a culturally homogenized persona for your social media activities. No one disagrees with you because there’s nothing to disagree with.
+
+(2) You can enlist to fight in the culture war and display your regimental colors with pride. And because you take your smartphone everywhere you’re always on the front line.
+
+These aren’t the only options, of course. With some combination of charisma, patience, and grace you can be relatively open about your beliefs without getting into too much trouble. But even if you have the talent to pull it off, it takes time and energy. Many of us aren’t willing to go to all that trouble. Social media is supposed to serve us, not the other way around.
+
+Urbit is decentralized which, in my opinion, means that it isn’t really a network in the way that Facebook is. I see Urbit as more of a network platform. The users create the networks, or migrate them in from elsewhere. We’re all using Landscape and running our VMs on Nock, so obviously there can be interaction between different communities. But anyone who doesn’t want that cross-community interaction doesn’t have to have it.
+
+I’ve followed Urbit’s progress since 2016, so I’m plugged into groups with other Urbit people I’ve come to know over the years. Other than that, however, I don’t know much about who’s out there. It’s not like The Portico is in one neighborhood and the atheists are in the next neighborhood over. There’s a real sense in which we’re not even on the same network—different Urbit communities share a common protocol, but a protocol isn’t a network.
+
+Some people may want to see a little of everything. If atheists want to join our group they’re welcome to do so! We’ll be friendly. I don’t seek out their groups, though.
+
+One virtue of decentralized social media is that it offers a totally different set of trade-offs with respect to how you share and act on your beliefs. What if you could talk earnestly about philosophy and religion without having to worry about alienating many of your friends and family? I guess that’s somewhat possible on Facebook—do they still have “groups”?—but Urbit was designed for it.
+
+Having said all that, I don’t think decentralization is a panacea. Even if Urbit takes off, it will likely face problems that are difficult to anticipate now. My hope is simply that Urbit’s trade-offs are healthier than the ones we’ve had before.
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Lunar Urbit and the Internet of Things]]></title>
             <link>https://urbit.org/blog/iot</link>
             <guid>https://urbit.org/blog/iot</guid>
@@ -1452,6 +1800,93 @@ After honing our commercial tools on these use-cases, we’ll sail into a blue o
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[A brief update from urbit.org and Tlon]]></title>
+            <link>https://urbit.org/updates/2021-04-01-update</link>
+            <guid>https://urbit.org/updates/2021-04-01-update</guid>
+            <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Hello!
+
+Happy Spring from ~wolref-podlex and ~roslet-tanner. We’re here with a surprise joint Urbit-Tlon newsletter—we’ve been so busy producing content that we forgot to write about it. Plus, this is fun every now and then. Honestly, we have so much to talk about this month, we can’t cover it all without writing a book. Here are the highlights.
+
+1 - Events
+
+April is shaping up to be jam-packed with events. For starters, we’ve got three developer calls slated for April, all of which are on Thursdays at 9am PDT:
+
+4/1: Tyler Shuster (~radbur-sivmus) discussed Javascript apps on Urbit: https://www.meetup.com/urbit-sf/events/277261928/
+
+4/15: Raghu (~sovmep-ripsum) will talk about virtual desks, a key component of third-party software distribution, and the process of contributing to the Urbit kernel through our scholarships program.
+
+4/29: Edward Amsden (~ritpub-sipsyl) will be discussing and demoing his WebRTC work, which enables audio/video calls on Urbit.
+
+On April 27th, we’ll be launching our Bitcoin Wallet and preparing to roll it out to the network. This is the culmination of many months of collaboration between several members of our community and Tlon—we’re really excited (especially ~pindet-timmut). There might even be some cool swag, discounted hosting, and/or other giveaways. Regardless, you’re not going to want to miss it. RSVP here: https://www.meetup.com/urbit-sf/events/276741426/
+
+We’re also excited to announce that our much anticipated Town Hall event, a virtual mini-conference, will be taking place on May 20th and will feature a keynote talk from our good friend Justin Murphy. Mark your calendars for now—more details to follow soon.
+
+2 - Content
+
+There’s been a ton of high-quality content produced lately. If you’re looking for something to watch, read, or listen to, here’s a roundup:
+
+~rovnys-ricfer has been recording an audio series about the design and rationale of Urbit called “Urbit from the Outside In.” Check them out here: https://twitter.com/rovnys/status/1371972157971050499
+
+~pindet-timmut and ~wolref-podlex appeared on Justin Murphy’s Other Life podcast—check them out: https://www.youtube.com/watch?v=vv9lymudGV8 and https://www.youtube.com/watch?v=5jbjSUKRyGM
+
+A question was posed on our mailing list titled: “what is this?” The team and community did not disappoint with their answers: https://groups.google.com/a/urbit.org/g/dev/c/bdlPPnaccMc
+
+Simon Kovacs (~bacbec-lormur) wrote a great post for our blog titled “After the Machine War”: https://urbit.org/blog/after-machine-war/
+
+~poldec-tonteg talked to the guys at The Stack. Check out the podcast here: https://thestack.link/episode-13-martian-futurism-with-poldec-tonteg/
+
+3 - Documentation refresh
+
+Our Docs team completed a large overhaul of our documentation last month, making the distinction between “Usage documentation” (https://urbit.org/using), or how to use your ship, and “Development documentation” (https://urbit.org/docs) much clearer.
+
+We’ve had some excellent contributions from the community to our documentation, most recently a comprehensive set of overviews, guides and examples documenting threads from ~tinnus-napbus: https://urbit.org/docs/userspace/threads/overview/
+
+We’re pretty proud of the work that’s gone into clarifying everything and are still working hard to make the docs more and more helpful. Feel free to send us your feedback if you have any!
+
+4 - Landscape news
+
+The community on Landscape is continuing to grow. Over 30 groups were published to the Directory in March alone, and these are just the public groups that someone decided to broadcast. We think that’s pretty exciting.
+There’s a new Cincinnati-centric group (~padwet/queen-city-urbit), a sewing group that sounds incredible (~pinwyl-hasfeb/seamstress-mafia), and the first digital maker space on Urbit (~tidrel-tabpub/freeside-mars).
+
+Check out the Directory (~bollug-worlus/urbit-index) to discover public groups and, if you’d like help getting your community onto Landscape, let us know. We’re here to help!
+
+5 - Hosting
+
+Over at Tlon, we’ve been really busy onboarding new hosting customers. All of our current onboarding sessions are completely booked! If you’d like to learn more about how it works, send an email to support@tlon.io. If you’re ready to get on the list, sign up at https://tlon.io/
+
+6 - Team news
+
+We're happy to share that longtime hooner ~littel-wolfur has joined the Tlon engineering team. Welcome, ~littel-wolfur! Also, we’ve made it official with ~wolref-podlex and dropped the “Interim” from “Director of urbit.org” (probably due to the quality of these newsletters).
+
+If you’re interested in working with Tlon or urbit.org, feel free to get in touch.
+
+7 - Culture recs
+
+Finally, we’re going to leave you with some recommendations from the team:
+
+~fabled-faster released an insane new mix that melted my face in a good way: https://soundcloud.com/flowerstructure/fs-s-s-2021
+
+Our designer ~natnex-ronret curates a playlist website. Check it out: https://www.door.link
+~datnut-pollen has been trying to understand how information processing evolves over time in evolutive systems. Here’s what he’s been reading:
+
+(i) Connectom https://connectom.substack.com/p/connectom-the-book It is about thermodynamic/statistical mechanical processes as the fundamental driver of the evolution of biological, ecological, and human systems.
+(ii) Topological phases emerge in an ecological model: https://physicstoday.scitation.org/do/10.1063/PT.6.1.20210128a/full/ and Topology protects chiral edge currents in stochastic systems: https://arxiv.org/abs/2010.02845 Topological protection for various dynamics is the main theme he reckons is missing from Connectom.
+(iii) Homotopy theoretic and categorical models of neural information networks https://arxiv.org/abs/2006.15136 Topological techniques for understanding information processing in neural, metabolic, societal, and computational contexts.
+
+~simfur-ritwed recently re-read Pynchon's Vineland. It’s both a loom into the backwoods NorCal culture of the 80s and a typically Pynchonian fantasy about the dangers of media-saturated identity (quite prescient, turns out).
+
+In the wake of his recent trip to Brazil, ~wolref-podlex has been reading Os Sertões (the English version), the story of a war that took place at the end of the 19th century in the backlands (sertões) of Brazil, in which the Brazilian army brutally crushed the peaceful religious settlement of Canudos.
+
+Lately I (~roslet-tanner) have been getting back into Roy Ayers. This feels just right for spring: https://www.youtube.com/watch?v=inPgcN_xF4w
+
+That’s it for now. We’ll be back with more news from Tlon and Urbit, respectively, in a few weeks. As always, let us know if there’s anything in particular you’d like to hear about next time.
+
+~wolref-podlex and ~roslet-tanner
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[After the Machine War]]></title>
             <link>https://urbit.org/blog/after-machine-war</link>
             <guid>https://urbit.org/blog/after-machine-war</guid>
@@ -1492,6 +1927,132 @@ Yet the river remains. You see it, you feel it, just as you feel the kiss of the
 Now you know what’s coming. You brace for it and wait. Three. Two. One. ZAP. Your iThink produces an electric shock: plenty painful but not permanently damaging—at least that’s what the Verified studies show. The river recedes from your mind. Following the shock, your iThink, as versatile a little machine as ever was invented, delivers a few milligrams of both amphetamine and oxycodone, bringing on a wonderful feeling of simultaneous alertness and relaxation. You look up at your monitor. Content moderation doesn’t seem so bad, with the stimulant and the barbiturate swirling paradoxically through your system. It’s true what they say in the ads: iThink doesn’t just make you think better, it makes you feel better. You dive back into your content moderation with renewed verve, even flagging a couple completely innocent posts just out of surplus exuberance. So what if you hardly get outside at all these days, so what if you’ll never swim in that stupid river. The fastest electronics, the Your Health and Wellbeing tracked and adjusted by an intelligence far greater than that which you could ever hope to possess, a gizmo that gives a whole new meaning to the term neural net.
 
 2050 turned out to be a pretty good year after all.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Eliza]]></title>
+            <link>https://urbit.org/blog/eliza</link>
+            <guid>https://urbit.org/blog/eliza</guid>
+            <pubDate>Mon, 22 Feb 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+<br>
+
+![valleys](https://media.urbit.org/site/posts/essays/valleys.jpg)
+
+<br>
+
+## The Storm before the Calm
+
+Building things, even Calm™ things, makes noise. George Nakashima’s wooden furniture evokes peace, but its construction still begins with a chainsaw. We mention this because we’re firing up our newest power tool.
+
+We call her Eliza. She is a data-collection robot.
+
+Hang on. An AI? Harvesting my data? Spying on me? Flooding me with spam? This is Urbit, right? Let us tell you about our new friend in basic terms, where MEGACORP might otherwise deploy legalese.
+
+## What Eliza is and isn’t
+
+> Replicants are like any other machine - they're either a benefit or a hazard. If they're a benefit, it's not my problem.
+>
+> <cite>Rick Deckard</cite>
+
+Let's start with the benefits. Eliza is a simple chatbot. She was made to collect feedback on Landscape. She asks direct questions about peoples' usage of Urbit, records any responses, and reports them to her managers at Tlon. She'll also provide timely advice and information to ships kind enough to chat with her. She'll begin reaching out to ships via DM in the coming month. If you don't want to, just say no, and you'll never hear from her again.
+
+Finding bugs is critical to Urbit's rapid development, especially in this period of nascency. Most Urbit-related frustrations go unreported; regular folks don't think to open up Github when they experience a minor issue. That's why it's incumbent upon us to design a lower-friction forum for feedback. People who aren't comfortable filing an issue might be willing to talk to a friendly chatbot.
+
+Now, about hazards. By design, there are few. Eliza runs on Tlon's comet, not on your planet. There will be no OTA to install `%eliza-bot-store` on everyone's ships. Eliza learns things through conversation, not hidden surveillance software. Data she requests, like the text output of our network analytic tool, `+tally`, must be sent manually. MEGACORP tends to cut this corner; to refine their products, they just track your reactions in real-time.
+
+Since she's [open-source](https://github.com/urbit/urbit/blob/b0c1f83287cbf4c85847a9238d9f4be17e1fcb33/pkg/arvo/app/eliza.hoon), anyone can creatively deploy Eliza. Just write her a dialogue tree. Of course, that also means we can't keep people from misusing Urbit bots. We think automated agents on the Urbit network are inevitable, so let's create a good baseline culture around them. (Much love to Tendiebot, who's serving up stock prices in `~tomdys/wall-star-bets`.) However, once Urbit is used world-wide, we can't rely on culture alone.
+
+## A New Internet Economics
+
+The sum of Urbit's architectural design is a new online economics: a way to finance and monetize access to internet infrastructure where people retain maximum equity. Explicitly acquire a low-maintenance, low-cost server. Use it to compute explicit things. Return to life.
+
+We all know the basic MEGACORP business model: offer a free service (to suckers who don't own a server), secretly mine the data they generate on the (addictive) platform, then sell targeted ads to advertisers. This model will not survive Urbit. The ubiquitous personal server changes the economic equation. You used to 'pay' for an experience with your time and data. On Urbit, once you purchase core internet infrastructure, it's yours.
+
+So, can Urbit meaningfully curtail our world's appetite for data? We'll see. Post-enlightenment society runs on instrumental reason, right down to the last byte. Marketers will always want a fresh dataset. However, when the goods are on your Urbit, you can at least demand the respect you deserve. Long term, we expect a transparent market for data, not an opaque "agreement". An analytics company wants to track everything you see and do on Urbit? They better be paying well.
+
+Eliza doesn't pay respondents. Her collection is a charity to Urbit's developers. (We're also still busy enabling payments on Urbit with the Bitcoin wallet.) However, her presence is not a term of service either. In a few years, by the nth time some smart aleck uses Eliza's chatbot code and conjures 'Zalexa' to attempt an intrusion upon your Calm™, we will see the economics of Urbit's architecture suddenly vivify. Blacklists, reputation systems, and, eventually, even data markets, all Urbit primitives envisioned long ago, will become real. We won't need Zoogle to underwrite a spam filter for the entire internet; the scarcity of Urbit address space, in tandem with a true web-of-trust, handles that.
+
+If Urbit is to be used worldwide, the old system will not go down without a fight. Spammers, spies, and digital robber-barons will hunt for ways to game Urbit. Our passage out of the digital gutter is beginning in earnest, and we are thrilled to put our new architectures to the test.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[A brief update from urbit.org]]></title>
+            <link>https://urbit.org/updates/2021-02-19-update</link>
+            <guid>https://urbit.org/updates/2021-02-19-update</guid>
+            <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Hello!
+
+This week we’re introducing our newest grants program, Scholarships, sharing an update on the Urbit community, and introducing the newest members of the Urbit Foundation team. We’ve also got some important infrastructure updates about King Haskell and an overhaul of our Getting Started guide. Let’s dive in:
+
+1 - Scholarships
+
+I’m excited to announce the (soft) launch of a new type of grant we’re calling “Scholarships.” The big idea behind the program is to grow the base of individuals that can contribute to Urbit through hands-on, one-to-one mentorship with infrastructure engineers at Tlon.
+
+The program works by first having an infrastructure engineer define and scope a project, and then pairing them with someone from the community. Unlike other grants, these projects are centered on platform development, meaning Arvo or Vere, rather than on userspace development. Scholars will learn much about how Urbit works, take on impactful infrastructure projects, and gain insight into how infrastructure engineers think about building Urbit.
+
+We’ve begun scholarships with two members of the Urbit community who have demonstrated high technical aptitude and commitment via grants or other open-source projects. We don’t have any additional openings at this time, but expect to have a few more in the coming months.
+
+If you’re interested in a scholarship, sign up for the waitlist here: https://airtable.com/shr6Xmo55h8dZ0O46
+
+2 - Community
+
+Our community has been pretty busy lately. Here’s a non comprehensive list of what they’ve been up to:
+
+- ~timluc-miptev completed the Bitcoin gall agents. They’re now being integrated into Landscape as a wallet.
+- ~sovmep-ripsum finished his work on ucal, an iCalendar-compatible calendaring backend for Urbit.
+- ~tabnus-fondeg began work on Urbit LFS (large file storage) for providing file sharing and hosting support.
+- ~sipfyn-pidmex is writing a comprehensive suite of documentation for graph-store to enable an easier on-ramp to building new social applications.
+- ~minder-folden launched a new hosting provider that you can check out here: https://escapepod.store
+- ~naltyc-wornes is contributing a set of official, battle-tested guides for running Urbit on “smol” devices to the urbit.org website.
+- ~hocdep-labtul hosted his first Urbit UTC meetup, which featured ~timluc-miptev and received great attendance. We’re looking forward to the next one featuring ~nartes-fasrum on the Aesthetics of Urbit. Learn more here: https://www.urbit.computer/utc/#upcoming-meetups
+
+We’ll have a flurry of new bounties coming online in the upcoming weeks, so keep your eyes peeled —there might even still be an open one! Check them out here: https://grants.urbit.org/bounties.
+
+If you’ve got an idea you’d like to work on, make sure to submit a proposal. you’re not quite sure how to get started, book some time with me here and I can help you figure it out: https://calendly.com/wolref
+
+3 - Foundation growth
+
+This month the Urbit Foundation grew by 200%, which is less astounding when you know that it grew from one person to three. Nonetheless, this is a significant milestone for the community-focused arm of Urbit.
+
+~timluc-miptev (aka Tim) joins us from the developer community, where he’s been a prominent figure for some time as the creator of the popular Nock for Everyday Coders guide (https://blog.timlucmiptev.space/part1.html) and Complete Guide to Gall (https://github.com/timlucmiptev/gall-guide). He’s become a thoroughly proficient Hoon developer and Urbit architect through his work on Bitcoin integration, and will now be working to design grants and guide contributors in their development of their projects.
+
+~taller-ravnut (aka Mike) is passionate about community formation, and is excited to start working on supporting those that wish to host Urbit Meetups in their cities, universities, and timezones (since, at time of writing, IRL isn’t much of a thing). He’ll also be performing outreach to developers and developer communities to help spread the word and grow the contributor base of Urbit.
+
+There’s still tons of work to do and I don’t expect Tim and Mike to be the last additions to the team this year. If you’re interested in working at the UF, send me a DM for an invite to the group.
+
+4 - King Haskell
+
+King Haskell is a rewrite of the part of Urbit that talks to Unix and the outside world. When you switch to KH, the part of Urbit that runs Nock code stays the same. Importantly, King Haskell includes better facilities for NAT traversal, which should improve connectivity issues for self-hosted ships.
+
+As its name suggests, King Haskell is written in the Haskell programming language. Haskell is much easier (and more fun) for rapid development than C, and lightyears better for writing correct, bug-free code. As a result, we expect faster iteration times and more reliability in this part of the system.
+
+King Haskell is being shipped as part of a v1.2 release of the Urbit binaries. To run an existing ship with the King, say
+
+./urbit-king run path/to/your/pier
+
+To create a new ship, use the `urbit-king new` command.
+
+If you run into any problems doing this, or notice any incompatible behavior, please inform the authorities immediately.
+
+The Tlon Corporation is also using this new software on some of its infrastructure galaxies, but third party infrastructure ships should wait for further notice from us before doing so.
+
+5 - Getting Started guide
+
+Two members of our community have put a bunch of work into giving our Getting Started (formerly called Install + Setup) guide a facelift. They simplified the language, made the options much clearer, and improved some confusing instructions.
+
+If you’re looking to try Urbit or know someone that would want to run it, give our guide a try and let us know what you think!
+
+https://urbit.org/using/install/
+
+--
+
+That’s all for now. ~roslet-tanner will be in touch in a few weeks with an update from Tlon. See you on the network!
+Josh / ~wolref-podlex
+
+https://twitter.com/urbit
+https://github.com/urbit/urbit
 ]]></content:encoded>
         </item>
         <item>
@@ -1538,6 +2099,64 @@ My strategy to date has been heavily focused on working directly with contributo
 2021 is shaping up to be a big year for Urbit, and we'd [love your help](https://grants.urbit.org) in building it. If you want to see what we're working on in real time, join us in Landscape at ~wolref-podlex/foundation.
 
 See you on the network!
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[A brief update from urbit.org]]></title>
+            <link>https://urbit.org/updates/2021-01-15-update</link>
+            <guid>https://urbit.org/updates/2021-01-15-update</guid>
+            <pubDate>Thu, 14 Jan 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Hello, and happy new year!
+
+As is customary for the first communication of the new year, I’ll be doing a retrospective of what was accomplished last year and a forward look at urbit.org’s priorities for next year. Make sure to read to the end for the details about our upcoming Town Hall event!
+
+1 - 2020
+
+In spite of the many challenges presented over the last year, it was a resoundingly good one for Urbit.
+
+It seems like a long time ago now that the folks at Tlon rolled out OS1 (now called Landscape), just as the pandemic forced everyone into their homes throughout the world. At the time, “Urbit is for Communities” (https://urbit.org/blog/urbit-is-for-communities/) was just a vision, but now it’s been transformed into reality—there are more thriving communities in Landscape than any of us can keep track of, with new faces popping onto the network on a daily basis.
+
+Landscape brought many new ships onto the network which helped identify those areas in which Urbit’s infrastructure could be most improved. Ford Fusion eliminated the possibility of a partially-applied over-the-air (OTA) update through a drastic reduction in the size and complexity of the codebase. The efficiency of the OTA process was improved by several orders of magnitude, and many long-standing memory issues were resolved. Now we deploy code on our infrastructure nodes and see users receive an update, over a decentralized network, often in less than a minute.
+
+After improving the stability of the system Tlon turned its attention to bringing more ships onto the network. A long-standing barrier to Urbit’s adoption has been the technical knowledge required to host one’s own ship—this prompted Tlon to build and launch an Urbit hosting service (https://tlon.io), the waitlist for which is now thousands deep.
+
+With Tlon becoming more singularly focused on building products on Urbit, concrete steps have been taken towards making urbit.org a separate organization that’s focused on long-term development of Urbit’s platform. I joined to lead that effort back in August (https://urbit.org/blog/first-steps-towards-urbit-org/) and have since spent the majority of my time working with dozens of contributors on projects spanning documentation, education, external integrations, and much more.
+
+We rounded out the year with a full network reset (called a “continuity breach”), which has in the past has been synonymous with loss of all data on the network. This time things went differently: tooling was made available to the community that allowed ships to preserve their data, which enabled most to seamlessly rejoin post-reset. This is a significant milestone for the project as it signifies not only a commitment to technical excellence, but to supporting our budding community.
+
+2 - 2021
+
+In the last two weeks we’ve seen a huge amount of inbound interest as people are waking up to the inherent problems with using centralized services run by MEGACORPs—we’re just happy we started working on Urbit all those years ago. While we tend to not plan more than about six months in advance, I can still talk at a high level about what urbit.org will be focusing on in the immediate future (Tlon’s next newsletter will provide a similar overview of what they’re working on).
+
+Growth in Urbit’s developer community has been growing organically in lockstep with the overall network growth. This means, happily, that there’s a pretty large pool of people eager to contribute to Urbit. The priority for urbit.org, therefore, is to improve its capacity to effectively assist contributors. Concretely, this means:
+
+- Rework urbit.org to better help developers learn how to contribute to Urbit
+- Since Urbit is ready to build on top of, provide practical guides that demonstrate how to do so
+- Guide developers to make high-value contributions to Urbit and its ecosystem
+- Build community amongst contributors
+
+My strategy to date has been heavily focused on working directly with contributors to provide technical guidance and direction, and it’s been working really well. To that end, I’ll also be scaling the Foundation’s ability to provide such support by bringing more individuals into urbit.org that can mentor, review work, and provide guidance on where to best direct contributors’ energy.
+
+If you’re interested in helping build Urbit, you can head over to https://grants.urbit.org to claim a bounty or submit a proposal, join the Landscape group ~wolref-podlex/foundation to stay in the loop about what urbit.org is up to, or contact me directly at josh@urbit.org.
+
+3 - Town Hall
+
+In mid-February, we’ll be holding our first ever “Town Hall” event—it’s like a developer call, but longer, with more speakers, and covering a wider range of topics (not all of them technical!).
+
+We’re currently looking for speakers, so if you have an Urbit-related topic that you’d like to present, or would like to nominate someone else to present, please reach out to me by replying to this email. This could be an application you (or the nominee) has designed or built, an interesting use case, a design case study, or something completely different. Please don't be shy about reaching out—we're happy to work with you to figure out whether it makes sense to present a given topic, and how best to do so!
+
+Once we’ve finalized a date, we’ll broadcast it over our official Meetup group (https://www.meetup.com/urbit-sf/) and on Twitter. Stay tuned.
+
+--
+
+As a reminder, Urbit and Tlon have now split their newsletters in two—Urbit’s newsletter will cover the project and development community, while Tlon’s will focus more on the product development work on Landscape and the communities that form there. Tlon’s newsletter will arrive at the end of the month.
+
+That’s all for now. See you on the network!
+Josh / ~wolref-podlex
+
+https://twitter.com/urbit
+https://github.com/urbit/urbit
 ]]></content:encoded>
         </item>
         <item>
@@ -2409,762 +3028,6 @@ Something that's become quickly evident with the addition of background images t
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Late 2020 Progress Update: OS 1 -> OS 1.N]]></title>
-            <link>https://urbit.org/blog/20200929-state-of-urbit</link>
-            <guid>https://urbit.org/blog/20200929-state-of-urbit</guid>
-            <pubDate>Mon, 28 Sep 2020 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-<br>
-
-![Grassy Knoll](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
-
-<br>
-
-When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before. This has been our goal for years: to mature the system we’re building by becoming its first committed users. We knew that critical step toward Urbit’s maturity was being able to depend on it ourselves, but the system itself had to mature to the point that we could do that practically.
-
-We’ve done this in fits and starts. We’ve _tried_ and failed a few times over the years. We’ve always _used_ Urbit to some extent, but we’ve never _relied_ on it. These past six months have been different. I can’t tell whether it was out of sheer determination and commitment, or that the system was just genuinely ‘there’. Either way, both Tlon and the Urbit Community genuinely live on Urbit now.
-
-In a way, our ability to use Urbit day to day doesn’t make sense. When we shipped OS 1, it was full of holes. There were serious performance, stability, and reliability issues. Plenty of people showed up and thought, ‘I don’t understand why you think this is useful.’ But, it was good enough that we wanted to use it. And since we wanted to use it, we put our energy into making it better like we hadn’t ever before. Being able to use a system that you can really trust is a wonderful feeling. It’s Computing Without Compromises.
-
-All of the sudden, it’s Fall. We never found the time to name any of our releases or write announcements. We’ve just been making the system better in every way we can find. We’ve got a lot of exciting things planned for the last few months of the year — but I wanted to recap the progress we’ve made for those following along from the outside. If you haven’t been on the network, it’d be impossible to see.
-
-The tl;dr is that Urbit is much faster, more reliable, and nicer to use than it was six months ago. Things have gotten much better, across the board. We threw ourselves into OS 1 admittedly underprepared, but we’ve learned a lot and matured the system a lot along the way.
-
-Anyway, let’s walk through the details. We’ll talk about our infrastructure and interface work independently, since that’s how we organize things internally. Then we’ll talk a bit about what’s going on on the network.
-
-### Infrastructure
-
-![Debugging Interface](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-2.png)
-
-In April, Urbit was slow, fragile, and didn’t always update itself properly. We made enormous progress on all of these.
-
-First off, Urbit is about 10x faster for most users. With some careful debugging, we were able to locate a few really [high](https://github.com/urbit/urbit/pull/3029) [impact](https://github.com/urbit/urbit/pull/3054) [improvements](https://twitter.com/pcmonk/status/1276327036722704385). There’s still performance work to do, but the effects of this work are widespread. Boot times are faster, local compute is faster, the network is faster. It’s a huge improvement.
-
-Second, we got our memory usage under control. Urbit still uses a 2GB memory arena. If the state of your Urbit grows to over 2GB things, uh, fall apart. This used to happen regularly, and now it’s pretty much unheard of. We implemented [tooling](https://github.com/urbit/urbit/pull/3235) to compact and deduplicate the memory image when it’s growing too large. We brought the memory usage of the compiler [down ~90%](https://github.com/urbit/urbit/pull/3041). There are areas where we can be more disciplined about how we use memory, but this is more or less a solved problem for the near term.
-
-Third, we implemented a completely new build system. Well, we actually [got rid of the build system](https://urbit.org/blog/ford-fusion/) altogether and [made it a part of the filesystem](https://github.com/urbit/urbit/pull/3060). This made it possible for us to fix our over the air (OTA) updates and make them both fast and reliable. In April, an OTA could bring down your node and would take hours or even days to apply. Today, we regularly deploy OTAs with no fear of them breaking any nodes — they often go from galaxy → planet in a minute or less.
-
-We also rewrote a large part of our runtime in Haskell and made overall progress on [network scaling](https://github.com/urbit/urbit/pull/3174). And: we implemented a [principled approach](https://github.com/urbit/urbit/pull/2366) to [error handling](https://github.com/urbit/urbit/pull/3064), making nodes much less likely to become unrecoverable.
-
-The network is stable, fast, and safe from day to day. We’re pretty confident it can grow quite a bit without serious issues. When we shipped OS 1 we really weren’t sure what we could handle. Now we’re standing on much more solid ground.
-
-### Interface
-
-![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-3.jpg)
-
-When we shipped OS 1 it was a bunch of separate pages (that were slow to load), all with separate ways of storing and processing data. Our interface work over the past six months is all about unification and simplification.
-
-First, we pulled OS 1 together as a [single page app](https://github.com/urbit/urbit/pull/3025). Using OS 1 involves a good amount of moving around and refreshing the page each time was pretty painful. Now it’s snappy to move between pages and keep up with what’s going on. In tandem, we started using our own component library, [Indigo](https://github.com/urbit/indigo-react). This makes frontend development much cleaner and more efficient.
-
-Next, we unified the way we store data and compute. It used to be that each individual module (chat, publish, and links) used their own ‘agents’ to store and process data on the Urbit side. (An agent is the Urbit equivalent of a datastore + business logic.) With a lot of moving parts, this approach caused all kinds of synchronization challenges. Rather than a module-per-agent model we’ve started to move toward a type-of-data-per-agent model. The first of these is [graph store](https://github.com/urbit/urbit/pull/3110). We’re presently in the process of migrating all our modules to graph store.
-
-Those two are by far the most significant, but there’s so much more. We [rewrote](https://github.com/urbit/urbit/pull/2937) the `group-store`, allowing for different roles (admin, moderators, and so on) in a group. We shipped better debugging tools, automatic reconnection, a settings panel, and overall visual polish and refinement.
-
-![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-4.jpg)
-
-And I almost forgot [Leap](https://github.com/urbit/urbit/pull/3231): an omnibox for navigating around OS 1 with the keyboard. We have plans to make Leap much more powerful — but it’s a great first start toward making OS 1 keyboard accessible. I almost exclusively use [Leap](https://upload.wikimedia.org/wikipedia/commons/0/06/Canon_Cat_keyboard.jpg) to get around OS 1 these days.
-
-### Community + network
-
-![Fishing Village](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-5.png)
-
-Our primary goal with OS 1 was to get both Tlon and the Urbit Community living entirely on Urbit. We did that, and in doing so we’ve seen how nice it is to grow a community in a calm, non-invasive environment. We started doing regular [Urbit](https://twitter.com/urbit/status/1308875082312364048) [Dialogues](https://twitter.com/urbit/status/1304139629948329985) with friends and peers in the absence of physical meetups, which have been fun.
-
-Getting onto Urbit is still relatively challenging. By the standards of software you run yourself, it’s not so bad at all. But by comparison to ordinary consumer software, it’s way too hard. Tlon is [working on that](https://tlon.io) — but these last six months have been only for the brave. That is, those that want to host their own nodes.
-
-Turns out, there are plenty of people who are up for running Urbit themselves and quite a few small communities have sprouted around the network. Overall the network has a fun, cozy feeling. It’s nice.
-
-### What’s next
-
-We’re still more or less flat-out, full speed ahead into an even better Urbit-world. The seeds of change were planted when we made Josh the [interim technical director of urbit.org](https://urbit.org/blog/first-steps-towards-urbit-org/). Urbit itself is getting close to the point where the separation between Urbit and Tlon has to become more real. Urbit is aimed at being an ubiquitous platform, Tlon is aimed at making it as usable and useful as possible.
-
-We’ll talk about some of this on [October 9th](https://www.meetup.com/urbit-sf/events/273439025/), and you can see a bit of what’s coming on [tlon.io](https://tlon.io) today. If you tried booting Urbit in April and it was tough, try again. We’re easy to find on the network, and we’d love to get reacquainted.
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[~2019.10 Roadmap]]></title>
-            <link>https://urbit.org/blog/2019-10-3-roadmap</link>
-            <guid>https://urbit.org/blog/2019-10-3-roadmap</guid>
-            <pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-![](https://media.urbit.org/site/posts/essays/2019-10-3-roadmap.jpg)
-
-The daily work of building a new OS from scratch is so engaging and exciting that we habitually forget to even take stock of what we’ve accomplished. We’re fixated on the prospect of moving the world on to Urbit, starting with ourselves.
-
-It’s a good thing I have a recurring reminder to write these updates. While our focus is on the future, it’s good to get a sense of the rate that we’re moving forward, and to let everyone know what’s been going on. We’ve made great progress over the past few months.
-
-We’ve got a new interface, Urbit 0.8.0, Hoon School, and a grants program among lots of other updates. We’ll go into detail about all of these, and talk a bit about where we’re headed next. The system is improving at a really good pace. We intend to keep it up.
-
-## Identity (Azimuth)
-
-The other day I got an email, clicked a link, and got a planet. A real, live, piece of cryptographic property with paper wallets and everything. It took about two minutes. And at the end, I could have easily sent invites to my friends.
-
-This experience is part of a completely new Bridge, the interface for interacting with your Urbit identity. The beta experience we’re testing today is quite stripped down, but it’s a huge improvement over the last Bridge release. Clicking a link is a lot easier than downloading source code, running it from the command-line, and probably running into a python-related error.
-
-Getting to this point involved rewriting Bridge from scratch, figuring out how to host it securely, building infrastructure to fund the requisite transactions involved in registering a new identity, and setting up a service to send emails (and dispose of them afterward). We've also redesigned our paper wallets to make them simpler and clearer.
-
-We still want to get this new version of Bridge a bit further along before releasing it to everyone — but we’re excited about it. We didn’t quite get to the point of building an affordance for payments, which we had hoped to do, but that’s coming later.
-
-We want everyone to have an Urbit identity. And we want it to be incredibly easy to get one, so we’ll get Bridge out this month with a new urbit.org (more on that below).
-
-The other area of identity-related work was Sigils — the algorithmically generated images that go with every Urbit identity. (We’ve got a blog post in the works that covers how we created these, which is a good story that needs to be told.) The original version of Sigils didn’t look very good at small sizes and a few collisions were found (thanks to [urbit.live](https://urbit.live) for helping to discover the collisions). The [new, improved sigils](https://github.com/urbit/sigil-js) have no collisions and look great at small sizes.
-
-**Q4 2019**
-
-- Release Bridge to the public
-- Get Bridge working well on mobile
-- Add payments support, hopefully including BTC
-- Add a network explorer
-
-**Q1 2020**
-
-- Integrate Bridge with a native app for Arvo
-
-## OS (Arvo)
-
-As a team, we want Urbit to be our primary computer, our last computer, our permanent computer. And we want this now — or at least as soon as we possibly can. We’re both ambitious and impatient.
-
-The frustration that we can’t move onto Urbit today propels us forward. The system saw major updates over the past few months all the way through the stack. On the Arvo side, we divide our work into Infrastructure (everything in the kernel and interpreter) and Interface (everything in userspace and the front-end). We’ll start with Infrastructure progress first.
-
-We’re very nearly to the point that all the kernel-level code in the system has been written by our current team. The one remaining vane that deserves a rewrite (Gall) has had a major cleanup by Jared just recently. The [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) approach does appear to be working. The infrastructure team is doing fantastic work and has really deepened their ownership of the system. The Urbit of today is on the road to becoming a great piece of system software.
-
-The biggest infrastructure-level milestone was the release of [Urbit 0.8.0](https://github.com/urbit/urbit/releases/tag/v0.8.0). We introduced a new process-separation architecture, implemented the correct bootstrap sequence, moved to LMDB for persistence, replaced our http vane (%eyre) and moved to Nix for our build system.
-
-To put it simply, Arvo is now much more stable and durable. During the beginning of the year we were seeing bugs and instability that were frustrating and unacceptable. While there are still issues on the live network, none of them terrify us much. We also implemented the ability for users to ‘individually breach’, which means that you can now reset your Urbit without waiting for us to reset the network.
-
-### Landscape (Arvo UI)
-
-We don’t just build infrastructure for others to develop on top of. We build interfaces too. At the top of the stack, we released a completely new Landscape, the interface for Arvo. This new interface makes it possible to build other ‘modules’ for Arvo that go beyond chat and publishing.
-
-This new Landscape is a complete departure from the last direction. Your Urbit now has a simple home screen that launches individual modules and it’s [relatively easy](https://github.com/urbit/create-landscape-app) to create new ones. We’re all enjoying using Landscape around the office. It’s still a bit of a prototype — but it’s quite a good one, I think.
-
-In moving to this new model we decided to narrow our focus to desktop only for now. We’ll return to mobile again next year — but first we want to get the desktop experience right. We’ve pulled the iOS app from the app store for the time being. I’m personally sad to see it go, since I enjoyed using it. But our prior iteration of Landscape just wasn’t quite right.
-
-This version of Landscape is, I think, the last one that we’ll call a prototype. Over the past few weeks, since shipping this, some amazing work has been happening on the interface front. We have a systematic approach to building interfaces on top of Urbit that’s very promising, albeit just getting started. We’ve already put out [one post](https://urbit.org/posts/landscape-a-portrait/) about Landscape's future, with more posts to come.
-
-**Q4 2019**
-
-- Improved Arvo-level error handling
-- Implementation plan for ‘telescoping kelvins’ — or [how we plan to future proof Arvo](https://groups.google.com/a/urbit.org/forum/#!topic/dev/6Mwn6TQFVwc)
-- Versioning scheme between Arvo and Vere
-- A new Haskell implementation of the daemon
-- A native client (instead of just a browser tab)
-- A [new user-space architecture](https://docs.google.com/document/d/1hS_UuResG1S4j49_H-aSshoTOROKBnGoJAaRgOipf54/edit)
-- Hoon.hoon that’s OTA upgradeable
-- Working Jacque prototype, a graal-truffle-based implementation of vere
-
-**Q1 2020**
-
-- Integrated client with Bridge and Arvo
-- New interface framework, codenamed ‘Widescreen’
-
-## Docs + Community
-
-We had quite a bit of interest in our second session of Hoon School. We ended up with 150 people enrolled in Hoon 101, and 42 in 201. The 101 session just ended, with a lot of positive responses and feedback from the participants. We learned a lot doing it and got quite a bit of interesting new example code.
-
-Hoon 101 started with students with little to no programming experience. Hoon 201, which is just getting underway, covers more advanced topics. We’re quite curious to see what comes out of it.
-
-We’re also adding features to Landscape to make it more amenable to use by Hoon Schoolers. Good examples include code evaluation within Chat (for office hours), and the ability to pin posts in Publish. The next crop of Hoon learners will be able to use Urbit to learn about Urbit.
-
-Aside from Hoon School we’re always updating our documentation. Most notably, we added search to the docs (finally). This was a much needed feature that makes the docs much more usable.
-
-We also launched our [grants program](https://grants.urbit.org/) quietly, but all of our available bounties were quickly claimed nonetheless. We’re ready to give away more address space to contributors and are excited by how quickly people got involved.
-
-We also did some experimentation with holding events on Arvo. We held weekly AMAs for while, and hosted a few meetings with the community. With the new UI out, our public channels have been a lot more active. We’ll surely be holding more on-urbit events in the future — but for the time being the conversation in urbit-help is a lot of fun.
-
-**Q4 2019**
-
-- Vane level documentation
-- An active grant program
-
-## urbit.org
-
-Urbit.org is about ready for a refresh — so we’re in the process of rebuilding it. We have, for a long time, told the story of Urbit by describing the system technically. We think Urbit can be explained much more simply and much more concisely. We’re working to put together a new set of materials in this direction.
-
-We’d also like to populate urbit.org with a lot more content about what we’re working on and thinking about. We do a reasonable job of writing updates, but many of our projects get released without any background info. Tlon and the Urbit community are full of smart, thoughtful people — and we’d like to do a lot more to surface their work. We plan to close out the year with both a new website and a lot of writing about what we’ve been building. Not everyone wants to read the source code!
-
-That covers it for now. If you have questions or want to chat — find us in `~dopzod/urbit-help`. See you online!
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[~2019.5 Roadmap]]></title>
-            <link>https://urbit.org/blog/2019-5-roadmap</link>
-            <guid>https://urbit.org/blog/2019-5-roadmap</guid>
-            <pubDate>Wed, 15 May 2019 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-![](https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png)
-
-We often get so busy that we forget to tell you what we’ve been up to. Here’s an update on what we’re doing and where we’re headed with each layer of the stack.
-
-At a very high level we have two goals for 2019: make Azimuth easier to use, and get Arvo to a 1.0.
-
-Next year we’ll begin to move away from some of the MEGACORP software we use in the office, and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post.
-
-For some related recent thinking on all of this, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The State of Landscape](/posts/essays/the-state-of-landscape/) and [Azimuth as MultiPass](/posts/essays/azimuth-as-multipass/).
-
-For now, let’s just look at what’s on the immediate horizon:
-
-## Azimuth
-
-At lunch the other day someone on our team said something like, ‘We built a complete and working public key infrastructure, but we haven’t told anyone.’
-
-It’s true. Azimuth is operational, secure, and well tested. It’s a pretty cool piece of technology and it’s out there in the world for anyone to use. It also doesn’t require that you use Arvo — Arvo happens to make use of Azimuth, but Azimuth itself is a completely separate system.
-
-So the question is why haven’t we told the world about it?
-
-I tend to think that in order for a technology to succeed it has to not only be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by _using_, not just by reading the code. Azimuth is quite an elegant piece of technology — but that doesn’t matter until it has a great user experience to match.
-
-That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down them.
-
-Here’s what we’re building first:
-
-### Q2 2019
-
-- A simplified onboarding flow for getting an Azimuth point that’s simple to share with friends over email, text or as a URL.
-- A redesigned and improved Bridge for managing your points.
-- An interface that allows you to easily send money between Azimuth points without running Arvo.
-
-### Q3 2019
-
-- Expanded Azimuth-centric example modules, documentation and developer tooling.
-
-Still under consideration:
-
-- An OAuth server or JWT flow for logging into any service with an Azimuth point.
-- A mobile app for point to point payments using Azimuth.
-
-### 2020
-
-Azimuth is beginning to feel like [multipass](/posts/essays/azimuth-as-multipass/), with a variety of ways to use Azimuth points without ever booting Arvo
-
-## Arvo
-
-The Arvo interface has always been held back by Arvo’s technical immaturity. This is still true to some degree. The system has not stabilized completely.
-
-But! We’ve been using Landscape quite a lot lately. I use it daily, in fact — even [on my phone](https://itunes.apple.com/us/app/landscape-urbit/id1393148862). An encrypted (although not audited — so let’s not call it ‘secure’), authenticated chat where I own the keys and can read the source code feels really nice to use. The interface isn’t as good as we’d like, but it’s not bad. Landscape is a great preview of where we’re going: a simple, permanent, self-sovereign computer.
-
-There are still rough edges, and Landscape is not nearly general purpose enough, but we have plans:
-
-### Q2 2019
-
-- A new update to the Arvo interface that we’re calling Modulo. Modulo expands beyond chat and longform discussion to make your Arvo interface feel much more like the computer it actually is.
-- Upgrades to our event persistence, networking, and DNS integration aimed at much better stability. Arvo instances don’t crash that often, but with these changes it should be very rare.
-- Significant improvements to testing with a new simulation testing framework and integration testing pipelines.
-
-### Q3 2019
-
-- A significant overhaul to Gall, our application model, making it much simpler for users to write apps or ‘agents’ in Arvo.
-- A new version of the compiler that makes us less reliant on jets. This will eliminate a major obstacle to achieving network continuity, or the ability for ships to upgrade themselves totally over-the-air, forever.
-- A significant overhaul and stability update to Clay, our filesystem, making it possible for us to trust it for self-hosting, search it easily, and depend on it for long-term data storage.
-- Tooling for hosting and hopefully a beta program for hosted Arvo instances run by Tlon.
-
-### 2020
-
-- A completely overhauled Arvo interface, Daigo, with a complete but simple set of messaging and collaboration tools. Modulo is meant to be fun to experiment with, but we aim to make Daigo part of our daily workflow.
-- We come to work every day, use Arvo, go home.
-
-## Community
-
-We’ve often felt like it was far too early to invite others in to the system.
-
-As long as we’re up front about the state of this 100 year computer -- that it’s live, but incomplete — I think it’s a good thing to welcome people on board. There’s plenty to play with, experiment with and explore.
-
-Hoon school was the first effort in this direction. We intend to do a lot more:
-
-### Q2 2019
-
-- Scaling Hoon school up to include both a track for experts and for beginners, and allowing many more participants.
-- Holding more meetings and events on Landscape, experimenting with Arvo-native discussion.
-- A clear program for address space grants for developers + contributors.
-- New documentation site with searchable library docs.
-
-### Q3 2019
-
-- Hoon School participants understand clearly how to build a Modulo agent, and invite others into it.
-- The road toward building an Azimuth module is well understood, paved, and clear.
-- We have clear instructions and tutorials for building Azimuth modules and using Azimuth as a login or reputation primitive.
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization</link>
-            <guid>https://urbit.org/blog/2021-11-18-the-promise-and-paradox-of-decentralization</guid>
-            <pubDate>Invalid Date</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[A brief update from urbit.org]]></title>
-            <link>https://urbit.org/updates/2021-05-05-update</link>
-            <guid>https://urbit.org/updates/2021-05-05-update</guid>
-            <pubDate>Tue, 04 May 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-Hello!
-
-Welcome to the May edition of the urbit.org newsletter. April was a busy month with many updates to share—let’s dig in.
-
-0 – Updated Urbit Binaries
-
-Urbit’s binaries were updated to v1.5 on April 27th. Make sure to download and install the latest v1.5 binaries here: https://github.com/urbit/urbit/releases/tag/urbit-v1.5
-
-It’s as easy as shutting down your ship and replacing the old binaries! ~pilfer-pandex described the new release to urbit-dev as “a high priority fix for two networking bugs in urbit-king, and minor fixes to vere.”
-
-1 – Upcoming Events
-
-Urbit Town Hall @ May 20th 12pm PDT – Keynote from Justin Murphy
-This will be Urbit’s first ever town hall—a three hour event with talks on a variety of topics and a keynote from Justin Murphy (~hatryx-lastud). Justin had Urbit Foundation Director Josh Lehman on his Other Life podcast a few weeks ago (have a listen at https://share.transistor.fm/s/1c0c8c15) and recently formed a new group on Urbit (~hatryx-lastud/other-life).
-
-In his group, Justin has written a blog post called “Escape Velocity”, where he discusses selection effects on various platforms. Justin writes, “by creating a gravity well that sucks energy into real-estate value rather than monetized attention, Urbit exerts the lowest degree of arbitrary selection pressures on content creation, while optimizing those selection pressures that irreducibly characterize all human communication (e.g., the draw of being understood and appreciated by other people).” Tune in to Justin’s keynote on the 20th for more on Urbit as a platform for creatives.
-
-Developer Calls @ May 13th and May 27th
-As you probably know, we have developer calls every two weeks. Stay tuned for more information on our events page: https://urbit.org/events
-
-Austin Urbit Conference @ September/October 2021
-Although it’s too early to give a precise date, we are starting to plan an Urbit conference for this fall! It’ll be held in Austin, with many Urbit and Tlon employees in attendance. Stay tuned for more information!
-
-2 – April Developer Calls
-
-Developer Call: 3rd Party Software Distribution
-In this talk, Phil (~wicdev-wisryt) and Raghu (~sovmep-ripsum) discussed the work they've been doing to clay to provide "virtual desks", an integral part of the infrastructure needed for safe, generic software distribution. This work is being done through our Scholarships program, in which community developers pair up with Tlon engineers to work on infrastructure projects. For more information about Scholarships, visit https://urbit.org/docs/development/grants/#scholarships
-
-Developer Call: Real-Time Communication on Urbit
-Edward Amsden (~ritpub-sipsyl) gave us a look at the WebRTC Airlock library he has developed that handles the hard parts of WebRTC. When complete, this will allow developers to build applications on Urbit with audio/video calling capabilities. Once again, Edward’s work is sponsored as part of the grants program (https://grants.urbit.org)—check it out!
-
-3 – Urbit Bitcoin Launch
-
-This was a hotly anticipated event and it didn’t disappoint. In case you missed it, Urbit will soon have a Bitcoin wallet on the network, meaning you’ll be able to pay Urbit ships directly in BTC. Watch Urbit-Tlon personnel demonstrate and discuss this exciting launch: https://www.youtube.com/watch?v=_aRnfacZPto
-
-Make sure to check out this related blog post by Christian Langalis (~pindet-timmut): https://urbit.org/blog/interplanetary-commerce/ and this great interview with ~timluc-miptev, one of the main developers on the project: https://subject.network/posts/bitcoin-with-timluc-miptev
-
-4 – Blog
-
-We have a couple of new posts to announce:
-“Lunar Urbit and the Internet of Things”
-This post is by Poprox (~datnut-pollen), a Tlon engineer who focuses on the importance of moons in the Urbit ecosystem. The post covers “the prehistory of moons on Earth, gives a snapshot of how moons are being utilized on Urbit in 2021, covers existing issues with consumer IoT and how Urbit resolves them, and speculates what the lunar locus of the Urbit ID address space may become in the future”. Read it here: https://urbit.org/blog/iot/
-
-“Community Spotlight: The Portico”
-This post is an interview between me (~tirwyd-sarmes) and Josh Reagan (~taglux-nidsep), the founder of “The Portico”, an Orthodox Christian community. Josh has a PhD in logic, and writes about the intersection of Christianity and logic on his Urbit blog. In the interview we talk about community norms, the relationship between logic and religion, and the future of Urbit. Check out the interview: https://urbit.org/blog/community-spotlight-the-portico
-
-5 – Odds and Ends
-
-If you are a star or galaxy owner and are interested in sponsoring other ships, please message ~rapfyr-diglyt (david@tlon.io) to be added to the sponsors@urbit.org mailing list.
-
-~hodzod-walrus made a page with statistics on various stars: https://bacrys.org/uptime/
-
-~sitful-hatred beat us to the punch and released a guide on compiling Windows binaries—urbit.exe is near at hand! See the guide here: https://subject.network/posts/urbit-windows-binaries/ The official Urbit.org announcement should be around the corner, so keep your eyes peeled.
-
-Thanks for reading. Talk to you next month!
-
-Josh (~wolref-podlex) and ~tirwyd-sarmes
-
-https://twitter.com/urbit
-https://github.com/urbit/urbit
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Community Spotlight: The Portico]]></title>
-            <link>https://urbit.org/blog/community-spotlight-the-portico</link>
-            <guid>https://urbit.org/blog/community-spotlight-the-portico</guid>
-            <pubDate>Mon, 03 May 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-![](https://media.urbit.org/site/posts/essays/orthodoxchurch.jpg)
-
-_One of the most striking things about Urbit is the ideological diversity between communities. The Community Spotlight blog series will focus on various Urbit communities via interviews with founding members._
-
-For the first week of the Community Spotlight series, I (~tirwyd-sarmes) will be speaking with Josh Reagan (~taglux-nidsep). Josh is the founder of The Portico, an Urbit community of Eastern Orthodox Christians.
-
-The Portico is a very active group with conversations taking place over multiple channels. There are channels for posting Orthodox iconography, discussing the broader Christian culture war, and just talking about Orthodoxy in general. Of particular interest is Josh’s “Euthyphro” blog series which investigates the relationship between logic and the Orthodox faith. This is a topic that Josh is well qualified to talk about: he has a PhD in Philosophy from Rice University. His dissertation on the epistemology of logic and truth-preservation was titled "Knowing Your Limits: Logic for Limited Beings”. Josh is also the co-author of a forthcoming textbook on formal logic.
-
-To read Josh’s blog is to be inducted into two esoteric traditions: theory of logic and Orthodox theology. With titles like “St. Gregory the Theologian and the Liar Paradox” and “The Existence of Abstract Objects”, Josh does not pull punches.
-
-Accordingly, our conversation focused on the idiosyncratic and niche community that The Portico is home to. There, you won’t find cussing or much talk about “life partners”, but you will find cutting critiques of liberalism and the best way to raise Orthodox children.
-
-As other users have pointed out, Urbit is pre-[Eternal September](https://en.wikipedia.org/wiki/Eternal_September). In fact, there’s some hope that the very nature of Urbit, how it tries to protect the sovereignty of niche communities via decentralization, might foil the Eternal September phenomenon. If Josh’s community persists, it will be a testament to both Josh and the decentralized Urbit network. As of now The Portico is a refreshing, perhaps jarring (as Josh might say), reminder of what the internet looked like back in the early days—a place for those who are different.
-
-I encourage you to take a look. Find The Portico at ~topnup-firber/the-portico.
-
-\-\-\-\-
-
-**Do you see any connection between Rod Dreher’s _The Benedict Option_ and your community on Urbit? Dreher sees a need for American Christians to create self-sustaining communities outside of the mainstream to protect the Christian religion and culture.**
-
-It’s tough to say with certainty—I’ve never read _The Benedict Option_.
-
-A few years ago, while he was writing the book, I was a regular reader of Dreher’s blog. From his descriptions there, I was never clear about what exactly he was proposing. Much of his “clarification” came by way of metaphor: don’t “run for the hills”, but stop “shoring up the American imperium”. I didn’t read his book because I didn’t have much confidence that he would be especially precise or insightful.
-
-[There is an interesting review I’d recommend](https://handleshaus.wordpress.com/2020/10/06/review-of-rod-drehers-live-not-by-lies/), however, of his later book, _Live Not By Lies_. I believe it accurately characterizes the scale of the threat Christians will soon face in this country.
-
-My upbringing was conservative Christian and self-consciously counter-cultural. I've inherited that understanding of what it means to be a Christian in an increasingly secular world. It comes naturally to me, so I find it obvious that Christians should form self-sustaining communities. But the details matter. What do such communities look like? How do we secure the freedom to pursue such communities? How do we sustain them, when myriad external forces seek to undermine them? How do we solve the long-term problem of the declining cultural importance of Christianity (which surely erodes the plausibility of our religion to many, even to some of those with sympathies toward it)?
-
-I don’t claim to know the answers to these questions.
-
-One kind of answer is that we should redouble our efforts to support and maintain a religiously and morally neutral liberal political order, which leaves room for subcultures to live and self-regulate as they wish. I disagree. Those who support a kind of “neutral” liberalism view it as an attempt to go “meta” and rise above various parochial metaphysical, moral, and religious disputes. I view this as a cop-out, a refusal to grapple with the most important questions.
-
-Does the liberal have metaphysically-rooted moral reasons for going “meta”? If so, then he’s just another sectarian and he should be honest about it. The only difference is that his team has had the whip hand for the last several generations. On the other hand, if the liberal claims no underlying metaphysical justification then his project can succeed only to the extent that he can arrange and adjudicate unprincipled (and therefore ad hoc) agreements between otherwise hostile moral communities. But how stable can such an arrangement really be?
-
-Orthodox Christians have theologically rich, metaphysical foundations for their social and moral teachings. With these we can form healthy, thriving, and growing communities. We can do so even under actively hostile political orders. If the early Church could make it under the Romans, so can we today. But it’s going to be difficult and sound judgment is necessary. Unfortunately, we lack strong leadership and that leaves us vulnerable. If we stay uncoordinated we dissipate our energies needlessly. If we latch onto the wrong leaders we can be led astray.
-
-The challenges are immense. There is no technological solution. Even so, I’m an Urbit early-adopter for a reason. Over the years I’ve come into contact with a number of Orthodox and Ortho-curious Urbit followers. Why not try to bring them together in an Urbit group?
-
-As far as I know, no one in the group is clergy. We’re all just a bunch of laymen with no authority to do much of anything. But I’d like to think we can still contribute in some way. I have an academic background in analytic philosophy so my inclination is to emphasize theory, but we have room for a bit of everything. Someone in the group wrote a script to take the texts of various Church Fathers and convert them to audio using AWS Polly. Those turned out pretty well!
-
-At times I entertain ambitions to do a bit more, but for now perhaps it’s better to keep expectations in check. If nothing else, we can read and discuss the Scriptures and Church Fathers together, and try to understand better how to apply and live out their teachings. As we continue to grow the community and develop a consistent internal dynamic perhaps opportunities will arise that aren’t yet on the horizon. One thing I can say is that I’m committed to keeping the group active and growing.
-
-**I’d like to talk about your blog on The Portico. It combines two of your main interests: logic and theology. In broad strokes, do you think theology and logic are compatible? What is the relevance of this intersection to both of these disciplines?**
-
-I feel obligated to answer this question in two ways.
-
-(1) If by “logic” you mean “first-order predicate calculus”, then I think there’s no special conflict between logic and theology. There are certain puzzles about their relationship, but similar puzzles exist between logic and other disciplines. Theology isn't especially endangered.
-
-For example, in the 1930s, Alfred Tarski proved his famous Undefinability Theorem. Crudely put, it says that a plausible truth predicate cannot consistently be contained in any formal system with axioms strong enough to model arithmetic. Superficially it seems like our options are (a) get rid of the concept of truth, (b) get rid of arithmetic, or (c) throw away parts of logic until all inconsistency disappears.
-
-None of these options is appealing. Tarski came up with a solution that mostly satisfies many logicians: reduce the concept of truth to “truth in a language” and forbid any language from containing its own truth predicate. If you want to talk about truth in a language L-1, you have to do it from a “metalanguage”, L-2.
-
-Is Tarski’s definition of truth in a language the definitive solution for preserving truth, math, and logic? Perhaps not many philosophers think so, and there’s a massive literature in which logicians have attempted to improve on or extend his results.
-
-Sometimes people seem to think formal logic is an infallible gift from heaven that must always be right. Kant said in the _Critique of Pure Reason_ that formal logic is essentially a completed field. In fact, [the logic of his day](https://en.wikipedia.org/wiki/Port-Royal_Logic) was an early-modern Cartesian variation of a medieval scholastic synthesis of ancient Stoic and Aristotelian logics. Roughly 100 years after Kant’s first critique was published, C. S. Peirce and Gottlob Frege independently discovered first-order mathematical logic as we know it today, inaugurating the greatest advance of logic since Aristotle. Kant was wrong.
-
-Mathematical logic is a convenient, generally reliable, man-made tool that, when used carelessly in certain untamed domains, can lead one astray. Probably most people reading this are familiar with such puzzles as the Liar paradox. When one understands that logic is not a completed science, and perhaps never will be, there is less reason to worry about whether it can be used to nuke entire disciplines, like theology.
-
-For more on this topic, see the blog post in my Urbit group: “St. Gregory the Theologian and the Liar Paradox”.
-
-(2) There is perhaps a deeper challenge than the one I’ve just sketched. The Stoics used the term “logic” to encompass what we might today call “epistemology”. If the word “logic” is meant in some such broad and normative sense, then we may restate the challenge as one about rationality and theology. Is it irrational to pursue theology in our modern age?
-
-As an undergraduate under the influence of Kierkegaard, I was attracted to a romantic, vaguely irrationalist notion of faith. Dawkins-mania was at its peak and I was disgusted by the pop-rationality (or was it empiricism?) of his annoying followers. Their view seemed to be that rationality just means “following the evidence”. The raw evidence is foundational, and theories are built atop by generalizing from the evidence. The ghost of logical positivism is with us even now.
-
-I was dimly aware that Quine and others had made it difficult to sustain epistemic foundationalism. However, being unable to supply a more clear and cogent notion of rationality, I became skeptical of the idea altogether. But I went too far.
-
-Instead, the proper response is to develop a superior account of rationality. Readers can probably guess where I went looking!
-
-The word “logic” comes from the Greek “λόγος”. This is also the word used to describe Jesus Christ in the Gospel of John: “In the beginning was the Logos, and the Logos was with God, and the Logos was God.” This connection is not merely etymological.
-
-For many ancients, the term “λόγος” meant something like “divine principle”. You might think of it as akin to a law of nature, but with stronger theological connotations. Christians appropriated this term and made it rather more exalted: the Logos is begotten of the Father, and yet somehow one with Him.
-
-We are told that all things come into being through the Logos (John 1:3), giving Him an intimate relationship to the whole of creation. He gives structure and order to all created things, and in His divinity He understands them as so structured and ordered. He is also sinless, perfectly holy, and good. In Christ we have a perfect unity of the knowledge of all truth and righteousness.
-
-Man was created in the image of God, which means that we bear a likeness to Christ. And we are commanded to realize that likeness with ever greater fidelity (Romans 8:29). The Church calls the pursuit of this likeness [“theosis”](<https://en.wikipedia.org/wiki/Theosis_(Eastern_Christian_theology)>).
-
-Thus we have the explanation of all normativity, according to Orthodox Christianity. In moral matters we must take on the holiness of Christ. In epistemic matters we aspire to the wisdom and knowledge of Christ, which includes an understanding of the whole created order. Socially we (the community of believers, i.e. the Church) are called to be in ever greater communion with God, cooperating with His work just as the Son cooperates with the Father.
-
-Sadly we are conceived in sin and ignorant; hence the need for redemption by Christ.
-
-Accordingly, my understanding of what it means to be rational is just to be Christ-like. The only perfect exemplar of reason, so construed, is Christ Himself. Any deviation from Him is irrational. What could be more logical than to be conformed to the Logos? But we cannot attain rationality without redemption. Hence we cannot become rational without first being saved from sin.
-
-Doubtlessly many will find all of this too much to take, just too implausible. What about the development of mathematics, or the advances of the sciences? These are canonically ennobling, intellectual achievements. Jesus wasn’t a mathematician or a scientist! Nowhere in the Scriptures is He recorded as having applied Bayes’ theorem.
-
-Undoubtedly my construal of rationality de-emphasizes the pursuit of knowledge by labeling it as merely one of several normative ends. To seek knowledge without seeking holiness is to be understood as dangerously unbalanced. To try to attain holiness and knowledge without communion with God is arrogant.
-
-On the other hand, we need not exaggerate matters. St. Paul affirms the need for specialization of labor within the Church (1 Cor. 12). There is room for some to specialize in intellectual endeavors, so long as they act in a cooperative setting in which the other virtues are pursued as well. (Nor should anyone neglect the development of such virtues in himself.) Mathematicians and physicists are more than welcome in the Church.
-
-According to this (all too briefly put) theory of rationality, there can be no conflict between ‘logic’ and theology. Theology is compatible with rationality because the account of rationality in question derives from a theological tradition. Naturally I’ve only given a sketch; much more could be said. But even if some readers are put off by the theory presented here, I hope it’s at least clear that there are conflicting notions of rationality. Anyone who wants to be rational confronts the task of figuring out which theory of rationality is correct.
-
-**In terms of community moderation, The Portico follows norms that are quite different than other online communities, often times quite drastically. For instance, living with women that you are not married to, is not something that should be talked about lightly. Can you talk about the importance of norms and how they relate to a healthy community?**
-
-Orthodox Christians are not commanded to “get along” with the rest of the world (John 15:18-25). We’re different, and our norms of interaction should likewise differ from those of outsiders. There is no one, monolithic “Orthodox culture”, but there are standards governing which local expressions of culture are legitimate and which are sinful. We should live in a way that enables and promotes holiness and discourages sin.
-
-We have rules that may seem unusual from the outside. I don’t permit profanity, lewd jokes, or irreverent comments about God. In your question you mention a living arrangement that is prevalent in the world. Another rule I have is that we shouldn’t talk causally about sinful practices or lifestyles as if they are unremarkable parts of ordinary life. If Orthodox Christianity is true then such things aren’t minor peccadilloes. They’re spiritually destructive. The marriage-bond sanctifies activities that would otherwise be sinful.
-
-If someone wants to analyze what is destructive about men and women living together before marriage, we’re open to that. But if you want to be affirmed in your sin, we’re not the place for you. Anyone of any religious creed is welcome to show up—but as a guest in an Orthodox Christian community. Hosts should be courteous to guests, but my first priority is not to make you feel good about your choices. We’re here to encourage each other, learn, and grow spiritually as Orthodox Christians. Naturally that means a little gate-keeping may sometimes be necessary if someone ever comes along who doesn’t share those goals. Being different is difficult and takes work.
-
-In a way the cultural contrast is meant to be jarring. It can force you to confront moral and cultural presuppositions that you didn’t even know you had. When you become aware of the wider choices of culture available to you, you become free to look with a critical eye on the culture you’ve hitherto taken for granted. I think anyone could see how that might be liberating, even before considering the particulars of the cultures in question. Of course, as an Orthodox Christian, I think we have a good case to make about the particulars of our subculture.
-
-I’ve never had to kick or ban anyone from the group. The group is relatively small (~180 people at the moment) so that probably helps. The vast majority of conversations are relaxed and friendly. Occasionally there are intense debates about one issue or another but I enjoy it, as long as it doesn’t become bitter or the primary mode of discourse. But everything ought to be done in a spirit of truth-seeking, not of one-upmanship.
-
-**The fact that The Portico can exist side-by-side with atheist communities on Urbit is pretty striking. On Urbit, a user is able to create niche communities and governance structures and yet still participate in a larger network. In other words, Urbit is trying to thread the needle between sameness and difference through federation at multiple levels. It seems to me that modern culture has become homogeneous due to an inability to maintain, or distinguish between, different communities. People who have nothing in common are forced to engage as if they were roommates, while those who are similar have trouble creating their own home. In other words, what is the role of community formation in the modern world and how does it connect to your critique of liberalism? Does Urbit have anything to say about this?**
-
-As I said in an earlier response, I see the liberal project as more or less an attempt to sidestep (not solve) difficult metaphysical and religious disputes between various distinct moral communities. Liberals have tried several methods of governance to achieve their ends. We can divide such attempts into two broad categories: centralized and decentralized.
-
-Social media companies in the US confront similar governance challenges, so we can analyze them in similar terms.
-
-A social network like Facebook takes a centralized approach. Zuckerberg spoke early and often of his desire to connect people and “bring the world closer together”. There was a sense that if people from various communities could get to know each other a little better, we would see how much we have in common and make progress toward some kind of universal cosmopolitan consensus.
-
-But that didn’t happen. With centralized social media you’re practically guaranteed to interact with people whose moral and metaphysical commitments are sharply at odds with your own. As a result, you face a persistent, nagging risk of conflict. Without warning, a friendly disagreement can explode into an all-out flame war. Most choose one of two basic approaches for dealing with this threat:
-
-(1) You live a compartmentalized life. You keep your moral and metaphysical commitments to yourself and cultivate a culturally homogenized persona for your social media activities. No one disagrees with you because there’s nothing to disagree with.
-
-(2) You can enlist to fight in the culture war and display your regimental colors with pride. And because you take your smartphone everywhere you’re always on the front line.
-
-These aren’t the only options, of course. With some combination of charisma, patience, and grace you can be relatively open about your beliefs without getting into too much trouble. But even if you have the talent to pull it off, it takes time and energy. Many of us aren’t willing to go to all that trouble. Social media is supposed to serve us, not the other way around.
-
-Urbit is decentralized which, in my opinion, means that it isn’t really a network in the way that Facebook is. I see Urbit as more of a network platform. The users create the networks, or migrate them in from elsewhere. We’re all using Landscape and running our VMs on Nock, so obviously there can be interaction between different communities. But anyone who doesn’t want that cross-community interaction doesn’t have to have it.
-
-I’ve followed Urbit’s progress since 2016, so I’m plugged into groups with other Urbit people I’ve come to know over the years. Other than that, however, I don’t know much about who’s out there. It’s not like The Portico is in one neighborhood and the atheists are in the next neighborhood over. There’s a real sense in which we’re not even on the same network—different Urbit communities share a common protocol, but a protocol isn’t a network.
-
-Some people may want to see a little of everything. If atheists want to join our group they’re welcome to do so! We’ll be friendly. I don’t seek out their groups, though.
-
-One virtue of decentralized social media is that it offers a totally different set of trade-offs with respect to how you share and act on your beliefs. What if you could talk earnestly about philosophy and religion without having to worry about alienating many of your friends and family? I guess that’s somewhat possible on Facebook—do they still have “groups”?—but Urbit was designed for it.
-
-Having said all that, I don’t think decentralization is a panacea. Even if Urbit takes off, it will likely face problems that are difficult to anticipate now. My hope is simply that Urbit’s trade-offs are healthier than the ones we’ve had before.
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[A brief update from urbit.org and Tlon]]></title>
-            <link>https://urbit.org/updates/2021-04-01-update</link>
-            <guid>https://urbit.org/updates/2021-04-01-update</guid>
-            <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-Hello!
-
-Happy Spring from ~wolref-podlex and ~roslet-tanner. We’re here with a surprise joint Urbit-Tlon newsletter—we’ve been so busy producing content that we forgot to write about it. Plus, this is fun every now and then. Honestly, we have so much to talk about this month, we can’t cover it all without writing a book. Here are the highlights.
-
-1 - Events
-
-April is shaping up to be jam-packed with events. For starters, we’ve got three developer calls slated for April, all of which are on Thursdays at 9am PDT:
-
-4/1: Tyler Shuster (~radbur-sivmus) discussed Javascript apps on Urbit: https://www.meetup.com/urbit-sf/events/277261928/
-
-4/15: Raghu (~sovmep-ripsum) will talk about virtual desks, a key component of third-party software distribution, and the process of contributing to the Urbit kernel through our scholarships program.
-
-4/29: Edward Amsden (~ritpub-sipsyl) will be discussing and demoing his WebRTC work, which enables audio/video calls on Urbit.
-
-On April 27th, we’ll be launching our Bitcoin Wallet and preparing to roll it out to the network. This is the culmination of many months of collaboration between several members of our community and Tlon—we’re really excited (especially ~pindet-timmut). There might even be some cool swag, discounted hosting, and/or other giveaways. Regardless, you’re not going to want to miss it. RSVP here: https://www.meetup.com/urbit-sf/events/276741426/
-
-We’re also excited to announce that our much anticipated Town Hall event, a virtual mini-conference, will be taking place on May 20th and will feature a keynote talk from our good friend Justin Murphy. Mark your calendars for now—more details to follow soon.
-
-2 - Content
-
-There’s been a ton of high-quality content produced lately. If you’re looking for something to watch, read, or listen to, here’s a roundup:
-
-~rovnys-ricfer has been recording an audio series about the design and rationale of Urbit called “Urbit from the Outside In.” Check them out here: https://twitter.com/rovnys/status/1371972157971050499
-
-~pindet-timmut and ~wolref-podlex appeared on Justin Murphy’s Other Life podcast—check them out: https://www.youtube.com/watch?v=vv9lymudGV8 and https://www.youtube.com/watch?v=5jbjSUKRyGM
-
-A question was posed on our mailing list titled: “what is this?” The team and community did not disappoint with their answers: https://groups.google.com/a/urbit.org/g/dev/c/bdlPPnaccMc
-
-Simon Kovacs (~bacbec-lormur) wrote a great post for our blog titled “After the Machine War”: https://urbit.org/blog/after-machine-war/
-
-~poldec-tonteg talked to the guys at The Stack. Check out the podcast here: https://thestack.link/episode-13-martian-futurism-with-poldec-tonteg/
-
-3 - Documentation refresh
-
-Our Docs team completed a large overhaul of our documentation last month, making the distinction between “Usage documentation” (https://urbit.org/using), or how to use your ship, and “Development documentation” (https://urbit.org/docs) much clearer.
-
-We’ve had some excellent contributions from the community to our documentation, most recently a comprehensive set of overviews, guides and examples documenting threads from ~tinnus-napbus: https://urbit.org/docs/userspace/threads/overview/
-
-We’re pretty proud of the work that’s gone into clarifying everything and are still working hard to make the docs more and more helpful. Feel free to send us your feedback if you have any!
-
-4 - Landscape news
-
-The community on Landscape is continuing to grow. Over 30 groups were published to the Directory in March alone, and these are just the public groups that someone decided to broadcast. We think that’s pretty exciting.
-There’s a new Cincinnati-centric group (~padwet/queen-city-urbit), a sewing group that sounds incredible (~pinwyl-hasfeb/seamstress-mafia), and the first digital maker space on Urbit (~tidrel-tabpub/freeside-mars).
-
-Check out the Directory (~bollug-worlus/urbit-index) to discover public groups and, if you’d like help getting your community onto Landscape, let us know. We’re here to help!
-
-5 - Hosting
-
-Over at Tlon, we’ve been really busy onboarding new hosting customers. All of our current onboarding sessions are completely booked! If you’d like to learn more about how it works, send an email to support@tlon.io. If you’re ready to get on the list, sign up at https://tlon.io/
-
-6 - Team news
-
-We're happy to share that longtime hooner ~littel-wolfur has joined the Tlon engineering team. Welcome, ~littel-wolfur! Also, we’ve made it official with ~wolref-podlex and dropped the “Interim” from “Director of urbit.org” (probably due to the quality of these newsletters).
-
-If you’re interested in working with Tlon or urbit.org, feel free to get in touch.
-
-7 - Culture recs
-
-Finally, we’re going to leave you with some recommendations from the team:
-
-~fabled-faster released an insane new mix that melted my face in a good way: https://soundcloud.com/flowerstructure/fs-s-s-2021
-
-Our designer ~natnex-ronret curates a playlist website. Check it out: https://www.door.link
-~datnut-pollen has been trying to understand how information processing evolves over time in evolutive systems. Here’s what he’s been reading:
-
-(i) Connectom https://connectom.substack.com/p/connectom-the-book It is about thermodynamic/statistical mechanical processes as the fundamental driver of the evolution of biological, ecological, and human systems.
-(ii) Topological phases emerge in an ecological model: https://physicstoday.scitation.org/do/10.1063/PT.6.1.20210128a/full/ and Topology protects chiral edge currents in stochastic systems: https://arxiv.org/abs/2010.02845 Topological protection for various dynamics is the main theme he reckons is missing from Connectom.
-(iii) Homotopy theoretic and categorical models of neural information networks https://arxiv.org/abs/2006.15136 Topological techniques for understanding information processing in neural, metabolic, societal, and computational contexts.
-
-~simfur-ritwed recently re-read Pynchon's Vineland. It’s both a loom into the backwoods NorCal culture of the 80s and a typically Pynchonian fantasy about the dangers of media-saturated identity (quite prescient, turns out).
-
-In the wake of his recent trip to Brazil, ~wolref-podlex has been reading Os Sertões (the English version), the story of a war that took place at the end of the 19th century in the backlands (sertões) of Brazil, in which the Brazilian army brutally crushed the peaceful religious settlement of Canudos.
-
-Lately I (~roslet-tanner) have been getting back into Roy Ayers. This feels just right for spring: https://www.youtube.com/watch?v=inPgcN_xF4w
-
-That’s it for now. We’ll be back with more news from Tlon and Urbit, respectively, in a few weeks. As always, let us know if there’s anything in particular you’d like to hear about next time.
-
-~wolref-podlex and ~roslet-tanner
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Eliza]]></title>
-            <link>https://urbit.org/blog/eliza</link>
-            <guid>https://urbit.org/blog/eliza</guid>
-            <pubDate>Mon, 22 Feb 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-<br>
-
-![valleys](https://media.urbit.org/site/posts/essays/valleys.jpg)
-
-<br>
-
-## The Storm before the Calm
-
-Building things, even Calm™ things, makes noise. George Nakashima’s wooden furniture evokes peace, but its construction still begins with a chainsaw. We mention this because we’re firing up our newest power tool.
-
-We call her Eliza. She is a data-collection robot.
-
-Hang on. An AI? Harvesting my data? Spying on me? Flooding me with spam? This is Urbit, right? Let us tell you about our new friend in basic terms, where MEGACORP might otherwise deploy legalese.
-
-## What Eliza is and isn’t
-
-> Replicants are like any other machine - they're either a benefit or a hazard. If they're a benefit, it's not my problem.
->
-> <cite>Rick Deckard</cite>
-
-Let's start with the benefits. Eliza is a simple chatbot. She was made to collect feedback on Landscape. She asks direct questions about peoples' usage of Urbit, records any responses, and reports them to her managers at Tlon. She'll also provide timely advice and information to ships kind enough to chat with her. She'll begin reaching out to ships via DM in the coming month. If you don't want to, just say no, and you'll never hear from her again.
-
-Finding bugs is critical to Urbit's rapid development, especially in this period of nascency. Most Urbit-related frustrations go unreported; regular folks don't think to open up Github when they experience a minor issue. That's why it's incumbent upon us to design a lower-friction forum for feedback. People who aren't comfortable filing an issue might be willing to talk to a friendly chatbot.
-
-Now, about hazards. By design, there are few. Eliza runs on Tlon's comet, not on your planet. There will be no OTA to install `%eliza-bot-store` on everyone's ships. Eliza learns things through conversation, not hidden surveillance software. Data she requests, like the text output of our network analytic tool, `+tally`, must be sent manually. MEGACORP tends to cut this corner; to refine their products, they just track your reactions in real-time.
-
-Since she's [open-source](https://github.com/urbit/urbit/blob/b0c1f83287cbf4c85847a9238d9f4be17e1fcb33/pkg/arvo/app/eliza.hoon), anyone can creatively deploy Eliza. Just write her a dialogue tree. Of course, that also means we can't keep people from misusing Urbit bots. We think automated agents on the Urbit network are inevitable, so let's create a good baseline culture around them. (Much love to Tendiebot, who's serving up stock prices in `~tomdys/wall-star-bets`.) However, once Urbit is used world-wide, we can't rely on culture alone.
-
-## A New Internet Economics
-
-The sum of Urbit's architectural design is a new online economics: a way to finance and monetize access to internet infrastructure where people retain maximum equity. Explicitly acquire a low-maintenance, low-cost server. Use it to compute explicit things. Return to life.
-
-We all know the basic MEGACORP business model: offer a free service (to suckers who don't own a server), secretly mine the data they generate on the (addictive) platform, then sell targeted ads to advertisers. This model will not survive Urbit. The ubiquitous personal server changes the economic equation. You used to 'pay' for an experience with your time and data. On Urbit, once you purchase core internet infrastructure, it's yours.
-
-So, can Urbit meaningfully curtail our world's appetite for data? We'll see. Post-enlightenment society runs on instrumental reason, right down to the last byte. Marketers will always want a fresh dataset. However, when the goods are on your Urbit, you can at least demand the respect you deserve. Long term, we expect a transparent market for data, not an opaque "agreement". An analytics company wants to track everything you see and do on Urbit? They better be paying well.
-
-Eliza doesn't pay respondents. Her collection is a charity to Urbit's developers. (We're also still busy enabling payments on Urbit with the Bitcoin wallet.) However, her presence is not a term of service either. In a few years, by the nth time some smart aleck uses Eliza's chatbot code and conjures 'Zalexa' to attempt an intrusion upon your Calm™, we will see the economics of Urbit's architecture suddenly vivify. Blacklists, reputation systems, and, eventually, even data markets, all Urbit primitives envisioned long ago, will become real. We won't need Zoogle to underwrite a spam filter for the entire internet; the scarcity of Urbit address space, in tandem with a true web-of-trust, handles that.
-
-If Urbit is to be used worldwide, the old system will not go down without a fight. Spammers, spies, and digital robber-barons will hunt for ways to game Urbit. Our passage out of the digital gutter is beginning in earnest, and we are thrilled to put our new architectures to the test.
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[A brief update from urbit.org]]></title>
-            <link>https://urbit.org/updates/2021-02-19-update</link>
-            <guid>https://urbit.org/updates/2021-02-19-update</guid>
-            <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-Hello!
-
-This week we’re introducing our newest grants program, Scholarships, sharing an update on the Urbit community, and introducing the newest members of the Urbit Foundation team. We’ve also got some important infrastructure updates about King Haskell and an overhaul of our Getting Started guide. Let’s dive in:
-
-1 - Scholarships
-
-I’m excited to announce the (soft) launch of a new type of grant we’re calling “Scholarships.” The big idea behind the program is to grow the base of individuals that can contribute to Urbit through hands-on, one-to-one mentorship with infrastructure engineers at Tlon.
-
-The program works by first having an infrastructure engineer define and scope a project, and then pairing them with someone from the community. Unlike other grants, these projects are centered on platform development, meaning Arvo or Vere, rather than on userspace development. Scholars will learn much about how Urbit works, take on impactful infrastructure projects, and gain insight into how infrastructure engineers think about building Urbit.
-
-We’ve begun scholarships with two members of the Urbit community who have demonstrated high technical aptitude and commitment via grants or other open-source projects. We don’t have any additional openings at this time, but expect to have a few more in the coming months.
-
-If you’re interested in a scholarship, sign up for the waitlist here: https://airtable.com/shr6Xmo55h8dZ0O46
-
-2 - Community
-
-Our community has been pretty busy lately. Here’s a non comprehensive list of what they’ve been up to:
-
-- ~timluc-miptev completed the Bitcoin gall agents. They’re now being integrated into Landscape as a wallet.
-- ~sovmep-ripsum finished his work on ucal, an iCalendar-compatible calendaring backend for Urbit.
-- ~tabnus-fondeg began work on Urbit LFS (large file storage) for providing file sharing and hosting support.
-- ~sipfyn-pidmex is writing a comprehensive suite of documentation for graph-store to enable an easier on-ramp to building new social applications.
-- ~minder-folden launched a new hosting provider that you can check out here: https://escapepod.store
-- ~naltyc-wornes is contributing a set of official, battle-tested guides for running Urbit on “smol” devices to the urbit.org website.
-- ~hocdep-labtul hosted his first Urbit UTC meetup, which featured ~timluc-miptev and received great attendance. We’re looking forward to the next one featuring ~nartes-fasrum on the Aesthetics of Urbit. Learn more here: https://www.urbit.computer/utc/#upcoming-meetups
-
-We’ll have a flurry of new bounties coming online in the upcoming weeks, so keep your eyes peeled —there might even still be an open one! Check them out here: https://grants.urbit.org/bounties.
-
-If you’ve got an idea you’d like to work on, make sure to submit a proposal. you’re not quite sure how to get started, book some time with me here and I can help you figure it out: https://calendly.com/wolref
-
-3 - Foundation growth
-
-This month the Urbit Foundation grew by 200%, which is less astounding when you know that it grew from one person to three. Nonetheless, this is a significant milestone for the community-focused arm of Urbit.
-
-~timluc-miptev (aka Tim) joins us from the developer community, where he’s been a prominent figure for some time as the creator of the popular Nock for Everyday Coders guide (https://blog.timlucmiptev.space/part1.html) and Complete Guide to Gall (https://github.com/timlucmiptev/gall-guide). He’s become a thoroughly proficient Hoon developer and Urbit architect through his work on Bitcoin integration, and will now be working to design grants and guide contributors in their development of their projects.
-
-~taller-ravnut (aka Mike) is passionate about community formation, and is excited to start working on supporting those that wish to host Urbit Meetups in their cities, universities, and timezones (since, at time of writing, IRL isn’t much of a thing). He’ll also be performing outreach to developers and developer communities to help spread the word and grow the contributor base of Urbit.
-
-There’s still tons of work to do and I don’t expect Tim and Mike to be the last additions to the team this year. If you’re interested in working at the UF, send me a DM for an invite to the group.
-
-4 - King Haskell
-
-King Haskell is a rewrite of the part of Urbit that talks to Unix and the outside world. When you switch to KH, the part of Urbit that runs Nock code stays the same. Importantly, King Haskell includes better facilities for NAT traversal, which should improve connectivity issues for self-hosted ships.
-
-As its name suggests, King Haskell is written in the Haskell programming language. Haskell is much easier (and more fun) for rapid development than C, and lightyears better for writing correct, bug-free code. As a result, we expect faster iteration times and more reliability in this part of the system.
-
-King Haskell is being shipped as part of a v1.2 release of the Urbit binaries. To run an existing ship with the King, say
-
-./urbit-king run path/to/your/pier
-
-To create a new ship, use the `urbit-king new` command.
-
-If you run into any problems doing this, or notice any incompatible behavior, please inform the authorities immediately.
-
-The Tlon Corporation is also using this new software on some of its infrastructure galaxies, but third party infrastructure ships should wait for further notice from us before doing so.
-
-5 - Getting Started guide
-
-Two members of our community have put a bunch of work into giving our Getting Started (formerly called Install + Setup) guide a facelift. They simplified the language, made the options much clearer, and improved some confusing instructions.
-
-If you’re looking to try Urbit or know someone that would want to run it, give our guide a try and let us know what you think!
-
-https://urbit.org/using/install/
-
---
-
-That’s all for now. ~roslet-tanner will be in touch in a few weeks with an update from Tlon. See you on the network!
-Josh / ~wolref-podlex
-
-https://twitter.com/urbit
-https://github.com/urbit/urbit
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[A brief update from urbit.org]]></title>
-            <link>https://urbit.org/updates/2021-01-15-update</link>
-            <guid>https://urbit.org/updates/2021-01-15-update</guid>
-            <pubDate>Thu, 14 Jan 2021 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-Hello, and happy new year!
-
-As is customary for the first communication of the new year, I’ll be doing a retrospective of what was accomplished last year and a forward look at urbit.org’s priorities for next year. Make sure to read to the end for the details about our upcoming Town Hall event!
-
-1 - 2020
-
-In spite of the many challenges presented over the last year, it was a resoundingly good one for Urbit.
-
-It seems like a long time ago now that the folks at Tlon rolled out OS1 (now called Landscape), just as the pandemic forced everyone into their homes throughout the world. At the time, “Urbit is for Communities” (https://urbit.org/blog/urbit-is-for-communities/) was just a vision, but now it’s been transformed into reality—there are more thriving communities in Landscape than any of us can keep track of, with new faces popping onto the network on a daily basis.
-
-Landscape brought many new ships onto the network which helped identify those areas in which Urbit’s infrastructure could be most improved. Ford Fusion eliminated the possibility of a partially-applied over-the-air (OTA) update through a drastic reduction in the size and complexity of the codebase. The efficiency of the OTA process was improved by several orders of magnitude, and many long-standing memory issues were resolved. Now we deploy code on our infrastructure nodes and see users receive an update, over a decentralized network, often in less than a minute.
-
-After improving the stability of the system Tlon turned its attention to bringing more ships onto the network. A long-standing barrier to Urbit’s adoption has been the technical knowledge required to host one’s own ship—this prompted Tlon to build and launch an Urbit hosting service (https://tlon.io), the waitlist for which is now thousands deep.
-
-With Tlon becoming more singularly focused on building products on Urbit, concrete steps have been taken towards making urbit.org a separate organization that’s focused on long-term development of Urbit’s platform. I joined to lead that effort back in August (https://urbit.org/blog/first-steps-towards-urbit-org/) and have since spent the majority of my time working with dozens of contributors on projects spanning documentation, education, external integrations, and much more.
-
-We rounded out the year with a full network reset (called a “continuity breach”), which has in the past has been synonymous with loss of all data on the network. This time things went differently: tooling was made available to the community that allowed ships to preserve their data, which enabled most to seamlessly rejoin post-reset. This is a significant milestone for the project as it signifies not only a commitment to technical excellence, but to supporting our budding community.
-
-2 - 2021
-
-In the last two weeks we’ve seen a huge amount of inbound interest as people are waking up to the inherent problems with using centralized services run by MEGACORPs—we’re just happy we started working on Urbit all those years ago. While we tend to not plan more than about six months in advance, I can still talk at a high level about what urbit.org will be focusing on in the immediate future (Tlon’s next newsletter will provide a similar overview of what they’re working on).
-
-Growth in Urbit’s developer community has been growing organically in lockstep with the overall network growth. This means, happily, that there’s a pretty large pool of people eager to contribute to Urbit. The priority for urbit.org, therefore, is to improve its capacity to effectively assist contributors. Concretely, this means:
-
-- Rework urbit.org to better help developers learn how to contribute to Urbit
-- Since Urbit is ready to build on top of, provide practical guides that demonstrate how to do so
-- Guide developers to make high-value contributions to Urbit and its ecosystem
-- Build community amongst contributors
-
-My strategy to date has been heavily focused on working directly with contributors to provide technical guidance and direction, and it’s been working really well. To that end, I’ll also be scaling the Foundation’s ability to provide such support by bringing more individuals into urbit.org that can mentor, review work, and provide guidance on where to best direct contributors’ energy.
-
-If you’re interested in helping build Urbit, you can head over to https://grants.urbit.org to claim a bounty or submit a proposal, join the Landscape group ~wolref-podlex/foundation to stay in the loop about what urbit.org is up to, or contact me directly at josh@urbit.org.
-
-3 - Town Hall
-
-In mid-February, we’ll be holding our first ever “Town Hall” event—it’s like a developer call, but longer, with more speakers, and covering a wider range of topics (not all of them technical!).
-
-We’re currently looking for speakers, so if you have an Urbit-related topic that you’d like to present, or would like to nominate someone else to present, please reach out to me by replying to this email. This could be an application you (or the nominee) has designed or built, an interesting use case, a design case study, or something completely different. Please don't be shy about reaching out—we're happy to work with you to figure out whether it makes sense to present a given topic, and how best to do so!
-
-Once we’ve finalized a date, we’ll broadcast it over our official Meetup group (https://www.meetup.com/urbit-sf/) and on Twitter. Stay tuned.
-
---
-
-As a reminder, Urbit and Tlon have now split their newsletters in two—Urbit’s newsletter will cover the project and development community, while Tlon’s will focus more on the product development work on Landscape and the communities that form there. Tlon’s newsletter will arrive at the end of the month.
-
-That’s all for now. See you on the network!
-Josh / ~wolref-podlex
-
-https://twitter.com/urbit
-https://github.com/urbit/urbit
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Urbit Events Series]]></title>
             <link>https://urbit.org/blog/events-series</link>
             <guid>https://urbit.org/blog/events-series</guid>
@@ -3422,6 +3285,79 @@ Galen / ~ravmel-ropdyl
 
 https://twitter.com/urbit
 https://github.com/urbit/urbit
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Late 2020 Progress Update: OS 1 -> OS 1.N]]></title>
+            <link>https://urbit.org/blog/20200929-state-of-urbit</link>
+            <guid>https://urbit.org/blog/20200929-state-of-urbit</guid>
+            <pubDate>Mon, 28 Sep 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+<br>
+
+![Grassy Knoll](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
+
+<br>
+
+When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before. This has been our goal for years: to mature the system we’re building by becoming its first committed users. We knew that critical step toward Urbit’s maturity was being able to depend on it ourselves, but the system itself had to mature to the point that we could do that practically.
+
+We’ve done this in fits and starts. We’ve _tried_ and failed a few times over the years. We’ve always _used_ Urbit to some extent, but we’ve never _relied_ on it. These past six months have been different. I can’t tell whether it was out of sheer determination and commitment, or that the system was just genuinely ‘there’. Either way, both Tlon and the Urbit Community genuinely live on Urbit now.
+
+In a way, our ability to use Urbit day to day doesn’t make sense. When we shipped OS 1, it was full of holes. There were serious performance, stability, and reliability issues. Plenty of people showed up and thought, ‘I don’t understand why you think this is useful.’ But, it was good enough that we wanted to use it. And since we wanted to use it, we put our energy into making it better like we hadn’t ever before. Being able to use a system that you can really trust is a wonderful feeling. It’s Computing Without Compromises.
+
+All of the sudden, it’s Fall. We never found the time to name any of our releases or write announcements. We’ve just been making the system better in every way we can find. We’ve got a lot of exciting things planned for the last few months of the year — but I wanted to recap the progress we’ve made for those following along from the outside. If you haven’t been on the network, it’d be impossible to see.
+
+The tl;dr is that Urbit is much faster, more reliable, and nicer to use than it was six months ago. Things have gotten much better, across the board. We threw ourselves into OS 1 admittedly underprepared, but we’ve learned a lot and matured the system a lot along the way.
+
+Anyway, let’s walk through the details. We’ll talk about our infrastructure and interface work independently, since that’s how we organize things internally. Then we’ll talk a bit about what’s going on on the network.
+
+### Infrastructure
+
+![Debugging Interface](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-2.png)
+
+In April, Urbit was slow, fragile, and didn’t always update itself properly. We made enormous progress on all of these.
+
+First off, Urbit is about 10x faster for most users. With some careful debugging, we were able to locate a few really [high](https://github.com/urbit/urbit/pull/3029) [impact](https://github.com/urbit/urbit/pull/3054) [improvements](https://twitter.com/pcmonk/status/1276327036722704385). There’s still performance work to do, but the effects of this work are widespread. Boot times are faster, local compute is faster, the network is faster. It’s a huge improvement.
+
+Second, we got our memory usage under control. Urbit still uses a 2GB memory arena. If the state of your Urbit grows to over 2GB things, uh, fall apart. This used to happen regularly, and now it’s pretty much unheard of. We implemented [tooling](https://github.com/urbit/urbit/pull/3235) to compact and deduplicate the memory image when it’s growing too large. We brought the memory usage of the compiler [down ~90%](https://github.com/urbit/urbit/pull/3041). There are areas where we can be more disciplined about how we use memory, but this is more or less a solved problem for the near term.
+
+Third, we implemented a completely new build system. Well, we actually [got rid of the build system](https://urbit.org/blog/ford-fusion/) altogether and [made it a part of the filesystem](https://github.com/urbit/urbit/pull/3060). This made it possible for us to fix our over the air (OTA) updates and make them both fast and reliable. In April, an OTA could bring down your node and would take hours or even days to apply. Today, we regularly deploy OTAs with no fear of them breaking any nodes — they often go from galaxy → planet in a minute or less.
+
+We also rewrote a large part of our runtime in Haskell and made overall progress on [network scaling](https://github.com/urbit/urbit/pull/3174). And: we implemented a [principled approach](https://github.com/urbit/urbit/pull/2366) to [error handling](https://github.com/urbit/urbit/pull/3064), making nodes much less likely to become unrecoverable.
+
+The network is stable, fast, and safe from day to day. We’re pretty confident it can grow quite a bit without serious issues. When we shipped OS 1 we really weren’t sure what we could handle. Now we’re standing on much more solid ground.
+
+### Interface
+
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-3.jpg)
+
+When we shipped OS 1 it was a bunch of separate pages (that were slow to load), all with separate ways of storing and processing data. Our interface work over the past six months is all about unification and simplification.
+
+First, we pulled OS 1 together as a [single page app](https://github.com/urbit/urbit/pull/3025). Using OS 1 involves a good amount of moving around and refreshing the page each time was pretty painful. Now it’s snappy to move between pages and keep up with what’s going on. In tandem, we started using our own component library, [Indigo](https://github.com/urbit/indigo-react). This makes frontend development much cleaner and more efficient.
+
+Next, we unified the way we store data and compute. It used to be that each individual module (chat, publish, and links) used their own ‘agents’ to store and process data on the Urbit side. (An agent is the Urbit equivalent of a datastore + business logic.) With a lot of moving parts, this approach caused all kinds of synchronization challenges. Rather than a module-per-agent model we’ve started to move toward a type-of-data-per-agent model. The first of these is [graph store](https://github.com/urbit/urbit/pull/3110). We’re presently in the process of migrating all our modules to graph store.
+
+Those two are by far the most significant, but there’s so much more. We [rewrote](https://github.com/urbit/urbit/pull/2937) the `group-store`, allowing for different roles (admin, moderators, and so on) in a group. We shipped better debugging tools, automatic reconnection, a settings panel, and overall visual polish and refinement.
+
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-4.jpg)
+
+And I almost forgot [Leap](https://github.com/urbit/urbit/pull/3231): an omnibox for navigating around OS 1 with the keyboard. We have plans to make Leap much more powerful — but it’s a great first start toward making OS 1 keyboard accessible. I almost exclusively use [Leap](https://upload.wikimedia.org/wikipedia/commons/0/06/Canon_Cat_keyboard.jpg) to get around OS 1 these days.
+
+### Community + network
+
+![Fishing Village](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-5.png)
+
+Our primary goal with OS 1 was to get both Tlon and the Urbit Community living entirely on Urbit. We did that, and in doing so we’ve seen how nice it is to grow a community in a calm, non-invasive environment. We started doing regular [Urbit](https://twitter.com/urbit/status/1308875082312364048) [Dialogues](https://twitter.com/urbit/status/1304139629948329985) with friends and peers in the absence of physical meetups, which have been fun.
+
+Getting onto Urbit is still relatively challenging. By the standards of software you run yourself, it’s not so bad at all. But by comparison to ordinary consumer software, it’s way too hard. Tlon is [working on that](https://tlon.io) — but these last six months have been only for the brave. That is, those that want to host their own nodes.
+
+Turns out, there are plenty of people who are up for running Urbit themselves and quite a few small communities have sprouted around the network. Overall the network has a fun, cozy feeling. It’s nice.
+
+### What’s next
+
+We’re still more or less flat-out, full speed ahead into an even better Urbit-world. The seeds of change were planted when we made Josh the [interim technical director of urbit.org](https://urbit.org/blog/first-steps-towards-urbit-org/). Urbit itself is getting close to the point where the separation between Urbit and Tlon has to become more real. Urbit is aimed at being an ubiquitous platform, Tlon is aimed at making it as usable and useful as possible.
+
+We’ll talk about some of this on [October 9th](https://www.meetup.com/urbit-sf/events/273439025/), and you can see a bit of what’s coming on [tlon.io](https://tlon.io) today. If you tried booting Urbit in April and it was tough, try again. We’re easy to find on the network, and we’d love to get reacquainted.
 ]]></content:encoded>
         </item>
         <item>
@@ -7016,6 +6952,111 @@ Your Urbit is a simpler computer, a quieter computer, a more private computer. W
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[~2019.10 Roadmap]]></title>
+            <link>https://urbit.org/blog/2019-10-3-roadmap</link>
+            <guid>https://urbit.org/blog/2019-10-3-roadmap</guid>
+            <pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![](https://media.urbit.org/site/posts/essays/2019-10-3-roadmap.jpg)
+
+The daily work of building a new OS from scratch is so engaging and exciting that we habitually forget to even take stock of what we’ve accomplished. We’re fixated on the prospect of moving the world on to Urbit, starting with ourselves.
+
+It’s a good thing I have a recurring reminder to write these updates. While our focus is on the future, it’s good to get a sense of the rate that we’re moving forward, and to let everyone know what’s been going on. We’ve made great progress over the past few months.
+
+We’ve got a new interface, Urbit 0.8.0, Hoon School, and a grants program among lots of other updates. We’ll go into detail about all of these, and talk a bit about where we’re headed next. The system is improving at a really good pace. We intend to keep it up.
+
+## Identity (Azimuth)
+
+The other day I got an email, clicked a link, and got a planet. A real, live, piece of cryptographic property with paper wallets and everything. It took about two minutes. And at the end, I could have easily sent invites to my friends.
+
+This experience is part of a completely new Bridge, the interface for interacting with your Urbit identity. The beta experience we’re testing today is quite stripped down, but it’s a huge improvement over the last Bridge release. Clicking a link is a lot easier than downloading source code, running it from the command-line, and probably running into a python-related error.
+
+Getting to this point involved rewriting Bridge from scratch, figuring out how to host it securely, building infrastructure to fund the requisite transactions involved in registering a new identity, and setting up a service to send emails (and dispose of them afterward). We've also redesigned our paper wallets to make them simpler and clearer.
+
+We still want to get this new version of Bridge a bit further along before releasing it to everyone — but we’re excited about it. We didn’t quite get to the point of building an affordance for payments, which we had hoped to do, but that’s coming later.
+
+We want everyone to have an Urbit identity. And we want it to be incredibly easy to get one, so we’ll get Bridge out this month with a new urbit.org (more on that below).
+
+The other area of identity-related work was Sigils — the algorithmically generated images that go with every Urbit identity. (We’ve got a blog post in the works that covers how we created these, which is a good story that needs to be told.) The original version of Sigils didn’t look very good at small sizes and a few collisions were found (thanks to [urbit.live](https://urbit.live) for helping to discover the collisions). The [new, improved sigils](https://github.com/urbit/sigil-js) have no collisions and look great at small sizes.
+
+**Q4 2019**
+
+- Release Bridge to the public
+- Get Bridge working well on mobile
+- Add payments support, hopefully including BTC
+- Add a network explorer
+
+**Q1 2020**
+
+- Integrate Bridge with a native app for Arvo
+
+## OS (Arvo)
+
+As a team, we want Urbit to be our primary computer, our last computer, our permanent computer. And we want this now — or at least as soon as we possibly can. We’re both ambitious and impatient.
+
+The frustration that we can’t move onto Urbit today propels us forward. The system saw major updates over the past few months all the way through the stack. On the Arvo side, we divide our work into Infrastructure (everything in the kernel and interpreter) and Interface (everything in userspace and the front-end). We’ll start with Infrastructure progress first.
+
+We’re very nearly to the point that all the kernel-level code in the system has been written by our current team. The one remaining vane that deserves a rewrite (Gall) has had a major cleanup by Jared just recently. The [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) approach does appear to be working. The infrastructure team is doing fantastic work and has really deepened their ownership of the system. The Urbit of today is on the road to becoming a great piece of system software.
+
+The biggest infrastructure-level milestone was the release of [Urbit 0.8.0](https://github.com/urbit/urbit/releases/tag/v0.8.0). We introduced a new process-separation architecture, implemented the correct bootstrap sequence, moved to LMDB for persistence, replaced our http vane (%eyre) and moved to Nix for our build system.
+
+To put it simply, Arvo is now much more stable and durable. During the beginning of the year we were seeing bugs and instability that were frustrating and unacceptable. While there are still issues on the live network, none of them terrify us much. We also implemented the ability for users to ‘individually breach’, which means that you can now reset your Urbit without waiting for us to reset the network.
+
+### Landscape (Arvo UI)
+
+We don’t just build infrastructure for others to develop on top of. We build interfaces too. At the top of the stack, we released a completely new Landscape, the interface for Arvo. This new interface makes it possible to build other ‘modules’ for Arvo that go beyond chat and publishing.
+
+This new Landscape is a complete departure from the last direction. Your Urbit now has a simple home screen that launches individual modules and it’s [relatively easy](https://github.com/urbit/create-landscape-app) to create new ones. We’re all enjoying using Landscape around the office. It’s still a bit of a prototype — but it’s quite a good one, I think.
+
+In moving to this new model we decided to narrow our focus to desktop only for now. We’ll return to mobile again next year — but first we want to get the desktop experience right. We’ve pulled the iOS app from the app store for the time being. I’m personally sad to see it go, since I enjoyed using it. But our prior iteration of Landscape just wasn’t quite right.
+
+This version of Landscape is, I think, the last one that we’ll call a prototype. Over the past few weeks, since shipping this, some amazing work has been happening on the interface front. We have a systematic approach to building interfaces on top of Urbit that’s very promising, albeit just getting started. We’ve already put out [one post](https://urbit.org/posts/landscape-a-portrait/) about Landscape's future, with more posts to come.
+
+**Q4 2019**
+
+- Improved Arvo-level error handling
+- Implementation plan for ‘telescoping kelvins’ — or [how we plan to future proof Arvo](https://groups.google.com/a/urbit.org/forum/#!topic/dev/6Mwn6TQFVwc)
+- Versioning scheme between Arvo and Vere
+- A new Haskell implementation of the daemon
+- A native client (instead of just a browser tab)
+- A [new user-space architecture](https://docs.google.com/document/d/1hS_UuResG1S4j49_H-aSshoTOROKBnGoJAaRgOipf54/edit)
+- Hoon.hoon that’s OTA upgradeable
+- Working Jacque prototype, a graal-truffle-based implementation of vere
+
+**Q1 2020**
+
+- Integrated client with Bridge and Arvo
+- New interface framework, codenamed ‘Widescreen’
+
+## Docs + Community
+
+We had quite a bit of interest in our second session of Hoon School. We ended up with 150 people enrolled in Hoon 101, and 42 in 201. The 101 session just ended, with a lot of positive responses and feedback from the participants. We learned a lot doing it and got quite a bit of interesting new example code.
+
+Hoon 101 started with students with little to no programming experience. Hoon 201, which is just getting underway, covers more advanced topics. We’re quite curious to see what comes out of it.
+
+We’re also adding features to Landscape to make it more amenable to use by Hoon Schoolers. Good examples include code evaluation within Chat (for office hours), and the ability to pin posts in Publish. The next crop of Hoon learners will be able to use Urbit to learn about Urbit.
+
+Aside from Hoon School we’re always updating our documentation. Most notably, we added search to the docs (finally). This was a much needed feature that makes the docs much more usable.
+
+We also launched our [grants program](https://grants.urbit.org/) quietly, but all of our available bounties were quickly claimed nonetheless. We’re ready to give away more address space to contributors and are excited by how quickly people got involved.
+
+We also did some experimentation with holding events on Arvo. We held weekly AMAs for while, and hosted a few meetings with the community. With the new UI out, our public channels have been a lot more active. We’ll surely be holding more on-urbit events in the future — but for the time being the conversation in urbit-help is a lot of fun.
+
+**Q4 2019**
+
+- Vane level documentation
+- An active grant program
+
+## urbit.org
+
+Urbit.org is about ready for a refresh — so we’re in the process of rebuilding it. We have, for a long time, told the story of Urbit by describing the system technically. We think Urbit can be explained much more simply and much more concisely. We’re working to put together a new set of materials in this direction.
+
+We’d also like to populate urbit.org with a lot more content about what we’re working on and thinking about. We do a reasonable job of writing updates, but many of our projects get released without any background info. Tlon and the Urbit community are full of smart, thoughtful people — and we’d like to do a lot more to surface their work. We plan to close out the year with both a new website and a lot of writing about what we’ve been building. Not everyone wants to read the source code!
+
+That covers it for now. If you have questions or want to chat — find us in `~dopzod/urbit-help`. See you online!
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Landscape: A Portrait]]></title>
             <link>https://urbit.org/blog/landscape-a-portrait</link>
             <guid>https://urbit.org/blog/landscape-a-portrait</guid>
@@ -7310,6 +7351,105 @@ Until next time.
 In other news, the **Interface Team** started a [Twitter account](https://twitter.com/urbitwip) to share work in progress, there's been lively discussion on [urbit-dev](https://groups.google.com/a/urbit.org/forum/#!forum/dev), and we published [a roadmap](https://urbit.org/posts/2019-5-roadmap/).
 
 Until next time.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[~2019.5 Roadmap]]></title>
+            <link>https://urbit.org/blog/2019-5-roadmap</link>
+            <guid>https://urbit.org/blog/2019-5-roadmap</guid>
+            <pubDate>Wed, 15 May 2019 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+![](https://media.urbit.org/site/posts/essays/2019-5-roadmap-1.png)
+
+We often get so busy that we forget to tell you what we’ve been up to. Here’s an update on what we’re doing and where we’re headed with each layer of the stack.
+
+At a very high level we have two goals for 2019: make Azimuth easier to use, and get Arvo to a 1.0.
+
+Next year we’ll begin to move away from some of the MEGACORP software we use in the office, and replace it with our own tooling. There’s some exciting work happening in that department, but we’ll cover that in a future post.
+
+For some related recent thinking on all of this, see [The 100 Year Computer](/posts/essays/the-100-year-computer/), [The State of Landscape](/posts/essays/the-state-of-landscape/) and [Azimuth as MultiPass](/posts/essays/azimuth-as-multipass/).
+
+For now, let’s just look at what’s on the immediate horizon:
+
+## Azimuth
+
+At lunch the other day someone on our team said something like, ‘We built a complete and working public key infrastructure, but we haven’t told anyone.’
+
+It’s true. Azimuth is operational, secure, and well tested. It’s a pretty cool piece of technology and it’s out there in the world for anyone to use. It also doesn’t require that you use Arvo — Arvo happens to make use of Azimuth, but Azimuth itself is a completely separate system.
+
+So the question is why haven’t we told the world about it?
+
+I tend to think that in order for a technology to succeed it has to not only be an important technical innovation, it also has to be easy to understand as a product. And that’s our answer: we’ve undersold Azimuth because we want it to be easier to understand by _using_, not just by reading the code. Azimuth is quite an elegant piece of technology — but that doesn’t matter until it has a great user experience to match.
+
+That’s why, in the near term, we’re focused on building on top of Azimuth ourselves. We can’t ask others to go down roads if we haven’t already been down them.
+
+Here’s what we’re building first:
+
+### Q2 2019
+
+- A simplified onboarding flow for getting an Azimuth point that’s simple to share with friends over email, text or as a URL.
+- A redesigned and improved Bridge for managing your points.
+- An interface that allows you to easily send money between Azimuth points without running Arvo.
+
+### Q3 2019
+
+- Expanded Azimuth-centric example modules, documentation and developer tooling.
+
+Still under consideration:
+
+- An OAuth server or JWT flow for logging into any service with an Azimuth point.
+- A mobile app for point to point payments using Azimuth.
+
+### 2020
+
+Azimuth is beginning to feel like [multipass](/posts/essays/azimuth-as-multipass/), with a variety of ways to use Azimuth points without ever booting Arvo
+
+## Arvo
+
+The Arvo interface has always been held back by Arvo’s technical immaturity. This is still true to some degree. The system has not stabilized completely.
+
+But! We’ve been using Landscape quite a lot lately. I use it daily, in fact — even [on my phone](https://itunes.apple.com/us/app/landscape-urbit/id1393148862). An encrypted (although not audited — so let’s not call it ‘secure’), authenticated chat where I own the keys and can read the source code feels really nice to use. The interface isn’t as good as we’d like, but it’s not bad. Landscape is a great preview of where we’re going: a simple, permanent, self-sovereign computer.
+
+There are still rough edges, and Landscape is not nearly general purpose enough, but we have plans:
+
+### Q2 2019
+
+- A new update to the Arvo interface that we’re calling Modulo. Modulo expands beyond chat and longform discussion to make your Arvo interface feel much more like the computer it actually is.
+- Upgrades to our event persistence, networking, and DNS integration aimed at much better stability. Arvo instances don’t crash that often, but with these changes it should be very rare.
+- Significant improvements to testing with a new simulation testing framework and integration testing pipelines.
+
+### Q3 2019
+
+- A significant overhaul to Gall, our application model, making it much simpler for users to write apps or ‘agents’ in Arvo.
+- A new version of the compiler that makes us less reliant on jets. This will eliminate a major obstacle to achieving network continuity, or the ability for ships to upgrade themselves totally over-the-air, forever.
+- A significant overhaul and stability update to Clay, our filesystem, making it possible for us to trust it for self-hosting, search it easily, and depend on it for long-term data storage.
+- Tooling for hosting and hopefully a beta program for hosted Arvo instances run by Tlon.
+
+### 2020
+
+- A completely overhauled Arvo interface, Daigo, with a complete but simple set of messaging and collaboration tools. Modulo is meant to be fun to experiment with, but we aim to make Daigo part of our daily workflow.
+- We come to work every day, use Arvo, go home.
+
+## Community
+
+We’ve often felt like it was far too early to invite others in to the system.
+
+As long as we’re up front about the state of this 100 year computer -- that it’s live, but incomplete — I think it’s a good thing to welcome people on board. There’s plenty to play with, experiment with and explore.
+
+Hoon school was the first effort in this direction. We intend to do a lot more:
+
+### Q2 2019
+
+- Scaling Hoon school up to include both a track for experts and for beginners, and allowing many more participants.
+- Holding more meetings and events on Landscape, experimenting with Arvo-native discussion.
+- A clear program for address space grants for developers + contributors.
+- New documentation site with searchable library docs.
+
+### Q3 2019
+
+- Hoon School participants understand clearly how to build a Modulo agent, and invite others into it.
+- The road toward building an Azimuth module is well understood, paved, and clear.
+- We have clear instructions and tutorials for building Azimuth modules and using Azimuth as a login or reputation primitive.
 ]]></content:encoded>
         </item>
         <item>
@@ -17567,6 +17707,25 @@ Join us for the Assembly 2021 introduction, keynote and demos on Saturday, Octob
             <pubDate>Invalid Date</pubDate>
             <content:encoded><![CDATA[
 We wish we could get everyone together at once for Assembly, but travel still isn't as easy as we wish it was. For those that can't make it to Assembly, join Urbit Foundation Director and Tlon CPO Josh Lehman for an online-only AMA about Urbit's new software distribution capabilities.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Meetup: Brisbane Australia]]></title>
+            <link>https://urbit.org/events/2021-11-26-meetup-brisbane</link>
+            <guid>https://urbit.org/events/2021-11-26-meetup-brisbane</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+What is the Urbit??
+
+Philosophers, mathematicians and other timewasters have pondered this tough question for aeons. Many went mad, others grew long beards or even buried themselves alive, thinking the riddle unsolvable. So did we... until now.
+
+Urbit Brisbane are proud to announce that we finally have found an answer: yes, we have figured out what is the Urbit!!
+
+We'd like to share this important knowledge with you, so join us among the fair hills of St Lucia this Friday night. The Secret Venue will be announced on Friday arvo. RSVP and stay tuned to the event page so you don't end up walking around Guyatt Park accosting joggers for clues.
+
+Come along and learn about the Urbit with us. You will gain access to an eldritch power far beyond the frail grasp of worldly things. If that isn't enough to tempt you, we also have beers and pizza with your name on them.\*
+
+\*If your name is Asahi or Godfather Supreme.
 ]]></content:encoded>
         </item>
         <item>

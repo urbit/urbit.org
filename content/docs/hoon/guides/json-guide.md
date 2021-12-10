@@ -112,6 +112,8 @@ Let's have a look at a practical example. Here's a core with three arms. It has 
 --
 ```
 
+**Note**: This example (and a couple of others in this guide) sometimes use a syntax of `foo+bar`. This is just syntactic sugar to tag the head of `bar` with the `term` constant `%foo`, and is equivalent to `[%foo bar]`. Since `json` data is a union with head tags of `%b`, `%n`, `%s`, `%a`, or `%o`, it's sometimes convenient to do `s+'some string'`, `b+&`, etc.
+
 ### Try it out
 
 First we'll try using our `$json` encoding/decoding library, and afterwards we'll take a closer look at its construction. To begin, save the code above in `/lib/json-test.hoon` of the `%base` desk on a fake ship and `|commit` it:

@@ -38,7 +38,7 @@ How to resolve common issues in Bridge.
 If you own a star, invite pools allow your friends to invite others onto the
 network.
 
-### [Guide to Breaches](/using/id/guide-to-breaches)
+### [Guide to Resets](/using/id/guide-to-resets)
 
 What to do when things go very wrong and you need to start over.
 
@@ -54,6 +54,6 @@ aimed at developers, see the [Azimuth documentation](/docs/azimuth).
 
 A guide to how to utilize Bridge to interact with Layer 2. XX TODO
 
-### [Layer 2 Stars](/using/id/l2-star) 
+### [Layer 2 Stars](/using/id/l2-star)
 
 A summary of the different options available to stars and their proxies on layer 2.

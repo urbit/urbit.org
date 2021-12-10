@@ -25,14 +25,6 @@ You can distribute planets from your star via [Bridge](https://bridge.urbit.org/
 
 By default, your star accepts software updates from its galaxy and routes them to its planets. You can use this mechanism to push custom software to your planets. Keep in mind that planets expect functional, non-breaking software updates, and generally want to be able to communicate with planets that are sponsored by other stars.
 
-#### Breaches
-
-To ensure new planets can connect to your ship, users are expected to participate in network-wide breaches by [updating to the latest Urbit version](/getting-started/), deleting (or archiving) your pier, and then booting your ship using the new binary. If you don’t participate, you won’t be able to communicate with anyone on the network who has updated to the new era.
-
-Network-wide breaches are distinct from personal breaches, wherein an individual ship cycles its personal network keys using Bridge, and then follows the same steps outlined above.
-
-See our [Guide to Breaches](https://urbit.org/docs/tutorials/guide-to-breaches) for more information and for instructions on breaching.
-
 ### Star-owner etiquette
 
 - If you distribute planets, boot and run your star on the Arvo network, or the

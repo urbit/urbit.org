@@ -24,7 +24,7 @@ To use Bridge:
 
 - Unzip the .zip file that you downloaded (bridge-$version.zip).
 - Open up your command line interface (Terminal on
-X, Command Prompt on Windows).
+  X, Command Prompt on Windows).
 - Navigate to the bridge-$version directory, where $version is the appropriate version number.
 - Run this command: `python3 -m http.server 5000 --bind 127.0.0.1.`
 
@@ -44,12 +44,11 @@ After you access your Ethereum address, if a point was sent to that address, you
 
 Now you'll be on the management page of your point. The transfer isn't completed
 yet, so click `Accept incoming transfer`. If you are transferring to yourself
-and do not wish to [breach](/docs/glossary/breach), check the box labeled
+and do not wish to [factory reset](/docs/glossary/resets), check the box labeled
 `Retain proxies and key configuration, in case of transferring to self`.
-Otherwise leave the box unchecked, ensuring that your ship will be breached upon
+Otherwise leave the box unchecked, ensuring that your ship will be factory reset upon
 transfer and thus no Azimuth data from the previous owner (namely proxies and
-networking keys) will be retained. Then press the `Generate and Sign
-Transaction` button, followed by the `Send Transaction` button.
+networking keys) will be retained. Then press the `Generate and Sign Transaction` button, followed by the `Send Transaction` button.
 
 If you already own a point, click on the `Details ->` under your sigil in the `Your Points` section.
 
@@ -109,5 +108,4 @@ may check that your sponsor has successfully been altered by running
 your new sponsor.
 
 Once you change your sponsor, you will likely want to change your source of
-[OTAs](/docs/glossary/ota-updates) to them as well. To accomplish this, enter `|ota
-~sponsor %kids` in dojo, where `~sponsor` is the `@p` of your new sponsor.
+[OTAs](/docs/glossary/ota-updates) to them as well. To accomplish this, enter `|ota ~sponsor %kids` in dojo, where `~sponsor` is the `@p` of your new sponsor.

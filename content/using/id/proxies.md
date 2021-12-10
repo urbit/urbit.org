@@ -25,13 +25,13 @@ address to be the management proxy.
 - **Management proxy**
 
   Can configure or set Arvo networking keys,
-  [breach](/docs/using/id/guide-to-breaches), and conduct sponsorship related
+  [factory reset](/docs/using/id/guide-to-resets), and conduct sponsorship related
   operations. Planets, stars, and galaxies may all set a management proxy.
-  
+
 - **Spawn proxy**
 
   For stars and galaxies only. Can create new child identities.
- 
+
 - **Voting proxy**
 
   Galaxies only. Galaxies are the part of the [Galactic
@@ -53,4 +53,3 @@ ownership as a one-step process, but this is risky and not recommended. Bridge
 does not natively support one-step transfers, you must use an advanced tool like
 [`%claz`](/docs/azimuth/advanced-azimuth-tools) to manually generate such a
 transaction.
-

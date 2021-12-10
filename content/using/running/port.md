@@ -41,7 +41,7 @@ home screen and ready to explore Urbit.
 ## Boot another ship
 
 **Important: This is for booting a ship for the first time, or for booting a
-ship which has just undergone a [breach](/docs/glossary/breach). A ship should
+ship which has just undergone a [factory reset](/docs/glossary/resets). A ship should
 only be booted from its keyfile in its current
 [rift](/docs/azimuth/life-and-rift#rift) once. If your ship has already been
 booted elsewhere, see the [Import pier](#import-pier) section instead.**
@@ -148,7 +148,7 @@ see the [Import pier](#import-pier) section for details of importing it.
 
 **Warning: Deleting a pier is irreversible, and all data will be lost. If the
 ship is a comet, the comet name will be unusable again. If the ship is a planet
-or star, you will need to perform a [breach](/docs/glossary/breach) via Bridge
+or star, you will need to perform a [factory reset](/docs/glossary/reset) via Bridge
 to be able to use it again (and all of its data will still be lost).**
 
 To completely delete the pier of a ship managed by Port, go to the home screen

@@ -164,13 +164,13 @@ $ ./urbit -w <moon-name> -k <key-file> -c <pier-name>
 
 Note the `<moon-name>` excludes the leading `~`. The `-c <piername>` argument is not required, but it is recommended; otherwise, the resulting directory is a rather unwieldy moon name. Moons are automatically synced to their parent `%kids` desk, and can control applications on their parent planet using `|link`.
 
-To breach a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
+To factory reset a moon -- that is, to reset its presence on the network so that it's treated as a freshly spawned ship by others -- run from the parent ship:
 
 ```
 |moon-breach ~faswep-navred-sampel-palnet
 ```
 
-To cycle the keys of a moon without breaching, run:
+To cycle the keys of a moon without a factory reset, run:
 
 ```
 |moon-cycle-keys ~faswep-navred-sampel-palnet

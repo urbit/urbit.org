@@ -11,9 +11,11 @@ Your ship upgrades itself with [OTA updates](/docs/glossary/ota-updates) via com
 
 Network continuity occasionally needs to be broken, either at an individual
 level to fix networking issues or at a network-wide level to update Arvo beyond
-what OTA updates are capable of doing. These events are called [breaches](/docs/glossary/breach).
+what OTA updates are capable of doing. These events are called [factory resets](/docs/glossary/reset).
+
 ### Further Reading
 
 - [The Ames tutorial](/docs/arvo/ames/ames): An in-depth technical guide to the Ames protocol.
-- [A Guide to Breaches](/using/id/guide-to-breaches): Instructions on handling continuity breaches (resets) on the Ames network.
+- [A Guide to Factory Reset](/using/id/guide-to-resets): Instructions on
+  perfming factory resets.
 - [Ship Troubleshooting](/using/os/ship-troubleshooting): General instructions on getting your ship to work, which includes network connectivity issues.

@@ -38,7 +38,7 @@ There are currently [28 functions](#write) which may be called to write to
 the Ecliptic, and [17 functions](#read) to read data from the Ecliptic. Many of these
 have a corresponding [layer 2 action](/docs/azimuth/l2/l2-actions), and/or can be
 performed using [Bridge](/using/id/using-bridge). We note these facts where
-applicable. 
+applicable.
 
 ## Write functions {#write}
 
@@ -86,10 +86,11 @@ If `_target` is the `:msg.sender`, `_target` owns the `_point` right away.
 otherwise, `_target` becomes the transfer proxy of `_point`.
 
 Requirements:
- - `_point` must not be active
- - `_point` must not be a planet with a galaxy prefix
- - `_point`'s prefix must be linked and under its spawn limit
- - `:msg.sender` must be either the owner of `_point`'s prefix, or an authorized spawn proxy for it
+
+- `_point` must not be active
+- `_point` must not be a planet with a galaxy prefix
+- `_point`'s prefix must be linked and under its spawn limit
+- `:msg.sender` must be either the owner of `_point`'s prefix, or an authorized spawn proxy for it
 
 Corresponds to the layer 2 `%spawn` action.
 
@@ -101,18 +102,19 @@ Corresponds to the layer 2 `%spawn` action.
 
 Transfer `_point` to `_target`, clearing all permissions data and keys if
 `_reset` is true. `_reset` set to makes this transaction a
-[breach](/using/id/guide-to-breaches), and thus this action increments the
+[breach](/using/id/guide-to-resets), and thus this action increments the
 [`continuityNumber`](/docs/azimuth/azimuth-eth#points) of `_point`, and usually
 the `keyRevisionNumber` as well (see [Life and
 Rift](/docs/azimuth/life-and-rift)).
 
 Requirements:
- - `:msg.sender` must be either `_point`'s current owner, authorized to transfer
-   `_point`, or authorized to transfer the current owner's points (i.e. is
-   listed as an ERC-721 operator in [`operators`](/docs/azimuth/azimuth-eth#other)).
- - `_target` must not be the zero address.
- 
-Corresponds to the layer 2 `%transfer-point` action. 
+
+- `:msg.sender` must be either `_point`'s current owner, authorized to transfer
+  `_point`, or authorized to transfer the current owner's points (i.e. is
+  listed as an ERC-721 operator in [`operators`](/docs/azimuth/azimuth-eth#other)).
+- `_target` must not be the zero address.
+
+Corresponds to the layer 2 `%transfer-point` action.
 
 #### `escape`
 
@@ -125,11 +127,12 @@ Request escape as `_point` to `_sponsor`.
 If an escape request is already active, this overwrites the existing request.
 
 Requirements:
- - `:msg.sender` must be the owner or manager of `_point`,
- - `_point` must be able to escape to `_sponsor` as per to `canEscapeTo()`
- 
- Corresponds to the layer 2 `%escape` action.
- 
+
+- `:msg.sender` must be the owner or manager of `_point`,
+- `_point` must be able to escape to `_sponsor` as per to `canEscapeTo()`
+
+Corresponds to the layer 2 `%escape` action.
+
 #### `cancelEscape`
 
 ```solidity
@@ -149,9 +152,10 @@ Corresponds to the layer 2 `%cancel-escape` action.
 As the relevant sponsor, accept the `_point`.
 
 Requirements:
- - `:msg.sender` must be the owner or management proxy
-    of `_point`'s requested sponsor
-    
+
+- `:msg.sender` must be the owner or management proxy
+  of `_point`'s requested sponsor
+
 Corresponds to the layer 2 `%adopt` action.
 
 #### `reject`
@@ -163,8 +167,9 @@ Corresponds to the layer 2 `%adopt` action.
 As the relevant sponsor, deny the `_point`'s `adopt` request.
 
 Requirements:
- - `:msg.sender` must be the owner or management proxy
-    of `_point`'s requested sponsor
+
+- `:msg.sender` must be the owner or management proxy
+  of `_point`'s requested sponsor
 
 Corresponds to the layer 2 `%reject` action.
 
@@ -177,9 +182,10 @@ Corresponds to the layer 2 `%reject` action.
 As the `_sponsor`, stop sponsoring the `_point`.
 
 Requirements:
- - `:msg.sender` must be the owner or management proxy
-    of `_point`'s current sponsor
-    
+
+- `:msg.sender` must be the owner or management proxy
+  of `_point`'s current sponsor
+
 Corresponds to the layer 2 `%detach` action.
 
 Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `detach` on
@@ -206,7 +212,8 @@ behalf of the owner. This includes public key configuration and
 operations relating to sponsorship.
 
 Requirements:
- - `:msg.sender` must be either `_point`'s current owner or the management proxy.
+
+- `:msg.sender` must be either `_point`'s current owner or the management proxy.
 
 Corresponds to the layer 2 `%set-management-proxy` action.
 
@@ -220,7 +227,8 @@ Give `_spawnProxy` the right to spawn points with the prefix `_prefix` using the
 `spawn` function.
 
 Requirements:
- - `:msg.sender` must be either `_point`'s current owner or the spawn proxy.
+
+- `:msg.sender` must be either `_point`'s current owner or the spawn proxy.
 
 Corresponds to the layer 2 `%set-spawn-proxy` action.
 
@@ -235,7 +243,8 @@ Configure the voting proxy for `_galaxy`.
 The voting proxy is allowed to start polls and cast votes on the point's behalf.
 
 Requirements:
- - `:msg.sender` must be either `_point`'s current owner or the voting proxy.
+
+- `:msg.sender` must be either `_point`'s current owner or the voting proxy.
 
 There is no corresponding layer 2 action since voting must occur on layer 1.
 
@@ -248,8 +257,9 @@ There is no corresponding layer 2 action since voting must occur on layer 1.
 Give `_transferProxy` the right to transfer `_point`.
 
 Requirements:
- - `:msg.sender` must be either `_point`'s current owner, an operator for the
-   current owner, or the transfer proxy.
+
+- `:msg.sender` must be either `_point`'s current owner, an operator for the
+  current owner, or the transfer proxy.
 
 Corresponds to the layer 2 `%set-transfer-proxy` action.
 
@@ -276,10 +286,11 @@ expired, then _any_ Ethereum address may call `updateUpgradePoll` or
 As `_galaxy`, start a poll for the Ecliptic upgrade `_proposal`.
 
 Requirements:
- - `:msg.sender` must be the owner or voting proxy of `_galaxy`,
- - the `_proposal` must expect to be upgraded from this specific
-   contract, as indicated by its `previousEcliptic` attribute.
-   
+
+- `:msg.sender` must be the owner or voting proxy of `_galaxy`,
+- the `_proposal` must expect to be upgraded from this specific
+  contract, as indicated by its `previousEcliptic` attribute.
+
 This action must be performed manually - it is not available in Bridge.
 
 #### `startDocumentPoll`
@@ -351,7 +362,7 @@ performed manually. It is not available in Bridge.
 The following functions may only be performed by the owner of the contract.
 There are only two such functions, one of which is to spawn galaxies. As all
 galaxies have already been spawned, it is no longer of any use. Thus only
-`setDnsDomains` is relevant today. 
+`setDnsDomains` is relevant today.
 
 #### `createGalaxy`
 
@@ -433,4 +444,3 @@ Release](https://etherscan.io/address/0x8c241098c3d3498fe1261421633fd57986d74aea
 Beginning in 2019, stars may spawn at most 1024 planets. This limit doubles
 every subsequent year until the maximum is reached. However, this limit is not
 currently implemented on [Layer 2](/docs/azimuth/l2/layer2).
-
