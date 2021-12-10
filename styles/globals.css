@@ -63,6 +63,10 @@ p,
   @apply text-base leading-relaxed;
 }
 
+.lead {
+  font-size: 1.3rem;
+}
+
 .type-sub {
   @apply text-sm;
 }

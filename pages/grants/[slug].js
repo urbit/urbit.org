@@ -19,7 +19,7 @@ import GrantPreview from "../../components/GrantPreview";
 import Section from "../../components/Section";
 import { DateTime } from "luxon";
 
-export default function Grant({ post, markdown, search, similarGrants }) {
+export default function Grant({ post, markdown, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -82,12 +82,6 @@ export default function Grant({ post, markdown, search, similarGrants }) {
             Apply for this grant
           </a>
         )}
-        <Section narrow className="flex flex-col">
-          <h3 className="pb-8">Similar Grants</h3>
-          {similarGrants.map((grant) => {
-            return <GrantPreview grant={grant} />;
-          })}
-        </Section>
       </SingleColumn>
       <Footer />
     </Container>
@@ -102,16 +96,10 @@ export async function getStaticProps({ params }) {
     "grants"
   );
 
-  const similarGrants = getSimilarGrants(
-    post.taxonomies.grant_type,
-    post.taxonomies.grant_category,
-    4
-  );
-
   const markdown = await Markdown({ post });
 
   return {
-    props: { post, markdown, similarGrants },
+    props: { post, markdown },
   };
 }
 

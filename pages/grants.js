@@ -11,6 +11,7 @@ import SingleColumn from "../components/SingleColumn";
 import Section from "../components/Section";
 import PostPreview from "../components/PostPreview";
 import GrantPreview from "../components/GrantPreview";
+import JoinGroup from "../components/JoinGroup";
 import {
   getAllPosts,
   getGrantsCategories,
@@ -145,73 +146,131 @@ export default function Grants({
       <SingleColumn>
         <Header search={search} />
         {
-          // Heading and introduction
+          // Heading and Introduction
         }
-        <Section wide short>
+        <Section wide>
           <div className="flex flex-column justify-between pb-16">
             <div className="measure">
               <h1 className="pb-16">Grants</h1>
-              <p className="mb-8">
-                Urbit is a community project. While anyone can contribute, we
-                help focus development and reward exceptional contribution
-                through our grants program.
+              <p className="mb-8 lead">
+                The Urbit Foundation's Grants program is one of our primary
+                mechanisms for distributing address space to the creators and
+                builders out there that help Urbit to succeed.
               </p>
-              <p>
-                Contributors of all types have access to a wide variety of
-                resources while working on projects, including a supportive team
-                at urbit.org, Tlon developers, and community mentors.
+              <p className="lead mb-8">
+                Read on to learn more about the various types of grants we
+                issue, get started on your own grant, and view past and present
+                grants that have been funded.
               </p>
             </div>
           </div>
           <div className="flex flex-wrap">
-            <Link href="#find-a-grant">
-              <button className="button-lg bg-green-400 text-white mr-2">
-                View Grants
+            <Link href="#grant-types">
+              <button className="button-lg bg-blue-400 text-white mr-2">
+                Learn More
               </button>
             </Link>
-            <Link href="#proposals">
-              <button className="button-lg bg-blue-400 text-white mr-2">
-                Submit a Proposal
+            <Link href="#join-community">
+              <button className="button-lg bg-black text-white mr-2">
+                Join the Community
+              </button>
+            </Link>
+            <Link href="#view-grants">
+              <button className="button-lg bg-wall-400 text-white mr-2">
+                View Grants
               </button>
             </Link>
           </div>
         </Section>
-        {/* Submit a proposal */}
-        <Section wide>
-          <h2 className="mb-16" id="proposals">
-            Proposals
-          </h2>
-          <p className="mb-8 measure">
-            Contributors are also welcome to have their personal projects
-            considered as a proposal. If you'd like to propose a project for the
-            grants program, first review our
-            <a href="/grants/proposals"> submission guide</a>, and feel free to{" "}
-            <a href="https://airtable.com/shrCi54rEDxgSZr3z">
-              submit your proposal
-            </a>
-            .
-          </p>
+        {
+          // Grants Programs
+        }
+        <Section wide short>
+          <div className="flex flex-column justify-between pb-12">
+            <div className="measure">
+              <h2 id="grant-types" className="pb-12">
+                Grant types
+              </h2>
+              <p className="mb-8">
+                The Urbit Foundation provides three different kinds of grants.
+                No matter what kind of grant you're working on, you'll receive
+                lots of support from the Foundation and a helpful, enthusiastic
+                community.
+              </p>
+              <p className="mb-4">
+                <b>Proposals</b> are for receiving funding for your project
+                &mdash; we fund all kinds projects, not strictly technical ones,
+                so don't hesitate to pitch your idea!
+              </p>
+              <Link href="/grants/proposals">
+                <button className="button-sm bg-blue-400 text-white mr-2 mb-8">
+                  Submit a Proposal
+                </button>
+              </Link>
 
-          <Link href="#find-a-grant">
-            <button
-              className="button-lg bg-blue-400 text-white mr-2"
-              onClick={() => {
-                setIncludeInProgress(true);
-                setIncludeCompleted(true);
-                setTab(1);
-                setTypes(["Proposal"]);
-              }}
-            >
-              View Proposals
-            </button>
-          </Link>
+              <p className="mb-4">
+                <b>Bounties</b> are contracts for work from trusted partners in
+                our ecosystem. The Urbit Foundation matches contributors with
+                projects, verifies the integrity of the poster, and will often
+                chip in on the funding.
+              </p>
+              <Link href="/grants/bounties">
+                <button className="button-sm bg-yellow-300 text-black mb-8">
+                  Post a Bounty
+                </button>
+              </Link>
+
+              <p className="mb-4">
+                <b>Apprenticeships</b> are opportunities to receive mentorship
+                from an experienced Urbit developer. These don't pay as well,
+                but are generally the best way to land a full-time job in Urbit
+                development
+              </p>
+              <Link href="/grants/apprenticeships">
+                <button className="button-sm bg-green-400 text-white">
+                  Apply for an Apprenticeship
+                </button>
+              </Link>
+            </div>
+          </div>
         </Section>
-        {/*  Find a Grant */}
+
+        <Section wide short>
+          <div className="flex flex-column justify-between">
+            <div className="measure">
+              <h2 id="join-community" className="pb-12">
+                Join the Community
+              </h2>
+              <p className="mb-4">
+                The community on the Urbit network itself is a great resource.
+                You can ask us questions directly there, find teammates to work
+                on your project with, and browse a huge list of project ideas if
+                you're looking for inspiration.
+              </p>
+
+              <p className="mb-8">Join the group here:</p>
+
+              <JoinGroup
+                emphasize
+                className="mb-8"
+                groupName="~wolref-podlex/foundation"
+              />
+
+              <p>
+                If you're not on the network, reach out to us at{" "}
+                <a href="mailto:grants@urbit.org">grants@urbit.org</a> and we'll
+                get back to you within a couple of days.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/*  View Grants */}
         <Section wide>
-          <h2 id="find-a-grant" className="pb-8">
-            Find a Grant
+          <h2 id="view-grants" className="pb-8">
+            View Grants
           </h2>
-          <h5 className="text-wall-600 font-semibold my-2">Work Programs</h5>
+          <h5 className="text-wall-600 font-semibold my-2">Programs</h5>
           <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
