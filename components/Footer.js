@@ -72,6 +72,11 @@ export default function Footer() {
                 <a className="mt-2 type-bold text-wall-500">FAQ</a>
               </div>
             </Link>
+            <Link href="//media.urbit.org/whitepaper.pdf">
+              <div>
+                <a className="mt-2 type-bold text-wall-500">Whitepaper</a>
+              </div>
+            </Link>
           </div>
           <div className="w-1/2 md:w-1/3 flex flex-col flex-shrink">
             <h4 className="mt-16 mb-8">News</h4>
