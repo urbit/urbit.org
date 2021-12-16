@@ -6,7 +6,7 @@ template = "doc.html"
 category = "arvo"
 +++
 
-A **ship** is an instance of an Urbit computer that is a peir on the [Arvo](/docs/glossary/arvo) network.
+A **ship** is an instance of an Urbit computer that is a pier on the [Arvo](/docs/glossary/arvo) network.
 
 A ship can be one of five classes:
 
