@@ -16,29 +16,12 @@ import Section from "../../components/Section";
 import PostPreview from "../../components/PostPreview";
 import GrantPreview from "../../components/GrantPreview";
 
-export function Post({ post, markdown, search }) {
+export default function Post({ post, markdown, search }) {
   return <BasicPage post={post} markdown={markdown} search={search} />;
 }
 
-export default function Post2({ search }) {
-  return (
-    <Container>
-      <Head>
-        <title>Grants • Submit a Proposal</title>
-      </Head>
-      <SingleColumn>
-        <Header search={search} />
-        <Section narrow>
-          <h1>Submit a Proposal</h1>
-        </Section>
-      </SingleColumn>
-      <Footer />
-    </Container>
-  );
-}
-
 export async function getStaticProps() {
-  // const post = getPostBySlug("/proposals", ["title", "slug", "content"], "/");
+  const post = getPostBySlug("/proposals", ["title", "slug", "content"], "/");
 
   const markdown = await Markdown({ post });
 
