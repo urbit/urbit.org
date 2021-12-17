@@ -239,16 +239,40 @@ export default function Grants({
           <div className="flex flex-column justify-between">
             <div className="measure">
               <h2 id="join-community" className="pb-12">
-                Join the Community
+                Community
               </h2>
               <p className="mb-4">
-                The community on the Urbit network itself is a great resource.
-                You can ask us questions directly there, find teammates to work
-                on your project with, and browse a huge list of project ideas if
-                you're looking for inspiration.
+                We believe that grants are more successful when tackled with the
+                support of a community, and community starts with individual
+                relationships.
               </p>
+              <ul className="mb-4">
+                <li>
+                  <p>
+                    <Link href="/grants/proposals">Proposals</Link> are approved
+                    and stewarded by past grant workers
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/grants/bounties">Bounties</Link> are overseen
+                    by those that post them
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
+                    are largely about building a relationship between apprentice
+                    and mentor
+                  </p>
+                </li>
+              </ul>
 
-              <p className="mb-8">Join the group here:</p>
+              <p className="mb-8">
+                Whether you're gearing up to submit your proposal or just
+                thinking about it, the best way to get started is to join the
+                Foundation group on Urbit:
+              </p>
 
               <JoinGroup
                 emphasize
