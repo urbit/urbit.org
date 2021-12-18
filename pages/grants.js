@@ -82,7 +82,9 @@ export default function Grants({
   };
 
   const annotatedPosts = posts.map((post) => {
-    if (post.extra.completed) {
+    if (post.extra.canceled) {
+      return { ...post, status: "canceled" };
+    } else if (post.extra.completed) {
       return { ...post, status: "completed" };
     } else if (post.extra.assignee && post.extra.assignee.length > 0) {
       return { ...post, status: "wip" };
@@ -93,8 +95,7 @@ export default function Grants({
 
   const byStatus = (post) => {
     return (
-      (!post.extra.canceled &&
-        (includeOpen ? post.status === "open" : false)) ||
+      (includeOpen ? post.status === "open" : false) ||
       (includeCompleted ? post.status === "completed" : false) ||
       (includeInProgress ? post.status === "wip" : false)
     );
