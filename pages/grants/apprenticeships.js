@@ -1,5 +1,5 @@
 import { getPostBySlug } from "../../lib/lib";
-import BasicPage from "../../components/BasicPage";
+import GrantProgramOverview from "../../components/GrantProgramOverview";
 import Markdown from "../../components/Markdown";
 // new
 import Head from "next/head";
@@ -17,13 +17,22 @@ import PostPreview from "../../components/PostPreview";
 import GrantPreview from "../../components/GrantPreview";
 
 export default function Post({ post, markdown, search }) {
-  return <BasicPage post={post} markdown={markdown} search={search} />;
+  return (
+    <GrantProgramOverview
+      program="apprenticeships"
+      post={post}
+      markdown={markdown}
+      search={search}
+      actionText="View Apprenticeships"
+      actionLink="/grants?program=apprenticeship&completed=true#view-grants"
+    />
+  );
 }
 
 export async function getStaticProps() {
   const post = getPostBySlug(
     "/apprenticeships",
-    ["title", "slug", "content"],
+    ["title", "date", "slug", "content"],
     "/"
   );
 

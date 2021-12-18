@@ -1,5 +1,5 @@
 import { getPostBySlug } from "../../lib/lib";
-import BasicPage from "../../components/BasicPage";
+import GrantProgramOverview from "../../components/GrantProgramOverview";
 import Markdown from "../../components/Markdown";
 // new
 import Head from "next/head";
@@ -17,7 +17,16 @@ import PostPreview from "../../components/PostPreview";
 import GrantPreview from "../../components/GrantPreview";
 
 export default function Post({ post, markdown, search }) {
-  return <BasicPage post={post} markdown={markdown} search={search} />;
+  return (
+    <GrantProgramOverview
+      program="bounties"
+      post={post}
+      markdown={markdown}
+      search={search}
+      actionText="View Open Bounties"
+      actionLink="/grants?program=bounty&open=true&wip=false#view-grants"
+    />
+  );
 }
 
 export async function getStaticProps() {

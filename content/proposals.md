@@ -1,6 +1,6 @@
 +++
 title = "Submit a Proposal"
-date = "2021-11-25"
+date = "2021-12-17"
 weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
