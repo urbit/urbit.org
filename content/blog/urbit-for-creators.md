@@ -30,7 +30,7 @@ Urbit has already seen several communities get excited about the ways Urbit coul
 
 [Other Life](https://www.otherlife.co), a community of philosophers and creators founded by the entrepreneurial Justin Murphy.
 
-The Stack, an entertaining and informative podcast with a decidedly Urbit flavor, hosted by Josh and Andy.
+[The Stack](https://orbisledger.news/), an entertaining and informative podcast with a decidedly Urbit flavor, hosted by Josh and Andy.
 
 [door.link](https://www.door.link), a vibey and idiosyncratic music collective.
 

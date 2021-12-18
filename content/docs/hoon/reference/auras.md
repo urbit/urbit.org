@@ -55,7 +55,7 @@ Capital letters at the end of auras indicate the bitwidth in binary powers of
 two, starting from A.
 
 ```
-        @ubD    signed single-byte (8-bit) decimal
+        @udD    unsigned single-byte (8-bit) decimal
         @tD     8-bit ASCII text
         @rhE    half-precision (16-bit) floating-point number
         @uxG    unsigned 64-bit hexadecimal

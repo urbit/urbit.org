@@ -12,7 +12,7 @@ Urbit's userspace is managed by Arvo's Gall vane.
 
 An overview of userspace in Urbit.
 
-## [Gall Guide](/docs/userspace/gall-guide)
+## [Gall Guide](/docs/userspace/gall-guide/intro)
 
 Learn how to develop Gall agents.
 

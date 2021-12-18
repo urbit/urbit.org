@@ -6,7 +6,7 @@ template = "doc.html"
 
 Urbit's userspace is managed by Arvo's Gall vane.
 
-## [Gall Guide](/docs/userspace/gall-guide)
+## [Gall Guide](/docs/userspace/gall-guide/intro)
 
 Learn how to develop Gall agents.
 
@@ -22,3 +22,7 @@ Resources on the flagship web client Landcape, through which most users interact
 ## [Threads](/docs/userspace/threads/)
 
 Resources on threads - monadic functions useful for complex IO.
+
+## [Distribution](/docs/userspace/dist/dist)
+
+Learn how to distribute apps on Urbit.
