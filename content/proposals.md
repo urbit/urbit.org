@@ -34,7 +34,7 @@ Your group should:
 
 You'll write your proposal in markdown into the notebook, and engage with community members that would approve your proposal in the discussion channel.
 
-After writing up your proposal, [fill out this form](https://airtable.com/shrCi54rEDxgSZr3z), including the name of your group. The group name can be found in the URL of your browser. For example, in the URL `https://<ship-domain>/apps/landscape/~landscape/ship/~wolref-podlex/foundation` the group name is `~wolref-podlex/foundation`.
+After writing up your proposal, [fill out this form](https://airtable.com/shrCi54rEDxgSZr3z), including the name of your group. The group name can be found in the URL of your browser. For example, in the URL `https://your.ship.domain/apps/landscape/~landscape/ship/~wolref-podlex/foundation` the group name is `~wolref-podlex/foundation`.
 
 ### Elements of a proposal
 
