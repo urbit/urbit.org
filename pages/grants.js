@@ -2,6 +2,7 @@ import Head from "next/head";
 import { TableOfContents } from "../components/TableOfContents";
 import Meta from "../components/Meta";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import Container from "../components/Container";
@@ -70,16 +71,26 @@ export default function Grants({
   giftPosts,
   gifts,
 }) {
+  const router = useRouter();
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
-  const [includeOpen, setIncludeOpen] = useState(true);
-  const [includeCompleted, setIncludeCompleted] = useState(false);
-  const [includeInProgress, setIncludeInProgress] = useState(true);
-  const [tab, setTab] = useState(0);
+  const includeOpen = router.query.open === "true";
+  const includeCompleted = router.query.completed === "true";
+  const programFilter = router.query.program;
   const post = {
     title: "Grants",
     description: "Contribute to the Urbit project while earning address space.",
   };
+
+  let includeInProgress = router.query.wip === "true";
+
+  if (
+    router.query.open === undefined &&
+    router.query.completed === undefined &&
+    router.query.wip === undefined
+  ) {
+    includeInProgress = true;
+  }
 
   const annotatedPosts = posts.map((post) => {
     if (post.extra.canceled) {
@@ -299,29 +310,49 @@ export default function Grants({
           <div className="flex flex-wrap items-center pb-2">
             <button
               onClick={() => {
-                setTab(0);
+                let query = { ...router.query };
+                delete query.program;
+                router.push(
+                  {
+                    pathname: "/grants",
+                    query: { ...query },
+                  },
+                  "",
+                  { scroll: false }
+                );
                 setTypes(types);
               }}
               className={`badge-lg my-2 mr-2 ${
-                tab === 0 ? "text-white bg-black" : "text-wall-500 bg-wall-100"
+                programFilter === undefined
+                  ? "text-white bg-black"
+                  : "text-wall-500 bg-wall-100"
               }`}
             >
               All <div className="opacity-50 ml-2">{allCount}</div>
             </button>
-            {types.map((type, index) => {
+            {types.map((type) => {
               const className = classnames({
                 "bg-blue-400 text-white":
-                  tab === index + 1 && type === "Proposal",
+                  programFilter === "proposal" && type === "Proposal",
                 "bg-green-400 text-white":
-                  tab === index + 1 && type === "Apprenticeship",
-                "bg-yellow-300": tab === index + 1 && type === "Bounty",
-                "bg-wall-100 text-wall-500": tab !== index + 1,
+                  programFilter === "apprenticeship" &&
+                  type === "Apprenticeship",
+                "bg-yellow-300":
+                  programFilter === "bounty" && type === "Bounty",
+                "bg-wall-100 text-wall-500": type !== programFilter,
               });
               return (
                 <button
                   onClick={() => {
                     // + 1 is added here because the 'all' button precedes this sequence
-                    setTab(index + 1);
+                    router.push(
+                      {
+                        pathname: "/grants",
+                        query: { ...router.query, program: type.toLowerCase() },
+                      },
+                      "",
+                      { scroll: false }
+                    );
                     setTypes([type]);
                   }}
                   className={`badge-lg mr-2 ${className}`}
@@ -353,21 +384,48 @@ export default function Grants({
             <div className="pb-8 flex items-center">
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeOpen(!includeOpen)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, open: !includeOpen },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeOpen ? "Exclude Open" : "Include Open"}
               </button>
 
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeCompleted(!includeCompleted)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, completed: !includeCompleted },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeCompleted ? "Exclude Completed" : "Include Completed"}
               </button>
 
               <button
                 className="mr-4 badge-sm bg-black text-white"
-                onClick={() => setIncludeInProgress(!includeInProgress)}
+                onClick={() =>
+                  router.push(
+                    {
+                      pathname: "/grants",
+                      query: { ...router.query, wip: !includeInProgress },
+                    },
+                    "",
+                    { scroll: false }
+                  )
+                }
               >
                 {includeInProgress
                   ? "Exclude In Progress"
@@ -397,23 +455,11 @@ export async function getStaticProps() {
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "grants"
   );
-  // all the gift posts stuff can be removed once we migrate to gifts
-  // let giftPosts = getAllPosts(
-  //   ["title", "slug", "date", "description", "extra", "taxonomies"],
-  //   "blog"
-  // );
-  // giftPosts.map((e) => (e.section = "blog"));
+
   let updates = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
     "updates"
   );
-  // updates.map((e) => (e.section = "updates"));
-  // giftPosts.push(...updates);
-  // giftPosts = giftPosts
-  //   .filter((e) => e?.taxonomies?.grant_type?.includes("Gift"))
-  //   .sort((a, b) => (a.date > b.date ? -1 : 1));
-
-  // const gifts = getAllPosts(["name", "planet", "date", "link"], "gifts");
 
   // The layout expects exactly 3
   const featuredGrants = [
@@ -423,14 +469,6 @@ export async function getStaticProps() {
   ].map((slug) =>
     getPostBySlug(slug, ["title", "slug", "date", "extra"], "grants")
   );
-
-  // Layout expects exactly 2
-  // const giftPosts = [
-  //   "2021-06-16-update",
-  //   "gifts-q3-2020",
-  // ].map((slug) =>
-  //   getPostBySlug(slug, ["title", "slug", "date", "extra"], "blog")
-  // );
 
   const giftPosts = [
     getPostBySlug(
