@@ -205,7 +205,7 @@ export default function Home({ posts, events, openGrantsCount, search }) {
         <Section narrow>
           <div className="flex items-center pb-12">
             <h2 className="m-0 p-0 mr-4">Grants</h2>
-            {/* <Link href="/grants#find-a-grant"> */}
+            {/* <Link href="/grants/proposals"> */}
             {/*   <a className="bg-green-400 text-white badge-lg"> */}
             {/*     {openGrantsCount} Open */}
             {/*   </a> */}
@@ -236,12 +236,18 @@ export default function Home({ posts, events, openGrantsCount, search }) {
           <div className="measure py-12">
             <p className="pb-12">
               We regularly grant address space to give motivated contributors
-              real ownership and authority over the network. Contributions
-              include education, promotion, and development efforts.
+              real ownership and authority over the network.
             </p>
-            <div className="table">
+            <div className="flex flex-wrap">
               <Link href="/grants">
-                <a className="button-lg bg-green-400 text-white">View Grants</a>
+                <a className="button-lg bg-green-400 text-white mr-2 mb-8">
+                  View Grants
+                </a>
+              </Link>
+              <Link href="/grants/proposals">
+                <button className="button-lg bg-blue-400 text-white">
+                  Submit a Proposal
+                </button>
               </Link>
             </div>
           </div>
