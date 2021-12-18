@@ -11,6 +11,7 @@ reward = 2
 mentor = "~master-morzod"
 assignee = "~nosmes-sibwyx, ~topfet-parmed"
 completed = false
+canceled = true
 work_request_link = ""
 +++
 

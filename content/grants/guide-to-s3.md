@@ -12,7 +12,7 @@ description = "Contribute an easy-to-follow guide on self-hosting an S3 storage 
 reward = 1
 assignee = "~tomnyr-tirsyr"
 id = ""
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

@@ -13,7 +13,7 @@ reward = 6
 assignee = "~forfel-norfel"
 id = "1935638429"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 

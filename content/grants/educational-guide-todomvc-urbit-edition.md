@@ -12,7 +12,7 @@ description = "The goal of this bounty is to create a series of guides that can 
 reward = 10
 assignee = "~rabsef-bicrym"
 id = "1372696624"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

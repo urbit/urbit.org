@@ -10,7 +10,7 @@ description = "Publish Urbit notebooks to the clearweb"
 reward = 5
 assignee = "~tacryt-socryp"
 grant_id = "P0072"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

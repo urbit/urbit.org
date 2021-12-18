@@ -10,7 +10,7 @@ description = "Bring Automatic Speech Recognition to Urbit"
 reward = 2
 assignee = "~hosted-fornet"
 grant_id = "P0053"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

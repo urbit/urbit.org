@@ -13,6 +13,7 @@ reward = 10
 assignee = "~naltyc-wornes (dasfeb.industries)"
 id = "1395578140"
 completed = false
+canceled = true
 link = ""
 +++
 

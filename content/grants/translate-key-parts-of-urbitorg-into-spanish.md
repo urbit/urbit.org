@@ -13,7 +13,7 @@ reward = 1
 assignee = "Tom Holford"
 id = "446864346"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 

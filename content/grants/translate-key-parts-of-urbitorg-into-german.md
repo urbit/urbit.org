@@ -13,7 +13,7 @@ reward = 1
 assignee = "~hocdep-labtel"
 id = "1163466965"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 

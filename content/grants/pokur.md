@@ -10,7 +10,7 @@ description = "Multiplayer Poker App on Urbit"
 reward = 2
 assignee = "~hodzod-walrus"
 grant_id = "P0084"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

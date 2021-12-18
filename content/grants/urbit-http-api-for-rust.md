@@ -12,7 +12,7 @@ description = "This proposal seeks to create an API to interact with an Urbit sh
 reward = 3
 assignee = "~mocrux-nomdep"
 id = "1120978319"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

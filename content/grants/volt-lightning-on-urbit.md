@@ -11,7 +11,7 @@ image = ""
 description = "An Urbit-native Lightning client and integration with `lnd` on 'provider' ships."
 reward = 7
 assignee = "~dasrun-fadben"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

@@ -12,7 +12,7 @@ description = "A proposal to build an Urbit HTTP Api for the Elixir language, br
 reward = 3
 assignee = "mirtyl-wacdec"
 id = "2126792953"
-completed = false
+completed = true
 link = ""
 +++
 

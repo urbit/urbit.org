@@ -13,7 +13,7 @@ reward = 3
 assignee = "~wolnyl-pasreg"
 id = "790269488"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 

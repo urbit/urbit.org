@@ -10,7 +10,7 @@ description = "An agent that works with SendGrid, to be used for sending subscri
 reward = 4
 assignee = "~novlud-padtyv"
 grant_id = "P0082"
-completed = false
+completed = true
 canceled = false
 link = ""
 

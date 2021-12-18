@@ -12,7 +12,7 @@ description = "Create a bot that that will relay messages between Urbit chatroom
 reward = 1
 assignee = "~fitnub-basbud"
 id = ""
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

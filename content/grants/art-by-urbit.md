@@ -12,7 +12,7 @@ description = "Art by Urbit will provide a monthly digest of art produced by & f
 reward = 1
 assignee = "nartes-fasrum"
 id = "636838408"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

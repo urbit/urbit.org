@@ -13,7 +13,7 @@ reward = 1
 assignee = "mislyr-misnyt"
 id = "2020133197"
 completed = false
-canceled = false
+canceled = true
 link = ""
 +++
 

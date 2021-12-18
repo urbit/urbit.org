@@ -12,7 +12,7 @@ description = "Build a public, open HTTP API for exploring metrics about the Urb
 reward = 5
 assignee = "~dinleb-rambep"
 id = "1101665172"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
