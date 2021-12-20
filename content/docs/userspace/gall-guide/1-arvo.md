@@ -62,7 +62,7 @@ Here's a brief summary of each of the vanes:
   front-end [glob](/docs/userspace/dist/glob) via the `%docket` agent, so you'd
   not typically have your agent deal with Eyre directly.
 
-- **Gall**: App management vane; this is where you agent lives.
+- **Gall**: App management vane; this is where your agent lives.
 
 - **Iris**: Web client vane. If you want your agent to query external web APIs and
   the like, it's done via Iris. Oftentimes web API interactions are
