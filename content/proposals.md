@@ -1,6 +1,6 @@
 +++
 title = "Submit a Proposal"
-date = "2021-12-17"
+date = "2021-01-03"
 weight = 1
 description = "A comprehensive guide to creating a grant proposal"
 +++
@@ -46,7 +46,7 @@ Good proposals all include the following:
 - The **amount of funding** you'd like for the project.
 - What **specific deliverables** will look like.
 
-You're welcome to break your project into _milestones_, each of which must have their own completion dates, funding amounts and deliverables.
+It's recommended to break your project into _milestones_, each of which must have its own completion dates, funding amounts and deliverables. In general, proposals should target a first deliverable within two months of the start of the project.
 
 Here are some examples of exceptional proposals for reference:
 
@@ -56,9 +56,22 @@ Here are some examples of exceptional proposals for reference:
 
 ### Funding
 
-As of December 2021, the Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
+As of January 2021, the Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
+
+Our formula for determining how much to value a particular grant is a function of time spent on the project, value to the Urbit universe, and track record of the contributor (either via past work within the grants program, or a relevant external background).
 
 If you're looking for more funding for a project that you're planning on devoting 100% of your full-time work to, you might instead consider [The Combine](https://the-combine.org).
+
+### Abandonment
+
+A proposal is considered abandoned when a milestone is more than a month behind schedule. When a proposal is considered abandoned, the Urbit Foundation may choose to compensate the work differently upon completion, or not at all.
+
+The intent of this policy is to:
+
+- Reduce the support burden on the Urbit Foundation and community when contributors go silent
+- Keep grants current: what's important today might not be important a year later
+
+We try to use this rule in good faith. Reasonable delays due to unforseen life circumstances or project complexity will be tolerated, so long as the contributor is communicative with their champion and/or the Urbit Foundation. In these cases we'll encourage the contributor to modify the timelines and/or scope of their proposals to accommodate new information.
 
 ## Community approval
 
@@ -97,4 +110,4 @@ The Urbit Foundation must comply with international law when distributing addres
 
 After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount in USD agreed upon in your grant or milestone, which the Foundation will pay in WSTR.
 
-We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individuall, and weekends/holidays sometimes interfere.
+We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individual, and weekends/holidays sometimes interfere.
