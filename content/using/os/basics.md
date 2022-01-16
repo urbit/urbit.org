@@ -178,6 +178,29 @@ To cycle the keys of a moon without a factory reset, run:
 
 You can then run `|rekey` on the moon with the key given by the above command as the argument.
 
+### Maintaining Moons Through A Breach {#restoring-moons}
+
+Moons are [always subordinate to the ship that issued them](/docs/glossary/moon). Their PKI is sent around the network by their parent planet/star/galaxy. As such, if the sponsor planet/star/galaxy of a moon breaches, other urbits on the network who were not aware of the moon prior to the breach (knew its PKI information) will not be able to reach the old moon. Moons can, however, be preserved over the breach of their sponsor and re-added to `jael`. The following guide assumes you are on `[life=n rift=1]` where `n` can be any life #. If you've previously breached your moon and want to preserve it, you'll need to modify the instructions to include setting the appropriate rift using `|moon-breach` from `hood`.
+
+To add an existing moon to `jael` on a breached planet, you'll need the following:
+
+ - Your moon's current life # `+keys ~sampel-monler-dozzod-dozzod` (run on the moon) _and_;
+ - Your moon's sponsor's understanding of your moon's current life (same command, run on the sponsor).
+ - Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
+ - Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
+
+If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using `pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))`. This should produce a long `@ud`.
+
+Once you have all of the requisite elements, you can perform the following on the moon's sponsor:
+
+```
+|moon-cycle-keys ~sampel-monler-dozzod-dozzod, =life <life # of moon, per moon, here>, =public-key <result of the existing keyfile conversion to pass or the result of scrying jael on your moon, found above>
+```
+
+Eventually, the PKI will populate through the network w/ the correct life #, reconnecting your previously orphaned moon. You can speed this up by `|hi ~zod` and `|hi ~sapel-monler-dozzod-dozzod`-ing from the moon and sponsor, respectively (replace with the appropriate ship names).
+
+
+
 ## Escaping A Sponsor {#escape}
 
 To use the network as a planet or star, you must be sponsored by an active star
