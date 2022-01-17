@@ -5,7 +5,7 @@ ends = "2022-01-21T20:30:00"
 timezone = "America/Chicago"
 location = "Distribution Hall, 1500 East 4th St. Austin, TX"
 image = ""
-registration_url = "https://t.co/T9HUlv5RRG"
+registration_url = "https://www.meetup.com/Urbit-Austin/events/282723542/"
 description = "The Combine"
 dark = false
 
