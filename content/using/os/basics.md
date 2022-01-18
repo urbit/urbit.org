@@ -197,7 +197,7 @@ Once you have all of the requisite elements, you can perform the following on th
 |moon-cycle-keys ~sampel-monler-dozzod-dozzod, =life <life # of moon, per moon, here>, =public-key <result of the existing keyfile conversion to pass or the result of scrying jael on your moon, found above>
 ```
 
-Eventually, the PKI will populate through the network w/ the correct life #, reconnecting your previously orphaned moon. You can speed this up by `|hi ~zod` and `|hi ~sapel-monler-dozzod-dozzod`-ing from the moon and sponsor, respectively (replace with the appropriate ship names).
+Eventually, the PKI will populate through the network w/ the correct life #, reconnecting your previously orphaned moon. You can speed this up by `|hi ~zod` and `|hi ~sampel-monler-dozzod-dozzod`-ing from the moon and sponsor, respectively (replace with the appropriate ship names).
 
 
 
