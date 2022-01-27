@@ -220,27 +220,26 @@ export default function Grants({
                 </button>
               </Link>
 
-              <p className="mb-4">
-                <b>Bounties</b> are contracts for work from trusted partners in
-                our ecosystem. The Urbit Foundation matches contributors with
-                projects, verifies the integrity of the poster, and will often
-                chip in on the funding.
-              </p>
-              <Link href="/grants/bounties">
-                <button className="button-sm bg-yellow-300 text-black mb-8">
-                  Post a Bounty
-                </button>
-              </Link>
+              {/* <p className="mb-4"> */}
+              {/*   <b>Bounties</b> are contracts for work from trusted partners in */}
+              {/*   our ecosystem. The Urbit Foundation matches contributors with */}
+              {/*   projects often chip in on the funding. */}
+              {/* </p> */}
+              {/* <Link href="/grants/bounties"> */}
+              {/*   <button className="button-sm bg-yellow-300 text-black mb-8"> */}
+              {/*     Post a Bounty */}
+              {/*   </button> */}
+              {/* </Link> */}
 
               <p className="mb-4">
-                <b>Apprenticeships</b> are opportunities to receive mentorship
-                from an experienced Urbit developer. These don't pay as well,
-                but are generally the best way to land a full-time job in Urbit
-                development
+                <b>Apprenticeships</b> are practical learning opportunities for
+                new Urbit developers provided by members of the Urbit community.
+                They're one of the best ways to level up your skills, and often
+                lead to full-time jobs.
               </p>
               <Link href="/grants/apprenticeships">
                 <button className="button-sm bg-green-400 text-white">
-                  Apply for an Apprenticeship
+                  Become an Apprentice
                 </button>
               </Link>
             </div>
