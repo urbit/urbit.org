@@ -24,4 +24,4 @@ We'll discuss mapping out the current Urbit technology complex, how to promote o
 
 Neal Davis has taught computer science at the University of Illinois since 2015. Trained as a nuclear engineer, he moved through high-performance computing into training engineers to use computers well. He has joined the Urbit Foundation to work on all aspects of our developer experience.
 
-Hosted by Josh Lehman, the Director of the Urbit Foundation.
+[Sign up for Hoon School Live here](https://hooniversity.org/enroll/).
