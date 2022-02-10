@@ -230,7 +230,9 @@ Note that these paraphrased points are just for summarization purposes. The lang
 
 Urbit started back in 2002 as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
 
-In early 2019, Curtis left the Urbit project and gave all of his voting interest (both as address space and voting shares in the company) back to Tlon. He retains a non-voting, minority interest in both the address space and the company — but is not involved in the day-to-day development or operations.
+In early 2019, Curtis left Tlon and the Urbit project. He gave Tlon all of his
+voting interest in the network (his galaxies), and he no longer owns any Tlon
+stock. He retains a non-voting, minority interest in the address space — but is not involved in the day-to-day development or operations.
 
 Curtis laid the foundation for Urbit by delivering its first prototype but, since 2013, it has been refined and almost entirely rewritten by a community of developers. No one working on Urbit today had anything to do with Curtis’s writing. For the most part, we couldn’t be less interested in it.
 

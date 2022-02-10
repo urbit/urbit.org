@@ -12,7 +12,7 @@ Following this lesson, we will introduce Gall, a vane used to build user space a
 
 In order to introduce vanes, we must first introduce the concept of a [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)). The kernel is in some sense the "core" of an operating system, in that it has complete control over all events in the system and may perform any operation. It is the first part of the operating system to boot, and is responsible for spawning all other processes and routing their communication to one another. The tasks a kernel performs are very low level - managing memory, prioritizing processes, keeping track of time, managing hardware I/O, etc.
 
-Kernel code is generally kept to be as minimal as possible, and so almost anything non-trivial is put into an extension called a kernel module. **Vanes** are kernel modules for Arvo. Arvo currently has eight vanes known as Ames, Behn, Clay, Dill, Eyre, Ford, Gall, and Hall. You can read a short description of each one in [Arvo](/docs/arvo/), along with a more thorough explanation of how vanes communicate than the following.
+Kernel code is generally kept to be as minimal as possible, and so almost anything non-trivial is put into an extension called a kernel module. **Vanes** are kernel modules for Arvo. Arvo currently has seven vanes known as Ames, Behn, Clay, Dill, Eyre, Gall, and Iris. You can read a short description of each one in [Arvo](/docs/arvo/), along with a more thorough explanation of how vanes communicate than the following.
 
 Vanes communicate with one another by exchanging chunks of data known as
 `move`s. We will get into more detail above what a `move` is in our example of
@@ -101,10 +101,10 @@ This arm is called when Behn is first launched. It gives Behn a `duct` to the un
 
 ### External interface
 
-Arvo talks to Behn via four arms, `++call`, `++load`, `++scry`, `++stay`, and ``++take``, which ultimately call arms in the `event-core` of which we have listed a subset above. Here we will only look at `++call` and `++take`.
+Arvo talks to Behn via five arms, `++call`, `++load`, `++scry`, `++stay`, and ``++take``, which ultimately call arms in the `event-core` of which we have listed a subset above. Here we will only look at `++call` and `++take`.
 
 #### ++call
 When Behn is `%pass`ed a `note` from another vane, that is enacted upon by Arvo via the `++call` gate. The `note` specifies what action to take, which are references to the internal arms. This is done by including in the `note` a symbol such as `%born`, `%rest`, `%wait`, or `%wake`, which ultimately call the arms with those names in the `event-core`.
 
 #### ++take
-When Behn is ready to inform another vane or application that a timer has elapsed, Arvo activates the `++take` gate. That is, Arvo `take`s a `gift` from Behn that includes the symbol `%wake`, and `%pass`es it to the the requestee. `%wake` is the only kind of `gift` that Behn can make, but other vanes may possess multiple responses.
+When Behn is ready to inform another vane or application that a timer has elapsed, Arvo activates the `++take` gate. That is, Arvo `take`s a `gift` from Behn that includes the symbol `%wake`, and `%pass`es it to the requestee. `%wake` is the only kind of `gift` that Behn can make, but other vanes may possess multiple responses.

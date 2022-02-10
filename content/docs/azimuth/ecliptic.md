@@ -164,7 +164,7 @@ Corresponds to the layer 2 `%adopt` action.
     function reject(uint32 _point)
 ```
 
-As the relevant sponsor, deny the `_point`'s `adopt` request.
+As the relevant sponsor, deny the `_point`'s `%adopt` request.
 
 Requirements:
 
@@ -188,7 +188,7 @@ Requirements:
 
 Corresponds to the layer 2 `%detach` action.
 
-Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `detach` on
+Unlike all other layer 1 actions, layer 1 sponsors may use a layer 1 `%detach` on
 a layer 2 sponsee. See the [Layer 2](/docs/azimuth/l2/layer2#sponsorship)
 section for more detail. The detach action available in Bridge is a layer 2
 action, so a layer 1 detach must be done

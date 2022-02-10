@@ -267,7 +267,7 @@ Let's say you want to write a function that takes a gate as one (or more) of its
 
 It's quite useful to be able to pass cores as arguments. But let's think about how to write a function that accepts a core as input. How do we define a sample so that it accepts a core?
 
-We _could_ define the sample by example -- i.e., with `$_`, or `_` for short -- using a core. Consider the following, in which `mycore` is the example core and `apply` is function that accepts gates:
+We _could_ define the sample by example -- i.e., with `$_`, or `_` for short -- using a core. Consider the following, in which `mycore` is the example core and `apply` is a function that accepts gates:
 
 ```
 > =mycore =>([12 13] |=(a=@ +(a)))
