@@ -27,16 +27,16 @@ Guide](/docs/userspace/gall-guide/intro) prior to signing up.
 There are two ways to sign up for an apprenticeship:
 
 1. [Apply for an open apprenticeship](/grants?program=apprenticeship&open=true&wip=false&completed=false)
-2. [Sign up to be matched to a mentor]()
+2. [Sign up to be matched to a mentor](https://airtable.com/shrUZQpHqRtudHhAx)
 
 Apprenticeships are sometimes posted on the site to be claimed, but more often
 than not they emerge out of a conversation between a mentor and an apprentice.
 This is because mentors are generally busy engineering, and while they know many
 things that need to be done, getting those ideas into writing is difficult.
 
-When you [sign up to be matched](), the Urbit Foundation will review your
+When you [sign up to be matched](https://airtable.com/shrUZQpHqRtudHhAx), the Urbit Foundation will review your
 application, pass it around to available mentors, and more often than not a call
-will get scheduled.
+will get scheduled and an apprenticeship started.
 
 ## How it works
 
@@ -45,7 +45,7 @@ parties have signed a contract with the Urbit Foundation, work can proceed.
 
 Mentors and apprentices work together by having weekly pairing sessions and
 maintaining an open line of communication over Urbit. It's expected that mentors
-put at least three hours per week into supporting their apprentice.
+put at least two hours per week into supporting their apprentice.
 
 When a mentor has signed off on the apprentice's work, the mentor will notify
 the Urbit Foundation of completion and the apprentice will invoice the UF for
