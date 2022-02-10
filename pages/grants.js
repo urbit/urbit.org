@@ -74,7 +74,8 @@ export default function Grants({
   const router = useRouter();
   const [activeTags, setTags] = useState([]);
   const [activeTypes, setTypes] = useState(types);
-  const includeOpen = router.query.open === "true";
+  const includeOpen =
+    router.query.open === undefined || router.query.open === "true";
   const includeCompleted = router.query.completed === "true";
   const programFilter = router.query.program;
   const post = {
@@ -82,7 +83,8 @@ export default function Grants({
     description: "Contribute to the Urbit project while earning address space.",
   };
 
-  let includeInProgress = router.query.wip === "true";
+  let includeInProgress =
+    router.query.wip === undefined || router.query.wip === "true";
 
   if (
     router.query.open === undefined &&
