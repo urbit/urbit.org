@@ -75,7 +75,7 @@ export default function Grant({ post, markdown, search }) {
         </Section>
         {canApply && (
           <a
-            className="bg-green-400 text-white badge-sm"
+            className="bg-green-400 text-white button-lg"
             href={post?.extra?.work_request_link}
             target="_blank"
           >
