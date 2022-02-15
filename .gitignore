@@ -39,4 +39,8 @@ yarn-error.log*
 # editors
 /.nova/
 
+# rss
+public/rss.xml
+
 yarn.lock
+
