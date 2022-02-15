@@ -211,28 +211,19 @@ export default function Grants({
                 lots of support from the Foundation and a helpful, enthusiastic
                 community.
               </p>
+              {/* Proposals */}
               <p className="mb-4">
                 <b>Proposals</b> are for receiving funding for your project
                 &mdash; we fund all kinds projects, not strictly technical ones,
                 so don't hesitate to pitch your idea!
               </p>
               <Link href="/grants/proposals">
-                <button className="button-sm bg-blue-400 text-white mr-2 mb-8">
+                <button className="button-sm bg-blue-400 text-white mb-8">
                   Submit a Proposal
                 </button>
               </Link>
 
-              {/* <p className="mb-4"> */}
-              {/*   <b>Bounties</b> are contracts for work from trusted partners in */}
-              {/*   our ecosystem. The Urbit Foundation matches contributors with */}
-              {/*   projects often chip in on the funding. */}
-              {/* </p> */}
-              {/* <Link href="/grants/bounties"> */}
-              {/*   <button className="button-sm bg-yellow-300 text-black mb-8"> */}
-              {/*     Post a Bounty */}
-              {/*   </button> */}
-              {/* </Link> */}
-
+              {/* Apprenticeships */}
               <p className="mb-4">
                 <b>Apprenticeships</b> are practical learning opportunities for
                 new Urbit developers provided by members of the Urbit community.
@@ -240,10 +231,28 @@ export default function Grants({
                 lead to full-time jobs.
               </p>
               <Link href="/grants/apprenticeships">
-                <button className="button-sm bg-green-400 text-white">
+                <button className="button-sm bg-green-400 text-white mb-8">
                   Become an Apprentice
                 </button>
               </Link>
+
+              {/* Bounties */}
+              <p className="mb-4">
+                <b>Bounties</b> are contracts for work provided by either the
+                Urbit Foundation or from trusted partners in our ecosystem.
+              </p>
+              <div className="flex flex-wrap">
+                <Link href="/grants/bounties#post-a-bounty">
+                  <button className="button-sm bg-yellow-300 text-black mr-2">
+                    Post a Bounty
+                  </button>
+                </Link>
+                <Link href="/grants/bounties">
+                  <button className="button-sm bg-wall-400 text-white">
+                    Learn more
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </Section>
