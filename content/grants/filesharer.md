@@ -1,4 +1,22 @@
-# Filesharer: Simple file sharing on Urbit
++++
+title = "Filesharer"
+date = "2022-02-16"
+
+[taxonomies]
+grant_type = ["Proposal"]
+grant_category = ["App Dev"]
+
+[extra]
+image = ""
+description = "Simple file sharing on Urbit"
+reward = 1
+assignee = "~tinden-pontev"
+id = ""
+completed = false
+link = ""
++++
+
+## Overview
 
 Filesharer will allow peers to upload files to managed storage, either on or off
 Urbit, and share files with each other. It will also allow the user to control
