@@ -101,7 +101,7 @@ The handoff is a research report (3-5 pages) with themes and important nuggets (
 As compensation for the interviews we will give out specific Goras to people that participate in this study.
 
 Milestone 2: Concept Development
-Payout: $10,501
+Payout: $10,501 in WSTR
 Due Date: 4/11/22
 
 The second milestone is to turn the research into actionable recommendations. This includes working sessions (at least 5) with the Urbit community to refine problems, ideate, design solutions, and situate in the context of Urbit’s current systems. This will include 5-8 people in a synchronous meeting to workshop.
