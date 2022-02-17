@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Build an app to track the schedule of the Chicago Transit Authority."
-reward = 3
+reward = "3 stars"
 assignee = "tomnash"
 id = "1262889675"
 completed = false

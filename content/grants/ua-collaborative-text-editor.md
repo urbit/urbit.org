@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A line-based editor for looking at text and code."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = "~hanfel-dovned"
 completed = true

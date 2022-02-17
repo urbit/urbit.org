@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Create Hoon learning resources catered to learner efficiency, with orienting materials for Hoon & coding, learning examples, videos."
-reward = 3
+reward = "3 stars"
 assignee = "som, ~risruc-habteb, ~rabsef-bicrym"
 id = "471015542"
 completed = true

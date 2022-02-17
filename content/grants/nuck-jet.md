@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Create new high performance string parser jet."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = ""
 completed = false

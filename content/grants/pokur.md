@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Multiplayer Poker App on Urbit"
-reward = 2
+reward = "2 stars"
 assignee = "~hodzod-walrus"
 grant_id = "P0084"
 completed = true

@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = "Create a bot that that will relay messages between Urbit chatrooms and IRC rooms, allowing users to communicate on a singular platform."
-reward = 1
+reward = "1 star"
 assignee = "~fitnub-basbud"
 id = ""
 completed = true

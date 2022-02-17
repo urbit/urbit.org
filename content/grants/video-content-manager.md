@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Keep your finger on the pulse of video content produced by the community, and ensure that it's made visible."
-reward = 3
+reward = "3 stars"
 assignee = "~wolnyl-pasreg"
 id = "790269488"
 completed = false

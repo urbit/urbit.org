@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "An application that allows peers to upload files to managed storage, either on or off Urbit, and share files with each other."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = ""
 completed = true

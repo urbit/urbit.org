@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "A full text and video course on every aspect of creating Gall and Landscape apps. Students will create their own full application to finish."
-reward = 4
+reward = "4 stars"
 assignee = "~timluc-miptev"
 id = "2061597290"
 completed = true

@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Introduction, Urbit OS, Urbit ID, Interface, Roadmap: OS1-> OS N, People + History, and Install + Setup (analog to Korean translation)"
-reward = 1
+reward = "1 star"
 assignee = "~hocdep-labtel"
 id = "1163466965"
 completed = false

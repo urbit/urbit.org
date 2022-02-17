@@ -7,7 +7,7 @@ grant_category = ["App Dev - Other"]
 [extra]
 image = ""
 description = "Urbit client for the Clojure programming language"
-reward = 3
+reward = "3 stars"
 assignee = "~sorted-falnyd"
 id = ""
 completed = false

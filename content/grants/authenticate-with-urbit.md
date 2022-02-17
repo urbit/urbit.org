@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Exernal service/websites can verify that a user is who they say they are"
-reward = 1
+reward = "1 star"
 assignee = "dcSpark"
 grant_id = "P0081"
 completed = false

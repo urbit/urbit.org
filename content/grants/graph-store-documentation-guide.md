@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Explainer, tutorial, and cookbook for `graph-store`"
-reward = 4
+reward = "4 stars"
 assignee = "~sipfyn-pidmex"
 id = "1888977136"
 completed = true

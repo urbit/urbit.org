@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "A typescript library which streamlines the experience of building Urbit Visor powered chrome extensions."
-reward = 2
+reward = "2 stars"
 assignee = "dcSpark"
 grant_id = "P0094"
 completed = false

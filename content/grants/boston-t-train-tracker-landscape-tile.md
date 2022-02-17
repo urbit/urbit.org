@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Create a landscape tile that tracks the Boston T train."
-reward = 3
+reward = "3 stars"
 assignee = "nforbes6"
 id = "2039941382"
 completed = false

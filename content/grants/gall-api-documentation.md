@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Write reference documentation for using the API for developing Gall apps."
-reward = 1
+reward = "1 star"
 assignee = "Liam Fitzgerald, borlyt-salnus"
 id = "1251133389"
 completed = true

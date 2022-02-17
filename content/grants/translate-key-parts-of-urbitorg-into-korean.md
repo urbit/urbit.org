@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "The content found on urbit.org/understanding-urbit/ and urbit.org/using/install/ is only in English. Translation will be helpful to Koreans."
-reward = 1
+reward = "1 star"
 assignee = "~sibped-dabdul, 홍송이"
 id = "1921641407"
 completed = false

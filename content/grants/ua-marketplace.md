@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A marketplace in which users can post items for sale and browse goods for sale by other users."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = ""
 completed = true

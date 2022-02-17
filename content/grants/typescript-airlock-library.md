@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Create a library for the Typescript language to be used for Airlock, the API suite for outside communication with Urbit."
-reward = 3
+reward = "3 stars"
 assignee = "~radbur-sivmus"
 id = "1845001687"
 completed = true

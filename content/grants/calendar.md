@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "An Arvo calendar agent based on the iCalendar spec."
-reward = 5
+reward = "5 stars"
 assignee = "~wolref-podlex, sovmep-ripsum"
 id = "1851255517"
 completed = true

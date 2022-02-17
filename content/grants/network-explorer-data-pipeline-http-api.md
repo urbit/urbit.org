@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Build a public, open HTTP API for exploring metrics about the Urbit network."
-reward = 5
+reward = "5 stars"
 assignee = "~dinleb-rambep"
 id = "1101665172"
 completed = true

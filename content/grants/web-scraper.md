@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "It is often useful for archival purposes to pull down an entire website, however many sites have a complex network of pages that would be difficult to download one at a time."
-reward = 1
+reward = "1 star"
 assignee = "tug"
 id = "1967189374"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "reate a mapping tool which allows Open Street Maps data to be imported into Urbit."
-reward = 2
+reward = "2 stars"
 assignee = ""
 id = "1072822195"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = "A feed aggregation application"
-reward = 5
+reward = "5 stars"
 assignee = "~mirtyl-wacdec"
 grant_id = "P0043"
 completed = false

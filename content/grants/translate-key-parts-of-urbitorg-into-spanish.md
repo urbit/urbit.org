@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Help the Urbit community grow internationally by translating key resources, guides, and documentation to Spanish."
-reward = 1
+reward = "1 star"
 assignee = "Tom Holford"
 id = "446864346"
 completed = false

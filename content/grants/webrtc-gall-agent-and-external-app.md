@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = "Add WebRTC support to Urbit, including call/stream setup and teardown messaging and ICE/STUN/TURN advertisement and authentication."
-reward = 8
+reward = "8 stars"
 assignee = "~ritpub-sipsyl"
 id = ""
 completed = true

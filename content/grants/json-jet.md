@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Create high performance JSON parsing/serializing jet."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = "~finmep-lanteb"
 completed = false

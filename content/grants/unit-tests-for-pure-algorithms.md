@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Write unit tests for +in, +by, +to, and +diff."
-reward = 1
+reward = "1 star"
 assignee = "yosoyubik"
 id = "1322185260"
 completed = true

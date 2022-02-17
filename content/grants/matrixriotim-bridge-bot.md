@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "This would be a python bot to connect urbit to any Matrix server. It would act as a bridge, mirroring messages between the two platforms."
-reward = 2
+reward = "2 stars"
 assignee = "modmes-livheb"
 id = "1496457780"
 completed = false

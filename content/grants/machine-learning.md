@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Create a supervised machine learning library"
-reward = 7
+reward = "7 stars"
 assignee = "~tamdev-nocdun"
 grant_id = "P0075"
 completed = false

@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Publish Urbit notebooks to the clearweb"
-reward = 5
+reward = "5 stars"
 assignee = "~tacryt-socryp"
 grant_id = "P0072"
 completed = true

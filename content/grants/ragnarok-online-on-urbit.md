@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Landscape app that supports registering an urbit ID with an RO server, exposing various account management actions and guild / channel chats"
-reward = 3
+reward = "3 stars"
 assignee = "~littel-wolfur"
 id = "2084005955"
 completed = false

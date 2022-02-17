@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Provide concierge service assisting new users in the Urbit Community Group"
-reward = 1
+reward = "1 star"
 assignee = "~sibhul-soctul"
 id = "1693084001"
 completed = true

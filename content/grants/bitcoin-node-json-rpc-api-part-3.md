@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Write a Remote Procedure Call library for a Bitcoin Gall app -- part three."
-reward = 1
+reward = "1 star"
 assignee = "yosoyubik"
 id = "312452925"
 completed = true

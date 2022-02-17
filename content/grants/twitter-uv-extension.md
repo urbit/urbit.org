@@ -16,7 +16,7 @@ image = ""
 
 description = "Web extension which enhances twitter with native Urbit functionality."
 
-reward = 4
+reward = "4 stars"
 
 assignee = "dcSpark"
 

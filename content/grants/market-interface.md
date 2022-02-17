@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = "Implement the app interface for swapping stars for wrapped stars."
-reward = 5
+reward = "5 stars"
 assignee = "~fabnev-hinmur"
 id = ""
 completed = true
@@ -49,6 +49,7 @@ September 1: Deploy interface on urbit.org
 ## Resources
 
 [Smart Contracts on GitHub](https://github.com/ransonhobbes/stardust)
+
 - [Figma Designs](https://www.figma.com/file/q3BmgjWVaJ2cMlMY7hcDqS/market.urbit.org?node-id=0%3A1)
 - [Original mailing list post from aforementioned community members](https://groups.google.com/a/urbit.org/g/dev/c/EQVU2-GKo04)
 

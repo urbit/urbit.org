@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Help the Urbit community grow internationally by translating key resources, guides, and documentation to Norwegian."
-reward = 1
+reward = "1 star"
 assignee = "Andreas Atakan"
 id = "1227012285"
 completed = false

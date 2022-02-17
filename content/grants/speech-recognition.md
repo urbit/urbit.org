@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Bring Automatic Speech Recognition to Urbit"
-reward = 2
+reward = "2 stars"
 assignee = "~hosted-fornet"
 grant_id = "P0053"
 completed = true

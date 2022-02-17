@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Extend the Urbit Calendar (ucal) to integrate with other calendaring systems."
-reward = 2
+reward = "2 stars"
 assignee = ""
 id = ""
 completed = false

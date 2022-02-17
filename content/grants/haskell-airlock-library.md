@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Create a library for the Haskell language to be used for Airlock, the API suite for outside communication with Urbit."
-reward = 3
+reward = "3 stars"
 assignee = "bsima"
 id = "688875191"
 completed = true

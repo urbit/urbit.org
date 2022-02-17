@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Create a library for the Go language to be used for Airlock, the protocols for interfacing with Urbit."
-reward = 3
+reward = "3 stars"
 assignee = "Caio"
 id = "764093285"
 completed = true

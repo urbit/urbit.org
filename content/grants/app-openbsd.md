@@ -9,7 +9,7 @@ grant_category = [ "Runtime" ]
 [extra]
 image = ""
 description = "Get the project to the point where it works on OpenBSD"
-reward = 1
+reward = "1 star"
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false

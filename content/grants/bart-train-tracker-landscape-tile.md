@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A backend for a BART client on Urbit."
-reward = 3
+reward = "3 stars"
 assignee = "~ronreg-ribdev"
 id = "1026701722"
 completed = false

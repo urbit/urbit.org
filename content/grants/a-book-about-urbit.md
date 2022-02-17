@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "A short book about Urbit, on Urbit, including Urbit-centric sections about the wider world of computing"
-reward = 12
+reward = "12 stars"
 assignee = "librex-dozryc"
 id = "1590647060"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "This bounty covers the creation of infrastructure (gall agents) required to enable a Bitcoin-based payments system from within Landscape."
-reward = 6
+reward = "6 stars"
 assignee = "~timluc-miptev"
 id = "2056919898"
 completed = true

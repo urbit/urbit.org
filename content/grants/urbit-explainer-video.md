@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "We want to make a short animated video that introduces Urbit to a wider audience."
-reward = 2
+reward = "2 stars"
 assignee = "~rivpyl-sidfyl, ~minder-folden"
 id = "1350087489"
 completed = true

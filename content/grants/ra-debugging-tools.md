@@ -7,7 +7,7 @@ grant_category = ["App Dev", "Arvo"]
 [extra]
 image = ""
 description = "Debugging Tools"
-reward = 2
+reward = "2 stars"
 mentor = "~master-morzod"
 assignee = "~nosmes-sibwyx, ~topfet-parmed"
 completed = false

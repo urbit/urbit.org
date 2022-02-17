@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Help guide newcomers onto the network."
-reward = 1
+reward = "1 star"
 assignee = "Conrad"
 id = "123890561"
 completed = true

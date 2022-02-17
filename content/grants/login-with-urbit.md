@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = 'One of the killer pieces of missing functionality in the ecosystem is to seamlessly "login" to Urbit web apps at the click of a button.'
-reward = 7
+reward = "7 stars"
 assignee = "dcSpark"
 id = ""
 completed = true
@@ -82,4 +82,3 @@ Build out the first version of the permission system which also exposes user fac
 Estimated Date: 08/11/2021
 
 Give the extension interface a major revamp from merely being dev-usable to well polished and offering new users a great experience.
-

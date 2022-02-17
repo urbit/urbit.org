@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Implement a basic text search in groups channels"
-reward = 2
+reward = "2 stars"
 assignee = "@nrtxrmnd"
 id = "835369230"
 completed = true

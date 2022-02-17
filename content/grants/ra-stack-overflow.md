@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Stack Overflow"
-reward = 2
+reward = "2 stars"
 mentor = "~silsyn-wathep"
 assignee = ""
 completed = false

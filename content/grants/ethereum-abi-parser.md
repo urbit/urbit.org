@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Create a Gall app that takes the bytecode for a contract ABI."
-reward = 2
+reward = "2 stars"
 assignee = "xiphiness"
 id = "1241532070"
 completed = false

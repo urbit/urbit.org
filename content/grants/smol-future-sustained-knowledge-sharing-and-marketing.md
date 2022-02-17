@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Create sustained documentation and marketing efforts that will support and encourage new users to run Urbit on their own RPi devices."
-reward = 10
+reward = "10 stars"
 assignee = "~naltyc-wornes (dasfeb.industries)"
 id = "1395578140"
 completed = false

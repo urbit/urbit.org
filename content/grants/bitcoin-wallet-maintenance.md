@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Help us maintain the Bitcoin Wallet."
-reward = 3
+reward = "3 stars"
 mentor = "~timluc-miptev"
 assignee = "~finned-palmer"
 completed = true

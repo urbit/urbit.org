@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Share large files"
-reward = 4
+reward = "4 stars"
 assignee = "tabnus-fondeg"
 id = "1736585775"
 completed = false

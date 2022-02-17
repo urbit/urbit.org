@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Antechamber is an initiative to provide a group within Landscape that is restricted to only galaxies and delegates of galaxies."
-reward = 4
+reward = "4 stars"
 assignee = "xiphiness"
 id = "523261174"
 completed = false

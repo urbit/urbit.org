@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Improve Page Tracking"
-reward = 2
+reward = "2 stars"
 mentor = "~silsyn-wathep"
 assignee = "~fanfun-mocbud"
 completed = true

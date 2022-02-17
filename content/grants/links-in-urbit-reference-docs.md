@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Add links to our reference doc pages so that people can easily discover new concepts"
-reward = 1
+reward = "1 star"
 assignee = "alecbrick"
 id = "45608361"
 completed = true

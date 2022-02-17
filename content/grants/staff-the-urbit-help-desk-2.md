@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Help Urbit users with their various problems."
-reward = 1
+reward = "1 star"
 assignee = "sicbud (and i cannot stress this enough) hathes"
 id = "612547183"
 completed = true

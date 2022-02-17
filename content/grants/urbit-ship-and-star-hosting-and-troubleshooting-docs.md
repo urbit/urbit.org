@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "User docs for ship/star owners around best practices for hosting"
-reward = 2
+reward = "2 stars"
 assignee = "~dovsem-bornyl"
 id = "1452740478"
 completed = false

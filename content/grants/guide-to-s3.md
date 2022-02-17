@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Contribute an easy-to-follow guide on self-hosting an S3 storage solution for use with Urbit to urbit.org."
-reward = 1
+reward = "1 star"
 assignee = "~tomnyr-tirsyr"
 id = ""
 completed = true

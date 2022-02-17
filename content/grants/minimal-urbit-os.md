@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "A Linux based host OS with only the essentials needed to run Urbit, designed to help the process of getting Urbit running on bare metal"
-reward = 6
+reward = "6 stars"
 assignee = "~forfel-norfel"
 id = "1935638429"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "A proposal to build an Urbit HTTP Api for the Elixir language, bringing to Urbit its state of the art concurrency capabilities."
-reward = 3
+reward = "3 stars"
 assignee = "mirtyl-wacdec"
 id = "2126792953"
 completed = true

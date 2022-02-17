@@ -9,7 +9,7 @@ grant_category = [ "Dev Tool" ]
 [extra]
 image = ""
 description = "Write a syntax highlighter for the Udon markup language."
-reward = 1
+reward = "1 star"
 assignee = "~dirwex-dosrev"
 id = "981084186"
 completed = false

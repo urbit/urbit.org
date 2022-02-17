@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Write a generator that exports chat data into a CSV."
-reward = 1
+reward = "1 star"
 assignee = "~hosted-fornet"
 completed = true
 canceled = false

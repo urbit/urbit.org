@@ -9,7 +9,7 @@ grant_category = [ "Dev Tool" ]
 [extra]
 image = ""
 description = "Nix infrastructure to generate Docker images for Urbit releases. Images would be suitable for cloud orchestration in e.g. Amazon ECS"
-reward = 1
+reward = "1 star"
 assignee = "Edward Amsden ~ritpub-sipsyl"
 id = "626138244"
 completed = true

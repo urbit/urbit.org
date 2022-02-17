@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "A series of community-focused events to create a new knowledge base for urbit.org, and help new community members learn about Urbit"
-reward = 6
+reward = "6 stars"
 assignee = "~naplet-hildec"
 id = "1751024973"
 completed = true

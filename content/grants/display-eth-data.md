@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "The Urbit identity system uses a suite of Ethereum contracts as its PKI. As such, a lot of Ethereum-related functionality is available within the system."
-reward = 1
+reward = "1 star"
 assignee = "dominic22"
 id = "831044524"
 completed = true

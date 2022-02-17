@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Tune slaw/scot jets for better perfomance."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = "~lagrev-nocfep"
 completed = false

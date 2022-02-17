@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Help guide newcomers onto the network."
-reward = 1
+reward = "1 star"
 assignee = "~libmud-bonted"
 id = "1140084926"
 completed = true

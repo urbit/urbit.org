@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "This proposal seeks to create an API to interact with an Urbit ship over HTTP written in Rust."
-reward = 3
+reward = "3 stars"
 assignee = "~mocrux-nomdep"
 id = "1120978319"
 completed = true

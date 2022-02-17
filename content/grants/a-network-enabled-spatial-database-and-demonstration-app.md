@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Allow small scale spatial data to be stored and retrieved in Urbit, for use in landscape and external applications, and shared across ships."
-reward = 4
+reward = "4 stars"
 assignee = "Lumphead"
 id = "634393623"
 completed = false
@@ -24,7 +24,7 @@ Allow small scale spatial data to be stored and retrieved in Urbit, for use in l
 
 ##### Background/Motivation
 
-This proposal has grown out of a previous bounty which called for Open Street Map data to be ingested into Urbit. Through discussion it was decided that as OSM already provides a free, open and widely available base map and street network, a more useful system for Urbit would provide a method of storing spatial documents, which can overlay upon existing spatial data such as Open Street Map tiles, be collected together for use in landscape apps, ...and poast .... A spatial document, for the purpose of this proposal, is a single valid GeoJSON[^1] document. A spatial document could contain a single geometry, a feature (geometry with associated properties), or a collection of features (a GeoJSON 'featurecollection').  The fridge store is a collection of poastcards, both those stored locally and those shared from other ships.
+This proposal has grown out of a previous bounty which called for Open Street Map data to be ingested into Urbit. Through discussion it was decided that as OSM already provides a free, open and widely available base map and street network, a more useful system for Urbit would provide a method of storing spatial documents, which can overlay upon existing spatial data such as Open Street Map tiles, be collected together for use in landscape apps, ...and poast .... A spatial document, for the purpose of this proposal, is a single valid GeoJSON[^1] document. A spatial document could contain a single geometry, a feature (geometry with associated properties), or a collection of features (a GeoJSON 'featurecollection'). The fridge store is a collection of poastcards, both those stored locally and those shared from other ships.
 
 ##### Overview
 
@@ -54,9 +54,9 @@ This proposal has grown out of a previous bounty which called for Open Street Ma
 ##### Network enabled store ('Fridge')
 
 - Expands on the Stage 1 architecture with an enhanced store ('Fridge') and an app ('Poast').
-- The enhanced store (a 'Fridge'), which will house 'Poastcards'. Poastcards consist of an image,text, a geometry.  A poastcard can be represented in a geojson feature, making heavy use of the the feature properties (a key value object, part of the geojson specification) to store the non-spatial information.
+- The enhanced store (a 'Fridge'), which will house 'Poastcards'. Poastcards consist of an image,text, a geometry. A poastcard can be represented in a geojson feature, making heavy use of the the feature properties (a key value object, part of the geojson specification) to store the non-spatial information.
 - It may be that the Urbit graph store is the appropriate way to share/link Poastcards, exploring using graph store vs a custom Fridge store will be undertaken as part of Stage 2.
-- 'Poast' is a PoastCard viewing and sharing app, for landscape.  We will implement a mvp/polished demo for this milestone.
+- 'Poast' is a PoastCard viewing and sharing app, for landscape. We will implement a mvp/polished demo for this milestone.
 - 'Poast' will be made available through the upcoming software distribution system as part of this milestone.
 
 ##### Rich demonstration App ('Poast')
@@ -64,10 +64,10 @@ This proposal has grown out of a previous bounty which called for Open Street Ma
 - A hook/view/landscape app which allows for displaying and interacting with Poastcards/Fridge store;
   - Editing/Creation of Poastcards via a web ui.
   - Sharing of Poastcards; a Poastcard is a resource owned by a ship, once create they can be shared read-only with others.
-- The overall concept of the Poast app can be likened to the experience of sending postcards and personal letters in the pre internet era.  Unlike most present day social media, Poast will not have a feed.
-- Poast will be minimally landscape integrated, insofar is it can be launched from a tile and follow landscape styling. 
+- The overall concept of the Poast app can be likened to the experience of sending postcards and personal letters in the pre internet era. Unlike most present day social media, Poast will not have a feed.
+- Poast will be minimally landscape integrated, insofar is it can be launched from a tile and follow landscape styling.
 - For this milestone only a minimal set of features will be included to allow for creating, sharing, and viewing of Poastcards.
- 
+
 ##### Footnotes
 
 [^1]:

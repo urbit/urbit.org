@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Document, explain, and give simple howtos for the usage patterns of threads in the Dojo and Gall agents."
-reward = 1
+reward = "1 star"
 assignee = "~tinnus-napbus"
 id = "4948904"
 completed = true

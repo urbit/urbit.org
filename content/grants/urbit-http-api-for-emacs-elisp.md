@@ -9,7 +9,7 @@ grant_category = [ "Dev Tool" ]
 [extra]
 image = ""
 description = "Connecting Urbit with Emacs would enable all sorts of cool and creative apps. I'd love to be able to chat without leaving my editor."
-reward = 3
+reward = "3 stars"
 assignee = "~winduc-dozser"
 id = "1206158911"
 completed = false

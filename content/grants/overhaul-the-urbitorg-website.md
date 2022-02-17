@@ -9,7 +9,7 @@ grant_category = [ "Design" ]
 [extra]
 image = ""
 description = "Rework urbit.org to encourage participation with the project."
-reward = 2
+reward = "2 stars"
 assignee = "~radbur-sivmus"
 id = "246698762"
 completed = true

@@ -9,7 +9,7 @@ grant_category = [ "App Dev: Other" ]
 [extra]
 image = ""
 description = "Write an Urbit HTTP API (aka airlock) for Python"
-reward = 1
+reward = "1 star"
 assignee = "novbyr-miclux"
 id = "P0029"
 completed = false

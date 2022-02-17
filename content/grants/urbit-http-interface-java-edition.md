@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "This proposal seeks to implement an HTTP interface to an Urbit instance in Java, and also seeks to build various related tooling."
-reward = 3
+reward = "3 stars"
 assignee = "~sipfyn-pidmex"
 id = "288224550"
 completed = false

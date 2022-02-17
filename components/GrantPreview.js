@@ -31,8 +31,7 @@ export default function GrantPreview({ grant }) {
           <div className="flex w-full flex-col md:flex-row md:items-center justify-between">
             <p className="text-wall-500">
               <strong>Reward: </strong>
-              {grant.extra.reward} star
-              {grant.extra.reward === 1 ? "" : "s"}
+              {grant.extra.reward}
             </p>
             <div className="flex items-center flex-wrap md:mt-0 mt-4">
               {grant.taxonomies.grant_type.map((category) => {

@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Write unit tests for SHA cryptographic functions of the Hoon standard library."
-reward = 1
+reward = "1 star"
 assignee = "Ken Meier"
 id = "179152973"
 completed = true

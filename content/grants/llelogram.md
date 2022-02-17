@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Towards creating a political-econometric of federal legislation people can read as easily as a stock ticker: Llelogram"
-reward = 5
+reward = "5 stars"
 assignee = "Dotty"
 id = "821310723"
 completed = false

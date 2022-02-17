@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Art by Urbit will provide a monthly digest of art produced by & for Urbit, on a publicly available website & social media presence."
-reward = 1
+reward = "1 star"
 assignee = "nartes-fasrum"
 id = "636838408"
 completed = true

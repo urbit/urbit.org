@@ -7,7 +7,7 @@ grant_category = ["Community"]
 [extra]
 image = ""
 description = "Provide meetup bounty hunters with the persuasive narratives and content"
-reward = 6
+reward = "6 stars"
 assignee = "~sarlev-sarsen"
 grant_id = "P0093"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word."
-reward = 1
+reward = "1 star"
 assignee = "Thomas"
 id = ""
 completed = true

@@ -7,7 +7,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Bring your note-taking game into the 31st century!"
-reward = 2
+reward = "2 stars"
 assignee = "~ribben-donnyl"
 grant_id = "P0070"
 completed = false

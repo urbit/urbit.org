@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A system to request and record payments made and received."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = ""
 completed = true

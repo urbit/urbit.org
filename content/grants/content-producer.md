@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "Work with the content manager in producing content"
-reward = 3
+reward = "3 stars"
 assignee = "~sitful-hatred"
 id = ""
 completed = false

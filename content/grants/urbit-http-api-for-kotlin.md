@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Write an urbit HTTP API (aka Airlock) for Kotlin."
-reward = 3
+reward = "3 stars"
 assignee = "@nrtxrmnd"
 id = "865786150"
 completed = false

@@ -7,7 +7,7 @@ grant_category = ["App Dev", "Dev tool"]
 [extra]
 image = "https://user-images.githubusercontent.com/13405632/121785641-98599100-cbc3-11eb-861c-77a95a7db030.png"
 description = "A turn-key Urbit deployment for your personal server"
-reward = 4
+reward = "4 stars"
 assignee = "~sipsen-pilser"
 id = ""
 completed = false

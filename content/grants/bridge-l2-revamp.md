@@ -9,7 +9,7 @@ grant_category = [ "Azimuth" ]
 [extra]
 image = ""
 description = "Our Layer 2 scaling solution is nearing completion, and the Bridge UI/UX needs to be refactored to take it into account."
-reward = 5
+reward = "5 stars"
 assignee = "~datder-sonnet"
 completed = true
 canceled = false

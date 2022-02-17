@@ -9,7 +9,7 @@ grant_category = [ "Other" ]
 [extra]
 image = ""
 description = "Native Planet - A domestic hosting solution for Urbit"
-reward = 5
+reward = "5 stars"
 assignee = "~dalhec-banler"
 completed = false
 canceled = false

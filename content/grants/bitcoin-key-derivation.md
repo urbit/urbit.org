@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "The Urbit HD Wallet allows for many different keys to be generated from a single master ticket. Your task is to use this mechanism to generate Bitcoin keys and expose ways of interacting with them."
-reward = 2
+reward = "2 stars"
 assignee = "pkova"
 id = "794126751"
 completed = true

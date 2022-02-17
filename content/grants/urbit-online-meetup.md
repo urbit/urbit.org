@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "I teach a Python class online. Many students would be interested in learning about Urbit too. I'd give a lecture and help them host planets."
-reward = 1
+reward = "1 star"
 assignee = "~fonnyx-nopmer"
 id = "1672069956"
 completed = true

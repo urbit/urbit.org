@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Write unit tests for JSON-parsing arms of the zuse.hoon standard library."
-reward = 2
+reward = "2 stars"
 assignee = "courajs"
 id = "905205498"
 completed = true

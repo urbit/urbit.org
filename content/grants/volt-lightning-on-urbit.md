@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "An Urbit-native Lightning client and integration with `lnd` on 'provider' ships."
-reward = 7
+reward = "7 stars"
 assignee = "~dasrun-fadben"
 completed = true
 canceled = false

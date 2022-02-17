@@ -9,7 +9,7 @@ grant_category = [ "Core Dev" ]
 [extra]
 image = ""
 description = "Add array types to Hoon."
-reward = 5
+reward = "5 stars"
 assignee = "N E Davis"
 id = "611660914"
 completed = true

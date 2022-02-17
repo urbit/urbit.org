@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "The goal of this bounty is to create a series of guides that can instruct a newcomer to Urbit as to how to go about creating a full-stack application from scratch."
-reward = 10
+reward = "10 stars"
 assignee = "~rabsef-bicrym"
 id = "1372696624"
 completed = true

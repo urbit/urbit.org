@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "An Urbit-native Tor search-tool."
-reward = 3
+reward = "3 stars"
 assignee = "pilwex-migsun"
 id = "872371692"
 completed = false

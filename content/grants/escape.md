@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A reputation agent for Stars."
-reward = 4
+reward = "4 stars"
 assignee = "yosoyubik"
 id = "1146667285"
 completed = false

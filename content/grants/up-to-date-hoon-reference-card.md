@@ -9,7 +9,7 @@ grant_category = [ "Documentation" ]
 [extra]
 image = ""
 description = "I have made an up-to-date version of the Urbit Hoon reference card and will maintain it.https://github.com/natareo/hooncard"
-reward = 1
+reward = "1 star"
 assignee = "N E Davis"
 id = "607772785"
 completed = true

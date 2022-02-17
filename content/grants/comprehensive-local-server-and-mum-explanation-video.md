@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Series of three videos:1) Purchase planet, install and run on a local machine2) nginx setup3) Explaining Urbit to my tech illiterate mum "
-reward = 1
+reward = "1 star"
 assignee = "mislyr-misnyt"
 id = "2020133197"
 completed = false

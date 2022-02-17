@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Extract and save content from HTML."
-reward = 2
+reward = "2 stars"
 assignee = "lurodrigo (~tirdyr-lagrum)"
 id = "1163181298"
 completed = false

@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Build a Landscape-native calendar UI"
-reward = 2
+reward = "2 stars"
 assignee = "finled-bansel"
 id = "1555464949"
 completed = false

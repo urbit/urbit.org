@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Azimuth" ]
 [extra]
 image = ""
 description = "Add Bitcoin support to the Bridge interface. "
-reward = 1
+reward = "1 star"
 assignee = "yosoyubik"
 id = "273059635"
 completed = false

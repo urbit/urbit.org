@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "Create a Gall app that links Urbit identities with Keybase."
-reward = 2
+reward = "2 stars"
 assignee = "yosoyubik"
 id = "550468262"
 completed = false

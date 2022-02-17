@@ -9,7 +9,7 @@ grant_category = [ "Community" ]
 [extra]
 image = ""
 description = "Hold a meetup and presentation about Urbit."
-reward = 1
+reward = "1 star"
 assignee = "kirk-hutchison"
 id = ""
 completed = true

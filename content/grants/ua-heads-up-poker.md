@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Arvo" ]
 [extra]
 image = ""
 description = "A fun client app that would be a good way to get acquainted with Urbit's networking and p2p abilities."
-reward = 1
+reward = "1 star"
 mentor = "~timluc-miptev"
 assignee = "~bacwyl-samweg, ~hodzod-walrus"
 completed = true
