@@ -109,7 +109,7 @@ The second milestone is to turn the research into actionable recommendations. Th
 The handoff is a compilation of ideas with any recommendations from the working sessions. This will most likely be a journey map format with problems and possible solutions.
 
 Milestone 3: Report Creation + Sharing
-Payout: $21,002
+Payout: $21,002 in WSTR
 Due Date: 5/27/22
 
 The final milestone is the completion of a whitepaper (10-20 pages). This includes the whitepaper drafting and editing. As well as, authoring a blog post (1,000-2,000 words) and live talk for the Urbit YouTube account (45-60 minutes).
