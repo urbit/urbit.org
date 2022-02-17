@@ -91,7 +91,7 @@ Iâ€™m interested in finding models that make sense for the smart home that donâ€
 ## Milestones
 
 Milestone 1: Research
-Payout: $10,501
+Payout: $10,501 in WSTR
 Due Date: 3/11/22
 
 The first milestone is after research into the problem area of communal use of Urbit systems. This includes interview guide drafting, recruiting, interviewing (at least 10 45-minute interviews), analysis, and synthesis of research.
