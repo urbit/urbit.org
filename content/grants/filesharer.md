@@ -9,7 +9,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Simple file sharing on Urbit"
-reward = 1
+reward = "$15,000 in WSTR"
 assignee = "~tinden-pontev"
 id = ""
 completed = false
