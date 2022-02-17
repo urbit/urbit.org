@@ -7,7 +7,7 @@ grant_category = ["other"]
 [extra]
 image = ""
 description = "User research, domain research/synthesis, white paper creation and publicity effort around Urbit ID as a solution to questions of IoT identity sharing and privacy"
-reward = 42004
+reward = "$42,004 in WSTR"
 assignee = "~pilwyc-fastec"
 mentor = "~simfur-ritwed"
 id = ""
