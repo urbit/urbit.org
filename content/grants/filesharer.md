@@ -88,7 +88,7 @@ Payment: $7500
 
 Expected completion: 8 weeks
 
-Payment: $7500
+Payment: $7500 in WSTR
 
 - Add ability to restrict whitelist by tag.
 
