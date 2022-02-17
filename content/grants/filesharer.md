@@ -73,7 +73,7 @@ The following areas need to be added:
 
 Expected completion: 8 weeks
 
-Payment: $7500
+Payment: $7500 in WSTR
 
 - Rework state and clean up code for implementation of planned features and
   improving readability.
