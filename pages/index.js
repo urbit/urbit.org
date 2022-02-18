@@ -240,14 +240,14 @@ export default function Home({ posts, events, openGrantsCount, search }) {
             </p>
             <div className="flex flex-wrap">
               <Link href="/grants">
+                <a className="button-lg bg-blue-400 text-white mr-2 mb-8">
+                  Learn More
+                </a>
+              </Link>
+              <Link href="/grants#view-grants">
                 <a className="button-lg bg-green-400 text-white mr-2 mb-8">
                   View Grants
                 </a>
-              </Link>
-              <Link href="/grants/proposals">
-                <button className="button-lg bg-blue-400 text-white">
-                  Submit a Proposal
-                </button>
               </Link>
             </div>
           </div>
