@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and others' wallets, track balances and transactions, and add private annotations to all of the above."
-reward = "$45,000-65,000 in WSTR"
+reward = "$45,000-$65,000 in WSTR"
 assignee = ""
 id = ""
 completed = false
