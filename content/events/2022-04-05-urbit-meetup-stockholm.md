@@ -1,7 +1,7 @@
 +++
 title = "Urbit Meet-Up Stockholm"
 starts = "2022-04-05T18:00:00"
-ends = "2022-04-05T18:00:00"
+ends = "2022-04-05T21:00:00"
 timezone = "Europe/Stockholm"
 location = "Drottning Victorias Örlogshem, Teatergatan 3, 111 48 Stockholm"
 image = ""
