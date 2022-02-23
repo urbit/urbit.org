@@ -11,7 +11,6 @@ dark = false
 
 
 [[hosts]]
-name = "Jack"
 patp = "~wicrum-wicrun"
 
 [[guests]]
