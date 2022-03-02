@@ -35,7 +35,7 @@ The below is a non-exhaustive list of the types of work we will need:
 
 - Designing and implementing future features from this list
 
-- thinking and researching new feature ideas
+- Thinking and researching new feature ideas
 
 ## Requirements
 
@@ -43,13 +43,13 @@ Engineer Skills
 
 - Experience with modern React and Typescript
 
--Ability to run Windows, Linux, and MacOS in some capacity (VMs ok)
+- Ability to run Windows, Linux, and MacOS in some capacity (VMs ok)
 
 - Experience with Electron helpful but not required
 
 - Ability to work directly with designers
 
-Designer Skills
+## Designer Skills
 
 - Familiarity with multiple operating systems
 
@@ -59,16 +59,16 @@ Designer Skills
 
 - Ability to follow the current design of Port and make new features feel seamless
 
-Time Commitment
+## Time Commitment
 
-- at least 10 hours/week
+- At least 10 hours/week
 
 - 2-3 months minimum
 
-- weekly check-in meeting with ~nocsyx-lassul
+- Weekly check-in meeting with ~nocsyx-lassul
 
-Compensation
+## Compensation
 
 - $4000 in WSTR per month initially (assuming ~10 hours/week part-time)
 
-- more WSTR can be negotiated if the developer has greater availability and can commit more time
+- More WSTR can be negotiated if the developer has greater availability and can commit more time
