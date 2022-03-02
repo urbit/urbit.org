@@ -43,7 +43,7 @@ Engineer Skills
 
 - Experience with modern React and Typescript
 
--Ability to run Windows, Linux, and MacOS in some capacity (VMs ok)
+- Ability to run Windows, Linux, and MacOS in some capacity (VMs ok)
 
 - Experience with Electron helpful but not required
 
