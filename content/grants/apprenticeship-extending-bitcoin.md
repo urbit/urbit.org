@@ -1,6 +1,6 @@
 +++
 title = "Extending the Bitcoin Provider API"
-date = "2022-02-02"
+date = "2022-03-02"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
@@ -43,17 +43,25 @@ For someone with zero familiarity with urbit and bitcoin APIs, and working 10 ho
 ## Deliverables
 
 - Add support for regtest to the bitcoin codebase
+
   - This is generally useful for testing bitcoin-related code
+
 - Add the following electrum method calls to the proxy server and %btc-provider agent:
 
   - blockchain.block.headers :: fetch headers for a range of heights
+
   - blockchain.transaction.id_from_pos :: get txid for a block height and position
+
   - blockchain.estimatefee :: estimate current feerate for confirmation target
+
   - mempool.get_fee_histogram :: query mempool feerates
 
 - Add the following bitcoind method calls to the proxy server and %btc-provider agent
+
   - utxoupdatepsbt :: add utxos to a PSBT
 
 Patches should be submitted to:
+
 [bitcoin rpc proxy](https://github.com/urbit/urbit-bitcoin-rpc)
+
 [bitcoin agents](https://github.com/urbit/urbit)
