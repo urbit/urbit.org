@@ -87,7 +87,7 @@ I have therefore separated them out into two separate milestones that cover, rou
 
 ## Champion
 
-I’ll be working with ~rabsef under a tea towel as a Champion. Rabsef has, with Quartus, produced a lot of software that is live on the network today and I am confident that he will be able to answer the questions I may run in to while writing Slam; things along the lines of: “What does the workflow look like for developing gall agents that require other apps? How do I install apps on a fake ship? etc.” Quartus also produced %gora so I’ll have a direct connection to the %gora development team, should I need any support working with their system.
+I’ll be working with ~rabsef-bicrym as a champion. Rabsef has, with [Quartus](https://github.com/dalten-collective), produced a lot of software that is live on the network today and I am confident that he will be able to answer the questions I may run in to while writing Slam; things along the lines of: “What does the workflow look like for developing gall agents that require other apps? How do I install apps on a fake ship? etc.” Quartus also produced %gora so I’ll have a direct connection to the %gora development team, should I need any support working with their system.
 
 ## Milestones
 
