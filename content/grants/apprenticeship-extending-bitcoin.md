@@ -1,6 +1,6 @@
 +++
 title = "Extending the Bitcoin Provider API"
-date = "2022-03-02"
+date = "2022-03-03"
 
 [taxonomies]
 grant_type = [ "Apprenticeship" ]
@@ -44,7 +44,13 @@ For someone with zero familiarity with urbit and bitcoin APIs, and working 10 ho
 
 - Add support for regtest to the bitcoin codebase
 
-  - This is generally useful for testing bitcoin-related code
+  - add %regtest to network type defined in /=bitcoin=/sur/bitcoin.hoon
+
+  - modify functions in /=bitcoin=/lib/ to handle this updated type appropriately
+
+  - update server.js in RPC repo to support new network configuration
+
+  - run some "functional tests", sending and receiving transactions using regtest configuration
 
 - Add the following electrum method calls to the proxy server and %btc-provider agent:
 
