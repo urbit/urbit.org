@@ -74,6 +74,10 @@ export default function Events({ events, search }) {
               <a href={contact.newsletter}>Subscribe</a> to the Urbit Newsletter
               for regular updates, including new blog posts and events.
             </p>
+            <p>
+              For a list of active local meetups, go{" "}
+              <Link href="/community/meetups">here.</Link>
+            </p>
           </div>
         </Section>
 
