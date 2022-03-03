@@ -11,7 +11,7 @@ image = ""
 description = "Get the project to the point where it works on OpenBSD"
 reward = "$8,000 in WSTR"
 mentor = "~silsyn-wathep"
-assignee = ""
+assignee = "~tidsut-radryd"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0124&prefill_Grant+Name=Resurrect%20OpenBSD%20Build"
 +++
