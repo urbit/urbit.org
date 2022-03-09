@@ -13,6 +13,7 @@ reward = "$30,000 in WSTR"
 assignee = ""
 id = ""
 completed = false
+work_request_link="https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0142&prefill_Grant+Name=Ethereum%20Provider"
 +++
 
 ## Background
