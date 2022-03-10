@@ -41,7 +41,7 @@ There are in-app explanations of how @p's work, what the valid suffixes and pref
 
 There are in-app docs on how sigils work, etc.
 
-You can use a visual interface to enter sigils, either just general shapes, or specific shape/pattern combos. As with the ID search, you can be specific or search with wildcards. As far as I know, this tool hasn't built anywhere yet, but it shouldn't be too hard to let users mix and match svgs. Ok, it might be a little hard. See this table to understand why we shouldn't just have a dropdown for each basic shape:
+You can use a visual interface to enter sigils, either just general shapes, or specific shape/pattern combos. As with the ID search, you can be specific or search with wildcards. As far as I know, this tool hasn't built anywhere yet, but it shouldn't be too hard to let users mix and match svgs. Ok, it might be a little hard. See this table to understand why we shouldn't just have a dropdown for each basic shape: ![there are 40 prefixes that are based on a circle shape](https://i.imgur.com/sqS9yVml.png)
 
 ### Sky Chart
 
