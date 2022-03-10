@@ -1,5 +1,5 @@
 +++
-title = "Digital Editor Mars Reviww of Books"
+title = "Digital Editor, Mars Review of Books"
 date = "2022-03-10"
 
 [taxonomies]
