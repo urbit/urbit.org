@@ -9,7 +9,7 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "Digital Editor for the Mars Review of Books"
-reward = "$3,000 in WSTR"
+reward = "$4,500 in WSTR"
 assignee = ""
 champion = "~librex-dozryc"
 id = "B0140"
