@@ -47,4 +47,4 @@ Month 2 deliverable: Mars Review is published on Urbit, and successfully project
 
 Month 3: Mars Review group remains active, online. In this month the digital editor will move more toward a role of community management.
 
-In general, this bounty is probably best thought of as a 15-hour-a-week freelance job, in which the above tasks, and other unknown but related tasks, will come up and require attention form the Digital Editor as necessary.
+In general, this bounty is probably best thought of as a 10-hour-a-week freelance job, in which the above tasks, and other unknown but related tasks, will come up and require attention form the Digital Editor as necessary.
