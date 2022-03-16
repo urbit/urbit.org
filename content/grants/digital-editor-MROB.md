@@ -39,7 +39,7 @@ The Digital Editor will be responsible for:
 
 ## Compensation
 
-$1000 (in WSTR) per month for three months of work, with possibility of extension and increased compensation after the initial period of three months.
+$1500 (in WSTR) per month for three months of work, with possibility of extension and increased compensation after the initial period of three months.
 
 Month 1 deliverable: Mars Review group is successfully hosted on Urbit and contributors are onboarded
 
