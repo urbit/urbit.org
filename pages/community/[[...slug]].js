@@ -60,6 +60,10 @@ const pageTree = (thisLink, tree, level = 0) => {
 };
 
 export default function UsingLayout({ posts, data, params, search, markdown }) {
+  const p = [{ title: "Meetups", slug: "meetups", weight: 1 }].concat(
+    posts.pages
+  );
+
   return (
     <>
       <Head>
@@ -67,9 +71,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
         {Meta(data)}
       </Head>
       <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
-        <Sidebar search={search}>
-          {childPages("/community", posts.pages)}
-        </Sidebar>
+        <Sidebar search={search}>{childPages("/community", p)}</Sidebar>
         <ContentArea
           breadcrumbs={breadcrumbs(posts, params.slug?.slice(0, -1) || "")}
           title={data.title}
