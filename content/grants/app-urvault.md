@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "UrVault: Urbit Password Manager"
-reward = "$12000 in WSTR"
+reward = "$8000 in WSTR"
 assignee = ""
 mentor = "~mocrux-nomdep"
 grant_id = "A01465"
