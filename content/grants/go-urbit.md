@@ -1,7 +1,7 @@
 +++
 
 title = "Go-Urbit Core Interface"
-date = "2021-11-08"
+date = "2022-03-23"
 
 [taxonomies]
 grant_type = ["Proposal"]
@@ -10,16 +10,17 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Create a go-urbit library that contains the required functions for interfacing with Ames"
-reward = 3
+reward = $30000 in WSTR
 assignee = "~litryl-tadmev"
-grant_id = "P0100"
+champion = "~wicdev-wisryt"
+grant_id = "P0125"
 completed = false
 canceled = false
 link = ""
 
 +++
 
-# go-urbit core interface
+# go-urbit Core Interface
 
 One of the missing projects in the Urbit ecosystem is the ability to directly communicate with Urbit from another device or system using the Ames protocol.
 
@@ -33,8 +34,8 @@ My end goal, as discussed with ~wicdev-wisryt for a future proposal, is to rewri
 
 ### Milestone 1 - Go Noun
 
-Expected Completion:
-Payment: 1 Star
+Expected Completion: 15 April 2022
+Payment: $10000 in WSTR
 
 Implement the Noun protocol in Golang.
 
@@ -51,8 +52,8 @@ Implement the core Noun structures:
 
 ### Milestone 2 - Go Ames Utilities
 
-Expected Completion:
-Payment: 2 stars
+Expected Completion: 1 May 2022
+Payment: $20000 in WSTR
 
 Implement a Golang utility library for interfacing with Ames.
 
