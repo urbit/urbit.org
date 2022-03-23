@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Create a go-urbit library that contains the required functions for interfacing with Ames"
-reward = $30000 in WSTR
+reward = "$30000 in WSTR"
 assignee = "~litryl-tadmev"
 champion = "~wicdev-wisryt"
 grant_id = "P0125"
