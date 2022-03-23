@@ -22,7 +22,7 @@ assignee = "dcSpark"
 
 grant_id = "P0090"
 
-completed = false
+completed = true
 
 canceled = false
 

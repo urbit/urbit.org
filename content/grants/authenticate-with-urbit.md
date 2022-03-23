@@ -10,7 +10,7 @@ description = "Exernal service/websites can verify that a user is who they say t
 reward = "1 star"
 assignee = "dcSpark"
 grant_id = "P0081"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++
