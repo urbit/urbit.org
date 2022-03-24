@@ -64,7 +64,7 @@ const Meetup = (props) => {
   const whiteText = props.text_color === "white" ? "text-white" : "";
   return (
     <div
-      className="bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat"
+      className="bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat mt-3"
       style={{ backgroundImage: `url(${props.image})` || "" }}
     >
       <div className="flex flex-col p-6 justify-between items-between h-full relative">
