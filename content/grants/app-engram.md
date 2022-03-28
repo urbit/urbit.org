@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Engram is a knowledge management application that allows individuals or teams to build rich note documents."
-reward = "$75,000 in WSTR"
+reward = "$70,000 in WSTR"
 assignee = ""
 id = ""
 completed = false
