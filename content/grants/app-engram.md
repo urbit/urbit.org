@@ -56,6 +56,7 @@ As a document editor, I would like to:
 - Be able to edit in readme mode
 - Be able to edit in preview mode
 - Have a hoverable style block appear when editing
+- Add collaborators to the document with an edit permission or view permission. 
 
 As a document viewer, I would like to see
 
@@ -74,6 +75,24 @@ As a document viewer, I would like to see
 The most complex part of this is the revision log. It should be easy to revert to a certain point in time. There will also need to be a sentence parser that stores each sentence in a store with associated comments and other metadata. Each sentence or collection of sentences should be able to be referenced by other documents.
 
 Holium will work with the developer(s) to provide frontend help.
+
+## Milestone 1 - Single user documents - 30,000 WSTR
+
+The first milestone is to release a version of the app that allows for single user documents, meaning there is a document owner and only they can edit it. The app should include the rich document editor features without collaboration.
+
+The app should be released.
+
+## Milestone 2 - Revision history, comments, and referencing - 15,000 WSTR
+
+This second milestone is building out the revision history log to allow for undo, redo, and time traveling through revision snapshots. This will serve as the foundation of the third milestone.
+
+There should be a revision history log in the UI that allows users to go back to previous snapshots as well as the ability to leave comments on the document or on sentences.
+
+## Milestone 3 - Collaboration - 25,000 WSTR
+
+Allows multiple editors to modify the document and resolves the differences between the documents. There is not a need for live co-editing in this milestone as that is reliant on WebRTC or another streaming solution. 
+
+You should have the ability to add new users to the document, manage those users permissions, and remove the users from the collaborator list.
 
 ## Future work
 There is the potential for several future releases enabling more collaboration features:
