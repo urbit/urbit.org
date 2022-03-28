@@ -10,7 +10,7 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "UrVault: Urbit Password Manager"
-reward = "$8000 in WSTR"
+reward = "$12,000 in WSTR"
 assignee = "~dabber-sicsup"
 mentor = "~mocrux-nomdep"
 grant_id = "A01465"
@@ -38,4 +38,4 @@ An initial version of the web extension which supports:
 - Reading password from their ship/pasting them into password input boxes on the correct domain
 - Storing passwords encrypted at rest
 
-Payment: $8000 in WSTR upon completion of apprenticeship
+Payment: $12,000 in WSTR upon completion of apprenticeship at an estimated three months of work.

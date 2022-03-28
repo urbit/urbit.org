@@ -1,6 +1,6 @@
 +++
 title = "Become an Apprentice"
-date = "2022-01-27"
+date = "2022-03-27"
 weight = 1
 description = "Everything you need to know about applying for an apprenticeship"
 +++
@@ -36,4 +36,4 @@ When a mentor has signed off on the apprentice's work, the mentor will notify th
 
 ## Funding
 
-Apprenticeships pay a flat $8,000 in WSTR to the apprentice, and $2,000 WSTR to the mentor.
+Apprenticeships pay $4,000 in WSTR per month to the apprentice and $1,000 WSTR per month to the mentor, for a limit of up to three months.
