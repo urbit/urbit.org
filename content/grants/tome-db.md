@@ -1,5 +1,5 @@
 +++
-title = "tomeDB: simple data storage for app developers."
+title = "tomeDB: simple data storage for app developers"
 date = "2022-03-25"
 
 [taxonomies]
