@@ -7,9 +7,9 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Maintain the Port application"
-reward = "$8000-$12000 in WSTR"
+reward = "$12000 in WSTR"
 champion = "~nocsyx-lassul"
-assignee = ""
+assignee = "~latter-bolden"
 id = "B0137"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0137&prefill_Grant+Name=Port%20Maintenance"
@@ -69,6 +69,6 @@ Engineer Skills
 
 ## Compensation
 
-- $4000 in WSTR per month initially (assuming ~10 hours/week part-time)
+- $4000 in WSTR per month initially (assuming ~10 hours/week part-time), 3 month contract
 
 - More WSTR can be negotiated if the developer has greater availability and can commit more time
