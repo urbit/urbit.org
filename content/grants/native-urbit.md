@@ -11,7 +11,7 @@ image = ""
 description = "Native Planet - A domestic hosting solution for Urbit"
 reward = "5 stars"
 assignee = "~dalhec-banler"
-completed = false
+completed = true
 canceled = false
 +++
 
