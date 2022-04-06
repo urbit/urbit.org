@@ -104,10 +104,10 @@ If your Champion becomes unresponsive or is unhelpful, let someone at the Urbit 
 
 After your proposal is Championed the Urbit Foundation will need to get a **signed contributor agreement** and **collect a small amount of personal information** from you as part of our KYC process.
 
-The Urbit Foundation must comply with international law when distributing address space. We try to keep this process as minimal as we can, but there's no way to avoid it entirely without legally jeapardizing the Foundation's operations.
+The Urbit Foundation must comply with international law when distributing address space. We try to keep this process as minimal as we can, but there's no way to avoid it entirely without legally jeopardizing the Foundation's operations.
 
 ## Getting Paid
 
 After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount in USD agreed upon in your grant or milestone, which the Foundation will pay in WSTR.
 
-We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individual, and weekends/holidays sometimes interfere.
+We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individually, and weekends/holidays sometimes interfere.
