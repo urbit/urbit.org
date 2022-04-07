@@ -8,10 +8,10 @@ ship = "~lagrev-nocfep"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-centralization.JPG"
 +++
 
-![Presentation](https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-centralization.JPG)
+![Volvox sp. microscopic algae](https://live.staticflickr.com/4322/35891780782_4179f476f9_k.jpg)
 
-_The following was presented by ~lagrev-nocfep at the MTAConf 2022
-conference on “The Decentralization of Power”._
+_A version of the following was presented by ~lagrev-nocfep at the [MTAConf 2022
+conference on “The Decentralization of Power”](https://www.mtaconf.org/)._
 
 IN THE BEGINNING, *God created the prokaryotes. And the
 prokaryotes were without nucleus and organelle; and structural
@@ -50,7 +50,7 @@ community.[^2] This community had a signal advantage over many
 subsequent communities: it was dominated by strong norms of discourse
 which shaped the professionalism of the community. This is not to
 discount the significance of courtly intrigue, of course, which deftly
-exploited tensions between competing systems.[^3]^,^[^4]^,^[^5]
+exploited tensions between competing systems.[^3] [^4] [^5]
 Throughout this era, though, the Internet generally functioned as a
 real-name high-trust environment---if not exactly of peers, at least of
 colleagues.
@@ -517,3 +517,5 @@ world that never comprehended the light shining in its darkness.
     *UnHerd*. Auerbach correctly recognizes and decries the looming
     "monetisation of identity" which will allow any platform controller
     to incentivize prosocial or antisocial behaviors at will.
+
+_The header image is [Volvox sp. microscopic algae](https://www.flickr.com/photos/picksfromoutthere/35891780782/in/photolist-WFCKYA-XPdGLq-2k9Cew6-ViCgrB-23QUBQR-21rF362-CCSE2n-23AwZ7m-CbKedu-gznqa-2dHUv3k-EE8eoq-gznq9-i5zqqk-WYSwcf-XWVgQk-WabAAG-gLjRj-gDcLp-4VvECm-259cDCS-i5zqRk-25cV246-i5yNvM-gupiMJ-PXLbhr-LUACZ7-ihvxSH-ihvvVg-ihwjbF-ihvxDX-i5yQDd-ihzQwK-fWwpxb-rarKrm-8LWTQf-qVar5j-ihzAPA-JNrgyK-ihzBrC-ca6Ex9-2kCTSrj-ihz67k-qfJsYd-248ePDL-ihztbm-ihzuyS-LQYZQq-2kCTRxL-ihvWPA) by Picturepest on Flickr._
