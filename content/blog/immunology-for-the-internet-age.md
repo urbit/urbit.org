@@ -13,6 +13,8 @@ image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/ux-cen
 _A version of the following was presented by ~lagrev-nocfep at the [MTAConf 2022
 conference on “The Decentralization of Power”](https://www.mtaconf.org/)._
 
+**✿**
+
 IN THE BEGINNING, *God created the prokaryotes. And the
 prokaryotes were without nucleus and organelle; and structural
 simplicity was upon the face of the deep. And chemotaxis moved it upon
@@ -42,7 +44,7 @@ disease, or disequilibrated colonization by simpler forms of life, has
 been a---if not the---primary driver towards increasing complexity in
 multicellular life.[^1]
 
-**
+**✿**
 
 The Internet began in the late 1960s, born of scientific alliance
 between the Cold War Department of Defense and the academic research
@@ -89,7 +91,7 @@ Facebook, led to concentrations of users which tipped the balance from
 single webpage hosts presenting their own idiosyncratic views to
 corporate-approved genericity and ultimately censorship.[^8]
 
-**
+**✿**
 
 When was the first time you did something in the physical world because
 of something you read or encountered online? For generations born after
