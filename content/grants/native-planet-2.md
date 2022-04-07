@@ -1,6 +1,6 @@
 +++
 title = "Native Planet Phase 2"
-date = "2022-04-06"
+date = "2022-04-07"
 
 [taxonomies]
 grant_type = [ "Proposal" ]
@@ -62,7 +62,7 @@ Onboard screen UI
 
 ### Phase Two - Milestone 2 - Production
 
-Expected Completion: 30 June, 2022
+Expected Completion: 30 July, 2022
 
 Payment: $25,000 WSTR
 
