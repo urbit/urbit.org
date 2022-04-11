@@ -359,7 +359,40 @@ export async function getStaticProps() {
 
   const events = getAllEvents(eventKeys, "events");
 
+  const now = DateTime.now();
+
+  const pastEvents = events.filter((event) => {
+    const ends = generateRealtimeDate(event.ends);
+    return ends < now;
+  });
+
+  const futureEvents = events
+    .filter((event) => {
+      const starts = generateRealtimeDate(event.starts);
+      return starts > now;
+    })
+    .sort((a, b) => {
+      const aStarts = generateRealtimeDate(a.starts).ts;
+      const bStarts = generateRealtimeDate(b.starts).ts;
+      if (aStarts > bStarts) {
+        return 1;
+      } else if (aStarts === bStarts) {
+        return 0;
+      }
+      return -1;
+    });
+
+  const happeningNow = events.filter((event) => {
+    const starts = generateRealtimeDate(event.starts);
+    const ends = generateRealtimeDate(event.ends);
+    return starts > DateTime.now() && ends < now;
+  });
+
   return {
-    props: { posts, events, openGrantsCount },
+    props: {
+      posts,
+      openGrantsCount,
+      events: happeningNow.concat(futureEvents).concat(pastEvents),
+    },
   };
 }
