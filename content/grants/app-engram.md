@@ -77,7 +77,7 @@ The most complex part of this is the revision log. It should be easy to revert t
 
 Holium will work with the developer(s) to provide frontend help.
 
-## Milestone 1 - Single user documents - 30,000 WSTR
+## Milestone 1 - Single user documents - $30,000 in WSTR
 
 The first milestone is to release a version of the app that allows for single user documents, meaning there is a document owner and only they can edit it. The app should include the rich document editor features without collaboration.
 
