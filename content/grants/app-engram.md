@@ -11,7 +11,8 @@ image = ""
 description = "Engram is a knowledge management application that allows individuals or teams to build rich note documents."
 reward = "$70,000 in WSTR"
 assignee = ""
-id = ""
+id = "B0155"
+champion = "Holium"
 completed = false
 work_request_link = "
 https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0155&prefill_Grant+Name=Engram"
@@ -83,13 +84,13 @@ The first milestone is to release a version of the app that allows for single us
 
 The app should be released.
 
-## Milestone 2 - Revision history, comments, and referencing - 15,000 WSTR
+## Milestone 2 - Revision history, comments, and referencing - $15,000 in WSTR
 
 This second milestone is building out the revision history log to allow for undo, redo, and time traveling through revision snapshots. This will serve as the foundation of the third milestone.
 
 There should be a revision history log in the UI that allows users to go back to previous snapshots as well as the ability to leave comments on the document or on sentences.
 
-## Milestone 3 - Collaboration - 25,000 WSTR
+## Milestone 3 - Collaboration - $25,000 in WSTR
 
 Allows multiple editors to modify the document and resolves the differences between the documents. There is not a need for live co-editing in this milestone as that is reliant on WebRTC or another streaming solution. 
 
@@ -113,5 +114,5 @@ There is the potential for several future releases enabling more collaboration f
 This project has many pieces and would likely require a team size of two or more. There would need to be a significant amount of frontend work, which Holium will help build or facilitate using our design system. V1 deadline is 6 months from start.
 
 ## Reward
-$70,000 WSTR (team of two)
+$70,000 in WSTR (team of two)
 
