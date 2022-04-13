@@ -5,7 +5,7 @@ description = "A consideration of the history of the Internet motivates introspe
 [extra]
 author = ""
 ship = "~lagrev-nocfep"
-image = "https://live.staticflickr.com/4322/35891780782_4179f476f9_k.jpg)"
+image = "https://live.staticflickr.com/4322/35891780782_4179f476f9_k.jpg"
 +++
 
 _A version of the following was presented by ~lagrev-nocfep at the [MTAConf 2022
