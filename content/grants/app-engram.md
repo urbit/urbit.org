@@ -14,8 +14,7 @@ assignee = ""
 id = "B0155"
 champion = "Holium"
 completed = false
-work_request_link = "
-https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0155&prefill_Grant+Name=Engram"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0155&prefill_Grant+Name=Engram"
 +++
 
 Engram is a knowledge management application that allows individuals or teams to build rich note documents.
