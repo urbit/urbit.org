@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Other" ]
 [extra]
 image = ""
 description = "a tool which allows NFT artists to offer planets for redemption to their patrons alongside their NFTs"
-reward = "$15000 in WSTR"
+reward = "2 stars"
 assignee = "~tasset-norlux"
 champion = "~tacryt-socryp"
 grant_id = "P0143"
@@ -31,11 +31,11 @@ Artists such as Haleek Maul have created custom collections of Urbit sigils whic
 ## Implementation
 
 Money from this grant would go to creating a tool for NFT artists selling artwork to provide their community immediate access to Urbit by redeeming a planet.
-This would initially be an integration with Lit Protocol which queries an artist’s NFT contract to provide access to a modified planettine-based react app for distributing planets.
+This would initially be an integration with Metamask Protocol which queries an artist’s NFT contract to provide access to a modified planettine-based react app for distributing planets.
 
 ## Stages of Valve
 
-1. The Valve MVP will be a redeployment of Tlon’s planettine distribution tool behind a Lit Protocol authentication layer. Planet slugs will be maintained in an airtable to be available for redemption through planettine’s react app. Tlon will work with me to polish onboarding copy for the frontend which will clearly explain how an NFT holder redeems, then boots up, their planet. Tlon will also host all the planets of the Dusko community, starting with the core team.
+1. The Valve MVP will be a redeployment of Tlon’s planentine distribution tool behind a Metamask Protocol authentication layer. Planet slugs will be maintained in an airtable to be available for redemption through planettine’s react app. Tlon will work with me to polish onboarding copy for the frontend which will clearly explain how an NFT holder redeems, then boots up, their planet. Tlon will also host all the planets of the Dusko community, starting with the core team.
 
 2. The second phase of Valve will be replacing the planetine backend with Tirrel’s planet distribution tool. At this point Valve will now be open source and I will work with Tlon / Tirrel to create a guide that explains how NFT creators customize Valve to distribute planets for their specific contract.
 
@@ -63,25 +63,19 @@ A tool for me, as an artist selling artwork, to provide my community immediate a
 
 ### Milestone 1 - MVP
 
-Payment: $4,000 in WSTR
+Payment: 1 star
 
 Completion: 30 Apr 2022
 
-MVP: a web page gated using Lit Protocol which users are granted access to once they mint a corresponding NFT.
+MVP: a web page gated using Metamask Protocol which users are granted access to once they mint a corresponding NFT.
 
-### Milestone 2 - Airtable form
+### Milestone 2 - Airtable form and Tirrel Backend
 
-Payment: $5,000 in WSTR
+Payment: 1 star
 
-Completion: 31 May 2022
+Completion: 30 Jun 2022
 
 Airtable form for Valve which other artists fill out to request redeemable planets and at least two artists lined up to transition their community over to Urbit through a Valve NFT release.
-
-Milestone 3 - Tirrel backend
-
-Payment : $6,000 in WSTR
-
-Completion: 30 June 2022
 
 Implementation of Tirrel backend and open-sourcing of Valve through release of repo and guide.
 500 planets distributed in total with at least communities transitioned over to Urbit.
