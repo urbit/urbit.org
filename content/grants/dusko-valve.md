@@ -78,4 +78,4 @@ Completion: 30 Jun 2022
 Airtable form for Valve which other artists fill out to request redeemable planets and at least two artists lined up to transition their community over to Urbit through a Valve NFT release.
 
 Implementation of Tirrel backend and open-sourcing of Valve through release of repo and guide.
-500 planets distributed in total with at least communities transitioned over to Urbit.
+500 planets distributed in total with at least two communities transitioned over to Urbit.
