@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Eth-provider is a Gall agent that allows Urbit users to configure their Ethereum connection."
-reward = "$30,000 in WSTR"
+reward = "3 stars"
 assignee = ""
 id = ""
 completed = false
