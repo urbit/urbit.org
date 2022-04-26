@@ -9,7 +9,7 @@ grant_category = [ "App Dev", "Other" ]
 [extra]
 image = ""
 description = ""
-reward = "$8000 in WSTR"
+reward = "1 star"
 mentor = "~dasrun-fadben"
 assignee = "~sipned-nistug"
 completed = false
