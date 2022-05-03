@@ -4,6 +4,9 @@ region = "North America"
 location = "New York"
 organizer = "~dinleb-rambep"
 link = "https://example.com"
-image = "https://secure.meetupstatic.com/photos/event/3/0/5/7/clean_498732375.jpeg"
-text_color = "white" 
+image = ""
+starts = "2022-02-24T04:00:00.000-08:00"
+ends = "2022-02-24T07:00:00.000-08:00"
+timezone = "America/New_York"
+dark = false
 +++

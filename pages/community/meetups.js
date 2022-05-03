@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import Meta from "../../components/Meta";
 import Container from "../../components/Container";
-import { buildPageTree, getAllEvents } from "../../lib/lib";
+import {
+  buildPageTree,
+  getAllEvents,
+  generateDisplayDate,
+} from "../../lib/lib";
 
 import Sidebar from "../../components/Sidebar";
 import ContentArea from "../../components/ContentArea";
@@ -12,11 +16,13 @@ import { useRouter } from "next/router";
 import { join } from "path";
 import { meetupKeys } from "../../lib/constants";
 
+import { DateRange } from "../../components/Snippets";
+
 const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
-    <Link href="/community">Community</Link>,
+    <Link href="/community/meetups">Community</Link>,
   ];
   let thisLink = "/community";
   for (const path of paths) {
@@ -61,24 +67,36 @@ const pageTree = (thisLink, tree, level = 0) => {
 };
 
 const Meetup = (props) => {
-  const whiteText = props.text_color === "white" ? "text-white" : "";
+  // Meetup tiles have a 'dark mode' used when their background images are dark and white text is needed for legibility.
+
+  const grayText = props?.dark ? "text-washedWhite" : "text-wall-400";
+  const blackText = props?.dark ? "text-white" : "text-wall-600";
+
+  const starts = generateDisplayDate(props.starts, props.timezone);
+  const ends = generateDisplayDate(props.ends, props.timezone);
+
   return (
     <div
-      className="bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat"
+      className="bg-wall-100 rounded-xl bg-cover bg-center bg-no-repeat mt-3"
       style={{ backgroundImage: `url(${props.image})` || "" }}
     >
       <div className="flex flex-col p-6 justify-between items-between h-full relative">
         <div className="flex-grow-1 flex flex-col h-full">
-          <h3 id={props.title} className={`mb-2 ${whiteText}`}>
+          <h3 id={props.title} className={`mb-2 ${blackText}`}>
             {props.title}
           </h3>
         </div>
 
         <div>
-          <p className={`type-sub mb-1 ${whiteText}`}>{props.location}</p>
-          <p className={`type-sub mb-1 ${whiteText}`}>
+          <p className={`type-sub mb-1 ${blackText}`}>
             Organized by {props.organizer}
           </p>
+          <p className={`type-sub mb-1 ${blackText}`}>{props.location}</p>
+          <DateRange
+            starts={starts}
+            ends={ends}
+            className={`${grayText} type-sub`}
+          />
         </div>
         <div className="absolute right-0 bottom-0 p-6">
           <a
@@ -96,9 +114,11 @@ const Meetup = (props) => {
 };
 
 export default function Meetups({ posts, meetups, params, search }) {
+  const africa = meetups["Africa"] || [];
   const asia = meetups["Asia"] || [];
   const eu = meetups["Europe"] || [];
   const na = meetups["North America"] || [];
+  const sa = meetups["South America"] || [];
   const oc = meetups["Oceania"] || [];
 
   return (
@@ -127,22 +147,54 @@ export default function Meetups({ posts, meetups, params, search }) {
               free to dive in.
             </p>
           </div>
-          <h2 className="mt-6 mb-3" id="asia">
-            Asia
-          </h2>
-          {asia.map((meetup) => Meetup(meetup))}
-          <h2 className="mt-6 mb-3" id="eu">
-            Europe
-          </h2>
-          {eu.map((meetup) => Meetup(meetup))}
-          <h2 className="mt-6 mb-3" id="na">
-            North America
-          </h2>
-          {na.map((meetup) => Meetup(meetup))}
-          <h2 className="mt-6 mb-3" id="oc">
-            Oceania
-          </h2>
-          {oc.map((meetup) => Meetup(meetup))}
+          {africa.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="africa">
+                Africa
+              </h2>
+              {africa.map((meetup) => Meetup(meetup))}
+            </>
+          )}
+          {asia.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="asia">
+                Asia
+              </h2>
+              {asia.map((meetup) => Meetup(meetup))}
+            </>
+          )}
+          {eu.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="eu">
+                Europe
+              </h2>
+              {eu.map((meetup) => Meetup(meetup))}
+            </>
+          )}
+          {na.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="na">
+                North America
+              </h2>
+              {na.map((meetup) => Meetup(meetup))}
+            </>
+          )}
+          {sa.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="sa">
+                South America
+              </h2>
+              {sa.map((meetup) => Meetup(meetup))}
+            </>
+          )}
+          {oc.length > 0 && (
+            <>
+              <h2 className="mt-6 mb-3" id="oc">
+                Oceania
+              </h2>
+              {oc.map((meetup) => Meetup(meetup))}
+            </>
+          )}
         </ContentArea>
       </div>
     </Container>

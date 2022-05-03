@@ -15,7 +15,7 @@ const breadcrumbs = (posts, paths) => {
   const results = [
     <Link href="/">Urbit</Link>,
     <span className="px-1">/</span>,
-    <Link href="/community">Community</Link>,
+    <Link href="/community/meetups">Community</Link>,
   ];
   let thisLink = "/community";
   for (const path of paths) {
