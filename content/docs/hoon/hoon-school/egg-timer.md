@@ -161,4 +161,4 @@ In this case, we will not produce any card or change application state. Therefor
 --
 ```
 
-Finally, we define the remaining 8 unused but required Gall Agent armsas instances of the default arms provided in `/lib/default-agent.hoon`.
+Finally, we define the remaining 8 unused but required Gall Agent arms as instances of the default arms provided in `/lib/default-agent.hoon`.

@@ -13,7 +13,7 @@ reward = "1 star"
 assignee = "~mogmyr-talrus"
 id = ""
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0083&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2813%29"
-completed = false
+completed = true
 canceled = false
 link = ""
 

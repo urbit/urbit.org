@@ -6,7 +6,7 @@ template = "doc.html"
 
 Urbit allows peer-to-peer distribution and installation of applications. A user can click on a link to an app hosted by another ship to install that app. The homescreen interface lets users manage their installed apps and launch their interfaces in new tabs.
 
-This document describes the architecture of Urbit's app distribution system. For a walk-through of creating and distributing an app, see the [`Guide`](/docs/userspace/dist/guide) document.
+This document describes the architecture of Urbit's app distribution system. For a walkthrough of creating and distributing an app, see the [`Guide`](/docs/userspace/dist/guide) document.
 
 ## Architecture
 

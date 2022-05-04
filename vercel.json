@@ -4,6 +4,11 @@
   },
   "redirects": [
     {
+      "source": "/groups/~ladtem-filmyr/urbit-ny-takeover",
+      "destination": "/groups/~ladtem-filmyr/urbit-ny-week",
+      "permanent": true
+    },
+    {
       "source": "/grants/grant-submission-guide",
       "destination": "/grants/proposals",
       "permanent": true
@@ -46,6 +51,11 @@
     {
       "source": "/install/linux64/latest",
       "destination": "https://github.com/urbit/urbit/releases/latest/download/linux64.tgz",
+      "permanent": true
+    },
+    {
+      "source": "/install/windows/latest",
+      "destination": "http://github.com/urbit/urbit/releases/latest/download/windows.tgz",
       "permanent": true
     },
     {
@@ -95,7 +105,7 @@
     },
     {
       "source": "/using/operations/bridge-troubleshooting",
-      "destination": "/using/os/bridge-troubleshooting",
+      "destination": "/using/id/bridge-troubleshooting",
       "permanent": true
     },
     {
@@ -125,7 +135,7 @@
     },
     {
       "source": "/docs/reference/vane-apis/airlock",
-      "destination": "/docs/arvo/eyre/using-eyre",
+      "destination": "/docs/arvo/eyre/eyre",
       "permanent": true
     },
     {
@@ -170,7 +180,7 @@
     },
     {
       "source": "/docs/reference/vane-apis/ames",
-      "destination": "/docs/arvo/ames/ames-api",
+      "destination": "/docs/arvo/ames/tasks",
       "permanent": true
     },
     {
@@ -180,7 +190,7 @@
     },
     {
       "source": "/docs/reference/vane-apis/behn",
-      "destination": "/docs/arvo/behn/behn-api",
+      "destination": "/docs/arvo/behn/tasks",
       "permanent": true
     },
     {
@@ -195,7 +205,7 @@
     },
     {
       "source": "/docs/reference/vane-apis/dill",
-      "destination": "/docs/arvo/dill/dill-api",
+      "destination": "/docs/arvo/dill/tasks",
       "permanent": true
     },
     {
@@ -215,12 +225,12 @@
     },
     {
       "source": "/docs/reference/vane-apis/iris",
-      "destination": "/docs/arvo/iris/iris-api",
+      "destination": "/docs/arvo/iris/tasks",
       "permanent": true
     },
     {
       "source": "/docs/reference/vane-apis/jael",
-      "destination": "/docs/arvo/jael/jael-api",
+      "destination": "/docs/arvo/jael/tasks",
       "permanent": true
     },
     {
@@ -360,7 +370,7 @@
     },
     {
       "source": "/docs/tutorials/hoon/hoon-school/setup",
-      "destination": "/docs/hoon/hoon-school/setup",
+      "destination": "/docs/hoon/hoon-school/intro",
       "permanent": true
     },
     {
@@ -390,7 +400,7 @@
     },
     {
       "source": "/docs/tutorials/hoon/hoon-school/_index",
-      "destination": "/docs/hoon/hoon-school/_index",
+      "destination": "/docs/hoon/hoon-school",
       "permanent": true
     },
     {
@@ -505,7 +515,7 @@
     },
     {
       "source": "/docs/reference/hoon-expressions/rune/_index",
-      "destination": "/docs/hoon/reference/rune/_index",
+      "destination": "/docs/hoon/reference/rune",
       "permanent": true
     },
     {
@@ -760,17 +770,17 @@
     },
     {
       "source": "/docs/reference/library/_index",
-      "destination": "/docs/hoon/reference/stdlib/_index",
+      "destination": "/docs/hoon/reference/stdlib",
       "permanent": true
     },
     {
       "source": "/docs/tutorials/concepts/arch",
-      "destination": "/docs/landscape/overview",
+      "destination": "/docs/glossary/landscape",
       "permanent": true
     },
     {
       "source": "/docs/tutorials/hoon/graph",
-      "destination": "/docs/landscape/reference/graph-store",
+      "destination": "/docs/userspace/graph-store/overview",
       "permanent": true
     },
     {
@@ -795,7 +805,7 @@
     },
     {
       "source": "/docs/tutorials/nock/_index",
-      "destination": "/docs/nock/_index",
+      "destination": "/docs/nock",
       "permanent": true
     },
     {
@@ -825,7 +835,7 @@
     },
     {
       "source": "/docs/tutorials/vere/_index",
-      "destination": "/docs/vere/_index",
+      "destination": "/docs/vere",
       "permanent": true
     },
     {

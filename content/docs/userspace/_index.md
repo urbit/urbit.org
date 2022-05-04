@@ -12,6 +12,10 @@ Urbit's userspace is managed by Arvo's Gall vane.
 
 An overview of userspace in Urbit.
 
+## [HTTP API Guide](/docs/userspace/http-api-guide)
+
+Learn how to interact with a ship from a web client using the `@urbit/http-api` Javascript library.
+
 ## [Gall Guide](/docs/userspace/gall-guide/intro)
 
 Learn how to develop Gall agents.

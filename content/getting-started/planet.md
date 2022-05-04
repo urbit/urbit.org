@@ -114,8 +114,8 @@ here](/getting-started#port).
 Running Urbit from the command line is suitable for either a cloud installation
 or a local installation. If you're comfortable with the command line and would
 like greater control over the Urbit virtual machine, this is the right option.
-The Urbit runtime is available for Linux, MacOS, and can also be run on Windows
-by using WSL2. Additionally, there are guides for [hosting your planet on
+The Urbit runtime is available for Linux, MacOS and Windows.
+Additionally, there are guides for [hosting your planet on
 DigitalOcean](/using/running/hosting) and [hosting your planet on Linode
 (external
 link)](https://jeremytunnell.com/2021/01/09/how-to-install-urbit-on-a-linode-vps),

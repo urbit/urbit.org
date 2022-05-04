@@ -23,8 +23,11 @@ blockchains.
 
 ### Further reading
 
+- [Layer 2 for planets](/getting-started/layer-2-for-planets): Essential
+  information for planet owners on layer 2 or considering a move to layer 2
 - [The Gang Solves the Gas Crisis](/blog/rollups): A casual overview of how
-naive rollups works.
-- Pilot's Guide to layer 2 : insert link
+  naive rollups works.
 - [Layer 2 Overview](/docs/azimuth/l2/layer2): where developers should go to learn
-about the technical details of naive rollups.
+  about the technical details of naive rollups.
+- [Custom Roller Tutorial](/docs/azimuth/l2/roller-tutorial): tutorial on how to
+  set up your own L2 roller.

@@ -5,60 +5,179 @@ template = "doc.html"
 aliases = ["docs/reference/hoon-expressions/rune/zap/"]
 +++
 
-## Runes
+## `!,` "zapcom"
 
-### `!>` "zapgar"
+Produce the Hoon AST of an expression.
 
-`[%zpgr p=hoon]`: wrap a noun in its type.
+#### Syntax
 
-##### Produces
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!,  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!,(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zpcm p=hoon q=hoon]
+```
+
+#### Discussion
+
+This produces the [`$hoon`](/docs/hoon/reference/stdlib/4o#hoon) AST of
+expression `q`. The first argument, `p`, is always an example of the `$hoon`
+type, typically just the `*hoon` bunt value, and is used for type inference. The
+reason for `p` is just to handle transitions if the `$hoon` type changes.
+
+#### Examples
+
+```
+> !,  *hoon  [1 1]
+[%cltr p=~[[%sand p=%ud q=1] [%sand p=%ud q=1]]]
+
+> !,  *hoon  (add 1 1)
+[%cncl p=[%wing p=~[%add]] q=~[[%sand p=%ud q=1] [%sand p=%ud q=1]]]
+```
+
+---
+
+## `!>` "zapgar"
+
+Wrap a noun in its type (form a [`vase`](/docs/hoon/reference/stdlib/4o#vase)).
+
+#### Syntax
+
+One argument, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!>  p
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!>(p)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zpgr p=hoon]
+```
+
+#### Produces
 
 A cell whose tail is the product of `p`, and whose head is the static type of `p`.
 
-##### Syntax
+#### Discussion
 
-Regular: **1-fixed**.
+In Hoon, a dynamic type is a static type compiled at runtime. This type-noun
+cell is generally called a [`vase`](/docs/hoon/reference/stdlib/4o#vase).
 
-##### Discussion
-
-In Hoon, a dynamic type is a static type compiled at runtime. This type-noun cell is generally called a `vase`.
-
-##### Examples
+#### Examples
 
 ```
 > !>(1)
 [#t/@ud q=1]
 ```
 
-If you want just the type value, use a 'type spear'. This is `-:!>`, i.e., the head of the cell produced by `!>`:
+If you want just the type value, use a 'type spear'. This is `-:!>`, i.e., the
+head of the cell produced by `!>`:
 
 ```
 > -:!>(1)
 #t/@ud
 ```
 
-### `!<` "zapgal"
+---
 
-`[%zpld p=spec q=hoon]`
+## `!<` "zapgal"
 
-Takes a mold and a `vase` and dynamically checks that the type in the `vase`
-matches the mold.
+Extracts a [`vase`](/docs/hoon/reference/stdlib/4o#vase) to the given mold if
+its type nests.
 
-##### Produces
+#### Syntax
 
-The value of `vase` typed with the type of the mold if possible, else a
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!<  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!<(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zpgl p=spec q=hoon]
+```
+
+#### Produces
+
+The value of vase `q` typed with the type of mold `p` if possible, else a
 `nest-fail`.
 
-##### Syntax
+#### Discussion
 
-Regular: **2-fixed**
+This is something like a partial inverse to the `!>` rune and can be used to
+extract a typed value from a `vase`.
 
-##### Discussion
-
-This is something like a partial inverse to the `!>` rune and can be used to extract
-a typed value from a `vase`.
-
-##### Examples
+#### Examples
 
 ```
 > !<  @  !>  ~zod
@@ -67,105 +186,124 @@ a typed value from a `vase`.
 > !<  @p  !>  0
 nest-fail
 
-> =m !>  0
-> =n !>  1
-> !<  [@ @]  (slop m n)
-[0 1]
+> !<  tape  !>("foobar")
+"foobar"
 ```
 
-### `!:` "zapcol"
+---
 
-`[%dbug p=hoon]`: turn on stack trace
+## `!;` "zapmic"
 
-##### Produces
+Wrap a noun in its type (raw).
 
-The product of `p` unless `p` crashes, in which case a stack trace is given.
+#### Syntax
 
-##### Syntax
+Two arguments, fixed.
 
-Regular: **1-fixed**.
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!;  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!;(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
 
 ```hoon
-!:  p=hoon
+[%zpmc p=hoon q=hoon]
 ```
 
-##### Discussion
+#### Discussion
 
-`!:` is used to turn on a debugging stack trace option for any code you have in `p`.
+This wraps the product of `q` in its inferred type. It's a raw version of
+[`!>`](#-zapgar). Unlike zapgar, `q` is not given a `p` face and its type
+information is not stripped to a raw noun.
 
-##### Examples
+The first field, `p`, must be an example of the
+[`$type`](/docs/hoon/reference/stdlib/4o#type) type, typically just `*type` (the
+bunt of `$type`). The `p` argument is just so transitions can be handled if the
+`$type` type changes.
+
+It's unlikely you'd use this rune directly; [`!>`](#-zapgar) is much more
+typical.
+
+#### Examples
 
 ```
-> ?:(=(0 1) 123 !!)
-ford: %ride failed to execute:
+> !;  *type  [1 1]
+[#t/[@ud @ud] 1 1]
 
-> !:  ?:(=(0 1) 123 !!)
-/~zod/base/~2018.10.15..19.50.06..74af:<[1 5].[1 22]>
-/~zod/base/~2018.10.15..19.50.06..74af:<[1 19].[1 21]>
-ford: %ride failed to execute:
+> !;  *type  'foo'
+[#t/@t 'foo']
 ```
 
-### `!.` "zapdot"
+---
 
-Turn off stack trace for a subexpression `p`
+## `!=` "zaptis"
 
-##### Produces
+Make the Nock formula for a Hoon expression.
 
-The product of `p`. If `p` crashes, no stack trace entries are given for that code.
+#### Syntax
 
-##### Syntax
+One argument, fixed.
 
-Regular: **1-fixed**.
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!=  p
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!=(p)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
 
 ```hoon
-!.  p=hoon
+[%zpts p=hoon]
 ```
 
-`p` is any Hoon expression.
-
-##### Discussion
-
-`!.` is used to turn off a debugging stack trace option for any code you have in `p`. This rune can be embedded under a `!:` rune for inner loops of your code that you don't want or need to trace. This is especially useful if a trace overflows the stack.
-
-##### Examples
-
-```
-> %.(1 |=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a))))))
-ford: %ride failed to execute:
-
-> !:  %.(1 |=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a))))))
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 5].[1 49]>
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 36].[1 45]>
-...skipping some lines...
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 17].[1 47]>
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 22].[1 46]>
-/~zod/base/~2018.10.15..20.01.21..6b0c:<[1 33].[1 35]>
-ford: %ride failed to execute:
-
-> !:  %.(1 !.(|=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a)))))))
-/~zod/base/~2018.10.15..20.01.35..0529:<[1 5].[1 53]>
-ford: %ride failed to execute:
-```
-
-### `!=` "zaptis"
-
-`[%zpts p=hoon]`: make the Nock formula for a Hoon expression.
-
-##### Produces
+#### Produces
 
 The Nock generated by `p`.
 
-##### Syntax
-
-Regular: **1-fixed**.
-
-##### Discussion
+#### Discussion
 
 Don't confuse `!=` with a negation, `!`, followed by a test for equality, `=(10 11)`.
 
-##### Examples
+#### Examples
 
 ```
 > !=(20)
@@ -188,53 +326,307 @@ Don't confuse the `!=` rune with:
 %.n
 ```
 
-The syntax difference is that a test for equality takes two subexpressions, and the `!=` rune only one.
+The syntax difference is that a test for equality takes two subexpressions, and
+the `!=` rune only one.
 
-### `!?` "zapwut"
+---
 
-`[%zpwt p=@ q=hoon]`: restrict Hoon version.
+## `!?` "zapwut"
 
-##### Produces
+Restrict Hoon version.
 
-`q`, if `p` is greater than or equal to the Hoon kelvin version.
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!?  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!?(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zpwt p=$@(p=@ [p=@ q=@]) q=hoon]
+```
+
+#### Produces
+
+When `p` is an atom:
+
+- `q` if `p` ≥ Hoon kelvin version, otherwise crash.
+
+When `p` is a cell:
+
+- `q`, if `p.p` ≥ Hoon kelvin version ≥ `q.p`, otherwise crash.
+
 (Versions count down; the current version is 140.)
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-> !?(264 (add 2 2))
+> !?  [142 140]  (add 2 2)
 4
 
-> !?(164 (add 2 2))
+> !?  142  (add 2 2)
 4
 
-> !?(64 (add 2 2))
+> !?  64  (add 2 2)
 ! exit
 ```
 
-### `!!` "zapzap"
+---
 
-`[%zpzp ~]`: crash.
+## `!@` "zappat"
 
-##### Produces
+Branch on whether a wing exists.
+
+#### Syntax
+
+Three arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!@  p
+  q
+r
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!@(p q r)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zppt p=(list wing) q=hoon r=hoon]
+```
+
+#### Discussion
+
+`p` is a wing reference like `foo`, `bar.foo`, etc. If `p` exists, `q`. If `p`
+does not exist, `r`. Essentially, this is like `?:` for wing existence.
+
+#### Examples
+
+```
+> =foo 42
+
+> !@(foo 'exists' 'does not exist')
+'exists'
+
+> !@(baz 'exists' 'does not exist')
+'does not exist'
+```
+
+---
+
+## `!!` "zapzap"
+
+Crash.
+
+#### Syntax
+
+No arguments.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!!
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!!
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%zpzp ~]
+```
+
+#### Produces
 
 Nothing. Always crashes, with type `%void`.
 
-##### Syntax
-
-`!!`
-
-##### Discussion
+#### Discussion
 
 `%void` nests in every other type, so you can stub out anything with `!!`.
 
-##### Examples
+#### Examples
 
 ```
 > !!
-ford: build failed
+dojo: hoon expression failed
 ```
+
+---
+
+## `!:` "zapcol"
+
+Turn on stack trace.
+
+#### Syntax
+
+One argument, fixed
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!:  p
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!:(p)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### Produces
+
+The product of `p` unless `p` crashes, in which case a stack trace is given.
+
+#### Discussion
+
+`!:` is used to turn on a debugging stack trace option for any code you have in
+`p`.
+
+#### Examples
+
+```
+> ?:(=(0 1) 123 !!)
+dojo: hoon expression failed
+
+> !:  ?:(=(0 1) 123 !!)
+/~zod/base/~2022.4.2..08.54.53..07d7:<[1 5].[1 22]>
+/~zod/base/~2022.4.2..08.54.53..07d7:<[1 19].[1 21]>
+dojo: hoon expression failed
+```
+
+---
+
+## `!.` "zapdot"
+
+Turn off stack trace for a subexpression `p`
+
+#### Syntax
+
+One argument, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+!.  p
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+!.(p)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### Produces
+
+The product of `p`. If `p` crashes, no stack trace entries are given for that code.
+
+#### Discussion
+
+`!.` is used to turn off a debugging stack trace option for any code you have in
+`p`. This rune can be embedded under a `!:` rune for inner loops of your code
+that you don't want or need to trace. This is especially useful if a trace
+overflows the stack.
+
+#### Examples
+
+```
+> %.(1 |=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a))))))
+dojo: hoon expression failed
+
+> !:  %.(1 |=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a))))))
+/~zod/base/~2022.4.2..08.56.45..5ecc:<[1 5].[1 49]>
+/~zod/base/~2022.4.2..08.56.45..5ecc:<[1 17].[1 47]>
+/~zod/base/~2022.4.2..08.56.45..5ecc:<[1 22].[1 46]>
+...skipping some lines...
+/~zod/base/~2022.4.2..08.56.45..5ecc:<[1 22].[1 46]>
+/~zod/base/~2022.4.2..08.56.45..5ecc:<[1 33].[1 35]>
+dojo: hoon expression failed
+
+> !:  %.(1 !.(|=(a=@ ^-(@ ?:(=(a 10) !! $(a +(a)))))))
+/~zod/base/~2022.4.2..08.57.07..d40b:<[1 5].[1 53]>
+dojo: hoon expression failed
+```
+
+---

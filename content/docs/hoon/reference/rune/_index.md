@@ -6,13 +6,14 @@ template = "sections/docs/chapters.html"
 aliases = ["docs/reference/hoon-expressions/rune/"]
 insert_anchor_links = "right"
 +++
+
 Runes are a way to form expressions in Hoon.
 
 ## Non-Rune Expressions
 
 ### [Constants](/docs/hoon/reference/rune/constants)
 
-Hoon uses runes to form expressions, but not all expressions have runes in them.  First, we have constant expressions (and also expressions that would be constant, but that they allow for interpolations).
+Hoon uses runes to form expressions, but not all expressions have runes in them. First, we have constant expressions (and also expressions that would be constant, but that they allow for interpolations).
 
 ### [Limbs and Wings](/docs/hoon/reference/limbs/)
 
@@ -67,6 +68,10 @@ Miscellaneous useful macros.
 ### [`~ sig` (Hints)](/docs/hoon/reference/rune/sig)
 
 Runes that use Nock `11` to pass non-semantic info to the interpreter.
+
+### [`/ fas` (Imports)](/docs/hoon/reference/rune/fas)
+
+Ford runes which import files.
 
 ### [`--`, `==` (Terminators)](/docs/hoon/reference/rune/terminators)
 

@@ -43,11 +43,11 @@ const options = {
 };
 
 // Converts markdown strings into markdown HTML/React components
-export default async function Markdown({ post }) {
+export default async function Markdown({ post }, disablePlugins) {
   const result = await remark()
     .use(remarkParse, options)
     .use(remarkprism, {
-      plugins: ["show-invisibles"],
+      plugins: !disablePlugins ? ["show-invisibles"] : [],
     })
     .use(gfm)
     .use(slug)

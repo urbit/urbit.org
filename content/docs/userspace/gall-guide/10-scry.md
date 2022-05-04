@@ -154,10 +154,11 @@ can do something like:
 
 Previously we discussed custom `mark` files. Such mark files are most commonly
 used when the data might be accessed through Eyre's HTTP API, and therefore
-required JSON conversion methods. We'll cover such things in part two of the
-Gall Guide, but note that if that's the case for your agent, you may wish to
-also have your scry endpoints return data with your custom `mark` so it can
-easily be converted to JSON when accessed from the web.
+required JSON conversion methods. We cover such things separately in the
+[Full-Stack Walkthrough](/docs/userspace/full-stack/1-intro), but note that if
+that's the case for your agent, you may wish to also have your scry endpoints
+return data with your custom `mark` so it can easily be converted to JSON when
+accessed from the web.
 
 In some cases, typically with scry `path`s that contain wildcards like the `[%x %blah @ ~]` example above, your agent may not always be able to find the
 requested data. In such cases, you can just produce a cell of `[~ ~]` for the

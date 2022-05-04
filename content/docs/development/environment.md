@@ -11,7 +11,11 @@ within the Urbit ecosystem.
 ## Text editors
 
 A variety of plugins have been built to provide support for the Hoon language in
-different text editors:
+different text editors. These are listed below.
+
+**Note:** The hoon compiler expects Unix-style line endings (LF) and will
+fail to parse Windows-style line endings (CRLF). Make sure your editor is set
+to use LF for line endings, especially if you're developing on Windows.
 
 #### Atom
 

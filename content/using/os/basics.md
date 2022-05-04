@@ -184,12 +184,18 @@ Moons are [always subordinate to the ship that issued them](/docs/glossary/moon)
 
 To add an existing moon to `jael` on a breached planet, you'll need the following:
 
- - Your moon's current life # `+keys ~sampel-monler-dozzod-dozzod` (run on the moon) _and_;
- - Your moon's sponsor's understanding of your moon's current life (same command, run on the sponsor).
- - Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
- - Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
+- Your moon's current life # `+keys ~sampel-monler-dozzod-dozzod` (run on the moon) _and_;
+- Your moon's sponsor's understanding of your moon's current life (same command, run on the sponsor).
+- Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
+- Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
 
-If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using `pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))`. This should produce a long `@ud`.
+If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using
+
+```
+pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))
+```
+
+This should produce a long `@ud`.
 
 Once you have all of the requisite elements, you can perform the following on the moon's sponsor:
 
@@ -198,8 +204,6 @@ Once you have all of the requisite elements, you can perform the following on th
 ```
 
 Eventually, the PKI will populate through the network w/ the correct life #, reconnecting your previously orphaned moon. You can speed this up by `|hi ~zod` and `|hi ~sampel-monler-dozzod-dozzod`-ing from the moon and sponsor, respectively (replace with the appropriate ship names).
-
-
 
 ## Escaping A Sponsor {#escape}
 

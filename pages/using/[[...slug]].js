@@ -105,7 +105,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
         <title>{data.title} • User's Manual • urbit.org</title>
         {Meta(data)}
       </Head>
-      <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
+      <div className="flex h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
           {childPages("/using", posts.children)}
         </Sidebar>

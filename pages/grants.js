@@ -463,12 +463,8 @@ export async function getStaticProps() {
   const types = getGrantsTypes();
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra", "taxonomies"],
-    "grants"
-  );
-
-  let updates = getAllPosts(
-    ["title", "slug", "date", "description", "extra", "taxonomies"],
-    "updates"
+    "grants",
+    "date"
   );
 
   // The layout expects exactly 3

@@ -29,7 +29,7 @@ Here's an example of a barebones gall agent that just starts a thread:
         (pair term term)
       =/  tid  `@ta`(cat 3 'thread_' (scot %uv (sham eny.bowl)))
       =/  ta-now  `@ta`(scot %da now.bowl)
-      =/  start-args  [~ `tid byk.bowl p.q.vase !>(q.q.vase)]
+      =/  start-args  [~ `tid byk.bowl(r da+now.bowl) p.q.vase !>(q.q.vase)]
       :_  this
       :~
         [%pass /thread/[ta-now] %agent [our.bowl %spider] %poke %spider-start !>(start-args)]
@@ -116,7 +116,7 @@ We can ignore the input logic, here's the important part:
 ```hoon
 =/  tid  `@ta`(cat 3 'thread_' (scot %uv (sham eny.bowl)))
 =/  ta-now  `@ta`(scot %da now.bowl)
-=/  start-args  [~ `tid byk.bowl p.q.vase !>(q.q.vase)]
+=/  start-args  [~ `tid byk.bowl(r da+now.bowl) p.q.vase !>(q.q.vase)]
 :_  this
 :~
   [%pass /thread/[ta-now] %agent [our.bowl %spider] %poke %spider-start !>(start-args)]

@@ -12,7 +12,7 @@ Overview of `mark`s.
 
 [Writing Marks](/docs/arvo/clay/marks/writing-marks)
 
-A practical walk-through of writing a `mark` file.
+A practical walkthrough of writing a `mark` file.
 
 [Using Marks](/docs/arvo/clay/marks/using-marks)
 

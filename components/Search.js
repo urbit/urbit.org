@@ -1,7 +1,10 @@
 import { Component, createRef } from "react";
 import { glossary } from "../lib/glossary";
 import { withRouter } from "next/router";
+import debounce from "lodash.debounce";
 import Downshift from "downshift";
+import ob from "urbit-ob";
+import Sigil from "../components/Sigil";
 
 class Search extends Component {
   constructor(props) {
@@ -13,6 +16,7 @@ class Search extends Component {
     this.onInputValueChange = this.onInputValueChange.bind(this);
     this.onSelect = this.onSelect.bind(this);
     this.glossarySearch = this.glossarySearch.bind(this);
+    this.patpSearch = this.patpSearch.bind(this);
   }
 
   searchEndpoint(query) {
@@ -21,8 +25,18 @@ class Search extends Component {
 
   glossarySearch(query) {
     return glossary.filter((entry) => {
-      return query.toLowerCase() === entry.name || entry.symbol === query;
+      return (
+        entry.name.includes(query.toLowerCase()) || entry.symbol.includes(query)
+      );
     });
+  }
+
+  patpSearch(query) {
+    return (
+      (ob.isValidPatp(`~${deSig(query.toLowerCase())}`) &&
+        `~${deSig(query.toLowerCase())}`.length < 15) ||
+      (!isNaN(query) && query <= 4294967295)
+    );
   }
 
   onSelect(item) {
@@ -38,7 +52,7 @@ class Search extends Component {
     this.props.closeSearch();
   }
 
-  onInputValueChange(query) {
+  onInputValueChange = debounce((query) => {
     if (query.length) {
       fetch(this.searchEndpoint(query))
         .then((res) => res.json())
@@ -49,19 +63,37 @@ class Search extends Component {
             content: item,
           }));
 
+          const patp = this.patpSearch(query)
+            ? !isNaN(query)
+              ? ob.patp(query)
+              : ob.patp(ob.patp2dec(`~${deSig(query)}`))
+            : null;
+
+          const patpResult = this.patpSearch(query)
+            ? [
+                {
+                  type: "PATP",
+                  content: {
+                    patp: patp,
+                    slug: `/ids/${patp}`,
+                  },
+                },
+              ]
+            : [];
+
           const glossaryResults = this.glossarySearch(query).map((item) => ({
             type: "GLOSSARY_RESULT",
             content: item,
           }));
 
-          const list = [...glossaryResults, ...results];
+          const list = [...glossaryResults, ...patpResult, ...results];
 
           this.setState({ results: list });
         });
     } else {
       this.setState({ results: [] });
     }
-  }
+  }, 250);
 
   render() {
     const { state, props } = this;
@@ -116,6 +148,30 @@ class Search extends Component {
                   {isOpen
                     ? state.results.map((item, index) => {
                         const selected = highlightedIndex === index;
+                        if (item.type === "PATP") {
+                          return (
+                            <li
+                              className={`cursor-pointer p-2 flex space-x-2 items-center text-left w-full ${
+                                selected ? "bg-green-400" : ""
+                              }`}
+                              {...getItemProps({
+                                key: item.content.slug + "-" + index,
+                                index,
+                                item: item.content,
+                                selected: highlightedIndex === index,
+                              })}
+                            >
+                              <div className="rounded-md overflow-hidden">
+                                <Sigil
+                                  patp={item.content.patp}
+                                  size={25}
+                                  icon
+                                />
+                              </div>
+                              <p className="font-mono">{item.content.patp}</p>
+                            </li>
+                          );
+                        }
                         if (item.type === "GLOSSARY_RESULT") {
                           return (
                             <li
@@ -152,9 +208,10 @@ class Search extends Component {
                                   className={`font-normal text-base mt-1 ${
                                     selected ? "text-white" : "text-wall-600"
                                   }`}
-                                >
-                                  {item.content.desc}
-                                </p>
+                                  dangerouslySetInnerHTML={{
+                                    __html: item.content.desc,
+                                  }}
+                                ></p>
                               </div>
                             </li>
                           );
@@ -207,6 +264,10 @@ class Search extends Component {
       return null;
     }
   }
+}
+
+function deSig(string) {
+  return string.startsWith("~") ? string.substring(1) : string;
 }
 
 export default withRouter(Search);

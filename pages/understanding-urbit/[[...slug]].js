@@ -88,7 +88,7 @@ export default function UnderstandingLayout({
         <title>{data.title} • Understanding Urbit • urbit.org</title>
         {Meta(data)}
       </Head>
-      <div className="flex w-screen h-screen min-h-screen w-screen sidebar">
+      <div className="flex h-screen min-h-screen w-screen sidebar">
         <Sidebar search={search}>
           <ul>
             <li>

@@ -29,6 +29,7 @@ shout online.
 7. [Where did the old Bridge go? Can I still use it?](#7-is-it-possible-to-use-the-old-bridge-for-l1-operations)
 8. [Why is the cost reduction so significant?](#8-why-is-the-cost-reduction-so-significant)
 9. [What exactly is the mechanism for the “naive” consensus?](#9-what-exactly-is-the-mechanism-for-the-naive-consensus)
+10. [When I spawn L2 planets via Metamask, I'm prompted to sign every transaction. Do you have plans to remedy this?](#10-when-i-spawn-l2-planets-via-metamask-im-prompted-to-sign-every-transaction-do-you-have-plans-to-remedy-this)
 
 #### 1. Do I need ETH to boot my planet?
 
@@ -44,7 +45,7 @@ you **do not** need ETH to boot Urbit. That Urbit ID is now yours, forever.
 Unsure whether you have been invited to claim a L2 or L1 planet? The quickest
 way to identify a L2 planet is if you used the below flow to claim.
 
-![](/images/l2-faq-palentine.jpg)
+![](/images/planet-l2-claim.gif)
 
 For those with L1 planets, you can avoid future transaction fees by migrating
 your L1 planet to L2. Read the migration instructions
@@ -52,7 +53,7 @@ your L1 planet to L2. Read the migration instructions
 
 #### 2. Is there anything I need to do to ensure full custody of my planet?
 
-If you were sent a direct link to claim an L2 planet (see above image), it’s
+If you were sent a direct link to claim an L2 planet (see above), it’s
 in your full custody by design. Bridge generates your master ticket, which you
 downloaded during the claiming process.
 
@@ -134,7 +135,7 @@ something you can only do with the older version of Bridge,
 #### 8. Why is the cost reduction so significant?
 
 On L1, every operation is an Ethereum transaction, with logic and state, etc.
-On L2 transactions, these operations are reduced and simplified into a
+On L2, these operations are reduced and simplified into a
 no-logic-involved Ethereum transaction. This is what makes L2 transactions
 cost-efficient: multiple transactions happen simultaneously to share the cost of
 just one L1 transaction.
@@ -148,3 +149,7 @@ our L2 rollup. To learn about its intricacies, we encourage you to read
 original
 [proposal](https://groups.google.com/a/urbit.org/g/dev/c/p6rP_WsxLS0/m/hQBX0modAwAJ?pli=1)
 on the Urbit developer mailing list.
+
+#### 10. When I spawn L2 planets via Metamask, I'm prompted to sign every transaction. Do you have plans to remedy this?
+
+We realize this UX headache and are taking active steps to devise a more efficient transaction scheme. The new method will reduce the number of manual signatures needed for each spawned L2 planet. At the time of this FAQ's publication, we haven't publicized the release timing for the improvement. A provisional solution: set the star's spawn proxy to a custodied L2 planet secured via Master ticket and log in to Bridge as that planet to spawn invites.

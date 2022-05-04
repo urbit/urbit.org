@@ -16,7 +16,7 @@ You can learn more about auras in [Hoon school](/docs/hoon/hoon-school/atoms-aur
 Aura         Meaning                                 Example Literal Syntax
 -------------------------------------------------------------------------
 @            empty aura
-@c           Unicode codepoint                       ~-~45fed
+@c           UTF-32                                  ~-~45fed
 @d           date
   @da        absolute date                           ~2018.5.14..22.31.46..1435
   @dr        relative date (ie, timespan)            ~h5.m30.s12
@@ -66,23 +66,30 @@ two, starting from A.
 
 A given aura nests under any aura whose name is a substring or extension of the
 given aura:
+
 ```
 > :-  (~(nest ut [%atom %ud ~]) | [%atom %u ~])
       (~(nest ut [%atom %ud ~]) | [%atom %udx ~])
 [%.y %.y]
 ```
+
 but does not nest "sideways":
+
 ```
 >  (~(nest ut [%atom %ud ~]) | [%atom %ux ~])
 %.n
 ```
+
 We call auras "soft types" since this nesting behavior can be ignored. Auras are
 non-coercive, but conversions may have to go via the empty aura, e.g.
+
 ```
 > ^-(@ud ^-(@ 'foo'))
 7.303.014
 ```
+
 This is implicitly done by the irregular form of `^-`.
+
 ```
 > `@ud`'foo'
 7.303.014
@@ -91,8 +98,10 @@ This is implicitly done by the irregular form of `^-`.
 ### Bunting
 
 The bunt value for all auras is 0 except for `@da`.
+
 ```
 > *@da
 ~2000.1.1
 ```
+
 A bunt value of 0 is helpful when working with loobeans.

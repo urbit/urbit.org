@@ -9,7 +9,7 @@ Our filesystem.
 
 `%clay` is version-controlled, referentially-transparent, and global.
 While this filesystem is stored in `%clay`, it is mirrored to Unix for
-convenience. Unix tells `%clay`s whenever a file changes in the Unix
+convenience. Unix tells `%clay` whenever a file changes in the Unix
 copy of the filesystem so that the change may be applied. `%clay` tells
 unix whenever an app or vane changes the filesystem so that the change
 can be effected in Unix. Apps and vanes may use `%clay` to write to the

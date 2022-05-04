@@ -1,23 +1,26 @@
 +++
 title = "Terminators -- and =="
-weight = 15
+weight = 16
 template = "doc.html"
 +++
-The `--` and `==` are used as terminators: `--` for core expressions, and `==` for terminating a 'running' or 'jogging' series of Hoon expressions.
 
-## Runes
+The `--` and `==` are used as terminators: `--` for core expressions, and `==`
+for terminating a 'running' or 'jogging' series of Hoon expressions.
 
-### `--` "hephep"
+## `--` "hephep"
 
-##### Syntax
+#### Syntax
 
 The `--` rune is used to indicate the end of a core expression.
 
-##### Discussion
+#### Discussion
 
-The `|%`, `|_`, and `|^` runes are used to create cores that can have arbitrarily many arms.  When you have defined all the desired arms in a core expression (using the `++`, `+$`, and `+*` runes), use `--` to terminate the expression.
+The `|%`, `|_`, and `|^` runes are used to create cores that can have
+arbitrarily many arms. When you have defined all the desired arms in a core
+expression (using the `++`, `+$`, and `+*` runes), use `--` to terminate the
+expression.
 
-##### Examples
+#### Examples
 
 ```
 > =num |%
@@ -36,17 +39,25 @@ The `|%`, `|_`, and `|^` runes are used to create cores that can have arbitraril
 24
 ```
 
-### `==` "tistis"
+---
 
-##### Syntax
+## `==` "tistis"
 
-The `==` rune is used to indicate the end of a 'jogging' or 'running' series of Hoon expressions.
+#### Syntax
 
-##### Discussion
+The `==` rune is used to indicate the end of a 'jogging' or 'running' series of
+Hoon expressions (runes that take a variable number of arguments).
 
-Certain runes are used to create expressions that may include arbitrarily many subexpressions.  Such expressions are terminated with the `==` rune.  For example, the `:*` and `:~` runes are used to create a cell of any length.  (The latter is just like the former except that it adds a null value at the end of the cell.)  For another example, the `%=` rune used used to make arbitrarily many changes to a given wing value.
+#### Discussion
 
-##### Examples
+Certain runes are used to create expressions that may include arbitrarily many
+subexpressions. Such expressions are terminated with the `==` rune. For example,
+the `:*` and `:~` runes are used to create a cell of any length. (The latter is
+just like the former except that it adds a null value at the end of the cell.)
+For another example, the `%=` rune used used to make arbitrarily many changes to
+a given wing value.
+
+#### Examples
 
 ```
 > :*  2

@@ -4,35 +4,33 @@ weight = 1
 template = "doc.html"
 aliases = ["docs/reference/hoon-expressions/rune/constants/"]
 +++
+
 The simplest expressions in every language are constants:
-atoms, strings, paths.  (Strings and paths aren't all constants per
+atoms, strings, paths. (Strings and paths aren't all constants per
 se, because they have interpolations.)
 
-## Expressions
+## "Cold Atom"
 
-### `:_ "Cold Atom"`
+A constant, cold atom.
 
-`[%rock p=term q=@]`; a constant, cold atom.
+#### Syntax
+
+Any [warm atom](#warm) form, prefixed with `%`.
+
+#### AST
+
+```hoon
+[%rock p=term q=*]
+```
+
+#### Discussion
 
 A cold atom is one whose type is inferred to be of a single atom constant.
 
-##### Produces
+#### Examples
 
-A cold (fixed) atom `q` with aura `p`.
-
-##### Syntax
-
-Irregular: any [warm atom](#warm) form, prefixed with `%`.
-
-Irregular: e.g., `%hi`.  Character constraints: `a-z`
-lowercase to start, `a-z` or `0-9` thereafter, with infix
-hyphens (`hep`), "kebab-case."
-
-Irregular: `~`.
-
-##### Examples
-
-We can see the contrast with warm atoms by using the compiler parser function, `ream`:
+We can see the contrast with warm atoms by using the compiler parser function,
+`ream`:
 
 ```
 > (ream '%hi')
@@ -45,20 +43,22 @@ We can see the contrast with warm atoms by using the compiler parser function, `
 [%rock p=%ud q=12]
 ```
 
-### `:_` "Paths"
+---
 
-`[%path p=(list (each @ta hoon))]`: path with interpolation.
+## "Paths"
 
-##### Produces
+Path with interpolation.
 
-A null-terminated list of the items in `p`, which are either constant
-`@ta` atoms (`knots`), or expressions producing a `knot`.
+#### Syntax
 
-##### Syntax
+`/this/is/a/path`
 
-Irregular: `/this/is/a/path`.
+#### Produces
 
-##### Examples
+A null-terminated list of the items, which are either constant `@ta` atoms
+(`knots`), or expressions producing a `knot`.
+
+#### Examples
 
 ```
 > `path`/this/is/a/path
@@ -74,19 +74,19 @@ Irregular: `/this/is/a/path`.
 ~
 ```
 
-### `:_` "Strings with Interpolation"
+---
 
-`[%knit p=(list (each @t hoon))]`: text string with interpolation.
+## "Strings with Interpolation"
 
-##### Produces
+Text string with interpolation.
 
-A tape.
+#### Syntax
 
-##### Syntax
+A [$tape](/docs/hoon/reference/stdlib/2q#tape)
 
-Irregular: `"abcdefg"`.
+`"abcdefg"`
 
-Irregular: `"abc{(weld "lmnop" "xyz")}defg"`.
+`"abc{(weld "lmnop" "xyz")}defg"`
 
 ```
 > "abcdefg"
@@ -99,7 +99,17 @@ Irregular: `"abc{(weld "lmnop" "xyz")}defg"`.
 [%knit p=~[97 98 99 100 101 102 103]]
 ```
 
-##### Examples
+#### AST
+
+```hoon
+[%knit p=(list woof)]
+```
+
+#### Produces
+
+A tape.
+
+#### Examples
 
 String:
 
@@ -122,11 +132,63 @@ String with interpolated prettyprinting:
 "hello, %world."
 ```
 
-### `:_` "Warm Atoms" {#warm}
+---
 
-`[%sand p=term q=@]`; a constant, warm atom.
+## "Warm Atoms" {#warm}
 
-A 'warm' atom is one whose type is inferred to be general, i.e., not just a single atom type.
+A constant, warm atom.
+
+#### Syntax
+
+A table of examples:
+
+```
+Aura         Meaning                                 Example Literal Syntax
+-------------------------------------------------------------------------
+@            empty aura
+@c           UTF-32                                  ~-~45fed
+@d           date
+  @da        absolute date                           ~2018.5.14..22.31.46..1435
+  @dr        relative date (ie, timespan)            ~h5.m30.s12
+@f           Loobean (for compiler, not castable)    &
+@i           Internet address
+  @if        IPv4 address                            .195.198.143.90
+  @is        IPv6 address                            .0.0.0.0.0.1c.c3c6.8f5a
+@n           nil (for compiler, not castable)        ~
+@p           phonemic base (ship name)               ~sorreg-namtyv
+@q           phonemic base, unscrambled              .~litsyn-polbel
+@r           IEEE-754 floating-point
+  @rh        half precision (16 bits)                .~~3.14
+  @rs        single precision (32 bits)              .6.022141e23
+  @rd        double precision (64 bits)              .~6.02214085774e23
+  @rq        quad precision (128 bits)               .~~~6.02214085774e23
+@s           signed integer, sign bit low
+  @sb        signed binary                           --0b11.1000
+  @sd        signed decimal                          --1.000.056
+  @sv        signed base32                           -0v1df64.49beg
+  @sw        signed base64                           --0wbnC.8haTg
+  @sx        signed hexadecimal                      -0x5f5.e138
+@t           UTF-8 text (cord)                       'howdy'
+  @ta        ASCII text (knot)                       ~.howdy
+    @tas     ASCII text symbol (term)                %howdy
+@u              unsigned integer
+  @ub           unsigned binary                      0b11.1000
+  @ud           unsigned decimal                     1.000.056
+  @uv           unsigned base32                      0v1df64.49beg
+  @uw           unsigned base64                      0wbnC.8haTg
+  @ux           unsigned hexadecimal                 0x5f5.e138
+```
+
+#### AST
+
+```hoon
+[%sand p=term q=*]
+```
+
+#### Discussion
+
+A 'warm' atom is one whose type is inferred to be general, i.e., not just a
+single atom type.
 
 ```
 > `@`12
@@ -136,9 +198,10 @@ A 'warm' atom is one whose type is inferred to be general, i.e., not just a sing
 nest-fail
 ```
 
-##### Produces
+#### Produces
 
-A warm (variable) atom `q` with aura `p`.  Use the Hoon compiler parser function `ream` to take a closer look:
+A warm (variable) atom `q` with aura `p`. Use the Hoon compiler parser function
+`ream` to take a closer look:
 
 ```
 > (ream '12')
@@ -147,47 +210,3 @@ A warm (variable) atom `q` with aura `p`.  Use the Hoon compiler parser function
 > (ream '\'Hello!\'')
 [%sand p=%t q=36.762.444.129.608]
 ```
-
-##### Syntax by example
-
-Irregular.  A table of examples:
-
-```
-@c    UTF-32                   ~-foobar
-@da   128-bit absolute date    ~2016.4.23..20.09.26..f27b..dead..beef..babe
-                               ~2016.4.23
-@dr   128-bit relative date    ~s17          (17 seconds)
-                               ~m20          (20 minutes)
-                               ~d42          (42 days)
-@f    loobean                  &             (0, yes)
-                               |             (1, no)
-@p                             ~zod          (0)
-@rd   64-bit IEEE float        .~3.14        (pi)
-                               .~-3.14       (negative pi)
-@rs   32-bit IEEE float        .3.14         (pi)
-                               .-3.14        (negative pi)
-@rq   128-bit IEEE float       .~~~3.14      (pi)
-@rh   16-bit IEEE float        .~~3.14       (pi)
-@sb   signed binary            --0b10        (2)
-                               -0b101        (-5)
-@sd   signed decimal           --2           (2)
-                               -5            (-5)
-@sv   signed base32            --0v68        (200)
-                               -0vfk         (-500)
-@sw   signed base64            --0w38        (200)
-                               -0w7Q         (500)
-@sx   signed hexadecimal       --0x2         (2)
-                               -0x5          -5
-@t    UTF-8 text (cord)        'foobar'
-@ta   ASCII text (knot)        ~.foobar
-@ub   unsigned binary          0b10          (2)
-@uc   bitcoin address          0c1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
-@ud   unsigned decimal         42            (42)
-                               1.420         (1420)
-@uv   unsigned base32          0v3ic5h.6urr6
-@uw   unsigned base64          0wsC5.yrSZC
-@ux   unsigned hexadecimal     0xcafe.babe
-```
-
-The `@uv` characters are `0-9`, `a-v`.  The `@uw` characters are
-`0-9`, `a-z`, `A-Z`, `-` and `~`.

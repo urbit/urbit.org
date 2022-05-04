@@ -52,7 +52,7 @@ The second case of interest is the `+json` arm for converting to and from a `%js
 
 ## Sections
 
-[Writing Marks](/docs/arvo/clay/marks/writing-marks) - A practical walk-through of writing a `mark` file.
+[Writing Marks](/docs/arvo/clay/marks/writing-marks) - A practical walkthrough of writing a `mark` file.
 
 [Using Marks](/docs/arvo/clay/marks/using-marks) - Details of using `mark` conversion gates and `mark` cores in your own code.
 

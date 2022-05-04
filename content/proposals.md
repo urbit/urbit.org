@@ -43,10 +43,10 @@ Good proposals all include the following:
 - A **detailed and clear description of the proposal**. If you're proposing something technical, user stories are a good idea.
 - An overview of **why you are the right person for the job**. A description of your background, familiarity with the project, and professional/education experience are all good starts.
 - Your estimate for **date of completion**.
-- The **amount of funding** you'd like for the project.
+- The **amount of funding** you'd like for the project, denominated in stars.
 - What **specific deliverables** will look like.
 
-It's recommended to break your project into _milestones_, each of which must have its own completion dates, funding amounts and deliverables. In general, proposals should target a first deliverable within two months of the start of the project.
+It's recommended to break your project into _milestones_, each of which must have its own completion dates, funding amounts and deliverables. In general, proposals should target a first deliverable within two months of the start of the project. Proposals should have a maximum of five milestones as scoping a project beyond that is impractical, and each milestone should constitute significant enough work to warrant the reward of a full star.
 
 Here are some examples of exceptional proposals for reference:
 
@@ -56,7 +56,7 @@ Here are some examples of exceptional proposals for reference:
 
 ### Funding
 
-The Urbit Foundation will provide funding of up to $50,000 USD for any one grant, paid in [WSTR](https://star.market).
+The Urbit Foundation will provide funding of up to five stars for any one grant.
 
 Our formula for determining how much to value a particular grant is a function of time spent on the project, value to the Urbit universe, and track record of the contributor (either via past work within the grants program, or a relevant external background).
 
@@ -104,10 +104,10 @@ If your Champion becomes unresponsive or is unhelpful, let someone at the Urbit 
 
 After your proposal is Championed the Urbit Foundation will need to get a **signed contributor agreement** and **collect a small amount of personal information** from you as part of our KYC process.
 
-The Urbit Foundation must comply with international law when distributing address space. We try to keep this process as minimal as we can, but there's no way to avoid it entirely without legally jeapardizing the Foundation's operations.
+The Urbit Foundation must comply with international law when distributing address space. We try to keep this process as minimal as we can, but there's no way to avoid it entirely without legally jeopardizing the Foundation's operations.
 
 ## Getting Paid
 
-After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount in USD agreed upon in your grant or milestone, which the Foundation will pay in WSTR.
+After you've finished your work and gotten signoff from your champion, you'll [submit an invoice](https://airtable.com/shrXXCs1uaxtNSBcg) to the Urbit Foundation for the amount agreed upon in your grant or milestone, which the Foundation will pay.
 
-We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individual, and weekends/holidays sometimes interfere.
+We approve and issue payments twice per month, **on the 2nd and 17th**, with payments happening over the course of **up to five days following those dates.** It takes a while because we have to issue each payment individually, and weekends/holidays sometimes interfere.

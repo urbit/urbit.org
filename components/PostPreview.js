@@ -28,9 +28,11 @@ export default function PostPreview(props) {
               </div>
             ) : null}
             {props.post.extra.ship ? (
-              <div className="type-sub-bold text-wall-500 font-mono">
-                {props.post.extra.ship}
-              </div>
+              <Link href={`/ids/${props.post.extra.ship}`}>
+                <a className="type-sub-bold text-wall-500 font-mono">
+                  {props.post.extra.ship}
+                </a>
+              </Link>
             ) : null}
           </div>
           <div className="text-wall-500 type-sub mt-1">{formatDate(date)}</div>

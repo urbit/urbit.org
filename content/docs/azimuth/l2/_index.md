@@ -33,3 +33,6 @@ How rollers work.
 Documentation on the HTTP RPC API used for Urbit to communicate with Bridge to
 manage layer 2 transactions.
 
+### [Custom Roller Tutorial](/docs/azimuth/l2/roller-tutorial)
+
+How to set up your own roller.

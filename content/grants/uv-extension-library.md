@@ -13,7 +13,7 @@ description = "A typescript library which streamlines the experience of building
 reward = "2 stars"
 assignee = "dcSpark"
 grant_id = "P0094"
-completed = false
+completed = true
 canceled = false
 link = ""
 

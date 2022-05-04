@@ -29,7 +29,7 @@ Here we've added an extra card to subscribe for the result and a couple of lines
         (pair term term)
       =/  tid  `@ta`(cat 3 'thread_' (scot %uv (sham eny.bowl)))
       =/  ta-now  `@ta`(scot %da now.bowl)
-      =/  start-args  [~ `tid byk.bowl p.q.vase !>(q.q.vase)]
+      =/  start-args  [~ `tid byk.bowl(r da+now.bowl) p.q.vase !>(q.q.vase)]
       :_  this
       :~
         [%pass /thread/[ta-now] %agent [our.bowl %spider] %watch /thread-result/[tid]]

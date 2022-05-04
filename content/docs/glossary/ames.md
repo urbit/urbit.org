@@ -17,5 +17,5 @@ what OTA updates are capable of doing. These events are called [factory resets](
 
 - [The Ames tutorial](/docs/arvo/ames/ames): An in-depth technical guide to the Ames protocol.
 - [A Guide to Factory Reset](/using/id/guide-to-resets): Instructions on
-  perfming factory resets.
+  performing factory resets.
 - [Ship Troubleshooting](/using/os/ship-troubleshooting): General instructions on getting your ship to work, which includes network connectivity issues.

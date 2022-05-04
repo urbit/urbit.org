@@ -9,9 +9,9 @@ grant_category = [ "Runtime" ]
 [extra]
 image = ""
 description = "Get the project to the point where it works on OpenBSD"
-reward = "$8,000 in WSTR"
+reward = "1 star"
 mentor = "~silsyn-wathep"
-assignee = ""
+assignee = "~tidsut-radryd"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0124&prefill_Grant+Name=Resurrect%20OpenBSD%20Build"
 +++
@@ -46,3 +46,7 @@ Get the project to the point where it works on OpenBSD as a first class citizen.
 - Self-directedness, ability to debug and troubleshoot creatively
 - Some familiarity with Nock
 - Optional: nix, hoon
+
+## Compensation
+
+The apprentice will be rewarded 1 star upon the successful completion of the project.

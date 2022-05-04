@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600;700;800&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --tray-time: 0ms;
 }
@@ -79,6 +83,9 @@ code .type-code {
   @apply bg-wall-100 p-4 font-mono;
 }
 
+.font-bold {
+  @apply antialiased;
+}
 /* Utils */
 
 .layout-narrow {

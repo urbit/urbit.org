@@ -169,7 +169,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const events = getAllPosts(["slug", "date"], "events");
+  const events = getAllPosts(["slug", "date"], "events", "date");
 
   return {
     paths: events.map((event) => {

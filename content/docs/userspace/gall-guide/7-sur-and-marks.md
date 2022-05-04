@@ -282,12 +282,13 @@ arm in the previous example could test for it instead of `%noun` like so:
 Note how `%todo-action` will be resolved to `/mar/todo/action.hoon` - the hyphen
 will be interpreted as `/` if there's not already a `/mar/todo-action.hoon`.
 
-This simple mark file isn't all that useful. Typically, you'd add `json` arms to
-`grow` and `grab`, which allow your data to be converted to and from JSON, and
-therefore allow your agent to communicate with a web front-end. Front-ends,
-JSON, and Eyre's APIs which facilitate such communications will be covered in a
-forthcoming part two of the Gall guide. For now though, it's still useful to use
-marks and understand how they work.
+This simple mark file isn't all that useful. Typically, you'd add `json` arms
+to `grow` and `grab`, which allow your data to be converted to and from JSON,
+and therefore allow your agent to communicate with a web front-end. Front-ends,
+JSON, and Eyre's APIs which facilitate such communications will be covered in
+the separate [Full-Stack Walkthrough](/docs/userspace/full-stack/1-intro),
+which you might like to work through after completing this guide. For now
+though, it's still useful to use marks and understand how they work.
 
 One further note on marks - while data from remote ships must have a matching
 mark file in `/mar`, it's possible to exchange data between local agents with
@@ -384,8 +385,7 @@ Mark files:
 - Messages passed between agents on a local ship don't necessarily need mark
   files in `/mar`.
 - Mark files are most commonly used for converting an agent's native types to
-  JSON, in order to interact with a web front-end (which we'll cover in part two
-  of the Gall guide).
+  JSON, in order to interact with a web front-end.
 
 Permissions:
 
@@ -404,5 +404,5 @@ Permissions:
 - Have a quick look at the [tisket
   documentation](/docs/hoon/reference/rune/tis#-tisket).
 - Try writing a mark file for the `update:todo` type, in a similar fashion to
-  the `action:todo` one in the [mark file section](#mark-file). You can compare
+  the `action:todo` one in the [mark file section](#mark-files). You can compare
   yours to the one we'll use in the next lesson.

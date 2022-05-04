@@ -3,176 +3,363 @@ title = "Hints ~ ('sig')"
 weight = 14
 template = "doc.html"
 +++
+
 Runes that use Nock `11` to pass non-semantic info to the interpreter. A
 mnemonic to remember what sig runes are for is "we're *sig*naling some
 information to the interpreter".
 
+## `~>` "siggar"
 
-## Runes
+Raw hint, applied to computation.
 
-### `~>` "siggar"
+#### Syntax
 
-`[%sggr p=$@(term [p=term q=hoon]) q=hoon]`: raw hint, applied
-to computation.
+Two arguments, fixed.
 
-##### Expands to
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~>  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~>(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sggr p=$@(term [p=term q=hoon]) q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Syntax
+#### Semantics
 
-Regular: **2-fixed**.  For the dynamic form, write `%term.hoon`.
+`p` may either be a single `%term` or a pair of `[term hoon]`, the latter of
+which may optionally be be written `%foo.some-hoon`. `p` will be passed to the
+interpreter and `q` will be evaluated and its result produced like normal.
 
-##### Discussion
+#### Discussion
 
 Hoon has no way of telling what hints are used and what aren't.
 Hints are all conventions at the interpreter level.
 
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~>(%a 42)
+> ~>(%a 42)
 42
 ```
 
 Running the compiler:
 
 ```
-~zod:dojo> (make '~>(%a 42)')
-[%10 p=97 q=[%1 p=42]]
+> (make '~>(%a 42)')
+[%11 p=97 q=[%1 p=42]]
 
-~zod:dojo> (make '~>(%a.+(2) 42)')
-[%10 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
+> (make '~>(%a.+(2) 42)')
+[%11 p=[p=97 q=[%4 p=[%1 p=2]]] q=[%1 p=42]]
 ```
 
-### `~|` "sigbar"
+---
 
+## `~|` "sigbar"
 
-`[%sgbr p=hoon q=hoon]`: tracing printf.
+Tracing printf.
 
-##### Expands to
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~|  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~|(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgbr p=hoon q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Convention
+#### Convention
 
 Prettyprints `p` in stack trace if `q` crashes.
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~|('sample error message' !!)
+> ~|('sample error message' !!)
 'sample error message'
-ford: build failed
+dojo: hoon expression failed
 
-~zod:dojo> ~|  'sample error message'
-           !!
+> ~|  'sample error message'
+  !!
 'sample error message'
-ford: build failed
+dojo: hoon expression failed
 ```
 
-### `~$` "sigbuc"
+---
 
-`[%sgbc p=term q=hoon]`: profiling hit counter.
+## `~$` "sigbuc"
 
-##### Expands to
+Profiling hit counter.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~&  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~&(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgbc p=term q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Convention
+#### Discussion
 
-If profiling is on, adds 1 to the hit counter for `p`.
+If profiling is on, adds 1 to the hit counter `p`, which is a `term` like
+`%foo`. Profiling is enabled by passing the `-P` flag to the `urbit` binary.
+Profiling results are saved in `/path/to/pier/.urb/put/profile/~some.date.txt`.
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~$(%foo 3)
+> ~$(%foo 3)
 3
 ```
 
-### `~_` "sigcab"
+Assuming we have the binary running with the `-P` flag, if we do this:
 
-`[%sgcb p=hoon q=hoon]`: user-formatted tracing printf.
+```
+> =z |=  a=@
+     ?:  =(a 0)
+       a
+     ~$  %my-hit-counter
+     $(a (dec a))
 
-##### Expands to
+> (z 42)
+0
+```
+
+...then look in `/path/to/pier/.urb/put/profile/~some.date.txt`, we'll see this
+line near the top of the file:
+
+```
+my-hit-counter: 42
+```
+
+---
+
+## `~_` "sigcab"
+
+User-formatted tracing printf.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~_  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~_(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgcb p=hoon q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Convention
+#### Convention
 
 Shows `p` in stacktrace if `q` crashes.
 
-##### Discussion
+#### Discussion
 
-`p` must produce a `tank` (prettyprint source).
+`p` must produce a `tank` (pretty-print source).
 
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~_([%leaf "sample error message"] !!)
-"sample error message"
-ford: build failed
+> ~_([%leaf "sample error message"] !!)
+sample error message
+dojo: hoon expression failed
 
-~zod:dojo> ~_  [%leaf "sample error message"]
-           !!
-"sample error message"
-ford: build failed
+> ~_  [%leaf "sample error message"]
+  !!
+sample error message
+dojo: hoon expression failed
 ```
 
-### `~%` "sigcen"
+---
 
-`[%sgcn p=term q=wing r=(list [term hoon]) s=hoon]`: jet registration.
+## `~%` "sigcen"
 
-##### Expands to
+Jet registration.
+
+#### Syntax
+
+Four arguments. Two fixed arguments, then a third which may be `~` if empty or
+else a variable number of pairs sandwiched between two `==`s, then a fourth
+fixed argument.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~%  p  q
+  ==
+    r1a  r1b
+    r2a  r2b
+    rna  rnb
+  ==
+s
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgcn p=chum q=hoon r=tyre s=hoon]
+```
+
+#### Expands to
 
 `s`.
 
-##### Convention
+#### Convention
 
 Register a core with name `p`, with parent at leg `q`, exporting
 the named formulas `r`, constructed by `s`.
 
-##### Syntax
+#### Discussion
 
-Regular: **4-fixed**.  For `r`, use `~` if empty.  Otherwise, **jogging**
-between opening and closing `==`.
-
-##### Discussion
-
-`~%` is for registering cores.  A registered core declares its
+`~%` is for registering cores. A registered core declares its
 formal identity to the interpreter, which may or may not be able
 to recognize and/or accelerate it.
 
 Registered cores are organized in a containment hierarchy.
-The parent core is at any leg within the child core.  When we
+The parent core is at any leg within the child core. When we
 register a core, we state the leg to its parent, in the form of
-wing `q`.  We assume the parent is already registered -- as it
+wing `q`. We assume the parent is already registered -- as it
 must be, if (a) we registered it on creation, (b) the child was
 created by an arm defined on the parent.
 
-(Cores are actually managed by their formula/battery.  Any
+(Cores are actually managed by their formula/battery. Any
 function call will create a new core with a new sample, but
-batteries are constant.  But it is not sufficient to match the
+batteries are constant. But it is not sufficient to match the
 battery -- matching the semantics constrains the payload as well,
 since the semantics of a battery may depend on any parent core
 and/or payload constant.)
 
-The purpose of registration is always performance-related.  It
+The purpose of registration is always performance-related. It
 may involve (a) a special-purpose optimizer or "jet", written
 for a specific core and checked with a Merkle hash; (b) a
 general-purpose hotspot optimizer or "JIT"; or (c) merely a
 hotspot declaration for profiling.
 
 As always with hints, the programmer has no idea which of (a),
-(b), and (c) will be applied.  Use `~%`
+(b), and (c) will be applied. Use `~%`
 indiscriminately on all hotspots, bottlenecks, etc, real or
 suspected.
 
@@ -181,7 +368,7 @@ implementors with named Nock formulas that act on the core.
 In complex systems, jet implementations are often partial and
 want to call back into userspace.
 
-The child core contains the parent, of course.  When we register
+The child core contains the parent, of course. When we register
 a core, we state the leg to its parent, in the form of wing `q`.
 We assume that the parent -- any core within the payload -- is
 already registered.
@@ -190,121 +377,211 @@ already registered.
 
 Registers a jet in core `s` so that it can be called when that code is run.
 
-Regular form: **4-fixed**
+#### Examples
 
-##### Examples
-
-Here's the AES
+Here's the beginning of the AES core in `zuse.hoon`:
 
 ```hoon
-    ++  aesc                                                ::  AES-256
-      ~%  %aesc  +  ~
-      |%
-      ++  en                                                ::  ECB enc
-        ~/  %en
-        |=  [a=@I b=@H]  ^-  @uxH
-        =+  ahem
-        (be & (ex a) b)
-      ++  de                                                ::  ECB dec
-        ~/  %de
-        |=  [a=@I b=@H]  ^-  @uxH
-        =+  ahem
-        (be | (ix (ex a)) b)
-      --
+++  aes    !.
+  ~%  %aes  ..part  ~
+  |%
+  ++  ahem
+    |=  [nnk=@ nnb=@ nnr=@]
+    =>
+      =+  =>  [gr=(ga 8 0x11b 3) few==>(fe .(a 5))]
+          [pro=pro.gr dif=dif.gr pow=pow.gr ror=ror.few]
+      =>  |%
+  ..........
 ```
 
-Here we label the entire `++aesc` core for optimization. You can see the
-jet in `jets/e/aesc.c`.
+Here we label the entire `++aes` core for optimization.
 
+---
 
-### `~<` "siggal"
+## `~<` "siggal"
 
+Raw hint, applied to product.
 
-`[%sggl p=$@(term [p=term q=hoon]) q=hoon]`: raw hint, applied to
-product.
+#### Syntax
 
-##### Expands to
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~<  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~<(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+`p` may either be a a `term` or a pair of `[term hoon]`. If it's the latter, `p`
+may optionally be written as `%foo.some-hoon`.
+
+#### AST
+
+```hoon
+[%sggl p=$@(term [p=term q=hoon]) q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Syntax
+#### Discussion
 
-Regular: **2-fixed**.  For the dynamic form, write `%term.hoon`.
+`~<` is only used for jet hints ([`~/`](#sigfas) and [`~%`](#sigcen)) at the
+moment; we are not telling the interpreter something about the computation we're
+about to perform, but rather about its product.
 
-##### Discussion
-
-`~<` is only used for jet hints ([`~/`](#sigfas)
-and [`~%`](#sigcen)) at the moment; we are not telling the
-interpreter something about the computation we're about to perform, but
-rather about its product.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> (make '~<(%a 42)')
-[%7 p=[%1 p=42] q=[%10 p=97 q=[%0 p=1]]]
-~zod:dojo> (make '~<(%a.+(.) 42)')
-[%7 p=[%1 p=42] q=[%10 p=[p=97 q=[%4 p=[%0 p=1]]] q=[%0 p=1]]]
+> (make '~<(%a 42)')
+[%7 p=[%1 p=42] q=[%11 p=97 q=[%0 p=1]]]
+> (make '~<(%a.+(.) 42)')
+[%7 p=[%1 p=42] q=[%11 p=[p=97 q=[%4 p=[%0 p=1]]] q=[%0 p=1]]]
 ```
 
-### `~+` "siglus"
+---
 
-`[%sgls p=hoon]`: cache a computation.
+## `~+` "siglus"
 
-##### Expands to
+Cache a computation.
+
+#### Syntax
+
+One argument, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~+  p
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~+(p)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgls p=hoon]
+```
+
+#### Expands to
 
 `p`.
 
-##### Convention
+#### Convention
 
 Caches the formula and subject of `p` in a local cache (generally
 transient in the current event).
 
-##### Syntax
-
-Regular: **1-fixed**.
-
-##### Examples
+#### Examples
 
 This may pause for a second:
 
 ```
-~zod:dojo> %.(25 |=(a=@ ?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a))))))
+> %.(25 |=(a=@ ?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a))))))
 121.393
 ```
 
 This may make you want to press `ctrl-c`:
 
 ```
-~zod:dojo> %.(30 |=(a=@ ?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a))))))
+> %.(30 |=(a=@ ?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a))))))
 1.346.269
 ```
 
 This should work fine:
 
 ```
-~zod:dojo> %.(100 |=(a=@ ~+(?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a)))))))
+> %.(100 |=(a=@ ~+(?:((lth a 2) 1 (add $(a (sub a 2)) $(a (dec a)))))))
 573.147.844.013.817.084.101
 ```
 
-### `~/` "sigfas"
+---
 
-`[%sgfs p=term q=hoon]`: jet registration for gate with
-registered context.
+## `~/` "sigfas"
 
-##### Expands to
+Jet registration for gate with registered context.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~/  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~/(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgfs p=term q=hoon]
+```
+
+#### Expands to
 
 ```hoon
 ~%(p +7 ~ q)
 ```
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 From the kernel:
+
 ```hoon
 ++  add
   ~/  %add
@@ -314,139 +591,277 @@ From the kernel:
   $(a (dec a), b +(b))
 ```
 
-### `~&` "sigpam"
+---
 
-`[%sgpm p=hoon q=hoon]`: debugging printf.
+## `~&` "sigpam"
 
-##### Expands to
+Debugging printf.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~&  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~&(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgpm p=hoon q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Product
+#### Product
 
 Pretty-prints `p` on the console before computing `q`.
 
-##### Discussion
+#### Discussion
 
-This rune has no semantic effect beyond the Hoon expression `q`.  It's used solely to create a side-effect: printing the value of `p` to the console.
+This rune has no semantic effect beyond the Hoon expression `q`. It's used
+solely to create a side-effect: printing the value of `p` to the console.
 
 It's most useful for debugging programs.
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~&('halp' ~)
+> ~&('halp' ~)
 'halp'
 ~
 
-~zod:dojo> ~&  'halp'
-           ~
+> ~&  'halp'
+  ~
 'halp'
 ~
 ```
 
-### `~=` "sigtis"
+---
 
-`[%sgts p=hoon q=hoon]`: detect duplicate.
+## `~=` "sigtis"
 
-##### Expands to
+Detect duplicate.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~=  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~=(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgts p=hoon q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Convention
+#### Convention
 
 If `p` equals `q`, produce `p` instead of `q`.
 
-##### Discussion
+#### Discussion
 
 Duplicate nouns are especially bad news in Hoon, because comparing them
-takes O(n) time.  Use `~=` to avoid this inefficiency.
+takes O(n) time. Use `~=` to avoid this inefficiency.
 
-##### Examples
+#### Examples
 
 This code traverses a tree and replaces all instances of `32` with
 `320`:
 
 ```
-~zod:dojo> =foo |=  a=(tree)
-                ?~(a ~ ~=(a [?:(=(n.a 32) 320 n.a) $(a l.a) $(a r.a)]))
+> =foo |=  a=(tree)
+       ?~(a ~ ~=(a [?:(=(n.a 32) 320 n.a) $(a l.a) $(a r.a)]))
 
-~zod:dojo> (foo 32 ~ ~)
+> (foo 32 ~ ~)
 [320 ~ ~]
 ```
 
-Without `~=`, it would build a copy of a completely unchanged tree.  Sad!
+Without `~=`, it would build a copy of a completely unchanged tree. Sad!
 
-### `~?` "sigwut"
+---
 
-`[%sgwt p=hoon q=hoon r=hoon]`: conditional debug printf.
+## `~?` "sigwut"
 
-##### Expands to
+Conditional debug printf.
+
+#### Syntax
+
+Three arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~?  p
+  q
+r
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~?(p q r)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgwt p=hoon q=hoon r=hoon]
+```
+
+#### Expands to
 
 `r`.
 
-##### Convention
+#### Convention
 
 If `p` is true, prettyprints `q` on the console before computing `r`.
 
-##### Syntax
-
-Regular: **4-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> ~?((gth 1 2) 'oops' ~)
+> ~?((gth 1 2) 'oops' ~)
 ~
 
-~zod:dojo> ~?((gth 1 0) 'oops' ~)
+> ~?((gth 1 0) 'oops' ~)
 'oops'
 ~
 
-~zod:dojo> ~?  (gth 1 2)
-             'oops'
-           ~
+> ~?  (gth 1 2)
+    'oops'
+  ~
 ~
 
-~zod:dojo> ~?  (gth 1 0)
-             'oops'
-           ~
+> ~?  (gth 1 0)
+    'oops'
+  ~
 'oops'
 ~
 ```
 
-### `~!` "sigzap"
+---
 
-`[%sgzp p=hoon q=hoon]`: print type on compilation fail.
+## `~!` "sigzap"
 
-##### Expands to
+Print type on compilation fail.
+
+#### Syntax
+
+Two arguments, fixed.
+
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
+~!  p
+q
+</pre>
+</td>
+</tr>
+<tr>
+<td>Wide</td>
+<td>
+<pre>
+~!(p q)
+</pre>
+</td>
+</tr>
+<tr>
+<td>Irregular</td>
+<td>None.</td>
+</tr>
+</table>
+
+#### AST
+
+```hoon
+[%sgzp p=hoon q=hoon]
+```
+
+#### Expands to
 
 `q`.
 
-##### Convention
+#### Convention
 
 If compilation of `q` fails, prints the type of `p` in the trace.
 
-##### Syntax
-
-Regular: **2-fixed**.
-
-##### Examples
+#### Examples
 
 ```
-~zod:dojo> a
+> a
 ! -find.a
 
-~zod:dojo> ~!('foo' a)
+> ~!('foo' a)
 ! @t
 ! find.a
 
-~zod:dojo> ~!  'foo'
-           a
+> ~!  'foo'
+  a
 ! @t
 ! find.a
 ```

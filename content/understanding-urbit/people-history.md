@@ -39,8 +39,6 @@ Given how new and unusual Urbit is, it attracts a wide variety of interesting pe
 
 For those interested in contributing there are some simple instructions on [GitHub](https://github.com/urbit/urbit/blob/master/CONTRIBUTING.md#contributing-to-urbit), but we also run a [grants program](https://grants.urbit.org/) where we reward contributors with Urbit ID address space. Grants aren’t solely for pre-determined projects, either. If you have something you’d like to propose, we’d love to hear from you.
 
-We also run a bi-monthly course called ‘Hoon School’ to teach people about the system. Hoon School is designed for anyone with the most basic technical skills — you don’t have to be an expert programmer. If you’re interested, you should [apply](/community/hoonschool). We accept everyone we can and only close the class when it gets too big.
-
 ![](https://media.urbit.org/site/understanding-urbit/project-history/history-4.svg)
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
@@ -97,5 +95,3 @@ Keep in touch while we make build this vision into reality by [joining our maili
 If you’re somewhat technical and you’d like to help and contribute, [install Urbit](/getting-started) and consider [applying for a grant](https://grants.urbit.org/s).
 
 If you’re interested in homesteading a community when OS 1 comes out, [apply here](/community/community-grants).
-
-Or if you’re curious to try Hoon School, [let us know](/community/hoonschool).

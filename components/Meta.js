@@ -1,4 +1,4 @@
-export default function Meta(post) {
+export default function Meta(post, disableImage) {
   const author = post?.extra?.author || "Urbit";
   const title = post?.title ? `${post.title} - ` : "";
   const description =
@@ -19,7 +19,9 @@ export default function Meta(post) {
       <meta name="og:description" content={description} key="description" />
       <meta name="description" content={description} />
       <meta name="author" content={author} key="author" />
-      <meta name="twitter:image" content={image} key="image" />
+      {!disableImage && (
+        <meta name="twitter:image" content={image} key="image" />
+      )}
       <link
         rel="alternative"
         type="application/rss+xml"

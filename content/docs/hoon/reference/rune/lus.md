@@ -4,33 +4,53 @@ weight = 8
 template = "doc.html"
 +++
 
-A core is a cell of `[battery payload]`.  The battery is made of one or more arms, each of which is a computation on its parent core.
+A core is a cell of `[battery payload]`. The battery is made of one or more
+arms, each of which is a computation on its parent core.
 
-Arm runes are used to define arms in a core, and thus can only be used from within an expression that produces a multi-arm core.  That means arm runes cannot be used to mark the beginning of a first-class expression -- there is no such thing in Hoon as an arm without a core.
+Arm runes are used to define arms in a core, and thus can only be used from
+within an expression that produces a multi-arm core. That means arm runes cannot
+be used to mark the beginning of a first-class expression -- there is no such
+thing in Hoon as an arm without a core.
 
-There are various arm runes you can use to produce different kinds of arms.  Normal arms use `++`; arms defining a structure (or 'mold') use `+$`; and constructor arms use `+*`.
+There are various arm runes you can use to produce different kinds of arms.
+Normal arms use `++`; arms defining a structure (or 'mold') use `+$`; and
+constructor arms use `+*`.
 
-## Runes
+## `+|` "lusbar"
 
-### `+|` "lusbar"
+Chapter label (not useful)
 
-Chapter label.
+#### Syntax
 
-##### Syntax
+One argument, fixed.
 
-Regular: **1-fixed**.
-
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +|  %label
-```
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
-##### Discussion
+#### Discussion
 
-The `+|` doesn't produce an arm.  It instead provides a label for the arms that follow it.  The arms of a core can be divided into **chapters** for 'organization'.  Chapter labels aren't part of the underlying noun of the core; they're stored as type system metadata only.
+The `+|` doesn't produce an arm. It instead provides a label for the arms that
+follow it. The arms of a core can be divided into **chapters** for
+'organization'. Chapter labels aren't part of the underlying noun of the core;
+they're stored as type system metadata only.
 
-See `tome` in the Hoon standard library.
+See [`tome`](/docs/hoon/reference/stdlib/4o#tome) in the Hoon standard library.
 
-##### Examples
+**Note:** The `+|` rune has little practical utility. Chapter labels cannot be
+referenced short of manually processing the `$type` of a core.
+
+#### Examples
 
 Let's look at what the Hoon compiler's parser, `ream`, does with the `+|` rune:
 
@@ -46,7 +66,7 @@ Let's look at what the Hoon compiler's parser, `ream`, does with the `+|` rune:
 ]
 ```
 
-Notice that `p.q` has the label `%numbers`.  Contrast with:
+Notice that `p.q` has the label `%numbers`. Contrast with:
 
 ```
 > (ream '|%  ++  two  2  ++  three  3  --')
@@ -60,27 +80,42 @@ Notice that `p.q` has the label `%numbers`.  Contrast with:
 ]
 ```
 
-### `+$` "lusbuc"
+---
+
+## `+$` "lusbuc"
 
 Produce a structure arm (type definition).
 
-##### Syntax
+#### Syntax
 
-Regular: **2-fixed**.
+Two arguments, fixed.
 
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +$  p=term  q=spec
-```
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `p` is an arm name, and `q` is any structure expression.
 
-##### Discussion
+#### Discussion
 
-Arms produced by `+$` are essentially type definitions.  They should be used when one wants to define custom types using core arms.
+Arms produced by `+$` are essentially type definitions. They should be used when one wants to define custom types using core arms.
 
-The Hoon subexpression, `q`, must be a structure expression.  That is, it must be either a basic structure expression (`*`, `~`, `^`, `?`, and `@`), or a complex expression made with the `$` family of runes (including irregular variants).  Names of structures are also permitted (e.g., `tape`).
+The Hoon subexpression, `q`, must be a structure expression. That is, it must be
+either a basic structure expression (`*`, `~`, `^`, `?`, and `@`), or a complex
+expression made with the `$` family of runes (including irregular variants).
+Names of structures are also permitted (e.g., `tape`).
 
-##### Examples
+#### Examples
 
 ```
 > =c |%
@@ -98,27 +133,41 @@ nest-fail
 [%.y 22]
 ```
 
-### `++` "luslus"
+---
+
+## `++` "luslus"
 
 Produce a normal arm.
 
-##### Syntax
+#### Syntax
 
-Regular: **2-fixed**.
+Two arguments, fixed.
 
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 ++  p=term  q=hoon
-```
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `p` is the arm name, and `q` is any Hoon expression.
 
-##### Discussion
+#### Discussion
 
-All arms must have a name (e.g., `add`).  An arm is computed by name resolution.  (This resolution is implicit in the case of `$` arms.  See `|=`, `|-`, and `|^`.)  The `++` rune is used for explicitly giving a name to an arm.
+All arms must have a name (e.g., `add`). An arm is computed by name resolution.
+(This resolution is implicit in the case of `$` arms. See `|=`, `|-`, and `|^`.)
+The `++` rune is used for explicitly giving a name to an arm.
 
 Any Hoon expression, `q`, may be used to define the arm computation.
 
-##### Examples
+#### Examples
 
 ```
 > =c |%
@@ -133,20 +182,32 @@ Any Hoon expression, `q`, may be used to define the arm computation.
 12
 ```
 
-### `+*` "lustar"
+---
+
+## `+*` "lustar"
 
 Defines deferred expressions within doors.
 
-##### Syntax
+#### Syntax
 
-Regular: **variadic**.
+Arguments: A variable number of pairs.
 
-```hoon
+<table>
+<tr><th>Form</th><th>Syntax</th></tr>
+<tr>
+<td>Tall</td>
+<td>
+<pre>
 +*  a=term  b=hoon
     c=term  d=hoon
     ...
     e=term  f=hoon
-```
+</pre>
+</td>
+</tr>
+<tr><td>Wide</td><td>None.</td></tr>
+<tr><td>Irregular</td><td>None.</td></tr>
+</table>
 
 `a`, `c`, `e` are arm names and `b`, `d`, `f` are any Hoon expression. Note that
 unlike all other runes with a variable number of arguments, the list of
@@ -155,7 +216,7 @@ arguments of `+*` does not end with a terminator.
 `+*` arms must always come at the beginning of the battery, before any other
 type of lus arm.
 
-##### Discussion
+#### Discussion
 
 The primary use of `+*` is to create deferred expressions within doors (see
 Examples below). This is a name for an expressions that will be evaluated in
@@ -178,7 +239,9 @@ compiled from this Hoon expression
 ++  y  (sub z n)
 --
 ```
+
 as being identical the Nock compiled from this one:
+
 ```hoon
 =|  z=@ud
 |%
@@ -191,13 +254,15 @@ as being identical the Nock compiled from this one:
 --
 ```
 
-##### Examples
+#### Examples
 
 To assign an alias to a door, we often write the following.
+
 ```hoon
 |_  foo
 +*  this  .
 ```
+
 This is the idomatic way to assign the alias `this` to the door.
 
 Sometimes cores, such as Gall app cores, have a fixed number of arms, but you'd
@@ -211,6 +276,7 @@ Gall app core. This usage of `+*` is controversial and should be minimized.
     samp  +<
     cont  +>
 ```
+
 This assigns the door the alias `this`, the sample of the door `samp`, and the
 context of the door `cont`.
 
@@ -218,7 +284,7 @@ You may also call functions with `+*` by making use of e.g. the `%~` rune.
 
 ```hoon
 =<
-  |_  a=@ 
+  |_  a=@
   +*  do   ~(. +> a)
   ++  stuff  foo:do
 ::etc

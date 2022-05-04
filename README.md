@@ -2,6 +2,10 @@ The website for Urbit.
 
 ## Getting Started
 
+Install Node 14. [nvm](https://github.com/nvm-sh/nvm) should handle this by running `nvm install 14`, then `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
+
+Install our dependencies:
+
 ```bash
 npm install
 ```
@@ -29,7 +33,7 @@ To learn more about Tailwind CSS, take a look at the docs:
 
 ## Deployment
 
-WIP
+We deploy using Vercel. All pull requests will show a deployment preview via the same.
 
 ## Upgrades
 

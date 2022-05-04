@@ -28,7 +28,7 @@ export function MediaPreview({ event, dir, className }) {
     >
       <Link href={`${dir ? dir : "/events/"}${event.slug}`}>
         <div className="flex flex-col p-8 justify-between items-between h-full relative">
-          <div className="flex-grow-1 flex flex-col justify-center h-full">
+          <div className="grow-1 flex flex-col justify-center h-full">
             <h3 className={`mb-4 ${blackText}`}>{event.title}</h3>
             <h4 className={grayText}>{event?.type}</h4>
           </div>
@@ -100,7 +100,8 @@ export default function Media({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "media"
+    "media",
+    "date"
   );
 
   return {

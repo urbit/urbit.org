@@ -61,9 +61,11 @@ export default function Blog({ posts, search }) {
                         </div>
                       ) : null}
                       {post.extra.ship ? (
-                        <div className="type-sub-bold text-wall-500 font-mono">
-                          {post.extra.ship}
-                        </div>
+                        <Link href={`/ids/${post.extra.ship}`}>
+                          <a className="type-sub-bold text-wall-500 font-mono">
+                            {post.extra.ship}
+                          </a>
+                        </Link>
                       ) : null}
                     </div>
                     <div className="text-wall-500 type-sub">
@@ -84,7 +86,8 @@ export default function Blog({ posts, search }) {
 export async function getStaticProps() {
   const posts = getAllPosts(
     ["title", "slug", "date", "description", "extra"],
-    "blog"
+    "blog",
+    "date"
   );
 
   return {

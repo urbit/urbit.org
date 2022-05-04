@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import { useState, useEffect } from "react";
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import { init } from "@socialgouv/matomo-next";
@@ -7,8 +6,8 @@ import "../styles/globals.css";
 import "../styles/markdown.css";
 import "../styles/prism.css";
 
-const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
-const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
+const MATOMO_URL = process?.env?.NEXT_PUBLIC_MATOMO_URL || "";
+const MATOMO_SITE_ID = process?.env?.NEXT_PUBLIC_MATOMO_SITE_ID || "";
 
 function MyApp({ Component, pageProps }) {
   const [showSearch, setSearch] = useState(false);

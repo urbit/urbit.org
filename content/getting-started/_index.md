@@ -103,7 +103,7 @@ There are a few ways to get your own planet:
 
 - Getting an invitation from a friend (or stranger).
 - Purchasing a planet, including hosting, from a [hosting provider](#hosting-providers).
-- Manually setting up and hosting a planet purchased from a third party such as [urbit.live](https://urbit.live), [OpenSea](https://opensea.io), [planet.market](https://planet.market/), [urbit.me](https://urbit.me), [urth systems](https://urth.systems/), [Urbitex](https://urbitex.io), or [Urbit Marketplace](https://urbitmarketplace.com/).
+- Manually setting up and hosting a planet purchased from a third party such as [azimuth.shop](https://azimuth.shop/), [urbit.live](https://urbit.live), [urbit.me](https://urbit.me), [Urbitex](https://urbitex.io), [Urbit Marketplace](https://urbitmarketplace.com/), or [Wexpert Systems](https://wexpert.systems).
 
 ## Hosting Providers {#hosting-providers}
 

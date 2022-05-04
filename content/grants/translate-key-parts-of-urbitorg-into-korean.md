@@ -12,7 +12,7 @@ description = "The content found on urbit.org/understanding-urbit/ and urbit.org
 reward = "1 star"
 assignee = "~sibped-dabdul, 홍송이"
 id = "1921641407"
-completed = false
+completed = true
 canceled = false
 link = ""
 +++

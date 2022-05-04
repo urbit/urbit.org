@@ -73,6 +73,10 @@
   @apply text-base leading-relaxed;
 }
 
+.markdown.technical p code {
+  white-space: pre-wrap;
+}
+
 .markdown.technical li {
   @apply py-2 ml-6 text-base;
 }

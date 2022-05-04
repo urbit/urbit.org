@@ -7,7 +7,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Slam Action Game"
-reward = "$24000 in WSTR"
+reward = "3 stars"
 assignee = "~hanfel-dovned"
 champion = "~rabsef-bicrym"
 id = ""
@@ -37,11 +37,11 @@ Slam's integration with pals and gora is something that can only happen on Urbit
 
 Hi! I'm ~hanfel-dovned.
 
-Throughout college, I developed about two dozen games ranging in scope from small weekend projects to a multi-year professional release on consoles. I designed and coded them in GameMaker: Studio using GML, a language with C-like syntax and looser-than-C rules. Some games were made entirely by me, and on others I collaborated with a couple friends on art and sound. (I'd be happy to share this portfolio with anyone interested.)
+Throughout college, I developed about two dozen games ranging in scope from small weekend projects to a multi-year professional release on consoles. I designed and coded them in GameMaker: Studio using GML, a language with C-like syntax and looser-than-C rules. Some games were made entirely by me, and on others I collaborated with a couple friends on art and sound.
 
-I recently graduated with a degree in computer science and am currently doing an internship where not much happens. I discovered Urbit in mid-2021, fell in love with it, went through Hoon School, did an apprenticeship, attended Assembly, and plan on building on Urbit full time when my internship is over in June.
+After graduating, I discovered Urbit in mid-2021, fell in love with it, went through Hoon School, did an apprenticeship, attended Assembly, and plan on building on Urbit full time beginning this summer.
 
-My Hoon skills are up to par with the previous out-of-date Gall Guide; I can write a Gall agent, but don't have any experience with implementing a frontend or distributing apps. Code for my apprenticeship is here.
+My Hoon skills are up to par with the previous out-of-date Gall Guide; I can write a Gall agent, but don't have any experience with implementing a frontend or distributing apps. Code for my apprenticeship is [here](https://github.com/hanfel-dovned/urbit-text-editor).
 
 ## Design
 
@@ -95,7 +95,7 @@ I’ll be working with ~rabsef-bicrym as a champion. Rabsef has, with [Quartus](
 
 Expected Completion: May 2022
 
-Payment: $12,000
+Payment: 1 Star
 
 A fully playable and polished single-player version of Slam with all gameplay mechanics intact, but no pals or gora implementation, will be available for Urbit users to play via app distribution.
 
@@ -103,6 +103,10 @@ A fully playable and polished single-player version of Slam with all gameplay me
 
 Expected Completion: August 2022
 
-Payment: $12,000
+Payment: 2 Stars
 
-Slam will be updated with gora and pals functionality as described in this proposal. If any minor bugs pop up in the weeks after release, they will be quickly fixed.
+Slam will be updated with social functionality. Enemies will be generated from the player's pals' public gorae by pulling in their images as sprites and tweaking parameters like size and color according to each gora's info.
+
+As part of these social features, Slam will be updated with menus for features including viewing one's gora army and seeing pals' high scores.
+
+If germane, Slam's core gameplay will also be tweaked according to player feedback from the demo, potentially including graphical and audio enhancements; this will be a tight, solid, highly polished little game. If any minor bugs pop up in the weeks after release, they will be quickly fixed.

@@ -78,7 +78,7 @@ export default function EventPreview({ event, className, big }) {
             className={`flex flex-col p-6 justify-between items-between h-full relative`}
           >
             <div
-              className={`flex-grow-1 flex ${
+              className={`grow-1 flex ${
                 big ? "justify-center" : ""
               } flex-col h-full`}
             >

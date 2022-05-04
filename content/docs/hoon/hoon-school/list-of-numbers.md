@@ -20,7 +20,13 @@ Below is a simple Hoon program that takes a single number `n` from the user as i
 $(count (add 1 count))                                  ::  8
 ```
 
-As we mentioned in the previous lesson, the easiest way to use such a program is to run it as a _generator_. Mount your `%base` desk with `|mount %base` (if you didn't do it before), saving a file in the `base/gen` directory of your ship and commiting these changes `|commit %base` allows you to run it from your ship's Dojo (command line) as a generator. Save the above code there as `list.hoon`. Now you can run it in the Dojo with the command below (remember, without the `>`):
+As we mentioned in the previous lesson, the easiest way to use such a program is to run it as a _generator_. Mount your `%base` desk with `|mount %base` (if you didn't do it before), saving a file in the `base/gen` directory of your ship and commiting these changes `|commit %base` allows you to run it from your ship's Dojo (command line) as a generator. Save the above code there as `list.hoon`.
+
+**Note**: If you're using VS Code on Windows, you might need to manually change
+the line endings from CRLF to LF in the status bar at the bottom. Urbit requires
+Unix-style line endings for Hoon files.
+
+Now you can run it in the Dojo with the command below (remember, without the `>`):
 
 `> +list 5`
 
