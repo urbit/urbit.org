@@ -1,8 +1,8 @@
 +++ 
 title = "Urbit Outside San Francisco" 
 starts = "2022-05-08T13:00:00" 
-ends = "2022-05-08T17:00:00" 
-timezone = "Pacific" 
+ends = "2022-05-08T17:00:00"
+timezone = "America/Los_Angeles" 
 location = "Marx Meadow, Golden Gate Park" 
 image = "https://www.meetup.com/_next/image/?url=https%3A%2F%2Fsecure-content.meetupstatic.com%2Fimages%2Fclassic-events%2F503882718%2F676x380.webp&w=3840&q=75"
 registration_url = "https://www.meetup.com/urbit-sf/events/285267065/" 
