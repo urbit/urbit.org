@@ -24,11 +24,26 @@ class Search extends Component {
   }
 
   glossarySearch(query) {
-    return glossary.filter((entry) => {
-      return (
-        entry.name.includes(query.toLowerCase()) || entry.symbol.includes(query)
-      );
-    });
+    return glossary
+      .filter((entry) => {
+        return (
+          entry.name.toLowerCase().includes(query.toLowerCase()) ||
+          entry.symbol.includes(query)
+        );
+      })
+      .sort((a, b) => {
+        let aMatch =
+          a.name.toLowerCase() === query.toLowerCase() ||
+          a.symbol === query.toLowerCase()
+            ? 1
+            : 0;
+        let bMatch =
+          b.name.toLowerCase() === query.toLowerCase() ||
+          b.symbol === query.toLowerCase()
+            ? 1
+            : 0;
+        return bMatch - aMatch;
+      });
   }
 
   patpSearch(query) {
