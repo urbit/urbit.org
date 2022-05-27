@@ -9,7 +9,7 @@ grant_category = [ "App Dev" ]
 [extra]
 image = ""
 description = "Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and others' wallets, track balances and transactions, and add private annotations to all of the above."
-reward = "$45,000-$65,000 in WSTR"
+reward = "5-7 stars"
 assignee = "Quartus"
 id = ""
 completed = false
@@ -106,8 +106,8 @@ project (see [Future Work](#future-work)) will be given priority.
 
 ## Schedule
 
-The schedule is simple. If you can satisfactorily complete the above [user stories](#user-stories) within two months of acceptance, the reward is $65,000 in WSTR.
+The schedule is simple. If you can satisfactorily complete the above [user stories](#user-stories) within two months of acceptance, the reward is 7 stars.
 
-If completed within three months, the reward is $55,000.
+If completed within three months, the reward is 6 stars.
 
-If completed within five months, the reward is $45,000.
+If completed within five months, the reward is 5 stars.
