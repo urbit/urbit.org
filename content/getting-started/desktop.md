@@ -33,6 +33,8 @@ Or to install `snap` for your distribution, snapcraft provides [installation ins
 
 {% tab label="Windows" %}
 
+**WARNING:** Support for Windows is experimental. For the best experience, we recommend using a [cloud hosting provider](https://urbit.org/getting-started/hosted) rather than running Urbit locally.
+
 To install **Port** on Windows, simply download and open the `.exe` file.
 
 {% button label="Download Port" link="https://github.com/urbit/port/releases/latest/download/PortSetup.exe" color="bg-green-400 text-white" %}
