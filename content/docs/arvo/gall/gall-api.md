@@ -852,15 +852,12 @@ one subscribers on a given path.
 #### Structure
 
 ```hoon
-[%kick (unit path) (unit ship)]
+[%kick (list path) (unit ship)]
 ```
 
-`(unit path)` is the path of the subscription being updated. If no path is
-given, then the update is only given to the program that instigated the request.
-Typical use of this mode would be in `+on-watch` to produce a single update to a
-subscription then close the subscription.
+`(list path)` is the list of paths the subscriber should be kicked from.
 
-`(unit ship)` is the ship to close the subscription for. If no path is given,
+`(unit ship)` is the ship to close the subscription for. If no ship is given,
 then the subscription is closed for all subscribers.
 
 ## Agent Notes
