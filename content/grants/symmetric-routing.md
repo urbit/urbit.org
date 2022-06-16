@@ -11,7 +11,7 @@ image = ""
 description = "Change Urbit's peer discovery, routing, and packet forwarding to use symmetric routing"
 reward = "1 star"
 mentor = "~rovnys-ricfer"
-assignee = "~novned-tidsyl"
+assignee = ["~novned-tidsyl"]
 completed = false
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0162&prefill_Grant+Name=Symmetric%20Routing"

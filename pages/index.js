@@ -262,15 +262,13 @@ export async function getStaticProps() {
         0
       )
     ),
-    contributors: [
-      ...new Set(...[grants.map((e) => e.extra.assignee.split(","))]),
-    ].length,
+    contributors: [...new Set(...[grants.map((e) => e.extra.assignee)])].length,
     active: grants.filter(
       (e) =>
         !e.extra.canceled &&
         !e.extra.completed &&
         e.extra.assignee &&
-        e.extra.assignee.length > 0
+        e.extra.assignee?.[0]?.length > 0
     ).length,
   };
 

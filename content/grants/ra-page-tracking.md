@@ -11,7 +11,7 @@ image = ""
 description = "Improve Page Tracking"
 reward = "2 stars"
 mentor = "~silsyn-wathep"
-assignee = "~fanfun-mocbud"
+assignee = ["~fanfun-mocbud"]
 completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0039&prefill_Grant+Name=Runtime%20Apprenticeship%3A%20Improve%20Page%20Tracking"
 +++

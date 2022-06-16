@@ -11,7 +11,7 @@ image = ""
 description = "Build a new network protocol to Urbit to handle notifying subscribers when a new datum is published"
 reward = "1 star"
 mentor = "~rovnys-ricfer"
-assignee = ""
+assignee = [""]
 completed = false
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0163&prefill_Grant+Name=Notifications%20Protocol"

@@ -11,7 +11,7 @@ image = ""
 description = "Help us maintain the Bitcoin Wallet."
 reward = "3 stars"
 mentor = "~timluc-miptev"
-assignee = "~finned-palmer"
+assignee = ["~finned-palmer"]
 completed = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0032&prefill_Grant+Name=Bitcoin%20Wallet%20Maintenance"
 +++

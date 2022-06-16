@@ -18,7 +18,7 @@ description = "Web extension which enhances twitter with native Urbit functional
 
 reward = "4 stars"
 
-assignee = "dcSpark"
+assignee = ["dcSpark"]
 
 grant_id = "P0090"
 

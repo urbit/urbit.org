@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function GrantPreview({ grant }) {
   const isCompleted = grant.extra.completed;
-  const isOpen = !isCompleted && grant.extra.assignee === "";
+  const isOpen = !isCompleted && grant.extra.assignee?.[0] === "";
   const type = grant.taxonomies.grant_type;
 
   const className = classnames({

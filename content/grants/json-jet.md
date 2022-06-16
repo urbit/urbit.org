@@ -11,7 +11,7 @@ image = ""
 description = "Create high performance JSON parsing/serializing jet."
 reward = "1 star"
 mentor = "~timluc-miptev"
-assignee = "~finmep-lanteb"
+assignee = ["~finmep-lanteb"]
 completed =  true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0036&prefill_Grant+Name=JSON%20Parsing%2FSerialization%20Jet"

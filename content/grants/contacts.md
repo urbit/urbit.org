@@ -11,7 +11,7 @@ image = ""
 description = "Contact Management App"
 reward = "1 star"
 mentor = "~timluc-miptev"
-assignee = ""
+assignee = [""]
 completed = false
 canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0034&prefill_Grant+Name=Contacts%20App"

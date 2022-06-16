@@ -10,7 +10,7 @@ grant_category = [ "Community" ]
 image = ""
 description = "Urbit needs champions! The Urbit Foundation is looking for community members to host local or online meetups to spread the word."
 reward = "1 star"
-assignee = "~sarlev-sarsen"
+assignee = ["~sarlev-sarsen"]
 id = ""
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0083&prefill_Grant+Name=Host%20Two%20Urbit%20Meetups%20%2814%29"
 completed = true

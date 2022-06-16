@@ -11,7 +11,7 @@ image = ""
 description = "Stack Overflow"
 reward = "2 stars"
 mentor = "~silsyn-wathep"
-assignee = ""
+assignee = [""]
 completed = false
 canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0041&prefill_Grant+Name=Runtime%20Apprenticeship%3A%20Stack%20Overflow"

@@ -66,7 +66,7 @@ export default function Grants({ posts, categories, types, search }) {
       return { ...post, status: "canceled" };
     } else if (post.extra.completed) {
       return { ...post, status: "completed" };
-    } else if (post.extra.assignee && post.extra.assignee.length > 0) {
+    } else if (post.extra.assignee && post.extra.assignee?.[0].length > 0) {
       return { ...post, status: "wip" };
     } else {
       return { ...post, status: "open" };

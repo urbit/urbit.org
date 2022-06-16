@@ -11,7 +11,7 @@ image = ""
 description = "Create new high performance string parser jet."
 reward = "1 star"
 mentor = "~timluc-miptev"
-assignee = ""
+assignee = [""]
 completed = false
 canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0035&prefill_Grant+Name=Nuck%20Jet"
