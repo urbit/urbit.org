@@ -451,19 +451,14 @@ conventions in this document has earned a C. Weird indents,
 cryptic or abbreviated names, etc, etc, preclude an A or B
 grade -- regardless of documentation.
 
-A Hoon file gets a B if and only if **every symbol in the file is
-defined, where introduced, by a formal comment**. You do not get
-to make up a name without writing a one-line definition.
+A Hoon file gets a B if and only if **every face that merits
+explanation is annotated with a formal comment**. If a face
+definition doesn’t call for any explanation, it must be dead
+obvious. Do not introduce faces for nontrivial structures
+without adding *at least* a one-line formal comment.
 
-For an A, there are two criteria.
-
-One: every symbol that needs an explanation (a multiline comment
-after the definition) has an explanation. This is obviously a
-judgment call, as a grade of A should always be. If a definition
-doesn’t call for any explanation, it must be dead obvious.
-
-Two: every `%constant` we use must be defined where it is used,
-not just where it’s declared.
+For an A, there is one additional criterion: every `%constant`
+must be defined where it is used, not just where it’s declared.
 
 The advantage of a `%constant` over a classic `typedef`: there is no
 need to search formally for a symbol. The disadvantage: there is
