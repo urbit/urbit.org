@@ -15,95 +15,187 @@ This guide uses Digital Ocean as the cloud provider, but others can be used.
 
 ## Create a Digital Ocean droplet
 
-- Create an account on [Digital Ocean][digital ocean].
-- Once you make an account, choose "Deploy a virtual machine"
+Create an account on [Digital Ocean][digital ocean]. Once you make an account, choose "Deploy a virtual machine".
 
 ![](https://luna-orb.nyc3.digitaloceanspaces.com/cloud_s01.png)
 
-- You should see the page below where you can create your Droplet, aka Virtual Machine:
+You should see the page below where you can create your Droplet, aka Virtual Machine:
 
 ![](https://luna-orb.nyc3.digitaloceanspaces.com/Screen%20Shot%202022-05-15%20at%2012.11.43%20PM.png)
 
-- Create a droplet with the following settings:
-- **Image**: Ubuntu 20.04 x64
-- **Plan**
-  - Shared CPU Basic
-  - CPU options: Regular with SSD
-  - 2GB RAM ($10/mo)\*
-- **Add block storage**: Skip
-- **Datacenter Region**: Choose the region closest to you.
-- **VPC Network**: No VPC
-- **Additional Options**: None
-- **Authentication**: SSH keys, add a New SSH Key following the instructions DO gives you.
-- **How many Droplets**: 1
-- **Choose a hostname**: This will be the hostname of the box you ssh into (can be whatever you want, I used my Urbit planet name).
-- **Add tags**: None
-- **Project**: It'll select your default.
-- **Backups**: Optional (it costs a little extra, but I have it enabled for peace of mind).
+Fill out the options like so:
 
-\*Note on storage plan: 2GB is what you should get as a standard user to save a little money. With 2GB, however, you will have to spend a few minutes setting up [https://www.digitalocean.com/community/tutorial_collections/how-to-add-swap-space][swap space]. If you’re a power user and expect to use more storage right away, you can get a 4GB plan.
+#### Image
 
-Right now, Urbit does not have log truncation, though that is the plan for the future. Until then, if you run out of storage you’ll have to purchase more. This is unlikely unless you’re a power user
+Ubuntu 20.04 (LTS) x64
 
-## Setting up a basic firewall
+#### Plan
 
-Continuing to follow the Digital Ocean docs we're going to configure the UFW firewall for your server via the command line.
+- Shared CPU Basic
+- CPU options: Regular with SSD
+- 2GB / 1 CPU ($10/mo)
 
-UFW, aka "Uncomplicated Firewall" is a program for managing a netfilter firewall, and it is designed to be easy to use. In order to install UFW, you'll follow these steps:
+You can choose a beefier option if you'd like but the $10 option should be sufficient.
 
-- First, find your server's IP address in digital ocean:
+#### Add block storage
 
-![](https://luna-orb.nyc3.digitaloceanspaces.com/cloud_s02.jpg)
+The $10 plan includes 50GB which should be sufficient for quite some time, so
+you can skip this.
 
-Then, inside your terminal, copy/paste the following code and run it by hitting enter.
+#### Datacenter region
 
-```
-$ ssh root@your_server_ip
-$ [[NEED TO ADD INSTALL INSTRUCTIONS]]
-```
+Choose the region closest to you.
 
-- The below command shows us the applications available to be easily configured with firewall rules by UFW.
+#### VPC Network
 
-```
- $ sudo ufw app list
+Leave this as default.
+
+#### Authentication
+
+In the "Authentication" field, select "SSH keys" and hit "New SSH Key". Run the
+following command in your terminal, replacing `riclen-tinlyr` with the name of
+your ship (sans the leading `~`):
+
+```bash
+SHIP="riclen-tinlyr" bash -c 'ssh-keygen -q -N "" -C $SHIP -f ~/.ssh/riclen-tinlyr && cat ~/.ssh/$SHIP.pub'
 ```
 
-- Next we'll configure ufw to allow connections via ssh and to allow Urbit to use the standard web port when the firewall is enabled, as well as opening a port that we'll later specify for your urbit to use to communicate directly with other ships.
+It should spit out a long string of letters and numbers beginning with
+`ssh-rsa` and ending with your ship name. Copy the whole thing and paste it
+into the "SSH key content" field on DO. In the "Name" field, enter your ship
+name.
+
+#### Additional options
+
+Click "User data" and paste the script below into the field provided. This
+will automatically configure the server and install necessary software.
+
+**Note you need to edit the `SHIP` variable at the top of the script, replacing
+`riclen-tinlyr` with your own ship name.**
+
+```bash
+#!/bin/bash
+
+# replace riclen-tinlyr with your ship name (leave off leading ~)
+SHIP="riclen-tinlyr"
+
+# configure swap
+fallocate -l 2G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+
+# setup firewall
+ufw allow OpenSSH
+ufw allow www
+ufw allow https
+ufw allow 34543/udp
+ufw enable
+
+# create and configure user
+useradd -s /bin/bash -d /home/$SHIP -m -G sudo $SHIP
+passwd -d $SHIP
+echo "$SHIP ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# configure ssh keys for user
+mkdir /home/$SHIP/.ssh
+chmod 700 /home/$SHIP/.ssh
+cp /root/.ssh/authorized_keys /home/$SHIP/.ssh/authorized_keys
+chown -R $SHIP:$SHIP /home/$SHIP/.ssh
+chmod 600 /home/$SHIP/.ssh/authorized_keys
+
+# fetch and extract urbit binary
+wget -P /home/$SHIP --content-disposition https://urbit.org/install/linux64/latest 
+tar xzf /home/$SHIP/linux64.tgz --strip=1 -C /home/$SHIP
+rm /home/$SHIP/linux64.tgz
+chown $SHIP:$SHIP /home/$SHIP/urbit
+
+# install necessary packages
+apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
+apt -y update
+apt install -y caddy tmux
+```
+
+#### How many Droplets?
+
+1
+
+#### Choose a hostname
+
+This will be the name the server calls itself locally, you can put in whatever
+you want. Your planet name is a good choice.
+
+#### Add tags
+
+Leave empty.
+
+#### Select project
+
+Leave as the default.
+
+#### Create Droplet
+
+Hit this button to create the droplet.
+
+## Get domain
+
+To access your ship easily from any device, it's necessary to have a domain
+name. You can either buy one from a domain registrar like
+[gandi.net](https://www.gandi.net/), [Namecheap](https://www.namecheap.com),
+etc, or you can get a free subdomain from a site like
+[freedns.afraid.org](https://freedns.afraid.org/).
+
+In this guide, we'll walk through the second free option, but if you'd prefer
+your own, you just need to add an A Record pointing to your droplet's public IP
+address.
+
+Go to [freedns.afraid.org](https://freedns.afraid.org/) and sign up. Once done,
+log in and select the "Subdomains" option in the menu on the left. Choose to
+add a new one, and you'll be presented with a screen like so:
+
+![afraid.org subdomain add](https://m.tinnus-napbus.xyz/pub/2022.6.21..11.56.52-afraid-domain-add.png)
+
+You can put anything in the "Subdomain" field, but typically you'd put your
+planet name. You can choose whichever domain option you'd like. In the
+"Destination" field, you'll need to put the public IP address of your droplet,
+which you can get from the dashboard on Digital Ocean.
+
+Once you hit "Save", the configuration is complete:
+
+![afraid.org subdomain created](https://m.tinnus-napbus.xyz/pub/2022.6.21..11.56.52-afraid-domain-done.png)
+
+## SSH into droplet
+
+To make connecting simple, we can add the server to `~/.ssh/config`, so we don't
+need to remember the details. Open `~/.ssh/config` in an editor (you may need to
+create it if the file doesn't exist), and add the following to the bottom of the
+file (replacing the ship name and IP address with your own):
 
 ```
- $ sudo ufw allow OpenSSH
- $ sudo ufw allow www
- $ sudo ufw allow https
- $ sudo ufw allow 34543/udp
+Host riclen-tinlyr
+  HostName 161.35.148.247
+  User riclen-tinlyr
+  IdentityFile ~/.ssh/riclen-tinlyr
+  IdentitiesOnly yes
 ```
 
-Note that you can choose any port in place of 34543 for Ames, this one is the standard option. You’ll also see this number referred to as a pier later on in this guide. Just be sure to pass the same port via the **-p** option when starting your ship.
+Once that's saved, let's connect to the droplet:
 
-- Next, we'll turn on the firewall:
-
-```
- $ sudo ufw enable
+```bash
+ssh riclen-tinlyr
 ```
 
-- To see the current firewall status, use this command:
+You'll be asked to accept the fingerprint, and then you'll be taken to the
+droplet's shell. In order to complete the domain name setup, we need to edit the
+config file of the `caddy` reverse-proxy web-server. Run the following commands
+in the droplet's shell (replacing the domain with the one you chose previously):
 
-```
- $ sudo ufw status
-```
-
-## Installing Urbit
-
-Finally we're ready to install Urbit on your very own server. This part is actually pretty easy, if you haven't installed Urbit locally then the instructions are the exact same as the ones in the Urbit [install doc](/getting-started/). If you have a local ship already, we're going to install Urbit on the server and then send your local ship up.
-
-**The first thing you’re going to want to do is install Urbit and permit it to bind to the web ports**
-
-```
-$ ssh your_user@your_domain
-$ mkdir urbit
-$ cd urbit
-$ wget --content-disposition https://urbit.org/install/linux64/latest
-$ tar zxf ./linux64.tgz --strip=1
-$ sudo setcap 'cap_net_bind_service=+ep' urbit
+```bash
+echo -e "riclen-tinlyr.crabdance.com \n  reverse_proxy 127.0.0.1:8080" | sudo tee /etc/caddy/Caddyfile > /dev/null
+sudo systemctl restart caddy
 ```
 
 ### What to do if your planet is currently hosted locally
@@ -151,15 +243,7 @@ If your planet is already running on [https://urbit.org/using/running/port][port
   - Do not close your terminal during this time and leave your computer plugged in to a charger. To give you a time estimate, I had my ship running for 2 years and it took about 30 minutes to upload.
   - If you accidentally close your terminal and end the process, you’ll have to start over again.
 
-## Set Up Swap
-
-**While you wait for your ship to upload, you can set up Swap.**
-
-Check out this Digital Ocean article about [how to add swap space on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
-
-- Things to note:
-  - Urbit needs _all_ 2 gigs to operate
-  - If things start moving very slow after using your planet for some time, you can add additional disk space to your plan on digital ocean.
+## 
 
 ## Botting Your Ship
 
@@ -270,71 +354,6 @@ your_user@ravmel-ropdyl:~/urbit# screen -r
 Now, you should see your planet’s dojo in the command prompt.
 
 Don’t forget to disconnect from the screen session and leave the ship running by typing `“CTRL + A + D”` in the terminal.
-
-## DNS Setup
-
-Now that your planet has been uploaded to your droplet in digital ocean & urbit is booted in your server, you’ll want to proceed with DNS setup in order to get a domain. You’ll want to proceed with this as soon as possible in order to encrypt your Urbit.
-
-We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface. Stars and planets follow the same DNS request process, and galaxies have their own requirements. Moons and comets are not supported.
-
-For a planet or star's DNS request to be made and fulfilled, they must be hosting their ship someplace with a public IP address, and its HTTP server must be listening on port 80. You have a public IP address because of your droplet.
-
-Follow the steps from the “Accessing your planet later” section to get into your dojo if you aren’t already there. Then, to initiate a DNS request, run the following thread in your ship's dojo, passing the IP address as an argument with .0.0.0.0 (@if) syntax. For example:
-
-```
-dns-address [%if .1.2.3.4] // (e.g. [%if .131.930.211.000]
-```
-
-The `%dns-address` thread, running locally, will make an HTTP request to that IP address on port 80 to confirm that it is itself available at that IP and port. If that fails, you'll receive a `couldn't access ship on port 80` message in the terminal; this request will retry a few times. If the self-check is successful, the request is relayed to `~zod`, and you'll receive a message saying, `request for DNS sent to ~zod`. Once `~zod` has acknowledged receipt of the request, the `%dns-address` thread will print a terminal message saying `awaiting response from ~zod`.
-
-The request will make take a little time to be fulfilled, but eventually the `ship.arvo.network`
- DNS record will be set to the given IP address. Once that's set up, `~zod` will be notified and `~zod` will, in turn, notify your ship. That ship will now try to verify that it can reach itself on `ship.arvo.network` over port 80. If it can't, it'll send a message saying, `unable to access via ship.arvo.network`. If it can, it will configure itself with that domain and say `confirmed access via ship.arvo.network`.
-
-Now, you should see your planet trying to request DNS Setup in your terminal. This may take a while, and you can check to see if it worked by typing your domain name into your browser’s address bar: “ravmel-ropdyl.arvo.network”.
-
-In order to send dm’s & continue to use your ship while your planet is awaiting DNS setup, you can connect to your ship remotely in Port. With Port freshly installed, you can hit See More Optionson the home screen and then Access remote ship. It should bring up this screen:
-
-![](https://luna-orb.nyc3.digitaloceanspaces.com/port-remote-ship.png)
-
-**Tip:** If you need to close your terminal during the DNS request, you can follow the steps in “Accessing your planet later” to get back to your screen session & your planet’s dojo.
-
-### Let's Encrypt Cert
-
-To make things more secure, you’ll want to run a Let’s Encrypt cert for your domain. (Note: if you have an alternative domain besides “your_planet.arvo.network”, you can replace ”com” with whatever your top-level domain is e.g. com in example.com.)
-
-```
-~ravmel-ropdyl:dojo> |start %acme
-~ravmel-ropdyl:dojo> :acme &path /network/arvo/ravmel-ropdyl
-```
-
-Note: “your_subdomain” is optional and that part of the command should be omitted if you are not using it.
-
-## Optional Steps
-
-### Getting your own domain
-
-Your own domain will make accessing your Urbit a lot easier (it'll also allow you to secure things with a Let's Encrypt cert). Domains are relatively inexpensive and since this guide is about best practices it's a required step.
-
-There are a lot of domain name registrars you can use, this guide suggests **[gandi.net](https://www.gandi.net/)**. From there you can search for and register a domain that you like.
-
-### Configuring your domain for your Digital Ocean Droplet
-
-Once you've registered your domain you'll need to configure it to use Digital Ocean for DNS. The following steps are done on the Gandi website.
-
-- Click Domain on the left panel
-- Click the domain you're going to use for Urbit
-- Click "Gandi's LiveDNS" under Nameservers in the Domain configuration section of the overview page
-- Click Change
-- Click External
-- Add the Digital Ocean nameservers:
-  - `ns1.digitalocean.com`
-  - `ns2.digitalocean.com`
-  - `ns3.digitalocean.com`
-- Save the change.
-- It can take 12-24 hours for this change to propagate.
-- Now that you've updated the DNS records you can add the domain to your droplet.
-- Back on the DO site, click Networking from the left panel and then enter the domain you registered.
-- Click on that domain and add an A record that directs to the IP of your droplet (found on your droplet's page).
 
 ## Links and Misc.
 
