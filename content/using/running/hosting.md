@@ -57,7 +57,7 @@ following command in your terminal, replacing `riclen-tinlyr` with the name of
 your ship (sans the leading `~`):
 
 ```bash
-SHIP="riclen-tinlyr" bash -c 'ssh-keygen -q -N "" -C $SHIP -f ~/.ssh/riclen-tinlyr && cat ~/.ssh/$SHIP.pub'
+SHIP="riclen-tinlyr" bash -c 'ssh-keygen -q -N "" -C $SHIP -f ~/.ssh/$SHIP && cat ~/.ssh/$SHIP.pub'
 ```
 
 It should spit out a long string of letters and numbers beginning with
@@ -70,14 +70,8 @@ name.
 Click "User data" and paste the script below into the field provided. This
 will automatically configure the server and install necessary software.
 
-**Note you need to edit the `SHIP` variable at the top of the script, replacing
-`riclen-tinlyr` with your own ship name.**
-
 ```bash
 #!/bin/bash
-
-# replace riclen-tinlyr with your ship name (leave off leading ~)
-SHIP="riclen-tinlyr"
 
 # configure swap
 fallocate -l 2G /swapfile
@@ -94,22 +88,22 @@ ufw allow 34543/udp
 ufw enable
 
 # create and configure user
-useradd -s /bin/bash -d /home/$SHIP -m -G sudo $SHIP
-passwd -d $SHIP
-echo "$SHIP ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+useradd -s /bin/bash -d /home/pilot -m -G sudo pilot
+passwd -d pilot
+echo "pilot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # configure ssh keys for user
-mkdir /home/$SHIP/.ssh
-chmod 700 /home/$SHIP/.ssh
-cp /root/.ssh/authorized_keys /home/$SHIP/.ssh/authorized_keys
-chown -R $SHIP:$SHIP /home/$SHIP/.ssh
-chmod 600 /home/$SHIP/.ssh/authorized_keys
+mkdir /home/pilot/.ssh
+chmod 700 /home/pilot/.ssh
+cp /root/.ssh/authorized_keys /home/pilot/.ssh/authorized_keys
+chown -R pilot:pilot /home/pilot/.ssh
+chmod 600 /home/pilot/.ssh/authorized_keys
 
 # fetch and extract urbit binary
-wget -P /home/$SHIP --content-disposition https://urbit.org/install/linux64/latest 
-tar xzf /home/$SHIP/linux64.tgz --strip=1 -C /home/$SHIP
-rm /home/$SHIP/linux64.tgz
-chown $SHIP:$SHIP /home/$SHIP/urbit
+wget -P /home/pilot --content-disposition https://urbit.org/install/linux64/latest 
+tar xzf /home/pilot/linux64.tgz --strip=1 -C /home/pilot
+rm /home/pilot/linux64.tgz
+chown pilot:pilot /home/pilot/urbit
 
 # install necessary packages
 apt install -y debian-keyring debian-archive-keyring apt-transport-https
@@ -169,7 +163,7 @@ Once you hit "Save", the configuration is complete:
 
 ## SSH into droplet
 
-To make connecting simple, we can add the server to `~/.ssh/config`, so we don't
+To make connecting simple, we can add an alias `~/.ssh/config`, so we don't
 need to remember the details. Open `~/.ssh/config` in an editor (you may need to
 create it if the file doesn't exist), and add the following to the bottom of the
 file (replacing the ship name and IP address with your own):
@@ -177,20 +171,20 @@ file (replacing the ship name and IP address with your own):
 ```
 Host riclen-tinlyr
   HostName 161.35.148.247
-  User riclen-tinlyr
+  User pilot
   IdentityFile ~/.ssh/riclen-tinlyr
   IdentitiesOnly yes
 ```
 
-Once that's saved, let's connect to the droplet:
+Once that's saved, connect to the droplet:
 
 ```bash
 ssh riclen-tinlyr
 ```
 
 You'll be asked to accept the fingerprint, and then you'll be taken to the
-droplet's shell. In order to complete the domain name setup, we need to edit the
-config file of the `caddy` reverse-proxy web-server. Run the following commands
+droplet's shell. In order to complete the domain name setup, you need to edit the
+config file of the `caddy` reverse-proxy web-server. Run the following two commands
 in the droplet's shell (replacing the domain with the one you chose previously):
 
 ```bash
