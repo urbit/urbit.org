@@ -163,10 +163,10 @@ Once you hit "Save", the configuration is complete:
 
 ## SSH into droplet
 
-To make connecting simple, we can add an alias `~/.ssh/config`, so we don't
-need to remember the details. Open `~/.ssh/config` in an editor (you may need to
-create it if the file doesn't exist), and add the following to the bottom of the
-file (replacing the ship name and IP address with your own):
+To make connecting simple, we can add an alias to `~/.ssh/config`. Open
+`~/.ssh/config` in an editor (you may need to create it if the file doesn't
+exist), and add the following to the bottom of the file (replacing the ship name
+and IP address with your own):
 
 ```
 Host riclen-tinlyr
