@@ -43,11 +43,11 @@ sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 {% tab label="Windows" %}
 
 ```winbatch
-mkdir %USERPROFILE%\urbit
-cd %USERPROFILE%\urbit
-curl -JLO https://urbit.org/install/windows/latest
+mkdir ~\urbit
+cd ~\urbit
+curl.exe -JLO https://urbit.org/install/windows/latest
 tar zxvf .\windows.tgz --strip=1
-%USERPROFILE%\urbit\urbit
+~\urbit\urbit
 ```
 
 > Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
