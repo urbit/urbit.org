@@ -892,6 +892,6 @@
       "source": "/applications/~dister-dozzod-dalten/gora",
       "destination": "/applications/~dalten/gora",
       "permanent": true
-    },
+    }
   ]
 }
