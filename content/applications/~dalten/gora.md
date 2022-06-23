@@ -1,6 +1,6 @@
 +++
 title = "Gora - ピタゴラ装置"
-developer = "Dalten"
+developer = "~dalten"
 shortcode = "~mister-dozzod-dalten/gora"
 description = "A Proof of Attendance Protocol for Urbit"
 license = "MIT"

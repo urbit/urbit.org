@@ -29,8 +29,9 @@
       "permanent": true
     },
     {
-      "source": "/applications/~lomder-librun/ballot",
-      "destination": "/applications/~livdel-binmun-lomder-librun/ballot"
+      "source": "/applications/~livdel-binmun-lomder-librun/ballot",
+      "destination": "/applications/~lomder-librun/ballot",
+      "permanent": true
     },
     {
       "source": "/grants/grant-submission-guide",
@@ -871,6 +872,26 @@
       "source": "/docs/tutorials/advanced-azimuth-tools",
       "destination": "/docs/azimuth/advanced-azimuth-tools",
       "permanent": true
-    }
+    },
+    {
+      "source": "/applications/~dister-fabnev-hinmur/escape",
+      "destination": "/applications/~fabnev-hinmur/escape",
+      "permanent": true
+    },
+    {
+      "source": "/applications/~dister-fabnev-hinmur/handshake",
+      "destination": "/applications/~fabnev-hinmur/handshake",
+      "permanent": true
+    },
+    {
+      "source": "/applications/~dister-norsyr-torryn/canvas",
+      "destination": "/applications/~norsyr-torryn/canvas",
+      "permanent": true
+    },
+    {
+      "source": "/applications/~dister-dozzod-dalten/gora",
+      "destination": "/applications/~dalten/gora",
+      "permanent": true
+    },
   ]
 }
