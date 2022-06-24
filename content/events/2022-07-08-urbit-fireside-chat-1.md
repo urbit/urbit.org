@@ -4,10 +4,10 @@ starts = "2022-07-08T10:00:00"
 ends = "2022-07-08T11:00:00"
 timezone = "America/Los_Angeles"
 location = "Online Event"
-image = "https://interstellar.nyc3.digitaloceanspaces.com/battus-datsun/2022.6.24..19.57.01-FIRESIDE-CHAT.jpg"
+image = "https://storage.googleapis.com/media.urbit.org/site/events/fireside-chat-1.jpg"
 registration_url = "https://www.meetup.com/urbit-sf/events/286771848/"
 description = ""
-dark = false
+dark = true
 youtube = "3un5Otz6h3I"
 
 [[hosts]]
