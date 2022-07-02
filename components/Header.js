@@ -47,27 +47,7 @@ export default function Header(props) {
         // Large screen header
       }
       <nav className="items-center hidden md:flex">
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
-          href="/using"
-        >
-          Manual
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
-          href="/blog"
-        >
-          Blog
-        </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 type-ui"
-          href="/events"
-        >
-          Events
-        </ActiveLink>
+
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 text-green-400 type-ui button-text"
@@ -75,6 +55,15 @@ export default function Header(props) {
         >
           Get Started
         </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/using"
+        >
+          Manual
+        </ActiveLink>
+
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 type-ui"
@@ -82,6 +71,23 @@ export default function Header(props) {
         >
           FAQ
         </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/events"
+        >
+          Events
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 type-ui"
+          href="/blog"
+        >
+          Blog
+        </ActiveLink>
+        
       </nav>
 
       {
@@ -92,29 +98,35 @@ export default function Header(props) {
           <a className="font-semibold mb-4">Urbit</a>
         </Link>
         <Link href="https://urbit.org" passHref>
-          <a className="font-semibold mt-2">Urbit.org</a>
+          <a className="font-semibold mt-3">Urbit.org</a>
         </Link>
         <Link href="https://operators.urbit.org" passHref>
-          <a className="mt-2">Operators</a>
+          <a className="mt-3">Operators</a>
         </Link>
         <Link href="https://developers.urbit.org" passHref>
-          <a className="mt-2 mb-4">Developers</a>
+          <a className="mt-3 mb-6">Developers</a>
         </Link>
         <hr className="border-wall-200" />
+
         <ActiveLink
           currentPath={currentPath}
-          className="mt-4 mr-5 mb-4"
+          className="mr-5 mb-4 mt-6 text-green-400"
+          href="/getting-started"
+        >
+          Get Started
+        </ActiveLink>
+
+        <ActiveLink
+          currentPath={currentPath}
+          className="mr-5 mb-4"
           href="/manual"
         >
           Manual
         </ActiveLink>
-        <ActiveLink
-          currentPath={currentPath}
-          className="mr-5 mb-4"
-          href="/blog"
-        >
-          Blog
+        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
+          FAQ
         </ActiveLink>
+
         <ActiveLink
           currentPath={currentPath}
           className="mr-5 mb-4"
@@ -124,14 +136,12 @@ export default function Header(props) {
         </ActiveLink>
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 mb-4 text-green-400"
-          href="/getting-started"
+          className="mr-5 mb-4"
+          href="/blog"
         >
-          Get Started
+          Blog
         </ActiveLink>
-        <ActiveLink currentPath={currentPath} className="mr-5 mb-4" href="/faq">
-          FAQ
-        </ActiveLink>
+
       </MenuTray>
     </header>
   );

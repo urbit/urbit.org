@@ -31,7 +31,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
         {
           // Hero Statement
         }
-        <Section narrow>
+        <Section>
           <div>
             <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
           </div>
