@@ -11,7 +11,7 @@ dark = true
 
 [[hosts]]
 name = "Tacen Inc."
-patp = "~mister-todteg”
+patp = "~mister-todteg"
 
 +++
 
