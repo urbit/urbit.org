@@ -2,12 +2,13 @@
 title = "Reassembly: an unofficial urbit conference"
 starts = "2022-08-04T09:00:00"
 ends = "2022-08-06T18:00:00"
-timezone = "America/Mountain"
+timezone = "America/Phoenix"
 location = "In Person Event"
 image = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F306416609%2F547708747059%2F1%2Foriginal.20220621-150252?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=bcc27600d308fc2a4c126b8179498145"
 registration_url = "https://www.eventbrite.com/e/365968420397"
 description = "Join us this August 4-6, as we launch into the Urbit universe in Cheyenne, Wyoming!"
 dark = true
+darken_image = "true"
 
 [[hosts]]
 name = "Tacen Inc."
