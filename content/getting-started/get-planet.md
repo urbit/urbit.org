@@ -56,6 +56,7 @@ Here are a few of the places where you can buy planets:
     - [\_networked subject](https://subject.network)
     - [~mocbel house](https://mocbel.house)
     - [Wexpert Systems](https://wexpert.systems)
+    - [lanlyd](https://lanlyd.net/)
 {% /table %}
 
 {% callout %}
