@@ -134,7 +134,7 @@ On startup, urbit tries to bind to `localhost:80`. If you're already running som
 
 Once running, you can sign into your ship’s web interface from `http://localhost` (if bound to port `80`), `http://localhost:8080` (if bound to port `8080`), or `https://your-urbit.arvo.network` if you've set up DNS.
 
-## Moons {#moons}
+## Moons {% #moons %}
 
 Planets can spawn moons, which are conceptually meant for connected devices: phones, smart TVs, digital thermostats. The basic idea is that your planet runs permanently in a data center somewhere, while moons run on all your devices. Each planet can issue ~4 billion (`2^32`) moons.
 
@@ -178,21 +178,23 @@ To cycle the keys of a moon without a factory reset, run:
 
 You can then run `|rekey` on the moon with the key given by the above command as the argument.
 
-### Maintaining Moons Through A Breach {#restoring-moons}
+### Maintaining Moons Through A Breach {% #restoring-moons %}
 
 Moons are [always subordinate to the ship that issued them](/docs/glossary/moon). Their PKI is sent around the network by their parent planet/star/galaxy. As such, if the sponsor planet/star/galaxy of a moon breaches, other urbits on the network who were not aware of the moon prior to the breach (knew its PKI information) will not be able to reach the old moon. Moons can, however, be preserved over the breach of their sponsor and re-added to `jael`. The following guide assumes you are on `[life=n rift=1]` where `n` can be any life #. If you've previously breached your moon and want to preserve it, you'll need to modify the instructions to include setting the appropriate rift using `|moon-breach` from `hood`.
 
 To add an existing moon to `jael` on a breached planet, you'll need the following:
 
- - Your moon's current life # `+keys ~sampel-monler-dozzod-dozzod` (run on the moon) _and_;
- - Your moon's sponsor's understanding of your moon's current life (same command, run on the sponsor).
- - Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
- - Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
+- Your moon's current life # `+keys ~sampel-monler-dozzod-dozzod` (run on the moon) _and_;
+- Your moon's sponsor's understanding of your moon's current life (same command, run on the sponsor).
+- Your moon's existing keyfile or key-string (`@uw`) _or_ the result of `pub:ex:(nol:nu:crub:crypto .^(@uv %j /=vein=/<life # of moon, per moon, here>))` _and_;
+- Your moon's sponsor's understanding of your moon's existing public key `pass:.^([@ud pass=@uw ~] %j /=deed=/~sampel-monler-dozzod-dozzod/<life # of moon per sponsor here>)`.
 
 If you only have they keyfile or key-string from your moon's last boot, you'll need to derive the `pass` value from that using
+
 ```
 pub:ex:(nol:nu:crub:crypto key:(seed:jael:l (cue <your @uw keyfile contents or key-string contents here>)))
 ```
+
 This should produce a long `@ud`.
 
 Once you have all of the requisite elements, you can perform the following on the moon's sponsor:
@@ -203,9 +205,7 @@ Once you have all of the requisite elements, you can perform the following on th
 
 Eventually, the PKI will populate through the network w/ the correct life #, reconnecting your previously orphaned moon. You can speed this up by `|hi ~zod` and `|hi ~sampel-monler-dozzod-dozzod`-ing from the moon and sponsor, respectively (replace with the appropriate ship names).
 
-
-
-## Escaping A Sponsor {#escape}
+## Escaping A Sponsor {% #escape %}
 
 To use the network as a planet or star, you must be sponsored by an active star
 or galaxy, respectively. If your sponsor isn't suiting your needs, you can
@@ -218,7 +218,7 @@ escape to a different one. This can be done with
 You can check your ship's _life_ and _rift_ number by running `+keys our` in
 dojo. You can inspect another ship's life and rift number by running `+keys ~sampel-palnet`. For information on what life and rift are, see [Life and Rift](/docs/azimuth/life-and-rift).
 
-## DNS setup {#dns-setup}
+## DNS setup {% #dns-setup %}
 
 We have a system that lets you request a domain name for your ship in the form of `ship.arvo.network`, where `ship` is your ship's name minus the `~`. This allows users to access their ships remotely using Landscape, our graphical web interface. Stars and planets follow the same DNS request process, and galaxies have their own requirements. Moons and comets are not supported.
 

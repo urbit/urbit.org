@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import classNames from "classnames";
 
 export const TableOfContents = ({ staticPosition, noh3s }) => {
   const { nestedHeadings } = useHeadingsData(noh3s);
@@ -12,7 +13,9 @@ export const TableOfContents = ({ staticPosition, noh3s }) => {
       }
       style={{ top: "8rem", height: "calc(100vh - 16rem)" }}
     >
-      <Headings headings={nestedHeadings} activeId={activeId} />
+      <div className="relative after:fixed after:bg-gradient-to-t after:from-white after:via-white after:bottom-0 after:w-52 after:h-60 after:pointer-events-none">
+        <Headings headings={nestedHeadings} activeId={activeId} />
+      </div>
     </nav>
   );
 };
@@ -51,11 +54,19 @@ const useHeadingsData = (noh3s) => {
 };
 
 const Headings = ({ headings, activeId }) => (
-  <ul>
+  <ul
+    className={classNames({
+      hidden: headings.length === 1 && headings?.[0]?.items?.length === 0,
+    })}
+  >
     {headings.map((heading, index) => (
       <li key={heading.id}>
         <a
-          className={index === 0 ? "font-bold" : "font-medium text-sm"}
+          className={classNames({
+            "font-bold": index === 0,
+            "font-medium text-sm": index !== 0,
+            "text-green-400": heading.id === activeId && index !== 0,
+          })}
           href={`#${heading.id}`}
         >
           {heading.title}

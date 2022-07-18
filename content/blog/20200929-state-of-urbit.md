@@ -9,11 +9,7 @@ ship = "~ravmel-ropdyl"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg"
 +++
 
-<br>
-
 ![Grassy Knoll](https://storage.googleapis.com/media.urbit.org/site/posts/essays/state-of-urbit-1.jpg)
-
-<br>
 
 When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before. This has been our goal for years: to mature the system we’re building by becoming its first committed users. We knew that critical step toward Urbit’s maturity was being able to depend on it ourselves, but the system itself had to mature to the point that we could do that practically.
 

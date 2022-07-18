@@ -10,11 +10,7 @@ ship = "~nartes-fasrum"
 image = "https://media.urbit.org/site/posts/essays/help-the-environment.jpg"
 +++
 
-<br>
-
 ![A set of four sigils arranged & coloured to appear as various natural forms, above the ~sorwet sigil & the text "help the environment and help yourself"](https://media.urbit.org/site/posts/essays/help-the-environment.jpg)
-
-<br>
 
 _This post is the first in a series of digests centered on art produced within and about Urbit by a member of the community, ~nartes-fasrum. Monthly digests will be available within the Urbit Community group in Landscape, and will occasionally be compiled here on the blog to give you a sneak peek at some of what’s happening on the network. Enjoy! ~wolref-podlex_
 

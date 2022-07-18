@@ -7,10 +7,9 @@ tag = "additional"
 
 If you're a power user, you can run the Urbit virtual machine directly using the command line. Choose the code for your operating system and run the commands in your terminal.
 
-<div id="os" class="os">
-  <input type="radio" id="macos" name="os" checked>
-  <label for="macos">MacOS</label>
-  <div class="tab">
+{% tabs %}
+
+{% tab label="MacOS" %}
 
 ```bash
 mkdir ~/urbit
@@ -20,11 +19,9 @@ tar zxvf ./darwin.tgz --strip=1
 ~/urbit/urbit
 ```
 
-  </div>
+{% /tab %}
 
-  <input type="radio" id="linux" name="os">
-  <label for="linux">Linux</label>
-  <div class="tab">
+{% tab label="Linux" %}
 
 ```shell
 mkdir ~/urbit
@@ -41,11 +38,9 @@ sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 ```
 
-</div>
+{% /tab %}
 
-  <input type="radio" id="windows" name="os">
-  <label for="windows">Windows</label>
-  <div class="tab">
+{% tab label="Windows" %}
 
 ```winbatch
 mkdir %USERPROFILE%\urbit
@@ -57,8 +52,9 @@ tar zxvf .\windows.tgz --strip=1
 
 > Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
 
-</div>
-</div>
+{% /tab %}
+
+{% /tabs %}
 
 If successful, you will see a block of output beginning with the line:
 
@@ -66,7 +62,7 @@ If successful, you will see a block of output beginning with the line:
 Urbit: a personal server operating function
 ```
 
-### Booting a free identity {#comet}
+### Booting a free identity {% #comet %}
 
 There are two parts to Urbit: an **ID** and an **Operating System**.
 
@@ -134,7 +130,7 @@ At the moment, the most common way to use Urbit is by launching apps like Groups
 
 ## Next Steps
 
-### Updating your comet {#updating}
+### Updating your comet {% #updating %}
 
 Urbit comes with a recent release of the Urbit OS, but automatic updates of the `%base` desk (which contains the kernel of the OS) are not enabled by default for Comets. Many comets are used only once and thrown away, so it would be wasteful to update every single comet as soon as it boots. If you plan to use your comet for more than a quick test, you'll probably want to ensure you're running the latest version of the OS.
 
@@ -147,7 +143,7 @@ kiln: activated install into %base from [~samzod %kids]
 kiln: downloading update for %base from [~samzod %kids]
 ```
 
-### Read More about the Dojo {#the-dojo}
+### Read More about the Dojo {% #the-dojo %}
 
 The dojo is Urbit's command line. You can use it to control your ship, or to execute arbitrary code. Check out the links below for more information.
 
@@ -155,47 +151,10 @@ The dojo is Urbit's command line. You can use it to control your ship, or to exe
 - [Basic Hoon](/docs/tutorials/hoon/hoon-school/setup)
 - [Glossary Entry](/docs/glossary/dojo)
 
-### Purchase a Permanent Identity {#boot-your-planet}
+### Purchase a Permanent Identity {% #boot-your-planet %}
 
 You can continue using this comet indefinitely. There are currently few differences between using a comet-level identity and a planet-level one. However, some groups will not allow comets entry in order to maintain a certain level of quality, and changes may be made in the future that further devalue comets. They will always, however, be able to access the basic functions of the network.
 
 A comet also comes with a long and fairly unmemorable name whereas a planet has a short name and a "sigil" (avatar) associated with it that makes it more identifiable on the network. You may notice all this within the first few minutes of using Urbit.
 
 [For details of how to purchase a planet, visit this page](/getting-started/get-planet).
-
-<style>
-  .os {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .os label {
-    order: -1;
-    padding: .5rem;
-    min-width: 70px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .os input[type="radio"] {
-    display: none;
-  }
-  .os .tab {
-    display: none;
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  .os .tab p:first-child {
-    margin-top: 0;
-  }
-  .os .tab p:last-child {
-    margin-bottom: 0;
-  }
-  .os input[type='radio']:checked + label {
-    font-weight: bold;
-    background-color: rgba(244,243,241,1);
-    border-radius: 0.5em;
-  }
-  .os input[type='radio']:checked + label + .tab {
-    display: block;
-}
-</style>

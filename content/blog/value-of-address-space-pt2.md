@@ -31,7 +31,7 @@ There are 65,280 total stars on the network. In turn, each star is initialized w
 
 One would expect that in an efficient market the relative pricing of stars on one hand, and planets on the other hand would eventually align (so to speak). This may come to pass as the Urbit community increases education about Urbit, and as additional planet sellers and hosting providers enter the space.
 
-Finally, there are 4,294,901,760 (or ~2<sup>32</sup>) planets on the network. Planets currently trade largely in a range of $10 to $15. We expect planet prices to fluctuate from provider to provider as described in the previous post, based on the quality of services various providers offer. That said, it's worth noting that the cost to configure addresses for distribution is fairly static and this may act as something of a lower bound.
+Finally, there are 4,294,901,760 (or ~2^32^) planets on the network. Planets currently trade largely in a range of $10 to $15. We expect planet prices to fluctuate from provider to provider as described in the previous post, based on the quality of services various providers offer. That said, it's worth noting that the cost to configure addresses for distribution is fairly static and this may act as something of a lower bound.
 
 That said, we also anticipate that planet prices will be abstracted away from most purchasers, and will be included in bundled annual packages of hosting and data routing services. For this reason, infrastructure service providers (i.e. hosting providers) will likely be the best positioned parties to capture value from planet distribution.
 

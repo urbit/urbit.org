@@ -1,9 +1,10 @@
 +++
 title = "Privacy Policy"
-template = "page_indiced.html"
+[extra]
+index = "true"
 +++
 
-## Scope of this Privacy Policy {#scope}
+## Scope of this Privacy Policy {% #scope %}
 
 Tlon Corporation ('Tlon,' 'we,' 'our,' and/or 'us') values the privacy of individuals who use Urbit software, our websites, and related services (collectively, our 'Services'). This privacy policy (the 'Privacy Policy') explains how we collect, use, and share information from users of our Services ('Users'). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. Beyond the Privacy Policy, your use of our Services is also subject to our Terms of Service.
 
@@ -47,7 +48,7 @@ _On the Blockchain._ If you purchase address space, we may publish information a
 
 _Vendors and Service Providers._ We may share any information we receive with vendors and service providers retained in connection with the provision of the Service.
 
-_Analytics Partners._ We use analytics services such as Google Analytics to collect and process certain analytics data. These services may also collect information regarding your use of other websites, apps, and online resources. You can learn about Google's practices by going to <a href="https://www.google.com/policies/privacy/partners/">https://www.google.com/policies/privacy/partners/</a>, and opt out of them by downloading the Google Analytics opt-out browser add-on, available at <a href="https://tools.google.com/dlpage/gaoptout">https://tools.google.com/dlpage/gaoptout</a>.
+_Analytics Partners._ We use analytics services such as Google Analytics to collect and process certain analytics data. These services may also collect information regarding your use of other websites, apps, and online resources. You can learn about Google's practices by going to [https://www.google.com/policies/privacy/partners/](https://www.google.com/policies/privacy/partners/), and opt out of them by downloading the Google Analytics opt-out browser add-on, available at [https://tools.google.com/dlpage/gaoptout](https://tools.google.com/dlpage/gaoptout).
 
 _As Required By Law and Similar Disclosures._ We may access, preserve, and disclose your information if we believe doing so is required or appropriate to (a) comply with law enforcement requests and legal process, such as a court order or subpoena; (b) respond to your requests; or (c) protect your, our or others' rights, property, or safety. For the avoidance of doubt, the disclosure of your information may occur if you post any objectionable content on or through the Service.
 

@@ -2,11 +2,14 @@ import Head from "next/head";
 import Meta from "../components/Meta";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Container from "../components/Container";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import Section from "../components/Section";
 import GrantPreview from "../components/GrantPreview";
 import JoinGroup from "../components/JoinGroup";
 import omit from "lodash.omit";
@@ -119,8 +122,9 @@ export default function Grants({ posts, categories, types, search }) {
             "Contribute to the Urbit project while earning address space.",
         })}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         {
           // Heading and Introduction
         }

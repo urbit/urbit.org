@@ -9,11 +9,7 @@ ship = "~rovnys-ricfer + ~poldec-tonteg"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/20201218-audit.png"
 +++
 
-<br>
-
 ![audit](https://storage.googleapis.com/media.urbit.org/site/posts/essays/20201218-audit.png)
-
-<br>
 
 The security firm Leviathan has now finished their initial audit of the security of Urbit's Ames network protocol. In addition to their review of Ames, we also asked them to identify any other issues in order to help guide further development.
 

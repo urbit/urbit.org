@@ -2,13 +2,14 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPage } from "../../lib/lib";
 import { join } from "path";
-import Meta from "../../components/Meta";
 import CopyLink from "../../components/CopyLink";
-import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -134,11 +135,14 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/groups", params.group?.join("/") || "/")
   ) || { data: {}, content: "" };
 
+  const markdown =
+    content !== ""
+      ? JSON.stringify(Markdown.parse({ post: { content } }))
+      : null;
+
   if (!data.title) {
     data = { title: params.group?.join("/"), description: "A group on Urbit." };
   }
-
-  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

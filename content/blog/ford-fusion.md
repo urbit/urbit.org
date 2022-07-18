@@ -9,11 +9,7 @@ ship = "~rovnys-ricfer"
 image = "https://media.urbit.org/site/posts/essays/ford-fusion.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/ford-fusion.png">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/ford-fusion.png)
 
 ## Overview and Rationale
 

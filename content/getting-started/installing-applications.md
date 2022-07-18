@@ -37,5 +37,5 @@ After selecting the “picture” app, a pane will open that shows some informat
 Soon you’ll have a new application tile on your home screen that will let you upload and display a picture to your home screen.
 
 ![](https://media.urbit.org/site/additional-guides/Installing-apps-3.jpg)
-<br><br>
+
 ![](https://media.urbit.org/site/additional-guides/Installing-apps-4.jpg)

@@ -9,11 +9,7 @@ ship = "~pindet-timmut"
 image = "https://media.urbit.org/site/posts/essays/valleys.jpg"
 +++
 
-<br>
-
 ![valleys](https://media.urbit.org/site/posts/essays/valleys.jpg)
-
-<br>
 
 ## The Storm before the Calm
 
@@ -27,7 +23,7 @@ Hang on. An AI? Harvesting my data? Spying on me? Flooding me with spam? This is
 
 > Replicants are like any other machine - they're either a benefit or a hazard. If they're a benefit, it's not my problem.
 >
-> <cite>Rick Deckard</cite>
+> **Rick Deckard**
 
 Let's start with the benefits. Eliza is a simple chatbot. She was made to collect feedback on Landscape. She asks direct questions about peoples' usage of Urbit, records any responses, and reports them to her managers at Tlon. She'll also provide timely advice and information to ships kind enough to chat with her. She'll begin reaching out to ships via DM in the coming month. If you don't want to, just say no, and you'll never hear from her again.
 

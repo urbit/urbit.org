@@ -33,7 +33,7 @@ The file should strip the content out of HTML and save it into the Markdown form
 
 - Do not begin work until your request to claim this bounty is accepted. We will assign a designer to work with you on the interface.
 - Do not begin work until your request to claim this bounty is accepted. We will assign a designer to work with you on the interface.
-- Submit your code as a PR to the [urbit](github.com/urbit/urbit] repository.
+- Submit your code as a PR to the [urbit](github.com/urbit/urbit) repository.
 - You have 90 days from the time of approval to complete this bounty.
 
 ## Milestones

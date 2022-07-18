@@ -15,10 +15,6 @@ issues, and more.
 An overview of common commands and useful general knowledge for operating your
 ship.
 
-### [Messaging](/using/os/messaging)
-
-Using chat from its command-line interface.
-
 ### [Configuring S3 Storage](/using/os/s3)
 
 How to set up S3 storage so you can share files in Landscape.

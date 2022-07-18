@@ -1,26 +1,25 @@
-import { useRouter } from "next/router";
 import { DateTime } from "luxon";
 import {
   getPostBySlug,
   getAllPosts,
   getNextPost,
   getPreviousPost,
-  formatDate,
-  formatTime,
-  formatTimeZone,
   generateDisplayDate,
   generateRealtimeDate,
 } from "../../lib/lib";
 import Head from "next/head";
 import Meta from "../../components/Meta";
-import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
 import Contact from "../../components/Contact";
 import EventPreview from "../../components/EventPreview";
-import Section from "../../components/Section";
 import TwoUp from "../../components/TwoUp";
 
 import {
@@ -29,14 +28,13 @@ import {
   ShowOrHide,
   DateRange,
 } from "../../components/Snippets";
-import { decode } from "html-entities";
 import { eventKeys } from "../../lib/constants";
 
 export default function Event({
   event,
+  markdown,
   nextEvent,
   previousEvent,
-  markdown,
   search,
 }) {
   const starts = generateDisplayDate(event.starts, event.timezone);
@@ -53,8 +51,9 @@ export default function Event({
         <title>{event.title} • Events • urbit.org</title>
         {Meta(event)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section narrow short>
           <h1>{event.title}</h1>
           <h3 className="mt-6">{event.description}</h3>
@@ -121,10 +120,7 @@ export default function Event({
         ) : null}
 
         <Section short narrow className="markdown">
-          <article
-            className="pt-12 w-full"
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -161,7 +157,7 @@ export async function getStaticProps({ params }) {
 
   const event = getPostBySlug(params.slug, eventKeys, "events");
 
-  const markdown = await Markdown({ post: event });
+  const markdown = JSON.stringify(Markdown.parse({ post: event }));
 
   return {
     props: { event, markdown, nextEvent, previousEvent },

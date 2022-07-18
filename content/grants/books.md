@@ -11,7 +11,7 @@ image = ""
 description = "Books is an application for managing your crypto wallets, transactions, and counterparties. It allows you to add your wallet and others' wallets, track balances and transactions, and add private annotations to all of the above."
 reward = "5-7 stars"
 assignee = "Quartus"
-id = ""
+grant_id = "B0134"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0134&prefill_Grant+Name=Books%3A%20address%20and%20transaction%20manager"
 +++

@@ -9,11 +9,7 @@ ship = "~bacbec-lormur"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin-wall.jpeg"
 +++
 
-<br>
-
 ![berlin-wall](https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin-wall.jpeg)
-
-<br>
 
 > The following fictional passage, from a book being written in an Urbit Group called “the Aleph,” sketches out a dismal future for the human race. As an item of speculative fiction, the piece is not what one might call original. Anyone could have come up with these ideas. In fact, several already have. The Matrix is an obvious antecedent. Vonnegut isn’t far behind either. And the treacly humanism lodged beneath the bitter humor resembles nothing so much as the work of that beau monde satirist, George Saunders.
 >
@@ -24,8 +20,6 @@ image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/berlin
 > The philosopher-cum-internet comedian Slavoj Zizek likes to point out that no one was really expecting the Soviet Union to collapse in 1989. In fact, the average Soviet dissident wasn’t even gunning for it. He was haggling over small reforms, pushing to get the less corrupt politicians to the top, just going about his day eating or opening a window or walking dully along. Then, kaboom. Collapse. No more USSR.
 >
 > Then as now, the unexpected is more likely to occur than most would believe. One thing is not only possible, but an established fact: A brand new digital infrastructure is slowly, quietly being built. While U.S. political parties haggle over $1,400 disbursements for citizens, the rules of global finance are being re-written in code. While pundits debate the merits of Dr. Seuss’s lesser known titles, a global shift away from traditional publishing is gaining steam. And while users and social apps themselves pop up and down like whack-a-mole, folks are putting down roots with permanent peer-to-peer digital identities. If you’re anything like an optimist, you’ll probably want to get on Urbit ASAP and put down your own.
-
-<br>
 
 The date is January 1, 2050. The place, New York City. The vibe...subdued. Back in 2020, you made a note to yourself to take stock of the world around you here at the half-century mark. And now the time has come. What do you find? The air quality is a bit worse, the bad parts of town are a bit more dilapidated, the Knicks are still terrible—all in all, from the outside at least, not much has changed from 30 years ago. Today you wake up groggy on your self-adjusting Smart Bed (Smart Bed Never Sleeps), you make yourself a steaming pot of coffee (locally sourced, delivered within the half-hour by a drone, now that you’ve got Titicaca Prime), you shower and get ready for work.
 

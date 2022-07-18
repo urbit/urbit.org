@@ -1,6 +1,6 @@
 +++
 title = "Developer Call: P2P Versioned Networking"
-ends = "2021-05-14T01:00:00.000-07:00"
+ends = "2021-05-14T13:00:00.000-07:00"
 location = "Online Event"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/278052029/"

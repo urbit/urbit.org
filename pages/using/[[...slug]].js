@@ -5,13 +5,11 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import classnames from "classnames";
 import { join } from "path";
-import { getDocs, formatDate, getPage } from "../../lib/lib";
-import Markdown from "../../components/Markdown";
+import { getPage } from "../../lib/lib";
+import { Markdown } from "foundation-design-system";
 import ContentArea from "../../components/ContentArea";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../components/DocsSidebar";
 import UsingTree from "../../cache/using.json";
-
-import { decode } from "html-entities";
 
 const breadcrumbs = (posts, paths) => {
   const results = [
@@ -117,9 +115,7 @@ export default function UsingLayout({ posts, data, params, search, markdown }) {
           params={params}
         >
           <div className="markdown">
-            <article
-              dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-            ></article>
+            <Markdown.render content={JSON.parse(markdown)} />
           </div>
         </ContentArea>
       </div>
@@ -134,7 +130,7 @@ export async function getStaticProps({ params }) {
     join(process.cwd(), "content/using", params.slug?.join("/") || "/")
   );
 
-  const markdown = await Markdown({ post: { content: content } });
+  const markdown = JSON.stringify(Markdown.parse({ post: { content } }));
 
   return { props: { posts, data, markdown, params } };
 }

@@ -121,7 +121,7 @@ And that's it! If you'd like to know how things will be changing for
 [stars](#stars), what goes into [setting up a roller](#rollers), and additional
 [technical details](#technical), read on.
 
-### Changes to stars {#stars}
+### Changes to stars {% #stars %}
 
 Both planets and stars will be able to move to layer 2.
 [Galaxies](/docs/glossary/galaxy) must remain on layer 1 for technical
@@ -148,7 +148,7 @@ moving ownership to layer 2, this will be a one-way journey for now. Planets
 spawned before moving the spawn proxy to layer 2 will remain on layer 1, but
 from then on, all planets spawned by that star will live on layer 2. Finally, stars in this second mode may transition to the first mode, but not vice versa.
 
-### Creating a roller {#rollers}
+### Creating a roller {% #rollers %}
 
 ![gasprices](https://media.urbit.org/site/posts/essays/gasprices.jpeg)
 
@@ -182,7 +182,7 @@ making a couple minor alterations:
 - Galaxies and their proxies cannot be deposited to layer 2.
   Some other minor details are yet to be worked out, but again, nothing will change for those who wish to remain on layer 1.
 
-### Technical details {#technical}
+### Technical details {% #technical %}
 
 What's really going on behind the scenes here? Briefly, only the data of the Urbit ID transactions will be posted on-chain, while computation and state storage will now happen on your ship.
 
@@ -203,7 +203,7 @@ blockchain, rather than the EVM.
 Since [Urbit OS](/docs/glossary/arvo) is deterministic, and Hoon has some nice formal
 properties, it turns out to be a great language for writing smart contracts. Thus we are effectively swapping the Ethereum smart contract with a “Hoon smart contract” run locally on your ship.
 
-#### Further Resources {#resources}
+#### Further Resources {% #resources %}
 
 We want to keep this post brief and non-technical, so that's all we'll say about
 it for now. To find out more, you have a few directions to go on. We held a

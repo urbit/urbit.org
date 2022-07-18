@@ -9,11 +9,7 @@ ship = "~simfur-ritwed"
 image = "https://media.urbit.org/site/posts/essays/missing-middle.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/missing-middle.png">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/missing-middle.png)
 
 The promise of social technology is that we can discover more friends; _specifically, people more similar to us_ than we previously had access to. The means by which we do so, the methods of collaboration, the quality of connected experiences; these factors matter, but they are marginal considerations compared to the basic offering of an expanded choice of connections.
 

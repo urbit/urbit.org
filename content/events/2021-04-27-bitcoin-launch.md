@@ -8,6 +8,7 @@ youtube = "_aRnfacZPto"
 description = "Bitcoin is coming to Urbit! With the upcoming release of the Bitcoin Wallet, you will be able to pay Urbit ships directly with BTC."
 timezone = "America/Los_Angeles"
 starts = "2021-04-27T20:00:00.000-07:00"
+dark = true
 
 [[hosts]]
 name = "Urbit Foundation"

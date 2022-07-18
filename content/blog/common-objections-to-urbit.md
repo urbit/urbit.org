@@ -40,7 +40,7 @@ Here's our list right now:
 _"We choose to go to the moon, not because it is easy, but because it is hard."_
 — [John F. Kennedy](https://www.youtube.com/watch?v=g25G1M4EXrQ)
 
-## <a name="prime"></a>Urbit is not ready for prime time.
+## Urbit is not ready for prime time. {% #prime %}
 
 _TLDR_: we agree.
 
@@ -68,7 +68,7 @@ maintained or stabilized by a mad auteur. Our primary goal today
 is expanding the number of people who understand Urbit, and we
 expect these pioneers to participate in technical governance.
 
-## <a name="jets"></a>Nock jets are a total hoax.
+## Nock jets are a total hoax. {% #jets %}
 
 _TLDR_: all of computing is a hoax. You can't compare a hoax
 to nothing. You can only compare it to all the other hoaxes.
@@ -149,7 +149,7 @@ state. The way to resolve this conflict is for the current state
 to win, and the event history to be discarded -- not abnormal
 anyway. See the next question.
 
-## <a name="log"></a>Urbit needs an infinitely extending packet/event.
+## Urbit needs an infinitely extending packet/event. {% #log %}
 
 _TLDR_: no, it doesn't. Urbit can prune the log.
 
@@ -166,7 +166,7 @@ checkpoint. Our present implementation doesn't provide a way to
 prune the event log. But that's just a missing feature. We have
 one or two of those!
 
-## <a name="scam"></a>Urbit is a total scamcoin. It's 100% premined.
+## Urbit is a total scamcoin. It's 100% premined. {% #scam %}
 
 _TLDR_: yeah. But at least it's not the DAO.
 
@@ -241,7 +241,7 @@ seem to have unexpected centripetal qualities, producing
 unanticipated concentrations of centralized hashpower. See the
 next objection.
 
-## <a name="gov"></a>Urbit isn't even really decentralized! It has a government!
+## Urbit isn't even really decentralized! It has a government! {% #gov %}
 
 _TLDR_: it's technically impossible for Urbit to be
 decentralized at this stage of its life. Urbit is designed to
@@ -317,7 +317,7 @@ at best, and a hoax at worst. And of course, no one can DAO us
 Among other things, we check it into GitHub. GitHub is not a
 blockchain -- but still, good luck with that.
 
-## <a name="sand"></a>Sandstorm/IPFS/Ethereum is way ahead of Urbit.
+## Sandstorm/IPFS/Ethereum is way ahead of Urbit. {% #sand %}
 
 In general, web3 (next distributed web) solutions don't compete
 with each other. They support each other. Concretely, they are
@@ -362,7 +362,7 @@ expressive power; but identity is optimal for the UI of the
 common case. We'd need to see the Powerbox, Sandstorm's UI, more
 fully fleshed out to understand its UI approach better.
 
-## <a name="planet"></a>Urbit doesn't have enough planets for every human
+## Urbit doesn't have enough planets for every human {% #planet %}
 
 A 32-bit planet is a tool, not a toy. Like a car, it's a device
 for a responsible and independent adult. There aren't 4 billion
@@ -388,7 +388,7 @@ social network social.
 There is always a tradeoff between free speech and free beer.
 Urbit will always choose free speech.
 
-## <a name="pwned"></a>Cloud computing is inherently non-private.
+## Cloud computing is inherently non-private. {% #pwned %}
 
 _TLDR_: a general-purpose cloud computer is much, much more
 private than a special-purpose cloud computer. In general, a
@@ -430,7 +430,7 @@ course, since Urbit is formally specified, it's trivially
 portable. In fact, one strategy against sovereign adversaries
 may be continuous rotation between hosts, like an MX missile.
 
-## <a name="code"></a>Urbit will never be able to call any existing code.
+## Urbit will never be able to call any existing code. {% #code %}
 
 _TLDR_: neither will Javascript. And dear Unix, the browser
 does not miss interacting with your `$LD_LIBRARY_PATH` at all.
@@ -444,7 +444,7 @@ When in doubt, remember that Urbit is "the browser for the server
 side." It plays by the same general rules. Isolation means
 isolation.
 
-## <a name="weird"></a>There's no way Urbit will ever be adopted. It's too weird.
+## There's no way Urbit will ever be adopted. It's too weird. {% #weird %}
 
 _TLDR_: Urbit adoption is designed to be driven by ordinary end
 users. Urbit isn't ready for ordinary end users yet. We're
@@ -484,7 +484,7 @@ Urbit only gets adopted if it's useful as a personal server for
 human beings -- most of whom won't be Hoon programmers, or
 programmers at all.
 
-## <a name="program"></a>Hoon is too weird. No one will be able to program in it.
+## Hoon is too weird. No one will be able to program in it. {% #program %}
 
 _TLDR_: Hoon is ridiculously simple. Our documentation and
 tooling are just immature.
@@ -523,7 +523,7 @@ Yes, we know: Hoon remains quite hard to learn. Again, we have
 no reason to think this problem isn't solvable. Public
 enlightenment remains our main priority.
 
-## <a name="stuck"></a>Urbit programmers are stuck with Hoon.
+## Urbit programmers are stuck with Hoon. {% #stuck %}
 
 _TLDR_: patience, grasshopper.
 
@@ -534,7 +534,7 @@ write an interpreter for that language in Hoon. Second, jet that intepreter func
 It is not clear that Javascript is _quite_ well-defined enough
 for this treatment. But Lua probably is.
 
-## <a name="user"></a>Ordinary users will never be able to manage an Urbit server.
+## Ordinary users will never be able to manage an Urbit server. {% #user %}
 
 _TLDR_: Urbit's technical simplicity has always been designed
 to drive human usability. But the polish is the last thing that
@@ -581,7 +581,7 @@ a general-purpose computer. Computing isn't scary or dangerous.
 Unix and the Internet are scary and dangerous. That's fine for
 an industrial tool, but not a personal tool.
 
-## <a name="killer"></a>Urbit has no killer app.
+## Urbit has no killer app. {% #killer %}
 
 _TLDR_: the killer app is personal API aggregation.
 
@@ -646,7 +646,7 @@ Stateful, self-updating, generic API aggregators with FUSE
 integration, also integrated with a reactive web server, are
 rarer.
 
-## <a name="horse"></a> Urbit is sniffed at by Houyhnhyms.
+## Urbit is sniffed at by Houyhnhyms. {% #horse %}
 
 It's difficult to categorize [this awesome
 essay](http://ngnghm.github.io/blog/2016/06/11/chapter-10-houyhnhnms-vs-martians/)

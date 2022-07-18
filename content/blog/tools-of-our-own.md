@@ -9,15 +9,11 @@ ship = "~haddef-sigwen"
 image = "https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-1.png)
 
 > People need only not to obtain things, they need above all the freedom to make things among which they can live, or give shape to them according to their own tastes, and to put them to use in caring for and about others.
 >
-> <cite>Ivan Illich, <em>Tools for Conviviality</em></cite>
+> **Ivan Illich, *Tools for Conviviality***
 
 One of the recent ways we've come to describe the mission of the Urbit project is to give communities [the power to shape, or evolve, their digital environments](https://urbit.org/blog/urbit-is-for-communities/). Of course, like many of our definitions, it requires some background to really contextualize the claim. When I describe this particular statement to people, they often ask, "What does that _mean_, though? What is a digital environment, and why would I need Urbit to do it?"
 
@@ -27,15 +23,13 @@ The [Rube Goldberg machine](https://en.wikipedia.org/wiki/Rube_Goldberg_machine)
 
 And it's nobody's distinct fault that the experience of aligning all these disparate services into a workflow is a skill in itself. It's a collective restriction that comes from the systems beneath.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png">
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-2.png)
 
 ### Systems as masters
 
 > If you don't understand a system you're using, you don't control it. If nobody understands the system, the system is in control.
 >
-> <cite>Philip Monk, <a href="https://urbit.org/blog/precepts/">Precepts</a></cite>
+> **Philip Monk, [Precepts](https://urbit.org/blog/precepts/)**
 
 If you asked any of the creators of the social tools we use today what their mission was, it would seem neutral, a public good. To "bring the world closer," to "make a more open and connected world," to "easily see what's happening in the world." Ignore the fact that the net effects of their products are far more mixed than their mission suggests: for many users, the tools themselves come second to the power the tools have in capturing their social graph.
 
@@ -53,15 +47,13 @@ And for productivity tools—for the personal activities we do every day—the s
 
 This is why hybrid products are born _and_ why massive enterprises are shifting toward subscription models for office software. With the [clearnet](<https://en.wikipedia.org/wiki/Clearnet_(networking)>), using our own computers for everyday tasks that extend outside themselves is not easy. It's way easier to sign into an enterprise's server farm for your persistent data storage and manipulation. In 2020, the prefab parts for the exoskeleton only come in "left arm, right leg" pairs, or you can just give up and plug straight into SkyNet.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png">
+![](https://media.urbit.org/site/posts/essays/tools-of-our-own-3.png)
 
 ### The collective body
 
 > “Autonomy” means that we make the **worlds that we are** grow.
 >
-> <cite>Tiqqun, <em>The Cybernetic Hypothesis</em>
+> **Tiqqun, *The Cybernetic Hypothesis*
 
 So why does this matter for us? Me and you and everyone we know? We put up with the cost all the time. But the limitations of our tools—on the vulnerable side of a power dynamic that, unbeknownst to everyone involved, functions as a catalyzed and increasingly accelerated system bringing out the worst in all of us—range from the everyday annoyances to a pervasive alienation, an information malaise.
 

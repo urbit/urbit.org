@@ -1,7 +1,5 @@
 import GatewayHeader from "./GatewayHeader";
-import Container from "../Container";
-import SingleColumn from "../SingleColumn";
-import Section from "../Section";
+import { Container, SingleColumn, Section } from "foundation-design-system";
 import Link from "next/link";
 
 const Gateway404 = ({ type }) => {

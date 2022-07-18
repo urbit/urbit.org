@@ -1,7 +1,6 @@
-import Section from "./Section";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import { TableOfContents } from "./TableOfContents";
+import { TableOfContents } from "foundation-design-system";
 
 export default function ContentArea(props) {
   const [shortcut, setShortcut] = useState("");
@@ -47,7 +46,9 @@ export default function ContentArea(props) {
         className="px-4 md:px-12 lg:px-24 pt-8 md:pt-10 lg:pt-16 flex flex-col w-full max-w-screen-xl max-h-screen h-screen overflow-y-scroll"
       >
         <div className="flex justify-between w-full items-center shrink-0">
-          <div className="type-ui text-wall-500">{props.breadcrumbs}</div>
+          <div className="font-semibold antialiased text-lg text-black">
+            {props.breadcrumbs}
+          </div>
           <div className="hidden md:block">
             <button
               onClick={(e) => {

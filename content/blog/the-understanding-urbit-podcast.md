@@ -9,9 +9,7 @@ ship = "~satsyt-sogleb"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/uu-podcast.png">
+![](https://media.urbit.org/site/posts/essays/uu-podcast.png)
 
 At the end of January, the team at Tlon invited me to spend some time at their San Francisco office and to create a podcast series about Urbit. The idea was to produce an interview-based series about the project told in the words of those working on it. In this modest goal, I think we were very successful. Beyond a transactional description, however, we captured a range of perspectives of the flaws in our current computing landscape and visions for how Urbit will alter it.
 

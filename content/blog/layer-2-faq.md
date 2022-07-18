@@ -3,7 +3,7 @@ title = "Layer 2 FAQ"
 date = "2022-03-01"
 description = "Answers to all your lingering L2 questions."
 [extra]
-image = "/images/l2-faq-artwork.jpg"
+image = "https://media.urbit.org/site/posts/essays/l2-faq-artwork.jpg"
 +++
 
 The launch of our [Layer 2](https://urbit.org/blog/layer-2-guides) was met with
@@ -45,7 +45,7 @@ you **do not** need ETH to boot Urbit. That Urbit ID is now yours, forever.
 Unsure whether you have been invited to claim a L2 or L1 planet? The quickest
 way to identify a L2 planet is if you used the below flow to claim.
 
-<img src="/images/planet-l2-claim.gif" style="max-height: 400px; width: auto; margin: 0 auto;"/>
+![](/images/planet-l2-claim.gif)
 
 For those with L1 planets, you can avoid future transaction fees by migrating
 your L1 planet to L2. Read the migration instructions
@@ -92,12 +92,12 @@ Bridge.
 
 There are a number of ways to host a planet in the cloud. Your options:
 
-- DIY:<br>
+- DIY:
   The most cost-effective method is [setting it up
   yourself](https://urbit.org/using/running/hosting), though this route requires
   some system administration, and troubleshooting if any issues arise.
 
-- Via a Hosting Provider:<br>
+- Via a Hosting Provider:
   The more “headache-free” option is paying for a
   hosting provider to take care of all these processes for you, plus support. The
   following service providers offer hosting (some include a free planet):

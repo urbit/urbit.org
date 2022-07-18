@@ -11,223 +11,142 @@ participant_range = "100+"
 
 Join this group on Urbit for event locations.
 
-<div class="box">
-
 ## Thursday, May 19, 2022
 
-<div class="entry">
+{% table %}
+-
+-
+---
+- 
+  **The Scrying Philosopher (Salon)**
 
-**The Scrying Philosopher (Salon)**
+  6PM
 
-6PM
+  Lower Manhattan ([RSVP](https://docs.google.com/forms/d/e/1FAIpQLSeY84O65omPNvc1ccfXEjBP4m7cTI_9EkB_sS_sYxH-bFLRUw/viewform?fbzx=-1938038749753340576) for location)
 
-Lower Manhattan ([RSVP](https://docs.google.com/forms/d/e/1FAIpQLSeY84O65omPNvc1ccfXEjBP4m7cTI_9EkB_sS_sYxH-bFLRUw/viewform?fbzx=-1938038749753340576) for location)
+  Contact: [`~lagrev-nocfep`](https://urbit.org/ids/~lagrev-nocfep)
+-
+  **Dimes Square (the play) Live!**
 
-Contact: [`~lagrev-nocfep`](https://urbit.org/ids/~lagrev-nocfep)
+  9PM
 
-</div>
-
-<div class="entry">
-
-**Dimes Square (the play) Live!**
-
-9PM
-
-<div class="blackout"></div>
-
-Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
-
-</div>
-
-</div>
-
-<div class="box">
-
+  Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
+{% /table %}
 ## Friday, May 20, 2022
 
-<div class="entry">
+{% table %}
+-
+-
+---
+- 
+  **Wet Brain Afternoon Tea**
 
-**Wet Brain Afternoon Tea**
+  TBA (PM)
 
-TBA (PM)
+  Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
+- 
+  **Mars Review of Books**
 
-<div class="blackout"></div>
+  Issue I Launch Party
 
-Contact: [`~napmer-rilnut`](https://urbit.org/ids/~napmer-rilnut)
+  9:30PM
 
-</div>
-
-<div class="entry">
-
-**Mars Review of Books**
-
-Issue I Launch Party
-
-9:30PM
-
-<div class="blackout"></div>
-
-Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
-
-</div>
-
-</div>
-
-<div class="box">
-
+  Contact: [`~librex-dozryc`](https://urbit.org/ids/~librex-dozryc)
+{% /table %}
 ## Saturday, May 21, 2022
 
-<div class="entry">
+{% table %}
+- 
+- 
+---
+- 
+  **The Combine DAO Launch Party**
 
-**The Combine DAO Launch Party**
+  Noon
 
-Noon
+  Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
+- 
+  **Tlon on the Private Island**
 
-<div class="blackout"></div>
+  3PM-8PM
 
-Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
+  Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
+---
+- 
+  **ERA 2 (Tlon Rave)**
 
-</div>
+  9PM-4AM
 
-<div class="entry">
+  Contact: [~dapryc-tilryn](https://urbit.org/ids/~dapryc-tilryn) or rsvp@tlon.io
+- 
+  **Tirrel Party**
 
-**Tlon on the Private Island**
+  Night Time
 
-3PM-8PM
+  Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
+---
+* **Sophon x Idolate x Dusko Peter Teal Party**
 
-<div class="blackout"></div>
+  9PM
 
-Contact: Christine or [rsvp@tlon.io](mailto:rsvp@tlon.io)
-
-</div>
-
-<div class="entry">
-
-**ERA 2 (Tlon Rave)**
-
-9PM-4AM
-
-<div class="blackout"></div>
-
-Contact: [~dapryc-tilryn](https://urbit.org/ids/~dapryc-tilryn) or rsvp@tlon.io
-
-</div>
-
-<div class="entry">
-
-**Tirrel Party**
-
-Night Time
-
-<div class="blackout"></div>
-
-Contact: [`~pindet-timmut`](https://urbit.org/ids/~pindet-timmut)
-
-</div>
-
-<div class="entry">
-
-**Sophon x Idolate x Dusko Peter Teal Party**
-
-9PM
-
-<div class="blackout"></div>
-
-Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
-
-</div>
-</div>
-
-<div class="box">
-
+  Contact: [`~tasset-norlux`](https://urbit.org/ids/~tasset-norlux)
+* 
+{% /table %}
 ## Sunday, May 22, 2022
 
-<div class="entry">
+{% table %}
+-
+-
+---
+- 
+  **Networked Spirituality (Holium)**
 
-**Networked Spirituality (Holium)**
+  11AM
 
-11AM
+  Contact: [`~fasnut-famden`](https://urbit.org/ids/~fasnut-famden)
+- 
+  **Informal Urmetica Lodge brunch**
 
-<div class="blackout"></div>
+  Noon
 
-Contact: [`~fasnut-famden`](https://urbit.org/ids/~fasnut-famden)
+  Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
+---
+- 
+  **Urmetica Initiation**
 
-</div>
+  2 PM
 
-<div class="entry">
+  Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
+- 
+  **Innocent Garden Party**
 
-**Informal Urmetica Lodge brunch**
+  5PM - 9PM
 
-Noon
+  Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
+---
+- 
+  **No Agency x Urbit**
 
-<div class="blackout"></div>
+  10PM
 
-Contact: [`~todset-partug`](https://urbit.org/ids/~todset-partug)
+  Contact: [`~marrys-sapbyt`](https://urbit.org/ids/~marrys-sapbyt) / rsvp@noagency.nyc
+- 
 
-</div>
-
-<div class="entry">
-
-**Urmetica Initiation**
-
-2 PM
-
-<div class="blackout"></div>
-
-Contact: [`~poldec-tonteg`](https://urbit.org/ids/~poldec-tonteg)
-
-</div>
-
-<div class="entry">
-
-**Innocent Garden Party**
-
-5PM - 9PM
-
-<div class="blackout"></div>
-
-Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
-
-</div>
-
-<div class="entry">
-
-**No Agency x Urbit**
-
-10PM
-
-<div class="blackout"></div>
-
-Contact: [`~marrys-sapbyt`](https://urbit.org/ids/~marrys-sapbyt) / rsvp@noagency.nyc
-
-</div>
-</div>
-<BR>
+{% /table %}
+ 
 <H2>EXTRA</H2>
 
-<div class="box">
-
 ## Monday, May 23, 2022
-
-<div class="entry">
 
 **Flatline Black Lake (Outskirts)**
 
 10AM
 
-<div class="blackout"></div>
-
 Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
-</div>
 
-</div>
-
-<div class="box">
 
 ## Thursday, May 26, 2022
-
-<div class="entry">
 
 **Merde!**
 
@@ -237,8 +156,6 @@ Contact: [`~hatryx-lastud`](https://urbit.org/ids/~hatryx-lastud)
 
 [Star for Auction](https://event.auctria.com/b9db22be-4245-42dc-8032-02275a0fea19/a780d600ec2e11e9ae081db830846aa5?2bd25550ec3411e98fdeb3a273cf08d8%2FcurrentPage=2&2bd25550ec3411e98fdeb3a273cf08d8%2FselectedItem=ed2b191c-ad38-4fc6-9cb5-eda5c87ffee5)
 
-</div>
-</div>
 
 <style>
 .box {

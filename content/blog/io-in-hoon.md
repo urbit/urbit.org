@@ -9,11 +9,7 @@ ship = "~wicdev-wisryt"
 image = "https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg"
 +++
 
-<br>
-
 ![canyon](https://media.urbit.org/site/posts/essays/zion-canyon-1.jpg)
-
-<br>
 
 Let's talk about IO in Urbit. I won't say much about how events and effects are processed by the runtime; it suffices to note that the runtime is a normal Unix program which (1) listens for various events, (2) passes them to Arvo (Urbit OS), and (3) processes the effects produced by Arvo. Instead, I’ll focus on how IO works from the perspective of Hoon programs, like Arvo or apps running on Arvo. But first, let's review IO paradigms in other languages.
 
@@ -29,7 +25,9 @@ Imperative languages (such as C and Python) perform IO by calling a function in 
 
 In this example and others to follow, the task will be to read a filename from the command line, read a URL out of that file, and fetch the contents at that URL.
 
-    output = fetchUrl(stripWhitespace(readFile(cliInput())))
+```
+output = fetchUrl(stripWhitespace(readFile(cliInput())))
+```
 
 For readability, intermediate variables would be a good idea, but nothing stops you from nesting IO this way.
 
@@ -37,9 +35,11 @@ For readability, intermediate variables would be a good idea, but nothing stops 
 
 Languages that use explicit monads for IO (such as Haskell) perform IO by running IO behind a bind operation, which I'll notate with `<-`. Thus, while you can't put IO _anywhere_, the general structure is a sequence of IO operations.
 
-    fileName <- cliInput()
-    url <- readFile(fileName)
-    output <- fetchUrl(stripWhitespace(url))
+```
+fileName <- cliInput()
+url <- readFile(fileName)
+output <- fetchUrl(stripWhitespace(url))
+```
 
 [Tackling the Awkward Squad](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mark.pdf) is the canonical description of monadic IO, and does a great job of explaining how the Haskell community decided to use this as their primary IO style.
 
@@ -47,22 +47,24 @@ Languages that use explicit monads for IO (such as Haskell) perform IO by runnin
 
 Languages that use explicit state machines for IO (such as Elm) perform IO by accepting events and producing a list of effects.
 
-    event :: Initialize
-           | CLIInput text
-           | FileInput text
-           | HTTPResponse body
-    effect :: CLIInput
-            | ReadFile fileName
-            | FetchUrl url
-            | Print text
-    main(event) {
-      switch event {
-        Initialize        -> [CLIInput ~]
-        CLIinput fileName -> [ReadFile fileName]
-        FileInput url     -> [FetchUrl stripWhitespace(url)]
-        HTTPResponse body -> [Print body]
-      }
-    }
+```
+event :: Initialize
+       | CLIInput text
+       | FileInput text
+       | HTTPResponse body
+effect :: CLIInput
+        | ReadFile fileName
+        | FetchUrl url
+        | Print text
+main(event) {
+  switch event {
+    Initialize        -> [CLIInput ~]
+    CLIinput fileName -> [ReadFile fileName]
+    FileInput url     -> [FetchUrl stripWhitespace(url)]
+    HTTPResponse body -> [Print body]
+  }
+}
+```
 
 The effects produced are not functions but data.
 
@@ -74,39 +76,45 @@ Let's look at another type of program: a simple HTTP server that you can give te
 
 Imperative:
 
-    text = "no text entered yet"
-    while (true)
-      cli = readCli()
-      if (cli != Null)
-        text = cli
-      request = readHttp()
-      if (request != Null)
-        respond(request,text)
+```
+text = "no text entered yet"
+while (true)
+  cli = readCli()
+  if (cli != Null)
+    text = cli
+  request = readHttp()
+  if (request != Null)
+    respond(request,text)
+```
 
 Monadic:
 
-    loop("no text entered yet")
+```
+loop("no text entered yet")
 
-    where:
+where:
 
-    loop :: text -> IO Null
-    loop =
-      input <- readInput()
-      switch input
-        CLIInput newText -> loop(newText)
-        HTTPRequest request ->
-          _ <- respond(request,text)
-          loop(text)
+loop :: text -> IO Null
+loop =
+  input <- readInput()
+  switch input
+    CLIInput newText -> loop(newText)
+    HTTPRequest request ->
+      _ <- respond(request,text)
+      loop(text)
+```
 
 State machine:
 
-    text = "no text entered yet"
-    main(text,event) {
-      switch event {
-        CLIInput newText    -> [newText, Null]
-        HTTPRequest request -> [text, HTTPResponse text]
-      }
-    }
+```
+text = "no text entered yet"
+main(text,event) {
+  switch event {
+    CLIInput newText    -> [newText, Null]
+    HTTPRequest request -> [text, HTTPResponse text]
+  }
+}
+```
 
 Again, note the response in the state machine is data, not a function.
 
@@ -158,16 +166,18 @@ However, Arvo is a single-level store — all of its state is permanent. This is
 
 Further, Arvo and the vanes rarely perform long sequences of IO. Generally, they do one thing and emit some effects, similar to the HTTP server example above. Sometimes they "pass through" a request. For example, the Eyre vane passes HTTP requests to userspace agents or threads. In this case, there is a sequence of IO, which in monadic code would be:
 
-    loop()
+```
+loop()
 
-    where:
+where:
 
-    loop =
-      request <- receiveRequest()
-      agent = lookupAgent(request)
-      response <- callAgent(agent, request)
-      _ <- sendResponse(request, response)
-      loop()
+loop =
+  request <- receiveRequest()
+  agent = lookupAgent(request)
+  response <- callAgent(agent, request)
+  _ <- sendResponse(request, response)
+  loop()
+```
 
 This is clear code to read, but it leaves open the question of how to respond during the callAgent() function. If another request comes in, can we handle it in parallel? If we need to upgrade ourselves before the agent responds, can we make sure to properly handle the response?
 
@@ -175,16 +185,18 @@ The naive solution in monadic code is to say that you can only handle one reques
 
 In a state machine, the naive solution is:
 
-    state :: (map request agent)
-    main(state, event) {
-      switch event {
-        HTTPRequest request ->
-          agent = lookupAgent(request)
-          [put(state, request, agent), CallAgent agent request]
-        AgentResponse request response ->
-          [del(state, request), HTTPRespond request response]
-      }
-    }
+```
+state :: (map request agent)
+main(state, event) {
+  switch event {
+    HTTPRequest request ->
+      agent = lookupAgent(request)
+      [put(state, request, agent), CallAgent agent request]
+    AgentResponse request response ->
+      [del(state, request), HTTPRespond request response]
+  }
+}
+```
 
 Upgrading this is trivial, since the state (map of requests to outstanding calls to agents) is explicit. It also trivially handles concurrent requests.
 
@@ -200,59 +212,63 @@ However, userspace sometimes needs to perform long sequences of IO. Let's look a
 
 Monadic:
 
-    topStories <- fetch(topStoriesUrl)
-    loop(topStories)
+```
+topStories <- fetch(topStoriesUrl)
+loop(topStories)
 
-    where:
+where:
 
-    loop :: topStories -> IO Null
-      if topStories is Null
-        return Null
-      comments <- retryLoop(5,head(topStories))
-      otherComments <- loop(tail(topStories))
-      append(comments,otherComments)
+loop :: topStories -> IO Null
+  if topStories is Null
+    return Null
+  comments <- retryLoop(5,head(topStories))
+  otherComments <- loop(tail(topStories))
+  append(comments,otherComments)
 
-    retryLoop :: [n story] -> IO Comments
-      comments <- fetchComments(story)
-      if comments is HTTPError:
-        if n == 0:
-          bail
-        else:
-          retryLoop(n-1, story)
+retryLoop :: [n story] -> IO Comments
+  comments <- fetchComments(story)
+  if comments is HTTPError:
+    if n == 0:
+      bail
+    else:
+      retryLoop(n-1, story)
+```
 
 State machine:
 
-    state :: Initial
-           | FetchingTop
-           | FetchingStory comments stories retries
-           | Done comments
+```
+state :: Initial
+       | FetchingTop
+       | FetchingStory comments stories retries
+       | Done comments
 
-    main(state, event) {
-      switch event {
-        Initialize ->
-          assert state == Initial
-          [FetchingTop, Fetch topStoriesUrl]
-        HttpResponse response ->
-          switch state {
-            FetchingTop ->
-              [FetchingStory Null stories 5, FetchComments head(stories)]
-            FetchingStory comments stories retries ->
-              if response is HTTPError:
-                if retries == 0:
-                  [Initial, Null]
-                else:
-                  [FetchingStory comments stories retries-1,
-                   FetchComments head(stories)]
-              else:
-                comments = append(response,comments)
-                if tail(stories) is Null:
-                  [Done comments, Null]
-                else:
-                  [FetchingStory append(comments,response) tail(stories) 5,
-                   FetchComments head(tail(stories))]
-          }
+main(state, event) {
+  switch event {
+    Initialize ->
+      assert state == Initial
+      [FetchingTop, Fetch topStoriesUrl]
+    HttpResponse response ->
+      switch state {
+        FetchingTop ->
+          [FetchingStory Null stories 5, FetchComments head(stories)]
+        FetchingStory comments stories retries ->
+          if response is HTTPError:
+            if retries == 0:
+              [Initial, Null]
+            else:
+              [FetchingStory comments stories retries-1,
+               FetchComments head(stories)]
+          else:
+            comments = append(response,comments)
+            if tail(stories) is Null:
+              [Done comments, Null]
+            else:
+              [FetchingStory append(comments,response) tail(stories) 5,
+               FetchComments head(tail(stories))]
       }
-    }
+  }
+}
+```
 
 With practice, the state machine version of this can be written correctly. However, (1) it's verbose, (2) the control flow jumps all over the place, and (3) in practice it's challenging to get exactly right. This is still a small example, and it gets much worse as the length and complexity of the IO sequence grows.
 
@@ -280,30 +296,34 @@ We're in a bit of a bind, though: Jael has to be a state machine. The solution i
 
 This thread has a definite purpose: given the most recent block number we already know about, fetch all the PKI transactions since then. The function signature is:
 
-    syncEthereum oldBlockNumber -> IO [newBlockNumber, newTxs]
+```
+syncEthereum oldBlockNumber -> IO [newBlockNumber, newTxs]
+```
 
 Jael runs this thread every five minutes and, if it succeeds, then we update our block number and PKI state. If the thread fails, gets stuck, or we need to upgrade it, we just kill the old thread and start a new one. Again, a few extra HTTP requests don’t matter.
 
 From Jael's perspective, it looks something like:
 
-    state :: State block txs outstandingThread
-    main(state,event) {
-      switch event {
-        Initialize -> [State 0 Null Null, StartTimer (now + five minutes)]
-        TimerFired ->
-          effects = If outstandingThread is Null
-                    then Null
-                    else [Kill outstandingThread]
-          newId = newThreadId()
-          [State txs newId,
-           append(effects,
-                  StartThread newId syncEthereum(block),
-                  StartTimer (now + five minutes))]
-        ThreadFinished Failure -> [State block txs Null, Null]
-        ThreadFinished Success newBlockNumber newTxs ->
-          [State newBlockNumber append(txs,newTxs) Null, Null]
-      }
-    }
+```
+state :: State block txs outstandingThread
+main(state,event) {
+  switch event {
+    Initialize -> [State 0 Null Null, StartTimer (now + five minutes)]
+    TimerFired ->
+      effects = If outstandingThread is Null
+                then Null
+                else [Kill outstandingThread]
+      newId = newThreadId()
+      [State txs newId,
+       append(effects,
+              StartThread newId syncEthereum(block),
+              StartTimer (now + five minutes))]
+    ThreadFinished Failure -> [State block txs Null, Null]
+    ThreadFinished Success newBlockNumber newTxs ->
+      [State newBlockNumber append(txs,newTxs) Null, Null]
+  }
+}
+```
 
 In other words, from Jael's perspective, it's just a single IO event that encapsulates arbitrarily complex IO in the thread. A single IO event is easy enough, and we can maintain all our permanency and robustness guarantees, because we know the thread will have one of three results: success, failure, or it hangs. If we set a timeout, hang becomes failure, so there's only two possible results: success or failure. If we handle both of those correctly, we've handled all the possible IO errors that could have occurred.
 

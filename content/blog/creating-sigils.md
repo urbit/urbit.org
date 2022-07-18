@@ -21,7 +21,7 @@ From a design standpoint, some of this is accomplished simply by having a system
 
 While the names are great, they’re not quite enough, especially in a rich interface. Each Urbit ID really needed some form of visual representation, image, or crest. A digital identity needs to be something you can really attach to, both yours and those that belong to your friends.
 
-There are 2<sup>32</sup> or 4.2 billion unique Urbit IDs. Clearly there’s no way that we were going to do this by hand. And purely algorithmic solutions can often produce disappointing, undifferentiated output.
+There are 2^32^ or 4.2 billion unique Urbit IDs. Clearly there’s no way that we were going to do this by hand. And purely algorithmic solutions can often produce disappointing, undifferentiated output.
 
 Regardless, we set out to tackle this problem. By the end of this process, every Urbit ID got its very own ‘sigil.’
 
@@ -75,7 +75,7 @@ Ultimately, we didn’t specifically draw on any of these influences very consci
 
 > _“Lev’s sigil appeared, strobing, as Netherton was getting out of the cab in Henrietta Street. “Yes?” Netherton asked.”_
 >
-> <cite>— William Gibson, The Peripheral</cite>
+> **— William Gibson, The Peripheral**
 
 Before we get to how we worked through the problem of actually designing these things, let’s talk about the problem of naming.
 

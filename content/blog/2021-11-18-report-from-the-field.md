@@ -26,7 +26,7 @@ I’ll try to abide by the Chatham rule in this post which is why no one is name
 
 New world energy -
 
-In the months leading up to Assembly we were totally focussed on using the event as a release date for a bunch of different lines of work. Coming out of that sprint, we didn’t really know what to expect. We wanted to make sure Urbit was ready for people to build on and that everything we were going to ship worked well. What we didn’t realize was just how emphatically people are <em>ready to build</em>.
+In the months leading up to Assembly we were totally focussed on using the event as a release date for a bunch of different lines of work. Coming out of that sprint, we didn’t really know what to expect. We wanted to make sure Urbit was ready for people to build on and that everything we were going to ship worked well. What we didn’t realize was just how emphatically people are *ready to build*.
 
 When I got up on stage on Friday night to welcome everyone I was really impressed by the room itself. It was packed with people who looked excited and motivated. The room just looked amazing. There were so many different kinds of people staring back at me. Some who I recognized from the earliest days of the project, and lots I had never seen before. I’ve been at my share of Urbit events, but this was something totally different.
 
@@ -34,7 +34,7 @@ We didn’t have much scheduled during Assembly. Most of the time was unstructur
 
 I spent the weekend of Assembly in almost constant conversation with people building Urbit hardware, experimenting with different kinds of Urbit software, and thinking about incredible things like a Nock chip. I talked to the lead architect of a CPU from the 90s, a former senior US government official, an editor of a well-known literary magazine, the inventor of a new display technology, musicians whose work I already admired, a fragrance designer, writers, and, of course, lots of engineers and designers from many different backgrounds. Data scientists, systems hackers, language nerds, someone running a successful currency. I watched these people get projects off the ground, start raising money, plan the future of Urbit hosting companies, and plan new features for Landscape. I saw a last-minute warehouse party come together that kept people talking well into the early hours of the morning.
 
-Where did these people come from? All over the place. They have this incredible <em>new world energy</em>. They understand immediately, intuitively that Urbit has the potential to be a foundation for the society they want to live in. I’ve never seen anything like it.
+Where did these people come from? All over the place. They have this incredible *new world energy*. They understand immediately, intuitively that Urbit has the potential to be a foundation for the society they want to live in. I’ve never seen anything like it.
 
 This energy seems to have come from the very practical work we do day-to-day: building Urbit, refining it, making it easier to use. The crowd at Assembly was somehow brought together by Urbit itself. It’s insanely exciting. It makes working on Urbit feel even more like a form of definite optimism. The system builds the community and the community builds the system.
 

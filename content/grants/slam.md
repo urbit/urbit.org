@@ -10,7 +10,7 @@ description = "Slam Action Game"
 reward = "3 stars"
 assignee = "~hanfel-dovned"
 champion = "~rabsef-bicrym"
-id = ""
+grant_id = "P0122"
 completed = false
 link = ""
 +++

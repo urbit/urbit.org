@@ -9,8 +9,6 @@ ship = "~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/intro-os1-landscape.png"
 +++
 
-<br>
-
 <video class="ba w-100" autoplay loop src="https://media.urbit.org/site/posts/essays/intro-os1.mov"></video>
 
 ## Introducing OS 1
@@ -39,7 +37,7 @@ Let’s walk through the features of OS 1 one by one to see what it’s like.
 
 ### Groups
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-groups.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-groups.png)
 
 The group is the main building block in OS 1. A group is simply a list of people that share a set of chat, links, and publish channels. A group is sort of like a super powerful group chat.
 
@@ -51,7 +49,7 @@ Let’s walk through each module and talk about what they can do.
 
 ### Chat
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-chat.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-chat.png)
 
 Chat is chat: a sequential list of messages meant for synchronous communication. There are already a million ways to chat — but Urbit chat differs in a few important ways.
 
@@ -69,7 +67,7 @@ Anyway, not everything can happen in a chat. Let’s keep moving.
 
 ### Links
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-links.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-links.png)
 
 Links is a bit like Hacker News or Reddit. It’s just a collection of links with comments. There’s no upvoting or sorting. We decided that with a small group it’s more about collecting references than deciding what’s most exciting — but permutations of Links could be a great area for contributors to experiment with.
 
@@ -79,7 +77,7 @@ We originally imagined links as evolving into more of a general-purpose ‘colle
 
 ### Publishing
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-publish1.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-publish1.png)
 
 Publishing is somewhere between a blog and a note-taking system. A Publish notebook is a list of markdown files with optional comments. A private Publish notebook is like a journal, a group notebook can be like a forum (with comments on) or a collaborative blog.
 
@@ -89,7 +87,7 @@ Publish, like all our other modules, is an interface to a generalized protocol f
 
 ### Modules
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-home.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-home.png)
 
 You’ll find a few other things on the home screen: a clock, the weather, and a simple command-line that we call the Dojo. These are system-wide utilities that aren’t group-specific.
 
@@ -97,7 +95,7 @@ The clock and weather tiles are simple indications of the state of the outside w
 
 ### Dojo
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-dojo.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-dojo.png)
 
 The Dojo gives you a quick way to see that, under the hood, Urbit OS is a powerful general-purpose system. The system hasn’t evolved to the point that our libraries, frameworks, and modules are polished to our standards. Since it’s still early, we can’t claim that it’s easy to develop on top of this platform. But we want it to become much easier.
 
@@ -133,7 +131,7 @@ As we expand the affordances of the system and add modules over the course of OS
 
 ### Becoming a homesteader
 
-<img class="ba" src="https://media.urbit.org/site/posts/essays/intro-os1-landscape.png">
+![](https://media.urbit.org/site/posts/essays/intro-os1-landscape.png)
 
 As a distributed team trying to stay connected, we like using OS 1 from day to day. We’d really like to hand-onboard a small group of like-minded groups of people who want to experiment with living on the fringe of the digital world. Toward this end, we started the community grants program.
 

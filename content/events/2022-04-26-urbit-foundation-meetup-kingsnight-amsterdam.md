@@ -9,7 +9,6 @@ registration_url = "https://www.meetup.com/urbit-sf/events/285233312/"
 description = "The Martian way of P2P social computing"
 dark = false
 
-
 [[hosts]]
 name = "Thomas"
 patp = "~dalweb-donfun"

@@ -3,11 +3,13 @@ import Link from "next/link";
 import { getPage } from "../../lib/lib";
 import { join } from "path";
 import CopyLink from "../../components/CopyLink";
-import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -75,7 +77,7 @@ const ApplicationPage = ({ data, markdown, params }) => {
               />
             )}
             {ob.isValidPatp(data?.developer || "") &&
-            data?.developer.length < 10 ? (
+            data?.developer.length <= 14 ? (
               <MetadataLink
                 title="Developer"
                 href={`/ids/${data.developer}`}
@@ -146,14 +148,17 @@ export const getServerSideProps = async ({ params, res }) => {
     )
   ) || { data: {}, content: "" };
 
+  const markdown =
+    content !== ""
+      ? JSON.stringify(Markdown.parse({ post: { content } }))
+      : null;
+
   if (!data.title) {
     data = {
       title: params.application?.join("/"),
       description: "An application on Urbit.",
     };
   }
-
-  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

@@ -18,7 +18,7 @@ If your issue is not covered here, please check out our [Troubleshooting Knowled
 - [Booting issues](#booting-issues)
 - [Crashing issues](#crashing-issues)
 
-## Best Practices {#best-practices}
+## Best Practices {% #best-practices %}
 
 An ounce of prevention is worth a pound of cure, so let's first go over some best practices to keep your ship in working order.
 
@@ -68,7 +68,7 @@ The command takes two arguments, and comes in the form of `|knob %error-tag %lev
 
 So for example, to silence all Ames packet-related errors, try `|knob %hole %hush`.
 
-### Perform a factory reset. {#factory-reset}
+### Perform a factory reset. {% #factory-reset %}
 
 A factory reset is when a ship tells the rest of the network to treat it as though the ship was just started for the first time again. Any ongoing or outstanding communication is forgotten and connections are reestablished from scratch.
 
@@ -88,7 +88,7 @@ regularly. You may do so by entering `|code %reset` into dojo. Doing this
 will prevent [Bridge](/docs/glossary/bridge) from being able to derive your code,
 meaning you will only be able to check it from dojo in the future.
 
-## Operation Issues {#operation-issues}
+## Operation Issues {% #operation-issues %}
 
 ### My urbit is frozen
 
@@ -104,7 +104,7 @@ This happens when your Dojo is waiting on a request, such as an HTTP request. Yo
 
 Since version `0.8.0`, changes no longer automatically sync between the Unix side (your pier) and your ship. To sync your file changes, you must run `|commit %desk` in your Dojo, where `%desk` is the desk you'd like to sync.
 
-## Connectivity Issues {#connectivity-issues}
+## Connectivity Issues {% #connectivity-issues %}
 
 ### I can't communicate with anyone
 
@@ -156,7 +156,7 @@ The above commands work if you have the wrong keys of other ships. If other ship
 This is usually the result of deleting your pier and starting your ship again. To fix
 this, you must perform a [factory reset](#factory-reset).
 
-## Booting Issues {#booting-issues}
+## Booting Issues {% #booting-issues %}
 
 ### My ship booted for the first time, but it turned into a comet instead of my planet or star
 
@@ -166,7 +166,7 @@ You may have used the wrong arguments when booting your ship for the first time.
 
 This means that you gave your development ship an invalid `@p`. So, you will get this error if you write, for example, `urbit -F zodzod` instead of `urbit -F zod`.
 
-## Crashing Issues {#crashing-issues}
+## Crashing Issues {% #crashing-issues %}
 
 ### I got a `bail` error and my ship crashed
 

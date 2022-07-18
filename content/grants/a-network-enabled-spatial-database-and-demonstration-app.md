@@ -68,14 +68,6 @@ This proposal has grown out of a previous bounty which called for Open Street Ma
 - Poast will be minimally landscape integrated, insofar is it can be launched from a tile and follow landscape styling.
 - For this milestone only a minimal set of features will be included to allow for creating, sharing, and viewing of Poastcards.
 
-##### Footnotes
-
-[^1]:
-    The very readable spec for geojson can be found here http://geojson.org. An overview of GeoJSON summarizing
-    it's advantages and limitations can be found here https://macwright.com/2015/03/23/geojson-second-bite.html
-
-[^2]: A mature spatial store would include spatial indexes and provide spatial queries, however for the objectives of this proposal basic spatial spatial documents storage and retrieval can be achieved without spatial indexing. Each spatial document is treated as its own entity, and has limited querying beyond fetching and inspecting the data structure. However this is enough that it can easily be splatted on a map. Spatial indexing of geometries (or parent features/feature collections), is a sensible next step, which would allow many more use cases but is not in scope for this proposal.
-[^3]: It may be possible to store styling info within the spatial documents, there are at least two GeoJSON style storage conventions, but nothing standardised (see discussion here https://gis.stackexchange.com/questions/22474/geojson-styling-information). Neither of these are part of the GeoJSON standard and appear to be not used much in the wild. There are formats such as KML and GeoPackage which have styling support, but these are also more complex formats.
 
 ##### About Me
 
@@ -95,3 +87,8 @@ A spatial store, spatial types, simple demo landscape app
 2 stars
 A network enabled spatial store, for sharing spatial data in urbit.
 A rich demostration app, for sharing spatial data, images and text.
+
+
+[^1]: The very readable spec for geojson can be found here http://geojson.org. An overview of GeoJSON summarizing its advantages and limitations can be found here https://macwright.com/2015/03/23/geojson-second-bite.html
+[^2]: A mature spatial store would include spatial indexes and provide spatial queries, however for the objectives of this proposal basic spatial spatial documents storage and retrieval can be achieved without spatial indexing. Each spatial document is treated as its own entity, and has limited querying beyond fetching and inspecting the data structure. However this is enough that it can easily be splatted on a map. Spatial indexing of geometries (or parent features/feature collections), is a sensible next step, which would allow many more use cases but is not in scope for this proposal.
+[^3]: It may be possible to store styling info within the spatial documents, there are at least two GeoJSON style storage conventions, but nothing standardised (see discussion here https://gis.stackexchange.com/questions/22474/geojson-styling-information). Neither of these are part of the GeoJSON standard and appear to be not used much in the wild. There are formats such as KML and GeoPackage which have styling support, but these are also more complex formats.

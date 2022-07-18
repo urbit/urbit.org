@@ -2,45 +2,20 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { DateTime } from "luxon";
-
-import Container from "../components/Container";
-import Section from "../components/Section";
-import SingleColumn from "../components/SingleColumn";
+import {
+  Container,
+  Section,
+  SingleColumn,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
-import Cross from "../components/icons/Cross";
 import TwoUp from "../components/TwoUp";
-import BubbleLink from "../components/BubbleLink";
 import { getAllPosts, getAllEvents, generateRealtimeDate } from "../lib/lib";
 import { eventKeys } from "../lib/constants";
-
-const Banner = ({ children, isOpen, href, dismiss }) => {
-  return (
-    <div className="w-full flex justify-center bg-green-100">
-      <SingleColumn>
-        <div className="w-full layout">
-          <div className="w-full flex justify-between items-center px-4 md:px-8 py-4">
-            <a href={href} target="_blank">
-              {children}
-            </a>
-            <button
-              className="type-ui w-6 h-6 bg-green-400 flex items-center justify-center rounded-full text-white hover:opacity-70"
-              onClick={(e) => {
-                e.stopPropagation();
-                dismiss();
-              }}
-            >
-              <Cross width="10" height="10" fill="#E5F7F1" />
-            </button>
-          </div>
-        </div>
-      </SingleColumn>
-    </div>
-  );
-};
 
 export default function Home({ posts, events, grantNumbers, search }) {
   return (
@@ -48,77 +23,61 @@ export default function Home({ posts, events, grantNumbers, search }) {
       <Head>
         <title>urbit.org</title>
       </Head>
-      {/* {bannerElement} */}
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         {
           // Hero Statement
         }
-        <Section narrow>
+        <Section className="pb-36">
           <div>
-            <h1>A clean-slate OS</h1>
-            <h1>and network</h1>
-            <h1>for the 21st century.</h1>
+            <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
           </div>
         </Section>
-
         {
           // Hero
         }
         <Section>
-          <div className="bg-wall-100 w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
-            <div className="md:w-6/12 w-full md:mr-6">
+          <div className="bg-[#FEFFDA] w-full p-8 md:p-12 rounded-3xl flex flex-col md:flex-row">
+            <div className="md:w-10/12 w-full md:mr-6">
+              <h2 className="m-0 p-0 mr-4 pb-6">Assembly 2022</h2>
+
               <p>
-                Urbit is for everyone, but sometimes it is easy to get lost in
-                this universe.
+                Assembly 2022 is the second ever Urbit conference coming to you
+                this year from Miami Beach. Grab a towel and get ready.
               </p>
-              <p className="pt-8">
-                Follow these links to contribute to the network through
-                developing, operating, and exploring.
+              <p className="pt-4 font-bold pb-8">
+                September 22nd–25th • Miami Beach, Florida
               </p>
-            </div>
-            <div className="pt-8 md:pt-0 md:w-6/12 w-full md:ml-6">
-              <BubbleLink
-                href="https://developers.urbit.org"
-                title="Developers"
-                target="_blank"
-                className="md:h-16"
-                caption="Start building on Urbit today."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/developers-guide-logo.png"
-                />
-              </BubbleLink>
-              <BubbleLink
-                href="https://operators.urbit.org"
-                className="mt-4 md:h-16"
-                target="_blank"
-                title="Operator’s Guide"
-                caption="Own a star or galaxy? This is for you."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/operators-guide-logo.png"
-                />
-              </BubbleLink>
-              <BubbleLink
-                href="https://network.urbit.org/"
-                className="mt-4 md:h-16"
-                target="_blank"
-                title="Network Explorer"
-                caption="View on-chain Urbit activity in real-time."
-              >
-                <img
-                  alt="Marketplace logo"
-                  className="max-w-none w-12 h-12 rounded-full"
-                  src="/images/network-explorer-logo.png"
-                />
-              </BubbleLink>
+              <Link href="https://assembly.urbit.org" passHref>
+                <a className="button-lg max-w-fit bg-green-400 text-white">
+                  Learn More
+                </a>
+              </Link>
             </div>
           </div>
+        </Section>
+        <Section narrow className="space-y-8">
+          <h2 className="font-normal">
+            Urbit is a <span className="font-bold">new kind of computer</span>{" "}
+            that you can <span className="font-bold">own completely</span> in
+            ways that matter:{" "}
+            <span className="font-bold">networking, identity, and data</span>.
+          </h2>
+          <p className="max-w-prose">
+            We realized that in order to fix the internet, we had to build a new
+            computer from scratch. Good thing we started over a decade ago.
+          </p>
+          <p className="max-w-prose">
+            Today, Urbit is a real system with thousands of users that are building
+            all kinds of communities, software, DAOs, and more. And it’s getting
+            better every day.{" "}
+          </p>
+          <Link href="/overview" passHref>
+            <a className="button-lg bg-green-400 text-white type-ui max-w-fit">
+              Read the Overview
+            </a>
+          </Link>
         </Section>
 
         {
@@ -208,9 +167,9 @@ export default function Home({ posts, events, grantNumbers, search }) {
               </Link>{" "}
               for building on Urbit using the languages you already know.
             </p>
-            <Link href="/docs" passHref>
-              <a className="button-lg type-ui text-white bg-wall-600 max-w-fit">
-                Read the Developer Docs
+            <Link href="https://developers.urbit.org" passHref>
+              <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
+                Visit Urbit Developers
               </a>
             </Link>
           </div>

@@ -1,8 +1,8 @@
 +++
 title = "Voting Instructions"
-template = "page_indiced.html"
 [extra]
 hidetitle = "true"
+index = "true"
 +++
 
 ## Urbit Continuity & Security Vote

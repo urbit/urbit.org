@@ -1,12 +1,12 @@
 +++
 title = "After hours: Visiting contributors"
-ends = "2017-11-17T07:00:00.000-08:00"
+ends = "2017-11-17T19:00:00.000-08:00"
 location = "Urbit Office"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/245090392/"
 description = "We've moved! Come check out our new digs, have a beer and hear about what people have been working on."
 timezone = "America/Los_Angeles"
-starts = "2017-11-17T04:00:00.000-08:00"
+starts = "2017-11-17T16:00:00.000-08:00"
 
 [[hosts]]
 name = "Urbit"

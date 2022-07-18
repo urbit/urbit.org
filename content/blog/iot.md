@@ -9,11 +9,7 @@ ship = "~datnut-pollen"
 image = "https://media.urbit.org/site/posts/essays/phobos.jpeg"
 +++
 
-<br>
-
 ![phobos](https://media.urbit.org/site/posts/essays/phobos.jpeg)
-
-<br>
 
 Each of the ~4B 32-or-fewer-bit or [Azimuth](/docs/glossary/azimuth)
 identities, namely [planets](/docs/glossary/planet),
@@ -302,7 +298,7 @@ So let us focus on the additional meritorious aspects of Urbit (or more
 generally, solid state interpreter networks) that make it not merely a band-aid
 to the broken IoT system but a permanent and sound replacement.
 
-#### Solid state interpreter networks {#ssi}
+#### Solid state interpreter networks {% #ssi %}
 
 ![cubesats](https://media.urbit.org/site/posts/essays/cubesats.jpg)
 

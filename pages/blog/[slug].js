@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import {
   getPostBySlug,
   getAllPosts,
@@ -11,22 +12,24 @@ import Head from "next/head";
 import Link from "next/link";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import {
+  Container,
+  Markdown,
+  IntraNav,
+  SingleColumn,
+  Section,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 import PostPreview from "../../components/PostPreview";
 import TwoUp from "../../components/TwoUp";
-import { decode } from "html-entities";
 
 export default function Post({
   post,
+  markdown,
   nextPost,
   previousPost,
-  markdown,
   search,
 }) {
   const router = useRouter();
@@ -40,9 +43,10 @@ export default function Post({
         <title>{post.title} • Blog • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
-        <Section short narrow>
+        <Header />
+        <Section narrow className="pb-10">
           <h1>{post.title}</h1>
           <h3 className=" mt-6">{post.description}</h3>
           <div className="flex items-baseline mt-6">
@@ -60,9 +64,7 @@ export default function Post({
           <div className="text-wall-500 type-sub">{formatDate(date)}</div>
         </Section>
         <Section short narrow className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -105,8 +107,7 @@ export async function getStaticProps({ params }) {
     "blog"
   );
 
-  const markdown = await Markdown({ post });
-
+  const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
     props: { post, markdown, nextPost, previousPost },
   };

@@ -9,11 +9,7 @@ ship = "~simfur-ritwed"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/200930-hosting-by-tlon.jpg"
 +++
 
-<br>
-
 ![Ocean](https://storage.googleapis.com/media.urbit.org/site/posts/essays/200930-hosting-by-tlon.jpg)
-
-<br>
 
 Urbit users tend to be interesting, creative, and capable people; we’re genuinely impressed with the communities that have formed on the network, and with the quality of discourse there. But for the number of communities to continue to grow, getting on the network has to become dramatically easier. It’s not realistic to expect most people to configure their own Urbit OS node in the command line.
 

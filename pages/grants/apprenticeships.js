@@ -1,20 +1,6 @@
 import { getPostBySlug } from "../../lib/lib";
 import GrantProgramOverview from "../../components/GrantProgramOverview";
-import Markdown from "../../components/Markdown";
-// new
-import Head from "next/head";
-import { TableOfContents } from "../../components/TableOfContents";
-import Meta from "../../components/Meta";
-import Link from "next/link";
-import { useState } from "react";
-import classnames from "classnames";
-import Container from "../../components/Container";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
-import PostPreview from "../../components/PostPreview";
-import GrantPreview from "../../components/GrantPreview";
+import { Markdown } from "foundation-design-system";
 
 export default function Post({ post, markdown, search }) {
   return (
@@ -36,7 +22,7 @@ export async function getStaticProps() {
     "/"
   );
 
-  const markdown = await Markdown({ post });
+  const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
     props: { post, markdown },

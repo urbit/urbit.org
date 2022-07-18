@@ -36,4 +36,4 @@ When a mentor has signed off on the apprentice's work, the mentor will notify th
 
 ## Funding
 
-Apprenticeships pay 1 star upon the sucessful completion of the apprenticeship, for an apprenticeship of a duration of up to three months.
+Apprenticeships pay 1 star upon the sucessful completion of the apprenticeship, for an apprenticeship of a duration of up to three months. Upon completion of your apprenticeship, please [submit an invoice here](https://airtable.com/shrXXCs1uaxtNSBcg).

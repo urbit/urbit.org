@@ -17,7 +17,7 @@ There are a few ways to get your own planet:
 - Purchasing a planet, including hosting, from a hosting provider
 - Manually setting up and hosting a planet purchased from a third party marketplace
 
-### Hosting Providers {#hosting-providers}
+### Hosting Providers {% #hosting-providers %}
 
 Hosting providers will often sell you a planet and run it for you. This option is very simple but will probably cost a regular fee.
 
@@ -43,38 +43,30 @@ Layer 2 planets do not require any crypto wallet management, but are at present 
 Don’t worry, both types work the same on the network.
 
 Here are a few of the places where you can buy planets:
+{% table .w-full .my-4 %}
+* L1 Planet Markets
+* L2 Planet Markets
+---
+*
+    - [Urbitex](https://urbitex.io)
+    - [Urbit.live](https://urbit.live)
+    - [Urbit.me](https://urbit.me)
+* 
+    - [azimuth.shop](https://azimuth.shop)
+    - [lanlyd](https://lanlyd.net/)
+    - [~mocbel house](https://mocbel.house)
+    - [\_networked subject](https://subject.network)
+    - [Planet Market](https://planet.market)
+    - [Wexpert Systems](https://wexpert.systems)
+{% /table %}
 
-<div style="display: flex;padding-top: 2rem;">
-
-<div class="column">
-
-**L1 Planet Markets**
-
-- [Urbitex](https://urbitex.io)
-- [Urbit.live](https://urbit.live)
-- [Urbit.me](https://urbit.me)
-
-</div>
-
-<div class="column">
-
-**L2 Planet Markets**
-
-- [azimuth.shop](https://azimuth.shop)
-- [\_networked subject](https://subject.network)
-- [~mocbel house](https://mocbel.house)
-- [Wexpert Systems](https://wexpert.systems)
-
-</div>
-</div>
-
-<div class="rounded-xl bg-wall-100" style="padding: 2rem; margin-top: 4rem;">
+{% callout %}
 
 **Layer 2 for planets**
 
 Learn more about [layer 2 for planets](/using/id/layer-2-for-planets) in the User's Manual page on the topic.
 
-</div>
+{% /callout %}
 
 ### Next steps
 
@@ -87,9 +79,3 @@ Read the [Server setup](/getting-started/server) guide to learn how to get it se
 Or, follow the instructions of a [hosting provider](/getting-started/hosted) and set up your planet there.
 
 Remember, your planet is yours and you can always change how you run your urbit in the future.
-
-<style>
-    .column {
-        flex-basis: 50%;
-    }
-</style>

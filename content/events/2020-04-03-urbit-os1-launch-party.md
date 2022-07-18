@@ -1,6 +1,6 @@
 +++
 title = "Urbit OS1 Launch Party"
-ends = "2020-04-04T06:00:00.000-07:00"
+ends = "2020-04-04T18:00:00.000-07:00"
 location = "Online event"
 image = "https://secure.meetupstatic.com/photos/event/1/f/8/b/600_489548075.jpeg"
 registration_url = "https://www.meetup.com/urbit-sf/events/268519156/"
@@ -8,7 +8,9 @@ youtube = "71ViyftPkGk"
 description = "Join us as we launch Urbit OS1!"
 guests = ""
 timezone = "America/Los_Angeles"
-starts = "2020-04-04T03:00:00.000-07:00"
+starts = "2020-04-04T15:00:00.000-07:00"
+dark = "true"
+darken_image = "true"
 
 [[hosts]]
 name = "Urbit"
@@ -36,12 +38,12 @@ Interested in contributing to Urbit? Sign up for Hoon School:
 
 Get the latest on Urbit:
 
-Blog: <a href="https://urbit.org/blog/" class="linkified">https://urbit.org/blog/</a>
+Blog: [https://urbit.org/blog/](https://urbit.org/blog/)
 
-Urbit Twitter: <a href="https://twitter.com/urbit" class="linkified">https://twitter.com/urbit</a>
+Urbit Twitter: [https://twitter.com/urbit](https://twitter.com/urbit)
 
-Urbit Github: <a href="https://github.com/urbit" class="linkified">https://github.com/urbit</a>
+Urbit Github: [https://github.com/urbit](https://github.com/urbit)
 
 Still confused about what Urbit is?
 
-<a href="https://urbit.org/understanding-urbit/" class="linkified">https://urbit.org/understanding-urbit/</a>
+[https://urbit.org/understanding-urbit/](https://urbit.org/understanding-urbit/)

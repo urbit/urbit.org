@@ -2,12 +2,14 @@ import Head from "next/head";
 import Link from "next/link";
 import { getPage, getAllPosts } from "../../lib/lib";
 import { join } from "path";
-import Container from "../../components/Container";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  Markdown,
+} from "foundation-design-system";
 import ob from "urbit-ob";
-import Markdown from "../../components/Markdown";
-import ResourceCard from "../../components/ResourceCard";
+import ResourceCard from "../../components/gateway/ResourceCard";
 import GatewayHeader from "../../components/gateway/GatewayHeader";
 import Gateway404 from "../../components/gateway/Gateway404";
 import MetadataBlock from "../../components/gateway/MetadataBlock";
@@ -31,15 +33,17 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
     id
   )}.png?${reqParams.join("&")}`;
 
+  // Galaxies shouldn't show parents, so store it as boolean here for reference.
+  const isGalaxy = ob.clan(id) === "galaxy";
+
   // Parent ID, grabbed from network or fallback to the default sponsor for that node
-  const parent = network ? network.sponsor["urbit-id"] : ob.sein(id);
+  const parent =
+    !isGalaxy && network ? network.sponsor["urbit-id"] : ob.sein(id);
   // Galaxy name above that parent
   const galaxy =
     ob.clan(id) === "planet"
       ? network?.sponsor?.sponsor?.["urbit-id"] || ob.sein(parent)
       : null;
-  // Galaxies shouldn't show parents, so store it as boolean here for reference.
-  const isGalaxy = ob.clan(id) === "galaxy";
 
   return (
     <Container>
@@ -87,7 +91,7 @@ const IdPage = ({ data, markdown, applications, groups, network, params }) => {
             />
             {!isGalaxy && (
               <MetadataLink
-                title="Parent"
+                title="Sponsor"
                 href={`/ids/${parent}`}
                 content={parent}
               />
@@ -207,6 +211,11 @@ export const getServerSideProps = async ({ params, res }) => {
     join(process.cwd(), "content/ids/", id.slice(1))
   ) || { data: {}, content: "" };
 
+  const markdown =
+    content !== ""
+      ? JSON.stringify(Markdown.parse({ post: { content } }))
+      : null;
+
   const applications = getAllPosts(
     ["title", "slug", "image", "bgColor"],
     `applications/${params.id}`
@@ -224,8 +233,6 @@ export const getServerSideProps = async ({ params, res }) => {
       }`
     )
     .then((res) => res.data);
-
-  const markdown = await Markdown({ post: { content: content } }, true);
 
   return {
     props: {

@@ -1,13 +1,13 @@
 +++
 title = "After hours: Fun with %arvo (the Urbit OS)"
-ends = "2017-09-23T07:00:00.000-07:00"
+ends = "2017-09-23T19:00:00.000-07:00"
 location = "Urbit Office"
 image = ""
 registration_url = "https://www.meetup.com/urbit-sf/events/243213975/"
 description = "Same as usual: cold drinks in the backyard with the hoons.  Come meet other people crazy enough to want to replace the internet."
 guests = ""
 timezone = "America/Los_Angeles"
-starts = "2017-09-23T04:00:00.000-07:00"
+starts = "2017-09-23T16:00:00.000-07:00"
 
 [[hosts]]
 name = "Urbit"

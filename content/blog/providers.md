@@ -9,11 +9,7 @@ ship = "~ravmel-ropdyl"
 image = "https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png"
 +++
 
-<br>
-
-<img class="ba" src="https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png">
-
-<br>
+![](https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png)
 
 We look forward to a future where your Urbit is an always-on, always-available service. You should be able to pick up any device and conjure up your whole digital life immediately.
 

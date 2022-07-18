@@ -12,6 +12,7 @@ description = "Build out email capabilities of ~tirrel's Studio app"
 reward = "1 star"
 mentor = "~novlud-padtyv"
 assignee = "~rivmud-fabwen"
+grant_id = "A0139"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0139&prefill_Grant+Name=~tirrel%20studio%20email%20capabilities"
 +++

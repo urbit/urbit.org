@@ -1,7 +1,5 @@
 import Link from "next/link";
-import Container from "../../components/Container";
-import Section from "../../components/Section";
-import SingleColumn from "../../components/SingleColumn";
+import { Container, SingleColumn, Section } from "foundation-design-system";
 import { useInputChange } from "../../lib/hooks";
 import ob from "urbit-ob";
 import Sigil from "../../components/Sigil";

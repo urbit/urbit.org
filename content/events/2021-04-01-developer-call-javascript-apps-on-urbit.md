@@ -22,4 +22,4 @@ Urbit provides a powerful and extensible platform for all kinds of app developme
 
 Tyler Brown Cifu Shuster (~radbur-sivmus) has worked with the Landscape team over the past few months to extract these tools into reusable Javascript packages. In this talk, he will explain how to use them to develop a client for Urbit independent of Landscape. He will cover the basic lifecycle of a client and explain how Javascript interface and state frameworks pair with Urbit's data model.
 
-This talk should enable anyone familiar with modern Javascript development and HTTP grammar to build an application on top of Urbit without writing any back-end code
+This talk should enable anyone familiar with modern Javascript development and HTTP grammar to build an application on top of Urbit without writing any back-end code.

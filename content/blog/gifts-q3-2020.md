@@ -13,11 +13,7 @@ ship = "~wolref-podlex"
 image = "https://media.urbit.org/site/posts/essays/gifts.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/gifts.png">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/gifts.png)
 
 Twice a year we distribute address space to those that have made valuable contributions to Urbit. Now called our _Gifts_ program, the gifting of address space has been part of Urbit long before we had a grants program.
 

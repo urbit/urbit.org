@@ -10,11 +10,7 @@ ship = "~naplet-hildec"
 image = "https://media.urbit.org/site/posts/essays/bau.jpg"
 +++
 
-<br>
-
 ![people gathered](https://media.urbit.org/site/posts/essays/bau.jpg)
-
-<br>
 
 _TL;DR: Urbit is launching a series of community events, the first of which is a developer call taking place on Thursday, November 5 at 9am PT. [Sign up here](https://www.meetup.com/urbit-sf/events/274279522/), and read on for all of the details._
 

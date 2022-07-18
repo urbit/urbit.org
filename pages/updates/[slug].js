@@ -10,23 +10,18 @@ import {
 import Head from "next/head";
 import Meta from "../../components/Meta";
 import ErrorPage from "../404";
-import Container from "../../components/Container";
-import Markdown from "../../components/Markdown";
+import {
+  Container,
+  Markdown,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import SingleColumn from "../../components/SingleColumn";
-import Section from "../../components/Section";
 import Contact from "../../components/Contact";
 
-import { decode } from "html-entities";
-
-export default function Post({
-  post,
-  nextPost,
-  previousPost,
-  markdown,
-  search,
-}) {
+export default function Post({ post, markdown, search }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
@@ -38,8 +33,9 @@ export default function Post({
         <title>{post.title} • Updates • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
+        <Header />
         <Section short narrow>
           <h1>{post.title}</h1>
           {post.author ? (
@@ -59,9 +55,7 @@ export default function Post({
           </div>
         </Section>
         <Section narrow className="markdown">
-          <article
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          ></article>
+          <Markdown.render content={JSON.parse(markdown)} />
         </Section>
         <Section narrow>
           <Contact />
@@ -115,8 +109,7 @@ export async function getStaticProps({ params }) {
     ["title", "slug", "date", "description", "content", "author", "ship"],
     "updates"
   );
-
-  const markdown = await Markdown({ post });
+  const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
     props: { post, markdown, nextPost, previousPost },

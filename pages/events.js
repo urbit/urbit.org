@@ -3,21 +3,17 @@ import Link from "next/link";
 import { DateTime } from "luxon";
 
 import Meta from "../components/Meta";
-import Container from "../components/Container";
+import {
+  Container,
+  SingleColumn,
+  Section,
+  IntraNav,
+} from "foundation-design-system";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SingleColumn from "../components/SingleColumn";
-import Section from "../components/Section";
 import EventPreview from "../components/EventPreview";
-import { ShowOrHide } from "../components/Snippets";
 import { contact } from "../lib/constants";
-import {
-  getAllEvents,
-  generateDisplayDate,
-  generateRealtimeDate,
-  formatDate,
-  formatTime,
-} from "../lib/lib";
+import { getAllEvents, generateRealtimeDate } from "../lib/lib";
 
 import { eventKeys } from "../lib/constants";
 
@@ -62,9 +58,10 @@ export default function Events({ events, search }) {
         <title>Events • urbit.org</title>
         {Meta(post)}
       </Head>
+      <IntraNav ourSite="https://urbit.org" search={search} />
       <SingleColumn>
-        <Header search={search} />
-        <Section short narrow>
+        <Header />
+        <Section narrow>
           <div className="measure">
             <h1 className="pb-16">Events</h1>
             <p className="pb-6">
@@ -91,7 +88,7 @@ export default function Events({ events, search }) {
           {futureEvents.length > 0 ? (
             <>
               <div className="mb-8 mt-16 table">
-                <h3 className="text-green-400">Coming Soon</h3>
+                <h3 className="">Coming Soon</h3>
               </div>
               {futureEvents.map((post) => {
                 return <EventPreview big event={post} className="mb-8" />;

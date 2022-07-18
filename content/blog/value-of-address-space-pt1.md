@@ -47,15 +47,15 @@ We’ve often said that Urbit IDs have value because they’re useful and scarce
 
 The network of IDs is structured as a sponsorship tree consisting of 256 galaxies, ~65,000 stars, ~4B planets.
 
-Galaxies are the root nodes on the network. They each have a vote on upgrades to the rules that govern the network, they provide packet-routing and peer-discovery services, and they spawn stars. Each galaxy has 256 (2<sup>8</sup>) stars to spawn.
+Galaxies are the root nodes on the network. They each have a vote on upgrades to the rules that govern the network, they provide packet-routing and peer-discovery services, and they spawn stars. Each galaxy has 256 (2^8^) stars to spawn.
 
-Stars similarly provide packet-routing and peer-discovery services, and spawn planets. Each unbooted star contains ~65,000 planets (2<sup>16</sup>).
+Stars similarly provide packet-routing and peer-discovery services, and spawn planets. Each unbooted star contains ~65,000 planets (2^16^).
 
-Planets are the individual IDs that most people use on the network. There are a total of ~4B (2<sup>32</sup>) planets all combined. Planets can also each spawn ~4B ‘moons,’ which are Urbit IDs intended to be used for IoT and other devices. Moons are permanently locked to their planets for security and to protect the network from sybil attacks.
+Planets are the individual IDs that most people use on the network. There are a total of ~4B (2^32^) planets all combined. Planets can also each spawn ~4B ‘moons,’ which are Urbit IDs intended to be used for IoT and other devices. Moons are permanently locked to their planets for security and to protect the network from sybil attacks.
 
 Stars and planets can leave their sponsors (i.e. the star or galaxy currently providing peer discovery and packet routing) if they wish, and sponsors can choose to stop servicing any given star or planet. This is intended to prevent lock-in and to encourage good behavior from both parties. This mutual accountability is important in a network of finite identities that accrue reputation.
 
-Essentially Urbit ID is 2<sup>32</sup> individual names that are bundled into blocks that are larger and larger in size. You might think of a planet like an individual house, a star like a town or a city, and a galaxy like a county or a state.
+Essentially Urbit ID is 2^32^ individual names that are bundled into blocks that are larger and larger in size. You might think of a planet like an individual house, a star like a town or a city, and a galaxy like a county or a state.
 
 The Urbit ID registry and its rules are built on a set of smart contracts called [Azimuth](https://github.com/urbit/azimuth). These contracts are registered on the Ethereum blockchain. Galaxies can upgrade the mechanics of Azimuth by majority vote.
 

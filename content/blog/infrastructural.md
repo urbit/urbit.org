@@ -9,9 +9,7 @@ ship = "~fabled-faster"
 image = "https://media.urbit.org/site/posts/essays/infrastructural-2.jpg"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/infrastructural-1.jpg">
+![](https://media.urbit.org/site/posts/essays/infrastructural-1.jpg)
 
 ## Seasons
 
@@ -53,11 +51,7 @@ We deeply hope that Urbit can form a support structure for you and your communit
 
 These self-evident statements underlie the core problems we sought to address in designing a userspace for OS 1: How do we design an _actually_ personal digital infrastructure? What does infrastructure look like when shared with immediate friends? With a cooperative organization? How can we impress upon Urbit's earliest adopters that once they've obtained an Urbit ID, their computer is at that moment _literally_ entirely theirs?
 
-<br>
-
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/infrastructural-2.jpg">
+![](https://media.urbit.org/site/posts/essays/infrastructural-2.jpg)
 
 ## Expressing Infrastructure
 

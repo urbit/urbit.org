@@ -9,11 +9,7 @@ ship = "~pindet-timmut"
 image = "https://media.urbit.org/site/posts/essays/ocean.jpeg"
 +++
 
-<br>
-
 ![ocean](https://media.urbit.org/site/posts/essays/ocean.jpeg)
-
-<br>
 
 ## Paying
 
@@ -25,7 +21,7 @@ Things only accelerate from here. Our next objective, to integrate Lightning Net
 
 > And there is all the difference in the world between paying and being paid. The act of paying is perhaps the most uncomfortable infliction that the two orchard thieves entailed upon us. But being paid,—what will compare with it?
 >
-> <cite>Herman Melville</cite>
+> **Herman Melville**
 
 However, a good wallet is only half the equation for a holistic P2P commercial experience. Interfaces for selling goods and services is the other half. While we don’t part with our Bitcoin [easily](https://nakamotoinstitute.org/mempool/everyones-a-scammer/), two initial markets appear logical and attractive: content and Urbit-native services.
 
@@ -37,4 +33,4 @@ The Urbit Foundation is soliciting contributors to this project through Urbit Gr
 
 ## An Ocean
 
-After honing our commercial tools on these use-cases, we’ll sail into a blue ocean. On the horizon: beautiful products, deployable at scale, built with the robust primitives of Urbit OS. Extensibility is Urbit’s promise to middle-men: every Web2.0 service they use to scalp us will find its P2P analog on Urbit. We invite developers and entrepreneurs of all stripes to join in the feeding frenzy. Ideas are constantly nucleating in <a href="web+urbitgraph://group/~pindet-timmut/urbitcoin-cash">Urbitcoiners</a> and <a href="web+urbitgraph://group/~bitbet-bolbel/urbit-community/graph/~darrux-landes/business-building-on-urbit">Urbit Community</a>.
+After honing our commercial tools on these use-cases, we’ll sail into a blue ocean. On the horizon: beautiful products, deployable at scale, built with the robust primitives of Urbit OS. Extensibility is Urbit’s promise to middle-men: every Web2.0 service they use to scalp us will find its P2P analog on Urbit. We invite developers and entrepreneurs of all stripes to join in the feeding frenzy. Ideas are constantly nucleating in [Urbitcoiners](web+urbitgraph://group/~pindet-timmut/urbitcoin-cash) and [Urbit Community](web+urbitgraph://group/~bitbet-bolbel/urbit-community/graph/~darrux-landes/business-building-on-urbit).

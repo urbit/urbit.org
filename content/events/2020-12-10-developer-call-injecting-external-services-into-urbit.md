@@ -21,5 +21,4 @@ This call will feature a discussion by well-known developer in the Urbit communi
 
 Developer calls are focused on the technologies that underpin Urbit, from the top of the stack to the very bottom. They’re an opportunity for the people developing and contributing to Urbit to share their knowledge and expertise, including things that typically don’t make it into the docs, such as how and why Urbit works the way it does.
 
-The livestream will be held on YouTube, and a group video call will be made available via Google Meet after the talk for casual discussion and in-person conversation."
-+++
+The livestream will be held on YouTube, and a group video call will be made available via Google Meet after the talk for casual discussion and in-person conversation.

@@ -9,11 +9,7 @@ ship = "~lodleb-ritrul"
 image = "https://media.urbit.org/site/posts/essays/hackathon-results-wide.png"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/hackathon-results.png">
-
-<br>
+![](https://media.urbit.org/site/posts/essays/hackathon-results.png)
 
 Results of the Urbit Hackathon
 

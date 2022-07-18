@@ -1,4 +1,4 @@
-import { decode } from "html-entities";
+import { Markdown } from "foundation-design-system";
 
 const Description = ({ description, fallback, markdown }) => {
   return (
@@ -6,10 +6,9 @@ const Description = ({ description, fallback, markdown }) => {
       <div className="flex flex-col space-y-4">
         <p className="font-bold text-wall-400">Description</p>
         {markdown ? (
-          <div
-            className="flex flex-col space-y-4"
-            dangerouslySetInnerHTML={{ __html: decode(markdown) }}
-          />
+          <div className="markdown">
+            <Markdown.render content={JSON.parse(markdown)} />
+          </div>
         ) : (
           <p>{description}</p>
         )}

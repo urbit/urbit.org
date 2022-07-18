@@ -12,6 +12,7 @@ description = ""
 reward = "1 star"
 mentor = "~dasrun-fadben"
 assignee = "~sipned-nistug"
+grant_id = "A0138"
 completed = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=A0138&prefill_Grant+Name=Extending%20the%20Bitcoin%20Provider%20API"
 +++

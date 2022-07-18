@@ -9,10 +9,7 @@ hideprevious = "true"
 hide_next_title = "true"
 +++
 
-<picture>
-<source src="https://media.urbit.org/site/meetup1.jpg">
-<img class="mt4" src="https://media.urbit.org/site/meetup1.jpg"/>
-</picture>
+![](https://media.urbit.org/site/meetup1.jpg)
 
 Turns out that getting Urbit fans together in one room is pretty fun. Here's an incomplete list of community-led Urbit IRL groups. These events are generally informal and very approachable – feel free to dive in.
 
@@ -20,32 +17,31 @@ Interested in hosting an Urbit event of your own? Follow our [guide to meetup be
 
 ### Asia
 
-Location | Contact information
-:------------ | :-------------
-Moscow, RU | [Timepad](https://urbitmoscow.timepad.ru/events/)
+| Location   | Contact information                               |
+| :--------- | :------------------------------------------------ |
+| Moscow, RU | [Timepad](https://urbitmoscow.timepad.ru/events/) |
 
 ### Europe
 
-Location | Contact information
-:------------ | :-------------
-Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/)
+| Location       | Contact information                                                                             |
+| :------------- | :---------------------------------------------------------------------------------------------- |
+| Copenhagen, DK | [Twitter](https://twitter.com/UrbitCPH), [Meetup.com](https://www.meetup.com/Urbit-Copenhagen/) |
 
 ### North America
 
-Location | Contact information
-:------------ | :-------------
-Phoenix, AZ | [Twitter](https://twitter.com/UrbitPHX), [Meetup.com](https://www.meetup.com/urbit-phx/)
-San Francisco, CA | [Meetup.com](https://www.meetup.com/urbit-sf/)
-New York, NY | [Meetup.com](https://www.meetup.com/Urbit-New-York/)
-Toronto, ON | [Twitter](https://twitter.com/UrbitToronto), [Meetup.com](https://www.meetup.com/Urbit-Toronto/)
-Eugene, OR | [Twitter](https://twitter.com/EugeneUrbit)
-Austin, TX | [Meetup.com](https://www.meetup.com/Urbit-Austin/)
-Denton, TX | [Twitter](https://twitter.com/UrbitDFW)
-Seattle, WA | [Meetup.com](https://www.meetup.com/urbit-seattle/)
-
+| Location          | Contact information                                                                              |
+| :---------------- | :----------------------------------------------------------------------------------------------- |
+| Phoenix, AZ       | [Twitter](https://twitter.com/UrbitPHX), [Meetup.com](https://www.meetup.com/urbit-phx/)         |
+| San Francisco, CA | [Meetup.com](https://www.meetup.com/urbit-sf/)                                                   |
+| New York, NY      | [Meetup.com](https://www.meetup.com/Urbit-New-York/)                                             |
+| Toronto, ON       | [Twitter](https://twitter.com/UrbitToronto), [Meetup.com](https://www.meetup.com/Urbit-Toronto/) |
+| Eugene, OR        | [Twitter](https://twitter.com/EugeneUrbit)                                                       |
+| Austin, TX        | [Meetup.com](https://www.meetup.com/Urbit-Austin/)                                               |
+| Denton, TX        | [Twitter](https://twitter.com/UrbitDFW)                                                          |
+| Seattle, WA       | [Meetup.com](https://www.meetup.com/urbit-seattle/)                                              |
 
 ### Oceania
 
-Location | Contact information
-:------------ | :-------------
-Sydney, AU | [Meetup.com](https://www.meetup.com/Urbit-Sydney)
+| Location   | Contact information                               |
+| :--------- | :------------------------------------------------ |
+| Sydney, AU | [Meetup.com](https://www.meetup.com/Urbit-Sydney) |

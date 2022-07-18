@@ -9,8 +9,6 @@ ship = "~patnes-rigtyn + ~ravmel-ropdyl"
 image = "https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg"
 +++
 
-<br>
-
 ![](https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg)
 
 _This is the third in a series of three posts on Urbit address space. See also [part 1](https://urbit.org/blog/value-of-address-space-pt1/) and [part 2](https://urbit.org/blog/value-of-address-space-pt2/)._
@@ -33,7 +31,7 @@ In this post, we don’t expand that framework, but rather explore two elements 
 
 ## Lockups and spawning limits
 
-One way to think about galaxies, stars, and planets is that they’re different-sized buckets of Urbit IDs. A star contains 2<sup>16</sup> (~65K) planets, a galaxy contains 2<sup>8</sup> (256) stars and, in turn, 2<sup>24</sup> planets (16,777,216). Beyond this nesting pattern, there are three further considerations to note: booted versus unbooted addresses, locked versus unlocked addresses, and planet spawning limits.
+One way to think about galaxies, stars, and planets is that they’re different-sized buckets of Urbit IDs. A star contains 2^16^ (~65K) planets, a galaxy contains 2^8^ (256) stars and, in turn, 2^24^ planets (16,777,216). Beyond this nesting pattern, there are three further considerations to note: booted versus unbooted addresses, locked versus unlocked addresses, and planet spawning limits.
 
 Booted and Unbooted Addresses –
 

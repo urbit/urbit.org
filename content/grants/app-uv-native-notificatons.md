@@ -10,9 +10,9 @@ grant_category = ["App Dev: Other"]
 [extra]
 image = ""
 description = "Build native notifications into Urbit Visor"
-reward = "$8000 in WSTR"
+reward = "1 star"
 assignee = "~toclec-baldeg"
-mentor = "~mocrux-nomdep"
+mentor = "~haddef-sigwen"
 grant_id = "A0145"
 completed = false
 canceled = false

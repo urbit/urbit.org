@@ -9,9 +9,7 @@ ship = "~wicdev-wisryt"
 image = "https://media.urbit.org/site/posts/essays/pre-01.jpg"
 +++
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-01.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-01.jpg)
 
 Urbit is a principled approach to system design and programming, but it's often not obvious what those principles are. We have many specific terms for the different parts of the project: Arvo is the OS, Hoon is the language, Tlon is the company, Azimuth is the identity system, Ames is the network. But the word most associated with the project is "Urbit", and it's not clear what technically it refers to. It's only a small stretch to say that "Urbit" _is_ this set of principles, and that if anybody follows these principles strictly they will create a system that is isomorphic to the Urbit.
 
@@ -19,9 +17,7 @@ Some of these are commonly held among many software projects, and some are not. 
 
 We’ll start with a brief description of many principles, then we’ll go into a long-form justification.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-02.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-02.jpg)
 
 ### A: General Design
 
@@ -138,9 +134,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
 23. Some cliches are repeated because they are true; others must be
     repeated because they are not.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-03.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-03.jpg)
 
 ### B: Specific Design
 
@@ -170,9 +164,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
    A compiler can use type safety as an effective tool to enforce
    some classes of security guarantees.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-04.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-04.jpg)
 
 ### C: Attitude
 
@@ -203,9 +195,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
    responding take a full 60 seconds to envision how you would implement
    it and what the effects would be.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-05.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-05.jpg)
 
 ### D: Theory
 
@@ -250,9 +240,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
    use theory to fix the bad, add the missing, and remove the
    unnecessary. Repeat.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-06.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-06.jpg)
 
 ### E: Text Style
 
@@ -285,9 +273,7 @@ We’ll start with a brief description of many principles, then we’ll go into 
 
 8. Abbreviations aren't worth it.
 
-<br>
-
-<img class="ba" src="https://media.urbit.org/site/posts/essays/pre-07.jpg">
+![](https://media.urbit.org/site/posts/essays/pre-07.jpg)
 
 ### F: Real Software
 

@@ -73,7 +73,7 @@ Click `Generate ->`, which will download a keyfile onto your machine.
 
 With that keyfile in hand, you can now exit Bridge and continue to the guide to [install the Urbit binary](/getting-started/).
 
-### Escaping your sponsor {#escaping-your-sponsor}
+### Escaping your sponsor {% #escaping-your-sponsor %}
 
 As a planet or star, it behooves you to be sponsored by an active star or galaxy,
 respectively. If your sponsor isn't suiting your needs, you can escape to a

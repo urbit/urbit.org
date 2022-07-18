@@ -17,11 +17,7 @@ All people like to talk. Society is built by talking. In this&mdash;the year of 
 
 ## Modes of Messaging
 
-<br>
-
 ![Ludovic Maclellan Mann examining the Cochno Stone](https://media.urbit.org/site/posts/essays/cochno-stone.png)
-
-<br>
 
 In general, technology serves humanity as a kind of appendage&mdash;instead of thinking new thoughts or acting on its own, it does what we command. Technology never creates new social structures&mdash;it merely makes existing ones easier, or it facilitates the creation of new ones. We use our tools to expand our capacities, and once we are capable of doing more, we can imagine new things to do. Inventing the wheel did not invent motorized transportation&mdash;but it did facilitate it and it was a necessary step, even an inspirational one. Similarly, the invention of writing made new forms of human interaction and new tools for organization possible.
 
@@ -44,11 +40,7 @@ Having an indistinct sense of place makes the form of conversation ambiguous and
 
 ## People in Places
 
-<br>
-
 ![Halle Saale Marktplatz](https://media.urbit.org/site/posts/essays/halle-saale-marktplatz.jpg)
-
-<br>
 
 As the internet grew to accommodate new conversation forms using the basic substrate of hypertext, web developers began to conceive of "digital spaces" through analogy&mdash;chat "rooms" and "forums,” or the "silo" and the "walled garden." Today, most of our conversation takes place in these walled gardens&mdash;privately-owned places which may be beautiful on the inside, but inaccessible from elsewhere. While some of these walled gardens are very large, our conversation is essentially confined to them. There is no roaming from one space to another while keeping one’s identity. We create new identities for new spaces both because we must and because we are afraid of repercussions on one platform for what we say on another. This is because we do not own our identity; we merely have a key&mdash;our password. The owners of the walled garden still own the artifacts of our tenure there, and can revoke our access to them at any time.
 
@@ -60,11 +52,7 @@ In theory, we would have a digital city with unique regions, public fora, and so
 
 ## Urbis ec Bit
 
-<br>
-
 ![View of Florence from San Miniato](https://media.urbit.org/site/posts/essays/view-of-florence.jpg)
-
-<br>
 
 Urbit does solve this underlying problem. At this point the explanation goes so far down the stack that you could spend years tracing it all, but the relevant part is this: Urbit is not an empire; it’s a territory. An empire is an entangling of land and rule: within the bounds of said empire, you agree to be bound by its laws and the penalties for transgression. The laws exist at the whim of a despot or cabal. Your standing as a Roman citizen buys you no favors in Persia. In contrast, a territory imposes only physical laws. For example, in the desert, you will die faster. The only way to change that is to alter the desert. Urbit imposes nothing but the digital equivalent of physical laws. You have an identity which can be said to be truly yours, and you have a piece of software that runs on whatever computer you choose and can do anything you want with the messages sent to your identity. There are no social protocols enforced, because no one can control what software you run on your computer. As long as you agree to communicate using the same basic substrate, you can communicate with anyone using Urbit. This is the digital equivalent of speaking the same language. Whether or not others will accept you into their coalitions is not the technology's concern.
 

@@ -18,7 +18,7 @@ Visit the instructions for [launching a temporary comet with Port](/getting-star
 
 There are many markets and individuals selling planets such as [azimuth.shop](https://azimuth.shop), [Networked Subject](https://subject.network), and [Wexpert Systems](https://wexpert.systems) for Ethereum, Bitcoin, and USD respectively.
 
-<div className="bg-wall-100 p-7 rounded-xl markdown-callout">
+{% callout %}
 
 **Layer 1 vs Layer 2 planet purchasing**
 
@@ -26,8 +26,7 @@ The websites listed in B) sell Layer 2 (L2) planets -- which means they avoid Et
 
 For this reason we generally advise using a L2 planet market, unless you are interested in a very rare sigil or a particular planet name.
 
-</div>
-
+{% /callout %}
 ### 2. Claim your planet
 
 An invitation to claim your planet comes in one of two forms.
@@ -40,14 +39,13 @@ The second, only recently made available through our [L2 solution](/using/id/lay
 
 Clicking a link to activate a planet on Bridge will take you to page which will generate a Master Ticket for you. Follow the instructions which will prompt you to download a copy of your Passport - your Master Ticket, management proxy, and keyfile. Store your Master Ticket and management proxy somewhere safe, hold on to the keyfile, and proceed to the next step.
 
-<div className="bg-wall-100 p-7 rounded-xl markdown-callout">
+{% callout %}
 
 **Claiming L1 planets**
 
 If you’ve purchased an L1 planet, you won’t need to claim it because you already own it as an NFT. Simply log into Bridge using Metamask or your wallet of choice.
 
-</div>
-
+{% /callout %}
 ### 3. Use Bridge to get your keyfile
 
 Now that you have your planet, you can create your keyfile (eg. `sample-palnet.key`), which is the cryptographic signature required to encrypt and decrypt messages on Urbit's P2P network.
@@ -69,10 +67,9 @@ You may also want to see the cloud hosting guide for additional details like set
 
 Download Urbit with the following commands:
 
-<div id="os" class="os">
-  <input type="radio" id="macos" name="os" checked>
-  <label for="macos">MacOS</label>
-  <div class="tab">
+{% tabs %}
+
+{% tab label="MacOS" %}
 
 ```bash
 mkdir ~/urbit
@@ -82,11 +79,9 @@ tar zxvf ./darwin.tgz --strip=1
 ~/urbit/urbit
 ```
 
-  </div>
+{% /tab %}
 
-  <input type="radio" id="linux" name="os">
-  <label for="linux">Linux</label>
-  <div class="tab">
+{% tab label="Linux" %}
 
 ```shell
 mkdir ~/urbit
@@ -103,11 +98,9 @@ sudo apt-get install libcap2-bin
 sudo setcap 'cap_net_bind_service=+ep' ~/urbit/urbit
 ```
 
-</div>
+{% /tab %}
 
-  <input type="radio" id="windows" name="os">
-  <label for="windows">Windows</label>
-  <div class="tab">
+{% tab label="Windows" %}
 
 ```winbatch
 mkdir %USERPROFILE%\urbit
@@ -119,8 +112,9 @@ tar zxvf .\windows.tgz --strip=1
 
 > Windows 10 build 17063 and later includes the familiar `curl` and `tar` command-line tools.
 
-</div>
-</div>
+{% /tab %}
+
+{% /tabs %}
 
 Next, transfer `your-keyfile.key` to your server using scp or an FTP client, then move it to the `~/urbit` directory you created in the last step.
 
@@ -165,40 +159,3 @@ Open up the Urbit CLI again if it's not still running, and enter +code. The outp
 ### Next steps
 
 Learn how to [get around your urbit](/getting-started/getting-around).
-
-<style>
-  .os {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .os label {
-    order: -1;
-    padding: .5rem;
-    min-width: 70px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .os input[type="radio"] {
-    display: none;
-  }
-  .os .tab {
-    display: none;
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  .os .tab p:first-child {
-    margin-top: 0;
-  }
-  .os .tab p:last-child {
-    margin-bottom: 0;
-  }
-  .os input[type='radio']:checked + label {
-    font-weight: bold;
-    background-color: rgba(244,243,241,1);
-    border-radius: 0.5em;
-  }
-  .os input[type='radio']:checked + label + .tab {
-    display: block;
-}
-</style>

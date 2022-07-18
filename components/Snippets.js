@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   getAllEvents,
   generateDisplayDate,
@@ -12,7 +13,13 @@ export function Name({ children, className }) {
 }
 
 export function Patp({ children, className }) {
-  return <code className={`font-mono ${className || ""}`}>{children}</code>;
+  return (
+    <Link href={`/ids/${children}`} passHref>
+      <a>
+        <code className={`font-mono ${className || ""}`}>{children}</code>
+      </a>
+    </Link>
+  );
 }
 
 // Used to render a human name alongside their @p

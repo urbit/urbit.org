@@ -9,11 +9,7 @@ ship = "~haddef-sigwen"
 image = "https://media.urbit.org/site/posts/essays/metaphase.jpg"
 +++
 
-<br>
-
 ![mitosis](https://media.urbit.org/site/posts/essays/metaphase.jpg)
-
-<br>
 
 _Previous versions of this essay specified the stream deploy date as December 11, 2020; then December 18, 2020. This has been amended to the actual date of release, with our sincere apologies. For new readers, you can opt into the dev stream by running:_
 

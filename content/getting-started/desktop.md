@@ -8,19 +8,18 @@ weight = 1
 
 Port is a desktop GUI application that allows you to spin up, access, and manage your Urbit ships without any knowledge of the command line or Urbit binary.
 
-<div id="port-os" class="os">
-  <input type="radio" id="port-macos" name="port-os" checked>
-  <label for="port-macos">MacOS</label>
-  <div class="tab">
-    <p>To install <strong>Port</strong> on MacOS simply download and open the <code>.dmg</code> file.</p>
-    <a href="https://github.com/urbit/port/releases/latest/download/Port.dmg" class="button-lg bg-green-400 text-white" style="width: 12rem;">
-      Download Port
-    </a>
-  </div>
+{% tabs %}
 
-  <input type="radio" id="port-linux" name="port-os">
-  <label for="port-linux">Linux</label>
-  <div class="tab">
+{% tab label="MacOS" %}
+
+To install **Port** on MacOS, simply download and open the `.dmg` file.
+
+{% button label="Download Port" link="https://github.com/urbit/port/releases/latest/download/Port.dmg" color="bg-green-400 text-white" %}
+{% /button %}
+
+{% /tab %}
+
+{% tab label="Linux" %}
 
 We use `snap` so that **Port** can stay updated automatically. If you already have `snap` installed, simply run:
 
@@ -30,57 +29,20 @@ sudo snap install port
 
 Or to install `snap` for your distribution, snapcraft provides [installation instructions](https://snapcraft.io/docs/installing-snapd).
 
-  </div>
+{% /tab %}
 
-  <input type="radio" id="port-windows" name="port-os">
-  <label for="port-windows">Windows</label>
-  <div class="tab">
-    <p>To install <strong>Port</strong> on Windows simply download and open the <code>.exe</code> file.</p>
-    <a href="https://github.com/urbit/port/releases/latest/download/PortSetup.exe" class="button-lg bg-green-400 text-white" style="width: 12rem;">
-      Download Port
-    </a>
-    <p><small>
-    Note: The Windows version is newly released and is not yet code signed so you will have to click through a prompt warning you about running it. If you simply click <code>more info</code> -> <code>run anyway</code> it will run.
-    </small></p>
-  </div>
-</div>
+{% tab label="Windows" %}
 
-<style>
-  .os {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .os label {
-    order: -1;
-    padding: .5rem;
-    min-width: 70px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .os input[type="radio"] {
-    display: none;
-  }
-  .os .tab {
-    display: none;
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  .os .tab p:first-child {
-    margin-top: 0;
-  }
-  .os .tab p:last-child {
-    margin-bottom: 0;
-  }
-  .os input[type='radio']:checked + label {
-    font-weight: bold;
-    background-color: rgba(244,243,241,1);
-    border-radius: 0.5em;
-  }
-  .os input[type='radio']:checked + label + .tab {
-    display: block;
-}
-</style>
+**WARNING:** Support for Windows is experimental. For the best experience, we recommend using a [cloud hosting provider](https://urbit.org/getting-started/hosted) rather than running Urbit locally.
+
+To install **Port** on Windows, simply download and open the `.exe` file.
+
+{% button label="Download Port" link="https://github.com/urbit/port/releases/latest/download/PortSetup.exe" color="bg-green-400 text-white" %}
+{% /button %}
+
+{% /tab %}
+
+{% /tabs %}
 
 ### 2. Boot a comet
 
@@ -96,7 +58,7 @@ Once that's finished, click **Launch Ship into Urbit** and you'll be on the netw
 
 ![](https://media.urbit.org/site/getting-started/Desktop-app-2.jpg)
 
-<div className="bg-wall-100 p-7 rounded-xl markdown-callout">
+{% callout %}
 
 **Want to combine the simplicity of Port with a permanent Urbit ID?**
 
@@ -107,7 +69,7 @@ Port will boot your Urbit in a few minutes!
 
 For more information on getting a planet, see our [Getting an Urbit ID](/guides/getting-an-urbit-id) guide.
 
-</div>
+{% /callout %}
 
 ### Next steps
 

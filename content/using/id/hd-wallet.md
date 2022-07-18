@@ -7,7 +7,7 @@ template = "doc.html"
 This document explains what the [Urbit HD wallet](/docs/glossary/hdwallet) is
 and how to use it.
 
-### What is the Urbit HD Wallet? {#urbit-hd-wallet}
+### What is the Urbit HD Wallet? {% #urbit-hd-wallet %}
 
 The [Urbit Hierarchical Deterministic (HD) Wallet](/docs/glossary/hdwallet) is a
 custom Ethereum wallet based on BIP39 and BIP44 – the same underlying technology
@@ -21,10 +21,9 @@ you shouldn't have to worry about this: you can simply think of your "master
 ticket" as the password to your Urbit ID. If you're operating a star or galaxy,
 the Urbit HD Wallet allows you to implement a multi-tier key custody scheme.
 
-If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP
-8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
+If you're interested, you can read the spec here: [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
 
-### What is a master ticket? {#master-ticket}
+### What is a master ticket? {% #master-ticket %}
 
 The "master ticket" is the cryptographic seed from which your other Urbit ID keys are
 derived. It should be treated like a master password: **you should never share
@@ -38,7 +37,7 @@ hosted version of Bridge.
 If you're operating a planet, you can use your master ticket to authenticate
 with Bridge.
 
-### What is an ownership address? {#ownership-address}
+### What is an ownership address? {% #ownership-address %}
 
 An ownership address is an Ethereum address that owns one or more of your Urbit
 IDs. The Urbit Wallet Generator creates one [Urbit HD
@@ -47,11 +46,11 @@ identities. Using the ownership key associated with your ownership address, you
 can transfer identities to other people, meaning that it’s very important to
 store securely.
 
-### What are proxies? {#proxies}
+### What are proxies? {% #proxies %}
 
 See [Proxies](/using/id/proxies).
 
-### What are seeds? {#seeds}
+### What are seeds? {% #seeds %}
 
 All Ethereum key-pairs in the Urbit wallet system, including
 [proxies](/docs/glossary/proxies), are produced by 128-bit cryptographically
@@ -60,10 +59,9 @@ of an Ethereum wallet and are yours alone. An ownership key pair is derived from
 an ownership seed and, likewise, the various proxy key pairs are generated from
 their respective proxy seeds.
 
-For detailed information see the [Urbit HD Wallet Spec (UP
-8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
+For detailed information see the [Urbit HD Wallet Spec (UP 8)](https://github.com/urbit/proposals/blob/master/008-urbit-hd-wallet).
 
-### What does it mean to “set public keys”? {#set-public-keys}
+### What does it mean to “set public keys”? {% #set-public-keys %}
 
 This means registering the public keys of your identity's encryption and
 authentication key pairs (together known as "networking keys") with Urbit ID /
@@ -75,13 +73,13 @@ You want to reset these keys if they are compromised, or if your ship has sunk.
 This is of little practical significance today, but resetting your networking
 keys resets your relationship with other ships on the network.
 
-### What do I do if I want to own multiple identities? {#multiple-points}
+### What do I do if I want to own multiple identities? {% #multiple-points %}
 
 We recommend using a different HD Wallet for each identity. You are able to
 assign any number of identities to a single Ethereum address, however, since
 they are just ERC-721 tokens.
 
-### How should I take care of my Urbit HD Wallet? {#custody}
+### How should I take care of my Urbit HD Wallet? {% #custody %}
 
 Urbit IDs have accompanying security realities that must be taken seriously. The
 responsibility for keeping cryptographic assets safe rests fully with the party
@@ -161,4 +159,3 @@ exposes a much larger attack surface to malicious actors.
 
 For all of these reasons, if you use Tier 3 methods, use them only for the
 storage of low-value secrets.
-

@@ -8,9 +8,11 @@ grant_category = ["App Dev - Other"]
 image = ""
 description = "Urbit client for the Clojure programming language"
 reward = "3 stars"
+champion = "~littel-wolfur"
 assignee = "~sorted-falnyd"
-id = ""
+grant_id = "P0092"
 completed = false
+canceled = false
 link = ""
 +++
 
