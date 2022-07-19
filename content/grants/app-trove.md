@@ -1,6 +1,6 @@
 +++
 title = "Trove: group file drive"
-date = ""
+date = "2022-07-18"
 
 [taxonomies]
 grant_type = [ "Bounty" ]
@@ -11,10 +11,11 @@ image = ""
 description = "A shared file drive allowing the upload of files to an S3 bucket or IPFS and the ability to organize the file links in folders."
 reward = "2 stars ($4k bonus if done by Assembly)"
 assignee = ""
-id = ""
+grant_id = "B0164"
 champion = "Holium"
 completed = false
-work_request_link = ""
+work_request_link = "
+https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0164&prefill_Grant+Name=Trove"
 +++
 
 ## Rationale

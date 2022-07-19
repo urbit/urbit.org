@@ -1,5 +1,5 @@
 +++
-title = "Minesweeper: Every OS needs it"
+title = "Minesweeper"
 date = "2022-07-18"
 
 [taxonomies]
@@ -11,10 +11,10 @@ image = ""
 description = "A redesigned version of minesweeper where all of the game logic is written in hoon"
 reward = "1 star ($2k if done by assembly)"
 assignee = ""
-id = ""
+grant_id = "B0163"
 champion = "Holium"
 completed = false
-work_request_link = ""
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0163&prefill_Grant+Name=Minesweeper"
 +++
 
 ## Rationale

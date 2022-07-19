@@ -1,5 +1,5 @@
 +++
-title = "Chronicle: News app that surfaces links from group channels"
+title = "Chronicle: News app"
 date = "2022-07-18"
 
 [taxonomies]
@@ -11,10 +11,11 @@ image = ""
 description = "Chronicle is a news app that links all articles from group channels"
 reward = "2 stars ($4k bonus if done by Assembly)"
 assignee = ""
-id = ""
+grant_id = "B0161"
 champion = "Holium"
 completed = false
-work_request_link = ""
+work_request_link = "
+https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0161&prefill_Grant+Name=Chronicle"
 +++
 
 ## Rationale
