@@ -85,7 +85,7 @@ export default function Home({ posts, events, grantNumbers, search }) {
         }
         <Section narrow>
           <div className="flex items-center pb-12">
-            <h2 className="m-0 p-0 mr-4">Grants</h2>
+            <h2 className="m-0 p-0 mr-4">Grants Program</h2>
           </div>
           <div className="flex flex-col md:flex-row w-full items-center md:items-start bg-green-100 px-8 py-8 rounded-xl">
             <div className="flex items-center flex-col p-4 w-full">
