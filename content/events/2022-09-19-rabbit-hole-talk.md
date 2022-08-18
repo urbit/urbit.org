@@ -5,7 +5,7 @@ ends = "2022-09-19T20:00:00"
 timezone = "America/New_York"
 location = "The LAB Miami, 400 NW 26th St, Miami, FL 33127, United States"
 registration_url = "https://00rf5q21xy2.typeform.com/urbit?typeform-source=www.coinfund.io"
-description = "Urbit and bobs"
+description = "Urbits and bobs"
 dark = false
 
 [[hosts]]
