@@ -7,6 +7,7 @@ import {
   Section,
 } from "@urbit/foundation-design-system";
 import { useState } from "react";
+import ob from "urbit-ob";
 import Sigil from "../../components/Sigil";
 
 export default function SigilGenerator({ search }) {
@@ -97,7 +98,7 @@ export default function SigilGenerator({ search }) {
             </div>
             <div className="rounded-xl overflow-hidden">
               <Sigil
-                patp={patp}
+                patp={ob.isValidPatp(patp) ? patp : "~wolref-podlex"}
                 size="500"
                 color={
                   /^#[0-9A-F]{6}$/i.test(background) ? background : "#24201E"
