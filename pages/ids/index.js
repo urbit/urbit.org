@@ -29,17 +29,17 @@ export default function SigilGenerator({ search }) {
                   type="text"
                   onChange={(e) => setPatp(e.target.value)}
                   value={patp}
-                  className="h-full min-w-0 p-4 text-white"
+                  className="h-full min-w-0 p-4 bg-white text-black border-l"
                 />
               </div>
               <div className="flex space-x-2 items-center border w-full justify-between max-w-sm rounded-xl pl-2 overflow-hidden my-4">
                 <p className="h-full w-36 font-bold">Background</p>
-                <div className="flex bg-black text-white border p-3 min-w-0 items-center space-x-2">
+                <div className="flex bg-white text-black border-l p-3 min-w-0 items-center space-x-2">
                   <input
                     type="text"
                     onChange={(e) => setBackground(e.target.value)}
                     value={background}
-                    className="min-w-0"
+                    className="min-w-0 bg-white text-black"
                   />
                   <input
                     type="color"
@@ -49,18 +49,18 @@ export default function SigilGenerator({ search }) {
                         : "#24201E"
                     }
                     onChange={(e) => setBackground(e.target.value)}
-                    className="h-8 w-8"
+                    className="h-8 w-8 bg-white text-black"
                   />
                 </div>
               </div>
               <div className="flex space-x-2 items-center border w-full justify-between max-w-sm rounded-xl pl-2 overflow-hidden">
                 <p className="h-full w-36 font-bold">Foreground</p>
-                <div className="flex bg-black text-white border p-3 min-w-0 items-center space-x-2">
+                <div className="flex bg-white text-black border-l p-3 min-w-0 items-center space-x-2">
                   <input
                     type="text"
                     onChange={(e) => setForeground(e.target.value)}
                     value={foreground}
-                    className="min-w-0"
+                    className="min-w-0 bg-white text-black"
                   />
                   <input
                     type="color"
@@ -70,7 +70,7 @@ export default function SigilGenerator({ search }) {
                         : "#ffffff"
                     }
                     onChange={(e) => setForeground(e.target.value)}
-                    className="h-8 w-8"
+                    className="h-8 w-8 bg-white text-black"
                     style={{ WebkitAppearance: "text" }}
                   />
                 </div>
