@@ -12,11 +12,19 @@ export const foregroundFromBackground = (background) => {
   return whiteBrightness - brightness < 50 ? "black" : "white";
 };
 
-export const Sigil = ({ patp, size, color = "#24201E", icon }) => {
+export const Sigil = ({
+  patp,
+  size,
+  color = "#24201E",
+  foregroundColor = false,
+  icon,
+}) => {
   if (patp.length > 14) {
     return <div />;
   }
-  const foreground = foregroundFromBackground(color);
+  const foreground = foregroundColor
+    ? foregroundColor
+    : foregroundFromBackground(color);
   return (
     <div
       className={icon ? "p-1" : ""}
