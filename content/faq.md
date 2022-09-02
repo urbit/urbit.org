@@ -136,15 +136,17 @@ Thus, while Urbit is probably more secure and private than most digital communic
 
 ### What are the different types of grants? {% #grants-1 %}
 
-There are three ways to receive a [grant of stars](https://grants.urbit.org/) for your contribution to the Urbit ecosystem.
+There are three ways to receive a [grant of stars](https://urbit.org/grants) for your contribution to the Urbit ecosystem.
 
 - You can submit a **Proposal** if you’re interested in working on a project of your own creation for a number of stars that you pitch.
-- You can apply to claim a **Bounty.** Bounties are requests for work created by Tlon that are claimable by the public, with a predetermined number of stars as the reward.
-- The **Gifts** program, which is Tlon’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
+- You can apply to claim a **Bounty.** Bounties are requests for work created by either the Urbit Foundation or other Urbit companies that are claimable by the public, with a predetermined number of stars as the reward.
+- You can apply for an **Apprenticeship** for the opportunity to learn under a Mentor who is experienced with the Urbit system.
+
+The **Gifts** program, which is the Urbit Foundation’s informal way of rewarding contributions that don’t fall into the above categories. There is no way to apply for a gift.
 
 ### How do I get a gift? {% #grants-2 %}
 
-Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of employees at Tlon. Nothing is guaranteed, but you can get an idea for what kinds of contributions results in gifts by looking at the [gifts history](https://grants.urbit.org/history).
+Make useful and substantial contributions to Urbit. These can be contributions to the project itself, or they can be outside tools that aren’t part of the Urbit codebase. There’s no formal system for determining who gets a gift; it’s at the discretion of the Urbit Foundation staff. Nothing is guaranteed, but if you know of someone who deserves a gift, [submit their @p here](https://airtable.com/shrQFgyiCvRqCx3fu) along with why you think they should get a gift.
 
 ### How often are gifts awarded? {% #grants-3 %}
 
@@ -152,11 +154,11 @@ Gifts are awarded semiannually.
 
 ### Do gifts follow a set size? {% #grants-31 %}
 
-Gifts do follow a structure. A gift can be in one of three categories of sizes: Gold, Silver, or Bronze. Gold gifts award the most stars, Bronze gifts award the least. These categories don't correspond to a set number of stars being awarded. That number will likely change as the project matures and star values increase. That's why you see many more stars being awarded as the earliest gifts in the [history section.](https://grants.urbit.org/history)
+Gifts do follow a structure. A gift can be in one of three categories of sizes: Gold, Silver, or Bronze. Gold gifts award the most stars, Bronze gifts award the least. These categories don't correspond to a set number of stars being awarded. That number will likely change as the project matures and star values increase. 
 
 ### What happens if a user does not complete a proposal but meets some milestones? {% #grants-4 %}
 
-You must complete the proposal to be guaranteed to receive the star grant. Partial star payouts can be negotiated for incomplete work, but such payouts are at the discretion of Tlon.
+You must complete the proposal to be guaranteed to receive the star grant. Partial star payouts can be negotiated for incomplete work, but such payouts are at the discretion of the Urbit Foundation.
 
 However, either party may terminate a proposal on seven days’ written notice. In such a scenario, you may be paid pro rata for any portion of the proposal that has been completed.
 
@@ -170,7 +172,7 @@ Yes. In the United States, stars are considered to be income. If you are America
 
 ### Can I create a bounty? {% #grants-7 %}
 
-No. Bounties are only created by Tlon, but we draw inspiration for bounties from various sources, including the community. If you want to pitch a project, use the Proposals system.
+Yes, with some conditions. Bounties are for work that you would like to see completed and are able to help fund. The intent is to line developers up with entrepreneurs and Urbit companies, similar to listing contract work. If you want to pitch a project, use the Proposals system. On a case-by-case basis the Urbit Foundation may also assist in funding bounties that have high value to the network and a strong chance of success.
 
 ### How are proposals approved? {% #grants-8 %}
 
@@ -178,7 +180,7 @@ The manager of the Grants program approves them after consulting with the releva
 
 ### If I win a proposal, do I have an exclusive claim on the project? {% #grants-9 %}
 
-You have a claim to the reward of the project as long as milestones are met to the satisfaction of Tlon. However, Tlon may allow another developer to work on the same project in parallel, for a separate reward.
+You have a claim to the reward of the project as long as milestones are met to the satisfaction of the Urbit Foundation. However, the Urbit Foundation may allow another developer to work on the same project or a similar project in parallel, for a separate reward.
 
 ### Will milestones be embedded in a smart contract? {% #grants-10 %}
 
@@ -194,7 +196,7 @@ We will pay you within a 30-day window.
 
 ### Can I see the proposals of others that have been accepted? {% #grants-13 %}
 
-Yes. Check out our [proposals page.](https://grants.urbit.org/proposals)
+Yes. Check out our [grants page](https://urbit.org/grants) where you can see active and completed proposals, as well as bounties and apprenticeships.
 
 ### How do I safely store my stars? {% #grants-14 %}
 
@@ -202,23 +204,21 @@ We recommend storing each star in its own Ethereum wallet. The private keys to t
 
 ### Can I delegate a bounty or proposal to someone else? {% #grants-15 %}
 
-No, not unless explicitly authorized by Tlon.
+No, not unless explicitly authorized by the Urbit Foundation.
 
 ### Do I need to sign a contract? {% #grants-16 %}
 
 After you are approved to work on a bounty or a proposal, you will be sent a contract that you'll need to sign. You don't need to sign a contract to receive a gift, though.
 
-Here are a few important points from the bounty and proposal contracts:
+Here are a few important points from the grant contracts:
 
 - **Intellectual property:** You agree to commit all intellectual property you create in connection with the relevant bounty or proposal. You agree that you won’t incorporate any IP that is licensed in a conflicting way.
 
 - **No conflicts:** You agree that you are not subject to any restrictions that would interfere with your ability to complete the bounty or proposal.
 
-- **No employment relationship:** You agree that being approved for the grant or bounty does not imply any employment relationship with Tlon.
+- **No employment relationship:** You agree that being approved for the grant or bounty does not imply any employment relationship with the Urbit Foundation.
 
-- **Termination:** Either party (you or Tlon) can terminate the agreement on seven days' written notice. If that happens, you may be compensated _pro rata_ for the amount of work you've completed, but this compensation is at the sole discretion of Tlon.
-
-- **Governing law:** The agreement is governed by the laws of the State of California.
+- **Termination:** Either party (you or the Urbit Foundation) can terminate the agreement on seven days' written notice. If that happens, you may be compensated _pro rata_ for the amount of work you've completed, but this compensation is at the sole discretion of the Urbit Foundation.
 
 Note that these paraphrased points are just for summarization purposes. The language in contract that you receive and sign is the only source of authority for the grant agreement.
 
@@ -228,9 +228,7 @@ Note that these paraphrased points are just for summarization purposes. The lang
 
 Urbit started back in 2002 as Curtis Yarvin’s personal project. Curtis developed the original prototype for Urbit and, separately, wrote a blog on history and politics under the pen name ‘Mencius Moldbug’.
 
-In early 2019, Curtis left Tlon and the Urbit project. He gave Tlon all of his
-voting interest in the network (his galaxies), and he no longer owns any Tlon
-stock. He retains a non-voting, minority interest in the address space — but is not involved in the day-to-day development or operations.
+In early 2019, Curtis left Tlon and the Urbit project. He gave Tlon all of his voting interest in the network (his galaxies), and he no longer owns any Tlon stock. He retains a non-voting, minority interest in the address space — but is not involved in the day-to-day development or operations.
 
 Curtis laid the foundation for Urbit by delivering its first prototype but, since 2013, it has been refined and almost entirely rewritten by a community of developers. No one working on Urbit today had anything to do with Curtis’s writing. For the most part, we couldn’t be less interested in it.
 
