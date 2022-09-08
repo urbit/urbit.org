@@ -118,11 +118,15 @@ A fully functional social task manager CLI.
 
 ### Milestone 3
 
-Expected Completion: September 16th
+Expected Completion: September 21st
+Payment: 2 stars (1 for back-end API (~niblyx-malnus), 1 for front-end (~randes-losrep))
 
-Payment: 1 star
+A basic but compelling front-end prototype to showcase at Assembly 2022. A working interactive browser analog of the current CLI. Focused on getting the backend hooked up to the frontend and providing a minimum viable product. The main view will be the "hierarchical/nested" view in which projects and goals can be viewed and explored.
 
-- A basic Sail frontend.
-- Ability to reference an arbitrary graph-store node or set of nodes to capture context which triggered the creation of the goal.
-- Ability to have threaded comments on goals.
-- Other such integrations with Groups which will probably become more obvious to me as I become more familiar with this part of user space.
+#### User Stories
+I can create projects and update/delete them
+I can create goals and update/delete them
+I can nest goals beneath one another
+I can mark goals as complete or incomplete 
+I can collapse/uncollapse any hierarchy of goals or projects
+I can filter out completed/uncompleted goals
