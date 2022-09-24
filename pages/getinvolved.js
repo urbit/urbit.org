@@ -31,7 +31,7 @@ export default function Blog({ posts, search }) {
       <SingleColumn>
         <Header search={search} />
         <Section>
-          <h1 className="pb-16">Getting Started With Urbit</h1>
+          <h1 className="pb-16">Getting Involved With Urbit</h1>
           <div className="">
 
           <p className="text-md">
