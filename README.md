@@ -56,3 +56,8 @@ We deploy using Vercel. All pull requests will show a deployment preview via the
 ## Upgrades
 
 The `/scripts` contains scripts used to programmatically upgrade site content data.
+
+## Urbit System Diagram
+![Screenshot from 2022-09-24 13-31-05](https://user-images.githubusercontent.com/30054030/192113582-24cd3fef-8f13-46e6-a85f-fbd994d57650.png)
+
+
