@@ -47,8 +47,9 @@ export default function Home({
           // Hero Statement
         }
         <Section className="pb-36">
-          <div>
+          <div className="space-y-8">
             <h1>A clean-slate OS and network for the 21st&nbsp;century.</h1>
+            <Link href="/trial" passHref><a className="bg-green-400 text-white button-lg max-w-fit">Explore the Network</a></Link>
           </div>
         </Section>
         {
