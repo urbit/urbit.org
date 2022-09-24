@@ -35,7 +35,7 @@ export default function Blog({ posts, search }) {
           <div className="">
 
           <p className="text-md">
-	         • <Link href="https://developers.urbit.org/courses">Take a course on hoon</Link>
+	         • <Link href="https://developers.urbit.org/courses">Take a course on Hoon</Link>
           </p>
           <p className="text-md">
             • <Link href="/grants/proposals">Submit a grant proposal</Link>
@@ -43,7 +43,9 @@ export default function Blog({ posts, search }) {
           <p className="text-md">
             • <Link href="https://urbit.org/grants?type=Bounty#view-grants">Pick up an open bounty</Link>
           </p>
-
+          <p className="text-md">
+            • <Link href="https://developers.urbit.org/guides/quickstart/intro">Build an app</Link>
+          </p>
 
           </div>
         </Section>
