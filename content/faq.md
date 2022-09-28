@@ -244,7 +244,7 @@ One day we’d really like the Urbit ID registry to be hosted on [Urbit OS](#wha
 
 ### Why is Hoon so weird? {% #why-hoon %}
 
-There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](/docs/glossary/hoon), for the most part, is weird by design, but there are a few things about it we’d like to clean up. For a complete description of why we created Hoon, see the [Hoon overview](/docs/hoon/overview).
+There are things about Urbit that are weird by design, and some that are weird because we haven’t gotten around to cleaning them up. [Hoon](/docs/glossary/hoon), for the most part, is weird by design, but there are a few things about it we’d like to clean up. For a complete description of why we created Hoon, see the [Hoon overview](/blog/why-hoon).
 
 The runes are, once you get the hang of them, pretty nice. Your mileage may vary, of course, but many talented engineers have spent many, many hours writing Hoon. It’s a simple, practical language. But the learning curve can be a bit high.
 
