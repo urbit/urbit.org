@@ -3,8 +3,7 @@ title = "Devcon Bogotá: Urbit Meetup Colombia"
 starts = "2022-10-13T20:00:00"
 ends = "2022-10-13T23:00:00"
 timezone = "America/Bogota"
-location = "Cra. 8 #66-18
-Carrera 8 #66-18 · Bogotá"
+location = "Cra. 8 #66-18 Carrera 8 #66-18 · Bogotá"
 registration_url = "https://www.meetup.com/urbit-sf/events/288827515/"
 description = "Devcon Urbit Meetup"
 dark = false
