@@ -13,47 +13,35 @@ const foregroundFromBackground = (background) => {
   return whiteBrightness - brightness < 50 ? "black" : "white";
 };
 
-const Sigil = ({ patp, size, color = "#24201E", icon }) => {
-  if (patp.length > 14) {
-    return <div />;
-  }
-  const foreground = foregroundFromBackground(color);
-  return (
-    <div
-      className={icon ? "p-1" : ""}
-      style={{ backgroundColor: icon ? color || "black" : "transparent" }}
-    >
-      {sigil({
-        patp: patp,
-        renderer: stringRenderer,
-        size: icon ? size / 2 : size,
-        colors: [color, foreground],
-        icon: icon || false,
-      })}
-    </div>
-  );
-};
-
 export default (req, res) => {
-  const foreground = foregroundFromBackground(
-    `#${req.query.color || "24201E"}`
-  );
+  const foreground = req?.query?.foreground
+    ? `#${req?.query?.foreground}`
+    : foregroundFromBackground(`#${req.query.color || "24201E"}`);
+  const { patp = "~zod", color = "24201E", filetype = "png" } = req?.query;
   const svg = sigil({
-    patp: req.query.patp,
+    patp: patp,
     renderer: stringRenderer,
     size: 1024,
-    colors: [`#${req.query.color || "24201E"}`, foreground],
+    colors: [`#${color}`, foreground],
     icon: false,
   });
   const svgDataString = "data:image/svg+xml," + svg;
-  const canvas = createCanvas(1024, 1024);
+  const canvas = createCanvas(
+    1024,
+    1024,
+    filetype === "svg" ? "svg" : undefined
+  );
   const ctx = canvas.getContext("2d");
   const canvasImage = new Image();
   canvasImage.src = svgDataString;
   ctx.drawImage(canvasImage, 0, 0);
-  const buffer = canvas.toBuffer();
+  const buffer =
+    filetype === "png" ? canvas.toBuffer() : canvas.toBuffer("image/svg+xml");
   res.writeHead(200, {
-    "Content-Type": "image/png",
+    "Content-Type": filetype === "png" ? "image/png" : "image/svg+xml",
+    ...(filetype === "svg" && {
+      "Content-Disposition": `attachment; filename=${patp}.svg`,
+    }),
     "Content-Length": buffer.length,
   });
   res.end(buffer, "binary");
