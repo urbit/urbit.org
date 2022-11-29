@@ -36,6 +36,12 @@ export default function Bitcoin({ search, posts, data, markdown, events }) {
                             <p>Sound digital money and sound computing need each other to achieve a free and prosperous future, and Urbit and Bitcoin's common paradigm of long-termism and self-sovereignty will get us there. Check out the resources on this page to learn about current Lightning Network development on Urbit and join the Urbitcoiner community.</p>
                         </div>
                         <div className="mt-32">
+                            <h2 className="mb-8" id="title">{data.title}</h2>
+                            <div className="markdown">
+                                <Markdown.render content={JSON.parse(markdown)} />
+                            </div>
+                        </div>
+                        <div className="mt-32">
                             <h2 className="mb-8" id="blog">Blog Posts</h2>
                             <TwoUp>
                                 <PostPreview post={posts[0]} key={posts[0].slug} />
@@ -58,12 +64,6 @@ export default function Bitcoin({ search, posts, data, markdown, events }) {
                                     View All
                                 </a>
                             </Link>
-                        </div>
-                        <div className="mt-32">
-                            <h2 className="mb-8" id="title">{data.title}</h2>
-                            <div className="markdown">
-                                <Markdown.render content={JSON.parse(markdown)} />
-                            </div>
                         </div>
                     </div>
                     <TableOfContents markdown={false} />
