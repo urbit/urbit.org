@@ -11,7 +11,7 @@ image = ""
 description = "Keep: Arbitrary Agent State Restoration Agent + Wrapper"
 reward = "6 star"
 assignee = ["~wicrum-wicrun", "~sogrum-savluc"]
-grant_id = ""
+grant_id = "P0184"
 champion = ["~rabsef-bicrym"]
 completed = false
 +++
