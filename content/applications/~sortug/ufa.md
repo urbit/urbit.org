@@ -1,6 +1,6 @@
 +++
 title = "Urbit Feed Aggregator"
-shortcode = "~hoster-dozzod-sortug/ufa"
+shortcode = "~dister-dozzod-sortug/ufa"
 license = "MIT"
 image = "https://s3.urbit.cloud/img/lan.png"
 bgColor = "#000000"

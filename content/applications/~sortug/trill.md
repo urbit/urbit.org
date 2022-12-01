@@ -1,6 +1,6 @@
 +++
 title = "Trill"
-shortcode = "~hoster-dozzod-sortug/trill"
+shortcode = "~dister-dozzod-sortug/trill"
 license = "MIT"
 image = "https://s3.urbit.cloud/img/trill-logo.png"
 bgColor = "#000000"
