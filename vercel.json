@@ -4,6 +4,10 @@
   },
   "redirects": [
     {
+    "source": "/groups/~wolref-podlex/foundation",
+    "destination": "/groups/~halbex-palheb/uf-public"
+    },
+    {
      "source": "/docs/getting-started",
      "destination": "/getting-started"
     },
