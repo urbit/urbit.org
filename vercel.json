@@ -4,28 +4,28 @@
   },
   "redirects": [
     {
-    "source": "/groups/~wolref-podlex/foundation",
-    "destination": "/groups/~halbex-palheb/uf-public"
+      "source": "/groups/~wolref-podlex/foundation",
+      "destination": "/groups/~halbex-palheb/uf-public"
     },
     {
-     "source": "/docs/getting-started",
-     "destination": "/getting-started"
+      "source": "/docs/getting-started",
+      "destination": "/getting-started"
     },
     {
-     "source": "/getinvolved",
-     "destination": "https://developers.urbit.org/blog/get-involved"
+      "source": "/getinvolved",
+      "destination": "https://developers.urbit.org/blog/get-involved"
     },
     {
-     "source": "/getting-started/server",
-     "destination": "/getting-started/cli"
+      "source": "/getting-started/server",
+      "destination": "/getting-started/cli"
     },
     {
-     "source": "/applications",
-     "destination": "/ecosystem?type=applications"
+      "source": "/applications",
+      "destination": "/ecosystem?type=applications"
     },
     {
-     "source": "/understanding-urbit/:path*",
-     "destination": "/overview/:path*"
+      "source": "/understanding-urbit/:path*",
+      "destination": "/overview/:path*"
     },
     {
       "source": "/blog/layer-2-guides",
@@ -97,23 +97,23 @@
       "permanent": true
     },
     {
-      "source": "/install/mac/latest",
-      "destination": "https://github.com/urbit/urbit/releases/latest/download/darwin.tgz",
-      "permanent": true
-    },
-    {
-      "source": "/install/linux64/latest",
-      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux64.tgz",
-      "permanent": true
-    },
-    {
       "source": "/install/linux-aarch64/latest",
       "destination": "https://github.com/urbit/urbit/releases/latest/download/linux-aarch64.tgz",
       "permanent": true
     },
     {
-      "source": "/install/windows/latest",
-      "destination": "http://github.com/urbit/urbit/releases/latest/download/windows.tgz",
+      "source": "/install/linux-x86_64/latest",
+      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux-x86_64.tgz",
+      "permanent": true
+    },
+    {
+      "source": "/install/macos-aarch64/latest",
+      "destination": "https://github.com/urbit/vere/releases/latest/download/macos-aarch64.tgz",
+      "permanent": true
+    },
+    {
+      "source": "/install/macos-x86_64/latest",
+      "destination": "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
       "permanent": true
     },
     {
