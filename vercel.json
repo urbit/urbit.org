@@ -98,12 +98,12 @@
     },
     {
       "source": "/install/linux-aarch64/latest",
-      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux-aarch64.tgz",
+      "destination": "https://github.com/urbit/vere/releases/latest/download/linux-aarch64.tgz",
       "permanent": true
     },
     {
       "source": "/install/linux-x86_64/latest",
-      "destination": "https://github.com/urbit/urbit/releases/latest/download/linux-x86_64.tgz",
+      "destination": "https://github.com/urbit/vere/releases/latest/download/linux-x86_64.tgz",
       "permanent": true
     },
     {
