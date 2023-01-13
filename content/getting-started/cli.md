@@ -39,7 +39,7 @@ download the Urbit runtime:
 
 {% tabs %}
 
-{% tab label="Linux (`aarch64`)" %}
+{% tab label="Linux AArch64" %}
 
 ```shell
 curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./urbit
@@ -55,7 +55,7 @@ curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./
 
 {% /tab %}
 
-{% tab label="Linux (`x86_64`)" %}
+{% tab label="Linux x86_64" %}
 
 ```shell
 curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --strip=1 && ./urbit
@@ -71,7 +71,7 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --strip=1 && ./u
 
 {% /tab %}
 
-{% tab label="macOS (`aarch64`)" %}
+{% tab label="macOS AArch64" %}
 
 ```bash
 curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./urbit
@@ -86,7 +86,7 @@ curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./
 
 {% /tab %}
 
-{% tab label="macOS (`x86_64`)" %}
+{% tab label="macOS x86_64" %}
 
 ```bash
 curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk --strip=1 && ./urbit
