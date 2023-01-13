@@ -42,7 +42,7 @@ download the Urbit runtime:
 {% tab label="Linux AArch64" %}
 
 ```shell
-curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk && ./urbit
+curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 > Linux users may need to run this command in another terminal window to access
@@ -58,7 +58,7 @@ curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk && ./urbit
 {% tab label="Linux x86_64" %}
 
 ```shell
-curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk && ./urbit
+curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 > Linux users may need to run this command in another terminal window to access
@@ -74,7 +74,7 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk && ./urbit
 {% tab label="macOS AArch64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk && ./urbit
+curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 > Note this build is only compatible with Apple Silicon (M1/M2) via Rosetta.
@@ -89,7 +89,7 @@ curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk && ./urbit
 {% tab label="macOS x86_64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk && ./urbit
+curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk --strip=1 && ./urbit
 ```
 
 {% /tab %}
