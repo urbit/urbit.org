@@ -270,7 +270,7 @@ start your ship with the following and you'll be on the latest runtime version:
 >
 > ```shell
 > sudo apt-get install libcap2-bin
-> sudo setcap 'cap_net_bind_service=+ep' ./urbit
+> sudo setcap 'cap_net_bind_service=+ep' <pier>/.run
 > ```
 
 If you've been running Urbit for a while (from before runtime version 1.9) 
