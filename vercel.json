@@ -12,6 +12,10 @@
       "destination": "/getting-started"
     },
     {
+      "source": "/getting-started/desktop",
+      "destination": "/blog/2023-01-18-focusing-the-runtime"
+    },
+    {
       "source": "/getinvolved",
       "destination": "https://developers.urbit.org/blog/get-involved"
     },
