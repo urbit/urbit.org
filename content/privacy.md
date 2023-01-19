@@ -6,7 +6,7 @@ index = "true"
 
 ## Scope of this Privacy Policy {% #scope %}
 
-Tlon Corporation ('Tlon,' 'we,' 'our,' and/or 'us') values the privacy of individuals who use Urbit software, our websites, and related services (collectively, our 'Services'). This privacy policy (the 'Privacy Policy') explains how we collect, use, and share information from users of our Services ('Users'). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. Beyond the Privacy Policy, your use of our Services is also subject to our Terms of Service.
+The Urbit Foundation ('UF,' 'we,' 'our,' and/or 'us') values the privacy of individuals who use Urbit software, our websites, and related services (collectively, our 'Services'). This privacy policy (the 'Privacy Policy') explains how we collect, use, and share information from users of our Services ('Users'). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes. Beyond the Privacy Policy, your use of our Services is also subject to our Terms of Service.
 
 ### Information we collect
 
@@ -14,7 +14,7 @@ We may collect a variety of information from or about you or your devices from v
 
 ### Information you provide to us
 
-_Address Space Information._ When you acquire Urbit address space from Tlon, you provide us with certain information, such as your name and email. You may also provide us with your Ethereum wallet address and public key.
+_Address Space Information._ When you acquire Urbit address space from the UF, you provide us with certain information, such as your name and email. You may also provide us with your Ethereum wallet address and public key.
 
 _Communications._ If you contact us directly, we may receive additional information about you. For example, when you chat with us in Urbit or contact support, we may receive your email address, the contents of a message or attachments that you may send to us, and other information you choose to provide.
 
@@ -64,7 +64,7 @@ _Do Not Track._ There is no accepted standard on how to respond to Do Not Track 
 
 ### Third parties
 
-The Services may contain links to other websites, products, or services that Tlon does not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy will not apply to your activities or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.
+The Services may contain links to other websites, products, or services that UF does not own or operate. We are not responsible for the privacy practices of these third parties. Please be aware that this Privacy Policy will not apply to your activities or any information you disclose to these third parties. We encourage you to read their privacy policies before providing any information to them.
 
 ### Security
 
@@ -86,4 +86,4 @@ We will post any adjustments to the Privacy Policy on this page, and the revised
 
 Tlon is responsible for processing your information. If you have any questions, comments, or concerns about our processing activities, please email us at [privacy@tlon.io](mailto:privacy@tlon.io).
 
-_Last Updated:_ September 12, 2018
+_Last Updated:_ January 19, 2023
