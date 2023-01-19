@@ -1,6 +1,6 @@
 +++
 title = "Get a planet"
-weight = 1
+weight = 4
 description = "How to acquire a planet, or an Urbit ID"
 tag = "additional"
 +++

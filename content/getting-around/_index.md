@@ -1,7 +1,7 @@
 +++
 title = "Getting around"
 description = "Get around your urbit"
-weight = 4
+weight = 1
 +++
 
 ### 1. Get oriented

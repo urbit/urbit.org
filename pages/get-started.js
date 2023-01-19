@@ -13,31 +13,7 @@ import Meta from "../components/Meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// Probably should make a core component, just pulling from operators.urbit.org for this one
-function GuideCard({ title, description, href, className }) {
-  return (
-    <div
-      className={"bg-wall-100 rounded-xl cursor-pointer h-full " + className}
-    >
-      <div className="p-8 measure flex justify-between flex-col">
-        <div className="flex flex-col space-y-2">
-          <h4 className="mb-2">{title}</h4>
-          {description}
-        </div>
-        <Link href={href}>
-          <a
-            passHref
-            className="bg-green-400 text-white rounded-lg flex justify-center p-3 w-20 mt-4 min-w-fit"
-          >
-            Get Started
-          </a>
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-export default function GettingStarted({ search, featuredGroups }) {
+export default function GettingStarted({ search }) {
   const post = {
     title: "Getting Started",
     description:
