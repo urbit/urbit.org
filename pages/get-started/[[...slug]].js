@@ -9,9 +9,9 @@ import {
   TwoUp,
   getPostBySlug,
 } from "@urbit/foundation-design-system";
-import Meta from "../components/Meta";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Meta from "../../components/Meta";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function GettingStarted({ search }) {
   const post = {
@@ -47,23 +47,23 @@ export default function GettingStarted({ search }) {
             </div>
           </div>
 
-          <div className="pt-16 grid sm:grid-cols-3 grid-flow-row gap-8">
+          <div className="pt-24 grid sm:grid-cols-3 grid-flow-row gap-8">
             <div className="space-y-2">
               <p className="font-bold text-lg">Trial Hosting</p>
               <p className="text-sm">Check out the network with 24 hours of complimentary hosting with a temporary Urbit ID.</p>
-              <p className="text-sm"><Link href="#"><a className="text-green-400">Begin hosting trial -&gt;</a></Link></p>
+              <p className="text-sm"><Link href="/trial"><a className="text-green-400">Begin hosting trial -&gt;</a></Link></p>
             </div>
 
             <div className="space-y-2">
               <p className="font-bold text-lg">Command line</p>
               <p className="text-sm">Run Urbit up locally or in the cloud by installing and configuring the runtime.</p>
-              <p className="text-sm"><Link href="#"><a className="text-green-400">View setup guide -&gt;</a></Link></p>
+              <p className="text-sm"><Link href="/get-started/cli"><a className="text-green-400">View setup guide -&gt;</a></Link></p>
             </div>
 
             <div className="space-y-2">
               <p className="font-bold text-lg">Hosted urbit</p>
               <p className="text-sm">Subscribe to a hosting provider for streamlined setup, technical support, and an urbit that’s accessible wherever you go.</p>
-              <p className="text-sm"><Link href="#"><a className="text-green-400">View providers -&gt;</a></Link></p>
+              <p className="text-sm"><Link href="/get-started/hosted"><a className="text-green-400">View providers -&gt;</a></Link></p>
             </div>
 
           </div>

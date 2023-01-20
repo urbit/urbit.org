@@ -22,7 +22,7 @@ export default function EcosystemSidebar() {
     const router = useRouter();
     let currentPath = router.asPath;
     return (
-        <div className="flex flex-col space-y-4 pr-24">
+        <div className="flex flex-col space-y-2 pr-24">
             <ActiveLink
                 currentPath={currentPath}
                 className="type-ui"

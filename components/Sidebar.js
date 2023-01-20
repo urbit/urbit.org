@@ -5,7 +5,7 @@ export default function Sidebar(props) {
   const [isOpen, setTray] = useState(false);
   return (
     <>
-      <div className="hidden md:flex flex-col h-full sticky top-8">
+      <div className="hidden md:flex h-full shrink-0 sticky top-8">
         <div className="overflow-y-auto">
           {props.children}
           <div className="pb-32" />

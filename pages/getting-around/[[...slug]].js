@@ -54,10 +54,8 @@ export default function GettingAround({ posts, data, markdown, search }) {
               Getting Around
             </div>
           </div>
-        </Section>
 
-        <Section>
-          <div className="flex justify-between sidebar md:space-x-8">
+          <div className="pt-24 flex sidebar sm:space-x-20">
             <Sidebar search={search}>
               {childPages("/getting-around", posts.pages)}
             </Sidebar>

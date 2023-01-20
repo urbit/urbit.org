@@ -48,8 +48,8 @@ export default function Header(props) {
       <nav className="items-center hidden md:flex">
         <ActiveLink
           currentPath={currentPath}
-          className="mr-5 text-green-400 type-ui button-text"
-          href="/getting-started"
+          className="mr-5 type-ui button-text"
+          href="/get-started"
         >
           Get Started
         </ActiveLink>
