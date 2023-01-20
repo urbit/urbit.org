@@ -12,27 +12,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import cn from 'classnames';
 
-const postReq = (path, params, method = 'post') => {
-  const form = document.createElement('form');
-  form.method = method;
-  form.action = path;
-
-  for (const key in params) {
-    if (params.hasOwnProperty(key)) {
-      const hiddenField = document.createElement('input');
-      hiddenField.type = 'hidden';
-      hiddenField.name = key;
-      hiddenField.value = params[key];
-
-      form.appendChild(hiddenField);
-    }
-  }
-
-  document.body.appendChild(form);
-  form.submit();
-}
-
-
 
 export default function Trial(props) {
   const post = {
@@ -40,20 +19,6 @@ export default function Trial(props) {
     description: "Get one day of a complimentary hosted moon: a temporary Urbit ID."
   };
 
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    fetch('https://api.shore.arvo.network/count', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
-    })
-      .then(res => res.json())
-      .then(data => {
-        setCount(data.count);
-      });
-  }, []);
-
-  const available = count > 0;
 
   return (
     <Container>
@@ -96,7 +61,6 @@ export default function Trial(props) {
                       name="EMAIL"
                       id="mce-EMAIL"
                       placeholder="your@email.com"
-                      onSubmit={handleSubmit}
                     />
                     <div className="flex h-12 items-center justify-center absolute top-0 right-6">
                       <button

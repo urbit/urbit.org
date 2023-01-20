@@ -105,7 +105,31 @@ export default function Trial(props) {
                 {!available && <p>Check back later!</p>}
               </div>
             </div>
+
           </div>
+
+          <h2 className="pt-12">Getting around your urbit</h2>
+          <div className="grid sm:grid-cols-3 grid-flow-row gap-8">
+            <div className="space-y-2">
+              <p className="font-bold text-lg">Overview</p>
+              <p className="text-sm">Get oriented and learn the basic functions in Landscape, the web-based urbit interface.</p>
+              <p className="text-sm"><Link href="/getting-around"><a className="text-green-400" target="_blank">View guide -&gt;</a></Link></p>
+            </div>
+
+            <div className="space-y-2">
+              <p className="font-bold text-lg">Joining groups</p>
+              <p className="text-sm">Learn how to discover and join groups for chatting and blogging.</p>
+              <p className="text-sm"><Link href="/getting-around/joining-groups"><a className="text-green-400"  target="_blank">View guide -&gt;</a></Link></p>
+            </div>
+
+            <div className="space-y-2">
+              <p className="font-bold text-lg">Installing apps</p>
+              <p className="text-sm">Discover and install 3rd-party applications on your urbit.</p>
+              <p className="text-sm"><Link href="/getting-around/installing-applications"><a className="text-green-400"  target="_blank">View guide -&gt;</a></Link></p>
+            </div>
+
+          </div>
+
         </Section>
       </SingleColumn>
       <Footer />
