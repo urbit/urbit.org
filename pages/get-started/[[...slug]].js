@@ -63,7 +63,7 @@ export default function GettingStarted({ search }) {
             <div className="space-y-2">
               <p className="font-bold text-lg">Hosted urbit</p>
               <p className="text-sm">Subscribe to a hosting provider for streamlined setup, technical support, and an urbit that’s accessible wherever you&nbsp;go.</p>
-              <p className="text-sm"><Link href="/get-started/hosted"><a className="text-green-400">View providers -&gt;</a></Link></p>
+              <p className="text-sm"><Link href="/hosted-urbit"><a className="text-green-400">View providers -&gt;</a></Link></p>
             </div>
 
           </div>
