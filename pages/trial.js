@@ -36,7 +36,7 @@ const postReq = (path, params, method = 'post') => {
 
 export default function Trial(props) {
   const post = {
-    title: "Explore the Network",
+    title: "Trial Hosting",
     description: "Get one day of a complimentary hosted moon: a temporary Urbit ID."
   };
 
@@ -67,59 +67,53 @@ export default function Trial(props) {
         <Section className="space-y-12">
           <h1>{post.title}</h1>
           {/* Flex between image and blurb, collapse to col on mobile */}
-          <div className="flex flex-col items-center space-y-4 xl:space-y-0 xl:flex-row xl:space-x-4">
-            <video className="max-w-md w-full min-w-0" autoPlay muted loop playsInline>
-              <source
-                src="https://storage.googleapis.com/media.urbit.org/site/explorethenetwork.webm"
-                type="video/webm"
-              />
-              <source
-                src="https://storage.googleapis.com/media.urbit.org/site/explorethenetwork.mp4"
-                type="video/mp4"
-              />
-            </video>
-            {/* Blurb is flexed to space button and copy */}
-            <div className="flex-col flex space-y-4">
-              <p>No downloads, no signup.</p>
-              <p>Get <span className="font-bold">one day</span> of a complimentary hosted moon: a temporary Urbit ID.</p>
-              {/* Button is flexed to space potential "try again later" copy */}
-              <div className="xl:space-x-4 space-y-4 xl:space-y-0 self-center xl:self-start w-full flex-col xl:flex-row flex items-center">
-                <a className={cn("p-8 button-lg text-white max-w-fit shrink-0", {
-                  "bg-green-400": available,
-                  "bg-wall-300 cursor-not-allowed": !available,
-                })}
-                  onClick={(e) => {
-                    e.stopPropagation();
-
-                    if (!available) {
-                      return
-                    }
-
-                    fetch('https://api.shore.arvo.network/enter', {
-                      method: 'GET',
-                      headers: { 'Content-Type': 'application/json' }
-                    })
-                      .then(res => {
-                        if (!res.ok) {
-                          throw 'Error response from shore api.';
-                        }
-                        return res.json();
-                      })
-                      .then(data => {
-                        postReq(data.url + '/~/login', { password: data.code, redirect: '/' });
-                      })
-                      .catch(e => setCount(0));
-                  }}
-                >
-                  {available ? 'Launch Moon' : 'No Moons Available'}
-                </a>
-                {!available && <p>Check back later!</p>}
-              </div>
+          <div className="flex flex-col sm:flex-row sm:space-x-8 items-center">
+            <div>
+              <img className="w-96" src="https://storage.googleapis.com/media.urbit.org/site/getting-started/trial-moon-preview.png"/>
             </div>
-          </div>
-          <div className="max-w-prose flex flex-col space-y-4">
-            <p>Moons are great for checking things out, but some groups may require a planet – a permanent Urbit ID.</p>
-            <p>Learn more about <Link href="/getting-started/get-planet"><a>getting a planet</a></Link>.</p>
+
+            {/* Blurb is flexed to space button and copy */}
+            <div className="flex-col flex space-y-4 align-center">
+              <p>Get one day of a complimentary temporary Urbit ID.</p>
+              <p>Please enter your email address to proceed.</p>
+
+              <form
+                action="https://urbit.us11.list-manage.com/subscribe/post?u=972a03db9e0c6c25bb58de8c8&amp;id=b124529a85&amp;f_id=00f711e1f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                className="validate form max-w-screen-sm"
+                target="_blank"
+                noValidate
+              >
+                <div className="input-group pt-6" id="mc_embed_signup_scroll">
+                  <div className="mc-field-group w-full relative">
+                    <input
+                      className={`appearance-none outline-none text-wall-500 bg-white black ${
+                        props.color || "border-wall-600"
+                      } border-2 px-3 w-full mb-2 h-12 rounded-xl`}
+                      type="email"
+                      name="EMAIL"
+                      id="mce-EMAIL"
+                      placeholder="your@email.com"
+                      onSubmit={handleSubmit}
+                    />
+                    <div className="flex h-12 items-center justify-center absolute top-0 right-6">
+                      <button
+                        id="mc-embedded-subscribe"
+                        className="text-green-400 bg-transparent"
+                        type="submit"
+                        name="subscribe"
+                      >
+                        {/* onClick={() => _paq.push(['trackEvent', 'Trial Hosting', 'Subscribe'])}> */}
+                        Next -&gt;
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
           </div>
         </Section>
       </SingleColumn>
@@ -127,3 +121,5 @@ export default function Trial(props) {
     </Container>
   );
 }
+
+
