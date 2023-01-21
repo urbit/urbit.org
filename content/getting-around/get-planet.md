@@ -26,11 +26,10 @@ Urbit is designed to be portable. This means that if you sign up for hosting now
 Using hosting does mean that you're trusting your provider with your data, but so long as you have your planet, you'll always own your identity.
 
 Current hosting providers are:
-
-- [UrbitHost](https://urbithost.com)
-- [escape pod store](https://www.escapepod.store/)
-- [Third Earth](https://third.earth/)
 - [Tlon Corporation](https://tlon.io)
+- [Third Earth](https://third.earth/)
+- [Planet One](https://planet.one/)
+- [escape pod store](https://www.escapepod.store/)
 
 ### Buying a planet
 
@@ -110,10 +109,10 @@ Got your planet?
 
 Get it up and running with one of these options:
 
-- Let a [hosting provider](/getting-started/hosted) do the hard work for you.
+- Let a [hosting provider](/hosted-urbit) do the hard work for you.
 
 - For power users, check out the [command line install
-  guide](/getting-started/cli) and run your urbit from the terminal.
+  guide](/get-started/cli) and run your urbit from the terminal.
 
 - If you have a bit of Linux server experience, the [cloud hosting
   guide](https://operators.urbit.org/manual/running/hosting) will help you set

@@ -53,7 +53,7 @@ export default function CopyLink({ content, className }) {
       onClick={() => copy()}
     >
       <p className="leading-5">
-        {copyStatus === "copied" ? "Copied" : "Copy Link"}
+        {copyStatus === "copied" ? "Copied" : "Copy Address"}
       </p>
       {buttonIcon}
     </button>

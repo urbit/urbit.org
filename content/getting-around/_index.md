@@ -4,51 +4,27 @@ description = "Get around your urbit"
 weight = 1
 +++
 
+
+
+
 ### 1. Get oriented
 
-After you've logged into your Urbit for the first time, you're officially an Urbiter! You've unlocked the entire Urbit network with your newly-minted ID — the key to your new digital life.
+After you've logged into your Urbit for the first time, you'll see what we call Landscape – an interface for interacting with the network and applications.  You'll also see a few pre-installed applications: Terminal, Groups, and Talk. More on them in a moment.
 
-![](https://media.urbit.org/site/additional-guides/groups-1.png)
-
-You'll see your Home and a few pre-installed applications: Terminal, Groups, and Bitcoin. More on them in a moment.
-
-Above those are buttons to view System Preferences and Help and Support and check out notifications for newly-installed or recently-updated applications, respectively. The search bar helps you surface applications you already have installed, or discover developers and applications across the Urbit network.
+Above those are buttons to view System Preferences and check out notifications for messages and application activity. The search bar helps you surface applications you already have installed, or discover developers and applications across the Urbit network.
 
 You'll likely want to focus on finding and joining new communities, which you can do with the **Groups** app. Click on the box to open the application.
 
-### 2. Join a few groups with fellow Urbiters
+### 2. Join a few groups
 
-No two people will ever have the same experience on Urbit. That depends entirely on who you find and where they invite you to join them. But we can set you down a good path.
-
-First, Open the Groups app.
-
-Then click on "Find Groups" in the left column. Enter [~bitbet-bolbel/urbit-community](/groups/~bitbet-bolbel/urbit-community) — the official Urbit community. Click the "Join" button when you see the group listing.
-
-Give it a minute, and the group will load its default channels. To join additional channels in the group, click the "All Channels" button.
-
-Here are a few more useful groups to join:
-
-- [`~rondev/group-discovery`](/groups/~rondev/group-discovery): A group for finding other groups.
-- [`~middev/the-forge`](/groups/~middev/the-forge): A group for sharing, discussing, and discovering new Urbit applications.
-- [`~hocwyn-tipwex/uqbar-event-horizon`](/groups/~hocwyn-tipwex/uqbar-event-horizon): A community around [Uqbar](https://uqbar.network), a company creating applications and experiences on top of Urbit — notably EScape, which is an alternative to the default Groups application for joining communities and messaging with other Urbiters.
+Joining public groups is simple – just search for the group host's Urbit ID, and click join. Check out a walk-through of this process in the [Joining groups](/getting-around/joining-groups) guide.
 
 ### 3. Get more Urbit apps
 
 Groups are great, but Urbit goes way deeper with apps that are developed specifically for Urbit and use P2P networking for everything.
 
-We'll use [Canvas](/applications/~dister-norsyr-torryn/canvas) — a collaborative app for creating pixel art with others — as an example to show the process.
+Check out the [Installing apps](/getting-around/installing-applications) guide for a walk-through on the process of installing Urbit applications.
 
-Head back to your Urbit's home — the URL you used to log in and view your preinstalled apps. From there, click on the search bar and enter `~dister-norsyr-torryn/canvas`. Click on the first result, which shows you details about the developer, the license, a website for more information, and when the app was last updated.
-
-Click **Get App**, then **Get "Canvas"** to continue. Your Urbit gets to work, and once installation is finished, click Open App to see it in action.
-
-Some popular apps to get things moving:
-
-- [EScape](/applications/~dister-fabnev-hinmur/escape): An alternative UI to the core groups, communities, and messaging capabilities in Urbit.
-- [Studio](/applications/~tirrel/studio): Run a blog on your urbit.
-- [Wrdu](/applications/~magped-magped-rabsef-bicrym/wrdu): A Wordle clone.
-
-Discover more applications on the [Ecosystem page](https://urbit.org/ecosystem?type=applications).
 
 ### 4. Get help
 
@@ -60,11 +36,10 @@ If you're having trouble with your planet or the hosting provider that's running
 
 And if you can't get through this guide and launch into Urbit, you may have luck with the [Urbit Live community](https://t.me/UrbitLiveGroup) on Telegram.
 
+
+
 ### 5. What's next?
 
-You made it! You did the work and now have your Final Computer.
-
-What you do with it is up to you. Where you go from here is up to you. No two experiences on Urbit will be the same, so we encourage you to follow your own intuition and explore.
 
 **Learn more about using Urbit**: Check out the [Operators Site](https://operators.urbit.org/) to learn more about running your own Urbit and how the network functions.
 

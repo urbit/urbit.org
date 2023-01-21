@@ -4,36 +4,36 @@ tag = "additional"
 weight = 3
 +++
 
-### 1. Get on the network
+Installing urbit applications is very simple.  Just search for the developer, and download the application.  We'll walk you through it.
 
-First, you’ll need to get on Urbit.
+### 1. Finding applications
 
-Check out our [Getting Started guide](https://urbit.org/install) to find the best way for you.
+To get an application, you'll need to know its developer Urbit ID, *e.g.* `~tirrel` or `~dister-fabnev-hinmur`, or the full Urbit address, *e.g.* `~tirrel/studio`.
 
-### 2. Finding applications
+This information is available applications in the [Applications directory](/ecosystem?type=applications) in the Ecosystem section of urbit.org.
 
-Urbit is still in its early stages, so you’ll need to join groups and browse around the network to discover new applications as they are being brought up.
+Urbit is still in its early stages and not all applications are listed on urbit.org, so you’ll need to join groups and browse around the network to discover the newest applications as they are being brought up. 
 
-However, we can get started a simple app from Urbit developer [`~paldev`](/ids/~paldev).
+However, we can get started a simple app from Urbit developer [`~tirrel`](/ids/~tirrel).
 
-### 3. Search for a Developer
+### 2. Search for a Developer
 
-Once you’re on the network, you’ll see and large tiled interface with a few applications installed and a search bar on the top of the page.
+Once you’re on the network, you’ll see a large tiled interface with a few applications and a search bar on the top of the page.
 
 Click and the search bar and search for the software provider’s Urbit ID.
 
-For example, to install the picture application, search for `~paldev` and then click on the result for `~paldev` to show his applications.
+For example, to install the Studio application, search for `~tirrel` and then click on the result for `~tirrel` to show the applications.
 
-![](https://media.urbit.org/site/additional-guides/Installing-apps-1.jpg)
+![](https://media.urbit.org/site/additional-guides/apps-1.png)
 
-![](https://media.urbit.org/site/additional-guides/Installing-apps-2.jpg)
+![](https://media.urbit.org/site/additional-guides/apps-2.png)
 
-### 4. Get the Application
+### 3. Get the Application
 
-After selecting the “picture” app, a pane will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
+Select the Studio app, and a modal window will open that shows some information about the application. Go ahead and click the “Get App” button, and confirm the following modal window to begin the installation process.
 
-Soon you’ll have a new application tile on your home screen that will let you upload and display a picture to your home screen.
+Soon you’ll have a new application tile on your home screen that will let you host a blog from your urbit.
 
-![](https://media.urbit.org/site/additional-guides/Installing-apps-3.jpg)
+![](https://media.urbit.org/site/additional-guides/apps-3.png)
 
-![](https://media.urbit.org/site/additional-guides/Installing-apps-4.jpg)
+![](https://media.urbit.org/site/additional-guides/apps-4.png)
