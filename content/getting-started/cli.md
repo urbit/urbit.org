@@ -45,7 +45,7 @@ it, and runs the binary with no arguments to show you the help output:
 {% tab label="Linux x86_64" %}
 
 ```shell
-curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
+curl -L https://urbit.org/install/linux-x86_64/latest | tar xz --transform='s/.*/urbit/g' && ./urbit
 ```
 
 {% /tab %}
@@ -53,7 +53,7 @@ curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.
 {% tab label="Linux AArch64" %}
 
 ```shell
-curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/.*/urbit/g' && ./urbit
+curl -L https://urbit.org/install/linux-aarch64/latest | tar xz --transform='s/.*/urbit/g' && ./urbit
 ```
 
 {% /tab %}
@@ -61,7 +61,7 @@ curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/
 {% tab label="macOS x86_64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/' && ./urbit
+curl -L https://urbit.org/install/macos-x86_64/latest | tar xz -s '/.*/urbit/' && ./urbit
 ```
 
 {% /tab %}
@@ -69,7 +69,7 @@ curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/' 
 {% tab label="macOS AArch64" %}
 
 ```bash
-curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk -s '/.*/urbit/' && ./urbit
+curl -L https://urbit.org/install/macos-aarch64/latest | tar xz -s '/.*/urbit/' && ./urbit
 ```
 
 {% /tab %}
