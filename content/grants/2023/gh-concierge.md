@@ -16,7 +16,7 @@ champion = [""]
 grant_id = "B0233"
 completed = false
 canceled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Github%20Support%20Concierge"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0233&prefill_Grant+Name=Github%20Support%20Concierge"
 
 +++
 
