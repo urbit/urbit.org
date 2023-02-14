@@ -19,11 +19,11 @@ Let’s talk first about what an Urbit ID is and what it does. Then we’ll cove
 
 Summary {% .font-bold .subpixel-antialiased .pt-8 %}
 
-Your Urbit ID is a short, four-syllable name like ~ravmel-ropdyl that you own with an eight-syllable master passkey like ~palfun-foslup-fallyn-balfus. This name and key lets you log into Urbit OS, and it’s used to encrypt packets you send over the Urbit network. Soon it will also be a master key that allows holding and sending of Bitcoin and other cryptocurrencies. Your Urbit ID and passkey belong to you like any other cryptographic assets. No one can take them away from you (just make sure to store the key safely).
+Your Urbit ID is a short, four-syllable name like `~ravmel-ropdyl` that you own with an eight-syllable master passkey like `~palfun-foslup-fallyn-balfus`. This name and key lets you log into Urbit OS, and it’s used to encrypt packets you send over the Urbit network. Soon it will also be a master key that allows holding and sending of Bitcoin and other cryptocurrencies. Your Urbit ID and passkey belong to you like any other cryptographic assets. No one can take them away from you (just make sure to store the key safely).
 
 The Urbit ID registry is live and deployed to the Ethereum blockchain. Urbit ID isn’t specifically wedded to Ethereum – someday we’d like it to be hosted by Urbit OS itself. Also, Urbit ID is the only component of the stack using Ethereum – your Urbit OS node is hosted wherever you choose. The primary function of the Urbit ID registry is to keep track of who owns what, to specify which keys are associated with which names, and to enforce the rules of address distribution.
 
-Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. ~dalwel-fadrun is 3,509,632,436, for example.
+Each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. `~dalwel-fadrun` is 3,509,632,436, for example.
 
 Urbit IDs are distributed by a sponsorship tree. At the top of the tree are 2^8^ (256) galaxies. Each galaxy issues 2^8^ stars, making a total of 2^16^ (65K). Stars then each can issue 2^16^ planets, making for 2^32^ (~4B). As you might expect, each planet issues 2^32^ moons.
 

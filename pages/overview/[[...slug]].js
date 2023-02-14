@@ -19,7 +19,7 @@ import Sidebar from "../../components/Sidebar";
 import overviewTree from "../../cache/overview.json";
 import Link from "next/link";
 
-export default function Overview({ posts, data, markdown, search }) {
+export default function Overview({ posts, data, markdown, search, nextPost }) {
   return (
     <Container>
       <Head>
@@ -33,13 +33,18 @@ export default function Overview({ posts, data, markdown, search }) {
           <h1>Overview</h1>
         </Section>
         <Section>
-          <div className="flex justify-between sidebar md:space-x-8">
+          <div className="flex sidebar md:space-x-8">
             <Sidebar search={search}>
               {childPages("/overview", posts.pages)}
             </Sidebar>
             <div className="markdown max-w-prose">
               <h3>{data.title}</h3>
               <Markdown.render content={JSON.parse(markdown)} />
+
+              {nextPost ? <Link href={nextPost.slug} passHref>
+               <a className="bg-wall-100 mt-16 button-lg max-w-fit">Next: {nextPost.title} -&gt;</a>
+              </Link>: null}
+
             </div>
           </div>
         </Section>
@@ -120,6 +125,7 @@ export async function getStaticProps({ params }) {
     ) || null;
 
   return { props: { posts, data, markdown, params, previousPost, nextPost } };
+
 }
 
 export async function getStaticPaths() {
