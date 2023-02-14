@@ -20,6 +20,9 @@ import overviewTree from "../../cache/overview.json";
 import Link from "next/link";
 
 export default function Overview({ posts, data, markdown, search, nextPost }) {
+
+  const currentPath = useRouter().asPath;
+
   return (
     <Container>
       <Head>
@@ -44,6 +47,12 @@ export default function Overview({ posts, data, markdown, search, nextPost }) {
               {nextPost ? <Link href={nextPost.slug} passHref>
                <a className="bg-wall-100 mt-16 button-lg max-w-fit">Next: {nextPost.title} -&gt;</a>
               </Link>: null}
+
+              {currentPath == "/overview" ?
+              <Link href="/overview/urbit-os" passHref>
+               <a className="bg-wall-100 mt-16 button-lg max-w-fit">Next: Urbit OS -&gt;</a>
+              </Link>: null}
+
 
             </div>
           </div>
