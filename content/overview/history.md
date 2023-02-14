@@ -8,6 +8,8 @@ image = "https://media.urbit.org/site/understanding-urbit/project-history/projec
 
 At the beginning, Urbit was just a few people with the right combination of imagination and discipline to try to rebuild computing.
 
+![](https://media.urbit.org/site/posts/essays/sigils8-square-v2.png)
+
 **2002**  
 Urbit starts as the open-ended personal project of computer scientist and loquacious writer Curtis Yarvin. An “independent study PhD” to reinvent computing for a network-centric world.
 
