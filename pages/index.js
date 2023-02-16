@@ -19,7 +19,6 @@ import PostPreview from "../components/PostPreview";
 import EventPreview from "../components/EventPreview";
 import { eventKeys } from "../lib/constants";
 import IndexCard from "../components/ecosystem/IndexCard";
-import HighlightCard from "../components/HighlightCard";
 import fs from "fs";
 import path from "path";
 import Meta from "../components/Meta";
@@ -27,7 +26,6 @@ import { matchEcosystemPost } from "../lib/lib";
 
 export default function Home({
   posts,
-  highlights,
   ecosystem,
   events,
   grantNumbers,
@@ -60,18 +58,25 @@ export default function Home({
           // Hero
         }
 
-        {
-          // Highlights
-        }
         <Section className="pb-12">
-          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-            <HighlightCard highlight={highlights[0]} key={highlights[0].slug} />
-            <HighlightCard highlight={highlights[1]} key={highlights[1].slug} />
-            <HighlightCard highlight={highlights[2]} key={highlights[2].slug} />
+          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
+
+            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
+              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
+            </div>
+            <div className="sm:basis-2/3 sm:pl-6 align-middle">
+              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
+              <p className="max-w-prose pb-4">
+                Select talks and panels are being released from the second annual Urbit confluence in Miami.
+              </p>
+              <Link href="https://assembly.urbit.org" passHref>
+                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
+                  Watch Now
+                </a>
+              </Link>
+            </div>
           </div>
         </Section>
-
-
 
 
         <Section narrow className="space-y-8">
@@ -134,53 +139,6 @@ export default function Home({
             </Link>
           </div>
         </Section>
-
-        {
-          // Build on Urbit Developer CTA
-        }
-        <Section narrow>
-          <h2 className="pb-8">Build on Urbit</h2>
-          <h4 className="pb-6">
-            Urbit is a personal OS designed from scratch to run peer-to-peer
-            applications.
-          </h4>
-          <p className="pb-6">
-            It solves the hard problems of implementing a peer-to-peer network
-            (including identity, NAT traversal, and exactly-once delivery) in
-            the kernel so app developers can focus on business logic.
-          </p>
-          <p className="pb-6">
-            The entire OS is a{" "}
-            <Link href="https://urbit.org/docs/nock/definition/" passHref>
-              <a>single pure function</a>
-            </Link>{" "}
-            that provides application developers with strong guarantees:
-            automated persistence and memory management, repeatable builds, and
-            support for hot code reloading.
-          </p>
-          <p className="pb-10">
-            You can get started learning how to{" "}
-            <Link href="https://urbit.org/docs/development/develop/" passHref>
-              <a>contribute to the project</a>
-            </Link>
-            , or view a variety of{" "}
-            <Link
-              href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
-              passHref
-            >
-              <a>libraries</a>
-            </Link>{" "}
-            for building on Urbit using the languages you already know.
-          </p>
-          <Link href="https://developers.urbit.org" passHref>
-            <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
-              Visit Urbit Developers
-            </a>
-          </Link>
-        </Section>
-
-
-
         {
           // Grants
         }
@@ -230,6 +188,49 @@ export default function Home({
           </div>
         </Section>
 
+        {
+          // Build on Urbit Developer CTA
+        }
+        <Section narrow>
+          <h2 className="pb-8">Build on Urbit</h2>
+          <h4 className="pb-6">
+            Urbit is a personal OS designed from scratch to run peer-to-peer
+            applications.
+          </h4>
+          <p className="pb-6">
+            It solves the hard problems of implementing a peer-to-peer network
+            (including identity, NAT traversal, and exactly-once delivery) in
+            the kernel so app developers can focus on business logic.
+          </p>
+          <p className="pb-6">
+            The entire OS is a{" "}
+            <Link href="https://urbit.org/docs/nock/definition/" passHref>
+              <a>single pure function</a>
+            </Link>{" "}
+            that provides application developers with strong guarantees:
+            automated persistence and memory management, repeatable builds, and
+            support for hot code reloading.
+          </p>
+          <p className="pb-10">
+            You can get started learning how to{" "}
+            <Link href="https://urbit.org/docs/development/develop/" passHref>
+              <a>contribute to the project</a>
+            </Link>
+            , or view a variety of{" "}
+            <Link
+              href="https://github.com/urbit/awesome-urbit#http-apis-airlock"
+              passHref
+            >
+              <a>libraries</a>
+            </Link>{" "}
+            for building on Urbit using the languages you already know.
+          </p>
+          <Link href="https://developers.urbit.org" passHref>
+            <a className="button-lg type-ui text-white bg-green-400 max-w-fit">
+              Visit Urbit Developers
+            </a>
+          </Link>
+        </Section>
 
         {
           // Blog Posts
@@ -271,35 +272,12 @@ export default function Home({
           </Link>
         </Section>
 
-        <Section className="pb-12">
-          <div className="bg-wall-100 w-full p-4 md:p-8 rounded-3xl flex flex-wrap items-center">
-
-            <div className="basis-full sm:basis-1/3 pb-4 sm:pb-0">
-              <img className="rounded-xl w-72" src="https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumb2.jpg" />
-            </div>
-            <div className="sm:basis-2/3 sm:pl-6 align-middle">
-              <h2 className="text-2xl pb-2">Assembly 2022</h2 >
-              <p className="max-w-prose pb-4">
-                Watch talks and panels from last year's confluence in Miami.
-              </p>
-              <Link href="https://assembly.urbit.org" passHref>
-                <a className="button-sm border-2 border-wall-600 text-wall-600 type-sm max-w-fit">
-                  Watch Now
-                </a>
-              </Link>
-            </div>
-          </div>
-        </Section>
-
         <Section narrow>
           <h2 className="pb-2">Urbit Monthly</h2>
           <p className="pb-8">Get monthly email updates on all things Urbit.</p>
 
           <Contact emphasize />
         </Section>
-
-
-
 
         <Section narrow>
           <h2 className="pb-8">Social Media</h2>
@@ -332,8 +310,6 @@ export default function Home({
   );
 }
 
-
-
 export async function getStaticProps() {
   // Latest blog posts
   const posts = getAllPosts(
@@ -341,14 +317,6 @@ export async function getStaticProps() {
     "blog",
     "date"
   );
-
-
-  // Highlights
-  const highlights = getAllPosts(
-    ["title", "slug", "image", "url", "description"],
-    "highlights"
-  );
-
 
   // Latest ecosystem report with matched post metadata
   const ecosystem = matchEcosystemPost(getAllPosts(
@@ -421,7 +389,6 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
-      highlights,
       ecosystem,
       grantNumbers,
       events: happeningNow.concat(futureEvents).concat(pastEvents),
