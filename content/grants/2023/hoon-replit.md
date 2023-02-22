@@ -16,7 +16,7 @@ champion = [""]
 grant_id = "B0238"
 completed = false
 canceled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefillGrant+ID=&prefillGrant+Name=Hoon%20CodeMirror%20grammar%20and%20language%20mode%20for%20Replit"
+work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0238&prefill_Grant+Name=Hoon%20CodeMirror%20grammar%20and%20language%20mode%20for%20Replit"
 
 +++
 
