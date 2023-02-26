@@ -5,4 +5,4 @@ bgColor = "#000000"
 image = ""
 +++
 
-Founder of FANGTANG Network Technology, Python&Web Programmer.
+Founder of FANGTANG Network Technology, Software Developer.
