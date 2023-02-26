@@ -1,7 +1,7 @@
 +++
 ship = "~hocmed-lidrev"
 nickname = "Launchpad"
-bgColor = "#08ECC3"
+bgColor = "#000000"
 image = ""
 +++
 
