@@ -10,7 +10,7 @@ grant_category = ["App Dev"]
 [extra]
 image = ""
 description = "Share plaintext snippets on Urbit"
-reward = ""
+reward = "TBD"
 assignee = [""]
 champion = [""]
 grant_id = "P1000"
