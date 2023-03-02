@@ -9,11 +9,11 @@ The imagination of people building on Urbit often outpaces the available develop
 
 These are ideas that the community would like to see come to fruition, but whose details haven't been completely ironed out. Since they're not fully fleshed out, they're a great opportunity for contributors to add their own ideas and creative approaches, while learning about developing and shipping on Urbit. 
 
-If any of these Requests sound compelling, we encourage you to come by the [Urbit Grants office hours](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house?spawnToken=ufV1APwWTGmYVTgzyx0z) to discuss drafting and submitting a proposal. 
+If any of these Requests sound compelling, we encourage you to come by the [Urbit Grants office hours](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house?spawnToken=ufV1APwWTGmYVTgzyx0z) or DM [~poldec-tonteg](https://urbit.org/ids/~poldec-tonteg) to discuss drafting and submitting a proposal. 
 
 # Jump in
 
-If a Request grabs your eye and you'd like to pursue it, the next step is to come by the [Urbit Grants office hours](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house?spawnToken=ufV1APwWTGmYVTgzyx0z) in the Urbit Hacker House. The Hacker House is a UF-hosted gather.town instance where contributors hang out, pair program and discuss all things Urbit. At the Office Hours, members from the UF team can help refine the Request idea and give you context about what needs to be built, potential use cases and architectural precedents in the codebase.
+The Hacker House is a UF-hosted gather.town instance where contributors hang out, pair program and discuss all things Urbit. At the Office Hours, members from the UF team can help refine the Request idea and give you context about what needs to be built, potential use cases and architectural precedents in the codebase.
 
 Once you've got your mind around this, the next step is to draft the Proposal
 
@@ -31,7 +31,7 @@ Good proposals all include the following:
 
 It's recommended to break your project into _milestones_, each of which must have its own completion dates, funding amounts and deliverables. In general, proposals should target a first deliverable within two months of the start of the project. Proposals should have a maximum of five milestones as scoping a project beyond that is impractical, and each milestone should constitute significant enough work to warrant the reward of a full star.
 
-Feel free to come to multiple office hours or connect on network to develop the proposal further. Once it's in a good state, submit it through [this form](https://airtable.com/shrCi54rEDxgSZr3z).
+Feel free to come to multiple office hours or connect on network to develop the proposal further. Once it's in a good state, submit it through [this form](https://airtable.com/shrCi54rEDxgSZr3z). Submitted proposals are then reviewed internall twice a week by the full grants team.
 
 The main distinction between a self-originating Proposal and one that responds to a Request is that the latter doesn't need to go through the further step of getting a champion, as the originator of the Request will fulfill that role.
 
