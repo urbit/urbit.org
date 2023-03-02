@@ -107,8 +107,8 @@ export default function Grants({ posts, categories, types, search }) {
     Bounty: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Bounty")
     ).length,
-    Apprenticeship: postsByStatus.filter((post) =>
-      post.taxonomies.grant_type.includes("Apprenticeship")
+    Request: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("Request")
     ).length,
     Proposal: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Proposal")
@@ -278,7 +278,7 @@ export default function Grants({ posts, categories, types, search }) {
                 case "Bounty":
                   activeBg = "bg-yellow-300 text-white";
                   break;
-                case "Apprenticeship":
+                case "Request":
                   activeBg = "bg-green-400 text-white";
                   break;
                 default:
