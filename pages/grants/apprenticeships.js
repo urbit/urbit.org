@@ -8,7 +8,7 @@ export default function Post({ post, markdown, search }) {
       post={post}
       markdown={markdown}
       search={search}
-      actionText="View Apprenticeships"
+      actionText="View Requests"
       actionLink="/grants?program=apprenticeship&completed=true#view-grants"
     />
   );

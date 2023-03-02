@@ -163,17 +163,14 @@ export default function Grants({ posts, categories, types, search }) {
                   </a>
                 </Link>
 
-                {/* Apprenticeships */}
-                <h3>Apprenticeships</h3>
+                {/* Requests */}
+                <h3>Requests</h3>
                 <p className="mb-4">
-                  Apprenticeships are practical learning opportunities for new
-                  Urbit developers provided by members of the Urbit community.
-                  They're one of the best ways to level up your skills and often
-                  lead to full-time jobs.
+                  Requests are bite-sized ideas for proposals that have been circulating among Urbit contributors. They're a great place to start if you're interested in writing a proposal and need some stimulating ideas. 
                 </p>
-                <Link href="/grants/apprenticeships" passHref>
+                <Link href="/grants/requests" passHref>
                   <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
-                    Become an Apprentice
+                   View RFPs 
                   </a>
                 </Link>
               </div>
@@ -237,7 +234,7 @@ export default function Grants({ posts, categories, types, search }) {
                 </li>
                 <li className="mb-2">
                   <p>
-                    <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
+                    <Link href="/grants/apprenticeships">Requests</Link>{" "}
                     are largely about building a relationship between apprentice
                     and mentor.
                   </p>
