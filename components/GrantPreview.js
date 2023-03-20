@@ -8,7 +8,7 @@ export default function GrantPreview({ grant }) {
 
   const className = classnames({
     "bg-lightBlue": type.includes("Proposal") && isOpen,
-    "bg-green-200": type.includes("Request") && isOpen,
+    "bg-purple-200": type.includes("Request") && isOpen,
     "bg-yellow-100": type.includes("Bounty") && isOpen,
   });
 

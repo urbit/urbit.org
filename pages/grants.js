@@ -110,6 +110,9 @@ export default function Grants({ posts, categories, types, search }) {
     Request: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Request")
     ).length,
+    Apprenticeship: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("Apprenticeship")
+    ).length,
     Proposal: postsByStatus.filter((post) =>
       post.taxonomies.grant_type.includes("Proposal")
     ).length,
@@ -169,13 +172,26 @@ export default function Grants({ posts, categories, types, search }) {
                   Requests are bite-sized ideas for proposals that have been circulating among Urbit contributors. They're a great place to start if you're interested in writing a proposal and need some stimulating ideas. 
                 </p>
                 <Link href="/grants/requests" passHref>
-                  <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
+                  <a className="button-sm bg-purple text-white mb-8 max-w-fit">
                    View RFPs 
                   </a>
                 </Link>
               </div>
 
               <div className="md:basis-1/2">
+                {/* Apprenticeships */}
+                <h3>Apprenticeships</h3>
+                <p className="mb-4">
+                  Apprenticeships are practical learning opportunities for new
+                  Urbit developers provided by members of the Urbit community.
+                  They're one of the best ways to level up your skills and often
+                  lead to full-time jobs.
+                </p>
+                <Link href="/grants/apprenticeships" passHref>
+                  <a className="button-sm bg-green-400 text-white mb-8 max-w-fit">
+                    Become an Apprentice
+                  </a>
+                </Link>
                 {/* Bounties */}
                 <h3>Bounties</h3>
                 <p className="mb-4">
@@ -234,7 +250,13 @@ export default function Grants({ posts, categories, types, search }) {
                 </li>
                 <li className="mb-2">
                   <p>
-                    <Link href="/grants/apprenticeships">Requests</Link>{" "}
+                    <Link href="/grants/requests">Requests</Link>{" "}
+                   are suitable for people experienced with hoon development but who need some ideas on what to work on. 
+                  </p>
+                </li>
+                <li className="mb-2">
+                  <p>
+                    <Link href="/grants/apprenticeships">Apprenticeships</Link>{" "}
                     are largely about building a relationship between apprentice
                     and mentor.
                   </p>
@@ -276,7 +298,7 @@ export default function Grants({ posts, categories, types, search }) {
                   activeBg = "bg-yellow-300 text-white";
                   break;
                 case "Request":
-                  activeBg = "bg-green-400 text-white";
+                  activeBg = "bg-purple-200 text-white";
                   break;
                 default:
                   activeBg = "bg-black";
