@@ -1,7 +1,7 @@
 +++
 
 title = "Modernize Urbit React Developer Documentation"
-date = "2022-02-23"
+date = "2023-02-23"
 
 [taxonomies]
 grant_type = ["Proposal"]

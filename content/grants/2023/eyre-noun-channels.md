@@ -1,6 +1,6 @@
 +++
 title = "Finishing Touches to Eyre Noun-Based Channels"
-date = "2022-01-26"
+date = "2023-01-26"
 
 [taxonomies]
 grant_type = ["Proposal"]

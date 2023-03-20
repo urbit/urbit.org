@@ -1,7 +1,7 @@
 +++
 
 title = "Success Metrics for Urbit Apps"
-date = "2022-02-09"
+date = "2023-02-09"
 
 [taxonomies]
 grant_type = ["Proposal"]

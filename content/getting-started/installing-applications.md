@@ -14,7 +14,7 @@ You can find a [public directory of applications](/ecosystem?type=applications) 
 
 Not all applications are listed on urbit.org, so you’ll discover more by actively using Urbit and meeting people.
 
-However, we can get started a simple app from Urbit developer [`~paldev`](/ids/~paldev).
+However, we can get started by using a simple app from Urbit developer [`~paldev`](/ids/~paldev).
 
 ### 2. Search for a Developer
 

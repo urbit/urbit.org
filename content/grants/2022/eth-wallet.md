@@ -13,6 +13,7 @@ reward = "3 stars + $15k USD"
 assignee = [""]
 grant_id = "B0158"
 completed = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0158&prefill_Grant+Name=Urbit%20Native%20Ethereum%20Wallet"
 +++
 # Overview
