@@ -298,7 +298,10 @@ export default function Grants({ posts, categories, types, search }) {
                   activeBg = "bg-yellow-300 text-white";
                   break;
                 case "Request":
-                  activeBg = "bg-purple-200 text-white";
+                  activeBg = "bg-purple-400 text-white";
+                  break;
+                case "Apprenticeship":
+                  activeBg = "bg-green-400 text-white";
                   break;
                 default:
                   activeBg = "bg-black";
