@@ -265,11 +265,12 @@ export default function Grants({ posts, categories, types, search }) {
                 Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.
               </p>
                 <p className="mb-8">
-                Approval 
+                <b>Approval</b>
               </p>
                 <p className="mb-8">Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
                 </p>
                 <p>If you any questions regarding grants, feel free to email grants@urbit.org.</p>
+             </div>
           </div>
         </Section>
 
