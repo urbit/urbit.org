@@ -35,39 +35,39 @@ export default function Grant({ post, markdown, match, search }) {
   const assignee = post?.extra?.assignee;
   const mentor = post.extra.mentor || post.extra.champion;
   const assigneeLink =
-    assignee &&
-    assignee.map((each, index) => {
-      return ob.isValidPatp(each) ? (
-        <>
-          {index ? ", " : ""}
-          <Link href={`/ids/${each}`} passHref>
-            <a className="text-green-400">{each}</a>
-          </Link>
-        </>
-      ) : (
-        <>
-          {index ? ", " : ""}
-          {each}
-        </>
-      );
-    });
+        assignee &&
+        assignee.map((each, index) => {
+          return ob.isValidPatp(each) ? (
+            <>
+              {index ? ", " : ""}
+              <Link href={`/ids/${each}`} passHref>
+                <a className="text-green-400">{each}</a>
+              </Link>
+            </>
+          ) : (
+            <>
+              {index ? ", " : ""}
+              {each}
+            </>
+          );
+        });
   const mentorLink =
-    mentor &&
-    mentor.map((each, index) => {
-      return ob.isValidPatp(each) ? (
-        <>
-          {index ? ", " : ""}
-          <Link href={`/ids/${each}`} passHref>
-            <a className="text-green-400">{each}</a>
-          </Link>
-        </>
-      ) : (
-        <>
-          {index ? ", " : ""}
-          {each}
-        </>
-      );
-    });
+        mentor &&
+        mentor.map((each, index) => {
+          return ob.isValidPatp(each) ? (
+            <>
+              {index ? ", " : ""}
+              <Link href={`/ids/${each}`} passHref>
+                <a className="text-green-400">{each}</a>
+              </Link>
+            </>
+          ) : (
+            <>
+              {index ? ", " : ""}
+              {each}
+            </>
+          );
+        });
 
   let status = "";
   if (isOpen) {
@@ -85,21 +85,21 @@ export default function Grant({ post, markdown, match, search }) {
       "bg-green-400 text-white": status === "Completed" || status === "Open",
       "bg-wall-300": status === "In Progress",
     })}>
-    {status}
-  </div>;
+                         {status}
+                       </div>;
 
   let deliverable = null;
   if (post.extra.deliverable) {
     if (match) {
       deliverable = <ResourceCard
-        title={match.data.title}
-        image={match.data.image}
-        color={match.data.bgColor || "#000000"}
-        description={match.data?.description || ""}
-        type="application"
-        shortcode={post.extra.deliverable}
-        full
-      />
+                         title={match.data.title}
+                         image={match.data.image}
+                         color={match.data.bgColor || "#000000"}
+                         description={match.data?.description || ""}
+                         type="application"
+                         shortcode={post.extra.deliverable}
+                         full
+/>
     }
     else if (post.extra.deliverable.startsWith("~")) {
       deliverable = <JoinGroup emphasize groupName={post.extra.deliverable} />
@@ -110,6 +110,13 @@ export default function Grant({ post, markdown, match, search }) {
 
   const metaPost = Object.assign({}, post);
   metaPost.title = `${post.title} - Grant`;
+
+  const isRFP = post.taxonomies.grant_type.filter((category) => {
+    return category === "RFP";
+  }).length > 0;
+
+  const hasChampion = post.extra.champion && post.extra.champion[0] !== "";
+  const hasAssignee = post.extra.assignee && post.extra.assignee[0] !== "";
 
   return (
     <Container>
@@ -126,6 +133,7 @@ export default function Grant({ post, markdown, match, search }) {
             {statusBadge}
             {post.taxonomies.grant_type.map((category) => {
               const className = classnames({
+                "bg-purple-400 text-white": category === "RFP",
                 "bg-blue-400 text-white": category === "Proposal",
                 "bg-green-400 text-white": category === "Apprenticeship",
                 "bg-yellow-300": category === "Bounty",
@@ -161,13 +169,13 @@ export default function Grant({ post, markdown, match, search }) {
                 content={mentorLink}
               />
             ) : null}
-            {post.extra.champion ? (
+            {hasChampion ? (
               <MetadataBlock
                 title="Champion"
                 content={mentorLink}
               />
             ) : null}
-            {post.extra.assignee ? (
+            {hasAssignee ? (
               <MetadataBlock
                 title="Grantee(s)"
                 content={assigneeLink}
@@ -175,17 +183,26 @@ export default function Grant({ post, markdown, match, search }) {
             ) : null}
           </div>
           {post?.extra?.link?.startsWith("~") && <div className="flex flex-col my-4 space-y-2">
-            <p className="text-wall-400 font-semibold">Group</p>
-            <JoinGroup emphasize groupName={post.extra.link} />
-          </div>}
+   <p className="text-wall-400 font-semibold">Group</p>
+   <JoinGroup emphasize groupName={post.extra.link} />
+ </div>}
           {deliverable && <div className="flex flex-col my-4 space-y-2">
-            <p className="text-wall-400 font-semibold">Deliverable</p>
-            {deliverable}
-          </div>}
+     <p className="text-wall-400 font-semibold">Deliverable</p>
+     {deliverable}
+   </div>}
         </Section>
         <Section narrow className="markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </Section>
+        {isRFP && (
+          <a
+            className="bg-green-400 text-white button-lg"
+            href="/grants/rfps"
+            target="_blank"
+          >
+            Learn More
+          </a>
+        )}
         {canApply && (
           <a
             className="bg-green-400 text-white button-lg"

@@ -76,7 +76,7 @@ We do not knowingly collect, maintain, or use personal information from children
 
 ### International visitors
 
-The Services are hosted in the United States and are intended for visitors located within the United States. If you choose to use the Services from the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law, then please note that you are transferring your personal information outside of those regions to the United States for storage and processing. Also, we may transfer your data from the U.S. to other countries or regions in connection with storage and processing of data, fulfilling your requests, and operating the Services. By providing any information, including personal information, on or to the Services, you consent to such transfer, storage, and processing.
+[Omitted long matching line]
 
 ### Changes to this Privacy Policy
 

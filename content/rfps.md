@@ -5,11 +5,11 @@ weight = 1
 description = "Everything you need to know about fulfilling a request for proposal or RFP"
 +++
 
-The imagination of people building on Urbit often outpaces the available development hours. For this case, we have Requests for Proposals or RFPs.
+The imagination of people building on Urbit often outpaces the available development hours. For this case, we have Requests for Proposals (RFPs).
 
 These are ideas that the community would like to see come to fruition, but whose details haven't been completely ironed out. Since they're not fully fleshed out, they're a great opportunity for contributors to add their own ideas and creative approaches, while learning about developing and shipping on Urbit. 
 
-If any of these Requests sound compelling, we encourage you to come by the [Urbit Grants office hours](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house?spawnToken=ufV1APwWTGmYVTgzyx0z) or DM [~poldec-tonteg](https://urbit.org/ids/~poldec-tonteg) to discuss drafting and submitting a proposal. 
+If any of these RFPs sound compelling, we encourage you to come by the [Urbit Grants office hours](https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house?spawnToken=ufV1APwWTGmYVTgzyx0z) or DM [~poldec-tonteg](https://urbit.org/ids/~poldec-tonteg) to discuss drafting and submitting a proposal. 
 
 # Jump in
 

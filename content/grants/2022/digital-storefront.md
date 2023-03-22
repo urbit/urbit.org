@@ -63,9 +63,9 @@ Shop:
     ==
 ``` 
 ## User Stories
-- John Murphy is a social media influencer who wants to sell his jazz album on the web. He looked at selling it using Shopify, but was turned off at the idea that he'd be dependent on Shopify and wouldn't be able to export his data if he ever wanted to move to a different webstore provider. John wants an online store solution that allows him to run the webstore himself on the server at his house without having to fiddle with it. John decides to download Tirrel Studio, because he heard they just added online store functionality. He sets up his website, adds his product details, decides how much it should cost, and then requests to be a merchant through their payment processor. John feels good knowing that he owns all of his shop's data and software, and that his only external dependency is on a payment processor that he could switch out for a different one.
+[Omitted long matching line]
 
-- Timothy Gunn is an online conspiracy theorist who writes articles about the new world order. He has an avid online following, but sometimes his posts get too juicy for conventional platforms. He doesn't trust Substack and wants to host his newsletter himself but still get paid. His audience is a little too normie to use Bitcoin, and Bitcoin isn't that convenient for payments these days anyway. Timothy sets up his newsletter site via Studio, imports his mailing list from his old Mailchimp newsletter, requests to be a merchant, and then adds pay-walls in front of his best posts. Now he's ready to make money on his own terms.
+[Omitted long matching line]
 
 - Jimmy Takeria is a big calisthenics guy who teaches other guys how to get jacked. He makes informational videos and posts them to YouTube as well as running a Discord community about calisthenics. Jimmy doesn't like YouTube and Discord's new misinformation policies because he has unconventional ideas about nutrition. Jimmy decides to move his community off of Discord and into Groups on Urbit, and sets up a Studio webstore where he sells access to his latest workout videos and cutting edge nutritional info on a subscription basis. He's satisfied that he can manage his entire online business using Urbit.
 

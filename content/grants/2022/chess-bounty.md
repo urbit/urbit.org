@@ -20,7 +20,7 @@ work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B01
 +++
 
 # Rationale
-~finmep-lanteb is sponsoring the improvement of the Chess app to create an Urbit Chess experience comparable to that of any modern Chess website. The current Chess app meets the basic requirements to play a game with a friend, but lacks various quality of life features: move notifications, undo requests, %pals integration, etc. In addition, only unrated, correspondence games are currently possible. These missing features & improvements offer a great opportunity for a team of 3 novice Urbit developers (preferably three Hoon School Live and App School Live graduates) to work together to complete this bounty, each earning a star in the process.
+[Omitted long matching line]
 
 The goals of this bounty are to resolve the quality of life issues present in the Chess app, as well as enable timed and rated games.
 

@@ -8,7 +8,7 @@ export default function GrantPreview({ grant }) {
 
   const className = classnames({
     "bg-lightBlue": type.includes("Proposal") && isOpen,
-    "bg-purple-200": type.includes("Request") && isOpen,
+    "bg-purple-200": type.includes("RFP") && isOpen,
     "bg-yellow-100": type.includes("Bounty") && isOpen,
   });
 
@@ -38,7 +38,7 @@ export default function GrantPreview({ grant }) {
                 {grant.taxonomies.grant_type.map((category) => {
                   const className = classnames({
                     "bg-blue-400 text-white": category === "Proposal",
-                    "bg-purple text-white": category === "Request",
+                    "bg-purple text-white": category === "RFP",
                     "bg-green-400 text-white": category === "Apprenticeship",
                     "bg-yellow-300": category === "Bounty",
                   });
