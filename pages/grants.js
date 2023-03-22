@@ -210,14 +210,6 @@ export default function Grants({ posts, categories, types, search }) {
                     </a>
                   </Link>
                 </div>
-                
-                
-                 {/* Approval */}
-                <h3>Approval</h3>
-                <p className="mb-4">
-                  Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
-                </p>
-                <p>If you any questions regarding grants, feel free to email grants@urbit.org.</p>
              </div>
             </div>
           </div>
@@ -267,10 +259,16 @@ export default function Grants({ posts, categories, types, search }) {
             <div className="md:basis-1/2">
               <p className="mb-8">
                 Whether you're gearing up to submit your proposal or just
-                thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group.
+                thinking about it, the best way to get started is to join the <Link href="/groups/~halbex-palheb/uf-public">Urbit Foundation</Link> group, ask questions there or come find our grants office hours in the group.
               </p>
               <p className="mb-8">Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.</p>
             </div>
+             {/* Approval */}
+                <h4>Approval</h4>
+                <p className="mb-4">
+                  Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
+                </p>
+                <p>If you any questions regarding grants, feel free to email grants@urbit.org.</p>
           </div>
         </Section>
 
