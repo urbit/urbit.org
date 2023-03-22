@@ -265,7 +265,7 @@ export default function Grants({ posts, categories, types, search }) {
                 Feel free to contact <a href="/ids/~poldec-tonteg">~poldec-tonteg</a> with general questions or <a href="/ids/~marfun-pacpet">~marfun-pacpet</a> regarding administrative matters.
               </p>
                 <p className="mb-8">
-                <h4>Approval</h4>
+                <b>Approval</b>
               </p>
                 <p className="mb-8">Grant applications and proposals are approved on a bi-weekly basis.  The next deadlines are <b>March 14th & 28th</b>.
              </div>
