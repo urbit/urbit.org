@@ -11,4 +11,4 @@ image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/applicati
 
 Fully decentralized, peer-to-peer Chess app for Urbit
 
-![chess example](https://raw.githubusercontent.com/ashelkovnykov/urbit-chess/master/images/urbit-chess-demo.png)
+![chess example](https://raw.githubusercontent.com/thecommons-urbit/chess/master/images/urbit-chess-demo.png)
