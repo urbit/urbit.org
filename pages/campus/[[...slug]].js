@@ -64,8 +64,11 @@ export default function Home({
             <Section className="pb-6">      
                 <div className="flex flex-col space-y-4">
                     <h1 className="max-w-prose">
-                    Leave your mark on the future. Build on Urbit. 
+                      Campus Outreach Program
                     </h1>
+                    <h3 className="">
+                    Leave your mark on the future. Build on Urbit. 
+                    </h3>
                     
                 </div>
             </Section>
