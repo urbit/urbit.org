@@ -7,9 +7,9 @@ tag = "hostprov"
 
 
 ## Tlon
-[Tlon](https://tlon.io) is the company responsible for creating Urbit, Landscape, Groups and Talk. [Tlon Hosting](https://tlon.io) offers Urbit hosting for free, which includes a planet of your choice.
+[Tlon](https://tlon.io) is the company responsible for creating Urbit, Landscape, Groups and Talk. [Tlon](https://tlon.io) offers Urbit hosting for free, which includes a planet of your choice.
 
-[![Tlon Hosting](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting-provider.png)](https://tlon.io/) 
+[![Tlon](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/tlon-hosting-provider.png)](https://tlon.io/)
 
 ## Planet One
 
