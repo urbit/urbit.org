@@ -11,14 +11,14 @@ dark = true
 darken_image = "true"
 youtube = "dQw4w9WgXcQ"
 
-[[hosts]]
+[hosts]
 patp = “~palfun-foslup“
 
-[[guests]]
+[guests]
 name = “Thomas”
 patp = “~dalweb-donfun”
 
-[[guests]]
+[guests]
 name = “Ted”
 patp = “~rovnys-ricfer”
 
