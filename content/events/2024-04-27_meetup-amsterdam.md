@@ -19,7 +19,7 @@ patp = "~dalweb-donfun"
 
 [[guests]]
 name = "Ted"
-patp = "~rovnys-nicfer"
+patp = "~rovnys-ricfer"
 
 +++
 Here the long-form description of the event starts. 
