@@ -14,7 +14,7 @@ reward = "3 Stars + Bonus"
 assignee = ["~larryx-woldyr"]
 champion = [""]
 grant_id = "B0234"
-completed = false
+completed = true
 canceled = false
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0234&prefill_Grant+Name=Osmosis%20Client%20for%20Urbit"
 
