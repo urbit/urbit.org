@@ -13,7 +13,7 @@ dark = true
 
 After the success of our last developer week, we’re hosting another one this year from June 12th to June 16th. This will be a week of online only conversations, build parties, AMAs, blog posts, and other content.
 
-There will be watchparties for all streams in the Hacker House on gather.town, find out how to join in the [UF Public Group](/groups/~halbex-palheb/uf-public).
+There will be watch parties for all streams in the Hacker House on gather.town. Instructions for joining can be found in the [Urbit Foundation group](/groups/~halbex-palheb/uf-public).
 
 ## Schedule
 ### Kicking Off Developer Week
