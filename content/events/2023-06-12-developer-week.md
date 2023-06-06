@@ -13,7 +13,7 @@ dark = true
 
 After the success of our last developer week, we’re hosting another one this year from June 12th to June 16th. This will be a week of online only conversations, build parties, AMAs, blog posts, and other content.
 
-Check back in [UF Public Group](/groups/~halbex-palheb/uf-public), on this page or on the @urbit Twitter account for the upcoming schedule.
+There will be watchparties for all streams in the Hacker House on gather.town, find out how to join in the [UF Public Group](/groups/~halbex-palheb/uf-public).
 
 ## Schedule
 ### Kicking Off Developer Week
@@ -47,7 +47,7 @@ Always wanted to ask the core developers something? In this AMA they will be ava
 ### Portal
 *Time:* Tuesday June 13th – noon Pacifc | 9pm CEST
 
-In this talk ~foddur-hodler and ~dilryc-mopreg from [Portal](/applications/~worpet-bildet/portal) will update you on their latest developments. They are excited to share their experiences using solid state subscriptions, to present their ideas on what the'yre calling *the everything graph*, and to explain why they're "composability-maxxing."
+In this talk ~foddur-hodler and ~dilryc-mopreg from [Portal](/applications/~worpet-bildet/portal) will update you on their latest developments. They are excited to share their experiences using solid state subscriptions, to present their ideas on what they're calling *the everything graph*, and to explain why they're "composability-maxxing."
 
 [Meetup](https://www.meetup.com/urbit-sf/events/294013283/) | [Youtube](https://www.youtube.com/watch?v=6J8-jlqz2r4)
 
