@@ -17,8 +17,8 @@ tag = "hostprov"
 
 [![Planet One Hosting](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/planetone-hosting.png)](https://planet.one/) 
 
-## Third Earth
+## Holium
 
-[ThirdEarth](https://third.earth) offers hosting for $11.99/month. Third Earth is the only hosting provider that allows you to join with an existing Urbit ID and pier, i.e. a planet that you have already booted elsewhere. If you don't have a planet yet, they can also provide you with one.
+[Holium](https://hosting.holium.com/) offers hosting for $15/month. Holium is the only hosting provider that allows you to join with an existing Urbit ID and pier, i.e. a planet that you have already booted elsewhere. If you don't have a planet yet, you can get one through their onboarding flow. 
 
-[![Third Earth Hosting](https://storage.googleapis.com/media.urbit.org/site/ecosystem/organizations/thirdearth-hosting.png)](https://third.earth/) 
+[![Holium Hosting](https://lomder-librun.sfo3.digitaloceanspaces.com/Images/fasnut-famden/2023.6.13..15.11.24-Product%20page.png)](https://hosting.holium.com/) 
