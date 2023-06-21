@@ -5,7 +5,7 @@ date = "2020-11-11"
 
 [extra]
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."
-author = "Nikolai Mallett"
+author = "~nartes-fasrum"
 ship = "~nartes-fasrum"
 image = "https://media.urbit.org/site/posts/essays/help-the-environment.jpg"
 +++
