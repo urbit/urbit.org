@@ -10,7 +10,7 @@ grant_category = ["Other"]
 [extra]
 image = ""
 description = "Making Elm the frontend technology for Urbit"
-reward = "5 Stars"
+reward = "5 Stars + Bonus"
 assignee = ["~racfer-hattes"]
 champion = ["~rovnys-ricfer"]
 grant_id = "P0275"
@@ -62,4 +62,7 @@ Reward: 1 star
 
 Deliverables: An Elm airlock library that supports Solid-state subscriptions.
 
+## Bonus
+
+Upon successful completion of project, the contributor will also receive a 6K USDC bonus funded by Vaporware
 
