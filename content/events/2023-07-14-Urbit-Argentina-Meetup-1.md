@@ -2,7 +2,7 @@
 title = "Urbit Meetup in Argentina"
 starts = "2023-07-14T19:00:00"
 ends = "2023-07-14T21:30:00"
-timezone = "GMT-3"
+timezone = "America/Argentina/Buenos_Aires"
 location = "Overo Bar, Nicaragua 4583, Palermo, Buenos aires."
 image = "https://nyc3.digitaloceanspaces.com/davwyd-sordem/sueltas/2023.6.29..18.01.02-PFP2.png"
 registration_url = "https://partiful.com/e/dfHKAil5Yjtkkbl3XAGf"
