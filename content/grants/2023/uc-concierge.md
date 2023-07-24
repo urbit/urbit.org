@@ -11,12 +11,11 @@ grant_category = ["Other"]
 image = ""
 description = "The Urbit Community concierge will triage Urbit support issues that come in through the Urbit Community Group."
 reward = "1 Star"
-assignee = [""]
-champion = [""]
+assignee = ["~sarlev-sarsen", "~ripnyt-ripnyt", "~doppeg-tonwel"]
+champion = ["~poldec-tonteg"]
 grant_id = "B0232"
 completed = false
 canceled = false
-work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0232&prefill_Grant+Name=Urbit%20Community%20Support%20Concierge"
 
 +++
 
@@ -36,6 +35,7 @@ The Urbit Community concierge will triage Urbit support issues that come in thro
 - Familiarity with running urbit in a variety of environments (cloud server, laptop)
 - Ability/interest in synthesizing support data and recommending new features or documentation
 - Dilligence
+- **Considering applications from contributors in Asia time zones UTC (GMT) +4 to UTC (GMT) +10 only.**
 
 ## Compensation and Timeline
 

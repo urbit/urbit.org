@@ -5,7 +5,27 @@
   "redirects": [
     {
       "source": "/sponsordeck",
-      "destination": "https://docs.google.com/presentation/d/1G4O0ya8rzpZukG9XxwBgpkWyTbXZjqCzA8IwctrcmX4",
+      "destination": "https://tinyurl.com/urbitsponsordeck",
+      "permanent": true
+    },
+    {
+      "source": "/uacc-application",
+      "destination": "https://forms.gle/haQ6tJzanC162viy9",
+      "permanent": true
+    },
+    {
+      "source": "/onboarding",
+      "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
+      "permanent": false
+    },
+    {
+      "source": "/start",
+      "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
+      "permanent": false
+    },
+    {
+      "source": "/uf-public",
+      "destination": "https://tlon.network/lure/~halbex-palheb/uf-public",
       "permanent": false
     },
     {

@@ -40,6 +40,7 @@ export default function Meta(post, disableImage, large = false) {
       <meta name="og:description" content={description} key="description" />
       <meta name="description" content={description} />
       <meta name="author" content={author} key="author" />
+      <meta name="cf-2fa-verify" content="hj147kyae651DBG6j8fsg" />
       {!disableImage && (
         <meta name="twitter:image" content={image} key="image" />
       )}

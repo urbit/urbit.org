@@ -49,4 +49,6 @@ Never say never, but there is a strong preference for 3 novice developers to wor
 # Milestones and Compensation
 Each of the three Deliverables above is a milestone. However, since the reward is 3 stars and designed to be completed by a 3-person team, it seems likely that the compensation schedule would be "1 star per person upon full completion". Specific details will be agreed upon with the contributor team prior to starting work.
 
+**Bonus** 3 additional stars will be paid to the contributors (1 each) if work is completed before October 2023
+
 
