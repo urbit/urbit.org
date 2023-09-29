@@ -8,7 +8,7 @@ image = "https://storage.googleapis.com/media.urbit.org/assembly/assembly-tiles.
 registration_url = "https://assembly.urbit.org"
 description = "The third Urbit Assembly & first one outside of the US"
 dark = false
-darken_image = ""
+darken_image = "true"
 
 +++
 This year’s Assembly takes place in Lisbon: Europe’s tech and crypto hub.

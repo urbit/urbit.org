@@ -2,7 +2,7 @@
 title = "Trill"
 shortcode = "~dister-dozzod-sortug/trill"
 license = "MIT"
-image = "https://s3.urbit.cloud/img/trill-logo.png"
+image = "https://s3.sortug.com/img/trill-logo.png"
 bgColor = "#000000"
 developer = "Sortug Development"
 website = "https://sortug.com"
