@@ -55,6 +55,13 @@ The Git implementation in Urbit will consists of: (1) libgit - Hoon git library 
 
 ## Milestones
 
+### _Milestone valuation in USDC_
+
+The author would like to propose an alternative valuation scheme, with milestones valued in USDC upon completion. 
+Valuation in USDC would enable the author to commit to working on this project full-time until its completion. 
+Each star of below milestones is valued at 4,000 USDC. 
+The estimated time of completion is 1.5 month/milestone. This corresponds to average of 5,333 USDC/month.
+
 ### 1. Basic Git representation
 
 Basic Git representation consists of: (1) object store, (2) configuration store, and (3) reference store. 
@@ -89,9 +96,9 @@ clay desk. A clay desk can be automatically kept in sync with a remote git repos
 
 _Reward: 1 star_
 
-### 5. Basic set of git userspace tools
+### 5. Basic set of Git userspace tools
 
-Given sufficient git plumbing support in `libgit`, we implement 
+Given sufficient Git plumbing support in `libgit`, we implement 
 a minimal git CLI: `clone`, `merge`, `fetch`, `pull`, `log`, `diff`.
 This enables basic on-board management operations of git repositories hosted by the `%git` agent.  
 
