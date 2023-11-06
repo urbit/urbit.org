@@ -5,11 +5,11 @@ import {
   Container,
   Section,
   SingleColumn,
-  IntraNav,
   TwoUp,
   getPostBySlug,
 } from "@urbit/foundation-design-system";
 import Meta from "../components/Meta";
+import IntraNav from "../components/IntraNav";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

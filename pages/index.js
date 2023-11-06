@@ -7,11 +7,11 @@ import {
   Section,
   SingleColumn,
   TwoUp,
-  IntraNav,
   getAllPosts,
   generateRealtimeDate,
 } from "@urbit/foundation-design-system";
 import { getAllEvents } from "../lib/lib";
+import IntraNav from "../components/IntraNav";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";

@@ -7,9 +7,9 @@ import {
   SingleColumn,
   Section,
   Markdown,
-  IntraNav,
   TableOfContents,
 } from "@urbit/foundation-design-system";
+import IntraNav from "./IntraNav";
 import Header from "./Header";
 import Footer from "./Footer";
 import classNames from "classnames";

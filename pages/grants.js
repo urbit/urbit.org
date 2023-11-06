@@ -6,9 +6,9 @@ import {
   Container,
   SingleColumn,
   Section,
-  IntraNav,
   getAllPosts,
 } from "@urbit/foundation-design-system";
+import IntraNav from "../components/IntraNav";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import GrantPreview from "../components/GrantPreview";

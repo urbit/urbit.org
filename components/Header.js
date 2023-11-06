@@ -105,14 +105,8 @@ export default function Header(props) {
         <Link href="https://urbit.org" passHref>
           <a className="font-semibold mt-2">Urbit.org</a>
         </Link>
-        <Link href="https://operators.urbit.org" passHref>
-          <a className="mt-2">Operators</a>
-        </Link>
-        <Link href="https://developers.urbit.org" passHref>
-          <a className="mt-2">Developers</a>
-        </Link>
-        <Link href="https://roadmap.urbit.org" passHref>
-          <a className="mt-2 mb-4">Roadmap</a>
+        <Link href="https://docs.urbit.org" passHref>
+          <a className="mt-2">Docs</a>
         </Link>
         <hr className="border-wall-200" />
 

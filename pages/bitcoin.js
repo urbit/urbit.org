@@ -1,7 +1,8 @@
-import { Container, SingleColumn, Section, IntraNav, TableOfContents, getAllPosts, getPage, TwoUp, Markdown } from "@urbit/foundation-design-system";
+import { Container, SingleColumn, Section, TableOfContents, getAllPosts, getPage, TwoUp, Markdown } from "@urbit/foundation-design-system";
 import Head from "next/head";
 import Link from "next/link";
 import Meta from "../components/Meta";
+import IntraNav from "../components/IntraNav";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PostPreview from "../components/PostPreview"
