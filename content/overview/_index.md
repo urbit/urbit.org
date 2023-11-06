@@ -4,17 +4,17 @@ description = "We think the internet can’t be saved."
 sort_by = "weight"
 +++
 
-We think the internet can’t be saved. The way things are going, MEGACORP will always control our apps and services because we can no longer run them ourselves.
+Time for a new internet! We think the internet can’t be saved in its current state. The way things are now, the MEGACORPS control our apps and services because we can't host them. Until now... 
 
-The only way out of this mess is with a completely new platform that’s owned and controlled by its users.
+A completely new platform that’s owned and controlled by its users is the only way out of this mess.
 
-Urbit is a new OS and peer-to-peer network that’s simple by design, built to last forever, and 100% owned by its users. Under the hood, Urbit is a clean-slate software stack compact enough that an individual developer can understand and control it completely.
+Urbit: An OS, a peer-to-peer(P2P) network that’s simple by design, built to last forever and 100% user-owned and much much more. Under the hood, Urbit is a compact, clean-slate operating stack that a developer alone can understand completely.
 
-We built this new stack to give people a single integrated tool for communicating and building communities – a tool they can trust, control, and extend to their liking. We want to do away with the terrible user experience of the current ‘frankenstack’ of apps and services that we all use today.
+We built this new stack to offer people a unified system of communication and community-building. We designed this to be trustworthy, to give you full control and ownership of your bits because everyone wants to do away with the terrible user experience of the apps/service ‘frankenshtack’ that is used today.
 
-Urbit is designed to become an effective, customizable productivity tool for collaborators, and a calm noninvasive communication tool for friends and families.
+Urbit is designed by a family, for you to become an effective and productive collaborator in a calm and noninvasive platform.
 
-This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.
+This sounds mad, so let’s get concrete and talk about (1) Urbit as a piece of technology and (2) Urbit as a user experience.
 
 Technology {% .font-bold .subpixel-antialiased .pt-8 %}
 
