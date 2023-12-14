@@ -1,0 +1,14 @@
+@import "@urbit/fdn-design-system/styles/globals";
+@import "@urbit/fdn-design-system/styles/fonts";
+@import "@urbit/fdn-design-system/styles/markdown";
+@import "@urbit/fdn-design-system/styles/prism";
+
+:root {
+  @apply grn-light prism-light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply grn prism-dark;
+  }
+}

@@ -35,7 +35,7 @@ The website for Urbit is maintained by the Urbit Foundation and the Urbit commun
     ```
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-    
+
 To learn more about contributing, see GitHub's [documentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
 ## Framework and Library Documentation

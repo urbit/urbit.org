@@ -1,12 +1,14 @@
-const { Markdown } = require("@urbit/foundation-design-system");
+/** @type {import('tailwindcss').Config} */
+const { Markdown } = require("@urbit/fdn-design-system");
 const markdoc = require("@urbit/markdoc");
+
 module.exports = {
-  presets: [require("@urbit/foundation-design-system/tailwind.config")],
+  presets: [require("@urbit/fdn-design-system/tailwind.config")],
   content: {
     files: [
-      "./node_modules/@urbit/foundation-design-system/dist/**/*.js",
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
+      "./node_modules/@urbit/fdn-design-system/build/**/*.{js,jsx}",
+      "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
       "./content/**/*.md",
     ],
     transform: {
