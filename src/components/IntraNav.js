@@ -26,7 +26,7 @@ const sites = [
   },
 ];
 
-const pages = [];
+const pages = [{ title: "Blog", href: "/blog" }];
 
 const prefersDark = () =>
   window.matchMedia("(prefers-color-scheme: dark)").matches;
