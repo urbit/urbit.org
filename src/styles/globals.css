@@ -12,3 +12,11 @@
     @apply grn prism-dark;
   }
 }
+
+:root[theme='light'] {
+  @apply grn-light prism-light;
+}
+
+:root[theme='dark'] {
+  @apply grn prism-dark;
+}
