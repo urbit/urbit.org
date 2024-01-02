@@ -371,7 +371,14 @@ export async function getStaticProps() {
 }
 
 export async function getStaticPaths() {
-  const slugs = [];
+  const slugs = [
+    "/ecosystem",
+    "/ecosystem/apps",
+    "/ecosystem/podcasts",
+    "/ecosystem/talks",
+    "/ecosystem/orgs",
+    "/ecosystem/articles",
+  ];
 
   // const allHrefs = (thisLink, tree) => {
   //   slugs.push(thisLink, ...tree.pages.map((e) => join(thisLink, e.slug)));
