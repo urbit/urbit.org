@@ -267,8 +267,11 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         <hr className="hr-horizontal" />
         <section className="space-y-16">
           <h2 className="h2">Apps</h2>
-          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+          <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {apps && apps.slice(0, 8).map((props) => <AppCard {...props} />)}
+          </FatBlock>
+          <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+            {apps && apps.slice(0, 6).map((props) => <AppCard {...props} />)}
           </FatBlock>
           <Link className="btn btn-light body-lg" href="/ecosystem/apps">
             More apps
