@@ -64,11 +64,9 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
         />
       </div>
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-semibold">
-          {title}
-        </h3>
+        <h3 className="h3 font-semibold">{title}</h3>
         <div className="hidden md:block">
-          <p className="h-[3.9em] text-base md:text-lg xl:text-xl text-lite line-clamp-3 text-ellipsis">
+          <p className="h-[3.9em] body-md text-lite line-clamp-3 text-ellipsis">
             {description}
           </p>
         </div>
@@ -103,9 +101,11 @@ function PodcastCard({
         style={style}
       />
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-semibold line-clamp-1 text-ellipsis">{podcast}</h3>
+        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">
+          {podcast}
+        </h3>
         <div className="hidden md:block">
-          <p className="h-[2.6em] text-base md:text-lg xl:text-xl text-lite line-clamp-2 text-ellipsis">
+          <p className="h-[2.6em] body-md text-lite line-clamp-2 text-ellipsis">
             {content}
           </p>
         </div>
@@ -154,7 +154,7 @@ function TalkCard({ title, image, url }) {
         </div>
       </div>
       <div className="bg-tint p-4 rounded-b-xl">
-        <h3 className="text-base sm:text-xl md:text-2xl h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
+        <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
       </div>
     </Link>
   );
@@ -166,9 +166,7 @@ function OrgCard({ title, image, slug }) {
       className="relative flex flex-col aspect-square bg-brite rounded-xl p-2 sm:p-4"
       href={path.join("ecosystem", "orgs", slug)}
     >
-      <h3 className="absolute text-black text-base sm:text-lg md:text-2xl lg:text-4xl">
-        {title}
-      </h3>
+      <h3 className="absolute text-black h2">{title}</h3>
       <div className="flex-1 flex text-center items-center">
         <img className="w-1/2 m-auto" src={image} />
       </div>
@@ -184,15 +182,15 @@ function Article({ title, publication, author, type, date, image, URL }) {
       <img className="aspect-square h-full mr-6 lg:mr-16" alt="" src={image} />
       <div className="flex flex-col flex-1 justify-between">
         <div className="flex flex-col">
-          <div className="flex w-full sm:mb-2.5 text-gray text-base sm:text-lg md:text-xl lg:text-2xl">
+          <div className="flex w-full sm:mb-2.5 text-gray body-lg">
             <p className="w-full sm:w-1/2">{publication}</p>
             <p className="hidden sm:block w-1/2">Author: {author}</p>
           </div>
-          <h3 className="text-base sm:text-lg md:text-2xl lg:text-4xl h-[4.02em] md:h-[3.9em] line-clamp-3 text-ellipsis">
+          <h3 className="h2 h-[4.02em] md:h-[3.9em] line-clamp-3 text-ellipsis">
             {title}
           </h3>
         </div>
-        <div className="flex w-full text-gray text-gray text-base sm:text-lg md:text-xl lg:text-2xl">
+        <div className="flex w-full text-gray text-gray body-lg">
           <p className="hidden sm:block w-1/2">{type || "Article"}</p>
           <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
         </div>
@@ -255,9 +253,12 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         ]}
         path={router.asPath}
       />
-      <Main className="text-brite border-brite space-y-8" singleColumn>
+      <Main
+        className="text-brite border-brite space-y-4 md:space-y-8"
+        singleColumn
+      >
         <section className="">
-          <h1 className="h1 mb-20">Ecosystem</h1>
+          <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Ecosystem</h1>
           <p className="h1">
             Urbit is a <strong>new kind of computer</strong> that you can own
             completely in ways that matter: <strong>networking</strong>,{" "}
@@ -265,7 +266,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </p>
         </section>
         <hr className="hr-horizontal" />
-        <section className="space-y-16">
+        <section className="space-y-4 md:space-y-8 lg:space-y-16">
           <h2 className="h2">Apps</h2>
           <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {apps && apps.slice(0, 8).map((props) => <AppCard {...props} />)}
@@ -278,7 +279,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </Link>
         </section>
         <hr className="hr-horizontal" />
-        <section className="space-y-16">
+        <section className="space-y-4 md:space-y-8 lg:space-y-16">
           <h2 className="h2">Podcasts</h2>
           <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
             <div className="layout-px h-60 sm:h-96 md:h-[32rem] w-fit">
@@ -293,7 +294,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </Link>
         </section>
         <hr className="hr-horizontal" />
-        <section className="space-y-16">
+        <section className="space-y-4 md:space-y-8 lg:space-y-16">
           <h2 className="h2">Talks</h2>
           <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
             <div className="layout-px h-48 sm:h-64 md:h-80 w-fit">
@@ -307,7 +308,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </Link>
         </section>
         <hr className="hr-horizontal" />
-        <section className="space-y-16">
+        <section className="space-y-4 md:space-y-8 lg:space-y-16">
           <h2 className="h2">Companies</h2>
           <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {orgs && orgs.slice(0, 8).map((props) => <OrgCard {...props} />)}
@@ -320,9 +321,9 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </Link>
         </section>
         <hr className="hr-horizontal" />
-        <section className="space-y-16">
+        <section className="space-y-4 md:space-y-8 lg:space-y-16">
           <h2 className="h2">Articles & Press</h2>
-          <div className="space-y-8">
+          <div className="space-y-4 md:space-y-8">
             {articles &&
               articles.slice(0, 3).map((props, index) => (
                 <>
