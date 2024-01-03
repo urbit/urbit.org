@@ -201,7 +201,7 @@ function Article({ title, publication, author, type, date, image, URL }) {
 
 export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
   const router = useRouter();
-  const type = router.query?.slug?.[0];
+  const type = router.query?.slug?.[0] || "overview";
 
   let title;
   if (type) {
@@ -257,94 +257,137 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         className="text-brite border-brite space-y-4 md:space-y-8"
         singleColumn
       >
-        <section className="">
-          <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Ecosystem</h1>
-          <p className="h1">
-            Urbit is a <strong>new kind of computer</strong> that you can own
-            completely in ways that matter: <strong>networking</strong>,{" "}
-            <strong>identity</strong>, & <strong>data</strong>.
-          </p>
-        </section>
-        <hr className="hr-horizontal" />
-        <section className="space-y-4 md:space-y-8 lg:space-y-16">
-          <h2 className="h2">Apps</h2>
-          <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-            {apps && apps.slice(0, 8).map((props) => <AppCard {...props} />)}
-          </FatBlock>
-          <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
-            {apps && apps.slice(0, 6).map((props) => <AppCard {...props} />)}
-          </FatBlock>
-          <Link className="btn btn-light body-lg" href="/ecosystem/apps">
-            More apps
-          </Link>
-        </section>
-        <hr className="hr-horizontal" />
-        <section className="space-y-4 md:space-y-8 lg:space-y-16">
-          <h2 className="h2">Podcasts</h2>
-          <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-            <div className="layout-px h-60 sm:h-96 md:h-[32rem] w-fit">
-              <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
-                {podcasts &&
-                  podcasts.map((props) => <PodcastCard {...props} />)}
+        {type === "overview" && (
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Ecosystem</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+              <h2 className="h2">Apps</h2>
+              <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+                {apps &&
+                  apps.slice(0, 8).map((props) => <AppCard {...props} />)}
               </FatBlock>
-            </div>
-          </div>
-          <Link className="btn btn-light body-lg" href="/ecosystem/podcasts">
-            More podcasts
-          </Link>
-        </section>
-        <hr className="hr-horizontal" />
-        <section className="space-y-4 md:space-y-8 lg:space-y-16">
-          <h2 className="h2">Talks</h2>
-          <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-            <div className="layout-px h-48 sm:h-64 md:h-80 w-fit">
-              <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
-                {talks && talks.map((props) => <TalkCard {...props} />)}
+              <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+                {apps &&
+                  apps.slice(0, 6).map((props) => <AppCard {...props} />)}
               </FatBlock>
-            </div>
-          </div>
-          <Link className="btn btn-light body-lg" href="/ecosystem/talks">
-            More talks
-          </Link>
-        </section>
-        <hr className="hr-horizontal" />
-        <section className="space-y-4 md:space-y-8 lg:space-y-16">
-          <h2 className="h2">Companies</h2>
-          <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-            {orgs && orgs.slice(0, 8).map((props) => <OrgCard {...props} />)}
+              <Link className="btn btn-light body-lg" href="/ecosystem/apps">
+                More apps
+              </Link>
+            </section>
+            <hr className="hr-horizontal" />
+            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+              <h2 className="h2">Podcasts</h2>
+              <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
+                <div className="layout-px h-60 sm:h-96 md:h-[32rem] w-fit">
+                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
+                    {podcasts &&
+                      podcasts.map((props) => <PodcastCard {...props} />)}
+                  </FatBlock>
+                </div>
+              </div>
+              <Link
+                className="btn btn-light body-lg"
+                href="/ecosystem/podcasts"
+              >
+                More podcasts
+              </Link>
+            </section>
+            <hr className="hr-horizontal" />
+            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+              <h2 className="h2">Talks</h2>
+              <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
+                <div className="layout-px h-48 sm:h-64 md:h-80 w-fit">
+                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
+                    {talks && talks.map((props) => <TalkCard {...props} />)}
+                  </FatBlock>
+                </div>
+              </div>
+              <Link className="btn btn-light body-lg" href="/ecosystem/talks">
+                More talks
+              </Link>
+            </section>
+            <hr className="hr-horizontal" />
+            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+              <h2 className="h2">Companies</h2>
+              <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+                {orgs &&
+                  orgs.slice(0, 8).map((props) => <OrgCard {...props} />)}
+              </FatBlock>
+              <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+                {orgs &&
+                  orgs.slice(0, 6).map((props) => <OrgCard {...props} />)}
+              </FatBlock>
+              <Link className="btn btn-light body-lg" href="/ecosystem/orgs">
+                More companies
+              </Link>
+            </section>
+            <hr className="hr-horizontal" />
+            <section className="space-y-4 md:space-y-8 lg:space-y-16">
+              <h2 className="h2">Articles & Press</h2>
+              <div className="space-y-4 md:space-y-8">
+                {articles &&
+                  articles.slice(0, 3).map((props, index) => (
+                    <>
+                      {index > 0 && (
+                        <hr className="hr-horizontal border-brite" />
+                      )}
+                      <Article {...props} />
+                    </>
+                  ))}
+              </div>
+              <Link
+                className="btn btn-light body-lg"
+                href="/ecosystem/articles"
+              >
+                More articles & press
+              </Link>
+            </section>
+          </>
+        )}
+        {type === "apps" && (
+          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+            {apps && apps.map((props) => <AppCard {...props} />)}
           </FatBlock>
-          <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
-            {orgs && orgs.slice(0, 6).map((props) => <OrgCard {...props} />)}
+        )}
+        {type === "podcasts" && (
+          <FatBlock className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+            {podcasts && podcasts.map((props) => <PodcastCard {...props} />)}
           </FatBlock>
-          <Link className="btn btn-light body-lg" href="/ecosystem/orgs">
-            More companies
-          </Link>
-        </section>
-        <hr className="hr-horizontal" />
-        <section className="space-y-4 md:space-y-8 lg:space-y-16">
-          <h2 className="h2">Articles & Press</h2>
+        )}
+        {type === "talks" && (
+          <FatBlock className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+            {talks && talks.map((props) => <TalkCard {...props} />)}
+          </FatBlock>
+        )}
+        {type === "orgs" && (
+          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+            {orgs && orgs.map((props) => <OrgCard {...props} />)}
+          </FatBlock>
+        )}
+        {type === "articles" && (
           <div className="space-y-4 md:space-y-8">
             {articles &&
-              articles.slice(0, 3).map((props, index) => (
+              articles.map((props, index) => (
                 <>
                   {index > 0 && <hr className="hr-horizontal border-brite" />}
                   <Article {...props} />
                 </>
               ))}
           </div>
-          <Link className="btn btn-light body-lg" href="/ecosystem/articles">
-            More articles & press
-          </Link>
-        </section>
+        )}
       </Main>
       <Footer />
     </Container>
   );
 }
-
-const Apps = ({}) => {
-  return <div />;
-};
 
 export async function getStaticProps() {
   const apps = getAllPosts(
