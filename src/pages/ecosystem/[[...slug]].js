@@ -46,26 +46,32 @@ function Header({ pages = [], path }) {
 
 function AppCard({ className, title, description, slug, bgColor, image }) {
   const bg = !bgColor && "bg-gray";
-  const style = {
-    backgroundColor: bgColor,
-    backgroundImage: image && `url(${image})`,
-  };
   return (
     <Link
       className={classnames("flex flex-col", className)}
       href={path.join("ecosystem", "apps", slug)}
     >
       <div
-        className={classnames("aspect-square rounded-t-xl", bg, {
-          "bg-center bg-auto bg-no-repeat": image,
-        })}
-        style={style}
-      />
+        className={classnames(
+          "flex justify-center items-center aspect-square rounded-t-xl p-4",
+          bg
+        )}
+        style={{ backgroundColor: bgColor }}
+      >
+        <img
+          /* className="m-auto" */
+          src={image}
+        />
+      </div>
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3">{title}</h3>
-        <p className="h-[3.9em] body-md text-lite line-clamp-3 text-ellipsis">
-          {description}
-        </p>
+        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-semibold">
+          {title}
+        </h3>
+        <div className="hidden md:block">
+          <p className="h-[3.9em] text-base md:text-lg xl:text-xl text-lite line-clamp-3 text-ellipsis">
+            {description}
+          </p>
+        </div>
       </div>
     </Link>
   );
@@ -257,7 +263,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         <hr className="hr-horizontal" />
         <section className="space-y-16">
           <h2 className="h2">Apps</h2>
-          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {apps && apps.slice(0, 8).map((props) => <AppCard {...props} />)}
           </FatBlock>
           <Link className="btn btn-light body-lg" href="/ecosystem/apps">
