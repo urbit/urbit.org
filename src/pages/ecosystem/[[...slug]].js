@@ -103,10 +103,12 @@ function PodcastCard({
         style={style}
       />
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3 line-clamp-1 text-ellipsis">{podcast}</h3>
-        <p className="h-[2.6em] body-md text-lite line-clamp-2 text-ellipsis">
-          {content}
-        </p>
+        <h3 className="text-base md:text-lg lg:text-xl xl:text-2xl font-semibold line-clamp-1 text-ellipsis">{podcast}</h3>
+        <div className="hidden md:block">
+          <p className="h-[2.6em] text-base md:text-lg xl:text-xl text-lite line-clamp-2 text-ellipsis">
+            {content}
+          </p>
+        </div>
       </div>
     </Link>
   );
@@ -274,8 +276,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         <section className="space-y-16">
           <h2 className="h2">Podcasts</h2>
           <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-            <div className="layout-px h-[32rem] w-fit">
-              <FatBlock className="flex space-x-3.5 h-full">
+            <div className="layout-px h-60 sm:h-96 md:h-[32rem] w-fit">
+              <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
                 {podcasts &&
                   podcasts.map((props) => <PodcastCard {...props} />)}
               </FatBlock>
