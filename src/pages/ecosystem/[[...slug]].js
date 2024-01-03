@@ -45,7 +45,7 @@ function Header({ pages = [], path }) {
 }
 
 function AppCard({ className, title, description, slug, bgColor, image }) {
-  const bg = !bgColor && "bg-gray";
+  const bg = !bgColor && "bg-tint";
   return (
     <Link
       className={classnames("flex flex-col", className)}
