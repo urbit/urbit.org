@@ -120,7 +120,7 @@ function TalkCard({ title, image, url }) {
   };
   return (
     <Link
-      className="flex flex-col aspect-[12/9] bg-tint rounded-xl"
+      className="flex flex-col aspect-[12/10] bg-tint rounded-xl"
       href={url}
       target="_blank"
     >
@@ -154,7 +154,7 @@ function TalkCard({ title, image, url }) {
         </div>
       </div>
       <div className="bg-tint p-4 rounded-b-xl">
-        <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
+        <h3 className="text-base sm:text-xl md:text-2xl h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
       </div>
     </Link>
   );
@@ -291,8 +291,8 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         <section className="space-y-16">
           <h2 className="h2">Talks</h2>
           <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-            <div className="layout-px h-[20rem] w-fit">
-              <FatBlock className="flex space-x-3.5 h-full">
+            <div className="layout-px h-48 sm:h-64 md:h-80 w-fit">
+              <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
                 {talks && talks.map((props) => <TalkCard {...props} />)}
               </FatBlock>
             </div>
