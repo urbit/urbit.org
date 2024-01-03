@@ -7,12 +7,12 @@ import {
   SingleColumn,
   Section,
   Markdown,
-  IntraNav,
   getPage,
   getPreviousPost,
   getNextPost,
 } from "@urbit/foundation-design-system";
 import { join } from "path";
+import IntraNav from "../../components/IntraNav";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";

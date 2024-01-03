@@ -2,7 +2,7 @@
 title = "basket"
 shortcode = "~nodmyn-dosrux/basket"
 license = "MIT"
-image = "https://0x0.st/oFHB.png"
+image = "https://bwyl.nyc3.digitaloceanspaces.com/basket/basket.png"
 bgColor = "#F2F2F2"
 developer = "Assembly Capital"
 website = "https://github.com/bacwyls/basket"

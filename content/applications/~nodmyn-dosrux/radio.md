@@ -2,7 +2,7 @@
 title = "radio"
 shortcode = "~nodmyn-dosrux/radio"
 license = "MIT"
-image = "https://0x0.st/o4--.png"
+image = "https://bwyl.nyc3.digitaloceanspaces.com/radio/radio.png"
 bgColor = "#f2f2f2"
 developer = "Assembly Capital"
 website = "https://github.com/bacwyls/radio"

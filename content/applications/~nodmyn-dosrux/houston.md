@@ -2,7 +2,7 @@
 title = "houston"
 shortcode = "~nodmyn-dosrux/houston"
 license = "MIT"
-image = "https://0x0.st/ojrj.png"
+image = "https://bwyl.nyc3.digitaloceanspaces.com/houston/houston.png"
 bgColor = "#FFFFFF"
 developer = "Assembly Capital"
 website = "https://github.com/assemblycapital/houston"

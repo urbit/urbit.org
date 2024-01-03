@@ -5,11 +5,11 @@ import {
   Container,
   SingleColumn,
   Section,
-  IntraNav,
   getAllPosts,
   generateDisplayDate,
   formatDate,
 } from "@urbit/foundation-design-system";
+import IntraNav from "../../components/IntraNav";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";

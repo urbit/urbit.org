@@ -6,7 +6,6 @@ import ErrorPage from "../404";
 import {
   Container,
   Markdown,
-  IntraNav,
   SingleColumn,
   Section,
   TwoUp,
@@ -17,6 +16,7 @@ import {
   formatDate,
   generateDisplayDate,
 } from "@urbit/foundation-design-system";
+import IntraNav from "../../components/IntraNav";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import PostPreview from "../../components/PostPreview";

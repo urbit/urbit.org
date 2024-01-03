@@ -9,11 +9,11 @@ import {
   Markdown,
   SingleColumn,
   Section,
-  IntraNav,
   getPostBySlug,
   getPage,
   formatDate,
 } from "@urbit/foundation-design-system";
+import IntraNav from "../../components/IntraNav";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MetadataBlock from "../../components/ecosystem/MetadataBlock";
