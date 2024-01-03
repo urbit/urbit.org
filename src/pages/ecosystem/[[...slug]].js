@@ -163,10 +163,12 @@ function TalkCard({ title, image, url }) {
 function OrgCard({ title, image, slug }) {
   return (
     <Link
-      className="relative flex flex-col aspect-square bg-brite rounded-xl px-4 py-1 md:py-4"
+      className="relative flex flex-col aspect-square bg-brite rounded-xl p-2 sm:p-4"
       href={path.join("ecosystem", "orgs", slug)}
     >
-      <h3 className="absolute text-black h2">{title}</h3>
+      <h3 className="absolute text-black text-base sm:text-lg md:text-2xl lg:text-4xl">
+        {title}
+      </h3>
       <div className="flex-1 flex text-center items-center">
         <img className="w-1/2 m-auto" src={image} />
       </div>
@@ -304,8 +306,11 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         <hr className="hr-horizontal" />
         <section className="space-y-16">
           <h2 className="h2">Companies</h2>
-          <FatBlock className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+          <FatBlock className="hidden md:grid grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {orgs && orgs.slice(0, 8).map((props) => <OrgCard {...props} />)}
+          </FatBlock>
+          <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+            {orgs && orgs.slice(0, 6).map((props) => <OrgCard {...props} />)}
           </FatBlock>
           <Link className="btn btn-light body-lg" href="/ecosystem/orgs">
             More companies
