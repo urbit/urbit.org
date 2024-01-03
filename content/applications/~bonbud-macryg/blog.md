@@ -5,7 +5,7 @@ developer = "~bonbud-macryg"
 description = "The easiest and most versatile publishing app on Urbit."
 license = "MIT"
 website = "https://github.com/thecommons-urbit/blog"
-image = "https://github.com/thecommons-urbit/blog/blob/main/assets/tile.png"
+image = "https://raw.githubusercontent.com/thecommons-urbit/blog/main/assets/tile.png"
 +++
 
 A publishing tool for creating a basic blog with markdown and css. The app lets anyone on Urbit spin up and customize a

@@ -25,5 +25,4 @@ Search for ~dister-norsyr-torryn in Grid to find the Canvas app, and install it 
 
 A public canvas is hosted at: ~picsel-norsyr-torryn/public
 
-
 Come and join the group to share your creations and see what others are doing: ~norsyr-torryn/canvas
