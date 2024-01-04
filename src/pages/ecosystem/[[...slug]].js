@@ -64,7 +64,7 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
         />
       </div>
       <div className="bg-tint rounded-b-xl p-4">
-        <h3 className="h3 font-semibold">{title}</h3>
+        <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">{title}</h3>
         <div className="hidden md:block">
           <p className="h-[3.9em] body-md text-lite line-clamp-3 text-ellipsis">
             {description}
