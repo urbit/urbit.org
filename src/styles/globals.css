@@ -20,29 +20,3 @@
 :root[theme='dark'] {
   @apply grn prism-dark;
 }
-
-.type-ui {
-  @apply text-base sm:text-lg md:text-xl 3xl:text-2xl font-normal;
-}
-
-/* headings */
-.h0 {
-  @apply text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light;
-}
-.h1 {
-  @apply text-2xl sm:text-4xl md:text-6xl 3xl:text-7xl font-normal;
-}
-.h2 {
-  @apply text-base sm:text-xl md:text-2xl lg:text-4xl 3xl:text-5xl font-normal;
-}
-.h3 {
-  @apply text-base sm:text-base md:text-xl lg:text-2xl 3xl:text-3xl font-normal;
-}
-
-/* text bodies */
-.body-md {
-  @apply text-base sm:text-base md:text-lg lg:text-xl 3xl:text-2xl
-}
-.body-lg {
-  @apply text-base sm:text-lg md:text-xl lg:text-2xl 3xl:text-3xl
-}

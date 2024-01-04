@@ -154,7 +154,7 @@ function TalkCard({ title, image, url }) {
         </div>
       </div>
       <div className="bg-tint p-4 rounded-b-xl">
-        <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
+        <h3 className="h3 h-[1.3em] line-clamp-1 text-ellipsis">{title}</h3>
       </div>
     </Link>
   );
@@ -166,7 +166,7 @@ function OrgCard({ title, image, slug }) {
       className="relative flex flex-col aspect-square bg-brite rounded-xl p-2 sm:p-4"
       href={path.join("/ecosystem", "orgs", slug)}
     >
-      <h3 className="absolute text-black h2">{title}</h3>
+      <h3 className="h3 absolute text-black">{title}</h3>
       <div className="flex-1 flex text-center items-center">
         <img className="w-1/2 m-auto" src={image} />
       </div>
@@ -178,19 +178,19 @@ function Article({ title, publication, author, type, date, image, URL }) {
   const displayDate = generateDisplayDate(date);
 
   return (
-    <Link className="flex h-28 sm:h-36 md:h-44 lg:h-72 w-full" href={URL}>
+    <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
       <img className="aspect-square h-full mr-6 lg:mr-16" alt="" src={image} />
       <div className="flex flex-col flex-1 justify-between">
         <div className="flex flex-col">
-          <div className="flex w-full sm:mb-2.5 text-gray body-lg">
+          <div className="flex w-full sm:mb-2.5 text-gray body-md">
             <p className="w-full sm:w-1/2">{publication}</p>
             <p className="hidden sm:block w-1/2">Author: {author}</p>
           </div>
-          <h3 className="h2 h-[4.02em] md:h-[3.9em] line-clamp-3 text-ellipsis">
+          <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">
             {title}
           </h3>
         </div>
-        <div className="flex w-full text-gray text-gray body-lg">
+        <div className="flex w-full text-gray text-gray body-md">
           <p className="hidden sm:block w-1/2">{type || "Article"}</p>
           <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
         </div>
@@ -274,7 +274,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 {apps &&
                   apps.slice(0, 8).map((props) => <AppCard {...props} />)}
               </FatBlock>
-              <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+              <FatBlock className="grid md:hidden grid-cols-2 xs:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
                 {apps &&
                   apps.slice(0, 6).map((props) => <AppCard {...props} />)}
               </FatBlock>
@@ -321,7 +321,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
                 {orgs &&
                   orgs.slice(0, 8).map((props) => <OrgCard {...props} />)}
               </FatBlock>
-              <FatBlock className="grid md:hidden grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+              <FatBlock className="grid md:hidden grid-cols-2 xs:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
                 {orgs &&
                   orgs.slice(0, 6).map((props) => <OrgCard {...props} />)}
               </FatBlock>
@@ -353,22 +353,22 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </>
         )}
         {type === "apps" && (
-          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+          <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {apps && apps.map((props) => <AppCard {...props} />)}
           </FatBlock>
         )}
         {type === "podcasts" && (
-          <FatBlock className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
             {podcasts && podcasts.map((props) => <PodcastCard {...props} />)}
           </FatBlock>
         )}
         {type === "talks" && (
-          <FatBlock className="grid grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
             {talks && talks.map((props) => <TalkCard {...props} />)}
           </FatBlock>
         )}
         {type === "orgs" && (
-          <FatBlock className="grid grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+          <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
             {orgs && orgs.map((props) => <OrgCard {...props} />)}
           </FatBlock>
         )}
