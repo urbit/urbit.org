@@ -86,19 +86,28 @@ function PodcastCard({
   apple,
   slug,
 }) {
-  const style = {
-    backgroundImage: image && `url(${image})`,
-  };
   return (
     <Link
-      className={classnames("flex flex-col aspect-[2/2.5]", className)}
+      className={classnames("flex flex-col flex-1", className)}
       href={path.join("/ecosystem", "podcasts", slug)}
     >
       <div
-        className={classnames("aspect-square rounded-t-xl", {
+        className={classnames("md:hidden aspect-square rounded-t-xl", {
           "bg-center bg-cover bg-no-repeat": image,
         })}
-        style={style}
+        style={{
+          backgroundImage: image && `url(${image})`,
+          height: "calc(100% - 1rem - 1rem - 2em)",
+        }}
+      />
+      <div
+        className={classnames("hidden md:block aspect-square rounded-t-xl", {
+          "bg-center bg-cover bg-no-repeat": image,
+        })}
+        style={{
+          backgroundImage: image && `url(${image})`,
+          height: "calc(100% - 1rem - 1rem - 5.5em)",
+        }}
       />
       <div className="bg-tint rounded-b-xl p-4">
         <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">
@@ -117,15 +126,16 @@ function PodcastCard({
 function TalkCard({ title, image, url }) {
   const style = {
     backgroundImage: image && `url(${image})`,
+    height: "calc(100% - 1rem - 1rem - 2em)",
   };
   return (
     <Link
-      className="flex flex-col aspect-[12/10] bg-tint rounded-xl"
+      className="flex flex-col flex-1 rounded-xl"
       href={url}
       target="_blank"
     >
       <div
-        className={classnames("relative aspect-[16/9] rounded-t-xl", {
+        className={classnames("relative aspect-[16/9] h-full rounded-t-xl", {
           "bg-center bg-cover bg-no-repeat": image,
         })}
         style={style}
@@ -186,9 +196,7 @@ function Article({ title, publication, author, type, date, image, URL }) {
             <p className="w-full sm:w-1/2">{publication}</p>
             <p className="hidden sm:block w-1/2">Author: {author}</p>
           </div>
-          <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">
-            {title}
-          </h3>
+          <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
         </div>
         <div className="flex w-full text-gray text-gray body-md">
           <p className="hidden sm:block w-1/2">{type || "Article"}</p>
