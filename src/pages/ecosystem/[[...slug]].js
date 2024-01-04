@@ -49,7 +49,7 @@ function AppCard({ className, title, description, slug, bgColor, image }) {
   return (
     <Link
       className={classnames("flex flex-col", className)}
-      href={path.join("ecosystem", "apps", slug)}
+      href={path.join("/ecosystem", "apps", slug)}
     >
       <div
         className={classnames(
@@ -92,7 +92,7 @@ function PodcastCard({
   return (
     <Link
       className={classnames("flex flex-col aspect-[2/2.5]", className)}
-      href={path.join("ecosystem", "podcasts", slug)}
+      href={path.join("/ecosystem", "podcasts", slug)}
     >
       <div
         className={classnames("aspect-square rounded-t-xl", {
@@ -164,7 +164,7 @@ function OrgCard({ title, image, slug }) {
   return (
     <Link
       className="relative flex flex-col aspect-square bg-brite rounded-xl p-2 sm:p-4"
-      href={path.join("ecosystem", "orgs", slug)}
+      href={path.join("/ecosystem", "orgs", slug)}
     >
       <h3 className="absolute text-black h2">{title}</h3>
       <div className="flex-1 flex text-center items-center">
