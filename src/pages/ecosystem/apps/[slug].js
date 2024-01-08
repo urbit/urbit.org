@@ -106,9 +106,11 @@ export default function App({ post, org, markdown }) {
         <section className="space-y-5 layout-narrow">
           <hr className="hr-horizontal border-brite" />
           <h2 className="h2">Developer</h2>
-          <FatBlock>
-            <OrgCard className="w-1/3" {...org} />
-          </FatBlock>
+          {(org.slug && (
+            <FatBlock>
+              <OrgCard className="w-1/3" {...org} />
+            </FatBlock>
+          )) || <p className="body-md">{org.title}</p>}
           <hr className="hr-horizontal border-brite" />
           <FatBlock className="bg-tint body-sm rounded-md p-5">
             Disclaimer: Applications may not be audited for security and might
@@ -157,11 +159,20 @@ export async function getStaticProps({ params }) {
     "ecosystem/apps"
   );
 
-  const org = getPostBySlug(
-    post.developer,
-    ["title", "image", "slug"],
+  let org = { title: post.developer };
+
+  const orgs = getAllPosts(
+    ["title", "image", "ships", "slug"],
     "ecosystem/orgs"
   );
+
+  const ship = post.shortcode.split("/")[0];
+  for (let i = 0; i < orgs.length; i++) {
+    if (orgs[i].ships.filter((s) => s === ship).length > 0) {
+      org = orgs[i];
+      break;
+    }
+  }
 
   const markdown = JSON.stringify(Markdown.parse({ post }));
 
