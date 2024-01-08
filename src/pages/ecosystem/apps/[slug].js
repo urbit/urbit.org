@@ -162,11 +162,13 @@ export async function getStaticProps({ params }) {
     "ecosystem/orgs"
   );
 
-  const ship = post.shortcode.split("/")[0];
-  for (let i = 0; i < orgs.length; i++) {
-    if (orgs[i].ships.filter((s) => s === ship).length > 0) {
-      org = orgs[i];
-      break;
+  if (post.shortcode) {
+    const ship = post.shortcode.split("/")[0];
+    for (let i = 0; i < orgs.length; i++) {
+      if (orgs[i].ships.filter((s) => s === ship).length > 0) {
+        org = orgs[i];
+        break;
+      }
     }
   }
 
