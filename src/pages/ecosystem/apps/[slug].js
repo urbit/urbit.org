@@ -28,8 +28,6 @@ export default function App({ post, markdown }) {
     return <ErrorPage />;
   }
 
-  console.log(post);
-
   return (
     <Container>
       <Head>
@@ -58,7 +56,7 @@ export default function App({ post, markdown }) {
         path={router.asPath}
       />
       <Main
-        className="text-brite border-brite space-y-4 md:space-y-8 lg:space-y-16"
+        className="text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
         singleColumn
       >
         <div className="flex">
@@ -68,7 +66,7 @@ export default function App({ post, markdown }) {
             alt=""
             src={post.image}
           />
-          <div className="flex flex-col justify-between pl-4 md:pl-8 lg:pl-16">
+          <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
             <button
               className="btn btn-light body-md"
