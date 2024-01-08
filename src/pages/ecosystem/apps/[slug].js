@@ -2,8 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import classnames from "classnames";
-import path from "path";
 import {
   Container,
   Main,
@@ -12,8 +10,6 @@ import {
   Markdown,
   getPostBySlug,
   getAllPosts,
-  generateDisplayDate,
-  formatDate,
 } from "@urbit/fdn-design-system";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
