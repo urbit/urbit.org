@@ -8,6 +8,7 @@ import {
   Container,
   Main,
   Section,
+  FatBlock,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -18,9 +19,10 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header";
+import OrgCard from "@/components/ecosystem/Org";
 import ErrorPage from "@/pages/404";
 
-export default function App({ post, markdown }) {
+export default function App({ post, org, markdown }) {
   const router = useRouter();
   const title = `${post.title} • Apps • Ecosystem`;
 
@@ -101,6 +103,36 @@ export default function App({ post, markdown }) {
         <section className="layout-narrow markdown">
           <Markdown.render content={JSON.parse(markdown)} />
         </section>
+        <section className="space-y-5 layout-narrow">
+          <hr className="hr-horizontal border-brite" />
+          <h2 className="h2">Developer</h2>
+          <FatBlock>
+            <OrgCard className="w-1/3" {...org} />
+          </FatBlock>
+          <hr className="hr-horizontal border-brite" />
+          <FatBlock className="bg-tint body-sm rounded-md p-5">
+            Disclaimer: Applications may not be audited for security and might
+            contain malicious code or vulnerabilities that could lead to
+            unwanted interaction with your ship. Explore at your own risk.
+          </FatBlock>
+          <hr className="hr-horizontal border-brite" />
+          <Link
+            className="btn btn-light body-md"
+            href="https://docs.urbit.org/manual/getting-started/additional/installing-applications"
+          >
+            How to Install an Urbit Application
+          </Link>
+          <hr className="hr-horizontal border-brite" />
+          <p className="text-brite body-md">
+            Have an application you'd like to share publicly through urbit.org?
+          </p>
+          <Link
+            className="text-lite underline decoration-1 underline-offset-4 body-md"
+            href="https://urbit.org/applications/submit"
+          >
+            Submit your application
+          </Link>
+        </section>
       </Main>
       <Footer />
     </Container>
@@ -125,10 +157,16 @@ export async function getStaticProps({ params }) {
     "ecosystem/apps"
   );
 
+  const org = getPostBySlug(
+    post.developer,
+    ["title", "image", "slug"],
+    "ecosystem/orgs"
+  );
+
   const markdown = JSON.stringify(Markdown.parse({ post }));
 
   return {
-    props: { post, markdown },
+    props: { post, org, markdown },
   };
 }
 
