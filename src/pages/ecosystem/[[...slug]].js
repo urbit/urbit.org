@@ -88,27 +88,10 @@ function PodcastCard({
 }) {
   return (
     <Link
-      className={classnames("flex flex-col flex-1", className)}
+      className={classnames("flex flex-col", className)}
       href={path.join("/ecosystem", "podcasts", slug)}
     >
-      <div
-        className={classnames("md:hidden aspect-square rounded-t-xl", {
-          "bg-center bg-cover bg-no-repeat": image,
-        })}
-        style={{
-          backgroundImage: image && `url(${image})`,
-          height: "calc(100% - 1rem - 1rem - 2em)",
-        }}
-      />
-      <div
-        className={classnames("hidden md:block aspect-square rounded-t-xl", {
-          "bg-center bg-cover bg-no-repeat": image,
-        })}
-        style={{
-          backgroundImage: image && `url(${image})`,
-          height: "calc(100% - 1rem - 1rem - 5.5em)",
-        }}
-      />
+      <img className="aspect-square rounded-t-xl object-cover" src={image} />
       <div className="bg-tint rounded-b-xl p-4">
         <h3 className="h3 font-semibold line-clamp-1 text-ellipsis">
           {podcast}
@@ -123,45 +106,38 @@ function PodcastCard({
   );
 }
 
-function TalkCard({ title, image, url }) {
-  const style = {
-    backgroundImage: image && `url(${image})`,
-    height: "calc(100% - 1rem - 1rem - 2em)",
-  };
+function TalkCard({ className, title, image, url }) {
   return (
     <Link
-      className="flex flex-col flex-1 rounded-xl"
+      className={classnames("flex flex-col", className)}
       href={url}
       target="_blank"
     >
-      <div
-        className={classnames("relative aspect-[16/9] h-full rounded-t-xl", {
-          "bg-center bg-cover bg-no-repeat": image,
-        })}
-        style={style}
-      >
-        <div className="absolute flex h-full w-full items-center justify-center">
-          <svg
-            className="h-1/4"
-            width="68"
-            height="97"
-            viewBox="0 0 68 97"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_1082_1728)">
-              <path
-                d="M55.8737 48.5L9.06684 83.4636V13.5364L55.8737 48.5ZM68 48.5C68 47.0344 67.3207 45.6797 66.1877 44.8901L7.25448 0.9031C7.0517 0.761833 6.82357 0.678586 6.60812 0.567591C6.45096 0.484344 6.31155 0.391007 6.14679 0.325419C5.64238 0.128654 5.11261 0 4.53469 0C2.04048 0 0 2.03071 0 4.51045V92.487C0 94.9693 2.04048 96.9975 4.53215 96.9975C5.11008 96.9975 5.63731 96.8688 6.14426 96.6721C6.30902 96.6065 6.44843 96.5131 6.60305 96.4324C6.82104 96.3189 7.0517 96.2356 7.25448 96.0944L66.1877 52.1048C67.3207 51.3153 68 49.9606 68 48.495"
-                fill="#AAE68C"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_1082_1728">
-                <rect width="68" height="97" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
+      <div className="relative aspect-[16/9] rounded-t-xl">
+        <img
+          className="absolute h-full w-full rounded-t-xl object-cover"
+          src={image}
+        />
+        <svg
+          className="absolute z-10 h-1/4 m-auto top-0 right-0 bottom-0 left-0"
+          width="68"
+          height="97"
+          viewBox="0 0 68 97"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1082_1728)">
+            <path
+              d="M55.8737 48.5L9.06684 83.4636V13.5364L55.8737 48.5ZM68 48.5C68 47.0344 67.3207 45.6797 66.1877 44.8901L7.25448 0.9031C7.0517 0.761833 6.82357 0.678586 6.60812 0.567591C6.45096 0.484344 6.31155 0.391007 6.14679 0.325419C5.64238 0.128654 5.11261 0 4.53469 0C2.04048 0 0 2.03071 0 4.51045V92.487C0 94.9693 2.04048 96.9975 4.53215 96.9975C5.11008 96.9975 5.63731 96.8688 6.14426 96.6721C6.30902 96.6065 6.44843 96.5131 6.60305 96.4324C6.82104 96.3189 7.0517 96.2356 7.25448 96.0944L66.1877 52.1048C67.3207 51.3153 68 49.9606 68 48.495"
+              fill="#AAE68C"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1082_1728">
+              <rect width="68" height="97" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
       </div>
       <div className="bg-tint p-4 rounded-b-xl">
         <h3 className="h3 h-[1.3em] line-clamp-1 text-ellipsis">{title}</h3>
@@ -294,10 +270,15 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section className="space-y-4 md:space-y-8 lg:space-y-16">
               <h2 className="h2">Podcasts</h2>
               <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-                <div className="layout-px h-60 sm:h-96 md:h-[32rem] w-fit">
-                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
+                <div className="layout-px w-fit">
+                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8">
                     {podcasts &&
-                      podcasts.map((props) => <PodcastCard {...props} />)}
+                      podcasts.map((props) => (
+                        <PodcastCard
+                          className="w-60 sm:w-96 md:w-[24rem]"
+                          {...props}
+                        />
+                      ))}
                   </FatBlock>
                 </div>
               </div>
@@ -312,9 +293,12 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <section className="space-y-4 md:space-y-8 lg:space-y-16">
               <h2 className="h2">Talks</h2>
               <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-                <div className="layout-px h-48 sm:h-64 md:h-80 w-fit">
+                <div className="layout-px w-fit">
                   <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
-                    {talks && talks.map((props) => <TalkCard {...props} />)}
+                    {talks &&
+                      talks.map((props) => (
+                        <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
+                      ))}
                   </FatBlock>
                 </div>
               </div>
