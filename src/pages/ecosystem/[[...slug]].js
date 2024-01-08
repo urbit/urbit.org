@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -41,6 +41,72 @@ function Header({ pages = [], path }) {
         ))}
       </nav>
     </div>
+  );
+}
+
+function Filter({ className = "", children, filters = [] }) {
+  const [filter, setFilter] = useState(
+    Object.fromEntries(new Map(filters.map((s) => [s, false])))
+  );
+
+  const filterChildren = () => {
+    let filtered = [...children];
+    filters.forEach((s) => {
+      if (filter[s]) {
+        filtered = filtered.filter((c) => c.props[s] === filter[s]);
+      }
+    });
+    return filtered;
+  };
+
+  const getFilterValues = (s) => {
+    let vals = new Set([]);
+    children.forEach((c) => {
+      vals.add(c.props[s]);
+    });
+    return new Array(...vals);
+  };
+
+  const toggleFilter = (f, v) => {
+    let filterCopy = { ...filter };
+    if (filter[f] === v) {
+      filterCopy[f] = false;
+    } else {
+      filterCopy[f] = v;
+    }
+    setFilter(filterCopy);
+  };
+
+  return (
+    <>
+      {filters.map((f) => (
+        <nav className="flex items-center w-full h-12 nav-space-x text-gray bg-black whitespace-nowrap overflow-x-auto type-ui">
+          <button
+            className={classnames("btn border-2", {
+              "border-gray text-brite": filter[f] !== false,
+              "border-brite bg-brite text-gray": filter[f] === false,
+            })}
+            onClick={() => toggleFilter(f, false)}
+          >
+            All
+          </button>
+          {getFilterValues(f).map((v) => (
+            <button
+              className={classnames("btn border-2 border-brite", {
+                "border-gray text-brite": filter[f] !== v,
+                "border-brite bg-brite text-gray": filter[f] === v,
+              })}
+              onClick={() => toggleFilter(f, v)}
+            >
+              {v}
+            </button>
+          ))}
+        </nav>
+      ))}
+      <div className={classnames("mt-8", className)}>
+        {filterChildren(children)}
+      </div>
+    </>
   );
 }
 
@@ -160,26 +226,42 @@ function OrgCard({ title, image, slug }) {
   );
 }
 
-function Article({ title, publication, author, type, date, image, URL }) {
+function Article({
+  title,
+  publication,
+  author,
+  type,
+  date,
+  image,
+  URL,
+  divider = false,
+}) {
   const displayDate = generateDisplayDate(date);
 
   return (
-    <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
-      <img className="aspect-square h-full mr-6 lg:mr-16" alt="" src={image} />
-      <div className="flex flex-col flex-1 justify-between">
-        <div className="flex flex-col">
-          <div className="flex w-full sm:mb-2.5 text-gray body-md">
-            <p className="w-full sm:w-1/2">{publication}</p>
-            <p className="hidden sm:block w-1/2">Author: {author}</p>
+    <>
+      {divider && <hr className="hr-horizontal border-brite" />}
+      <Link className="flex h-28 xs:h-36 md:h-44 w-full" href={URL}>
+        <img
+          className="aspect-square h-full mr-6 lg:mr-16"
+          alt=""
+          src={image}
+        />
+        <div className="flex flex-col flex-1 justify-between">
+          <div className="flex flex-col">
+            <div className="flex w-full sm:mb-2.5 text-gray body-md">
+              <p className="w-full sm:w-1/2">{publication}</p>
+              <p className="hidden sm:block w-1/2">Author: {author}</p>
+            </div>
+            <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
           </div>
-          <h3 className="h3 h-[2.6em] line-clamp-2 text-ellipsis">{title}</h3>
+          <div className="flex w-full text-gray text-gray body-md">
+            <p className="hidden sm:block w-1/2">{type || "Article"}</p>
+            <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
+          </div>
         </div>
-        <div className="flex w-full text-gray text-gray body-md">
-          <p className="hidden sm:block w-1/2">{type || "Article"}</p>
-          <p className="w-full sm:w-1/2">{formatDate(displayDate)}</p>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </>
   );
 }
 
@@ -326,14 +408,11 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
               <h2 className="h2">Articles & Press</h2>
               <div className="space-y-4 md:space-y-8">
                 {articles &&
-                  articles.slice(0, 3).map((props, index) => (
-                    <>
-                      {index > 0 && (
-                        <hr className="hr-horizontal border-brite" />
-                      )}
-                      <Article {...props} />
-                    </>
-                  ))}
+                  articles
+                    .slice(0, 3)
+                    .map((props, index) => (
+                      <Article divider={index > 0} {...props} />
+                    ))}
               </div>
               <Link
                 className="btn btn-light body-lg"
@@ -355,8 +434,13 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </FatBlock>
         )}
         {type === "talks" && (
-          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
-            {talks && talks.map((props) => <TalkCard {...props} />)}
+          <FatBlock>
+            <Filter
+              className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
+              filters={["event", "type"]}
+            >
+              {talks && talks.map((props) => <TalkCard {...props} />)}
+            </Filter>
           </FatBlock>
         )}
         {type === "orgs" && (
@@ -365,15 +449,14 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </FatBlock>
         )}
         {type === "articles" && (
-          <div className="space-y-4 md:space-y-8">
-            {articles &&
-              articles.map((props, index) => (
-                <>
-                  {index > 0 && <hr className="hr-horizontal border-brite" />}
-                  <Article {...props} />
-                </>
-              ))}
-          </div>
+          <FatBlock>
+            <Filter className="space-y-4 md:space-y-8" filters={["type"]}>
+              {articles &&
+                articles.map((props, index) => (
+                  <Article divider={index > 0} {...props} />
+                ))}
+            </Filter>
+          </FatBlock>
         )}
       </Main>
       <Footer />
