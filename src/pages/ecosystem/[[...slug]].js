@@ -23,6 +23,7 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header"
+import OrgCard from "@/components/ecosystem/Org"
 import { matchEcosystemPost } from "@/lib/lib";
 
 function Filter({ className = "", children, filters = [] }) {
@@ -188,20 +189,6 @@ function TalkCard({ className, title, image, url }) {
       </div>
       <div className="bg-tint p-4 rounded-b-xl">
         <h3 className="h3 h-[1.3em] line-clamp-1 text-ellipsis">{title}</h3>
-      </div>
-    </Link>
-  );
-}
-
-function OrgCard({ title, image, slug }) {
-  return (
-    <Link
-      className="relative flex flex-col aspect-square bg-brite rounded-xl p-2 sm:p-4"
-      href={path.join("/ecosystem", "orgs", slug)}
-    >
-      <h3 className="h3 absolute text-black">{title}</h3>
-      <div className="flex-1 flex text-center items-center">
-        <img className="w-1/2 m-auto" src={image} />
       </div>
     </Link>
   );
