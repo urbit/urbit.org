@@ -261,7 +261,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
   return (
     <Container>
       <Head>
-        <title>{`${title} • Urbit`}</title>
+        <title>{`${title} • Ecosystem • Urbit`}</title>
         {Meta(
           {
             title: title,
