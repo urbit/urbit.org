@@ -37,20 +37,20 @@ export default function PostCard({
         </h3>
       </div>
       <div className="flex flex-col bg-brite text-gray rounded-b-lg p-4">
-        <p className="h-[5.2em] body-sm line-clamp-4 text-ellipsis">
+        <p className="h-[5.5em] body-sm line-clamp-4 text-ellipsis">
           {description}
         </p>
         {(date || authorName || authorPlanet) && (
-          <div className="h-[2.6em]">
-            <hr className="hr-horizontal border-gray mb-0.5 md:mb-2 xl:mb-3.5" />
-            <div className="flex justify-between text-base font-medium">
-              <p>{date}</p>
-              <div>
-                {authorName && <p>{authorName}</p>}
+          <div className="">
+            <hr className="hr-horizontal border-gray my-0.5 md:my-2 xl:my-3.5" />
+            <div className="flex justify-between h-[2.6em] text-base font-medium">
+              <p className="w-1/2">{date}</p>
+              <div className="break-all">
+                {authorName && <p className="line-clamp-1 text-ellipsis">{authorName}</p>}
                 {authorPlanet && (
                   <p className="relative">
                     <span className="absolute -left-3">~</span>
-                    {authorPlanet}
+                    <span className="line-clamp-1 text-ellipsis">{authorPlanet}</span>
                   </p>
                 )}
               </div>

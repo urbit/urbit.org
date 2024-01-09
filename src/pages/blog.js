@@ -4,14 +4,14 @@ import {
   Container,
   Main,
   FatBlock,
-  PostCard,
   getAllPosts,
   formatDate,
   generateDisplayDate,
 } from "@urbit/fdn-design-system";
-import IntraNav from "../components/IntraNav";
-import Footer from "../components/Footer";
-import Meta from "../components/Meta";
+import IntraNav from "@/components/IntraNav";
+import Footer from "@/components/Footer";
+import Meta from "@/components/Meta";
+import PostCard from "@/components/PostCard";
 
 export default function Blog({ posts, search }) {
   const post = {
@@ -27,13 +27,26 @@ export default function Blog({ posts, search }) {
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
-      <Main singleColumn>
-        <h1 className="h1 text-brite mt-4 mb-24">Blog</h1>
+      <Main
+        className="text-brite border-brite space-y-5 md:space-y-8"
+        singleColumn
+      >
+        <section>
+          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
+            Blog
+          </h1>
+          <p className="h1">
+            Urbit is a <strong>new kind of computer</strong> that you can own
+            completely in ways that matter: <strong>networking</strong>,{" "}
+            <strong>identity</strong>, & <strong>data</strong>.
+          </p>
+        </section>
+        <hr className="hr-horizontal border-brite" />
         <FatBlock>
           <div
             className={
-              "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 " +
-              "gap-4 md:gap-6 xl:gap-7 "
+              "grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 " +
+              "gap-1 lg:gap-6 xl:gap-8"
             }
           >
             {posts.map((post) => (
@@ -44,7 +57,7 @@ export default function Blog({ posts, search }) {
                 authorName={post.extra?.author}
                 authorPlanet={post.extra?.ship?.replace(/^~/, "")}
                 href={`/blog/${post.slug}`}
-                imgSrc={post.extra?.image}
+                image={post.extra?.image}
               />
             ))}
           </div>
