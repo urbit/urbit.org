@@ -22,8 +22,8 @@ import {
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
-import Header from "@/components/Header"
-import OrgCard from "@/components/ecosystem/Org"
+import Header from "@/components/Header";
+import OrgCard from "@/components/ecosystem/Org";
 import { matchEcosystemPost } from "@/lib/lib";
 
 function Filter({ className = "", children, filters = [] }) {
@@ -237,33 +237,31 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
   const router = useRouter();
   const type = router.query?.slug?.[0] || "overview";
 
-  let title;
+  let title = "Ecosystem";
   if (type) {
     switch (type) {
       case "apps":
-        title = "Apps • Ecosystem";
+        title = "Apps";
         break;
       case "podcasts":
-        title = "Podcasts • Ecosystem";
+        title = "Podcasts";
         break;
       case "talks":
-        title = "Talks • Ecosystem";
+        title = "Talks";
         break;
       case "orgs":
-        title = "Organizations • Ecosystem";
+        title = "Organizations";
         break;
       case "articles":
-        title = "Articles • Ecosystem";
+        title = "Articles";
         break;
     }
-  } else {
-    title = "Ecosystem";
   }
 
   return (
     <Container>
       <Head>
-        <title>{title}</title>
+        <title>{`${title} • Urbit`}</title>
         {Meta(
           {
             title: title,

@@ -35,22 +35,18 @@ const hosting = [
 ];
 
 export default function GetStarted({}) {
-  const title = "Getting Started • Urbit";
+  const post = {
+    title: "Getting Started",
+    description: "Links to get started with Urbit.",
+    image:
+      "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
+  };
 
   return (
     <Container>
       <Head>
-        <title>{title}</title>
-        {Meta(
-          {
-            title: title,
-            description: "Get started with Urbit.",
-            image:
-              "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
-          },
-          false,
-          true
-        )}
+        <title>{`${post.title} • Urbit`}</title>
+        {Meta(post, false, true)}
       </Head>
       <IntraNav ourSite="https://urbit.org" />
       <Main

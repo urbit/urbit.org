@@ -23,7 +23,7 @@ export default function Blog({ posts, search }) {
   return (
     <Container>
       <Head>
-        <title>Blog • urbit.org</title>
+        <title>{`${post.title} • Urbit`}</title>
         {Meta(post)}
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
