@@ -13,7 +13,7 @@ const hosting = [
     title: "Red Horizon",
     description:
       "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
-    image: "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg",
+    image: "https://storage.googleapis.com/media.urbit.org/blog/skybanner.jpg",
     label: "Join Red Horizon Hosting",
     href: "https://redhorizon.com/",
   },
@@ -21,7 +21,7 @@ const hosting = [
     title: "Tlon",
     description:
       "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
-    image: "https://storage.googleapis.com/media.urbit.org/blog/skybanner.jpg",
+    image: "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg",
     label: "Join Tlon Hosting",
     href: "https://tlon.io/",
   },
