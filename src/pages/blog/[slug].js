@@ -40,10 +40,14 @@ export default function Post({
       </Head>
       <IntraNav ourSite="https://urbit.org" search={search} />
       <Main singleColumn>
-        <Section className="text-brite mt-4" narrow>
-          <h1 className="h1 mb-24">{post.title}</h1>
-          <p className="body-lg mb-16">{post.description}</p>
-          <hr className="hr-horizontal my-3.5" />
+        <div className="text-brite space-y-5 md:space-y-8 layout-narrow">
+          <div>
+            <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
+              {post.title}
+            </h1>
+            <p className="body-lg">{post.description} </p>
+          </div>
+          <hr className="hr-horizontal border-brite" />
           <div className="flex justify-between body-sm font-semibold">
             <p>{date}</p>
             <div>
@@ -56,10 +60,10 @@ export default function Post({
               )}
             </div>
           </div>
-        </Section>
-        <Section className="markdown" narrow>
-          <Markdown.render content={JSON.parse(markdown)} />
-        </Section>
+          <div className="markdown">
+            <Markdown.render content={JSON.parse(markdown)} />
+          </div>
+        </div>
       </Main>
       <Footer />
     </Container>
