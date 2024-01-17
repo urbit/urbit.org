@@ -6,12 +6,13 @@ import {
   formatTimeZone,
 } from "@urbit/fdn-design-system";
 
-export default function DateRange({ className, starts, ends }) {
+export default function DateRange({ className, starts, ends, divider }) {
   // For events which have no end datetime
   if (!ends.isValid) {
     return (
       <div className={className}>
         <p>{formatDate(starts)}</p>
+        {divider}
         <p>{`${formatTime(starts)} ${formatTimeZone(starts)}`}</p>
       </div>
     );
@@ -21,6 +22,7 @@ export default function DateRange({ className, starts, ends }) {
     return (
       <div className={classnames("whitespace-nowrap", className)}>
         <p>{formatDate(starts)}</p>
+        {divider}
         <p>{`${formatTime(starts)} to ${formatTime(ends)} ${formatTimeZone(
           starts
         )}`}</p>
