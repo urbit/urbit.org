@@ -44,12 +44,14 @@ export default function Event({ post, markdown }) {
               divider={<span>•</span>}
             />
           </div>
-          <Link
-            className="btn btn-light body-md w-min"
-            href={post.registration_url}
-          >
-            Find out more
-          </Link>
+          {post.registration_url && (
+            <Link
+              className="btn btn-light body-md w-min"
+              href={post.registration_url}
+            >
+              Find out more
+            </Link>
+          )}
           <hr className="hr-horizontal border-brite" />
           <div className="markdown layout-narrow">
             <Markdown.render content={JSON.parse(markdown)} />
