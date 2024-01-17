@@ -9,9 +9,6 @@ import {
   Main,
   FatBlock,
   getAllPosts,
-  formatDate,
-  formatTime,
-  formatTimeZone,
   generateDisplayDate,
   generateRealtimeDate,
 } from "@urbit/fdn-design-system";
@@ -19,6 +16,7 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Carousel from "@/components/Carousel";
+import DateRange from "@/components/DateRange";
 
 function CommunityCard({ className = "", title, image, slug }) {
   return (
@@ -35,40 +33,6 @@ function CommunityCard({ className = "", title, image, slug }) {
         /* onError={(e) => (e.target.style.display = "none")} */
       />
     </Link>
-  );
-}
-
-function DateRange({ starts, ends }) {
-  // For events which have no end datetime
-  if (!ends.isValid) {
-    return (
-      <div>
-        <p>{formatDate(starts)}</p>
-        <p>{`${formatTime(starts)} ${formatTimeZone(starts)}`}</p>
-      </div>
-    );
-  }
-  // For events which start and end on the same day
-  if (starts.hasSame(ends, "day")) {
-    return (
-      <div className="whitespace-nowrap">
-        <p>{formatDate(starts)}</p>
-        <p>{`${formatTime(starts)} to ${formatTime(ends)} ${formatTimeZone(
-          starts
-        )}`}</p>
-      </div>
-    );
-  }
-  // For multi-day events
-  return (
-    <div>
-      <p>
-        {starts.hasSame(ends, "month")
-          ? `${starts.toFormat("LLLL d")} to ${ends.toFormat("d, yyyy")}`
-          : `${starts.toFormat("LLLL d")} to ${ends.toFormat("LLLL d, yyyy")}`}
-      </p>
-      <br />
-    </div>
   );
 }
 
