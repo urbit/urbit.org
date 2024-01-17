@@ -23,6 +23,7 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header";
+import Carousel from "@/components/Carousel";
 import OrgCard from "@/components/ecosystem/Org";
 import { matchEcosystemPost } from "@/lib/lib";
 
@@ -317,19 +318,15 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <hr className="hr-horizontal" />
             <section className="space-y-4 md:space-y-8 lg:space-y-16">
               <h2 className="h2">Podcasts</h2>
-              <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-                <div className="layout-px w-fit">
-                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8">
-                    {podcasts &&
-                      podcasts.map((props) => (
-                        <PodcastCard
-                          className="w-60 sm:w-96 md:w-[24rem]"
-                          {...props}
-                        />
-                      ))}
-                  </FatBlock>
-                </div>
-              </div>
+              <Carousel>
+                {podcasts &&
+                  podcasts.map((props) => (
+                    <PodcastCard
+                      className="w-60 sm:w-96 md:w-[24rem]"
+                      {...props}
+                    />
+                  ))}
+              </Carousel>
               <Link
                 className="btn btn-light body-lg"
                 href="/ecosystem/podcasts"
@@ -340,16 +337,12 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
             <hr className="hr-horizontal" />
             <section className="space-y-4 md:space-y-8 lg:space-y-16">
               <h2 className="h2">Talks</h2>
-              <div className="w-screen max-w-screen-3xl overflow-auto -layout-mx">
-                <div className="layout-px w-fit">
-                  <FatBlock className="flex space-x-1 lg:space-x-6 xl:space-x-8 h-full">
-                    {talks &&
-                      talks.map((props) => (
-                        <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
-                      ))}
-                  </FatBlock>
-                </div>
-              </div>
+              <Carousel>
+                {talks &&
+                  talks.map((props) => (
+                    <TalkCard className="w-60 sm:w-80 md:w-96" {...props} />
+                  ))}
+              </Carousel>
               <Link className="btn btn-light body-lg" href="/ecosystem/talks">
                 More talks
               </Link>
