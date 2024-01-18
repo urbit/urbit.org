@@ -22,15 +22,15 @@ function GrantCard({ title, date, taxonomies, extra, slug }) {
       className="flex flex-col space-y-8 w-full bg-tint rounded-lg p-4"
       href={path.join("/grants", slug)}
     >
-      <div className="flex justify-between">
+      <div className="h2 flex justify-between">
         <div>
-          <h2 className="h2 text-lite">{title}</h2>
-          <p className="h2 text-brite">Reward: {extra.reward}</p>
+          <h2 className="text-lite">{title}</h2>
+          <p className="text-brite">Reward: {extra.reward}</p>
         </div>
         {new Set(["Bounty", "Proposal", "Apprenticeship"]).has(
           taxonomies.grant_type[0]
         ) && (
-          <div className="flex items-center justify-center h-3/6 aspect-square bg-brite rounded-lg">
+          <div className="flex items-center justify-center h-[1.1em] aspect-square bg-brite rounded-lg ml-3.5">
             <Icon
               className="h-4/6 bg-gray"
               name={taxonomies.grant_type[0]}
