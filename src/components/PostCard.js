@@ -32,7 +32,7 @@ export default function PostCard({
             src={image}
           />
         )}
-        <h3 className="absolute w-full text-lite bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent h2 p-4 rounded-t-lg">
+        <h3 className="absolute w-full text-[#F5FFF5] bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent h2 p-4 rounded-t-lg">
           {title}
         </h3>
       </div>
