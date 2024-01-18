@@ -27,7 +27,7 @@ const sites = [
 ];
 
 const pages = [
-  { title: "Get Started", href: "/get-started" },
+  { title: "Start", href: "/start" },
   { title: "Ecosystem", href: "/ecosystem" },
   { title: "Grants", href: "/grants" },
   { title: "Events", href: "/events" },

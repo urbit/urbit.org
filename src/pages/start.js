@@ -36,7 +36,7 @@ const hosting = [
 
 export default function GetStarted({}) {
   const post = {
-    title: "Getting Started",
+    title: "Start",
     description: "Links to get started with Urbit.",
     image:
       "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
@@ -54,9 +54,7 @@ export default function GetStarted({}) {
         singleColumn
       >
         <section>
-          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
-            Getting started
-          </h1>
+          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Start</h1>
           <p className="h1">
             Urbit is a <strong>new kind of computer</strong> that you can own
             completely in ways that matter: <strong>networking</strong>,{" "}
