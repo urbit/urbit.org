@@ -1,5 +1,5 @@
 +++
-podcast = "Crazy Wisdom"
+title = "Crazy Wisdom"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/crazywisdom.jpg"
 URL = "https://crazywisdom.libsyn.com"
 # spotify = ""

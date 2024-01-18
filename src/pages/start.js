@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Container, Main, Section, FatBlock } from "@urbit/fdn-design-system";
+import { Container, Main, FatBlock } from "@urbit/fdn-design-system";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
@@ -38,17 +38,15 @@ export default function GetStarted({}) {
   const post = {
     title: "Start",
     description: "Links to get started with Urbit.",
-    image:
-      "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
   };
 
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Urbit`}</title>
-        {Meta(post, false, true)}
+        <title>{`${post.title} • urbit.org`}</title>
+        {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Main
         className="text-brite border-brite space-y-5 md:space-y-8"
         singleColumn

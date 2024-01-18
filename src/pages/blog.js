@@ -23,10 +23,10 @@ export default function Blog({ posts, search }) {
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Urbit`}</title>
+        <title>{`${post.title} • urbit.org`}</title>
         {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" search={search} />
+      <IntraNav />
       <Main
         className="text-brite border-brite space-y-5 md:space-y-8"
         singleColumn

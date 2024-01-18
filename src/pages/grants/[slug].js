@@ -45,7 +45,7 @@ export default function Event({ post, markdown, match }) {
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Grants • Urbit`}</title>
+        <title>{`${post.title} • Grants • urbit.org`}</title>
         {Meta(post)}
       </Head>
       <IntraNav />

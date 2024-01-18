@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
-  Section,
   FatBlock,
   Markdown,
   getPostBySlug,
@@ -20,8 +19,6 @@ import ErrorPage from "@/pages/404";
 
 export default function App({ post, org, markdown }) {
   const router = useRouter();
-  const title = `${post.title} • Apps • Ecosystem`;
-
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
@@ -29,19 +26,10 @@ export default function App({ post, org, markdown }) {
   return (
     <Container>
       <Head>
-        <title>{title}</title>
-        {Meta(
-          {
-            title: title,
-            description: "Explore the Urbit ecosystem.",
-            image:
-              "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
-          },
-          false,
-          true
-        )}
+        <title>{`${post.title} • Apps • Ecosystem • urbit.org`}</title>
+        {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Header
         pages={[
           { title: "Overview", href: "/ecosystem" },

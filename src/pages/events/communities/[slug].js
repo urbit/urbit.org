@@ -22,10 +22,10 @@ export default function Community({ post, markdown }) {
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Communities • Events`}</title>
+        <title>{`${post.title} • Communities • Events • urbit.org`}</title>
         {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Main
         className="mt-12 md:mt-16 text-brite border-brite space-y-5 md:space-y-8 lg:space-y-16"
         singleColumn

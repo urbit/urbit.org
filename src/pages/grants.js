@@ -115,7 +115,7 @@ export default function Grants({ posts, categories, types }) {
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Urbit`}</title>
+        <title>{`${post.title} • urbit.org`}</title>
         {Meta(post)}
       </Head>
       <IntraNav />

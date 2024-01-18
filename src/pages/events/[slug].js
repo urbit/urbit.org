@@ -25,10 +25,10 @@ export default function Event({ post, markdown }) {
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Events`}</title>
+        <title>{`${post.title} • Events • urbit.org`}</title>
         {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Main singleColumn>
         <div className="text-brite space-y-5 md:space-y-8">
           <div className="space-y-8 md:space-y-16 lg:space-y-20">

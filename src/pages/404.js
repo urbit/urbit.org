@@ -3,17 +3,15 @@ import Head from "next/head";
 import { Container, Main } from "@urbit/fdn-design-system";
 import IntraNav from "../components/IntraNav";
 import Footer from "../components/Footer";
-// import Meta from "../components/Meta";
+import Meta from "../components/Meta";
 
 export default function NotFound(props) {
-  const post = {
-    title: "404",
-  };
+  const post = { title: "404" };
   return (
     <Container>
       <Head>
-        <title>404 • docs.urbit.org</title>
-        {/* {Meta(post)} */}
+        <title>{`${post.title} • urbit.org`}</title>
+        {Meta(post)}
       </Head>
       <IntraNav />
       <Main singleColumn>

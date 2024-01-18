@@ -1,5 +1,5 @@
 +++
-podcast = "ZeroK"
+title = "ZeroK"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/ZeroK-logo.png"
 # URL = ""
 # spotify = ""

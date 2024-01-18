@@ -1,5 +1,5 @@
 +++
-podcast = "The Network Age"
+title = "The Network Age"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/networkage.jpg"
 URL = "https://rss.com/podcasts/thenetworkage"
 # spotify = ""

@@ -1,5 +1,5 @@
 +++
-podcast = "Other Life"
+title = "Other Life"
 image = "https://media.urbit.org/site/ecosystem/podcasts/full_1639502000-artwork.jpg"
 URL = "https://podcast.otherlife.co"
 # spotify = ""

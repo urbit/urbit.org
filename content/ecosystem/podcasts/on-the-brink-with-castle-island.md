@@ -1,5 +1,5 @@
 +++
-podcast = "On The Brink with Castle Island"
+title = "On The Brink with Castle Island"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/onthebrink.jpg"
 URL = "https://castleisland.libsyn.com"
 # spotify = ""

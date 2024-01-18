@@ -3,18 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
-import fs from "fs";
 import path from "path";
 import {
   Container,
   Main,
-  Section,
-  CarouselSection,
-  ExpandSection,
   FatBlock,
-  ConceptCard,
-  VideoCard,
-  LogoCard,
   getAllPosts,
   generateDisplayDate,
   formatDate,
@@ -25,7 +18,6 @@ import Meta from "@/components/Meta";
 import Header from "@/components/Header";
 import Carousel from "@/components/Carousel";
 import OrgCard from "@/components/ecosystem/Org";
-import { matchEcosystemPost } from "@/lib/lib";
 
 function Filter({ className = "", children, filters = [] }) {
   const [filter, setFilter] = useState(
@@ -251,7 +243,7 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
         title = "Talks";
         break;
       case "orgs":
-        title = "Organizations";
+        title = "Companies";
         break;
       case "articles":
         title = "Articles";
@@ -259,22 +251,17 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
     }
   }
 
+  const post = { title: title, description: "Explore the Urbit ecosystem." };
+
   return (
     <Container>
       <Head>
-        <title>{`${title} • Ecosystem • Urbit`}</title>
-        {Meta(
-          {
-            title: title,
-            description: "Explore the Urbit ecosystem.",
-            image:
-              "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
-          },
-          false,
-          true
-        )}
+        <title>{`${title} ${
+          title !== "Ecosystem" ? "• Ecosystem " : ""
+        }• urbit.org`}</title>
+        {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Header
         pages={[
           { title: "Overview", href: "/ecosystem" },
@@ -474,18 +461,6 @@ export async function getStaticPaths() {
     "/ecosystem/articles",
   ];
 
-  // const allHrefs = (thisLink, tree) => {
-  //   slugs.push(thisLink, ...tree.pages.map((e) => join(thisLink, e.slug)));
-  //   allHrefsChildren(thisLink, tree.children);
-  // };
-
-  // const allHrefsChildren = (thisLink, children) => {
-  //   Object.entries(children).map(([childSlug, child]) => {
-  //     allHrefs(join(thisLink, childSlug), child);
-  //   });
-  // };
-
-  // allHrefs(`/${root}`, posts);
   return {
     paths: slugs,
     fallback: false,

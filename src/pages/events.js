@@ -56,7 +56,7 @@ function EventCard({
           className
         )}
         style={image ? { backgroundImage: `url(${image})` } : {}}
-        href={path.join("/events", "events", slug)}
+        href={path.join("/events", slug)}
       >
         <div className="px-4 pt-4 rounded-t-lg bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent">
           <h3 className="text-lite h2 mb-3.5">{title}</h3>
@@ -82,7 +82,7 @@ function EventCard({
           className
         )}
         style={image ? { backgroundImage: `url(${image})` } : {}}
-        href={path.join("/events", "events", slug)}
+        href={path.join("/events", slug)}
       >
         <div className="px-4 pt-4 rounded-t-lg bg-gradient-to-b from-[rgba(0,0,0,0.6)] to-transparent">
           <h3 className="text-lite h3 mb-3.5">{title}</h3>
@@ -117,10 +117,10 @@ export default function Events({
   return (
     <Container>
       <Head>
-        <title>{`${post.title} • Urbit`}</title>
+        <title>{`${post.title} • urbit.org`}</title>
         {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Main
         className="text-brite border-brite space-y-5 md:space-y-8"
         singleColumn
@@ -168,7 +168,7 @@ export default function Events({
           {pastEvents &&
             pastEvents.slice(0, 4).map((props) => <EventCard {...props} />)}
         </FatBlock>
-        <Link className="btn btn-light body-lg w-min" href="/events/events">
+        <Link className="btn btn-light body-lg w-min" href="/events/all">
           More events
         </Link>
       </Main>

@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
-  Section,
-  FatBlock,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -15,13 +13,10 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import Header from "@/components/Header";
-import OrgCard from "@/components/ecosystem/Org";
 import ErrorPage from "@/pages/404";
 
 export default function Org({ post, markdown }) {
   const router = useRouter();
-  const title = `${post.title} • Companies • Ecosystem`;
-
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
@@ -29,19 +24,10 @@ export default function Org({ post, markdown }) {
   return (
     <Container>
       <Head>
-        <title>{title}</title>
-        {Meta(
-          {
-            title: title,
-            description: "Explore the Urbit ecosystem.",
-            image:
-              "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
-          },
-          false,
-          true
-        )}
+        <title>{`${post.title} • Companies • Ecosystem • urbit.org`}</title>
+        {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Header
         pages={[
           { title: "Overview", href: "/ecosystem" },

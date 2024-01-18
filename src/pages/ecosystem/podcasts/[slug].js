@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import {
   Container,
   Main,
-  Section,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -18,8 +17,6 @@ import ErrorPage from "@/pages/404";
 
 export default function Podcast({ post, markdown }) {
   const router = useRouter();
-  const title = `${post.podcast} • Podcasts • Ecosystem`;
-
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage />;
   }
@@ -29,19 +26,10 @@ export default function Podcast({ post, markdown }) {
   return (
     <Container>
       <Head>
-        <title>{title}</title>
-        {Meta(
-          {
-            title: title,
-            description: "Explore the Urbit ecosystem.",
-            image:
-              "https://storage.googleapis.com/media.urbit.org/site/opengraph/urbit.png",
-          },
-          false,
-          true
-        )}
+        <title>{`${post.title} • Podcasts • Ecosystem • urbit.org`}</title>
+        {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" />
+      <IntraNav />
       <Header
         pages={[
           { title: "Overview", href: "/ecosystem" },
@@ -64,7 +52,7 @@ export default function Podcast({ post, markdown }) {
             src={post.image}
           />
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
-            <h1 className="h1">{post.podcast}</h1>
+            <h1 className="h1">{post.title}</h1>
             <Link className="btn btn-light body-md w-min" href={href}>
               Listen ↗
             </Link>
@@ -83,7 +71,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
     [
-      "podcast",
+      "title",
       "image",
       "URL",
       "spotify",

@@ -1,5 +1,5 @@
 +++
-podcast = "Understanding Urbit"
+title = "Understanding Urbit"
 image = "https://media.urbit.org/site/posts/essays/uu-podcast.png"
 # URL = ""
 # spotify = ""

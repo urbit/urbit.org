@@ -1,5 +1,5 @@
 +++
-podcast = "Epicenter"
+title = "Epicenter"
 image = "https://storage.googleapis.com/media.urbit.org/site/ecosystem/podcasts/epicenter.jpg"
 URL = "https://epicenter.tv"
 # spotify = ""

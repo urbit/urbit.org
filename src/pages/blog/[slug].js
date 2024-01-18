@@ -1,11 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Container,
   Main,
-  Section,
   Markdown,
   getPostBySlug,
   getAllPosts,
@@ -35,10 +33,10 @@ export default function Post({
   return (
     <Container>
       <Head>
-        <title>{post.title} • Blog • Urbit</title>
+        <title>{post.title} • Blog • urbit.org</title>
         {Meta(post)}
       </Head>
-      <IntraNav ourSite="https://urbit.org" search={search} />
+      <IntraNav />
       <Main singleColumn>
         <div className="text-brite space-y-5 md:space-y-8 layout-narrow">
           <div>
