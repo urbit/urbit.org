@@ -16,6 +16,17 @@ import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import { getGrantsCategories, getGrantsTypes } from "@/lib/lib";
 
+function isArray(arr) {
+  return Array.isArray(arr);
+}
+
+function isOrIsIn(type, query) {
+  if (!query) {
+    return false;
+  }
+  return isArray(query) ? query.includes(type) : type === query;
+}
+
 function GrantCard({ title, date, taxonomies, extra, slug }) {
   return (
     <Link
