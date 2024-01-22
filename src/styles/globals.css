@@ -20,3 +20,9 @@
 :root[theme='dark'] {
   @apply grn prism-dark;
 }
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  @apply scroll-mt-16 md:scroll-mt-20;
+}

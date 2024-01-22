@@ -123,6 +123,60 @@ export default function Grants({ posts, categories, types }) {
           </p>
         </section>
         <hr className="hr-horizontal border-brite" />
+        <section className="space-y-5 md:space-y-8">
+          <h2 className="h2">Grant Types</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5">
+            <div className="body-md">
+              <Icon className="h-[1.3em] bg-brite" name="Proposal" />
+              <h3 className="">Proposals</h3>
+              <p className="text-lite">
+                The main way to get funding for your project. We fund all kinds
+                projects, not strictly technical ones, so don’t hesitate to
+                pitch your idea!
+              </p>
+              <div className="flex flex-wrap mt-3.5">
+                <Link className="btn btn-light mr-3.5" href="/grants/proposals">
+                  Submit a Proposal
+                </Link>
+              </div>
+            </div>
+            <div className="body-md">
+              <Icon className="h-[1.3em] bg-brite" name="Bounty" />
+              <h3 className="">Bounties</h3>
+              <p className="text-lite">
+                Contracts for work provided by either the Urbit Foundation or
+                from trusted partners in our ecosystem.
+              </p>
+              <div className="flex flex-wrap">
+                <Link
+                  className="btn btn-light mt-3.5 mr-3.5"
+                  href="/grants/bounties#post-a-bounty"
+                >
+                  Post a Bounty
+                </Link>
+                <Link className="btn btn-light mt-3.5" href="/grants/bounties">
+                  Learn more
+                </Link>
+              </div>
+            </div>
+            <div className="body-md">
+              <Icon className="h-[1.3em] bg-brite" name="Apprenticeship" />
+              <h3 className="">Apprenticeships</h3>
+              <p className="text-lite">
+                Practical learning opportunities for new Urbit developers
+                provided by members of the Urbit community. They’re one of the
+                best ways to level up your skills and often lead to full-time
+                jobs.
+              </p>
+              <div className="flex flex-wrap mt-3.5">
+                <Link className="btn btn-light" href="/grants/apprenticeships">
+                  Become an Apprentice
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr className="hr-horizontal border-brite" />
         <div className="flex flex-row">
           <Sidebar
             className="flex flex-col sidebar body-md space-y-5 pr-5"
