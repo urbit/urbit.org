@@ -176,65 +176,69 @@ export default function Grants({ posts, categories, types }) {
             </div>
           </div>
         </section>
-        <hr className="hr-horizontal border-brite" />
-        <div className="flex flex-row">
-          <Sidebar
-            className="flex flex-col sidebar body-md space-y-5 pr-5"
-            left
-          >
-            <h3 className="text-gray">Programs:</h3>
-            <section className="flex flex-col space-y-3.5">
-              {types.map((type) => (
-                <button
-                  className={classnames("btn w-min", {
-                    "btn-dark": typeF.has(type),
-                    "btn-light": !typeF.has(type),
-                  })}
-                  onClick={() => toggleTypeF(type)}
-                >
-                  {type}
-                </button>
-              ))}
-            </section>
-            <div>
-              <hr className="hr-horizontal border-gray my-2.5" />
-              <h3 className="text-gray">Work categories:</h3>
+        <div
+          className="scroll-my-[2.75rem] md:scroll-my-[3.75rem]"
+          id="view-grants"
+        >
+          <hr className="hr-horizontal border-brite" />
+          <div className="flex flex-row">
+            <div className="sticky top-12 md:top-16 overflow-y-auto sidebar h-sidebar py-5 md:py-8">
+              <Sidebar className="body-md space-y-5 pr-5" left>
+                <h3 className="text-gray">Programs:</h3>
+                <section className="flex flex-col space-y-3.5">
+                  {types.map((type) => (
+                    <button
+                      className={classnames("btn w-min", {
+                        "btn-dark": typeF.has(type),
+                        "btn-light": !typeF.has(type),
+                      })}
+                      onClick={() => toggleTypeF(type)}
+                    >
+                      {type}
+                    </button>
+                  ))}
+                </section>
+                <div>
+                  <hr className="hr-horizontal border-gray my-2.5" />
+                  <h3 className="text-gray">Work categories:</h3>
+                </div>
+                <section className="flex flex-col space-y-3.5">
+                  {categories.map((cat) => (
+                    <button
+                      className={classnames("btn w-min", {
+                        "btn-dark": catF.has(cat),
+                        "btn-light": !catF.has(cat),
+                      })}
+                      onClick={() => toggleCatF(cat)}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </section>
+              </Sidebar>
             </div>
-            <section className="flex flex-col space-y-3.5">
-              {categories.map((cat) => (
-                <button
-                  className={classnames("btn w-min", {
-                    "btn-dark": catF.has(cat),
-                    "btn-light": !catF.has(cat),
-                  })}
-                  onClick={() => toggleCatF(cat)}
-                >
-                  {cat}
-                </button>
+            <div className="flex flex-col flex-1 pl-5 space-y-5 py-5 md:py-8">
+              <p className="text-gray body-md">
+                Showing {filteredPosts.length} grants
+                {posts.length > filteredPosts.length && (
+                  <>
+                    {" "}
+                    <button
+                      className="text-brite"
+                      onClick={() => {
+                        clearCatF();
+                        clearTypeF();
+                      }}
+                    >
+                      Clear filters
+                    </button>
+                  </>
+                )}
+              </p>
+              {filteredPosts.map((grant) => (
+                <GrantCard {...grant} />
               ))}
-            </section>
-          </Sidebar>
-          <div className="flex flex-col flex-1 pl-5 space-y-5">
-            <p className="text-gray body-md">
-              Showing {filteredPosts.length} grants
-              {posts.length > filteredPosts.length && (
-                <>
-                  {" "}
-                  <button
-                    className="text-brite"
-                    onClick={() => {
-                      clearCatF();
-                      clearTypeF();
-                    }}
-                  >
-                    Clear filters
-                  </button>
-                </>
-              )}
-            </p>
-            {filteredPosts.map((grant) => (
-              <GrantCard {...grant} />
-            ))}
+            </div>
           </div>
         </div>
       </Main>

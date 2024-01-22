@@ -26,3 +26,10 @@
 .markdown h3 {
   @apply scroll-mt-16 md:scroll-mt-20;
 }
+
+.h-sidebar {
+  height: calc(100vh - 3rem);
+  @screen md {
+    height: calc(100vh - 4rem);
+  }
+}
