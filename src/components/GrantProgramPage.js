@@ -7,12 +7,12 @@ import {
   Main,
   Markdown,
   formatDate,
+  generateDisplayDate,
 } from "@urbit/fdn-design-system";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import ErrorPage from "@/pages/404";
-import { DateTime } from "luxon";
 
 export default function GrantProgramPage({
   post,
@@ -40,7 +40,7 @@ export default function GrantProgramPage({
         <p className="body-md text-gray">
           Last Revision:{" "}
           <span className="text-brite">
-            {formatDate(DateTime.fromISO(post.date))}
+            {formatDate(generateDisplayDate(post.date))}
           </span>
         </p>
         <Link className="btn btn-light body-md w-fit" href={actionLink}>
