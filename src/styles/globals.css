@@ -27,8 +27,8 @@
   @apply scroll-mt-16 md:scroll-mt-20;
 }
 
-.h-sidebar {
-  height: calc(100vh - 3rem);
+.sidebar {
+  @apply w-full md:w-44 lg:w-48 xl:w-52;
   @screen md {
     height: calc(100vh - 4rem);
   }

@@ -247,11 +247,11 @@ export default function Grants({ posts, categories, types }) {
           id="view-grants"
         >
           <hr className="hr-horizontal border-brite" />
-          <div className="flex flex-row">
-            <div className="sticky top-12 md:top-16 overflow-y-auto sidebar h-sidebar py-5 md:py-8">
-              <Sidebar className="flex flex-col body-sm space-y-5 pr-5" left>
+          <div className="flex flex-col md:flex-row">
+            <div className="md:sticky top-12 md:top-16 py-5 md:py-8 overflow-x-hidden overflow-y-auto sidebar">
+              <div className="flex flex-col body-sm md:pr-5 space-y-5 md:border-r-2 rounded-sm border-gray">
                 <h3 className="text-gray font-semibold">Status:</h3>
-                <section className="flex flex-col space-y-3.5">
+                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto md:overflow-x-hidden">
                   {["open", "wip", "completed"].map((s) => (
                     <button
                       className={classnames("btn w-min", {
@@ -274,7 +274,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-gray my-2.5" />
                   <h3 className="text-gray font-semibold">Programs:</h3>
                 </div>
-                <section className="flex flex-col space-y-3.5">
+                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
                   {types.map((t) => (
                     <button
                       className={classnames("btn w-fit space-x-[0.25em]", {
@@ -301,7 +301,7 @@ export default function Grants({ posts, categories, types }) {
                   <hr className="hr-horizontal border-gray my-2.5" />
                   <h3 className="text-gray font-semibold">Work categories:</h3>
                 </div>
-                <section className="flex flex-col space-y-3.5">
+                <section className="flex space-x-3.5 md:flex-col md:space-x-0 md:space-y-3.5 overflow-x-auto">
                   {categories.map((c) => (
                     <button
                       className={classnames("btn w-min", {
@@ -316,9 +316,10 @@ export default function Grants({ posts, categories, types }) {
                     </button>
                   ))}
                 </section>
-              </Sidebar>
+              </div>
             </div>
-            <div className="flex flex-col flex-1 pl-5 space-y-5 py-5 md:py-8">
+            <hr className="block md:hidden hr-horizontal border-gray" />
+            <div className="flex flex-col flex-1 md:pl-5 space-y-5 py-5 md:py-8">
               <p className="text-gray body-sm">
                 Showing {filteredPosts.length} grants
                 {allCount > filteredPosts.length && (
