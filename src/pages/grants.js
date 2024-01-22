@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import classnames from "classnames";
 import fs from "fs";
 import path from "path";
+import omit from "lodash.omit";
 import {
   Container,
   Main,
@@ -15,6 +17,17 @@ import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
 import { getGrantsCategories, getGrantsTypes } from "@/lib/lib";
+
+function isArray(arr) {
+  return Array.isArray(arr);
+}
+
+function isOrIsIn(type, query) {
+  if (!query) {
+    return false;
+  }
+  return isArray(query) ? query.includes(type) : type === query;
+}
 
 function GrantCard({ title, date, taxonomies, extra, slug }) {
   return (
@@ -55,46 +68,96 @@ function GrantCard({ title, date, taxonomies, extra, slug }) {
 }
 
 export default function Grants({ posts, categories, types }) {
-  const [catF, setCatF] = useState(new Set());
-  const [typeF, setTypeF] = useState(new Set());
+  const router = useRouter();
+  let { status, type, category } = router.query;
+  if (status === undefined) {
+    status = ["open", "wip"];
+  }
 
-  const clearF = (setF) => setF(new Set());
-  const clearCatF = () => clearF(setCatF);
-  const clearTypeF = () => clearF(setTypeF);
+  function push(toQuery) {
+    router.push(
+      {
+        pathname: "/grants",
+        hash: "view-grants",
+        query: toQuery,
+      },
+      "",
+      { scroll: false }
+    );
+  }
 
-  const toggleF = (setF, currF, s) => {
-    if (currF.has(s)) {
-      const currFCopy = new Set(currF);
-      currFCopy.delete(s);
-      setF(currFCopy);
+  function pushOrDropQuery(queryName, currentQuery, item) {
+    let to, toWithQuery;
+    if (isArray(currentQuery)) {
+      to = isOrIsIn(item, currentQuery)
+        ? currentQuery.filter((e) => e !== item)
+        : [...currentQuery, item];
     } else {
-      setF(new Set(currF).add(s));
+      to = isOrIsIn(item, currentQuery)
+        ? null
+        : [currentQuery, item].filter((e) => e !== undefined);
     }
+    if (!to) {
+      toWithQuery = omit(router.query, queryName);
+    } else {
+      toWithQuery = { ...router.query, [queryName]: to };
+    }
+    return toWithQuery;
+  }
+
+  const annotatedPosts = posts.map((post) => {
+    if (post.extra.canceled) {
+      return { ...post, status: "canceled" };
+    } else if (post.extra.completed) {
+      return { ...post, status: "completed" };
+    } else if (post.extra.assignee && post.extra.assignee?.[0].length > 0) {
+      return { ...post, status: "wip" };
+    } else {
+      return { ...post, status: "open" };
+    }
+  });
+
+  const byStatus = (post) => {
+    return (
+      (isOrIsIn("open", status) ? post.status === "open" : false) ||
+      (isOrIsIn("completed", status) ? post.status === "completed" : false) ||
+      (isOrIsIn("wip", status) ? post.status === "wip" : false)
+    );
   };
-  const toggleCatF = (s) => toggleF(setCatF, catF, s);
-  const toggleTypeF = (s) => toggleF(setTypeF, typeF, s);
 
-  const applyFilters = () => {
-    let filteredPosts = [...posts];
+  const postsByStatus = annotatedPosts.filter(byStatus);
 
-    if (catF.size !== 0) {
-      filteredPosts = filteredPosts.filter((grant) =>
-        new Set(grant.taxonomies.grant_category.map((c) => catF.has(c))).has(
-          true
-        )
-      );
-    }
+  const filteredPosts = postsByStatus.filter((post) => {
+    const hasCategory = category
+      ? isArray(category)
+        ? post.taxonomies.grant_category.some((cat) => category.includes(cat))
+        : post.taxonomies.grant_category.includes(category)
+      : true;
+    const notCanceled = !post.extra.canceled;
+    const hasType = type
+      ? isArray(type)
+        ? post.taxonomies.grant_type.some((t) => type.includes(t))
+        : post.taxonomies.grant_type.includes(type)
+      : true;
+    return hasCategory && notCanceled && hasType;
+  });
 
-    if (typeF.size !== 0) {
-      filteredPosts = filteredPosts.filter((grant) =>
-        new Set(grant.taxonomies.grant_type.map((t) => typeF.has(t))).has(true)
-      );
-    }
+  const allCount = postsByStatus.length;
 
-    return filteredPosts;
+  const counts = {
+    Bounty: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("Bounty")
+    ).length,
+    RFP: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("RFP")
+    ).length,
+    Apprenticeship: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("Apprenticeship")
+    ).length,
+    Proposal: postsByStatus.filter((post) =>
+      post.taxonomies.grant_type.includes("Proposal")
+    ).length,
   };
-
-  const filteredPosts = applyFilters();
 
   const post = {
     title: "Grants",
@@ -183,51 +246,85 @@ export default function Grants({ posts, categories, types }) {
           <hr className="hr-horizontal border-brite" />
           <div className="flex flex-row">
             <div className="sticky top-12 md:top-16 overflow-y-auto sidebar h-sidebar py-5 md:py-8">
-              <Sidebar className="body-md space-y-5 pr-5" left>
-                <h3 className="text-gray">Programs:</h3>
+              <Sidebar className="flex flex-col body-sm space-y-5 pr-5" left>
+                <h3 className="text-gray font-semibold">Status:</h3>
                 <section className="flex flex-col space-y-3.5">
-                  {types.map((type) => (
+                  {["open", "wip", "completed"].map((s) => (
                     <button
                       className={classnames("btn w-min", {
-                        "btn-dark": typeF.has(type),
-                        "btn-light": !typeF.has(type),
+                        "btn-dark": isOrIsIn(s, status),
+                        "btn-light": !isOrIsIn(s, status),
                       })}
-                      onClick={() => toggleTypeF(type)}
+                      onClick={() => push(pushOrDropQuery("status", status, s))}
                     >
-                      {type}
+                      {
+                        {
+                          open: "Open",
+                          wip: "In Progress",
+                          completed: "Completed",
+                        }[s]
+                      }
                     </button>
                   ))}
                 </section>
                 <div>
                   <hr className="hr-horizontal border-gray my-2.5" />
-                  <h3 className="text-gray">Work categories:</h3>
+                  <h3 className="text-gray font-semibold">Programs:</h3>
                 </div>
                 <section className="flex flex-col space-y-3.5">
-                  {categories.map((cat) => (
+                  {types.map((t) => (
+                    <button
+                      className={classnames("btn w-fit space-x-[0.25em]", {
+                        "btn-dark": isOrIsIn(t, type),
+                        "btn-light": !isOrIsIn(t, type),
+                      })}
+                      onClick={() => push(pushOrDropQuery("type", type, t))}
+                    >
+                      <span>{`${t}`}</span>
+                      {["Bounty", "Proposal", "Apprenticeship"].includes(t) && (
+                        <Icon
+                          className={classnames("h-[1em]", {
+                            "bg-brite": isOrIsIn(t, type),
+                            "bg-gray": !isOrIsIn(t, type),
+                          })}
+                          name={t}
+                        />
+                      )}
+                      <span>{`(${counts[t]})`}</span>
+                    </button>
+                  ))}
+                </section>
+                <div>
+                  <hr className="hr-horizontal border-gray my-2.5" />
+                  <h3 className="text-gray font-semibold">Work categories:</h3>
+                </div>
+                <section className="flex flex-col space-y-3.5">
+                  {categories.map((c) => (
                     <button
                       className={classnames("btn w-min", {
-                        "btn-dark": catF.has(cat),
-                        "btn-light": !catF.has(cat),
+                        "btn-dark": isOrIsIn(c, category),
+                        "btn-light": !isOrIsIn(c, category),
                       })}
-                      onClick={() => toggleCatF(cat)}
+                      onClick={() =>
+                        push(pushOrDropQuery("category", category, c))
+                      }
                     >
-                      {cat}
+                      {c}
                     </button>
                   ))}
                 </section>
               </Sidebar>
             </div>
             <div className="flex flex-col flex-1 pl-5 space-y-5 py-5 md:py-8">
-              <p className="text-gray body-md">
+              <p className="text-gray body-sm">
                 Showing {filteredPosts.length} grants
-                {posts.length > filteredPosts.length && (
+                {allCount > filteredPosts.length && (
                   <>
                     {" "}
                     <button
                       className="text-brite"
                       onClick={() => {
-                        clearCatF();
-                        clearTypeF();
+                        push({ status: status });
                       }}
                     >
                       Clear filters
