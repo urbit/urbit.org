@@ -16,6 +16,7 @@ import {
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
+import GrantStatus from "@/components/GrantStatus";
 import { getGrantsCategories, getGrantsTypes } from "@/lib/lib";
 
 function isArray(arr) {
@@ -29,7 +30,8 @@ function isOrIsIn(type, query) {
   return isArray(query) ? query.includes(type) : type === query;
 }
 
-function GrantCard({ title, date, taxonomies, extra, slug }) {
+function GrantCard(post) {
+  const { title, date, taxonomies, extra, slug } = post;
   return (
     <Link
       className="flex flex-col space-y-8 w-full bg-tint rounded-lg p-4"
@@ -56,6 +58,7 @@ function GrantCard({ title, date, taxonomies, extra, slug }) {
         <p className="body-md text-lite my-8">{extra.description}</p>
       )}
       <div className="flex flex-wrap body-md space-x-3.5">
+        <GrantStatus {...post} />
         {taxonomies.grant_type.map((s) => (
           <span className="btn text-tint bg-gray">{s}</span>
         ))}

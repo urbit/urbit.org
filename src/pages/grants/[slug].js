@@ -17,24 +17,8 @@ import { getGrantYear } from "@/lib/lib";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
 import Meta from "@/components/Meta";
+import GrantStatus from "@/components/GrantStatus";
 import ErrorPage from "@/pages/404";
-
-function Status(post) {
-  const canceled = post?.extra?.canceled;
-  const completed = post?.extra?.completed;
-  const open = !canceled && !completed && post?.extra?.assignee?.[0] === "";
-
-  if (canceled) {
-    return <span className="btn bg-gray text-tint">Canceled</span>;
-  }
-  if (completed) {
-    return <span className="btn bg-gray text-tint">Completed</span>;
-  }
-  if (open) {
-    return <span className="btn bg-brite text-gray">Open</span>;
-  }
-  return <span className="btn bg-gray text-brite">In Progress</span>;
-}
 
 export default function Event({ post, markdown, match }) {
   const router = useRouter();
@@ -101,7 +85,7 @@ export default function Event({ post, markdown, match }) {
             </div>
           )}
           <div className="body-md space-x-3.5">
-            <Status {...post} />
+            <GrantStatus {...post} />
             {post.taxonomies.grant_type.map((type) => (
               <span className="btn  text-tint bg-gray">{type}</span>
             ))}
