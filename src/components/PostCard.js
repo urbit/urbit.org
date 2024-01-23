@@ -1,26 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import classnames from "classnames";
+import { formatDate, generateDisplayDate } from "@urbit/fdn-design-system";
 
 export default function PostCard({
   className,
   title,
   description,
   date,
-  authorName,
-  authorPlanet,
+  extra,
   href,
   target,
-  image,
 }) {
+  const { author, ship, image } = extra;
   const style = image ? { backgroundImage: `url(${image})` } : {};
 
   return (
     <Link
-      className={classnames(
-        "flex flex-col h-full w-full",
-        className
-      )}
+      className={classnames("flex flex-col h-full w-full", className)}
       href={href}
       target={target}
     >
@@ -40,17 +37,21 @@ export default function PostCard({
         <p className="h-[5.5em] body-sm line-clamp-4 text-ellipsis">
           {description}
         </p>
-        {(date || authorName || authorPlanet) && (
+        {(date || author || ship) && (
           <div className="">
             <hr className="hr-horizontal border-gray my-0.5 md:my-2 xl:my-3.5" />
             <div className="flex justify-between h-[2.6em] text-base font-medium">
-              <p className="w-1/2">{date}</p>
+              <p className="w-1/2">{formatDate(generateDisplayDate(date))}</p>
               <div className="break-all">
-                {authorName && <p className="line-clamp-1 text-ellipsis">{authorName}</p>}
-                {authorPlanet && (
+                {author && (
+                  <p className="line-clamp-1 text-ellipsis">{author}</p>
+                )}
+                {ship && (
                   <p className="relative">
                     <span className="absolute -left-3">~</span>
-                    <span className="line-clamp-1 text-ellipsis">{authorPlanet}</span>
+                    <span className="line-clamp-1 text-ellipsis">
+                      {ship.replace(/^~/, "")}
+                    </span>
                   </p>
                 )}
               </div>

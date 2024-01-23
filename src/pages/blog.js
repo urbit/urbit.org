@@ -5,8 +5,6 @@ import {
   Main,
   FatBlock,
   getAllPosts,
-  formatDate,
-  generateDisplayDate,
 } from "@urbit/fdn-design-system";
 import IntraNav from "@/components/IntraNav";
 import Footer from "@/components/Footer";
@@ -47,15 +45,7 @@ export default function Blog({ posts, search }) {
             }
           >
             {posts.map((post) => (
-              <PostCard
-                title={post.title}
-                description={post.description}
-                date={formatDate(generateDisplayDate(post.date))}
-                authorName={post.extra?.author}
-                authorPlanet={post.extra?.ship?.replace(/^~/, "")}
-                href={`/blog/${post.slug}`}
-                image={post.extra?.image}
-              />
+              <PostCard href={`/blog/${post.slug}`} {...post} />
             ))}
           </div>
         </FatBlock>

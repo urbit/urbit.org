@@ -13,23 +13,26 @@ const hosting = [
     title: "Red Horizon",
     description:
       "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
-    image: "https://storage.googleapis.com/media.urbit.org/blog/skybanner.jpg",
-    label: "Join Red Horizon Hosting",
+    extra: {
+      image:
+        "https://storage.googleapis.com/media.urbit.org/blog/skybanner.jpg",
+    },
     href: "https://redhorizon.com/",
   },
   {
     title: "Tlon",
     description:
       "Blog post card: Square image full bleed to top, followed by copy snippet, Gray on Brite, 25px on 30px, Urbit Sans SemiBold (standard body copy properties).",
-    image: "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg",
-    label: "Join Tlon Hosting",
+    extra: {
+      image: "https://storage.googleapis.com/media.urbit.org/blog/b52.jpg",
+    },
     href: "https://tlon.io/",
   },
   {
     title: "Holium",
     description:
       "Some cards could feature solid colors, like this, which we will also be using for icon-based cards featured in guide pages. Another feature here is truncated text, eg this.",
-    label: "Join Holium Hosting",
+    extra: {},
     href: "https://www.holium.com/",
   },
 ];
@@ -66,12 +69,12 @@ export default function GetStarted({}) {
         </div>
         <FatBlock className="hidden xs:flex space-x-1 lg:space-x-6 xl:space-x-8">
           {hosting.map((props) => (
-            <PostCard {...props} />
+            <PostCard {...props} target="_blank" />
           ))}
         </FatBlock>
         <FatBlock className="flex xs:hidden flex-col space-y-1 lg:space-y-6 xl:space-y-8">
           {hosting.map((props) => (
-            <PostCard {...props} />
+            <PostCard {...props} target="_blank" />
           ))}
         </FatBlock>
         <hr className="hr-horizontal border-brite" />
