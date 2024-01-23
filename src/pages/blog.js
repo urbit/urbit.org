@@ -32,13 +32,10 @@ export default function Blog({ posts, search }) {
         singleColumn
       >
         <section>
-          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">
-            Blog
-          </h1>
+          <h1 className="h1 mt-12 mb-8 md:mt-16 md:mb-16 lg:mb-20">Blog</h1>
           <p className="h1">
-            Urbit is a <strong>new kind of computer</strong> that you can own
-            completely in ways that matter: <strong>networking</strong>,{" "}
-            <strong>identity</strong>, & <strong>data</strong>.
+            Stories from the broader Urbit community, the Urbit Foundation, and
+            the many people contributing to Urbit.
           </p>
         </section>
         <hr className="hr-horizontal border-brite" />
