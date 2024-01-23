@@ -370,39 +370,94 @@ export default function Ecosystem({ apps, articles, orgs, podcasts, talks }) {
           </>
         )}
         {type === "apps" && (
-          <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-            {apps && apps.map((props) => <AppCard {...props} />)}
-          </FatBlock>
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Apps</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+              {apps && apps.map((props) => <AppCard {...props} />)}
+            </FatBlock>
+          </>
         )}
         {type === "podcasts" && (
-          <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
-            {podcasts && podcasts.map((props) => <PodcastCard {...props} />)}
-          </FatBlock>
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Podcasts</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <FatBlock className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8">
+              {podcasts && podcasts.map((props) => <PodcastCard {...props} />)}
+            </FatBlock>
+          </>
         )}
         {type === "talks" && (
-          <FatBlock>
-            <Filter
-              className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
-              filters={["event", "type"]}
-            >
-              {talks && talks.map((props) => <TalkCard {...props} />)}
-            </Filter>
-          </FatBlock>
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Talks</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <FatBlock>
+              <Filter
+                className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-1 lg:gap-6 xl:gap-8"
+                filters={["event", "type"]}
+              >
+                {talks && talks.map((props) => <TalkCard {...props} />)}
+              </Filter>
+            </FatBlock>
+          </>
         )}
         {type === "orgs" && (
-          <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
-            {orgs && orgs.map((props) => <OrgCard {...props} />)}
-          </FatBlock>
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Companies</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <FatBlock className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 gap-1 lg:gap-6 xl:gap-8">
+              {orgs && orgs.map((props) => <OrgCard {...props} />)}
+            </FatBlock>
+          </>
         )}
         {type === "articles" && (
-          <FatBlock>
-            <Filter className="space-y-4 md:space-y-8" filters={["type"]}>
-              {articles &&
-                articles.map((props, index) => (
-                  <Article divider={index > 0} {...props} />
-                ))}
-            </Filter>
-          </FatBlock>
+          <>
+            <section className="">
+              <h1 className="h1 mb-8 md:mb-16 lg:mb-20">Articles & Press</h1>
+              <p className="h1">
+                Urbit is a <strong>new kind of computer</strong> that you can
+                own completely in ways that matter: <strong>networking</strong>,{" "}
+                <strong>identity</strong>, & <strong>data</strong>.
+              </p>
+            </section>
+            <hr className="hr-horizontal" />
+            <FatBlock>
+              <Filter className="space-y-4 md:space-y-8" filters={["type"]}>
+                {articles &&
+                  articles.map((props, index) => (
+                    <Article divider={index > 0} {...props} />
+                  ))}
+              </Filter>
+            </FatBlock>
+          </>
         )}
       </Main>
       <Footer />
