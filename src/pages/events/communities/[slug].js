@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -37,7 +38,18 @@ export default function Community({ post, markdown }) {
           />
           <div className="flex flex-col justify-between pl-5 md:pl-8 lg:pl-16">
             <h1 className="h1">{post.title}</h1>
-            <p className="h2">{post.description}</p>
+            <div className="flex flex-row flex-wrap xs:flex-col body-md">
+              {post?.links?.map(({ label, url }) => (
+                <Link className="btn btn-light w-fit mt-1.5 mr-1.5" href={url}>
+                  {label}
+                </Link>
+              ))}
+              {post?.group && (
+                <span className="btn bg-gray text-brite w-fit mt-1.5 mr-1.5">
+                  {post.group}
+                </span>
+              )}
+            </div>
           </div>
         </div>
         <section className="layout-narrow markdown">
@@ -52,7 +64,7 @@ export default function Community({ post, markdown }) {
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "description", "image", "slug", "content"],
+    ["title", "image", "group", "links", "slug", "content"],
     "communities"
   );
 
