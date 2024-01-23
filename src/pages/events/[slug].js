@@ -44,14 +44,21 @@ export default function Event({ post, markdown }) {
               divider={<span>•</span>}
             />
           </div>
-          {post.registration_url && (
-            <Link
-              className="btn btn-light body-md w-min"
-              href={post.registration_url}
-            >
-              Find out more
-            </Link>
-          )}
+          <div className="flex flex-wrap body-md">
+            {post?.links?.map(({ label, url }) => (
+              <Link className="btn btn-light w-fit mt-1.5 mr-1.5" href={url}>
+                {label}
+              </Link>
+            ))}
+            {post.registration_url && !post.links && (
+              <Link
+                className="btn btn-light w-fit mt-1.5 mr-1.5"
+                href={post.registration_url}
+              >
+                Register
+              </Link>
+            )}
+          </div>
           <hr className="hr-horizontal border-brite" />
           <div className="markdown layout-narrow">
             <Markdown.render content={JSON.parse(markdown)} />
@@ -78,6 +85,9 @@ export async function getStaticProps({ params }) {
       "image",
       "registration_url",
       "pinned",
+      "dark",
+      "darken_image",
+      "links",
       "content",
       "slug",
     ],

@@ -5,12 +5,21 @@ ends = "2023-10-29T20:00:00"
 timezone = "Europe/Lisbon"
 location = "Lisbon – Portugal"
 image = "https://storage.googleapis.com/media.urbit.org/assembly/assembly-tiles.gif"
-registration_url = "https://assembly.urbit.org"
 description = "The third Urbit Assembly & first one outside of the US"
 dark = false
 darken_image = "true"
 
+[[links]]
+label = "Buy your tickets"
+url = "https://assembly.urbit.org"
+
+[[links]]
+label = "Find out more"
+url = "https://assembly.urbit.org"
 +++
+
+![Screenshot](https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumbnail.png)
+
 This year’s Assembly takes place in Lisbon: Europe’s tech and crypto hub.
 Assembly is the largest annual Urbit conference, bringing together Urbit organizations, developers & enthusiasts from around the world.
 
@@ -21,6 +30,3 @@ This year we’re doing something new. Immediately following Assembly there will
 We value IRL contact, therefore no talks will be live-streamed. Some recordings will be available after the event.
 
 Find out more at [assembly.urbit.org](https://assembly.urbit.org)
-
-
-![Screenshot](https://storage.googleapis.com/media.urbit.org/assembly/assembly-thumbnail.png)
