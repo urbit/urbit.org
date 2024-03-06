@@ -39,7 +39,7 @@ export default function Home({}) {
       </Head>
       <IntraNav />
       <Main className="text-primary body-lg" singleColumn>
-        <h1 className="h0 heading mt-8">::Leave the internet behind</h1>
+        <h1 className="h0 heading mt-8">::<stong>Leave</stong>the internet behind</h1>
         <div className="block md:hidden">
           <img
             className="img-dark"
