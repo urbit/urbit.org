@@ -5,7 +5,7 @@ image = "https://sfo2.digitaloceanspaces.com/poldec-tonteg-content/poldec-tonteg
 
 [[links]]
 label = "Meetup page"
-url = "https://www.meetup.com/urbit-berlin/"
+url = "https://www.meetup.com/urbit-los-angeles"
 +++
 
 Join a group of like-minded decentralization enjoyers from the City of Angels to discuss all things Urbit and adjacent. 
