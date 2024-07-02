@@ -64,8 +64,8 @@ Reward: 1 Star
 
 The ideas below are meant to minimally showcase common use case patterns we expect for chatbots in groups. The idea is that most apps likely follow one of these patterns, allowing devs to build their bots with minimal effort by selecting the correct sample and modifying it to their needs.
 
-*Reminder* - @ yourself with a reminder after a certain amount of time passes.
-*Downtime* - Receive alerts when HTTP endpoints become unreachable.
+*Reminder* - @ yourself with a reminder after a certain amount of time passes.  
+*Downtime* - Receive alerts when HTTP endpoints become unreachable.  
 *Triviality* - Trivia game powered by OpenAI’s API
 
 Each bot sample above intends to cover a common category of bot that we expect.
