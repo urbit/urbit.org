@@ -1,4 +1,13 @@
-+++ title = "Urbit Meetup in Somerville, MA - Aeronaut Brewing" starts = "2024-07-27T14:00:00" ends = "2024-07-27T17:00:00" timezone = "America/New_York" location = "Aeronaut Brewing - 14 Tyler St, Somerville, Massachusetts 02143" image = "https://media.urbit.org/site/ecosystem/communities/new-england.jpg" registration_url = "https://www.meetup.com/urbit-new-england-group/events/302151131/" description = "The third meetup for Urbiters in New England" dark = true darken_image = "true"
++++ title = "Urbit Meetup in Somerville, MA - Aeronaut Brewing" 
+starts = "2024-07-27T14:00:00" 
+ends = "2024-07-27T17:00:00" 
+timezone = "America/New_York" 
+location = "Aeronaut Brewing - 14 Tyler St, Somerville, Massachusetts 02143" 
+image = "https://media.urbit.org/site/ecosystem/communities/new-england.jpg" 
+registration_url = "https://www.meetup.com/urbit-new-england-group/events/302151131/" 
+description = "The third meetup for Urbiters in New England" 
+dark = true 
+darken_image = "true"
 
 +++
 
