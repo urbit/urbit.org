@@ -1,4 +1,5 @@
-+++ title = "Urbit Meetup in Somerville, MA - Aeronaut Brewing" 
++++ 
+title = "Urbit Meetup in Somerville, MA - Aeronaut Brewing" 
 starts = "2024-07-27T14:00:00" 
 ends = "2024-07-27T17:00:00" 
 timezone = "America/New_York" 
