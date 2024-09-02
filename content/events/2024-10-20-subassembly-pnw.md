@@ -4,13 +4,14 @@ starts = "2024-10-20T14:00:00"
 ends = "2024-10-22T11:00:00"
 timezone = "America/Pacific"
 location = "Wellspring Spa & Woodland Retreat - 154922 Kernahan Rd E, Ashford, WA 98304"
-image = "https://media.urbit.org/site/ecosystem/communities/new-england.jpg"
-registration_url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform"
-event_details = "https://subassembly.tocwexsyndicate.com/details.html"
+image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.16..5.20.19..6f5c.28f5.c28f.5c28-image.png"
+links = [
+  { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
+  { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" }
+]
 description = "a community gathering about identity, trust, and reputation"
 dark = true
 darken_image = "true"
-
 +++
 
 Inspired by the scale and connections made during Urbit developer summits such as the Volcano Summit and Lake Summit, Subassembly PNW is the inaugural occurrence of the subassembly community event series.
