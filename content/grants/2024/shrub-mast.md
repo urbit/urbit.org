@@ -18,7 +18,7 @@ completed = false
 canceled = false
 +++
 
-# Overview
+## Overview
 
 Mast is a front-end model inspired by HTMX. It is also quite different from it. Mast takes the idea of applying minimal updates to the DOM with content rendered on the server, but instead of the developer writing swap logic, a diffing algorithm automatically creates the update and pushes it through an Eyre SSE channel to the Mast script on the browser which then executes the swaps. In addition to this, Mast provides an attribute system which lets you specify event listeners on elements such that the triggered events are poked into handlers in your ship, meaning that all of your client-side interface logic can be implemented in Hoon, within Urbit.
 
@@ -28,7 +28,7 @@ I recently expanded Shrub Mast with a component system, which in my opinion full
 
 Some remaining work needs to be done to push this project to completion.
 
-## Milestone 1: Documentation, Examples, and Tutorials
+### Milestone 1: Documentation, Examples, and Tutorials
 
 Estimated time: 1 week
 
@@ -36,7 +36,7 @@ Payment: 1 star
 
 - I will write complete documentation, examples, and tutorials to make it easy for Urbit developers to build Shrub Mast UIs.
 
-## Milestone 2: Feature-completion and Testing
+### Milestone 2: Feature-completion and Testing
 
 Estimated time: 1 month
 

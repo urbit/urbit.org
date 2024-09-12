@@ -18,17 +18,17 @@ completed = false
 canceled = false
 +++
 
-# Overview
+## Overview
 
 The Urbit ecosystem currently lacks a user-friendly, no-code website builder that can facilitate the creation of visually appealing and functional websites. As more individuals and communities join Urbit, there is an increasing demand for tools that simplify the process of building online spaces. This project seeks to address this gap by providing a no-code dashboard tailored to Urbit users, with design elements inspired by a clean, minimalistic style.
 
-# Project Goals
+## Project Goals
 
-## Develop a No-Code Dashboard
+### Develop a No-Code Dashboard
 
 Create an intuitive, easy-to-use dashboard that allows users to build websites without writing code. The dashboard will be designed to operate seamlessly within the Urbit environment.
 
-## Design Components
+### Design Components
 
 Offer a suite of pre-designed components that mirror the aesthetic and functionality of ~polwex’s existing work. These components will include layout templates, navigation menus, content blocks, and more. These include:
 
@@ -43,42 +43,42 @@ Offer a suite of pre-designed components that mirror the aesthetic and functiona
  * Search: Search across all integrated components.
  * Login: With Azimuth / Eauth.
 
-## Ensure Compatibility wiht Urbit
+### Ensure Compatibility with Urbit
 
 Ensure that the websites created with this tool are fully compatible with the Urbit network, supporting decentralized hosting and interaction.
  
-## Offer Customization Options
+### Offer Customization Options
 
 Provide users with customization options to adjust the design elements to fit their specific needs, while still maintaining the overall aesthetic inspired by ~polwex’s existing work. This is a basic site.
 
-## Develop Documentation and Tutorials
+### Develop Documentation and Tutorials
 
 Create basic documentation and tutorials to guide users through the process of building their websites using the no-code dashboard. 
 
-# Implementation Plan
+## Implementation Plan
 
-## Phase 1: Research and Planning
+### Phase 1: Research and Planning
 
 * Analyze the design elements of ~polwex’s existing work and identify the key components that will be included in the no-code dashboard.
 * Define the technical requirements for integrating the dashboard with the Urbit network.
 
-## Phase 2: Dashboard Development
+### Phase 2: Dashboard Development
 
 * Develop the no-code dashboard interface.
 * Implement the backend logic to allow drag-and-drop component placement and customization.
 * Design and integrate ~polwex’s existing work-inspired components.
 
-## Phase 3: Urbit Integration
+### Phase 3: Urbit Integration
 
 * Test and ensure full compatibility with Urbit for decentralized hosting.
 * Optimize the dashboard for performance within the Urbit environment.
 
-## Phase 4: Testing and Refinement
+### Phase 4: Testing and Refinement
 
 * Conduct beta testing with selected Urbit users.
 * Gather feedback with the grants committee and refine the dashboard and components accordingly.
 
-## Phase 5: Documentation and Launch
+### Phase 5: Documentation and Launch
 
 * Develop user documentation, tutorials, and walkthrough videos.
 * Launch the no-code dashboard and promote it within the Urbit community.

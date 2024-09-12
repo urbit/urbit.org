@@ -18,6 +18,8 @@ completed = false
 canceled = false
 +++
 
+## Overview 
+
 This project aims to create two comprehensive books that will serve as essential resources for
 Urbit developers:
 
