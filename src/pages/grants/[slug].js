@@ -99,10 +99,10 @@ export default function Grant({ post, markdown, match }) {
             </div>
           )}
           <div className="flex flex-wrap gap-2.5 body-md">
-            {post.frontmatter.extra?.fund_campaign && (
+            {post.extra?.fund_campaign && (
               <Link
                 className="btn bg-primary hover:bg-secondary text-surface body-md"
-                href={post.frontmatter.extra.fund_campaign}
+                href={post.extra.fund_campaign}
               >
                 Fund Campaign
               </Link>
