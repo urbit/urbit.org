@@ -15,7 +15,7 @@ champion = ["~mocbel"]
 grant_id = "TBD"
 completed = false
 canceled = false
-fund-campaign = ""
+fund = ""
 +++
 
 # Project Overview

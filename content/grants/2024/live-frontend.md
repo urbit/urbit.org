@@ -15,7 +15,7 @@ champion = ["~tocwex"]
 grant_id = "TBD"
 completed = false
 canceled = false
-fund-campaign = "http://widmes-hassen.tlon.network/apps/fund/project/~widmes-hassen/xlive-frontend-scope"
+fund = "http://widmes-hassen.tlon.network/apps/fund/project/~widmes-hassen/xlive-frontend-scope"
 +++
 
 # Project Overview

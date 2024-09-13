@@ -15,7 +15,7 @@ champion = ["~tocwex"]
 grant_id = "TBD"
 completed = false
 canceled = false
-fund-campaign = "http://zyx.polrel-witter.xyz/apps/fund/project/~polrel-witter/xlive-backend-improvements-for-subassembly-2024"
+fund = "http://zyx.polrel-witter.xyz/apps/fund/project/~polrel-witter/xlive-backend-improvements-for-subassembly-2024"
 +++
 
 # Project Overview
