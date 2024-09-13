@@ -15,8 +15,7 @@ assignee = ["~hassun-hassel"]
 champion = ["~poldec-tonteg"]
 grant_id = "P0338"
 completed = false
-canceled = false
-
+canceled = true
 +++
 
 ##  Overview

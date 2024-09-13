@@ -14,7 +14,7 @@ assignee = ["~nospur-sontud"]
 champion = ["~tamlut-modnys"]
 grant_id = "P0346"
 completed = false
-canceled = false
+canceled = true
 +++
 
 ## Description
