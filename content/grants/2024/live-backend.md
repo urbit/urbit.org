@@ -1,5 +1,5 @@
 +++
-title = "Subassembly Event App"
+title = "%live App Updates - Frontend"
 date = "2024-09-13"
 
 [taxonomies]
