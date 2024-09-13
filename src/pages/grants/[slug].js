@@ -99,6 +99,14 @@ export default function Grant({ post, markdown, match }) {
             </div>
           )}
           <div className="flex flex-wrap gap-2.5 body-md">
+            {post.frontmatter.extra && post.frontmatter.extra.fund_campaign && (
+              <Link
+                className="btn bg-primary hover:bg-secondary text-surface body-md"
+                href={post.frontmatter.extra.fund_campaign}
+              >
+                Fund Campaign
+              </Link>
+            )}
             {(status === "Open" && (
               <Link
                 className="btn bg-primary hover:bg-secondary text-surface body-md"
@@ -107,8 +115,8 @@ export default function Grant({ post, markdown, match }) {
                 Apply
               </Link>
             )) || (
-              <span className="btn text-secondary bg-tertiary">{status}</span>
-            )}
+                <span className="btn text-secondary bg-tertiary">{status}</span>
+              )}
             {post.taxonomies.grant_type.map((type) => (
               <span className="btn text-secondary bg-tertiary">{type}</span>
             ))}
