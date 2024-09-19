@@ -10,7 +10,7 @@ image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.9.
 
 ![Image](https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.9.13..21.40.44..25a1.cac0.8312.6e97-image.png)
 
-The Subassembly event series is focusing on identity and reputation for [their inaugural event](https://urbit.org/events/2024-10-20-Subassembly-PNW), and in concert with the IRL gathering, the Urbit Foundation is sponsoring a a hackathon focused around the development of applications that use Urbit ID as the authentication and identity layer.
+The Subassembly event series is focusing on identity and reputation for [their inaugural event](https://urbit.org/events/2024-10-20-subassembly-pnw), and in concert with the IRL gathering, the Urbit Foundation is sponsoring a hackathon focused around the development of applications that use Urbit ID as the authentication and identity layer.
 
 If you wish to participate, you need to do two things:
 
