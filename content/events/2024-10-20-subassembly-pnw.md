@@ -5,12 +5,14 @@ ends = "2024-10-22T11:00:00"
 timezone = "America/Los_Angeles"
 location = "Wellspring Spa & Woodland Retreat - 154922 Kernahan Rd E, Ashford, WA 98304"
 image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.16..5.20.19..6f5c.28f5.c28f.5c28-image.png"
-registration_url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform"
-event_details = "https://subassembly.tocwexsyndicate.com/details.html"
+links = [
+  { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
+  { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" },
+  { label = "Urbit Group", url = "https://tlon.network/lure/~sarlev-sarsen/subassembly" }
+]
 description = "A community gathering about identity, trust, and reputation"
 dark = true
 darken_image = "true"
-
 +++
 
 Inspired by the scale and connections made during Urbit developer summits such as the Volcano Summit and Lake Summit, Subassembly PNW is the inaugural occurrence of the subassembly community event series.
@@ -27,9 +29,12 @@ We invite you to join us in the foothills of Mount Rainier, this October 20th-22
 
 [Visit the event site](https://subassembly.tocwexsyndicate.com)
 
+
 [Read the manifesto](https://subassembly.tocwexsyndicate.com/manifesto.html)
 
+
 [Submit an attendee application](https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform)
+
 
 Some topics we’ll discuss:
 - Computational verification and zk pseudonymization of local and network actions
@@ -43,4 +48,4 @@ Some topics we’ll discuss:
 - Proof-of-human, ML agents, ephemeral identities on Urbit
 - Sources of truth from the physical world (PoL, POAPs, node dispersal, physical decentralization) that inform uniqueness and reputation of identity
 - Hardware and hosting environment interactions with identity and reputation
-- And more to come!
+- More to come!
