@@ -85,6 +85,11 @@
       "source": "/install/macos-x86_64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
       "permanent": true
+    },
+    {
+      "source": "/events/2024-10-20-Subassembly-PNW",
+      "destination": "https://urbit.org/events/2024-10-20-subassembly-pnw",
+      "permanent": true
     }
   ]
 }
