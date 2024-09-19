@@ -7,7 +7,7 @@ location = "Wellspring Spa & Woodland Retreat - 154922 Kernahan Rd E, Ashford, W
 image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.16..5.20.19..6f5c.28f5.c28f.5c28-image.png"
 registration_url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform"
 event_details = "https://subassembly.tocwexsyndicate.com/details.html"
-description = "a community gathering about identity, trust, and reputation"
+description = "A community gathering about identity, trust, and reputation"
 dark = true
 darken_image = "true"
 
@@ -26,7 +26,9 @@ If you are a visionary in building new systems of self-sovereign human organizat
 We invite you to join us in the foothills of Mount Rainier, this October 20th-22nd, 2024, to discuss and plan the representation of reality and the possibilities of its coordination on the Urbit network.
 
 [Visit the event site](https://subassembly.tocwexsyndicate.com)
+
 [Read the manifesto](https://subassembly.tocwexsyndicate.com/manifesto.html)
+
 [Submit an attendee application](https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform)
 
 Some topics we’ll discuss:
