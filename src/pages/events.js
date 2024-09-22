@@ -73,11 +73,30 @@ export default function Events({
             </FatBlock>
           </Section>
         )}
-          <Section divider={"border-primary"}>
-            <h1 className="h1">Online Events Calendar</h1>
+        <Section divider={"border-primary"}>
+        <h2 className="h1">Communities</h2>
+          <p className="h2">
+            Urbit has meetups <strong>worldwide</strong>. Join your local
+            communities or{" "}
+            <Link
+              className="hover:text-secondary"
+              href="grants/community-meetups"
+            >
+              <strong>start</strong>
+            </Link>{" "}
+            your own.
+          </p>
+          <Carousel>
+            {communities.map((props) => (
+              <CommunityCard className="w-44 sm:w-56 md:w-80" {...props} />
+            ))}
+          </Carousel>
+        </Section>
+        <Section divider={"border-primary"}>
+            <h1 className="h1">Calendar</h1>
             <section className="w-full space-y-5 md:space-y-[1.875rem] markdown layout-narrow">
             <p className="h2">
-             We regularly hold online events where you can learn, get involved, or just hang out with Urbiters. Most events are in the Urbit Hacker House, a shared virtual office space.
+             Schedule for official Urbit events. In addition to in-person, we regularly hold online events where you can hang out, learn, and get involved. Most of these are in the Urbit Hacker House, a shared virtual office space.
               </p>
             </section>
             <Link
@@ -100,25 +119,6 @@ export default function Events({
             scrolling="no">
             </iframe>
           </Section>
-        <Section divider={"border-primary"}>
-        <h2 className="h1">Communities</h2>
-          <p className="h2">
-            Urbit has meetups <strong>worldwide</strong>. Join your local
-            communities or{" "}
-            <Link
-              className="hover:text-secondary"
-              href="grants/community-meetups"
-            >
-              <strong>start</strong>
-            </Link>{" "}
-            your own.
-          </p>
-          <Carousel>
-            {communities.map((props) => (
-              <CommunityCard className="w-44 sm:w-56 md:w-80" {...props} />
-            ))}
-          </Carousel>
-        </Section>
         {ongoingEvents.length > 0 && (
           <Section divider={"border-primary"}>
             <h2 className="h2">Ongoing</h2>
