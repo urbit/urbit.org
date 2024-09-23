@@ -8,7 +8,7 @@ grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
-description = "Support an update to %live to support the Subassembly event requirements"
+description = "Support for %live app developers"
 reward = "1 star"
 assignee = ["~bisnyx-mormyl"]
 champion = ["~mocbel"]
@@ -18,7 +18,7 @@ canceled = false
 fund = ""
 +++
 
-# Project Overview
+## Project Overview
 *This campaign is for the backend element of the Subassembly App upgrades to %live, from ~mocbel. The project overview of these projects are identical, while milestones are oriented towards the specific deliverables for this campaign's project worker*
 
 The UF is looking to further development of %live for use by the Subassembly event series and and any event organizer. This grant is for the creation of the initial MVP for this product experience. It does not include everything possible in an event app, but instead starts with the core functionality that would be high leverage in an app for Subassembly PNW and its focus on identity, trust, and reputation.
@@ -73,9 +73,8 @@ What is required of the grantees for this project—and the other two related pr
 #### Future work
 Future work opportunities for this grant includes implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
 
-# Milestones
-
-## Milestone 1 - Subassembly Support - 1 Star
+## Milestones
+### Milestone 1 - Subassembly Support - 1 Star
 
 Milestone 1 of this campaign is entirely focused on supporting timely and high-polish delivery of upgrades to %live in advance of the Subassembly event. This role is expected to flow to whichever work will serve that end. This may include:
 - Supporting JSON parsing in the %live app

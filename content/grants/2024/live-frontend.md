@@ -8,7 +8,7 @@ grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
-description = "Deliver a frontend implementation %live to support the Subassembly event and future events"
+description = "Frontend for %live app to support Subassembly and future events"
 reward = "3 stars"
 assignee = ["~widmes-hassen"]
 champion = ["~tocwex"]
@@ -18,7 +18,7 @@ canceled = false
 fund = "http://widmes-hassen.tlon.network/apps/fund/project/~widmes-hassen/xlive-frontend-scope"
 +++
 
-# Project Overview
+## Project Overview
 *This campaign is for the backend element of the Subassembly App upgrades to %live, from ~mocbel. The project overview of these projects are identical, while milestones are oriented towards the specific deliverables for this campaign's project worker*
 
 The UF is looking to further development of %live for use by the Subassembly event series and and any event organizer. This grant is for the creation of the initial MVP for this product experience. It does not include everything possible in an event app, but instead starts with the core functionality that would be high leverage in an app for Subassembly PNW and its focus on identity, trust, and reputation.
@@ -73,14 +73,14 @@ What is required of the grantees for this project—and the other two related pr
 #### Future work
 Future work opportunities for this grant includes implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
 
-# Milestones
-## Milestone 1 - Initial Draft Delivery - 1 Star
+## Milestones
+### Milestone 1 - Initial Draft Delivery - 1 Star
 
 Milestone 1 is focused around delivery of a working PWA that includes the core UX flows. It should enable all the below users stories. As a draft, it does not need to be highly polished, but timely delivery is essential.
 
 **Due Date: September 27, 2024**
 
-### User Stories
+#### User Stories
 As an event host...
 - I have a form that will help me construct a poke that will set the event, the schedule, and the attendee list.
 - I can edit the event, schedule, and attendee list
@@ -114,23 +114,23 @@ As an event attendee...
 		- open a phone call
 		- etc.
 		
-## Milestone 2 - Polished PWA for Subassembly - 1 Star
+### Milestone 2 - Polished PWA for Subassembly - 1 Star
 Milestone 2's core focus is about polishing the app experience from "it works" to "it just works". The user stories of milestone 1 should go from 'technically implemented' to 'pleasant to use.' The grantee will work with ~lagrev-nocfep and ~sarlev-sarsen to polish every possible hard edge of the app. The polish done at this stage will be about the event attendee experience, while the event host experience can remain just 'workable' for this initial MVP.
 
 **Due Date: October 11th**
 
-### User Stories
+#### User Stories
 - As an event attendee, when I open a specific event (such as the subassembly entry) I am directed to install a PWA onto my local device while I have a working internet connection, and then utilize the following features even on a spotty or absent internet connection:
 	- Viewing the venue map
 	- Viewing the event schedule
 	- Viewing the event details
 	- For any non-offline-functional elements of the app, such as the matching feature, the interface should fail gracefully. This could come in the form of an error message built in, or something similar.
 
-## Milestone 3 - Generalized App Use Case - 1 Star
+### Milestone 3 - Generalized App Use Case - 1 Star
 Milestone 3 is about generalization of the application experience. Depending on the way that milestones 1 and 2 are completed, the exact details of this milestone may vary, but at the end of this milestone the following functionality should be available at a high degree of polish. This milestone does not have a strict due date, and rather will be awarded when a sufficient level of polish is met. Indicators that a sufficient level of polish has been met include:
 - Three 3rd party events are hosted using %live, such as Urbit Meetups, Mars Review of Books parties, or additional Subassembly series occurrences.
 
-### User Stories
+#### User Stories
 - As an event coordinator, I can smoothly:
 	- Create a new event with an attendee list and draft schedule
 	- Add additional attendees who are invited to the event

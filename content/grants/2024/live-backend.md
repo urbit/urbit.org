@@ -8,7 +8,7 @@ grant_category = ["Dev: Apps"]
 
 [extra]
 image = ""
-description = "Deliver backend updates to %live to support the Subassembly event requirements"
+description = "Backend for %live app to support Subassembly and future events"
 reward = "2 stars"
 assignee = ["~polrel-witter"]
 champion = ["~tocwex"]
@@ -18,7 +18,7 @@ canceled = false
 fund = "http://zyx.polrel-witter.xyz/apps/fund/project/~polrel-witter/xlive-backend-improvements-for-subassembly-2024"
 +++
 
-# Project Overview
+## Project Overview
 *This campaign is for the backend element of the Subassembly App upgrades to %live, from ~mocbel. The project overview of these projects are identical, while milestones are oriented towards the specific deliverables for this campaign's project worker*
 
 The UF is looking to further development of %live for use by the Subassembly event series and any event organizer. This grant is for the creation of the initial MVP for this product experience. It does not include everything possible in an event app, but instead starts with the core functionality that would be high leverage in an app for Subassembly PNW and its focus on identity, trust, and reputation.
@@ -72,12 +72,12 @@ What is required of the grantees for this project—and the other two related pr
 #### Future work
 Future work opportunities for this grant includes implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
 
-# Milestones
-## Milestone 1 - %live functionality updates - 1 Star
+## Milestones
+### Milestone 1 - %live functionality updates - 1 Star
 
 Milestone 1 for the backend updates on %live is focused on updating the core functionality of the application. The necessary changes should be made in order to support the below users stories. While this milestone doesn't have an explicit due date, it is a dependency for Milestones 1 and 2 of the %live Frontend Scope which needs to be completed prior to the Subassembly event in October.
 
-### User Stories
+#### User Stories
 As an event host...
 - I have a form that will help me construct a poke that will set the event, the schedule, and the attendee list.
 - I can edit the event, schedule, and attendee list
@@ -110,12 +110,12 @@ As an event attendee...
 		- open a text message to them
 		- open a phone call
 		- etc.
-## Milestone 2 - JSON Parsing & Generalized App Experience - 1 Star
+### Milestone 2 - JSON Parsing & Generalized App Experience - 1 Star
 Milestone 2 contains two primary elements: JSON Parsing, and the generalized app experience. The JSON parsing must be delivered in time for use in the version the the app that is delivered for use at Subassembly. This means close coordination with the project worker for the %live Frontend Scope campaign. Upon delivery of the JSON parsing functionality, the 'generalized app experience' element of this milestone is likely to be supported but will not be considered fully complete until the application is shipped and meets the expectations of the Trusted Oracle. Those expectations are considered to be met if:
 - Three 3rd party events are hosted using %live, such as Urbit Meetups, Mars Review of Books parties, or additional Subassembly series occurrences.
 
 Also a potential indicator of met expectations is the app supporting the following user stories:
-### User Stories
+#### User Stories
 - As an event coordinator, I can smoothly:
 	- Create a new event with an attendee list and draft schedule
 	- Add additional attendees who are invited to the event
