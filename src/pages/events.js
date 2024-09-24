@@ -100,16 +100,16 @@ export default function Events({
               </p>
             </section>
             <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
+            >
+            Subscribe to Calendar
+            </Link>
+            <Link
             className="btn bg-primary hover:bg-secondary text-surface body-lg w-min mr-4"
             href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
             >
             Enter Hacker House
-            </Link>
-            <Link
-            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
-            href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
-            >
-            Import Calendar
             </Link>
             <iframe 
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showDate=1&src=Y18xMzY0NzQzOGQwMGVmMzEyMzdiZTg4YjE5ZGUyNGRlMzBhZWIyNjA5NjU3YzgwY2ZiNmIyMjM1MDk0MWM2MWRkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60" 
