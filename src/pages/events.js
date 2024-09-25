@@ -73,33 +73,6 @@ export default function Events({
             </FatBlock>
           </Section>
         )}
-          <Section divider={"border-primary"}>
-            <h1 className="h1">Online Events Calendar</h1>
-            <section className="w-full space-y-5 md:space-y-[1.875rem] markdown layout-narrow">
-            <p className="h2">
-             We regularly hold online events where you can learn, get involved, or just hang out with Urbiters. Most events are in the Urbit Hacker House, a shared virtual office space.
-              </p>
-            </section>
-            <Link
-            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min mr-4"
-            href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
-            >
-            Enter Hacker House
-            </Link>
-            <Link
-            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
-            href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
-            >
-            Import Calendar
-            </Link>
-            <iframe 
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showDate=1&src=Y18xMzY0NzQzOGQwMGVmMzEyMzdiZTg4YjE5ZGUyNGRlMzBhZWIyNjA5NjU3YzgwY2ZiNmIyMjM1MDk0MWM2MWRkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60" 
-            style={{ width: '100%', borderWidth: 0, padding: '20px'}}
-            height="600" 
-            frameBorder="0" 
-            scrolling="no">
-            </iframe>
-          </Section>
         <Section divider={"border-primary"}>
         <h2 className="h1">Communities</h2>
           <p className="h2">
@@ -119,6 +92,34 @@ export default function Events({
             ))}
           </Carousel>
         </Section>
+        <Section divider={"border-primary"}>
+            <h1 className="h1">Calendar</h1>
+            <section className="w-full space-y-5 md:space-y-[1.875rem] markdown layout-narrow">
+            <p className="h2">
+             Schedule for official Urbit events. In addition to in-person, we regularly hold online events where you can hang out, learn, and get involved. Most of these are in the Urbit Hacker House, a shared virtual office space.
+              </p>
+            </section>
+            <Link
+            style={{ marginRight: '12px' }}
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
+            >
+            Subscribe to Calendar
+            </Link>
+            <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min mr-4"
+            href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
+            >
+            Enter Hacker House
+            </Link>
+            <iframe 
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&showDate=1&src=Y18xMzY0NzQzOGQwMGVmMzEyMzdiZTg4YjE5ZGUyNGRlMzBhZWIyNjA5NjU3YzgwY2ZiNmIyMjM1MDk0MWM2MWRkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60" 
+            style={{ width: '100%', borderWidth: 0, padding: '20px'}}
+            height="600" 
+            frameBorder="0" 
+            scrolling="no">
+            </iframe>
+          </Section>
         {ongoingEvents.length > 0 && (
           <Section divider={"border-primary"}>
             <h2 className="h2">Ongoing</h2>
