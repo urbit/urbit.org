@@ -100,6 +100,7 @@ export default function Events({
               </p>
             </section>
             <Link
+            style={{ marginRight: '12px' }}
             className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
             href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
             >
