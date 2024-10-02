@@ -4,7 +4,7 @@ title = "Port Revival"
 date = "2024-10-02"
 
 [taxonomies]
-grant_type = [ "Proposal" ]
+grant_type = [ "Bounty" ]
 grant_category = [ "Dev: Apps" ]
 
 [extra]
