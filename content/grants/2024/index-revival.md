@@ -9,7 +9,7 @@ grant_category = ["Community"]
 
 [extra]
 image = ""
-description = "Urbit Index Revival"
+description = "Create and distribute the Urbit Index, a summary of interesting activity from around the network."
 reward = "2 Stars"
 assignee = ["~dashus-navnul"]
 champion = ["~simfur-ritwed", "~botsyp-matrev"]
