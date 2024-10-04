@@ -22,7 +22,7 @@ canceled = false
 ## Rationale
 Crypto has lost sight of the world of atoms, and given up on integrating with base reality due to an underlying necessity for trust and institutions.
 
-But the world of atoms is still where most human action - aka, economic activity - derives it's value.
+But the world of atoms is still where most human action - aka, economic activity - derives its value.
 
 %fund is the first step to giving individuals who live in the world of atoms the essential tools for self-sovereign and P2P cryptoeconomic activity.
 
@@ -75,7 +75,7 @@ In essence, we want to bring the benefits of human trust and judgement into the 
 
 - **Project Proposers** are able to draft and present a proposal to the world with human readable milestone descriptions and funding targets, raising funding for projects of arbitrary scope and budget amounts without needing to create custom smart contracts.  
 
-- **Escrow Assessors** are able to be compensated for providing a fair and reputable assessment service to both Project Proposers and Funding contributors, serving as a trusted arbiter of the more subjective elements of a “Dumb Contract” which a best interpreted by a human by deciding if funds in escrow are paid out to proposers or returned to contributors.  
+- **Escrow Assessors** are able to be compensated for providing a fair and reputable assessment service to both Project Proposers and Funding contributors, serving as a trusted arbiter of the more subjective elements of a “Dumb Contract” which is best interpreted by a human by deciding if funds in escrow are paid out to proposers or returned to contributors.  
 
 - **All parties involved have persistent, pseudonymous identities** linked to a sovereign personal server that has a growing ecosystem of applications across which their social and professional reputation carries.
 
@@ -168,7 +168,7 @@ As an escrow assessor, I want to...
 
 - View a list of my proposed projects
 
-- See a detail view of each my projects which include
+- See a detailled view of each of my projects which include
 
            - Funding Status
 
