@@ -70,7 +70,7 @@ What is required of the grantees for this project—and the other two related pr
 - There should be a deeplink to the Tlon group for the event, ~sarlev-sarsen/subassembly
 
 #### Future work
-Future work opportunities for this grant includes implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
+Future work opportunities for this grant include implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
 
 ## Milestones
 ### Milestone 1 - %live functionality updates - 1 Star
@@ -97,7 +97,7 @@ As an event attendee...
 	- an indicator of if we are a match
 	- if i have already 'swiped' on them
 	- a button to 'start swiping'
-	- a button for "your matches" (alternatively this could be a filtering fuctionality)
+	- a button for "your matches" (alternatively this could be a filtering functionality)
 - On the 'swiping page', I can...
 	- See their avatar, nickname and @p
 	- have an option to signal matching interest or non-matching interest
@@ -111,7 +111,7 @@ As an event attendee...
 		- open a phone call
 		- etc.
 ### Milestone 2 - JSON Parsing & Generalized App Experience - 1 Star
-Milestone 2 contains two primary elements: JSON Parsing, and the generalized app experience. The JSON parsing must be delivered in time for use in the version the the app that is delivered for use at Subassembly. This means close coordination with the project worker for the %live Frontend Scope campaign. Upon delivery of the JSON parsing functionality, the 'generalized app experience' element of this milestone is likely to be supported but will not be considered fully complete until the application is shipped and meets the expectations of the Trusted Oracle. Those expectations are considered to be met if:
+Milestone 2 contains two primary elements: JSON Parsing, and the generalized app experience. The JSON parsing must be delivered in time for use in the version of the app that is delivered for use at Subassembly. This means close coordination with the project worker for the %live Frontend Scope campaign. Upon delivery of the JSON parsing functionality, the 'generalized app experience' element of this milestone is likely to be supported but will not be considered fully complete until the application is shipped and meets the expectations of the Trusted Oracle. Those expectations are considered to be met if:
 - Three 3rd party events are hosted using %live, such as Urbit Meetups, Mars Review of Books parties, or additional Subassembly series occurrences.
 
 Also a potential indicator of met expectations is the app supporting the following user stories:
@@ -119,7 +119,7 @@ Also a potential indicator of met expectations is the app supporting the followi
 - As an event coordinator, I can smoothly:
 	- Create a new event with an attendee list and draft schedule
 	- Add additional attendees who are invited to the event
-	- add additional schedule session entires
+	- add additional schedule session entries
 	- Remove attendees or sessions
 	- Upload a venue map, or if no venue map exists this page is excluded from the user interface
 - As an event attendee, I can:
