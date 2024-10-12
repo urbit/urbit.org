@@ -22,7 +22,7 @@ canceled = false
 ## Rationale
 Crypto has lost sight of the world of atoms, and given up on integrating with base reality due to an underlying necessity for trust and institutions.
 
-But the world of atoms is still where most human action - aka, economic activity - derives it's value.
+But the world of atoms is still where most human action - aka, economic activity - derives its value.
 
 %fund is the first step to giving individuals who live in the world of atoms the essential tools for self-sovereign and P2P cryptoeconomic activity.
 
