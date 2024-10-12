@@ -18,7 +18,7 @@ This probably sounds crazy, so let’s get concrete and talk about (1) Urbit as 
 
 # Technology
 
-Technically, Urbit is two components: Urbit OS and Urbit ID.  Both are completely open source and MIT licensed.
+Technically, Urbit has two components: Urbit OS and Urbit ID.  Both are completely open source and MIT licensed.
 
 {% div className="flex justify-between space-x-4" %}
 {% div %}
