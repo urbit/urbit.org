@@ -97,7 +97,7 @@ As an event attendee...
 	- an indicator of if we are a match
 	- if I have already 'swiped' on them
 	- a button to 'start swiping'
-	- a button for "your matches" (alternatively this could be a filtering fuctionality)
+	- a button for "your matches" (alternatively this could be a filtering functionality)
 - On the 'swiping page', I can...
 	- See their avatar, nickname and @p
 	- have an option to signal matching interest or non-matching interest
