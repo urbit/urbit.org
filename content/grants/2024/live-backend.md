@@ -70,12 +70,12 @@ What is required of the grantees for this project—and the other two related pr
 - There should be a deeplink to the Tlon group for the event, ~sarlev-sarsen/subassembly
 
 #### Future work
-Future work opportunities for this grant includes implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
+Future work opportunities for this grant include implementing limited-access speaker sessions, where only a subset of attendees are permissioned to view and attend particular sessions.
 
 ## Milestones
 ### Milestone 1 - %live functionality updates - 1 Star
 
-Milestone 1 for the backend updates on %live is focused on updating the core functionality of the application. The necessary changes should be made in order to support the below users stories. While this milestone doesn't have an explicit due date, it is a dependency for Milestones 1 and 2 of the %live Frontend Scope which needs to be completed prior to the Subassembly event in October.
+Milestone 1 for the backend updates on %live is focused on updating the core functionality of the application. The necessary changes should be made in order to support the below user's stories. While this milestone doesn't have an explicit due date, it is a dependency for Milestones 1 and 2 of the %live Frontend Scope which needs to be completed prior to the Subassembly event in October.
 
 #### User Stories
 As an event host...
@@ -86,7 +86,7 @@ As an event host...
 As an event attendee...
 - I can run `|install ~mocbel %live` on my ship to install the app
 - I can find a list of events to which I am invited (this can currently be a list of 1). If there are no events, I should see a message with a link out to the urbit.org events page
-- I can select from the list of events to which I am invited and get into an event specific interface
+- I can select from the list of events to which I am invited and get into an event-specific interface
 - I can navigate around the app as a typical mobile experience with a nav experience for the following pages:
 	- Venue Map
 	- Event Details
@@ -95,7 +95,7 @@ As an event attendee...
 - On the attendee list page, I can...
 	- see a list of @p, %tlon nickname, and %tlon avatar
 	- an indicator of if we are a match
-	- if i have already 'swiped' on them
+	- if I have already 'swiped' on them
 	- a button to 'start swiping'
 	- a button for "your matches" (alternatively this could be a filtering fuctionality)
 - On the 'swiping page', I can...
@@ -119,7 +119,7 @@ Also a potential indicator of met expectations is the app supporting the followi
 - As an event coordinator, I can smoothly:
 	- Create a new event with an attendee list and draft schedule
 	- Add additional attendees who are invited to the event
-	- add additional schedule session entires
+	- add additional schedule session entries
 	- Remove attendees or sessions
 	- Upload a venue map, or if no venue map exists this page is excluded from the user interface
 - As an event attendee, I can:
