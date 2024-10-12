@@ -35,7 +35,7 @@ Some bounties are sponsored by other organizations and may include compensation 
 
 ### 3. Sign a Contract
 
-If your application is accepted, you will undergo a quick KYC process and recieve a contract for signature. 
+If your application is accepted, you will undergo a quick KYC process and receive a contract for signature. 
 
 ### 4. Work and Get Paid
 
