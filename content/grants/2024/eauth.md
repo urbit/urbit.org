@@ -4,7 +4,7 @@ title = "EAuth Quality of Life Improvements"
 date = "2024-10-20"
 
 [taxonomies]
-grant_type = ["Proposal"]
+grant_type = ["Bounty"]
 grant_category = ["Dev: Core"]
 
 [extra]
