@@ -13,7 +13,7 @@ description = "Upgrade EAuth behavior."
 reward = "3 Stars"
 assignee = [""]
 champion = ["~lagrev-nocfep"]
-grant_id = "P03XX"
+grant_id = "B0399"
 completed = false
 canceled = false
 
