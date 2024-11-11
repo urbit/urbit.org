@@ -12,7 +12,7 @@ description = "Host an Urbit community podcast on the %radio app"
 reward = "1 star per month of 4 weekly shows"
 assignee = ["~dashus-navnul"]
 champion = ["~simfur-ritwed", "~botsyp-matrev"]
-grant_id = "P0345"
+grant_id = "P0400"
 completed = true
 canceled = false
 +++
