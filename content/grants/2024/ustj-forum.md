@@ -13,7 +13,7 @@ reward = "2 stars equivalent in USDC"
 assignee = ["~polwex"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0345"
-completed = false
+completed = true
 canceled = false
 +++
 

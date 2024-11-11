@@ -13,7 +13,7 @@ reward = "4 stars"
 assignee = ["~wispem-wantex"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0351"
-completed = false
+completed = true
 canceled = false
 +++
 
