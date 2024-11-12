@@ -14,7 +14,7 @@ assignee = ["~masryl-picref"]
 champion = ["~lagrev-nocfep"]
 grant_id = "P0380"
 completed = false
-canceled = false
+canceled = true
 +++
 
 Geohot has published the [Tinygrad library](https://github.com/geohot/tinygrad) for machine learning. This library is small and simple, which makes it a potentially good target for jetting. Doing so would give basic machine learning functionality in Urbit.
