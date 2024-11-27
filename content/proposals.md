@@ -28,7 +28,7 @@ people will be able to do with your creation.
 
 — An overview of why you are the right person for the job. A
 description of your background, familiarity with the project, and
-professional/education experience are useful.
+professional/education experience is useful.
 
 — Milestones. Your project should be composed of milestones,
 each of which has a __completion date__, __funding amount__ and
@@ -51,7 +51,7 @@ After applying, we will review your application. In some cases, we may schedule 
 
 ### 4. Sign a Contract
 
-If your application is accepted, you will undergo a quick KYC process and recieve a contract for signature. 
+If your application is accepted, you will undergo a quick KYC process and receive a contract for signature. 
 
 ### 5. Work and Get Paid
 
