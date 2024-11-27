@@ -168,7 +168,7 @@ As an escrow assessor, I want to...
 
 - View a list of my proposed projects
 
-- See a detailled view of each of my projects which include
+- See a detailed view of each of my projects which include
 
            - Funding Status
 
