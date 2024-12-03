@@ -15,7 +15,7 @@ assignee = ["~rivmud-fabwen"]
 champion = ["~poldec-tonteg"]
 grant_id = "P0334"
 completed = false
-canceled = false
+canceled = true
 
 +++
 

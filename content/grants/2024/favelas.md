@@ -15,7 +15,7 @@ assignee = ["~mislun-ronsyp", "~rallup-wicsec"]
 champion = ["~tamlut-modnys"]
 grant_id = "P0395"
 completed = false
-canceled = false
+canceled = true
 
 +++
 
