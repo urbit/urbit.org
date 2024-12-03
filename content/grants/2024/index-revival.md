@@ -15,7 +15,7 @@ assignee = ["~dashus-navnul"]
 champion = ["~simfur-ritwed", "~botsyp-matrev"]
 grant_id = "P0396"
 completed = false
-canceled = false
+canceled = true
 
 +++
 

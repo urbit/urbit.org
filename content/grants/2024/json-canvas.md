@@ -14,7 +14,7 @@ assignee = ["~ronnys-rigwet"]
 champion = ["~tamlut-modnys"]
 grant_id = "B0347"
 completed = false
-canceled = false
+canceled = true
 +++
 
 Infinite canvas tools provide for a way to represent data that has networked, visually organized relationships. For example, you might be familiar with personal note-taking tools like Obsidian and Roam Research, or design tools like Figma.

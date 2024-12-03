@@ -14,6 +14,7 @@ assignee = [""]
 grant_id = "B0165"
 champion = ["~dalweb-donfun"]
 completed = false
+canceled = true
 work_request_link = "https://airtable.com/shr4qt9t9kz7RaOIa?prefill_Grant+ID=B0165&prefill_Grant+Name=Meetup%20Bounty"
 +++
 

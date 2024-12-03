@@ -14,7 +14,7 @@ assignee = [""]
 champion = ["~tamlut-modnys"]
 grant_id = "B0349"
 completed = false
-canceled = false
+canceled = true
 +++
 
 [Farcaster](https://www.farcaster.xyz) is a decentralized social network protocol built on Ethereum. Similarly to Urbit, Farcaster allows users to control a single identity that can interact with a variety of applications.
