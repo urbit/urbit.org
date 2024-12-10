@@ -9,7 +9,6 @@ const data = [
         { title: "Home", href: "/" },
         { title: "Get Started", href: "/get-started" },
         { title: "Overview", href: "/overview" },
-        { title: "Ecosystem", href: "/ecosystem" },
         { title: "Grants", href: "/grants" },
         { title: "Events", href: "/events" },
         { title: "Blog", href: "/blog" },
