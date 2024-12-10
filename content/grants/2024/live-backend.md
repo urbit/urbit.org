@@ -111,7 +111,7 @@ As an event attendee...
 		- open a phone call
 		- etc.
 ### Milestone 2 - JSON Parsing & Generalized App Experience - 1 Star
-Milestone 2 contains two primary elements: JSON Parsing, and the generalized app experience. The JSON parsing must be delivered in time for use in the version the the app that is delivered for use at Subassembly. This means close coordination with the project worker for the %live Frontend Scope campaign. Upon delivery of the JSON parsing functionality, the 'generalized app experience' element of this milestone is likely to be supported but will not be considered fully complete until the application is shipped and meets the expectations of the Trusted Oracle. Those expectations are considered to be met if:
+Milestone 2 contains two primary elements: JSON Parsing, and the generalized app experience. The JSON parsing must be delivered in time for use in the version of the app that is delivered for use at Subassembly. This means close coordination with the project worker for the %live Frontend Scope campaign. Upon delivery of the JSON parsing functionality, the 'generalized app experience' element of this milestone is likely to be supported but will not be considered fully complete until the application is shipped and meets the expectations of the Trusted Oracle. Those expectations are considered to be met if:
 - Three 3rd party events are hosted using %live, such as Urbit Meetups, Mars Review of Books parties, or additional Subassembly series occurrences.
 
 Also a potential indicator of met expectations is the app supporting the following user stories:
