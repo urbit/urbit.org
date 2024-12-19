@@ -105,7 +105,7 @@ export default function Grants({ posts, categories, types }) {
   const router = useRouter();
   let { status, type, category } = router.query;
   if (status === undefined) {
-    status = "open";
+    status = "wip";
   }
 
   function push(toQuery) {
