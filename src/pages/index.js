@@ -67,17 +67,69 @@ export default function Home({ events }) {
       <IntraNav />
       <Main className="text-primary body-lg" singleColumn>
         <h1 className="h0 heading mt-8">:: Leave the internet behind</h1>
+        <div className="block md:hidden">
+        <video
+            className="img-dark"
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <video
+            className="img-light"
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-mobile1.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div className="hidden md:block">
+          <video
+            className="img-dark"
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-dark-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <video
+            className="img-light"
+            loop
+            autoPlay
+            muted
+            playsInline
+            disablePictureInPicture
+          >
+            <source
+              src="https://storage.googleapis.com/media.urbit.org/site/landing/header-light-desktop1.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
         <Section divider={"border-primary"}>
           <h2 className="h1">
-            We're rebuilding the modern computing stack, from the ground up. Urbit is a new:
-            <ul>
-              <li>Machine Language (Nock)</li>
-              <li>Operating System (Arvo)</li>
-            </ul>
+            Urbit is a new computing paradigm that provides complete ownership
+            of your digital world.
           </h2>
-          <h3 className="h2">
-          Urbit is a new machine language, operating system, networking protocol, and distributed identity system.
-          </h3>
           <div className="body-lg grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between bg-container rounded-lg p-4">
               <h3 className="text-on-container h-[6.5em] overflow-hidden">
@@ -172,6 +224,21 @@ export default function Home({ events }) {
         </Section>
 
         <Section divider={"border-primary"}>
+          <h2 className="h1">Come meet us.</h2>
+          <Carousel className="h-60 xs:h-72 md:h-96">
+            {events.slice(0, 6).map((props) => (
+              <EventCard {...props} key={props.slug} />
+            ))}
+          </Carousel>
+          <Link
+            className="btn bg-primary hover:bg-secondary text-surface body-lg w-min"
+            href="/events"
+          >
+            View Events
+          </Link>
+        </Section>
+
+        <Section divider={"border-primary"}>
           <h2 className="h1">A fork in the road for computing.</h2>
           <div
             className="w-full aspect-[1195/646] !my-16 md:!my-20 lg:!my-24 bg-primary"
@@ -234,6 +301,39 @@ export default function Home({ events }) {
               slug="red-horizon"
               extended
             />
+          </div>
+        </Section>
+
+        <Section className="overflow-hidden" divider={"border-primary"}>
+          <h2 className="h2">Who we work with.</h2>
+          <div className="flex flex-col items-center -layout-mx">
+            <div className="flex items-center justify-center flex-wrap w-full">
+              {partners.map((partner) => {
+                const iconStyle = {
+                  WebkitMaskImage: `url(${partner.img})`,
+                  WebkitMaskSize: "contain",
+                  WebkitMaskPosition: "center",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskImage: `url(${partner.img})`,
+                  maskSize: "contain",
+                  maskPosition: "center",
+                  maskRepeat: "no-repeat",
+                };
+
+                return (
+                  <div
+                    className="text-center w-1/2 xs:w-1/3 sm:w-1/4 md:w-1/5 items-center p-5 lg:p-10 xl:p-12"
+                    key={partner.link}
+                  >
+                    <Link
+                      className="inline-block w-full h-20 xs:h-24 sm:h-28 md:h-32 bg-primary"
+                      href={partner.link}
+                      style={iconStyle}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </Section>
 
