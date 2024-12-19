@@ -14,7 +14,7 @@ assignee = [""]
 champion = ["~migrev-dolseg"]
 grant_id = "BO383"
 completed = false
-canceled = false
+canceled = true
 +++
 
 RSS has been an important primitive for Web 1.0, 2.0, and web3, fundamentally unchanged since 2002. There’s been renewed interest in the standard in recent years as “enshittification” became a meme and both creators and consumers more keenly felt the limits of the walled gardens that controlled their media distribution.

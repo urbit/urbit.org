@@ -15,7 +15,7 @@ assignee = [""]
 champion = [""]
 grant_id = "B0362"
 completed = false
-canceled = false
+canceled = true
 +++
 
 `%pyro` and `%aqua` are virtualization tools that allow developers to run one or many virtual ships within their ship. This opens up many testing possibilities, since it's possible to spin up an entire fleet of virtual ships with state and orchestrate them within your ship. But since all of hte ships run one one computer, the network conditions are unrealistically good. In the real world, network connections fail, time out and generally perform in unexpected ways.
