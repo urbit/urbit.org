@@ -14,7 +14,7 @@ assignee = [""]
 champion = ["~lagrev-nocfep"]
 grant_id = "B0348"
 completed = false
-canceled = false
+canceled = true
 +++
 
 ~lagrev-nocfep and ~mopfel-winrux have been hard at work implementing numerical computing on Urbit. The end goal that they are driving towards is Urbit-native machine learning. They seek a qualified grantee to assist with this project.

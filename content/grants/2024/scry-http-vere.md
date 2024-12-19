@@ -14,7 +14,7 @@ assignee = [""]
 champion = ["~rovnys-ricfer"]
 grant_id = "B0343"
 completed = false
-canceled = false
+canceled = true
 +++
 
 Arvo now supports receiving scry requests as HTTP GET requests (as of [this PR](https://github.com/urbit/urbit/pull/6741)), but they are not optimized in the runtime. What remains to be done is:

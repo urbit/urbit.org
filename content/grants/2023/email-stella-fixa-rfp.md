@@ -14,7 +14,7 @@ assignee = [""]
 champion = [""]
 grant_id = "B0360"
 completed = false
-canceled = false
+canceled = true
 +++
 
 Email is the glue for much of the legacy web.  While many of us share an aversion to the proliferation of email, the ability to tie email to Urbit identity will enable users to unify their control over their digital life more than is currently possible.
