@@ -80,16 +80,8 @@ export const footerData = [
           href: "/overview",
         },
         {
-          title: "Ecosystem",
-          href: "/ecosystem",
-        },
-        {
           title: "Grants",
           href: "/grants",
-        },
-        {
-          title: "Events",
-          href: "/events",
         },
         {
           title: "Blog",
