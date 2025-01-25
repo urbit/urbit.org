@@ -1,13 +1,22 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Overview() {
+export default function PrimerRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/overview/urbit-id');
+    if (router.query.slug === undefined) {
+      // If no slug is provided, redirect to overview/urbit-id
+      router.push('/overview/urbit-id');
+    } else {
+      // Optionally handle other slugs if needed
+      console.log('Handling other slugs:', router.query.slug);
+    }
   }, []);
 
-  // You might want to show a loading spinner or some message here while redirecting
-  return null; // or some loading UI
+  // You can return null or some loading UI
+  return null;
 }
+
+// If you're using getStaticProps or getServerSideProps, remove them here since 
+// they're not necessary for this simple redirect scenario.
