@@ -90,6 +90,11 @@
       "source": "/events/2024-10-20-Subassembly-PNW",
       "destination": "https://urbit.org/events/2024-10-20-subassembly-pnw",
       "permanent": true
+    },
+    {
+      "source": "/primer",
+      "destination": "/overview/urbit-id",
+      "permanent": true
     }
   ]
 }
