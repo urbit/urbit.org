@@ -1,0 +1,13 @@
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+
+export default function Overview() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/overview/urbit-id');
+  }, []);
+
+  // You might want to show a loading spinner or some message here while redirecting
+  return null; // or some loading UI
+}
