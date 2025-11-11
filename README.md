@@ -1,52 +1,70 @@
-The website for Urbit is maintained by the Urbit Foundation and the Urbit community. Issues and contributions are welcome.
+# urbit.org
 
-## Getting Started
+The official Urbit website built with Next.js and Markdoc for content management.
 
-1. Fork the [Urbit site repository](https://github.com/urbit/urbit.org).
+urbit.org is maintained by the Urbit Foundation and the Urbit community. Issues and contributions are welcome.
 
-2. [Create a local clone](https://help.github.com/articles/cloning-a-repository/) of your fork.
+## Development Setup
 
-3. Navigate to the `urbit.org` directory and install Node 18 using [nvm](https://github.com/nvm-sh/nvm):
+### Prerequisites
+- Node.js (version compatible with Next.js 14)
+- npm
 
-    ```shell
-    cd urbit.org
-    nvm install 18
-    ```
-    You can then run `nvm use` whenever in the repository (or automate it with a script - see [here](https://github.com/nvm-sh/nvm#deeper-shell-integration)).
+### Installation
+```bash
+npm install
+```
 
-4. Install our dependencies:
+### Development Commands
 
-    ```shell
-    npm install
-    ```
+```bash
+# Start development server
+npm run dev
 
-5. Run the development server:
+# Build for production
+npm run build
 
-    ```shell
-    npm run dev
-    # or
-    yarn dev
-    ```
+# Start production server
+npm start
 
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Run linting
+npm run lint
+```
 
-To learn more about contributing, see GitHub's [documentation](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
+## Project Structure
 
-## Framework and Library Documentation
+This is a Next.js application using:
+- **Next.js 14** with App Router architecture
+- **Markdoc** for content management and custom components
+- **Tailwind CSS** for styling
+- **Static export** configuration for deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Content Management
+- Content files are stored in `app/content/` organized by type (blog, events, grants, etc.)
+- Markdown files support both YAML and TOML frontmatter
+- Custom Markdoc tags enable rich content layouts
+- Content is processed through `app/lib/queries.js` utilities
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Key Directories
+- `app/` - Next.js App Router pages and components
+- `app/content/` - Markdown content files
+- `app/components/` - Custom React components for Markdoc rendering
+- `app/lib/` - Utility functions for content processing
 
-To learn more about Tailwind CSS, take a look at the docs:
+## Contributing
 
-- [Tailwind CSS Docs](https://tailwindcss.com/docs) - Docs
+When contributing to content or code, please ensure:
+- Content follows existing Markdoc tag conventions
+- Components maintain consistency with the existing design system
+- Run `npm run lint` before submitting changes
 
-## Deployment
-
-We deploy using Vercel. All pull requests will show a deployment preview via the same.
-
-## Upgrades
-
-The `/src/scripts` contains scripts used to programmatically upgrade site content data.
+# ~sarlev's TODOs
+- [ ] hide grants page; reward icons were dependent on Urbit Sans font, so be sure to address that.
+- [ ] update ecosystem companies page
+- [x] Update Articles & Press entires (compact mag hitpiece, LambdaConf talks?)
+- [ ] Update the 'get on the network' page. Maybe delete entirely as it is replaced by homepage configurator?
+- [ ] Update the Overview page with new narrative
+- [ ] Update overview page with new system diagram (including userspace distributions & groundwire IDs)
+- [ ] Add fallback fonts and update `.ttf`s to `.woff`.
+- [ ] Add icon for Email
+- [ ] Test email signup functionality

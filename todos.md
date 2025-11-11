@@ -1,0 +1,216 @@
+- Styling
+  - [x] Frame Layout
+    - [x] border line weight
+    - [x] fix cracks in between elements
+    - [x] change button styles to match designs
+    - [ ] footer element on mid-size screens
+  - [ ] Homepage
+    - [x] homepage hero transparency
+    - [x] homepage urbit logo should collapse but not open menu
+    - [ ] dual column scrolling
+    - [ ] Section images
+    - [ ] section reference links
+    - [ ] Mobile
+  - [ ] Overview
+    - [ ] next page nav buttons
+    - [ ] sidebar element styling
+    - [ ] mobile
+  - [ ] Ecosystem page
+    - [ ] company icons
+    - [ ] restyling press entries
+    - [ ] sidebar sections
+    - [ ] Mobile
+  - [ ] Blog index
+    - [ ] Desktop
+    - [ ] Mobile
+  - [x] Mobile Hamburger Menu
+    - [x] unified mobile menu
+    - [x] mobile submenus
+    - [ ] fix colors
+  - [ ] Functioning Anchor Links
+  - [x] hide scrollbars on dual scrolling elements
+  - [ ] Fonts -- well structured globals.css and tailwind config
+  - [x] Colors -- darkmode and properly structured classes (i.e. bg-primary instead of bg-white that is black in dark mode)
+  - [ ] Implement colors thoughtout
+  - [ ] email signup text entry field overflow
+  - [ ] add announcements to desktop view
+  - TESTING
+    - Desktop
+      - [ ] Brave
+      - [ ] Firefox
+      - [ ] Safari
+      - [ ] Chrome
+    - Mobile
+      - [ ] iOS
+        - [ ] Safari
+        - [ ] Brave
+        - [ ] Chrome
+      - [ ] Android ????
+- Content
+  - [ ] Overview Prose Narrative
+  - [ ] Blurbs (see below)
+  - [ ] Ecosystem page updates
+  - [ ] ~dozreg developer spotlight article
+  - [ ] grants page placeholder
+    - [ ] modify star reward rendering style
+- Analytics
+  - [ ] Button clicks
+  - [ ] email signups (per page data?)
+  - [ ] redirects (i.e. /getting-started, /get-on-the-network)
+- Imagery
+  - [ ] Replace placeholders
+
+Stretch goals
+- [ ] add back in stuff like podcasts and presentation recordings to the ecosystem page
+- [ ] interactive 'configuring your urbit' article
+- [ ] Saving stuff to localstorage (bookmarks, filters, etc)
+- [ ] My Urbit sign in
+- [ ] Grants archive / clean up grants
+
+Notes about Blurbs
+- Running urbit: Urbit is intended as a self-soveriegn networked computer, or 'personal server', that holds your data and runs on your behalf. If that sounds daunting to you, don't worry, you can have someone else run it for you. A friend, or a hosting provider such as Tlon Corporation. We would of course encourage you to learn more about how to run and operating your urbit, but if the idea of taking on that responsibility is too much right now, click this link to get seamlessly onboarded to Tlon and have them run your urbit on your behalf (you can always chose to take it and run it yourself later).
+  - Get an urbit id
+  - Run urbit OS
+  - Hosting providers
+  - Common Commands
+  - Resources
+  - Support
+  - Glossary(?)
+
+Running Urbit
+  - get an urbit id
+    - [x] get a groundwire comet
+    - [x] get an azimuth point
+    - [x] master tickets explained
+  - Run urbit OS
+    - Urbit as an overlay OS (run it on MacOS, Linux, or Windows [soon^tm])
+    - locally (what limitations are there)
+    - In a VPS
+    - Using Groundseg (and anchor/startram)
+    - On a Native Planet Box
+  - Hosting providers
+    - [x] Why use a hosting provider?
+    - What are your options? (Tlon)
+    - Shortfalls of hosting providers
+    - Urbit ID's incentives for hosts
+  - Common Commands
+    - Dojo
+      - Get your access code: `+code`
+      - Directly contact another urbit: `|hi`
+      - Add and remove applications: `|install` / `uninstall` / `|nuke`
+      - Check application status: `+vats` / `+trouble`
+      - Handle updates for your urbit: `|bump` / `|ota`
+      - Start and stop applications on your urbit: `|start` / `|suspend` / `|rein` / `|revive`
+      - Check azimuth blockheight: `+azimuth/block`
+      - Re-run check of azimuth state: `-azimuth-load`
+      - Check and reduce memory usage: `|meld` / `|mass` / `|pack`
+      - Create a moon: `|moon`
+      - Check your sponsor: `+sponsor`
+      - Shut down your urbit: `|exit`
+    - Runtime
+      - `./urbit` and `/you-pier/.run`
+      - dock
+      - loom flags
+      - roll / chop
+      - meld / grab / pack
+      - next
+  - Resources
+    - docs.urbit.org user manual / running urbit
+    - docs.urbit.org Hoon school
+    - USTJ
+    - Hoon school recordings
+    - Talks section of urbit.org
+  - Support
+    - Troubleshooting your urbit (get the checklist from ~dinleb-rambep)
+      - meld your ship
+      - update your runtime
+      - get `+vats` output
+      - boot a comet and ask for help
+      - https://martiancomputing.substack.com/p/urbit-troubleshooting-basics <-- Pull content from here
+      - common pitfalls of running urbit OS
+        - double booting
+        - networking
+        - DNS setup
+    - links to common groups within urbit for fixing things
+      - Battery payload
+      - Urbit foundation public
+      - Urbit community
+      - Tlon local
+      - Hooniverse
+    - support@tlon.io / support@urbit.org / 3rd party app warning
+
+Want to get on urbit? There are a few basic options for how to get up and running, so let us know a bit about yourself and we'll point you in the right direction. Are you a developer or do you consider yourself a power user deeply interested in self-sovereignty and personal ownership of your data? In that case, you will find yourself in good company.  Whether you like learning new programming langauges, system architectures, and solving interesting computer science problems, or are just wanting to put in effort and in return regain some of the personal ownership that has been so brutally removed from our current computing experiences, we have a path for you.
+  -- I want to get on urbit, but the words 'command line' or 'server' scare me, help! [route to tlon hosting]
+## Technical User Decision Tree
+- Urbit is under active development. Multiple organizations contribute to core development, and as an effort in rewriting networked computing from the ground up, we are regularly tackling some of the most interesting problems in compute science. If you are a developer, let us know and we'll be sure not to pull any punches in describing the technical nuances of the system.
+- Urbit ID refers to the name or `@p` of your urbit computer. It is both a cryptographic identity and a network address, used for peer-to-peer communication across urbit's end-to-end encrypted network. Various options abound here, but the basic decision to make is between what technology is used as the data source for identity ownership: Azimuth or Groundwire
+  - Azimuth is Urbit's original blockchain-based 'public key infrastructure'. Implemented on the Ethereum blockchain, Azimuth is a 'hierarchical and finite address space' encompassing Urbit IDs from `0` to `4.294.967.296` and providing a structure for 'sane defaults' when it comes to peer discovery, packet routing, and other services. It is also governed by the 'Galactic Senate' which handles protocol upgrades according to the logic of the Ecliptic contract on Ethereum.
+  - Groundwire is an alternative identity layer that utilizes the 'comet' level address space (the 2^128 bit segment of addresses), and uses the Bitcoin blockchain for both it's 'public key infrastructure' and spam resistance (depending on economic cost of identity creation, rather than finite availability). It is free of formal governance and its development is stewarded by the Groundwire Foundation.
+    - __COMING SOON__ [button should be disabled]
+- Urbit OS is the 'virtual machine' that runs as a 'operating function' or 'solid state interpreter', meaning it's current state is a pure function of it's past state plus any new inputs. The entire logic of the OS is approximately 70,000 lines of code, and currently runs as a single-threaded process via a runtime interpreter. This process can be run in any number of ways, but we recommend one of the two following options for self-hosting your urbit: A Cloud VPS, or Groundseg
+  - Running in a cloud VPS is a great option if you are either familiar with running remote servers, or if you would like to learn! If you are able to follow some basic CLI instructions, you'll be able to run your urbit in whatever cloud environment you are most familiar with. Running your urbit from the CLI gives you the most direct control and as a developer it can be helpful in learning the system should you want to start contributing to urbit development.
+  - Alternatively, if you would like a GUI experience and a bit more of a 'hands-off' experience, we would recommend trying 'Groundseg', from Native Planet. In effect, Groundseg is a docker container orchestrator with some Urbit-savvy affordances like background runtime updates and auto-scheduling of maintenance processes. As a bonus, Native Planet sells dedicated devices purpose built to run urbit ships using Groundseg, which comes with seamless DNS support via their Startram services. We recommend Native Planet devices for those looking to run their urbit locally to maintain physical control of their data while not needing to deal with the hassles of home networking.  
+
+## Power User Decision Tree
+- Every system needs early adopters, and in return those early adopters are afforded additional latitude and capabilities. In Urbit's case, we offer you the opportunity to have a computer that is yours. that you can trust. and that is designed to last for centuries. A computer you may be able to pass down to your grandchildren. If you aren't a developer, but you do want to be a part of the process of urbit becoming a forever computer, we still want you and will gladly lend a helping hand to get you on the network.
+- Urbit ID refers to cryptographically secure identity of your urbit computer. It is both a name and a network address, the way that other urbits can directly contract you, without need for a middleman. Various options abound here, but the basic decision to make is between what technology is used as the data source for identity ownership: Azimuth or Groundwire
+  - Azimuth is Urbit's original blockchain-based decentralized ownership ledger and claims Urbit's ~4.3B 'short names'. Implemented on the Ethereum blockchain, Azimuth is a 'hierarchical and finite address space' designed to prevent spam while also providing sane defaults for discovering other nodes in a peer-to-peer distributed network. It is governed by the 'Galactic Senate' which handles protocol upgrades according to the logic of the Ecliptic contract on Ethereum.
+  - Groundwire is an alternative identity layer that utilizes the 'comet'-level address space (the 2^128 bit segment of addresses), and uses the Bitcoin blockchain for both it's ownership ledger and spam resistance (depending on economic cost of identity creation, rather than finite availability). It is free of formal governance and its development is stewarded by the Groundwire Foundation.
+    - __COMING SOON__ [button should be disabled]
+- Urbit OS runs 'on top' of a traditional operating system. The entire logic and all your data lives inside your urbit, while being easily moved between hardware devices as simply as transferring a file. This agnosticism to the underlying hardware is part of the design to make it possible for your computer to last for centuries. But it does need to run _somewhere_; we recommend one of the two following options for self-hosting your urbit: A Cloud VPS, or Groundseg
+  - Running in a cloud VPS (Virtual Private Server) is a great option if you are either familiar with running remote servers, or if you would like to learn! If you are able to follow some basic CLI instructions, this is a great way to learn your way around the process of running an urbit and understanding the nuances of the urbit network.
+  - Alternatively, if you would like a graphical interface and a bit more of a 'hands-off' experience, we would recommend trying 'Groundseg', from Native Planet. Groundseg can run on any old computer you might have lying around and will take care of just about all the nuance of running an urbit, automagically. As a bonus, Native Planet sells dedicated devices purpose built to run urbit ships using Groundseg, which comes with seamless DNS support via their Startram services. We recommend Native Planet devices for those looking to run their urbit locally to maintain physical control of their data while not needing to deal with the hassles of home networking.  
+
+
+# Potential non-blurb articles (or longer form blurbs):
+Bridge walkthrough
+Buying Urbit ID on opensea
+
+# Design Items Needed for the Site:
+- Color Story:
+  - secondary/background (background refers to main color, i.e. lightmode background is #FFFFFF, darkmode background is #000000)
+  - primary/foreground (foreground refers to primary element color, i.e. lightmode foreground would be aapplied to body fonts as #000000)
+  - tertiary/accent (accent color or tertiary color would be used on things like dithered images, frame colors, etc. there may need to be multiple accent colors?)
+  - fonts (maybe variable between headers/subheaders/body fonts)
+  - buttons, each with hover states and active states
+    - primary
+    - secondary
+    - tertiary
+- Typography
+  - wordmark
+  - lock in on fonts (indexing off Awesome feels like the right anchor?)
+- Mobile menu refinements (spacing, fonts, etc) and for footer (socials and email only)
+- Icons (for middle-size footer)
+  - Docs
+  - USTJ (logo exists, just need an icon file of it)
+  - Network Explorer
+  - Bridge
+  - Whitepaper
+  - Email (right now footer has `~` placeholder)
+- Homepage
+  - Hero image with Native Planet device & full visual treatment
+  - Section on "Chosing an Urbit ID" (<-- worth material discussion), to live within the 'getting on the network' experience
+  - *!*Scrolling animations/behaviors/highlighting for 'getting on the network' section*!*
+  - Full images
+  - discuss 'linking strategy' for options to run urbit (i.e. native planet => hardware / software / docs)
+  - mobile designs
+- Overview
+  - sidebar styling
+  - collapsable blurb element design
+    - on desktop
+    - on mobile
+- Ecosystem
+  - Icons for companies
+    - ~tocwex
+    - Urban Tiger
+    - All the others in the appropriate colorway (removing Alphabet & Red Horizon)
+  - press entry styling
+- Blog
+  - desktop index view
+  - tagging strategy/rendering (# of tags? side scrolling?)
+  - visual polish of existing 'recommended reading' sidebar (spacing, fonts, image ratios, corner rounding, etc)
+- New site `favicon.ico`
+
+- Low priority
+  - `/grants` placeholder page 
+  - Ecosystem: Maybe some sort of sidebar? or options for displaying talks/presentations/podcasts/etc.

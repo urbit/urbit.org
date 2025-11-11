@@ -4,69 +4,6 @@
   },
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "ustj.urbit.org"
-        }
-      ],
-      "destination": "https://urbitsystems.tech",
-      "permanent": false
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "ustj.urbit.org"
-        }
-      ],
-      "destination": "https://urbitsystems.tech/:path*",
-      "permanent": false
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "summit.urbit.org"
-        }
-      ],
-      "destination": "https://urbit.org/events/2024-06-17-Lake-Summit",
-      "permanent": false
-    },
-    {
-      "source": "/start",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
-      "source": "/join",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
-      "source": "/onboarding",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
-      "source": "/install",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
-      "source": "/getting-started/:path*",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
-      "source": "/docs/getting-started/:path*",
-      "destination": "/get-started",
-      "permanent": false
-    },
-    {
       "source": "/install/linux-aarch64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/linux-aarch64.tgz",
       "permanent": true
@@ -85,16 +22,12 @@
       "source": "/install/macos-x86_64/latest",
       "destination": "https://github.com/urbit/vere/releases/latest/download/macos-x86_64.tgz",
       "permanent": true
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "source": "/events/2024-10-20-Subassembly-PNW",
-      "destination": "https://urbit.org/events/2024-10-20-subassembly-pnw",
-      "permanent": true
-    },
-    {
-      "source": "/primer",
-      "destination": "/overview/urbit-id",
-      "permanent": true
+      "source": "/umami-script.js",
+      "destination": "https://cloud.umami.is/script.js"
     }
   ]
 }

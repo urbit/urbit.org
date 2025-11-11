@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "mcp__figma-dev-mode-mcp-server__get_design_context",
+      "Bash(curl -s \"http://localhost:3845/assets/b38ea875f0ab60a3d96adea9c5258a1d1fc0952d.png\" -o /Users/tlat/dev/urbit-foundation/urbit.org-reloaded/public/images/urbit-dither-placeholder.png)",
+      "Bash(mv:*)",
+      "Bash(for file in /Users/tlat/dev/urbit-foundation/urbit.org-reloaded/app/content/overview/running-urbit/*.md)",
+      "Bash(head:*)",
+      "Bash(done)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
