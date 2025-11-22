@@ -6,7 +6,7 @@ description = "A peek into the mind behind UrWASM, and the undertaking to make U
 
 [extra]
 ship = "~sarlev-sarsen"
-image = "/images/dozreg-toplud-spotlight.png"
+image = "s3://urbit.orgcontent/Blog/Blog_QA dozreg_Banner_Title Alt.png"
 tags =  ["spotlight", "UrWASM", "subject-knowledge analysis"]
 +++
 
