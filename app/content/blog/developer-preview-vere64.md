@@ -1,6 +1,6 @@
 +++
 title = "Developer Preview: vere64 runtime"
-date = "2025-11-25"
+date = "2025-11-24"
 description = "A preview for developers to experience an unlimited loom using the vere64 runtime"
 # aliases = []
 
@@ -13,15 +13,16 @@ image = "https://urbit-network-explorer.s3.us-east-2.amazonaws.com/2025.10.9..3.
 # imageDark =
 # imageCardDark =
 # imageIndexDark = 
+tags =  ["developer preview", "vere64", "runtime"]
 +++
 
 Urbit has long been practically and conceptually constrained in its application by the limitation in the ["loom"](https://docs.urbit.org/build-on-urbit/core-academy/ca06#the-loom) size. Initially the Vere runtime could provide only a mere 2GB in available memory, but over the years that has been increased to 4GB, 8GB, and most recently 16GB with the recent [Vere 4.0 release](https://github.com/urbit/vere/releases/tag/vere-v4.0). These improvements have come from various projects, such as pointer compression in the allocator making 16GB loom possible in Vere 4.0, or [demand paging](https://docs.urbit.org/build-on-urbit/core-academy/ca06#demand-paging) which makes it possible to not require the entire loom to live in RAM, making it viable to run a larger loom on reasonable underlying hardware.
 
-This most recent upgrade, as noted by ~dozreg-toplud in last month's [Contributor Spotlight](https://urbit.org/blog/contributor-spotlight-dozreg-toplud), "To compare, Google Drive’s free plan [gives you] 15 GB, so you already have quite a lot of space to share things." But for many developers, this still feels like a 'glass ceiling' to what you can really put inside your urbit. To that end, we wanted to provide a 'Developer Preview' to `vere64`, which expands the maximum loom from 16GB, to many *exabytes*. While _technically_ still a limitation, in practice this vastly outstrips the underlying hardware on which your urbit might be running, thus crushing the conceptual contraints of feeling like "you can't put lots of stuff in your urbit."
+This most recent upgrade to a 16GB loom, as noted by `~dozreg-toplud` in last month's [Contributor Spotlight](https://urbit.org/blog/contributor-spotlight-dozreg-toplud), "To compare, Google Drive’s free plan [gives you] 15 GB, so you already have quite a lot of space to share things." But for many developers, this still feels like a 'glass ceiling' to what you can really put inside your urbit. To that end, we wanted to provide a 'Developer Preview' to `vere64`, which expands the maximum loom from 16GB, to many *terabytes*. While _technically_ still a limitation, in practice this vastly outstrips the underlying hardware on which your urbit might be running, thus crushing the conceptual contraints of feeling like "you can't put lots of stuff in your urbit."
 
 ## Getting started with the Developer Preview
 
-`vere64` works and can run current versions of arvo (TK, 410k? 409K?) on the Urbit network, but is very much intended as an experimental device for developers and not a way to run important ships. As such, in order to experiment with it, you will need to build from source, available in the `urbit/vere` repository:
+`vere64` works and can run current versions of Arvo on the Urbit network, but is very much intended as an experimental device for developers and not a way to run important ships. As such, in order to experiment with it, you will need to build from source, available in the `urbit/vere` repository:
 
 ```
 git clone https://github.com/urbit/vere && cd vere
