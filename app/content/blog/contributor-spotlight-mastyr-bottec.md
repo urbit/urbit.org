@@ -7,9 +7,9 @@ description = "A conversation with runtime developer ~mastyr-bottec his work to 
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "https://urbit-network-explorer.s3.us-east-2.amazonaws.com/2025.10.9..3.34.2..547a.e147.ae14.7ae1-d9ea8b61-008b-4abb-affb-6e82045dcbf2.png"
-# imageCard =
-# imageIndex =
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
+# imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark =

@@ -7,9 +7,9 @@ description = "A preview for developers to experience an unlimited loom using th
 [extra]
 # author = ""
 ship = "~mastyr-bottec"
-image = "https://urbit-network-explorer.s3.us-east-2.amazonaws.com/2025.10.9..3.34.2..547a.e147.ae14.7ae1-d9ea8b61-008b-4abb-affb-6e82045dcbf2.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Vere64+DP_Social.png"
 # imageCard =
-# imageIndex = 
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Vere64+DP_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark = 

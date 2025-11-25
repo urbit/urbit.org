@@ -21,12 +21,12 @@ export function RecommendedReading({ posts }) {
           key={post.slug}
           className="block group"
         >
-          {post.extra?.image && (
-            <div className="mb-3 rounded-lg overflow-y-auto w-full aspect-[16/9] bg-gray-f5">
+          {(post.extra?.imageCard || post.extra?.image) && (
+            <div className="mb-3 rounded-lg overflow-hidden w-full bg-gray-f5">
               <img
-                src={post.extra.image}
+                src={post.extra?.imageCard || post.extra.image}
                 alt={post.title}
-                className="w-full h-full object-cover transition-opacity group-hover:opacity-80"
+                className="w-full h-auto max-h-[200px] object-cover transition-opacity group-hover:opacity-80"
                 loading="lazy"
               />
             </div>

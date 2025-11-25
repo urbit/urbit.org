@@ -8,6 +8,29 @@ import Link from "next/link";
 
 import { formatDate } from "../lib/utils";
 
+export async function generateMetadata() {
+  const blogConfig = await getMarkdownContent("blog/config.md");
+
+  const metadata = {
+    title: "Blog • Urbit",
+    description: "Latest updates, developer spotlights, and technical deep dives from the Urbit community",
+  };
+
+  if (blogConfig.frontMatter?.image) {
+    metadata.openGraph = {
+      images: [
+        {
+          url: blogConfig.frontMatter.image,
+          width: 1200,
+          height: 630,
+        },
+      ]
+    };
+  }
+
+  return metadata;
+}
+
 export default async function BlogHome() {
   // Load blog config for sidebar position
   const blogConfig = await getMarkdownContent("blog/config.md");
@@ -127,9 +150,9 @@ export default async function BlogHome() {
                       {/*   <div>{extra.ship}</div> */}
                       {/* </div> */}
                       {/* <div className="text-gray-87 mb-2">{formatDate(date)}</div> */}
-                      {extra?.image && (
+                      {(extra?.imageIndex || extra?.image) && (
                         <div className="xl:w-auto w-full relative mb-2 md:mb-0">
-                          <img className="aspect-[21/9] object-cover w-full h-36 xl:w-auto xl:h-full" loading="lazy" src={extra.image} alt={title} />
+                          <img className="w-full h-auto max-h-[260px] md:max-h-[400px] object-cover" loading="lazy" src={extra.imageIndex || extra.image} alt={title} />
                         </div>
                       )}
                       {extra?.tags && extra.tags.length > 0 && (
