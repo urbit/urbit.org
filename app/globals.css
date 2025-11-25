@@ -264,7 +264,7 @@ body {
     }
 
     pre {
-      @apply bg-gray-50 !text-large;
+      @apply bg-gray-50 !text-base md:!text-large overflow-x-auto;
     }
 
     /* Adjacent sibling selectors for proper spacing */

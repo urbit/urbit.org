@@ -23,11 +23,13 @@ export async function generateMetadata({ params }, parent) {
   };
 
   // Only add openGraph image if it exists
-  if (postData.frontMatter?.extra?.image) {
+  const ogImage = postData.frontMatter?.extra?.imageCard || postData.frontMatter?.extra?.image;
+
+  if (ogImage) {
     metadata.openGraph = {
       images: [
         {
-          url: postData.frontMatter.extra.image,
+          url: ogImage,
           width: 1200,
           height: 630,
         },
