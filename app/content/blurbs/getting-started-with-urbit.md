@@ -19,6 +19,6 @@ description = " "
 wip = false
 +++
 
-Urbit starts at it's core by giving you control over your digital identity with [Urbit ID](/overview/urbit-explained/urbit-id).
+Urbit starts at its core by giving you control over your digital identity with [Urbit ID](/overview/urbit-explained/urbit-id).
 
 After taking self-sovereign control over your identity, you can then truly control your data and compute with [Urbit OS](/overview/urbit-explained/urbit-os).
