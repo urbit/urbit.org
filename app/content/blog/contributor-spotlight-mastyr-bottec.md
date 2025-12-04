@@ -1,7 +1,7 @@
 +++
 title = "Contributor Spotlight: ~mastyr-bottec"
 date = "2025-11-25"
-description = "A conversation with runtime developer ~mastyr-bottec his work to make urbit store large amounts of data"
+description = "A conversation with runtime developer ~mastyr-bottec on his work to make Urbit store large amounts of data"
 # aliases = []
 
 [extra]
