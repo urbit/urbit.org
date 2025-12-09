@@ -1,15 +1,15 @@
 +++
 title = "Building 'Beyond Beginner Guitar' on Urbit"
-date = "2025-12-07"
+date = "2025-12-09"
 description = "~nordus-mocwyl walks through what it took to build a guitar course and member community on Urbit"
 # aliases = []
 
 [extra]
 # author = ""
 ship = "~nordus-mocwyl"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Banner.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark =
@@ -33,7 +33,7 @@ As an artist and creator, drawing people towards my work is a critical effort. W
 
 These videos are the main way students discover the guitar course. From the descriptions of my videos, and often as an included call to action in the video itself, I send people to a page hosted by my urbit where I can collect their emails. I also use this link to do a small bit of metric-tracking, to understand which videos are attracting new students to sign-up.
 
-Once the email is collected, I use it to communicate with them. This external dependency on email is a necessary compromise, as not everyone can be assumed to have an Urbit in our current world. A second compromise involves using Google forms in a follow-up flow to learn more about students and determine if they are a good fit for the course. While this form process could easily be done in an Urbit-native manner in the near future, for now, if they are a good fit, I send them a link which brings them back to a pay page served by my Urbit.
+Once the email is collected, I use it to communicate with them. This external dependency on email is a necessary compromise, as not everyone can be assumed to have an urbit in our current world. A second compromise involves using Google forms in a follow-up flow to learn more about students and determine if they are a good fit for the course. While this form process could easily be done in an Urbit-native manner in the near future, for now, if they are a good fit, I send them a link which brings them back to a pay page served by my urbit.
 
 On the pay page, there are instructions for manual crypto payments:
 1. They pay my ethereum account the proper amount
@@ -95,7 +95,7 @@ to regain momentum.
 [Message me]
 ```
 
-For ~sampel-palnet, the recommendation of her friends is enough. She clicks `Get started`.
+For `~sampel-palnet`, the recommendation of her friends is enough. She clicks `Get started`.
 ```
 *Beyond Beginner Guitar* is 179.99 USDC.
 
@@ -106,7 +106,7 @@ _All of it gets converted to bitcoin anyways :)_
 [Purchase]
 ```
 
-~sampel-palnet clicks the `[Purchase]` button,
+`~sampel-palnet` clicks the `[Purchase]` button,
 ```
 Please confirm: Do you want to send 179.99 USDC to ~nordus-mocwyl?
 
@@ -198,9 +198,9 @@ A couple of steps could be taken now to improve the course, particularly in area
 
 ## MetaMask login
 
-In terms of making the courseware more 'secure', or otherwise tightening access controls, We could use Metamask to verify ownership of Urbit-ID NFTs. Successful checks will allow genuine logins of Urbit ships. And since the course is served from my Urbit it will work for both L1 and L2 planets, while allowing users to not have a running ship (which would be necessary for something like [eAuth](https://docs.urbit.org/build-on-urbit/core-academy/ca09#eauth).
+In terms of making the courseware more 'secure', or otherwise tightening access controls, We could use Metamask to verify ownership of Urbit ID NFTs. Successful checks will allow genuine logins of Urbit ships. And since the course is served from my urbit it will work for both L1 and L2 planets, while allowing users to not have a running ship (which would be necessary for something like [eAuth](https://docs.urbit.org/build-on-urbit/core-academy/ca09#eauth).
 
-This is a great fully crypto option. However it has limitations. First of all, only those familiar with crypto could use it and it doesn't do anything to solve the 'communication' issue. Yes, it gives me an identity to allow access and that identity could be more directly owned by the user, but it still doesn't afford me a way to 'push' communications. This means email would still be used, because the use of MetaMask login comes with the expectation that most Urbit ID NFT owners don't have running Urbit ships (which may or may not be an accurate assumption).
+This is a great fully crypto option. However it has limitations. First of all, only those familiar with crypto could use it and it doesn't do anything to solve the 'communication' issue. Yes, it gives me an identity to allow access and that identity could be more directly owned by the user, but it still doesn't afford me a way to 'push' communications. This means email would still be used, because the use of MetaMask login comes with the expectation that most Urbit ID NFT owners don't have running urbit ships (which may or may not be an accurate assumption).
 
 It also would be dependent on either the hawk-499 upgrade, or building my own more bespoke granular access controls. In exchange, it does enable much greater opportunity with regards to automating actions around payments, though, without needing to integrate with a MEGACORP API such as Stripe, which could be liable to change (or charge me) at any time.
 
@@ -210,7 +210,7 @@ This would add actual security by combining guest comets with email for a one-cl
 
 For a bit of technical background, when someone visits an Urbit served site, `%eyre` sets a cookie and presents the browser session as a comet. But this _guest_ comet has your `@p` tacked onto the end. ex: `~tillus-nodhus-nidsud-pontug--rammeb-sicpur-nordus-mocwyl`
 
-In effect, it's a fingerprint for that specific browser session and lasts for seven days. As far as the Urbit is concerned, this means the user will retain the same guest comet identity for seven days, provided they do not switch browsers or devices.
+In effect, it's a fingerprint for that specific browser session and lasts for seven days. As far as the urbit is concerned, this means the user will retain the same guest comet identity for seven days, provided they do not switch browsers or devices.
 
 The process could look something like this:
 - The student purchases the course using Stripe and provides their email.
@@ -228,7 +228,7 @@ Another option I can pursue today addresses the ubiquity problem by onboarding m
 
 Stripe payments could still be used, or crypto payments could be integrated more deeply. The actual product, however, is a hosted ship. I would essentially act as a small hosting provider for this specific service—the guitar course.
 
-Instead of purchasing access to a secret URL, purchasing the guitar course grants access to a one of these Urbit ships that has the guitar course pre-installed. The fact that an Urbit is a full computer is incidental to the student.
+Instead of purchasing access to a secret URL, purchasing the guitar course grants access to a one of these urbit ships that has the guitar course pre-installed. The fact that an urbit is a full computer is incidental to the student.
 
 I could offer either a moon for users not yet ready for full self-sovereignty, or sell them a planet from my star. I could then branch between the two options based on whether they used Stripe or a crypto payment method. Even for moon-based users, I could assign them a moon connected to an equivalent planet earmarked from my star's children. For example, `~tortus-sopbel-dozzod-forryx` could be assigned to a credit card user; when they are ready to upgrade, `~forryx` could issue `~tortus-sopbel` to their self-custody wallet. Crucially, all coordination and communication for this process could be handled on Urbit via the moon, eliminating the dependency on email.
 
