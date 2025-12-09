@@ -32,7 +32,7 @@ But okay, I do have a straight answer to your first question, How was I drawn in
 
 **~sarlev:** And so you got hooked. What exactly was the hook of Urbit that got you?
 
-**~mastyr-bottec:** I like the holistic approach it takes to the whole problem of modern computation. The analysis of that very problem, I thought, was very convincing, and the solution also pretty elegantly designed. I mean, I think I'm like every other Urbit user in this regard: I want to see more people, including myself, be able to actually own and control more of what they do with their computer, if not their whole digital lives. But, we're a long way off. I'm sort of proof in the pudding here. I run an Urbit but it's kind of a pain. I definitely don't use it for anything important, except for chatting about working on Urbit I guess (some say this is important).
+**~mastyr-bottec:** I like the holistic approach it takes to the whole problem of modern computation. The analysis of that very problem, I thought, was very convincing, and the solution also pretty elegantly designed. I mean, I think I'm like every other Urbit user in this regard: I want to see more people, including myself, be able to actually own and control more of what they do with their computer, if not their whole digital lives. But, we're a long way off. I'm sort of proof in the pudding here. I run an urbit but it's kind of a pain. I definitely don't use it for anything important, except for chatting about working on Urbit I guess (some say this is important).
 
 **~sarlev:** What do you think is the current hurdle for people to use Urbit?
 
