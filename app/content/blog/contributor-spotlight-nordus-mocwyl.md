@@ -82,23 +82,10 @@ Um as but like does have um so right now like I can't you know I couldn't serve 
    
  
 
-### 00:24:56
-
-   
-**~nordus-mocwyl:** Um, whichever thing kind of works. And like that's that's how I want it to operate. Like I I don't want a middleman, anybody like searching the pixels and all this. And it's like not even from a p privacy thing, just like from a sanity like direct connection thing like that. I want to be in a computer world that acts like actual reality, not this like yeah really unfortunate thing that we've like set up in. So yeah, like we gota we have to rewrite it so that we could reclaim that like serving part of our computers.  
-**\~sarlev:** Yeah, it's interesting. It's like it it feels like that once you know that this exists, it's almost like, you know, urban as an infohazard that like it starts to propagate back into the rest of your computing experience. Uh, and so like, you know, I'm I'm curious how this experience or realization has changed your relationship with computers, like since you found out about Urban, like you you came as a musician, you're like, I want to be  
-   
- 
-
-### 00:25:49
-
-   
-**~nordus-mocwyl:** Okay. Yeah.  
-**\~sarlev:** a bit more independent, and then you kind of like learned all of the technical underpinnings for like why that isn't necessarily the case, but like how has that kind of propagated back into the rest of your computing experience  
-**~nordus-mocwyl:** Yeah.  
-**\~sarlev:** so far?  
-**~nordus-mocwyl:** You know, it's f like I guess I'll have to like go a little bit away from like the whole server part like the just serving files theme that I do want to hit on. Like the biggest thing that like interacting with Urbbit changed my computing is just like um like I just get what the I just get what the zeros and ones are about like um learning hoon and then learning knock just like helped me understand assembly like it helped me understand like what computation is like here's what compute is and that's something I just never understood um and that means like now I understand backend stuff and like knowing that and knowing like like having like a you know dec like you know like even like a passing understanding of knock like gives you the sensation that you could understand you could understand it all the way down and like for the particular part of the spectrum that I inhabit like that's really satisfying.  
-   
+**~nordus-mocwyl:** Yeah. 
+**\~sarlev:** so far? 
+**~nordus-mocwyl:** You know, it's f I guess I'll have to go a little bit away from the whole server part the just serving files theme that I do want to hit on. the biggest thing that interacting with Urbbit changed my computing is just um I just get what the I just get what the zeros and ones are about um learning hoon and then learning knock just helped me understand assembly it helped me understand what computation is here's what compute is and that's something I just never understood um and that means now I understand backend stuff and knowing that and knowing  having a you know dec you know even a passing understanding of knock gives you the sensation that you could understand you could understand it all the way down and for the particular part of the spectrum that I inhabit that's really satisfying. 
+  
  
 
 ### 00:27:22
