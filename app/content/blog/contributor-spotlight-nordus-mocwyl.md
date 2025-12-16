@@ -7,9 +7,9 @@ description = "A conversation with ~nordus-mocwyl on independent music, Urbit, a
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-# imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Banner.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+nordus-mocwyl_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+nordus-mocwyl_Social16_9.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+nordus-mocwyl_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark =
