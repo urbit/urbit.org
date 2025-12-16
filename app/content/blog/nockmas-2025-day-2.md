@@ -1,7 +1,7 @@
 +++
 title = "Nockmas 2025: Day 2"
 date = "2025-12-09"
-description = "12 days of Nockmas: Address, opcode 1"
+description = "12 days of Nockmas: Constant, opcode 1"
 # aliases = []
 
 [extra]
