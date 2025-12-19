@@ -1,6 +1,6 @@
 +++
 title = "Nockmas 2025: Day 1"
-date = "2025-12-09"
+date = "2025-12-25"
 description = "12 days of Nockmas: Address, opcode 0"
 # aliases = []
 
@@ -16,11 +16,13 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 tags =  ["nock", "nockmas", ""]
 +++
 
+For our first full day of Nockmas, we will look at Nock's first opcode. If you have a running urbit, you can experiment with this from the Arvo command line, or 'dojo'. No running ship yet? [Get started here](https://urbit.org/overview/running-urbit). Of course, you can just follow along in this article, or even sketch out the basic Nock formulas and tree structures on a piece of paper as you go.
+
 # Opcode 0: Address
 
 ## Syntax
 
-Opcode 0 implements the idiomatic `/` fas slot operator, which retrieves a noun at a specified address within the subject.
+Opcode 0 implements the idiomatic `/` "fas" slot operator, which retrieves a noun at a specified address within the subject.
 
 ```nock
 *[a 0 b]            /[b a]
@@ -43,32 +45,7 @@ This leads to a convenient addressing scheme for nouns, for which each noun and 
 /a                  /a
 ```
 
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B
-    A(1) --> C
-    B(2) --> D
-    B(2) --> E
-    C(3) --> F
-    C(3) --> G
-    D(4) --> H
-    D(4) --> I
-    E(5) --> J
-    E(5) --> K
-    F(6) --> L
-    F(6) --> M
-    G(7) --> N
-    G(7) --> O
-    H(8)
-    I(9)
-    J(10)
-    K(11)
-    L(12)
-    M(13)
-    N(14)
-    O(15)
-```
+![Example Tree #1 diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-1.png)
 
 That is, the left-hand daughter of a cell is addressed by doubling its mother's address, while the right-hand daughter is addressed by doubling its mother's address and adding one. The root of the tree is always at address 1.
 
@@ -76,34 +53,11 @@ Of course, that's just an addressing scheme:  it tells you how a noun is laid ou
 
 ### `[[41 42] [43 44]]`
 
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B
-    A(1) --> C
-    B(2) --> D
-    B(2) --> E
-    C(3) --> F
-    C(3) --> G
-    D{{41}}
-    E{{42}}
-    F{{43}}
-    G{{44}}
-```
+![Example Tree #2 diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-2.png)
 
 ### `[1 [2 3]]`
 
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B
-    A(1) --> C
-    B{{1}}
-    C(3) --> D
-    C(3) --> E
-    D{{2}}
-    E{{3}}
-```
+![Example Tree #3 diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-3.png)
 
 ```nock
 [a b c]             [a [b c]]
@@ -119,17 +73,7 @@ Thus, `[1 [2 3]]` can be written equivalently as `[1 2 3]`.
 
 ### `[[1 2] 3]`
 
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B
-    A(1) --> C
-    B(2) --> D
-    B(2) --> E
-    C{{3}}
-    D{{1}}
-    E{{2}}
-```
+![Example Tree #4 diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-4.png)
 
 ## Syntax (Redux)
 
@@ -156,52 +100,23 @@ Opcode 0 crashes if the address doesn't exist (e.g., addressing into an atom).  
 
 ### Binary
 
-Addressing becomes particularly easy to read in binary form, in which a 0 bit corresponds to a left branch and a 1 bit corresponds to a right branch.  We ignore the first bit ($1$, the root) and read the path in binary:
+Addressing becomes particularly easy to read in binary form, in which a 0 bit corresponds to a left branch and a 1 bit corresponds to a right branch.  We ignore the first bit (`1`, the root) and read the path in binary:
 
-* $7_{10} = 111_2 \rightarrow \text{RRR}$.
-* $5_{10} = 101_2 \rightarrow \text{RLR}$.
-* $4_{10} = 100_2 \rightarrow \text{RLL}$.
+![tree addressing diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-addressing.png)
 
 You will notice other patterns, e.g., that the rightmost child at a particular level is equal to a power of 2 minus 1.
 
 ## Examples
+Imagine you have the following noun in your subject, represented here as a binary tree:
+![Example Tree #5 diagram](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day%201/nockmas-day-1-tree-5.png)
 
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B
-    A(1) --> C
-    B(2) --> D{{41}}
-    B(2) --> E
-    C(3) --> G{{51}}
-    C(3) --> H{{52}}
-    E(5) --> J{{42}}
-    E(5) --> K
-    K(11) --> V
-    K(11) --> W
-    V(22) --> VV{{43}}
-    V(22) --> VW{{44}}
-    W(23) --> WL
-    W(24) --> WR
-    WL(46) --> WLL{{45}}
-    WL(46) --> WLR{{46}}
-    WR(47) --> WRL
-    WR(47) --> WRR
-    WRL(94) --> WRLL{{47}}
-    WRL(94) --> WRLR{{48}}
-    WRR(95) --> WRRL{{49}}
-    WRR(95) --> WRRR{{50}}
-```
-
+Or as a Nock formula:
 ```nock
 :subject [[[41 42 [43 44] [45 46] [47 48] [49 50]]] [51 52]]
 ```
 
-**Output:**
-```
-Subject set to: [[41 42 [43 44] [45 46] [47 48] 49 50] 51 52]
-```
-
+If you had this as your subject in your dojo, and ran Nock 0: 
+**Input:**
 ```nock
 [0 2]
 ```
@@ -211,6 +126,7 @@ Subject set to: [[41 42 [43 44] [45 46] [47 48] 49 50] 51 52]
 [41 42 [43 44] [45 46] [47 48] 49 50]
 ```
 
+**Input:**
 ```nock
 [0 3]
 ```
@@ -220,99 +136,6 @@ Subject set to: [[41 42 [43 44] [45 46] [47 48] 49 50] 51 52]
 [51 52]
 ```
 
-```nock
-[0 11]
-```
+Join us tomorrow when we cover Nock 1, Constant.
 
-**Output:**
-```
-[[43 44] [45 46] [47 48] 49 50]
-```
-
-```nock
-[0 47]
-```
-
-**Output:**
-```
-[[47 48] 49 50]
-```
-
-```nock
-[0 94]
-```
-
-**Output:**
-```
-[47 48]
-```
-
-```nock
-[0 95]
-```
-
-**Output:**
-```
-[49 50]
-```
-
-```mermaid
-%%{init: {'theme':'forest', 'themeVariables': {'defaultLinkColor':'#F5FFF5'}}}%%
-flowchart TD
-    A(1) --> B{{40}}
-    A(1) --> C
-    C(3) --> D{{41}}
-    C(3) --> E
-    E(7) --> F{{42}}
-    E(7) --> G
-    G(15) --> H{{43}}
-    G(15) --> I
-    I(31) --> J{{44}}
-    I(31) --> K
-    K(63) --> L{{45}}
-    K(63) --> M
-    M(127) --> N{{46}}
-    M(127) --> O
-    O(255) --> P{{47}}
-    O(255) --> Q
-    Q(511) --> R{{48}}
-    Q(511) --> S
-    S(1023) --> T{{49}}
-    S(1023) --> U{{50}}
-```
-
-```nock
-:subject [40 41 42 43 44 45 46 47 48 49 50]
-```
-
-**Output:**
-```
-Subject set to: [40 41 42 43 44 45 46 47 48 49 50]
-```
-
-```nock
-[0 2]
-```
-
-**Output:**
-```
-40
-```
-
-```nock
-[0 6]
-```
-
-**Output:**
-```
-41
-```
-
-```nock
-[0 2047]
-```
-
-**Output:**
-```
-50
-```
+> *12 Days of Nockmas is an exploration of Nock, Urbit's instruction set architecture. This ISA is used by both Urbit and Nockchain, [has interpreters written in many languages](https://docs.urbit.org/nock/implementations), with production versions in both C and Rust. The content of this series is drawn from the [Nock language site](https://nock.is/). Visit the site for interactive code examples and more Nock related content.*
