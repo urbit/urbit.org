@@ -17,7 +17,7 @@ tags =  ["nock", "nockmas", "autocons"]
 +++
 
 
-Welcome to Nockmas! Over the next 12 days, we'll explore the beautiful simplicity of Nock, Urbit's foundation layer, and it's 12 opcodes. Each day will cover an opcode, `0` through `11`. 
+Welcome to Nockmas! Over the next 12 days, we'll explore the beautiful simplicity of Nock, Urbit's foundation layer, and its 12 opcodes. Each day will cover an opcode, `0` through `11`. 
 
 We begin with autocons—the most fundamental rule of Nock evaluation:
 
@@ -70,7 +70,7 @@ We can build three-element lists the same way:
 [1 2 3]
 ```
 
-Remember that `[a b c]` is shorthand for `[a [b c]]`, so this is really `[[1 1] [[1 2] [1 3]]]`. Autocons applies recursively to build the nested structure.
+Remember that—because [everything in nock is a noun](https://nock.is/content/examples/nouns-and-data.html), where a noun is an atom, `@`, or a cell,`[@ @]`— the forumla `[a b c]` is shorthand for the more complete syntax, `[a [b c]]`, so this is really `[[1 1] [[1 2] [1 3]]]`. Autocons applies recursively to build the nested structure.
 
 ## Why This Matters
 
