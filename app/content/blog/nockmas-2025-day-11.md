@@ -74,6 +74,6 @@ And then make an edit to the subject:
 
 For a more in depth discussion of opcode 10, read [“Deriving Nock Opcodes 6–11”, section “Explaining Opcode 10”](https://urbitsystems.tech/ustj/v02-i01/mss1.html#x1-180007) by `~niblyx-malnus` in [USTJ](https://urbitsystems.tech) volume 2, issue 1.
 
-And of course, you are invited to join us tomorrow where we will cover our last opcode Nock 11, Hint.
+And of course, you are invited to join us tomorrow where we will cover our last opcode: Nock 11, Hint.
 
 > *12 Days of Nockmas is an exploration of Nock, Urbit's instruction set architecture. This ISA is used by both Urbit and Nockchain, [has interpreters written in many languages](https://docs.urbit.org/nock/implementations), with production versions in both C and Rust. The content of this series is drawn from the [Nock language site](https://nock.is/). Visit the site for interactive code examples and more Nock related content.*
