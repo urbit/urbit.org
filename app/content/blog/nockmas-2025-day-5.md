@@ -1,7 +1,7 @@
 +++
 title = "Nockmas 2025: Day 5"
-date = "2025-12-09"
-description = "12 days of Nockmas: Incement, opcode 4"
+date = "2025-12-29"
+description = "12 days of Nockmas: Increment, opcode 4"
 # aliases = []
 
 [extra]
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+On this fifth day of Nockmas, we explore opcode 4, Increment, which is the second of our axiomatic Nock instructions.  
 
 # Opcode 4: Increment
 
@@ -40,8 +42,9 @@ Opcode 4 adds 1 to the product of formula `b`. This is Nock's only arithmetic pr
 
 We can increment atoms, but not cells (which makes sense).  Every natural number (atom) has a successor, so there is no possible crash here (as long as our interpreter actually supports arbitrarily sized integers).
 
-Since increment is the only arithmetic operation, other arithmetic operations must be built from it.  For instance, decrement requires counting up from 0, and addition requires repeated incrementing.  Thus all arithmetic in Nock is theoretically $O(n)$ or worse, where n is the size of the numbers involved.  In practice, interpreters “jet” (accelerate) known arithmetic patterns (see [opcode 11](opcode-11.ipynb) and [jet-accelerated code](../hints-jetting/index.md)).
+Since increment is the only arithmetic operation, other arithmetic operations must be built from it.  For instance, decrement requires counting up from 0, and addition requires repeated incrementing.  Thus all arithmetic in Nock is theoretically ***O(n)*** or worse, where ***n*** is the size of the numbers involved.  In practice, interpreters “jet” (accelerate) known arithmetic patterns (see [opcode 11](https://nock.is/content/specification/opcode-11.html) and [jet-accelerated code](https://nock.is/content/hints-jetting/index.html)).
 
+We'll continue with our favorite basic subject:
 ```nock
 :subject 42
 ```
@@ -51,6 +54,7 @@ Since increment is the only arithmetic operation, other arithmetic operations mu
 Subject set to: 42
 ```
 
+And call Nock 4 on that subject:
 ```nock
 [4 0 1]
 ```
@@ -60,6 +64,7 @@ Subject set to: 42
 43
 ```
 
+This of course can be called in a nested fashion:
 ```nock
 [4 4 4 4 4 4 4 4 4 0 1]
 ```
@@ -69,6 +74,7 @@ Subject set to: 42
 51
 ```
 
+Or against the result of some other Nock formula:
 ```nock
 [4 1 42]
 ```
@@ -84,9 +90,9 @@ Expect failure on incrementing a cell:
 [4 1 [42 43]]
 ```
 
-Atoms are formally unbounded in size, so incrementing the largest possible atom is not a problem in Nock itself.  However, practical interpreters may have limits on the size of atoms they can represent.
+As a note on Nock specification versus implementation, atoms are formally unbounded in size, so incrementing the largest possible atom is not a problem in Nock itself.  However, practical interpreters may have limits on the size of atoms they can represent. This kind of design decision is part of what makes it possible for Nock-based computation to expand beyond current technical implementations.
 
-In this interpreter, which is written in Python, there are only practical limits (the size of RAM) to integers and thus to atom size.
+For exmaple, in the interpreter on [nock.is](https://nock.is), which is written in Python, there are only practical limits (the size of RAM) to integers and thus to atom size. Meaning you might find an atom size limit on a formula such as: 
 
 ```nock
 [4 1 999999999999999999999999999999999999999999999999999999999]
@@ -96,3 +102,7 @@ In this interpreter, which is written in Python, there are only practical limits
 ```
 1000000000000000000000000000000000000000000000000000000000
 ```
+
+Join us tomorrow when we cover Nock 5, Equality Check.
+
+> *12 Days of Nockmas is an exploration of Nock, Urbit's instruction set architecture. This ISA is used by both Urbit and Nockchain, [has interpreters written in many languages](https://docs.urbit.org/nock/implementations), with production versions in both C and Rust. The content of this series is drawn from the [Nock language site](https://nock.is/). Visit the site for interactive code examples and more Nock related content.*
