@@ -59,7 +59,7 @@ Then take the following simple formula to compute a constant function that alway
 100
 ```
 
-This formula acts as a dynamic formula selection, which sets the subject to 5 and then calculates its increment using opcode 4 (which we will discuss tomorrow):
+This formula acts as a dynamic formula selection, which sets the subject to 5 and then calculates its increment using opcode 4 (which we will discuss in two days):
 
 ```nock
 :subject [5 [4 0 1]]
