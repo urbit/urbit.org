@@ -1,6 +1,6 @@
 +++
 title = "Nockmas 2025: Day 7"
-date = "2025-12-09"
+date = "2025-12-31"
 description = "12 days of Nockmas: Conditional, opcode 6"
 # aliases = []
 
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+On this seventh day of Nockmas, we investigate opcode 6, Conditional. The first of our composite opcodes. The composite opcodes combine multiple operations into higher-level constructs. While not strictly necessary for a complete instruction set, they offer the necessary affordances for practical programming in Nock. 
 
 # Opcode 6: Conditional
 
@@ -42,6 +44,7 @@ In fact, much of the weirdness of the macro expression can be explained by its p
 
 This cleverly selects `c` (at address 2) for true, `d` (at address 3) for false.  (It does not pass through directly to avoid other results selecting other possible slots.)
 
+You'll be familiar now with our favorite subject:
 ```nock
 :subject 42
 ```
@@ -81,3 +84,9 @@ Subject set to: 0
 ```
 1
 ```
+
+For more on opcode 6 as a composite opcode used to build "if-then-else", check out the [Urbit docs](https://docs.urbit.org/nock/specification#id-6-if-then-else).
+
+Join us tomorrow when we cover Nock 7, Compose.
+
+> *12 Days of Nockmas is an exploration of Nock, Urbit's instruction set architecture. This ISA is used by both Urbit and Nockchain, [has interpreters written in many languages](https://docs.urbit.org/nock/implementations), with production versions in both C and Rust. The content of this series is drawn from the [Nock language site](https://nock.is/). Visit the site for interactive code examples and more Nock related content.*
