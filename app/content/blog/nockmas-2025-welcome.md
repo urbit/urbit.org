@@ -16,6 +16,7 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/nockmas-day-mi
 tags =  ["nock", "nockmas", "autocons"]
 +++
 
+![nockmas day minus 1 autocons image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/nockmas-day-minus-1-autocons.png)
 
 Welcome to Nockmas! Over the next 12 days, we'll explore the beautiful simplicity of Nock, Urbit's foundation layer, and its 12 opcodes. Each day will cover an opcode, `0` through `11`. 
 
