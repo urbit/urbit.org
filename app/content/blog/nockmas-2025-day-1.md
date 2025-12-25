@@ -16,6 +16,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-
 tags =  ["nock", "nockmas", ""]
 +++
 
+![nockmas day 1 tree addressing image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-day-1-tree-addressing-Social.png)
+
 For our first full day of Nockmas, we will look at Nock's first opcode. If you have a running urbit, you can experiment with this from the Arvo command line, or 'dojo'. No running ship yet? [Get started here](https://urbit.org/overview/running-urbit). Of course, you can just follow along in this article, or even sketch out the basic Nock formulas and tree structures on a piece of paper as you go.
 
 # Opcode 0: Address
