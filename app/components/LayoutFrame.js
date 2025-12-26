@@ -208,10 +208,10 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
           {/* Main Content Area */}
           <div className={`relative z-10 flex-1 px-4 ${hero ? 'md:-mt-[300px]' : ''}`}>
             {/* Main content - centered, with conditional padding for sidebar safe zone */}
-            <main className={`max-w-[1200px] mx-auto pb-[55px] pt-[55px] md:pt-0 md:px-4 ${sidebar
+            <main className={`max-w-[1200px] md:max-w-[768px] lg:max-w-[900px] xl:max-w-[1288px] mx-auto pb-[55px] pt-[55px] md:pt-0 md:px-4 ${sidebar
               ? sidebarPosition === 'left'
-                ? 'md:pl-[305px] lg:pl-[395px] xl:pl-[405px]'
-                : 'md:pr-[240px] lg:pr-[285px] xl:pr-[405px]'
+                ? 'md:pl-[260px] lg:pl-[355px] xl:pl-[405px]'
+                : 'md:pr-[260px] lg:pr-[280px] xl:pr-[405px]'
               : ''
               }`}>
               {children}
