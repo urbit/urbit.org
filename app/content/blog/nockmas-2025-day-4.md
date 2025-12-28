@@ -17,6 +17,7 @@ tags =  ["nock", "nockmas", ""]
 +++
 
 ![nockmas day 4 cell check image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+4/nockmas-day-4-cell-check-Social.png)
+
 On this fourth day of Nockmas we explore opcode 3, the first of our axiomatic functions. 
 
 # Opcode 3: Cell Check
