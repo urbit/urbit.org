@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Increment, opcode 4"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-day-5-increment-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 5 increment image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-day-5-increment-social.png)
 
 On this fifth day of Nockmas, we explore opcode 4, Increment, which is the second of our axiomatic Nock instructions.  
 
