@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Equality Check, opcode 5"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-day-6-equal-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 6 equal image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-day-6-equal-social.png)
 
 On this sixth day of Nockmas, we visit opcode 5, Equality Check. The last of the axiomatic operators, nock 5 different but closely related to opcode 3 which we discussed previously.
 
