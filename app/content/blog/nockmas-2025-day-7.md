@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Conditional, opcode 6"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-day-7-conditional-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 7 conditional image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-day-7-conditional-social.png)
 
 On this seventh day of Nockmas, we investigate opcode 6, Conditional. The first of our composite opcodes. The composite opcodes combine multiple operations into higher-level constructs. While not strictly necessary for a complete instruction set, they offer the necessary affordances for practical programming in Nock. 
 
