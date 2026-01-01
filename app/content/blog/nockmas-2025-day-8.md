@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Compose, opcode 7"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+8/nockmas-day-8-compose-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 8 compose image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+8/nockmas-day-8-compose-social.png)
 
 On this eighth day of Nockmas (and first of the New Year), we look at opcode 7, Compose. 
 
