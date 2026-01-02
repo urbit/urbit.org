@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Extend, opcode 8"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+9/nockmas-day-9-extend-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 9 extend image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+9/nockmas-day-9-extend-social.png)
 
 On this ninth day of Nockmas, we will explore opcode 8, Extend and how Nock implements variable binding.
 
