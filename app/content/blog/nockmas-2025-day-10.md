@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Invoke, opcode 9"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas-day-10-invoke-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 10 invoke image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas-day-10-invoke-social.png)
 
 On this tenth day of Nockmas, we explore opcode 9, Invoke, continuing the pattern of pinning a core and its arms which we saw in yesterday's discussion. 
 
