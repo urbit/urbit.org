@@ -7,7 +7,7 @@ description = "12 days of Nockmas: Hint, opcode 11"
 [extra]
 # author = ""
 ship = "~lagrev-nocfep"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+12/nockmas-day-12-hint-social.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
 +++
+
+![nockmas day 12 hint image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+12/nockmas-day-12-hint-social.png)
 
 Welcome to this twelfth, and last, day of Nockmas where we will be discussing opcode 11, Hint, which is used as a way to attach metadata to a Nock expression.
 
