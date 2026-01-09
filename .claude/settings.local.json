@@ -12,5 +12,8 @@
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "github@claude-plugins-official": true
   }
 }

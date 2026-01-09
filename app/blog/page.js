@@ -107,7 +107,9 @@ export default async function BlogHome() {
         </SidebarElement>
       </SidebarSlot>
 
+		  <Link href="/">
       <img src="/icons/digi-logo-1.svg" className="hidden md:block pb-4" />
+		  </Link>
       <div className="mb-32 text-xlarge gap-y-2 leading-[100%] max-w-[1200px] mx-auto">
         {Object.entries(yearGroups)
           .sort(([yearA], [yearB]) => yearB - yearA)
