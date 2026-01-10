@@ -69,7 +69,7 @@ export function HeroSection({ hero }) {
 
   return (
     <section
-      className="relative flex items-start md:pt-[15vh] min-h-screen md:min-h-[calc(100vh+300px)] z-0 hero-background"
+      className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] z-0 hero-background"
       {...(backgroundImage && {
         style: {
           backgroundImage: getResponsiveBackgroundImage(backgroundImage),
@@ -126,7 +126,7 @@ export function HeroSection({ hero }) {
 
 
       {/* Content Container */}
-      <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">
+      <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw] py-[10vh] md:py-0">
         <div className="hidden md:block">
           <Image
             src="/icons/urbit-digi-accent-2.svg"
@@ -151,7 +151,7 @@ export function HeroSection({ hero }) {
               alt="urbit digi logo"
               width={90}
               height={90}
-              className="mt-24 md:hidden"
+              className="md:hidden"
             />
           </div>
         )}
