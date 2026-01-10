@@ -11,6 +11,12 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: `${config.frontMatter.title} — ${config.frontMatter.subtitle}`,
     description: `${config.frontMatter?.description}`,
+    icons: {
+      icon: [
+        { url: '/icons/favicons/favicon-light.svg', media: '(prefers-color-scheme: light)' },
+        { url: '/icons/favicons/favicon-dark.svg', media: '(prefers-color-scheme: dark)' },
+      ],
+    },
     openGraph: {
       images: [
         {
