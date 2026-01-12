@@ -277,6 +277,8 @@ export function HeroSection({ hero }) {
         </h2>
         <p className="font-sans text-large leading-120 text-primary mb-6">
 		  Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.</p>
+        <p className="font-sans text-large leading-120 text-primary mb-6">
+		  The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!</p>
         <div className="flex gap-3 justify-end">
           <Link
             href="/overview/running-urbit"
