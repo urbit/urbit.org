@@ -8,9 +8,13 @@
       "Bash(for file in /Users/tlat/dev/urbit-foundation/urbit.org-reloaded/app/content/overview/running-urbit/*.md)",
       "Bash(head:*)",
       "Bash(done)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(gh issue view:*)"
     ],
     "deny": [],
     "ask": []
+  },
+  "enabledPlugins": {
+    "github@claude-plugins-official": true
   }
 }
