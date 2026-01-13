@@ -1,23 +1,25 @@
 +++
 title = "Sovereign Intelligence"
 date = "2026-1-13"
-description = "Urbit offers a bicameral future for personal AI, a foundation for agentic intelligence. One side stable. One side fluid. Each stronger with the other."
+description = "Urbit offers a bicameral future for personal AI. One side stable. One side fluid. Each stronger with the other."
 # aliases = []
 
 [extra]
 # author = ""
 ship = "~sicdev-pilnup"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+4/nockmas-day-4-cell-check-Social.png"
-# imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sovereign+Intelligence/Blog_Sovereign+Intelligence_Social+16x9.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sovereign+Intelligence/Blog_Sovereign+Intelligence_Text_Social+16x9.png"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sovereign+Intelligence/Blog_Sovereign+Intelligence_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "privacy", "sovereignty"]
 +++
 
-# **Architecture for Personal AI**
 
+![Sovereign Intelligence image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sovereign+Intelligence/Blog_Sovereign+Intelligence_Social+16x9.png)
+
+## **Architecture for Personal AI**
 AI is having its moment. Most of it lives in large data centers. It feeds on personal information it does not own and cannot explain. The output is impressive. The setup leaves you with no real control. Urbit takes a different view. It treats identity and data as something you control. It keeps computation close to the person and builds a world that does not depend on corporate platforms. The two systems pull in opposite directions. That tension is useful.
 
 The idea of AI as a simple tool is outdated. A real personal AI should act as an extension of your own thinking. For that to happen, it needs a place to live. It needs a stable identity. It needs a durable memory. There should be a clear boundary between what is yours and what is external. Urbit offers that home. It gives the AI a container for identity and long-term state. It gives you the authority to shape how the AI sees your world.
