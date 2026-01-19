@@ -43,53 +43,57 @@ export const NewsletterSignup = () => {
     document.body.removeChild(script);
   };
 
-  return (
-    <React.Fragment>
-      <form
-        onSubmit={handleSubmit}
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        className="validate form"
-        noValidate
-      >
-        <div className="input-group relative font-small" id="mc_embed_signup_scroll">
-          <div className={classNames(
-            "w-full max-w-[700px] mc-field-group h-max relative")}>
-            <input
-              className={classNames(
-                email.length > 0 && !isSuccess && "text-primary border-white",
-                isSuccess ? "bg-[#878787] text-secondary cursor-default border-none" : 'text-gray-87 bg-transparent ',
-                "text-large border-[.0875rem] pt-[.1rem] pb-[.2rem] appearance-none font-[300] placeholder:font-[300]  placeholder:text-contrast-2 outline-none border-contrast-2  rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]",
-                email.length > 0 && !isSuccess && "pr-[5.5rem]",
-              )
-              }
-              disabled={isSuccess}
-              type="email"
-              name="EMAIL"
-              id="mce-EMAIL"
-              placeholder="Get email updates"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)} // Update state on input change
-            />
-            {email.length > 0 && !isSuccess && ( // Only show the button if input length > 0
-              <div id="subscribe" className="flex font-[300] items-center justify-center absolute h-full top-0 right-0">
-                <button
-                  id="mc-embedded-subscribe"
-                  className={classNames(
-                    email.length > 0 && "text-contrast-2 hover:text-primary",
-                    "body-lg text-contrast-2 hover:text-primary leading-[1cap] bg-transparent pr-[.4em]"
-                  )}
-                  type="submit"
-                  name="subscribe"
-                >
-                  Subscribe
-                </button>
-              </div>
+return (
+  <React.Fragment>
+    <form
+      onSubmit={handleSubmit}
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      className="validate form"
+      noValidate
+    >
+      <div className="input-group relative font-small" id="mc_embed_signup_scroll">
+        <div className={classNames(
+          "w-full max-w-[700px] mc-field-group h-max relative")}>
+          <input
+            className={classNames(
+              email.length > 0 && !isSuccess && "text-primary border-white",
+              isSuccess ? "bg-[#878787] text-secondary cursor-default border-none" : 'text-gray-87 bg-transparent ',
+              "text-large border-[.0875rem] pt-[.1rem] pb-[.2rem] appearance-none font-[300] placeholder:font-[300]  placeholder:text-contrast-2 outline-none border-contrast-2  rounded-[.3125rem] pb-[.05em] pl-[.3em] pr-1 w-full leading-[1cap]",
+              email.length > 0 && !isSuccess && "pr-[5.5rem]",
             )}
-          </div>
+            disabled={isSuccess}
+            type="email"
+            name="EMAIL"
+            id="mce-EMAIL"
+            placeholder="Get email updates"
+            required
+            autoComplete="off"
+            data-1p-ignore
+            data-lpignore="true"
+            data-bwignore
+            data-form-type="other"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {email.length > 0 && !isSuccess && (
+            <div id="subscribe" className="flex font-[300] items-center justify-center absolute h-full top-0 right-0">
+              <button
+                id="mc-embedded-subscribe"
+                className={classNames(
+                  email.length > 0 && "text-contrast-2 hover:text-primary",
+                  "body-lg text-contrast-2 hover:text-primary leading-[1cap] bg-transparent pr-[.4em]"
+                )}
+                type="submit"
+                name="subscribe"
+              >
+                Subscribe
+              </button>
+            </div>
+          )}
         </div>
-      </form>
-    </React.Fragment>
-  );
-};
+      </div>
+    </form>
+  </React.Fragment>
+);
+}

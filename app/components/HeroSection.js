@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Modal } from "./Modal";
 
 /**
  * HeroSection - Full viewport width hero section
@@ -19,6 +21,8 @@ import Image from "next/image";
  * @param {Object} hero - Hero configuration object with all content
  */
 export function HeroSection({ hero }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   if (!hero) return null;
 
   const {
@@ -65,7 +69,7 @@ export function HeroSection({ hero }) {
 
   return (
     <section
-      className="relative flex items-start md:pt-[15vh] min-h-screen md:min-h-[calc(100vh+300px)] z-0 hero-background"
+      className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] z-0 hero-background"
       {...(backgroundImage && {
         style: {
           backgroundImage: getResponsiveBackgroundImage(backgroundImage),
@@ -122,7 +126,7 @@ export function HeroSection({ hero }) {
 
 
       {/* Content Container */}
-      <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] sm:mx-auto md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw]">
+      <div className="relative z-20 mx-[15px] md:ml-[5%] lg:ml-[10%] md:px-16 flex flex-col max-w-4xl xl:max-w-[60vw] py-[10vh] md:py-0">
         <div className="hidden md:block">
           <Image
             src="/icons/urbit-digi-accent-2.svg"
@@ -147,7 +151,7 @@ export function HeroSection({ hero }) {
               alt="urbit digi logo"
               width={90}
               height={90}
-              className="mt-24 md:hidden"
+              className="md:hidden"
             />
           </div>
         )}
@@ -182,14 +186,25 @@ export function HeroSection({ hero }) {
 
           {/* Secondary Mobile CTA */}
           {secondaryMobileCta && (
-            <Link
-              href={secondaryMobileCta.link}
-              className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-1
-                bg-background text-accent-1 border border-accent-1 rounded-lg
-                hover:bg-primary hover:text-secondary transition-all transform"
-            >
-              {secondaryMobileCta.label}
-            </Link>
+            secondaryMobileCta.link.startsWith('http') ? (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-1
+                  bg-background text-accent-1 border border-accent-1 rounded-lg
+                  hover:bg-primary hover:text-secondary transition-all transform"
+              >
+                {secondaryMobileCta.label}
+              </button>
+            ) : (
+              <Link
+                href={secondaryMobileCta.link}
+                className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-1
+                  bg-background text-accent-1 border border-accent-1 rounded-lg
+                  hover:bg-primary hover:text-secondary transition-all transform"
+              >
+                {secondaryMobileCta.label}
+              </Link>
+            )
           )}
         </div>
 
@@ -237,18 +252,52 @@ export function HeroSection({ hero }) {
 
         {/* Desktop Tertiary Link */}
         {tertiaryLink && (
-          <Link
-            href={tertiaryLink.link}
-            className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
-            {...(tertiaryLink.link.startsWith('http') && {
-              target: "_blank",
-              rel: "noopener noreferrer",
-            })}
-          >
-            {tertiaryLink.label}
-          </Link>
+          tertiaryLink.link.startsWith('http') ? (
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
+            >
+              {tertiaryLink.label}
+            </button>
+          ) : (
+            <Link
+              href={tertiaryLink.link}
+              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
+            >
+              {tertiaryLink.label}
+            </Link>
+          )
         )}
       </div>
+
+      {/* Leaving Site Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2 className="text-2xl font-serif italic font-semibold text-primary mb-4">
+		  Quickstart with Tlon Messenger
+        </h2>
+        <p className="font-sans text-large leading-120 text-primary mb-6">
+		  Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.</p>
+        <p className="font-sans text-large leading-120 text-primary mb-6">
+		  The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!</p>
+        <div className="flex gap-3 justify-end">
+          <Link
+            href="/overview/running-urbit"
+            onClick={() => setIsModalOpen(false)}
+            className="font-sans text-lg flex items-center py-1 px-3 rounded-lg text-contrast-2 hover:text-primary font-[600]"
+          >
+            Help me self-host
+          </Link>
+          <a
+            href={tertiaryLink?.link || tertiaryMobileLink?.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-sans text-lg flex items-center py-1 px-3 rounded-lg text-background bg-foreground hover:text-contrast-1 font-[600]"
+            onClick={() => setIsModalOpen(false)}
+          >
+            Onboard via Tlon
+          </a>
+        </div>
+      </Modal>
     </section>
   );
 }

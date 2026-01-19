@@ -4,7 +4,7 @@ starts = "2024-10-20T14:00:00"
 ends = "2024-10-22T11:00:00"
 timezone = "America/Los_Angeles"
 location = "Wellspring Spa & Woodland Retreat - 154922 Kernahan Rd E, Ashford, WA 98304"
-image = "https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2024.5.16..5.20.19..6f5c.28f5.c28f.5c28-image.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/imagery/Subassembly-image.png"
 links = [
   { label = "Register", url = "https://docs.google.com/forms/d/e/1FAIpQLSfbHcFLRgGKBW91qINxhZ6TAgSDgsY_ikG1ATauHL7AVeLqDA/viewform" },
   { label = "Event Details", url = "https://subassembly.tocwexsyndicate.com/details.html" },
