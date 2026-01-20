@@ -7,20 +7,22 @@ description = "A conversation with Groundwire developers ~bonbud-macryg and ~nib
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-# imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Social.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr-bottec_Banner.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+~niblyx-malnus+and+~bonbud-macryg/Blog_QA+~niblyx-malnus+and+~bonbud-macryg_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+~niblyx-malnus+and+~bonbud-macryg/Blog_QA+~niblyx-malnus+and+~bonbud-macryg_Social16_9.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+~niblyx-malnus+and+~bonbud-macryg/Blog_QA+~niblyx-malnus+and+~bonbud-macryg_Banner.png"
 # imageDark =
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "design", "architecture"]
 +++
 
-> **\~sarlev:** This is also our first two-person spotlight interview, so we'll we'll see how it goes and adapt accordingly. I generally like to start by just asking, what first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?  
+> **\~sarlev:** This is our first two-person spotlight interview, so we'll see how it goes and adapt accordingly. I generally like to start by just asking, what first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?  
 
 **\~bonbud-macryg:** I'll let `~niblyx-malnus` go first if he wants.
 
-**\~niblyx-malnus:** So many of the ideas are just a part of who I am now that it's a little bit hard to remember the trajectory sometimes. But I studied computer science undergraduate for my undergraduate degree. I didn't really program much. I mostly did math. After that, I wandered around for a bit and decided that I didn't really want to be stuck in front of a computer for the rest of my life. I realized that I'd been interested in buildings and architecture and stuff, which I sort of explored a little bit when I was in high school. So I explored that for a bit and stumbled on Christopher Alexander, who was a big influence on me. And I also realized there's really no sort of job that involves thinking or problem solving today where you're not stuck in front of a computer. 
+**\~niblyx-malnus:** So many of the ideas are just a part of who I am now that it's a little bit hard to remember the trajectory sometimes. 
+
+I studied computer science undergraduate for my undergraduate degree. I didn't really program much. I mostly did math. After that, I wandered around for a bit and decided that I didn't really want to be stuck in front of a computer for the rest of my life. I realized that I'd been interested in buildings and architecture and stuff, which I sort of explored a little bit when I was in high school. So I explored that for a bit and stumbled on Christopher Alexander, who was a big influence on me. And I also realized there's really no sort of job that involves thinking or problem solving today where you're not stuck in front of a computer. 
 
 It just turns out that computers are this incredible leverage you can use in pretty much any domain to turbocharge your thinking, at least they have that potential, which is sort of unrealized in many ways, and that's frustrating. That realization set the stage for being open to something like Urbit. 
 
