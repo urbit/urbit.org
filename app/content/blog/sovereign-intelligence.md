@@ -1,7 +1,7 @@
 +++
 title = "Sovereign Intelligence"
 date = "2026-1-13"
-description = "Urbit offers a bicameral future for personal AI. One side stable. One side fluid. Each stronger with the other."
+description = "Urbit offers a bicameral future for personal AI. One side stable. One side fluid. Each stronger with the other"
 # aliases = []
 
 [extra]
