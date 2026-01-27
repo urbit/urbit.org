@@ -7,7 +7,7 @@ description = "A walkthrough of how to use current Urbit LLM tooling by ~niblyx-
 [extra]
 # author = ""
 ship = "~niblyx-malnus"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+4/nockmas-day-4-cell-check-Social.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+Urbit_Text_Social+16x9.png"
 # imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Social+16x9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Building+on+Urbit_Tall+Banner.png"
 # imageDark =
@@ -15,6 +15,8 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+4/nockmas-
 # imageIndexDark =
 tags =  ["AI", "guides"]
 +++
+
+![llms on urbit image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+Urbit_Social+16x9.png )
 
 The following constitutes an overview of the progress we have made at
 Groundwire towards the integration of LLMs into the process of software
@@ -30,7 +32,7 @@ Claude Code direct access to a running Urbit ship's Dojo, and
 "everything app" on Urbit. `clurd` is stable and has been tremendously
 useful for development. `urbit-master` is in active flux - it contains
 most of the interesting ideas but changes frequently. This article
-documents `urbit-master` as it exists at commit `1ce76a3`.
+documents `urbit-master` as it exists at [commit `1ce76a3`](https://github.com/gwbtc/urbit-master/commit/1ce76a376b7b174ca003e3c86b1927ab1875210e).
 
 In this article we will cover:
 - A summary of 'Clurd'
