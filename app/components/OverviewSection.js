@@ -1,6 +1,7 @@
 "use client";
 import SVG from "react-inlinesvg";
 import classNames from "classnames";
+import Image from "next/image";
 
 const OverviewSection = ({ title, children }) => {
   // console.log('title', title)
@@ -21,7 +22,7 @@ const OverviewSVG = ({ src, alt }) => {
 const OverviewImage = ({ src, alt }) => {
   return (
     <div className="img-container">
-      <img src={src} alt={alt} />
+      <Image src={src} alt={alt} width={1200} height={800} className="w-full h-auto" />
     </div> 
   )
 }

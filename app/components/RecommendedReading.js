@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * RecommendedReading - Displays recommended blog posts in sidebar
@@ -21,16 +22,18 @@ export function RecommendedReading({ posts }) {
           key={post.slug}
           className="block group"
         >
-          {(post.extra?.imageCard || post.extra?.image) && (
-            <div className="mb-3 rounded-lg overflow-hidden w-full bg-gray-f5">
-              <img
-                src={post.extra?.imageCard || post.extra.image}
-                alt={post.title}
-                className="w-full h-auto max-h-[200px] object-cover transition-opacity group-hover:opacity-80"
-                loading="lazy"
-              />
-            </div>
-          )}
+            {(post.extra?.imageCard || post.extra?.image) && (
+              <div className="mb-3 rounded-lg overflow-hidden w-full bg-gray-f5">
+                <Image
+                  src={post.extra?.imageCard || post.extra.image}
+                  alt={post.title}
+                  className="w-full h-auto max-h-[200px] object-cover transition-opacity group-hover:opacity-80"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            )}
+
           <h3 className="font-serif text-lg leading-120 mb-2 group-hover:text-gray-87 transition-colors">
             {post.title}
           </h3>

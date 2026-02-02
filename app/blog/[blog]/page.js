@@ -14,7 +14,8 @@ const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
 
 export async function generateMetadata({ params }, parent) {
-  const postSlug = `/blog/${params.blog}.md`;
+  const { blog } = await params;
+  const postSlug = `/blog/${blog}.md`;
   const postData = await getMarkdownContent(postSlug, "toml");
 
   const metadata = {
@@ -59,13 +60,14 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const postSlug = `/blog/${params.blog}.md`; // Append .md here to use in the file path
+  const { blog } = await params;
+  const postSlug = `/blog/${blog}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra = {}, taxonomies } = postData.frontMatter;
 
   // Get recommended posts
   const allPosts = await getAllBlogPosts();
-  const recommendedPosts = getRecommendedPosts(allPosts, params.blog);
+  const recommendedPosts = getRecommendedPosts(allPosts, blog);
 
   // Get config for aside title
   const config = await getMarkdownContent("config.md");
