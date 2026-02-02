@@ -43,6 +43,16 @@ export default async function EcosystemHome() {
       {/* Set sidebar position */}
       <SidebarPositionSlot position={sidebarPosition} />
 
+      <Link href="/">
+        <Image
+          src="/icons/digi-logo-1.svg"
+          alt="Urbit"
+          width={80}
+          height={32}
+          className="hidden md:block pb-4"
+        />
+      </Link>
+
       {/* Sidebar navigation - renders in layout */}
       <SidebarSlot>
         <SidebarElement title="">

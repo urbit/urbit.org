@@ -78,8 +78,8 @@ export default async function RunningUrbitPage() {
         <Image
           src="/icons/digi-logo-1.svg"
           alt="Urbit"
-          width={160}
-          height={64}
+          width={80}
+          height={32}
           className="hidden md:block pb-4"
         />
       </Link>

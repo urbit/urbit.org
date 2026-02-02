@@ -135,13 +135,15 @@ export default async function RunningUrbitSection({ params }) {
       </SidebarSlot>
 
       {/* Main content */}
-      <Image
-        src="/icons/digi-logo-1.svg"
-        alt="Urbit"
-        width={160}
-        height={64}
-        className="hidden md:block pb-4"
-      />
+      <Link href="/">
+        <Image
+          src="/icons/digi-logo-1.svg"
+          alt="Urbit"
+          width={80}
+          height={32}
+          className="hidden md:block pb-4"
+        />
+      </Link>
       <section className="mt-[8rem] md:mt-[6rem] mb-32 md:mx-auto">
         <div className="max-w-[1080px]">
           <h1 className="text-6xl text-accent-1 font-serif font-tall leading-[120%] mb-4">

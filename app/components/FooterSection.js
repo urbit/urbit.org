@@ -179,8 +179,8 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             <Image
               src="/icons/urbit-neu.svg"
               alt="Urbit wordmark"
-              width={140}
-              height={24}
+              width={70}
+              height={12}
               className="pb-1.5"
             />
           </Link>
@@ -244,8 +244,8 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             <Image
               src="/icons/urbit-neu.svg"
               alt="Urbit wordmark"
-              width={140}
-              height={24}
+              width={70}
+              height={12}
               className="pb-1.5"
             />
           </Link>
