@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const eventSlug = `/events/${params.event}.md`; // Append .md here to use in the file path
+  const { event } = await params;
+  const eventSlug = `/events/${event}.md`; // Append .md here to use in the file path
   const eventData = await getMarkdownContent(eventSlug, "toml");
   const { 
     title, 

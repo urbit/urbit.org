@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const pageSlug = `/communities/${params.community}.md`; // Append .md here to use in the file path
+  const { community } = await params;
+  const pageSlug = `/communities/${community}.md`; // Append .md here to use in the file path
   const pageData = await getMarkdownContent(pageSlug, "toml");
   const { title, description, image, group, links } = pageData.frontMatter;
 

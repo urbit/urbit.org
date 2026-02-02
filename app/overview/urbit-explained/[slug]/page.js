@@ -7,7 +7,6 @@ import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
 import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
-import React from "react";
 import Image from "next/image";
 
 
@@ -25,7 +24,7 @@ export async function generateStaticParams() {
 }
 
 export default async function UrbitExplainedSection({ params }) {
-  const slug = params?.slug;
+  const { slug } = await params;
 
   // Load both config files for navigation
   const urbitExplainedConfig = await getMarkdownContent("overview/urbit-explained/config.md");
