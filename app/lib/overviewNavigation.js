@@ -37,6 +37,10 @@ export function calculateOverviewNavigation(
     } else {
       const currentIndex = currentSectionPages.indexOf(currentSlug);
 
+      if (currentIndex === -1) {
+        return { prevPage: null, nextPage: null };
+      }
+
       if (currentIndex === 0) {
         // First page after intro
         prevPage = {
@@ -69,10 +73,14 @@ export function calculateOverviewNavigation(
     const runningUrbitPages = currentSectionPages;
 
     if (isIntroPage) {
+      const lastUrbitExplainedSlug = urbitExplainedConfig.frontMatter.sections
+        .filter(s => s !== 'intro')
+        .slice(-1)[0];
+
       // Intro page of running-urbit
       prevPage = {
-        url: `/overview/urbit-explained/${urbitExplainedConfig.frontMatter.sections.filter(s => s !== 'intro').slice(-1)[0]}`,
-        label: getPageTitle('urbit-explained', urbitExplainedConfig.frontMatter.sections.filter(s => s !== 'intro').slice(-1)[0]),
+        url: `/overview/urbit-explained/${lastUrbitExplainedSlug}`,
+        label: getPageTitle('urbit-explained', lastUrbitExplainedSlug),
       };
       nextPage = {
         url: `/overview/running-urbit/${runningUrbitPages[0]}`,
@@ -80,6 +88,10 @@ export function calculateOverviewNavigation(
       };
     } else {
       const currentIndex = runningUrbitPages.indexOf(currentSlug);
+
+      if (currentIndex === -1) {
+        return { prevPage: null, nextPage: null };
+      }
 
       if (currentIndex === 0) {
         // First page after intro

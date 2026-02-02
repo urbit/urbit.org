@@ -6,7 +6,9 @@ import { SidebarElement } from "../../../components/SidebarElement";
 import { ContentBlurb } from "../../../components/ContentBlurbs";
 import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
+import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
+import React from "react";
 import Image from "next/image";
 
 const toPlainObject = (value) => {
@@ -30,14 +32,22 @@ export async function generateStaticParams() {
 }
 
 export default async function RunningUrbitSection({ params }) {
-  const { slug } = params;
-
-  // Load the section content
-  const sectionData = await getMarkdownContent(`overview/running-urbit/${slug}.md`);
+  const slug = params?.slug;
 
   // Load both config files for navigation
   const urbitExplainedConfig = await getMarkdownContent("overview/urbit-explained/config.md");
   const runningUrbitConfig = await getMarkdownContent("overview/running-urbit/config.md");
+
+  const validSlugs = (runningUrbitConfig.frontMatter.sections || []).filter(
+    (sectionSlug) => sectionSlug !== "intro"
+  );
+
+  if (!slug || !validSlugs.includes(slug)) {
+    return notFound();
+  }
+
+  // Load the section content
+  const sectionData = await getMarkdownContent(`overview/running-urbit/${slug}.md`);
 
   const urbitExplainedSections = (urbitExplainedConfig.frontMatter.sections || []).map(slug => ({
     slug,
