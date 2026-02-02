@@ -9,6 +9,7 @@ import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
 import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
 import Image from "next/image";
+import Link from "next/link";
 
 const toPlainObject = (value) => {
   if (value === null || value === undefined) {
