@@ -6,7 +6,9 @@ const nextConfig = {
   },
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdoc'],
-  turbopack: {},
+  turbopack: {
+    root: __dirname,
+  },
 }
 
 const markdocConfig = {

@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
+const renderHtml = (content) => ({ __html: content || "" });
+
 export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -51,7 +53,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
               </li>
             ))}
           </ul>
-          <div className="text-base text-gray-87 line-clamp-5">{content}</div>
+          <div className="text-base text-gray-87 line-clamp-5" dangerouslySetInnerHTML={renderHtml(content)} />
         </div>
       </div>
       <button
@@ -69,9 +71,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
 
       {isExpanded && (
         <div className="mt-6 animate-fadeIn">
-          <article className="prose prose-invert max-w-none">
-            {content}
-          </article>
+          <article className="prose prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
 
           {references && references.length > 0 && (
             <div className="mt-8 pt-6 border-t border-gray-87">
@@ -129,7 +129,10 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
               </li>
             ))}
           </ul>
-          <div className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}>{content}</div>
+          <div
+            className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}
+            dangerouslySetInnerHTML={renderHtml(content)}
+          />
         </div>
       </div>
       <div className="flex justify-between">
@@ -296,9 +299,7 @@ export const ContentBlurb = ({ title, description, content, references, image, i
       )}
 
       {/* Full content without line-clamp */}
-      <article className="prose prose-invert max-w-none mt-6">
-        {content}
-      </article>
+      <article className="prose prose-invert max-w-none mt-6" dangerouslySetInnerHTML={renderHtml(content)} />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -410,11 +411,9 @@ export const MicroBlurb = ({
       {/* Content - either full or line-clamped */}
       <div className={`text-sm text-primary mt-3 ${showFullContent ? '' : 'line-clamp-8'}`}>
         {showFullContent ? (
-          <article className="prose prose-sm prose-invert max-w-none">
-            {content}
-          </article>
+          <article className="prose prose-sm prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
         ) : (
-          content
+          <div dangerouslySetInnerHTML={renderHtml(content)} />
         )}
       </div>
 
@@ -443,7 +442,7 @@ export const MicroBlurb = ({
  * @param {string} id - Blurb ID for anchor linking
  * @param {string} title - Blurb title
  * @param {string} description - Optional blurb description
- * @param {React.ReactNode} content - Rendered Markdoc content
+ * @param {string} content - Rendered Markdoc HTML
  * @param {string} image - Optional light mode image path
  * @param {string} imageDark - Optional dark mode image path
  * @param {Array} references - Array of {title, link, description} reference objects
@@ -543,9 +542,7 @@ export function HomepageBlurb({
         </div>
       )}
       {/* Full content */}
-      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]">
-        {content}
-      </article>
+      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]" dangerouslySetInnerHTML={renderHtml(content)} />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (

@@ -8,6 +8,13 @@ import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
 import Markdoc from "@markdoc/markdoc";
 
+const toPlainObject = (value) => {
+  if (value === null || value === undefined) {
+    return value;
+  }
+  return JSON.parse(JSON.stringify(value));
+};
+
 export async function generateStaticParams() {
   // Get the config to know which sections exist
   const configData = await getMarkdownContent("overview/running-urbit/config.md");
@@ -67,7 +74,7 @@ export default async function RunningUrbitSection({ params }) {
       const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
 
       // Render the Markdoc content to React on the server
-      const renderedContent = Markdoc.renderers.react(blurbData.content, React);
+      const renderedContent = Markdoc.renderers.html(blurbData.content);
 
       // Serialize references to plain objects with descriptions
       const references = (blurbData.frontMatter.references || []).map(ref => ({
@@ -76,7 +83,7 @@ export default async function RunningUrbitSection({ params }) {
         description: ref.description || "",
       }));
 
-      blurbsBySlug[blurbSlug] = {
+      blurbsBySlug[blurbSlug] = toPlainObject({
         title: blurbData.frontMatter.title,
         description: blurbData.frontMatter.description,
         content: renderedContent,
@@ -84,7 +91,7 @@ export default async function RunningUrbitSection({ params }) {
         image: blurbData.frontMatter.image || "",
         imageDark: blurbData.frontMatter.imageDark || "",
         ctaButton: blurbData.frontMatter["call-to-action"] || null,
-      };
+      });
     } catch (error) {
       console.error(`Error loading blurb ${blurbSlug}:`, error);
     }
