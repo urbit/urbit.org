@@ -3,6 +3,7 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 import { glob } from "glob";
 import path from "path";
+import Image from "next/image";
 
 const BLOG_PATH = "app/content/communities";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
@@ -27,7 +28,7 @@ export default async function PostPage({ params }) {
   return (
     <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-9 md:mt-[2rem] container min-h-[calc(100vh-var(--header-height)-28rem)]">
       <div className="col-span-1">
-          <img className="mb-4 w-full h-auto" src={image} alt={title} />
+        <Image className="mb-4 w-full h-auto" src={image} alt={title} width={320} height={320} />
       </div>
       <div className="flex flex-col col-span-4">
         <div className="text-2xlarge leading-[120%] font-[600] mb-4">

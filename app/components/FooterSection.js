@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { NewsletterSignup } from "./NewsletterSignup";
 import React, { useState, useEffect, useRef } from "react";
 
@@ -110,13 +111,16 @@ export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightCha
                     className="w-max"
                     aria-label={link.label || link.title}
                   >
-                    {link.logo && (
-                      <img
-                        src={link.logo}
-                        alt={link.label || link.title}
-                        className="w-4 h-4 invert"
-                      />
-                    )}
+                      {link.logo && (
+                        <Image
+                          src={link.logo}
+                          alt={link.label || link.title}
+                          width={16}
+                          height={16}
+                          className="w-4 h-4 invert"
+                        />
+                      )}
+
                   </Link>
                 ))}
               </div>
@@ -145,9 +149,11 @@ const MobileFooter = ({ resources, socials }) => {
               aria-label={link.label || link.title}
             >
               {link.logo && (
-                <img
+                <Image
                   src={link.logo}
                   alt={link.label || link.title}
+                  width={16}
+                  height={16}
                   className="w-[1em] h-[1em] invert"
                 />
               )}
@@ -170,9 +176,11 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             href="/"
             target="_self"
           >
-            <img
+            <Image
               src="/icons/urbit-neu.svg"
               alt="Urbit wordmark"
+              width={140}
+              height={24}
               className="pb-1.5"
             />
           </Link>
@@ -210,9 +218,11 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
                     aria-label={link.label || link.title}
                   >
                     {link.logo && (
-                      <img
+                      <Image
                         src={link.logo}
                         alt={link.label || link.title}
+                        width={16}
+                        height={16}
                         className="w-[1em] h-[1em] invert"
                       />
                     )}
@@ -231,9 +241,11 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             href="/"
             target="_self"
           >
-            <img
+            <Image
               src="/icons/urbit-neu.svg"
               alt="Urbit wordmark"
+              width={140}
+              height={24}
               className="pb-1.5"
             />
           </Link>
@@ -250,9 +262,11 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             aria-label="Toggle resources"
           >
             <span>Resources</span>
-            <img
+            <Image
               src="/icons/toggle-karat.svg"
               alt=""
+              width={9}
+              height={7}
               className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${expandedSection === 'resources' ? 'rotate-180' : 'rotate-0'}
@@ -271,9 +285,11 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             aria-label="Toggle contact"
           >
             <span>Contact</span>
-            <img
+            <Image
               src="/icons/toggle-karat.svg"
               alt=""
+              width={9}
+              height={7}
               className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${expandedSection === 'contact' ? 'rotate-180' : 'rotate-0'}

@@ -6,7 +6,8 @@ import { SidebarElement } from "../../components/SidebarElement";
 import { OverviewNavButtons } from "../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../lib/overviewNavigation";
 import Markdoc from "@markdoc/markdoc";
-import Link from "next/link"  
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function UrbitExplained() {
   // Load intro section
@@ -71,9 +72,15 @@ export default async function UrbitExplained() {
       </SidebarSlot>
 
       {/* Main content */}
-		  <Link href="/">
-      <img src="/icons/digi-logo-1.svg" className="hidden md:block pb-4" />
-		  </Link>
+      <Link href="/">
+        <Image
+          src="/icons/digi-logo-1.svg"
+          alt="Urbit"
+          width={160}
+          height={64}
+          className="hidden md:block pb-4"
+        />
+      </Link>
       <section className="mt-[8rem] md:mt-[6rem] mb-32 md:mx-auto">
         <div className="max-w-[1200px]">
           <h1 className="text-6xl text-accent-1 font-serif font-tall leading-[120%] mb-4">

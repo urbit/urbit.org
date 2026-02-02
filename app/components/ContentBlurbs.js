@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const renderHtml = (content) => ({ __html: content || "" });
 
@@ -16,21 +17,21 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
             <div className="mb-4">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}
@@ -96,18 +97,22 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
             <div className="mb-[-60px] mr-[-36px] overflow-visible">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  className="w-full h-full dark:hidden"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  className="w-full h-full hidden dark:block"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto hidden dark:block"
                 />
               )}
             </div>
@@ -162,9 +167,11 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
               <div className="text-primary">
                 Read less
               </div>
-              <img
+              <Image
                 src="/icons/toggle-karat.svg"
                 alt=""
+                width={9}
+                height={7}
                 className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${isExpanded ? 'rotate-180' : 'rotate-0'}
@@ -176,9 +183,11 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
               <div className="text-contrast-2 md:hover:text-primary">
                 Read more
               </div>
-              <img
+              <Image
                 src="/icons/toggle-karat.svg"
                 alt=""
+                width={9}
+                height={7}
                 className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${isExpanded ? 'rotate-180' : 'rotate-0'}
@@ -207,21 +216,21 @@ export const ContentBlurb = ({ title, description, content, references, image, i
             <div className="mb-4">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}
@@ -238,9 +247,11 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
               >
-                <img
+                <Image
                   src="/icons/info.svg"
                   alt="Info"
+                  width={24}
+                  height={24}
                   className="w-6 h-6"
                 />
               </button>
@@ -340,16 +351,20 @@ export const MicroBlurb = ({
       {(image || imageDark) && (
         <div className="mb-3">
           {image && (
-            <img
+            <Image
               src={image}
               alt={title}
+              width={40}
+              height={40}
               className="w-8 h-8 md:w-10 md:h-10 dark:hidden"
             />
           )}
           {(imageDark || image) && (
-            <img
+            <Image
               src={imageDark || image}
               alt={title}
+              width={40}
+              height={40}
               className="w-8 h-8 md:w-10 md:h-10 hidden dark:block"
             />
           )}
@@ -367,7 +382,7 @@ export const MicroBlurb = ({
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
-            <img src="/icons/info.svg" alt="Info" className="w-5 h-5" />
+            <Image src="/icons/info.svg" alt="Info" width={20} height={20} className="w-5 h-5" />
           </button>
         )}
       </div>
@@ -469,17 +484,21 @@ export function HomepageBlurb({
         <div className="mb-4 md:mb-6">
           {/* Light mode image */}
           {image && (
-            <img
+            <Image
               src={image}
               alt={title}
+              width={64}
+              height={64}
               className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
             />
           )}
           {/* Dark mode image - falls back to light image if imageDark not specified */}
           {(imageDark || image) && (
-            <img
+            <Image
               src={imageDark || image}
               alt={title}
+              width={64}
+              height={64}
               className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
             />
           )}
@@ -498,9 +517,11 @@ export function HomepageBlurb({
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
-            <img
+            <Image
               src="/icons/info.svg"
               alt="Info"
+              width={20}
+              height={20}
               className="w-5 h-5 md:w-4 md:h-4"
             />
           </button>

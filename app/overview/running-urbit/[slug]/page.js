@@ -7,6 +7,7 @@ import { ContentBlurb } from "../../../components/ContentBlurbs";
 import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
 import Markdoc from "@markdoc/markdoc";
+import Image from "next/image";
 
 const toPlainObject = (value) => {
   if (value === null || value === undefined) {
@@ -125,7 +126,13 @@ export default async function RunningUrbitSection({ params }) {
       </SidebarSlot>
 
       {/* Main content */}
-      <img src="/icons/digi-logo-1.svg" className="hidden md:block pb-4" />
+      <Image
+        src="/icons/digi-logo-1.svg"
+        alt="Urbit"
+        width={160}
+        height={64}
+        className="hidden md:block pb-4"
+      />
       <section className="mt-[8rem] md:mt-[6rem] mb-32 md:mx-auto">
         <div className="max-w-[1080px]">
           <h1 className="text-6xl text-accent-1 font-serif font-tall leading-[120%] mb-4">
