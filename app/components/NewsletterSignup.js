@@ -27,11 +27,15 @@ export const NewsletterSignup = () => {
 
     // Define callback function in the window to handle the response
     window.callbackFunction = (data) => {
+      const message = data?.msg
+        ? new DOMParser().parseFromString(data.msg, "text/html").body.textContent
+        : "";
+
       if (data.result === "success") {
         setEmail("You are subscribed.");
         setSuccess(true);
       } else {
-        setEmail("Error. Try again.");
+        setEmail(message || "Error. Try again.");
         setSuccess(false);
       }
     };
@@ -80,6 +84,10 @@ return (
             <div id="subscribe" className="flex font-[300] items-center justify-center absolute h-full top-0 right-0">
               <button
                 id="mc-embedded-subscribe"
+                data-umami-event="cta-newsletter-subscribe"
+                data-umami-event-label="Subscribe"
+                data-umami-event-destination="mailchimp"
+                data-umami-event-context={path}
                 className={classNames(
                   email.length > 0 && "text-contrast-2 hover:text-primary",
                   "body-lg text-contrast-2 hover:text-primary leading-[1cap] bg-transparent pr-[.4em]"

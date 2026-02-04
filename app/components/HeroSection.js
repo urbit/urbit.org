@@ -176,6 +176,11 @@ export function HeroSection({ hero }) {
           {primaryMobileCta && (
             <Link
               href={primaryMobileCta.link}
+              data-umami-event="cta-hero-primary-mobile-get-started"
+              data-umami-event-label={primaryMobileCta.label}
+              data-umami-event-destination={primaryMobileCta.link}
+              data-umami-event-context="hero"
+              data-umami-event-variant="mobile"
               className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-2
                 bg-accent-1 text-secondary rounded-lg
                 hover:bg-primary hover:text-secondary transition-all transform"
@@ -189,6 +194,11 @@ export function HeroSection({ hero }) {
             secondaryMobileCta.link.startsWith('http') ? (
               <button
                 onClick={() => setIsModalOpen(true)}
+                data-umami-event="cta-hero-secondary-mobile-quickstart"
+                data-umami-event-label={secondaryMobileCta.label}
+                data-umami-event-destination={secondaryMobileCta.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="mobile"
                 className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-1
                   bg-background text-accent-1 border border-accent-1 rounded-lg
                   hover:bg-primary hover:text-secondary transition-all transform"
@@ -198,6 +208,11 @@ export function HeroSection({ hero }) {
             ) : (
               <Link
                 href={secondaryMobileCta.link}
+                data-umami-event="cta-hero-secondary-mobile-quickstart"
+                data-umami-event-label={secondaryMobileCta.label}
+                data-umami-event-destination={secondaryMobileCta.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="mobile"
                 className="font-sans text-2xl flex w-fit items-center justify-center my-2 px-2 py-1
                   bg-background text-accent-1 border border-accent-1 rounded-lg
                   hover:bg-primary hover:text-secondary transition-all transform"
@@ -212,6 +227,11 @@ export function HeroSection({ hero }) {
         {tertiaryMobileLink && (
           <Link
             href={tertiaryMobileLink.link}
+            data-umami-event="cta-hero-tertiary-mobile-docs"
+            data-umami-event-label={tertiaryMobileLink.label}
+            data-umami-event-destination={tertiaryMobileLink.link}
+            data-umami-event-context="hero"
+            data-umami-event-variant="mobile"
             className="md:hidden text-base text-contrast-2 hover:text-primary transition-colors font-mono"
             {...(tertiaryMobileLink.link.startsWith('http') && {
               target: "_blank",
@@ -229,6 +249,11 @@ export function HeroSection({ hero }) {
           {primaryCta && (
             <Link
               href={primaryCta.link}
+              data-umami-event="cta-hero-primary-desktop-get-started"
+              data-umami-event-label={primaryCta.label}
+              data-umami-event-destination={primaryCta.link}
+              data-umami-event-context="hero"
+              data-umami-event-variant="desktop"
               className="font-sans font-normal inline-flex items-center justify-center px-4 py-1 text-2xl font-[600]
                 bg-accent-1 text-secondary rounded-lg
                 hover:bg-accent-2 hover:text-primary transition-all transform"
@@ -241,6 +266,11 @@ export function HeroSection({ hero }) {
           {secondaryCta && (
             <Link
               href={secondaryCta.link}
+              data-umami-event="cta-hero-secondary-desktop-docs"
+              data-umami-event-label={secondaryCta.label}
+              data-umami-event-destination={secondaryCta.link}
+              data-umami-event-context="hero"
+              data-umami-event-variant="desktop"
               className="font-sans font-normal inline-flex items-center justify-center px-4 py-1 text-2xl font-[600]
                 border border-accent-1 text-accent bg-secondary rounded-lg
                 hover:bg-accent-2 hover:text-primary transition-all transform"
@@ -255,6 +285,11 @@ export function HeroSection({ hero }) {
           tertiaryLink.link.startsWith('http') ? (
             <button
               onClick={() => setIsModalOpen(true)}
+              data-umami-event="cta-hero-tertiary-desktop-quickstart"
+              data-umami-event-label={tertiaryLink.label}
+              data-umami-event-destination={tertiaryLink.link}
+              data-umami-event-context="hero"
+              data-umami-event-variant="desktop"
               className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
             >
               {tertiaryLink.label}
@@ -262,6 +297,11 @@ export function HeroSection({ hero }) {
           ) : (
             <Link
               href={tertiaryLink.link}
+              data-umami-event="cta-hero-tertiary-desktop-quickstart"
+              data-umami-event-label={tertiaryLink.label}
+              data-umami-event-destination={tertiaryLink.link}
+              data-umami-event-context="hero"
+              data-umami-event-variant="desktop"
               className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
             >
               {tertiaryLink.label}
@@ -283,6 +323,11 @@ export function HeroSection({ hero }) {
           <Link
             href="/overview/running-urbit"
             onClick={() => setIsModalOpen(false)}
+            data-umami-event="cta-hero-modal-self-host"
+            data-umami-event-label="Help me self-host"
+            data-umami-event-destination="/overview/running-urbit"
+            data-umami-event-context="hero"
+            data-umami-event-variant="modal"
             className="font-sans text-lg flex items-center py-1 px-3 rounded-lg text-contrast-2 hover:text-primary font-[600]"
           >
             Help me self-host
@@ -291,6 +336,11 @@ export function HeroSection({ hero }) {
             href={tertiaryLink?.link || tertiaryMobileLink?.link}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="cta-hero-modal-onboard-tlon"
+            data-umami-event-label="Onboard via Tlon"
+            data-umami-event-destination={tertiaryLink?.link || tertiaryMobileLink?.link}
+            data-umami-event-context="hero"
+            data-umami-event-variant="modal"
             className="font-sans text-lg flex items-center py-1 px-3 rounded-lg text-background bg-foreground hover:text-contrast-1 font-[600]"
             onClick={() => setIsModalOpen(false)}
           >

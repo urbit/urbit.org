@@ -91,6 +91,10 @@ export function HomepageAccordion({ sections = [], blurbsBySlug = {} }) {
                   {sectionBlurb.ctaButton && sectionBlurb.ctaButton.label && sectionBlurb.ctaButton.link && (
                     <Link
                       href={sectionBlurb.ctaButton.link}
+                      data-umami-event="cta-homepage-accordion-section"
+                      data-umami-event-label={sectionBlurb.ctaButton.label}
+                      data-umami-event-destination={sectionBlurb.ctaButton.link}
+                      data-umami-event-context={sectionBlurb.title}
                       className="inline-flex items-center justify-center px-4 py-2 text-sm font-[600]
                         bg-primary text-secondary border-2 border-secondary rounded-lg
                         hover:bg-secondary hover:text-primary transition-colors"
@@ -148,6 +152,10 @@ export function HomepageAccordion({ sections = [], blurbsBySlug = {} }) {
                         {blurb.ctaButton && blurb.ctaButton.label && blurb.ctaButton.link && (
                           <Link
                             href={blurb.ctaButton.link}
+                            data-umami-event="cta-homepage-accordion-subsection"
+                            data-umami-event-label={blurb.ctaButton.label}
+                            data-umami-event-destination={blurb.ctaButton.link}
+                            data-umami-event-context={blurb.title}
                             className="inline-flex items-center justify-center px-4 py-2 text-sm font-[600]
                               bg-primary text-secondary border-2 border-secondary rounded-lg
                               hover:bg-secondary hover:text-primary transition-colors"

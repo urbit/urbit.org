@@ -139,6 +139,10 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
             <div className="flex mt-4 justify-start">
               <a
                 href={ctaButton.link}
+                data-umami-event="cta-homepage-subsection"
+                data-umami-event-label={ctaButton.label}
+                data-umami-event-destination={ctaButton.link}
+                data-umami-event-context={title}
                 target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
                 rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-base md:text-lg font-[600] rounded-md transition-colors"
@@ -305,6 +309,10 @@ export const ContentBlurb = ({ title, description, content, references, image, i
         <div className="flex mt-4 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-overview-blurb"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-base md:text-lg font-[600] rounded-md transition-colors"
@@ -423,6 +431,10 @@ export const MicroBlurb = ({
         <div className="flex mt-2 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-overview-micro"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-lg md:text-xl font-[600] rounded-md transition-colors"
@@ -552,6 +564,10 @@ export function HomepageBlurb({
         <div className="flex mt-4 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-homepage-section"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center mx-2 px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-lg md:text-xl font-[600] rounded-md transition-colors"
