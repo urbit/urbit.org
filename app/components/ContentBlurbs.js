@@ -250,7 +250,7 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
                 data-umami-event="ui-blurb-info-preview"
                 data-umami-event-label={title}
-                data-umami-event-context={id || slugify(title)}
+                data-umami-event-context={slugify(title)}
                 data-umami-event-variant="preview"
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
