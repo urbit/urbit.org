@@ -5,6 +5,35 @@ import Image from "next/image";
 
 const renderHtml = (content) => ({ __html: content || "" });
 
+const slugify = (value) => {
+  if (!value) {
+    return "unknown";
+  }
+
+  return value
+    .toString()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+};
+
+const getExternalEventName = (href) => {
+  if (!href) {
+    return undefined;
+  }
+
+  const normalized = href.toLowerCase();
+  if (normalized.startsWith("mailto:") || normalized.startsWith("tel:")) {
+    return "link-contact";
+  }
+
+  if (normalized.startsWith("http")) {
+    return "link-external";
+  }
+
+  return undefined;
+};
+
 export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -41,18 +70,27 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
             {title}
           </h3>
           <ul className="flex items-center py-2">
-            {references.map((ref, idx) => (
-              <li key={idx}>
-                <a
-                  href={ref.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-small gap-x-4 text-contrast-2 hover:text-primary font-mono"
-                >
-                  {ref.title}
-                </a>
-              </li>
-            ))}
+            {references.map((ref, idx) => {
+              const eventName = getExternalEventName(ref.link);
+
+              return (
+                <li key={idx}>
+                  <a
+                    href={ref.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-umami-event={eventName}
+                    data-umami-event-label={ref.title}
+                    data-umami-event-destination={eventName ? ref.link : undefined}
+                    data-umami-event-context={eventName ? slugify(title) : undefined}
+                    data-umami-event-variant={eventName ? "blurb-reference" : undefined}
+                    className="text-small gap-x-4 text-contrast-2 hover:text-primary font-mono"
+                  >
+                    {ref.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <div className="text-base text-gray-87 line-clamp-5" dangerouslySetInnerHTML={renderHtml(content)} />
         </div>
@@ -85,8 +123,9 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
   );
 };
 
-export const PreviewContentBlurb = ({ id, title, description, content, references, image, imageDark, ctaButton }) => {
+export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   return (
     <div id={id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
@@ -121,18 +160,27 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
             {title}
           </h3>
           <ul className="flex flex-wrap items-center gap-x-8 gap-y-1 py-2">
-            {references.map((ref, idx) => (
-              <li key={idx}>
-                <a
-                  href={ref.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-small text-contrast-2 md:hover:text-primary font-mono"
-                >
-                  {ref.title}
-                </a>
-              </li>
-            ))}
+            {references.map((ref, idx) => {
+              const eventName = getExternalEventName(ref.link);
+
+              return (
+                <li key={idx}>
+                  <a
+                    href={ref.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-umami-event={eventName}
+                    data-umami-event-label={ref.title}
+                    data-umami-event-destination={eventName ? ref.link : undefined}
+                    data-umami-event-context={eventName ? tooltipContext : undefined}
+                    data-umami-event-variant={eventName ? "blurb-reference" : undefined}
+                    className="text-small text-contrast-2 md:hover:text-primary font-mono"
+                  >
+                    {ref.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <div
             className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}
@@ -147,6 +195,10 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
             <div className="flex mt-4 justify-start">
               <a
                 href={ctaButton.link}
+                data-umami-event="cta-homepage-subsection"
+                data-umami-event-label={ctaButton.label}
+                data-umami-event-destination={ctaButton.link}
+                data-umami-event-context={title}
                 target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
                 rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-base md:text-lg font-[600] rounded-md transition-colors"
@@ -201,8 +253,9 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
   );
 };
 
-export const ContentBlurb = ({ title, description, content, references, image, imageDark, ctaButton }) => {
+export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
@@ -244,6 +297,10 @@ export const ContentBlurb = ({ title, description, content, references, image, i
             {hasDetails && (
               <button
                 onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+                data-umami-event="ui-blurb-info-preview"
+                data-umami-event-label={title}
+                data-umami-event-context={tooltipContext}
+                data-umami-event-variant="preview"
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
               >
@@ -258,18 +315,27 @@ export const ContentBlurb = ({ title, description, content, references, image, i
             )}
           </div>
           <ul className="flex items-center gap-x-8">
-            {references && references.map((ref, idx) => (
-              <li key={idx}>
-                <a
-                  href={ref.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-small text-contrast-2 hover:text-primary font-mono"
-                >
-                  {ref.title}
-                </a>
-              </li>
-            ))}
+            {references && references.map((ref, idx) => {
+              const eventName = getExternalEventName(ref.link);
+
+              return (
+                <li key={idx}>
+                  <a
+                    href={ref.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-umami-event={eventName}
+                    data-umami-event-label={ref.title}
+                    data-umami-event-destination={eventName ? ref.link : undefined}
+                    data-umami-event-context={eventName ? tooltipContext : undefined}
+                    data-umami-event-variant={eventName ? "blurb-reference" : undefined}
+                    className="text-small text-contrast-2 hover:text-primary font-mono"
+                  >
+                    {ref.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -289,12 +355,19 @@ export const ContentBlurb = ({ title, description, content, references, image, i
               <ul className="space-y-2">
                 {references.map((ref, idx) => {
                   if (!ref.description) return null;
+                  const eventName = getExternalEventName(ref.link);
+
                   return (
                     <li key={idx}>
                       <a
                         href={ref.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-umami-event={eventName}
+                        data-umami-event-label={ref.title}
+                        data-umami-event-destination={eventName ? ref.link : undefined}
+                        data-umami-event-context={eventName ? tooltipContext : undefined}
+                        data-umami-event-variant={eventName ? "blurb-reference" : undefined}
                         className="text-small text-contrast-2 hover:text-primary font-mono font-[600]"
                       >
                         {ref.title}
@@ -317,6 +390,10 @@ export const ContentBlurb = ({ title, description, content, references, image, i
         <div className="flex mt-4 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-overview-blurb"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-base md:text-lg font-[600] rounded-md transition-colors"
@@ -331,6 +408,7 @@ export const ContentBlurb = ({ title, description, content, references, image, i
 
 export const MicroBlurb = ({
   id,
+  blurbSlug,
   title,
   description,
   content,
@@ -341,6 +419,7 @@ export const MicroBlurb = ({
   showFullContent = false  // Toggle between preview and full content
 }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
@@ -379,6 +458,10 @@ export const MicroBlurb = ({
         {hasDetails && (
           <button
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+            data-umami-event="ui-blurb-info-content"
+            data-umami-event-label={title}
+            data-umami-event-context={tooltipContext}
+            data-umami-event-variant="content"
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
@@ -403,12 +486,19 @@ export const MicroBlurb = ({
               <ul className="space-y-2">
                 {references.map((ref, idx) => {
                   if (!ref.description) return null;
+                  const eventName = getExternalEventName(ref.link);
+
                   return (
                     <li key={idx}>
                       <a
                         href={ref.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-umami-event={eventName}
+                        data-umami-event-label={ref.title}
+                        data-umami-event-destination={eventName ? ref.link : undefined}
+                        data-umami-event-context={eventName ? tooltipContext : undefined}
+                        data-umami-event-variant={eventName ? "blurb-reference" : undefined}
                         className="text-small text-contrast-2 hover:text-primary font-mono font-[600]"
                       >
                         {ref.title}
@@ -437,6 +527,10 @@ export const MicroBlurb = ({
         <div className="flex mt-2 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-overview-micro"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-lg md:text-xl font-[600] rounded-md transition-colors"
@@ -465,6 +559,7 @@ export const MicroBlurb = ({
  */
 export function HomepageBlurb({
   id,
+  blurbSlug,
   title,
   description,
   content,
@@ -474,6 +569,7 @@ export function HomepageBlurb({
   ctaButton
 }) {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
@@ -514,6 +610,10 @@ export function HomepageBlurb({
         {hasDetails && (
           <button
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+            data-umami-event="ui-blurb-info-homepage"
+            data-umami-event-label={title}
+            data-umami-event-context={tooltipContext}
+            data-umami-event-variant="homepage"
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
@@ -543,12 +643,19 @@ export function HomepageBlurb({
               <ul className="space-y-2">
                 {references.map((ref, idx) => {
                   if (!ref.description) return null;
+                  const eventName = getExternalEventName(ref.link);
+
                   return (
                     <li key={idx}>
                       <a
                         href={ref.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-umami-event={eventName}
+                        data-umami-event-label={ref.title}
+                        data-umami-event-destination={eventName ? ref.link : undefined}
+                        data-umami-event-context={eventName ? tooltipContext : undefined}
+                        data-umami-event-variant={eventName ? "blurb-reference" : undefined}
                         className="text-small text-contrast-2 hover:text-primary font-mono font-[600]"
                       >
                         {ref.title}
@@ -570,6 +677,10 @@ export function HomepageBlurb({
         <div className="flex mt-4 justify-start">
           <a
             href={ctaButton.link}
+            data-umami-event="cta-homepage-section"
+            data-umami-event-label={ctaButton.label}
+            data-umami-event-destination={ctaButton.link}
+            data-umami-event-context={title}
             target={ctaButton.link.startsWith('http') ? '_blank' : undefined}
             rel={ctaButton.link.startsWith('http') ? 'noopener noreferrer' : undefined}
             className="whitespace-nowrap items-center mx-2 px-2 py-1 inline-flex bg-accent-1 md:hover:text-contrast-2 text-secondary font-sans text-lg md:text-xl font-[600] rounded-md transition-colors"

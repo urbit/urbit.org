@@ -77,12 +77,22 @@ export default async function EventsHome() {
           <div className="flex flex-row gap-x-2 mt-8">
             <a
               href="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
+              data-umami-event="link-external"
+              data-umami-event-label="Subscribe To Calendar"
+              data-umami-event-destination="https://calendar.google.com/calendar/ical/c_13647438d00ef31237be88b19de24de30aeb2609657c80cfb6b22350941c61dd%40group.calendar.google.com/public/basic.ics"
+              data-umami-event-context="/events"
+              data-umami-event-variant="events"
               className="action-button"
             >
               Subscribe To Calendar
             </a>
             <a
               href="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
+              data-umami-event="link-external"
+              data-umami-event-label="Enter Hacker House"
+              data-umami-event-destination="https://app.gather.town/app/xAYeiPI2XDYhRM9t/urbit-hacker-house"
+              data-umami-event-context="/events"
+              data-umami-event-variant="events"
               className="action-button"
             >
               Enter Hacker House

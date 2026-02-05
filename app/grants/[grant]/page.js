@@ -50,6 +50,7 @@ export default async function PostPage({ params }) {
   const postSlug = `/grants/${grant}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
+  const grantContext = `/grants/${params.grant}`;
   // const postMeta = await getYaml(postSlug);
   // const config = await getYaml("/config.md");
   // const components = postData?.components;
@@ -72,7 +73,15 @@ export default async function PostPage({ params }) {
             <span className="">Champion(s): {extra?.champion}</span>
           </div>
           <div className="my-[2.8rem]">
-            <Link className="apply-button" href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z">
+            <Link
+              className="apply-button"
+              href="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z"
+              data-umami-event="link-external"
+              data-umami-event-label="Apply"
+              data-umami-event-destination="https://airtable.com/apppnWSqfsVvUwkWh/shrCi54rEDxgSZr3z"
+              data-umami-event-context={grantContext}
+              data-umami-event-variant="grant"
+            >
               Apply
             </Link>
           </div>

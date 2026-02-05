@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { useLayoutSlots } from "../lib/layoutSlots";
 import { MicroBlurb } from "./ContentBlurbs";
 
@@ -20,6 +21,7 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
   const navRef = useRef(null);
   const hasInitiallyMounted = useRef(false);
   const { setSidebarVisible, enableSidebarTransitions } = useLayoutSlots();
+  const pathname = usePathname();
 
   // Helper to get the visible element when there are duplicate IDs (desktop vs mobile)
   const getVisibleElement = (id) => {
@@ -220,6 +222,10 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
             {/* Section Header */}
             <button
               onClick={() => handleSectionClick(section.id)}
+              data-umami-event={`nav-homepage-section-${section.id}`}
+              data-umami-event-label={section.label}
+              data-umami-event-context={pathname}
+              data-umami-event-variant="sidebar"
               className="text-left transition-colors"
             >
               <div className={`text-sm font-mono mb-1 transition-colors ${isSectionActive
@@ -240,6 +246,10 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
                     <button
                       key={subsection.id}
                       onClick={() => handleSubsectionClick(subsection.id)}
+                      data-umami-event={`nav-homepage-subsection-${subsection.id}`}
+                      data-umami-event-label={subsection.label}
+                      data-umami-event-context={pathname}
+                      data-umami-event-variant="sidebar"
                       className={`text-3xl font-sans font-semibold text-left transition-colors w-full ${isSubsectionActive
                         ? "text-accent-1"
                         : "text-contrast-2 hover:text-accent-1"
