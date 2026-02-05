@@ -5,6 +5,18 @@ import Image from "next/image";
 
 const renderHtml = (content) => ({ __html: content || "" });
 
+const slugify = (value) => {
+  if (!value) {
+    return "unknown";
+  }
+
+  return value
+    .toString()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+};
+
 export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -250,7 +262,7 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
                 data-umami-event="ui-blurb-info-preview"
                 data-umami-event-label={title}
-                data-umami-event-context={title}
+                data-umami-event-context={id || slugify(title)}
                 data-umami-event-variant="preview"
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
@@ -393,7 +405,7 @@ export const MicroBlurb = ({
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
             data-umami-event="ui-blurb-info-content"
             data-umami-event-label={title}
-            data-umami-event-context={title}
+            data-umami-event-context={slugify(title)}
             data-umami-event-variant="content"
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
@@ -536,7 +548,7 @@ export function HomepageBlurb({
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
             data-umami-event="ui-blurb-info-homepage"
             data-umami-event-label={title}
-            data-umami-event-context={title}
+            data-umami-event-context={slugify(title)}
             data-umami-event-variant="homepage"
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
