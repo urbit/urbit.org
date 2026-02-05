@@ -23,6 +23,7 @@ export default async function PostPage({ params }) {
   const pageSlug = `/communities/${params.community}.md`; // Append .md here to use in the file path
   const pageData = await getMarkdownContent(pageSlug, "toml");
   const { title, description, image, group, links } = pageData.frontMatter;
+  const pageContext = `/communities/${params.community}`;
 
   return (
     <section className="lg:grid grid-cols-6 gap-x-4 mb-32 mt-9 md:mt-[2rem] container min-h-[calc(100vh-var(--header-height)-28rem)]">
@@ -34,8 +35,22 @@ export default async function PostPage({ params }) {
           {title}
         </div>
         {links.map((link) => {
+          const normalized = link.url?.toLowerCase() || "";
+          const eventName = normalized.startsWith("mailto:") || normalized.startsWith("tel:")
+            ? "link-contact"
+            : "link-external";
+
           return (
-            <a href={link.url} className="action-button mb-4 text-xlarge" key={link.url}>
+            <a
+              href={link.url}
+              data-umami-event={eventName}
+              data-umami-event-label={link.label}
+              data-umami-event-destination={link.url}
+              data-umami-event-context={pageContext}
+              data-umami-event-variant="community"
+              className="action-button mb-4 text-xlarge"
+              key={link.url}
+            >
               {link.label}
             </a>
           );

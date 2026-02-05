@@ -1,13 +1,31 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NewsletterSignup } from "./NewsletterSignup";
 import React, { useState, useEffect, useRef } from "react";
 
+const getFooterEventName = (url) => {
+  if (!url) {
+    return undefined;
+  }
+
+  const normalized = url.toLowerCase();
+  if (normalized.startsWith("mailto:") || normalized.startsWith("tel:")) {
+    return "link-contact";
+  }
+
+  if (normalized.startsWith("http")) {
+    return "link-external";
+  }
+
+  return undefined;
+};
 
 export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSection, setExpandedSection }) => {
   // Separate resources and socials from footerData
   const resources = footerData?.find(col => col.column_label === "resources");
   const socials = footerData?.find(col => col.column_label === "socials");
+
 
   return (
     <section className="w-full z-10 h-max font-mono text-large text-gray-87 leading-120">
@@ -34,6 +52,7 @@ export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSec
 // FooterExpansion Component: Displays expanded content at bottom of viewport
 export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightChange }) => {
   const expansionRef = useRef(null);
+  const pathname = usePathname();
 
   // Handle click outside to close (excluding toggle buttons)
   useEffect(() => {
@@ -86,39 +105,57 @@ export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightCha
           <div className="justify-end py-2">
             {type === 'resources' && (
               <div className="font-mono flex flex-row flex-wrap gap-x-6 gap-y-2 justify-center items-center">
-                {footerData.subItems?.map((link, idx) => (
-                  <Link
-                    key={link.title || idx}
-                    href={link.url}
-                    target={link.external ? "_blank" : "_self"}
-                    rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-contrast-3 hover:text-contrast-2 transition-colors text-sm"
-                  >
-                    {link.title}
-                  </Link>
-                ))}
+                {footerData.subItems?.map((link, idx) => {
+                  const eventName = getFooterEventName(link.url);
+
+                  return (
+                    <Link
+                      key={link.title || idx}
+                      href={link.url}
+                      target={link.external ? "_blank" : "_self"}
+                      rel={link.external ? "noopener noreferrer" : undefined}
+                      data-umami-event={eventName}
+                      data-umami-event-label={link.title}
+                      data-umami-event-destination={eventName ? link.url : undefined}
+                      data-umami-event-context={eventName ? pathname : undefined}
+                      data-umami-event-variant={eventName ? "footer-resources" : undefined}
+                      className="text-contrast-3 hover:text-contrast-2 transition-colors text-sm"
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
               </div>
             )}
             {type === 'contact' && (
               <div className="flex flex-row gap-x-4 justify-center items-center">
-                {footerData.subItems?.map((link, idx) => (
-                  <Link
-                    key={link.title || idx}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-max"
-                    aria-label={link.label || link.title}
-                  >
-                    {link.logo && (
-                      <img
-                        src={link.logo}
-                        alt={link.label || link.title}
-                        className="w-4 h-4 invert"
-                      />
-                    )}
-                  </Link>
-                ))}
+                {footerData.subItems?.map((link, idx) => {
+                  const eventName = getFooterEventName(link.url);
+
+                  return (
+                    <Link
+                      key={link.title || idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-umami-event={eventName}
+                      data-umami-event-label={link.label || link.title}
+                      data-umami-event-destination={eventName ? link.url : undefined}
+                      data-umami-event-context={eventName ? pathname : undefined}
+                      data-umami-event-variant={eventName ? "footer-contact" : undefined}
+                      className="w-max"
+                      aria-label={link.label || link.title}
+                    >
+                      {link.logo && (
+                        <img
+                          src={link.logo}
+                          alt={link.label || link.title}
+                          className="w-4 h-4 invert"
+                        />
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -129,30 +166,40 @@ export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightCha
 
 // Mobile Component: Resources stacked vertically, socials as icons
 const MobileFooter = ({ resources, socials }) => {
+  const pathname = usePathname();
   return (
     <div className="flex flex-col text-[16px] bg-contrast-1 gap-y-6 border-t border-t-1 border-foreground p-4">
       <NewsletterSignup className="z-10 mb-2" />
       {/* Socials - Icons only */}
       {socials && (
         <div className="justify-center flex flex-row gap-x-4">
-          {socials.subItems.map((link, idx) => (
-            <Link
-              key={link.title || idx}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-max"
-              aria-label={link.label || link.title}
-            >
-              {link.logo && (
-                <img
-                  src={link.logo}
-                  alt={link.label || link.title}
-                  className="w-[1em] h-[1em] invert"
-                />
-              )}
-            </Link>
-          ))}
+          {socials.subItems.map((link, idx) => {
+            const eventName = getFooterEventName(link.url);
+
+            return (
+              <Link
+                key={link.title || idx}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-umami-event={eventName}
+                data-umami-event-label={link.label || link.title}
+                data-umami-event-destination={eventName ? link.url : undefined}
+                data-umami-event-context={eventName ? pathname : undefined}
+                data-umami-event-variant={eventName ? "footer-social" : undefined}
+                className="w-max"
+                aria-label={link.label || link.title}
+              >
+                {link.logo && (
+                  <img
+                    src={link.logo}
+                    alt={link.label || link.title}
+                    className="w-[1em] h-[1em] invert"
+                  />
+                )}
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>
@@ -161,6 +208,7 @@ const MobileFooter = ({ resources, socials }) => {
 
 // Desktop Component: Resources inline, socials as icons
 const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection }) => {
+  const pathname = usePathname();
   return (
     <div>
       {/* Extra Large Screens */}
@@ -180,17 +228,26 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
           {resources && (
             <div>
               <div className="flex flex-row flex-wrap gap-x-6 gap-y-2">
-                {resources.subItems.map((link, idx) => (
-                  <Link
-                    key={link.title || idx}
-                    href={link.url}
-                    target={link.external ? "_blank" : "_self"}
-                    rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-contrast-3 hover:text-contrast-2 transition-colors w-max"
-                  >
-                    {link.title}
-                  </Link>
-                ))}
+                {resources.subItems.map((link, idx) => {
+                  const eventName = getFooterEventName(link.url);
+
+                  return (
+                    <Link
+                      key={link.title || idx}
+                      href={link.url}
+                      target={link.external ? "_blank" : "_self"}
+                      rel={link.external ? "noopener noreferrer" : undefined}
+                      data-umami-event={eventName}
+                      data-umami-event-label={link.title}
+                      data-umami-event-destination={eventName ? link.url : undefined}
+                      data-umami-event-context={eventName ? pathname : undefined}
+                      data-umami-event-variant={eventName ? "footer-resources" : undefined}
+                      className="text-contrast-3 hover:text-contrast-2 transition-colors w-max"
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -200,24 +257,33 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
           {socials && (
             <div>
               <div className="flex flex-row flex-wrap gap-y-4 gap-x-4">
-                {socials.subItems.map((link, idx) => (
-                  <Link
-                    key={link.title || idx}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-max group"
-                    aria-label={link.label || link.title}
-                  >
-                    {link.logo && (
-                      <img
-                        src={link.logo}
-                        alt={link.label || link.title}
-                        className="w-[1em] h-[1em] invert"
-                      />
-                    )}
-                  </Link>
-                ))}
+                {socials.subItems.map((link, idx) => {
+                  const eventName = getFooterEventName(link.url);
+
+                  return (
+                    <Link
+                      key={link.title || idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-umami-event={eventName}
+                      data-umami-event-label={link.label || link.title}
+                      data-umami-event-destination={eventName ? link.url : undefined}
+                      data-umami-event-context={eventName ? pathname : undefined}
+                      data-umami-event-variant={eventName ? "footer-social" : undefined}
+                      className="w-max group"
+                      aria-label={link.label || link.title}
+                    >
+                      {link.logo && (
+                        <img
+                          src={link.logo}
+                          alt={link.label || link.title}
+                          className="w-[1em] h-[1em] invert"
+                        />
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}

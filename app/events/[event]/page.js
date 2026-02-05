@@ -34,6 +34,7 @@ export default async function PostPage({ params }) {
     ends,
     location 
   } = eventData.frontMatter;
+  const eventContext = `/events/${params.event}`;
 
   return (
     <section className="grid md:grid-cols-6 mb-32 mt-9 md:mt-[6rem] container">
@@ -48,7 +49,17 @@ export default async function PostPage({ params }) {
 
           {/* <div className="mb-8">{starts} - {ends}</div> */}
           
-          <a href={registration_url} className="mt-4 action-button">Register</a>
+          <a
+            href={registration_url}
+            data-umami-event="link-external"
+            data-umami-event-label="Register"
+            data-umami-event-destination={registration_url}
+            data-umami-event-context={eventContext}
+            data-umami-event-variant="event-registration"
+            className="mt-4 action-button"
+          >
+            Register
+          </a>
         </div>
         
         {Markdoc.renderers.react(eventData.content, React)}

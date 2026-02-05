@@ -10,6 +10,7 @@ export default async function EcosystemHome() {
   const ecosystemConfig = await getMarkdownContent("ecosystem/config.md");
   const sidebarPosition = ecosystemConfig.frontMatter?.sidebar_position || 'right';
   const sections = ecosystemConfig.frontMatter?.sections || [];
+  const ecosystemContext = "/ecosystem";
 
   const paths = {
     articles: { path: "ecosystem/articles", frontMatter: [] },
@@ -56,6 +57,11 @@ export default async function EcosystemHome() {
               href={org.data.URL}
               target="_blank"
               key={i}
+              data-umami-event="link-external"
+              data-umami-event-label={org.data.title}
+              data-umami-event-destination={org.data.URL}
+              data-umami-event-context={ecosystemContext}
+              data-umami-event-variant="ecosystem-org"
               className="relative group max-h-12"
             >
               <div className="flex gap-x-4 md:gap-x-8 items-center py-2 md:py-4">
@@ -75,7 +81,17 @@ export default async function EcosystemHome() {
       <Section id="articles-press" className="container" title="Articles & Press">
         {allArticlesFrontMatter.map((article, i) => {
           return (
-            <Link href={article.data.URL} key={i} target="_blank" className="group leading-[110%] cursor-pointer mb-4 flex flex-col">
+            <Link
+              href={article.data.URL}
+              key={i}
+              target="_blank"
+              data-umami-event="link-external"
+              data-umami-event-label={article.data.publication}
+              data-umami-event-destination={article.data.URL}
+              data-umami-event-context={ecosystemContext}
+              data-umami-event-variant="ecosystem-article"
+              className="group leading-[110%] cursor-pointer mb-4 flex flex-col"
+            >
               <div className="flex justify-between items-end">
                 <h3 className="font-serif font-bold text-5xl text-accent-1 group-hover:text-primary">{article.data.publication}</h3>
                 <div className="hidden flex items-end md:block">
