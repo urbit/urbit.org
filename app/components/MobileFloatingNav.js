@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 /**
  * MobileFloatingNav - Floating button for mobile navigation between anchors
@@ -16,6 +17,10 @@ import Image from "next/image";
 export function MobileFloatingNav({ anchors, heroHeight = 0 }) {
   const [isVisible, setIsVisible] = useState(false);
   const [currentAnchorIndex, setCurrentAnchorIndex] = useState(0);
+  const pathname = usePathname();
+  const hasAnchors = anchors.length > 0;
+  const nextIndex = hasAnchors ? (currentAnchorIndex + 1) % anchors.length : 0;
+  const nextAnchor = hasAnchors ? anchors[nextIndex] : null;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +73,11 @@ export function MobileFloatingNav({ anchors, heroHeight = 0 }) {
   return (
     <button
       onClick={handleNextAnchor}
+      data-umami-event="nav-homepage-floating-next"
+      data-umami-event-label={nextAnchor?.label || "Next section"}
+      data-umami-event-destination={nextAnchor?.id}
+      data-umami-event-context={pathname}
+      data-umami-event-variant="floating"
       className="md:hidden fixed bottom-5 right-5 z-40
         rounded-lg
         p-2

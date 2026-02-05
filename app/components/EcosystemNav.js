@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useLayoutSlots } from "../lib/layoutSlots";
 
 /**
@@ -14,6 +15,7 @@ import { useLayoutSlots } from "../lib/layoutSlots";
 export function EcosystemNav({ sections = [] }) {
   const [activeSection, setActiveSection] = useState("");
   const { setSidebarVisible } = useLayoutSlots();
+  const pathname = usePathname();
 
   // Ensure sidebar is visible on pages without hero
   useEffect(() => {
@@ -123,6 +125,10 @@ export function EcosystemNav({ sections = [] }) {
           <button
             key={section.id}
             onClick={() => handleSectionClick(section.id)}
+            data-umami-event={`nav-ecosystem-section-${section.id}`}
+            data-umami-event-label={section.title}
+            data-umami-event-context={pathname}
+            data-umami-event-variant="sidebar"
             className={`font-sans text-left text-2xl font-[400] transition-colors ${
               isActive ? "text-primary" : "text-contrast-2 hover:text-contrast-3"
             }`}

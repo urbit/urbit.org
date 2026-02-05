@@ -10,6 +10,28 @@ import { AnnouncementsSubmenu } from "./AnnouncementsSubmenu";
 import { OverviewSubmenu } from "./OverviewSubmenu";
 import { EcosystemSubmenu } from "./EcosystemSubmenu";
 
+const buildHeaderNavSlug = (navItem) => {
+  const url = navItem?.url || "";
+  if (url === "/") {
+    return "home";
+  }
+
+  const base = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const normalized = base
+    .replace(/[^a-z0-9]+/gi, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+
+  if (normalized) {
+    return normalized;
+  }
+
+  return (navItem?.title || "unknown")
+    .replace(/[^a-z0-9]+/gi, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+};
+
 export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcements, urbitExplainedSections, runningUrbitSections }) => {
   const headerRef = useRef(null);
 
@@ -179,6 +201,11 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                   key={`${navItem} + ${i}`}
                   href={navItem.url}
                   onClick={toggleMenu}
+                  data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+                  data-umami-event-label={navItem.title}
+                  data-umami-event-destination={navItem.url}
+                  data-umami-event-context={currentRoute}
+                  data-umami-event-variant="header-mobile"
                 >
                   <span className="nav-button leading-inherit flex items-center gap-2">
                     {navItem.title}
@@ -220,6 +247,11 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                         onClick={toggleMenu}
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+                        data-umami-event-label={navItem.title}
+                        data-umami-event-destination={navItem.url}
+                        data-umami-event-context={currentRoute}
+                        data-umami-event-variant="header-mobile"
                       >
                         <span className="nav-button leading-inherit flex items-center gap-2">
                           {navItem.title}
@@ -264,6 +296,11 @@ const GlobalNav = ({ nav }) => {
               key={`${navItem} + ${i}`}
               href={navItem.url}
               target={navItem.external ? "_blank" : ""}
+              data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+              data-umami-event-label={navItem.title}
+              data-umami-event-destination={navItem.url}
+              data-umami-event-context={currentRoute}
+              data-umami-event-variant="header-desktop"
             >
               <span className="">{navItem.title}</span>
               {navItem.icon && (
