@@ -36,6 +36,11 @@ export const OverviewNav = ({ urbitExplainedSections = [], runningUrbitSections 
                 <Link
                   className={`transition-colors ${isActive ? 'text-contrast-3' : 'text-contrast-2 hover:text-contrast-3'}`}
                   href={href}
+                  data-umami-event={`nav-overview-urbit-explained-sidebar-${section.slug}`}
+                  data-umami-event-label={section.title}
+                  data-umami-event-destination={href}
+                  data-umami-event-context={currentRoute}
+                  data-umami-event-variant="sidebar"
                 >
                   <span className="nav-button">{section.title}</span>
                 </Link>
@@ -62,6 +67,11 @@ export const OverviewNav = ({ urbitExplainedSections = [], runningUrbitSections 
                 <Link
                   className={`transition-colors ${isActive ? 'text-contrast-3' : 'text-contrast-2 hover:text-contrast-3'}`}
                   href={href}
+                  data-umami-event={`nav-overview-running-urbit-sidebar-${section.slug}`}
+                  data-umami-event-label={section.title}
+                  data-umami-event-destination={href}
+                  data-umami-event-context={currentRoute}
+                  data-umami-event-variant="sidebar"
                 >
                   <span className="nav-button">{section.title}</span>
                 </Link>

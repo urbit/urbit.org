@@ -88,6 +88,11 @@ export const OverviewSubmenu = ({ urbitExplainedSections = [], runningUrbitSecti
                 key={section.slug}
                 href={href}
                 onClick={handleLinkClick}
+                data-umami-event={`nav-overview-urbit-explained-mobile-${section.slug}`}
+                data-umami-event-label={section.title}
+                data-umami-event-destination={href}
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="mobile"
                 className={classNames(
                   "font-sans text-base py-1 transition-colors",
                   isActive ? "text-contrast-3 font-bold" : "text-contrast-2"
@@ -114,6 +119,11 @@ export const OverviewSubmenu = ({ urbitExplainedSections = [], runningUrbitSecti
                 key={section.slug}
                 href={href}
                 onClick={handleLinkClick}
+                data-umami-event={`nav-overview-running-urbit-mobile-${section.slug}`}
+                data-umami-event-label={section.title}
+                data-umami-event-destination={href}
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="mobile"
                 className={classNames(
                   "font-sans text-base py-1 transition-colors",
                   isActive ? "text-contrast-3 font-bold" : "text-contrast-2"
