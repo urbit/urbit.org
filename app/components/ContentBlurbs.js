@@ -357,6 +357,7 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
 
 export const MicroBlurb = ({
   id,
+  blurbSlug,
   title,
   description,
   content,
@@ -367,6 +368,7 @@ export const MicroBlurb = ({
   showFullContent = false  // Toggle between preview and full content
 }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
