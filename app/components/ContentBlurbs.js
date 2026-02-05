@@ -248,6 +248,10 @@ export const ContentBlurb = ({ title, description, content, references, image, i
             {hasDetails && (
               <button
                 onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+                data-umami-event="ui-blurb-info-preview"
+                data-umami-event-label={title}
+                data-umami-event-context={id || title}
+                data-umami-event-variant="preview"
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
               >
@@ -387,6 +391,10 @@ export const MicroBlurb = ({
         {hasDetails && (
           <button
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+            data-umami-event="ui-blurb-info-content"
+            data-umami-event-label={title}
+            data-umami-event-context={title}
+            data-umami-event-variant="content"
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
@@ -526,6 +534,10 @@ export function HomepageBlurb({
         {hasDetails && (
           <button
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
+            data-umami-event="ui-blurb-info-homepage"
+            data-umami-event-label={title}
+            data-umami-event-context={title}
+            data-umami-event-variant="homepage"
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
