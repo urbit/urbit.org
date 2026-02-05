@@ -32,6 +32,21 @@ const buildHeaderNavSlug = (navItem) => {
     .toLowerCase();
 };
 
+const getHeaderNavEvent = (navItem) => {
+  const url = navItem?.url || "";
+  const normalized = url.toLowerCase();
+
+  if (normalized.startsWith("mailto:") || normalized.startsWith("tel:")) {
+    return "link-contact";
+  }
+
+  if (navItem?.external || normalized.startsWith("http")) {
+    return "link-external";
+  }
+
+  return `nav-header-${buildHeaderNavSlug(navItem)}`;
+};
+
 export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcements, urbitExplainedSections, runningUrbitSections }) => {
   const headerRef = useRef(null);
 
@@ -191,6 +206,8 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
             {nav?.filter(navItem => !navItem.external).map((navItem, i) => {
               const isActive = currentRoute.startsWith(navItem.url) && navItem.url !== '/';
               const isHome = currentRoute === '/' && navItem.url === '/';
+              const eventName = getHeaderNavEvent(navItem);
+              const eventVariant = eventName.startsWith("link-") ? "header" : "header-mobile";
 
               return (
                 <Link
@@ -201,11 +218,11 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                   key={`${navItem} + ${i}`}
                   href={navItem.url}
                   onClick={toggleMenu}
-                  data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+                  data-umami-event={eventName}
                   data-umami-event-label={navItem.title}
                   data-umami-event-destination={navItem.url}
                   data-umami-event-context={currentRoute}
-                  data-umami-event-variant="header-mobile"
+                  data-umami-event-variant={eventVariant}
                 >
                   <span className="nav-button leading-inherit flex items-center gap-2">
                     {navItem.title}
@@ -239,6 +256,8 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                 <h3 className="text-sm uppercase tracking-wider text-contrast-3 opacity-60">Resources</h3>
                 <div className="flex flex-col gap-4">
                   {nav?.filter(navItem => navItem.external).map((navItem, i) => {
+                    const eventName = getHeaderNavEvent(navItem);
+
                     return (
                       <Link
                         className="text-xl leading-[1cap] text-primary transition-colors hover:text-contrast-2"
@@ -247,11 +266,11 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                         onClick={toggleMenu}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+                        data-umami-event={eventName}
                         data-umami-event-label={navItem.title}
                         data-umami-event-destination={navItem.url}
                         data-umami-event-context={currentRoute}
-                        data-umami-event-variant="header-mobile"
+                        data-umami-event-variant="header"
                       >
                         <span className="nav-button leading-inherit flex items-center gap-2">
                           {navItem.title}
@@ -282,6 +301,8 @@ const GlobalNav = ({ nav }) => {
         {nav?.map((navItem, i) => {
 
           const isActive = currentRoute.startsWith(navItem.url);
+          const eventName = getHeaderNavEvent(navItem);
+          const eventVariant = eventName.startsWith("link-") ? "header" : "header-desktop";
 
           return (
             <Link
@@ -296,11 +317,11 @@ const GlobalNav = ({ nav }) => {
               key={`${navItem} + ${i}`}
               href={navItem.url}
               target={navItem.external ? "_blank" : ""}
-              data-umami-event={`nav-header-${buildHeaderNavSlug(navItem)}`}
+              data-umami-event={eventName}
               data-umami-event-label={navItem.title}
               data-umami-event-destination={navItem.url}
               data-umami-event-context={currentRoute}
-              data-umami-event-variant="header-desktop"
+              data-umami-event-variant={eventVariant}
             >
               <span className="">{navItem.title}</span>
               {navItem.icon && (
