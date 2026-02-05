@@ -8,9 +8,12 @@ export async function generateMetadata({ params }, parent) {
   const config = await getMarkdownContent("config.md");
   const metadata = config.frontMatter.site_metadata;
 
+  const metadataBase = metadata?.canonicalUrl ? new URL(metadata.canonicalUrl) : undefined;
+
   return {
     title: `${config.frontMatter.title} — ${config.frontMatter.subtitle}`,
     description: `${config.frontMatter?.description}`,
+    metadataBase,
     icons: {
       icon: [
         { url: '/icons/favicons/favicon-light.svg', media: '(prefers-color-scheme: light)' },
@@ -92,28 +95,28 @@ export default async function RootLayout({ children }) {
           as="image"
           href="/images/galactic-dither-small.webp"
           media="(max-width: 767px)"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <link
           rel="preload"
           as="image"
           href="/images/galactic-dither-medium.webp"
           media="(min-width: 768px) and (max-width: 1535px)"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <link
           rel="preload"
           as="image"
           href="/images/galactic-dither-large.webp"
           media="(min-width: 1536px) and (max-width: 2559px)"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <link
           rel="preload"
           as="image"
           href="/images/galactic-dither-xl.webp"
           media="(min-width: 2560px)"
-          fetchpriority="high"
+          fetchPriority="high"
         />
       </head>
       <body className="min-h-[100svh] w-full relative" id="observer-root">

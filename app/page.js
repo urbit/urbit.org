@@ -8,6 +8,13 @@ import { HomepageSubsection } from "./components/HomepageSubsection";
 import { MobileFloatingNav } from "./components/MobileFloatingNav";
 import Markdoc from "@markdoc/markdoc";
 
+const toPlainObject = (value) => {
+  if (value === null || value === undefined) {
+    return value;
+  }
+  return JSON.parse(JSON.stringify(value));
+};
+
 export default async function HomePage() {
   // Load homepage configuration
   const configData = await getMarkdownContent("homepage/config.md");
@@ -26,9 +33,9 @@ export default async function HomePage() {
     if (!blurbsBySlug[blurbSlug]) {
       try {
         const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
-        const renderedContent = Markdoc.renderers.react(blurbData.content, React);
+        const renderedContent = Markdoc.renderers.html(blurbData.content);
 
-        blurbsBySlug[blurbSlug] = {
+        blurbsBySlug[blurbSlug] = toPlainObject({
           id: blurbSlug,
           title: blurbData.frontMatter.title,
           description: blurbData.frontMatter.description,
@@ -41,7 +48,7 @@ export default async function HomePage() {
             description: ref.description || "",
           })),
           ctaButton: blurbData.frontMatter["call-to-action"] || null,
-        };
+        });
       } catch (error) {
         console.error(`Error loading blurb ${blurbSlug}:`, error);
       }

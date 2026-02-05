@@ -11,7 +11,8 @@ const BLOG_PATH = "app/content/grants";
 const POSTS_DIR = path.join(process.cwd(), BLOG_PATH);
 
 export async function generateMetadata({ params }, parent) {
-  const postSlug = `/grants/${params.grant}.md`; // Append .md here to use in the file path
+  const { grant } = await params;
+  const postSlug = `/grants/${grant}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const parentMetadata = await parent;
   const image = parentMetadata?.openGraph?.images?.[0]?.url;
@@ -45,7 +46,8 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const postSlug = `/grants/${params.grant}.md`; // Append .md here to use in the file path
+  const { grant } = await params;
+  const postSlug = `/grants/${grant}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
   const grantContext = `/grants/${params.grant}`;

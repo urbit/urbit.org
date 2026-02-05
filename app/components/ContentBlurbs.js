@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+const renderHtml = (content) => ({ __html: content || "" });
 
 const slugify = (value) => {
   if (!value) {
@@ -43,21 +46,21 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
             <div className="mb-4">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}
@@ -89,7 +92,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
               );
             })}
           </ul>
-          <div className="text-base text-gray-87 line-clamp-5">{content}</div>
+          <div className="text-base text-gray-87 line-clamp-5" dangerouslySetInnerHTML={renderHtml(content)} />
         </div>
       </div>
       <button
@@ -107,9 +110,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
 
       {isExpanded && (
         <div className="mt-6 animate-fadeIn">
-          <article className="prose prose-invert max-w-none">
-            {content}
-          </article>
+          <article className="prose prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
 
           {references && references.length > 0 && (
             <div className="mt-8 pt-6 border-t border-gray-87">
@@ -135,18 +136,22 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
             <div className="mb-[-60px] mr-[-36px] overflow-visible">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  className="w-full h-full dark:hidden"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  className="w-full h-full hidden dark:block"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto hidden dark:block"
                 />
               )}
             </div>
@@ -177,7 +182,10 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
               );
             })}
           </ul>
-          <div className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}>{content}</div>
+          <div
+            className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}
+            dangerouslySetInnerHTML={renderHtml(content)}
+          />
         </div>
       </div>
       <div className="flex justify-between">
@@ -211,9 +219,11 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
               <div className="text-primary">
                 Read less
               </div>
-              <img
+              <Image
                 src="/icons/toggle-karat.svg"
                 alt=""
+                width={9}
+                height={7}
                 className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${isExpanded ? 'rotate-180' : 'rotate-0'}
@@ -225,9 +235,11 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
               <div className="text-contrast-2 md:hover:text-primary">
                 Read more
               </div>
-              <img
+              <Image
                 src="/icons/toggle-karat.svg"
                 alt=""
+                width={9}
+                height={7}
                 className={`
                 w-[9px] h-[7px] invert transition-transform duration-300
                 ${isExpanded ? 'rotate-180' : 'rotate-0'}
@@ -257,21 +269,21 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
             <div className="mb-4">
               {/* Light mode image */}
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
                 />
               )}
               {/* Dark mode image - falls back to light image if imageDark not specified */}
               {(imageDark || image) && (
-                <img
+                <Image
                   src={imageDark || image}
                   alt={title}
-                  width="64"
-                  height="64"
+                  width={64}
+                  height={64}
                   className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
                 />
               )}
@@ -292,9 +304,11 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
               >
-                <img
+                <Image
                   src="/icons/info.svg"
                   alt="Info"
+                  width={24}
+                  height={24}
                   className="w-6 h-6"
                 />
               </button>
@@ -369,9 +383,7 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
       )}
 
       {/* Full content without line-clamp */}
-      <article className="prose prose-invert max-w-none mt-6">
-        {content}
-      </article>
+      <article className="prose prose-invert max-w-none mt-6" dangerouslySetInnerHTML={renderHtml(content)} />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -418,16 +430,20 @@ export const MicroBlurb = ({
       {(image || imageDark) && (
         <div className="mb-3">
           {image && (
-            <img
+            <Image
               src={image}
               alt={title}
+              width={40}
+              height={40}
               className="w-8 h-8 md:w-10 md:h-10 dark:hidden"
             />
           )}
           {(imageDark || image) && (
-            <img
+            <Image
               src={imageDark || image}
               alt={title}
+              width={40}
+              height={40}
               className="w-8 h-8 md:w-10 md:h-10 hidden dark:block"
             />
           )}
@@ -449,7 +465,7 @@ export const MicroBlurb = ({
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
-            <img src="/icons/info.svg" alt="Info" className="w-5 h-5" />
+            <Image src="/icons/info.svg" alt="Info" width={20} height={20} className="w-5 h-5" />
           </button>
         )}
       </div>
@@ -500,11 +516,9 @@ export const MicroBlurb = ({
       {/* Content - either full or line-clamped */}
       <div className={`text-sm text-primary mt-3 ${showFullContent ? '' : 'line-clamp-8'}`}>
         {showFullContent ? (
-          <article className="prose prose-sm prose-invert max-w-none">
-            {content}
-          </article>
+          <article className="prose prose-sm prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
         ) : (
-          content
+          <div dangerouslySetInnerHTML={renderHtml(content)} />
         )}
       </div>
 
@@ -537,7 +551,7 @@ export const MicroBlurb = ({
  * @param {string} id - Blurb ID for anchor linking
  * @param {string} title - Blurb title
  * @param {string} description - Optional blurb description
- * @param {React.ReactNode} content - Rendered Markdoc content
+ * @param {string} content - Rendered Markdoc HTML
  * @param {string} image - Optional light mode image path
  * @param {string} imageDark - Optional dark mode image path
  * @param {Array} references - Array of {title, link, description} reference objects
@@ -566,17 +580,21 @@ export function HomepageBlurb({
         <div className="mb-4 md:mb-6">
           {/* Light mode image */}
           {image && (
-            <img
+            <Image
               src={image}
               alt={title}
+              width={64}
+              height={64}
               className="w-12 h-12 md:w-16 md:h-16 dark:hidden"
             />
           )}
           {/* Dark mode image - falls back to light image if imageDark not specified */}
           {(imageDark || image) && (
-            <img
+            <Image
               src={imageDark || image}
               alt={title}
+              width={64}
+              height={64}
               className="w-12 h-12 md:w-16 md:h-16 hidden dark:block"
             />
           )}
@@ -599,9 +617,11 @@ export function HomepageBlurb({
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
           >
-            <img
+            <Image
               src="/icons/info.svg"
               alt="Info"
+              width={20}
+              height={20}
               className="w-5 h-5 md:w-4 md:h-4"
             />
           </button>
@@ -650,9 +670,7 @@ export function HomepageBlurb({
         </div>
       )}
       {/* Full content */}
-      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]">
-        {content}
-      </article>
+      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]" dangerouslySetInnerHTML={renderHtml(content)} />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (

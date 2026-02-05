@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const postSlug = `/singles/${params.page}.md`; // Append .md here to use in the file path
+  const { page } = await params;
+  const postSlug = `/singles/${page}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra, taxonomies } = postData.frontMatter;
 

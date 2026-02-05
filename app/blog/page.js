@@ -107,9 +107,15 @@ export default async function BlogHome() {
         </SidebarElement>
       </SidebarSlot>
 
-		  <Link href="/">
-      <img src="/icons/digi-logo-1.svg" className="hidden md:block pb-4" />
-		  </Link>
+      <Link href="/">
+        <Image
+          src="/icons/digi-logo-1.svg"
+          alt="Urbit"
+          width={80}
+          height={32}
+          className="hidden md:block pb-4"
+        />
+      </Link>
       <div className="mb-32 text-xlarge gap-y-2 leading-[100%] max-w-[1200px] mx-auto">
         {Object.entries(yearGroups)
           .sort(([yearA], [yearB]) => yearB - yearA)
@@ -152,11 +158,18 @@ export default async function BlogHome() {
                       {/*   <div>{extra.ship}</div> */}
                       {/* </div> */}
                       {/* <div className="text-gray-87 mb-2">{formatDate(date)}</div> */}
-                      {(extra?.imageIndex || extra?.image) && (
-                        <div className="xl:w-auto w-full relative mb-2 md:mb-0">
-                          <img className="w-full h-auto max-h-[260px] md:max-h-[400px] object-cover" loading="lazy" src={extra.imageIndex || extra.image} alt={title} />
-                        </div>
-                      )}
+                        {(extra?.imageIndex || extra?.image) && (
+                          <div className="xl:w-auto w-full relative mb-2 md:mb-0">
+                            <Image
+                              className="w-full h-auto max-h-[260px] md:max-h-[400px] object-cover"
+                              src={extra.imageIndex || extra.image}
+                              alt={title}
+                              width={1200}
+                              height={800}
+                            />
+                          </div>
+                        )}
+
                       {extra?.tags && extra.tags.length > 0 && (
                         <div className="hidden md:block font-mono flex gap-8 overflow-x-auto whitespace-nowrap scrollbar-hide snap-x snap-mandatory">
                           {extra.tags.map((tag, index) => (

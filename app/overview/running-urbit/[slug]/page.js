@@ -6,7 +6,17 @@ import { SidebarElement } from "../../../components/SidebarElement";
 import { ContentBlurb } from "../../../components/ContentBlurbs";
 import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
+import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
+import Image from "next/image";
+import Link from "next/link";
+
+const toPlainObject = (value) => {
+  if (value === null || value === undefined) {
+    return value;
+  }
+  return JSON.parse(JSON.stringify(value));
+};
 
 export async function generateStaticParams() {
   // Get the config to know which sections exist
@@ -22,14 +32,22 @@ export async function generateStaticParams() {
 }
 
 export default async function RunningUrbitSection({ params }) {
-  const { slug } = params;
-
-  // Load the section content
-  const sectionData = await getMarkdownContent(`overview/running-urbit/${slug}.md`);
+  const { slug } = await params;
 
   // Load both config files for navigation
   const urbitExplainedConfig = await getMarkdownContent("overview/urbit-explained/config.md");
   const runningUrbitConfig = await getMarkdownContent("overview/running-urbit/config.md");
+
+  const validSlugs = (runningUrbitConfig.frontMatter.sections || []).filter(
+    (sectionSlug) => sectionSlug !== "intro"
+  );
+
+  if (!slug || !validSlugs.includes(slug)) {
+    return notFound();
+  }
+
+  // Load the section content
+  const sectionData = await getMarkdownContent(`overview/running-urbit/${slug}.md`);
 
   const urbitExplainedSections = (urbitExplainedConfig.frontMatter.sections || []).map(slug => ({
     slug,
@@ -67,7 +85,7 @@ export default async function RunningUrbitSection({ params }) {
       const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
 
       // Render the Markdoc content to React on the server
-      const renderedContent = Markdoc.renderers.react(blurbData.content, React);
+      const renderedContent = Markdoc.renderers.html(blurbData.content);
 
       // Serialize references to plain objects with descriptions
       const references = (blurbData.frontMatter.references || []).map(ref => ({
@@ -76,7 +94,7 @@ export default async function RunningUrbitSection({ params }) {
         description: ref.description || "",
       }));
 
-      blurbsBySlug[blurbSlug] = {
+      blurbsBySlug[blurbSlug] = toPlainObject({
         title: blurbData.frontMatter.title,
         description: blurbData.frontMatter.description,
         content: renderedContent,
@@ -84,7 +102,7 @@ export default async function RunningUrbitSection({ params }) {
         image: blurbData.frontMatter.image || "",
         imageDark: blurbData.frontMatter.imageDark || "",
         ctaButton: blurbData.frontMatter["call-to-action"] || null,
-      };
+      });
     } catch (error) {
       console.error(`Error loading blurb ${blurbSlug}:`, error);
     }
@@ -118,7 +136,15 @@ export default async function RunningUrbitSection({ params }) {
       </SidebarSlot>
 
       {/* Main content */}
-      <img src="/icons/digi-logo-1.svg" className="hidden md:block pb-4" />
+      <Link href="/">
+        <Image
+          src="/icons/digi-logo-1.svg"
+          alt="Urbit"
+          width={80}
+          height={32}
+          className="hidden md:block pb-4"
+        />
+      </Link>
       <section className="mt-[8rem] md:mt-[6rem] mb-32 md:mx-auto">
         <div className="max-w-[1080px]">
           <h1 className="text-6xl text-accent-1 font-serif font-tall leading-[120%] mb-4">

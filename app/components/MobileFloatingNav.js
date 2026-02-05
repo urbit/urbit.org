@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 /**
@@ -88,9 +89,11 @@ export function MobileFloatingNav({ anchors, heroHeight = 0 }) {
     >
       <span>Next section</span>
       {/* Right-facing karat */}
-      <img
+      <Image
         src="/icons/toggle-karat.svg"
         alt=""
+        width={9}
+        height={7}
         className="w-[9px] h-[7px] invert"
       />
     </button>

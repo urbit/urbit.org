@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 /**
@@ -17,7 +17,7 @@ import { createPortal } from "react-dom";
  * @param {ReactNode} children - Custom content slot
  */
 export function Modal({ isOpen, onClose, children }) {
-  const [mounted, setMounted] = useState(false);
+  const canUseDOM = typeof document !== "undefined";
 
   // Handle escape key
   const handleEscape = useCallback(
@@ -28,11 +28,6 @@ export function Modal({ isOpen, onClose, children }) {
     },
     [onClose]
   );
-
-  // Set mounted state for portal
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Handle body scroll lock and escape key
   useEffect(() => {
@@ -53,7 +48,7 @@ export function Modal({ isOpen, onClose, children }) {
     };
   }, [isOpen, handleEscape]);
 
-  if (!isOpen || !mounted) return null;
+  if (!isOpen || !canUseDOM) return null;
 
   return createPortal(
     <div

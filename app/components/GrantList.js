@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, useMemo, useCallback, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { formatDate, formatAuthors } from "../lib/utils";
 import classNames from "classnames";
@@ -30,13 +30,11 @@ const GrantListContent = ({
   const [sortOption, setSortOption] = useState(
     searchParams.get("sort") || null
   );
-  const [filteredSortedPosts, setFilteredSortedPosts] =
-    useState(allPostFrontMatter);
 
   // const categoryList = categoryData;
 
   // Update the URL whenever filters or sorting change
-  const updateUrlParams = (category, status, program, sort) => {
+  const updateUrlParams = useCallback((category, status, program, sort) => {
     const params = new URLSearchParams();
 
     if (category) params.set("category", category);
@@ -45,13 +43,11 @@ const GrantListContent = ({
     if (sort) params.set("sort", sort);
 
     router.push(`?${params.toString()}`, undefined, { shallow: true });
-  };
+  }, [router]);
 
-  // Handle filtering and sorting logic within an effect
-  useEffect(() => {
+  const filteredSortedPosts = useMemo(() => {
     let posts = [...allPostFrontMatter];
 
-    
     if (selectedCategory) {
       posts = posts.filter((post) => {
         return post?.data?.taxonomies?.grant_category[0] === selectedCategory
@@ -71,29 +67,21 @@ const GrantListContent = ({
       });
     }
 
-    // Apply program filtering
     if (selectedProgram) {
       posts = posts.filter((post) => post?.data?.taxonomies?.grant_type[0] === selectedProgram);
     }
 
+    return posts;
+  }, [allPostFrontMatter, selectedCategory, selectedStatus, selectedProgram]);
 
-    // Update the filtered and sorted post list
-    setFilteredSortedPosts(posts);
-
-    // Update the URL whenever state changes
+  useEffect(() => {
     updateUrlParams(
       selectedCategory,
       selectedStatus,
       selectedProgram,
       sortOption
     );
-  }, [
-    selectedCategory,
-    selectedStatus,
-    selectedProgram,
-    sortOption,
-    allPostFrontMatter,
-  ]);
+  }, [selectedCategory, selectedStatus, selectedProgram, sortOption, updateUrlParams]);
 
   // Filter by category handler
   const handleCategoryClick = (category) => {

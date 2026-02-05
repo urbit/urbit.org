@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
@@ -127,14 +128,18 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
               className="flex w-36 h-16 relative items-center pl-[.7em]"
             >
               {/* TODO fix icons for supporting darkmode */}
-              <img
+              <Image
                 src="/icons/urbit-neu.svg"
                 alt="Urbit wordmark"
+                width={140}
+                height={24}
                 className="pb-1.5"
               />
-              <img
+              <Image
                 src="/icons/urbit-neu-dark.svg"
                 alt="Urbit wordmark"
+                width={140}
+                height={24}
                 className="pb-1.5 hidden"
               />
             </Link>
@@ -147,27 +152,35 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
             <span className="">{menuIsOpen
               ?
               <div>
-                <img
+                <Image
                   src="/icons/hamburger-dark.svg"
                   alt="hamburger menu open"
+                  width={28}
+                  height={24}
                   className="w-7 h-6 hidden"
                 />
-                <img
+                <Image
                   src="/icons/hamburger.svg"
                   alt="hamburger menu open"
+                  width={28}
+                  height={24}
                   className="w-7 h-6"
                 />
               </div>
               :
               <div>
-                <img
+                <Image
                   src="/icons/hamburger-dark.svg"
                   alt="hamburger menu closed"
+                  width={28}
+                  height={24}
                   className="w-7 h-6 hidden"
                 />
-                <img
+                <Image
                   src="/icons/hamburger.svg"
                   alt="hamburger menu closed"
+                  width={28}
+                  height={24}
                   className="w-7 h-6"
                 />
               </div>
@@ -214,12 +227,16 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                   <span className="nav-button leading-inherit flex items-center gap-2">
                     {navItem.title}
                     {/* TODO Super hacky way of handling different color requirements between nav items with this icon */}
-                    {navItem.icon && (
-                      <img src={`/icons/reverse-${navItem.icon}`}
-                        alt="Urbit configurator icon"
-                        className='w-4 h-4'
-                      />
-                    )}
+                      {navItem.icon && (
+                       <Image
+                         src={`/icons/reverse-${navItem.icon}`}
+                         alt="Urbit configurator icon"
+                         width={16}
+                         height={16}
+                         className="w-4 h-4"
+                       />
+                     )}
+
                   </span>
                 </Link>
               );
@@ -308,9 +325,12 @@ const GlobalNav = ({ nav }) => {
             >
               <span className="">{navItem.title}</span>
               {navItem.icon && (
-                <img src={`/icons/${navItem.icon}`}
+                <Image
+                  src={`/icons/${navItem.icon}`}
                   alt={`${navItem.icon} icon`}
-                  className='w-4 h-4'
+                  width={16}
+                  height={16}
+                  className="w-4 h-4"
                 />
               )}
               {navItem.external && (<span className="ml-[.2em]">↗</span>)}
