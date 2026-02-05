@@ -96,8 +96,9 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
   );
 };
 
-export const PreviewContentBlurb = ({ id, title, description, content, references, image, imageDark, ctaButton }) => {
+export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   return (
     <div id={id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
@@ -205,8 +206,9 @@ export const PreviewContentBlurb = ({ id, title, description, content, reference
   );
 };
 
-export const ContentBlurb = ({ title, description, content, references, image, imageDark, ctaButton }) => {
+export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
@@ -250,7 +252,7 @@ export const ContentBlurb = ({ title, description, content, references, image, i
                 onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
                 data-umami-event="ui-blurb-info-preview"
                 data-umami-event-label={title}
-                data-umami-event-context={slugify(title)}
+                data-umami-event-context={tooltipContext}
                 data-umami-event-variant="preview"
                 className="flex-shrink-0 p-2 hover:opacity-70 transition-opacity"
                 aria-label="Toggle details"
@@ -389,7 +391,7 @@ export const MicroBlurb = ({
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
             data-umami-event="ui-blurb-info-content"
             data-umami-event-label={title}
-            data-umami-event-context={slugify(title)}
+            data-umami-event-context={tooltipContext}
             data-umami-event-variant="content"
             className="flex-shrink-0 p-2 md:p-1 md:hover:opacity-70 transition-opacity min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"
@@ -483,6 +485,7 @@ export const MicroBlurb = ({
  */
 export function HomepageBlurb({
   id,
+  blurbSlug,
   title,
   description,
   content,
@@ -492,6 +495,7 @@ export function HomepageBlurb({
   ctaButton
 }) {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
+  const tooltipContext = blurbSlug || id || slugify(title);
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
@@ -530,7 +534,7 @@ export function HomepageBlurb({
             onClick={() => setIsDetailsExpanded(!isDetailsExpanded)}
             data-umami-event="ui-blurb-info-homepage"
             data-umami-event-label={title}
-            data-umami-event-context={slugify(title)}
+            data-umami-event-context={tooltipContext}
             data-umami-event-variant="homepage"
             className="flex-shrink-0 p-3 md:p-2 md:hover:opacity-70 transition-opacity mt-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle details"

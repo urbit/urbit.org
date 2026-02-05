@@ -142,6 +142,7 @@ export default async function RunningUrbitSection({ params }) {
                 return (
                   <ContentBlurb
                     key={idx}
+                    blurbSlug={blurbSlug}
                     title={blurb.title}
                     description={blurb.description}
                     content={blurb.content}

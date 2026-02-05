@@ -148,6 +148,7 @@ export default async function HomePage() {
               {/* Render section-level blurb */}
               <HomepageBlurb
                 id={sectionBlurb.id}
+                blurbSlug={sectionBlurb.id}
                 title={sectionBlurb.title}
                 description={sectionBlurb.description}
                 content={sectionBlurb.content}
@@ -167,6 +168,7 @@ export default async function HomePage() {
                     <PreviewContentBlurb
                       key={blurb.id}
                       id={blurb.id}
+                      blurbSlug={blurb.id}
                       title={blurb.title}
                       description={blurb.description}
                       content={blurb.content}
@@ -191,6 +193,7 @@ export default async function HomePage() {
             <div className="mb-12 pt-8">
               <ContentBlurb
                 id={blurbsBySlug[sidebarBlurbSlug].id}
+                blurbSlug={blurbsBySlug[sidebarBlurbSlug].id}
                 title={blurbsBySlug[sidebarBlurbSlug].title}
                 description={blurbsBySlug[sidebarBlurbSlug].description}
                 content={blurbsBySlug[sidebarBlurbSlug].content}
@@ -215,6 +218,7 @@ export default async function HomePage() {
                 {/* Section-level blurb */}
                 <HomepageBlurb
                   id={sectionBlurb.id}
+                  blurbSlug={sectionBlurb.id}
                   title={sectionBlurb.title}
                   description={sectionBlurb.description}
                   content={sectionBlurb.content}
@@ -237,6 +241,7 @@ export default async function HomePage() {
                       <PreviewContentBlurb
                         key={blurb.id}
                         id={`mobile-${blurb.id}`}
+                        blurbSlug={blurb.id}
                         title={blurb.title}
                         description={blurb.description}
                         content={blurb.content}
