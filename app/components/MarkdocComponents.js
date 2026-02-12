@@ -1,15 +1,31 @@
 "use client";
+import React from "react";
 import Link from "next/link";
-import classNames from "classnames";
+import { usePathname } from "next/navigation";
 
 const MarkdocLink = ({ children, href }) => {
-  const isExternal = href.startsWith("http");
+  const pathname = usePathname();
+  const normalizedHref = href?.toLowerCase() || "";
+  const isMailto = normalizedHref.startsWith("mailto:");
+  const isTel = normalizedHref.startsWith("tel:");
+  const isExternal = normalizedHref.startsWith("http");
+  const eventName = isMailto || isTel ? "link-contact" : isExternal ? "link-external" : undefined;
+  const label = React.Children.toArray(children)
+    .map((child) => (typeof child === "string" ? child : ""))
+    .join(" ")
+    .trim();
 
   return (
     <Link
       href={href}
       target={isExternal ? "_blank" : ""}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={isExternal ? "external" : ""}
+      data-umami-event={eventName}
+      data-umami-event-label={label || undefined}
+      data-umami-event-destination={eventName ? href : undefined}
+      data-umami-event-context={eventName ? pathname : undefined}
+      data-umami-event-variant={eventName ? "content" : undefined}
     >
       {children}
     </Link>

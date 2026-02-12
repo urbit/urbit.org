@@ -61,10 +61,12 @@ export default async function RootLayout({ children }) {
     }
   }
 
+  const umamiWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || "bf47fa30-3b27-43fc-af86-e6bfcb739881";
+
   return (
     <html lang="en" className="light">
       <head>
-        <script defer src="https://cloud.umami.is/script.js" data-website-id="bf47fa30-3b27-43fc-af86-e6bfcb739881"></script>
+        <script defer src="/umami-script.js" data-website-id={umamiWebsiteId}></script>
         <link
           rel="preload"
           href="/fonts/SLTFSkylingVF.ttf"
