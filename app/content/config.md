@@ -9,7 +9,7 @@ announcements:
 site_metadata:
   description: Building Urbit, the computer designed to last forever
   canonicalUrl: "https://urbit.org"
-  meta_image: "/meta/og-image.png"
+  meta_image: "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Social+Cards/Urbit+Home_Social+Card.png"
   meta_image_alt: "Urbit meta image"
 nav:
 - title: Overview

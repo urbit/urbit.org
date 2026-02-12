@@ -6,6 +6,28 @@ import { EcosystemNav } from "../components/EcosystemNav";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
+
+export async function generateMetadata() {
+  const ecosystemConfig = await getMarkdownContent("ecosystem/config.md");
+  const image = ecosystemConfig.frontMatter?.image;
+
+  if (!image) {
+    return {};
+  }
+
+  return {
+    openGraph: {
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
+}
+
 export default async function EcosystemHome() {
   // Load ecosystem config for sidebar position and navigation
   const ecosystemConfig = await getMarkdownContent("ecosystem/config.md");

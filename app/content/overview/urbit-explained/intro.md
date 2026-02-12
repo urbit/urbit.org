@@ -18,6 +18,8 @@ So what is Urbit today? Unlike in [the original Moron Labs blog post in which Ur
 
 In practice, your urbit comes in two parts–identity and operating system–and with it, becoming a node in a networked whole.
 
+![Urbit identity and operating system overview](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/overview/Overview_ID+vs+OS.png)
+
 ## The identity layer
 
 [Urbit ID](/overview/urbit-explained/urbit-id) is an identity and authentication system specifically designed to work with Urbit OS. Your Urbit ID is a name (like \~ravmel-ropdyl) that’s a username, and network address. If someone knows your name, they also know how to contact you across Urbit’s end-to-end encrypted, peer-to-peer network. 
