@@ -7,6 +7,8 @@ Broadly construed, Urbit ID is the mechanism for both naming *and contacting* a 
 
 The Urbit ‘address space’ encompasses many different types of identities. The shorter names—four syllables and below—are instantiated as a Public Key Infrastructure (PKI) on the Ethereum blockchain in the [Azimuth smart contracts](https://github.com/urbit/azimuth), which govern the creation, transfer, and management logic of the finite portion of the address space. 
 
+![Urbit ID card examples](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/overview/Overview_ID%20Cards.png)
+
 Overall, there are 5 tiers in the hierarchy of Urbit address space:
 
 - **Galaxies**: 2^8 one syllable names, e.g. `~zod`  

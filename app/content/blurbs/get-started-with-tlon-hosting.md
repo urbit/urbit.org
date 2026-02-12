@@ -1,5 +1,5 @@
 +++
-title = "Tlon hosting"
+title = "Tlon Hosting"
 description = "Tlon Corporation is the preeminent hosting provider which provides free and seamless onboarding to the Urbit network"
 tags = ["hosting", "hosting-provider", "urbit-os", "tlon", "layer 2"]
 lastest-update ="<some-arvo-hash>"

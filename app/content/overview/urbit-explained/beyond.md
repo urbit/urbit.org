@@ -20,4 +20,6 @@ Technical contributors regularly publish articles in the [Urbit Systems Technica
 
 All of Urbit is built to function as a single stack, and we think that building useful products is the best way to mature the system as a whole. That said, each component of this system can be used on its own. Don’t like our client? That’s okay, you can build your own. Don’t want to use Urbit OS? No problem — you can use Urbit ID as an authentication system for some other OS, or for anything, really. The possibilities abound, and we hope you help take it beyond our wildest dreams.
 
+![User space and Bridge](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/overview/User+Space+and+Bridge.jpg)
+
 If any of this caught your interest, we encourage you to take the next step and start running urbit. And if you are so inclined, [read the docs](http://docs.urbit.org) and [learn to build on Urbit yourself](https://docs.urbit.org/build-on-urbit/contents).
