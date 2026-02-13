@@ -22,7 +22,7 @@ tags = ["spotlight", "userspace", "community"]
 
 > **\~sarlev:** What drew you to Urbit in general, then?
 
-**~nordus-mocwyl:** What drew me to Urbit was my own personal research for how musicians can be independent, or at least as independent as possible. It comes from the perspective of a [~dalten](https://dalten.org) kind of sovereignty thing as I just want musicians to own all of their career. I was looking into this because when I was in music school as the 'roadmap' at the time was to get a band, play live shows, make a demo, send it to record labels, and then hope you make it big. It was the whole world of trying to get radio plays and musicians getting taken advantage of by the record labels. It was a big problem.
+**\~nordus-mocwyl:** What drew me to Urbit was my own personal research for how musicians can be independent, or at least as independent as possible. It comes from the perspective of a [~dalten](https://dalten.org) kind of sovereignty thing as I just want musicians to own all of their career. I was looking into this because when I was in music school as the 'roadmap' at the time was to get a band, play live shows, make a demo, send it to record labels, and then hope you make it big. It was the whole world of trying to get radio plays and musicians getting taken advantage of by the record labels. It was a big problem.
 
 But it was right at the tail end of my being in college for music when YouTube became more of a thing.
 
@@ -46,7 +46,7 @@ I just want to make it easy for the long tail of musicians who aren't trying to 
 
 > **\~sarlev:** You've mentioned Hawk. It's one of those things that you have really picked up and run with. What have you seen it do for you?
 
-**~nordus-mocwyl:** I think Hawk does a really good job of being a gateway drug. It starts by giving you a very functional website builder, but it can definitely do more than that too. As I mentioned, I built the whole guitar course in Hawk, but that definitely took a bit of trailblazing. I don't think it would take much—maybe a really well-done walkthrough—to make that capability much more accessible. Something where you ramp people up from the bare bones to the much more complex. You could start simple: open up your Hawk and write plain text. Then a little markdown. Then your HTML. Then `%sail`. And beyond that you could do components in the namespace and plug those into your `%sail` and Udon and all this stuff.
+**\~nordus-mocwyl:** I think Hawk does a really good job of being a gateway drug. It starts by giving you a very functional website builder, but it can definitely do more than that too. As I mentioned, I built the whole guitar course in Hawk, but that definitely took a bit of trailblazing. I don't think it would take much—maybe a really well-done walkthrough—to make that capability much more accessible. Something where you ramp people up from the bare bones to the much more complex. You could start simple: open up your Hawk and write plain text. Then a little markdown. Then your HTML. Then `%sail`. And beyond that you could do components in the namespace and plug those into your `%sail` and Udon and all this stuff.
 
 There is so much that Hawk can do that I'm getting a bit carried away, but I think there is a really gentle ramp-up that is possible. It just needs the breadcrumbs to be laid there. Regardless, I think there's just no better tool in my mind than Hawk for making a website.
 
@@ -54,11 +54,11 @@ It does have its limitations, though. For example, I can't currently serve my vi
 
 > **\~sarlev:** Yeah, that will be an open question for sure.
 
-**~nordus-mocwyl:** YouTube has totally conditioned me to click on something and have it play before the pause button has loaded and is clickable. Which is both annoying and really impressive all at once.
+**\~nordus-mocwyl:** YouTube has totally conditioned me to click on something and have it play before the pause button has loaded and is clickable. Which is both annoying and really impressive all at once.
 
 > **\~sarlev:** The pause button loading after the video has started is one of these little examples of how Google's incentives about what they want you to do inform the things that work well versus the things that don't work well. They don't really want you to pause the video. They want you to watch the video. This feels like a little peek into some of how building on Urbit is fundamentally different. Where in the legacy computing world do you struggle with these fundamental or systemic issues that are just wholly not a concern with Urbit?
 
-**~nordus-mocwyl:** This comes back to answering the question you were going to ask about what drew me to Urbit and why we need to throw everything out and rewrite the entire networked computing stack. For me, the way I understand this comes from when people were excited about desktop computers: They were excited about not just getting on the internet and consuming everything, but *serving* the internet. A big part of it was that everyone was able to add files to the internet and then other people could pull those files from the internet in a peer-to-peer manner. And when you realize the reason AWS exists is because running your own server is just a pain in the ass, you realize it is necessary to rewrite the stack so an average person can just have a server where they can do their humble little things. I want to send my baby pictures right to my mom's computer, and that's it. I just want my computer to have the baby pictures, and then when her computer is ready, she can download them onto her computer.
+**\~nordus-mocwyl:** This comes back to answering the question you were going to ask about what drew me to Urbit and why we need to throw everything out and rewrite the entire networked computing stack. For me, the way I understand this comes from when people were excited about desktop computers: They were excited about not just getting on the internet and consuming everything, but *serving* the internet. A big part of it was that everyone was able to add files to the internet and then other people could pull those files from the internet in a peer-to-peer manner. And when you realize the reason AWS exists is because running your own server is just a pain in the ass, you realize it is necessary to rewrite the stack so an average person can just have a server where they can do their humble little things. I want to send my baby pictures right to my mom's computer, and that's it. I just want my computer to have the baby pictures, and then when her computer is ready, she can download them onto her computer.
 
 The consequence of it being such a big headache that no sane person can do it is that you give away the actually important and valuable aspect of being a part of the internet, and you outsource it. You don't realize how powerful it is until it's too late. And when you do, it's because you look at Facebook, Google, Microsoft, Apple, and Amazon and see that giving them this powerful part of having a computer on the internet ended up centralizing all this power and money.
 
@@ -66,7 +66,7 @@ I don't want a middleman, or anybody searching through the pixels and all that. 
 
 > **\~sarlev:** Once you know this dynamic exists, it's almost that Urbit is this infohazard that starts to propagate back into the rest of your computing experience. As a musician who wanted to hold on to his independence, I'm curious how this experience or realization has changed your relationship with computers?
 
-**~nordus-mocwyl:** You know, to answer this, I'll actually stray a little bit away from the whole serving files theme that I've been hitting on, because the biggest thing that interacting with Urbit did to change my computing experience is I just get what the zeros and ones are about now! Learning Hoon and then learning Nock helped me understand Assembly. It helped me understand what computation is. That's something I just never understood. Now I understand backend stuff, and even having a passing understanding of Nock gives you the sensation that you could understand it all the way down. For the particular part of the computer-user spectrum that I inhabit, that's really satisfying.
+**\~nordus-mocwyl:** You know, to answer this, I'll actually stray a little bit away from the whole serving files theme that I've been hitting on, because the biggest thing that interacting with Urbit did to change my computing experience is I just get what the zeros and ones are about now! Learning Hoon and then learning Nock helped me understand Assembly. It helped me understand what computation is. That's something I just never understood. Now I understand backend stuff, and even having a passing understanding of Nock gives you the sensation that you could understand it all the way down. For the particular part of the computer-user spectrum that I inhabit, that's really satisfying.
 
 There's very little in the world that you can actually understand all the way down. Getting the ability to believe that I could understand the computer all the way through is unbelievable.
 
@@ -76,7 +76,7 @@ In contrast, with Urbit, you learn Nock, you learn Hoon and Gall agents and then
 
 > **\~sarlev:** Are there other places in the legacy computing world where you struggled with systemic issues that are wholly not a concern in Urbit? Is it mostly just this simplicity layer that's been beneficial to you?
 
-**~nordus-mocwyl:** In the legacy world, one of my biggest issues is that you just don't know, "Who am I talking to?" It's such a problem that people almost don't even see it as a problem. IP addresses tell you literally nothing about who is talking to you. Because of how we ping everything, an IP address does not mean a computer. And yet, that was the idea, right? "Here's the computer and here's kind of my identity," but it became the equivalent of my identity being my physical address. What if I move, or if I'm in Minnesota at some point? It just doesn't work.
+**\~nordus-mocwyl:** In the legacy world, one of my biggest issues is that you just don't know, "Who am I talking to?" It's such a problem that people almost don't even see it as a problem. IP addresses tell you literally nothing about who is talking to you. Because of how we ping everything, an IP address does not mean a computer. And yet, that was the idea, right? "Here's the computer and here's kind of my identity," but it became the equivalent of my identity being my physical address. What if I move, or if I'm in Minnesota at some point? It just doesn't work.
 
 With Urbit, somebody shows up, they easily prove who they are, and you get to tell them, "Oh, great. I'm glad you're here. I'm serving these things, and you have access to them." Or, "Oh, shoot. You're that guy. Well, forget you. I'm not taking any packages from you." That's a really big deal.
 
@@ -92,15 +92,15 @@ I think it's a shame that Clay has become less of a file system and more of a Ho
 
 > **\~sarlev:** You've done a video series too, a debrief or maybe even you might want to call it a postmortem, on Gall... It's fun to talk to people about their different opinions on Urbit's userspace and application model. Some people are in the camp of, "Oh, it's great. We just need to, you know, change these few things." Other people are, "Well, actually, I just want Clay. Clay is mostly what I want." There's obviously the "Shrubbery as meta category for things that are not in current existence but that I want to exist that make composability easy or whatever else." What does the step forward look like to you?
 
-**~nordus-mocwyl:** You are bringing the heat. I do think it is just taking shrubbery seriously. Hawk is the best example of taking the ideas of shrubbery seriously. `~migrev-dolseg` fused the browser with a shrubbery of sorts, and it's a killer app! It's really, really good. Now we just have to make it "More Urbit"—we need to get it closer to the kernel.
+**\~nordus-mocwyl:** You are bringing the heat. I do think it is just taking shrubbery seriously. Hawk is the best example of taking the ideas of shrubbery seriously. `~migrev-dolseg` fused the browser with a shrubbery of sorts, and it's a killer app! It's really, really good. Now we just have to make it "More Urbit"—we need to get it closer to the kernel.
 
 > **\~sarlev:** What is Hawk missing currently that it would get from being closer to the kernel running in its own vane?
 
-**~nordus-mocwyl:** One of the kind of silly ones is just revision control. Clay already has it. I'm sure Hawk could do it, but should you rewrite stuff that Clay does into a Gall app? Probably not. After revision control—it's funny because this is 100% the topic I've been thinking about the past week—is being able to share something across the network, especially sync something across the network. Hawk can't do that. Clay syncs across the network just fine. I would love for my guitar course to be on somebody else's Hawk and then when I make a change it just updates.
+**\~nordus-mocwyl:** One of the kind of silly ones is just revision control. Clay already has it. I'm sure Hawk could do it, but should you rewrite stuff that Clay does into a Gall app? Probably not. After revision control—it's funny because this is 100% the topic I've been thinking about the past week—is being able to share something across the network, especially sync something across the network. Hawk can't do that. Clay syncs across the network just fine. I would love for my guitar course to be on somebody else's Hawk and then when I make a change it just updates.
 
 > **\~sarlev:** Naturally, userspace will continue to evolve as people kind of have different demands on it, yourself included. Let's talk more about that—I'm sure the audience is on the edge of their chairs learning there's a musician that became a Hoon developer and is building things—What are you working on?
 
-**~nordus-mocwyl:** I've been working on this guitar course, "Beyond Beginner Guitar." It's not in its final form, but it's a totally consumable first start. The course is completely on Hawk. Although, because of the limitations we've talked about, it's not exactly what it needs to be yet.
+**\~nordus-mocwyl:** I've been working on this guitar course, "Beyond Beginner Guitar." It's not in its final form, but it's a totally consumable first start. The course is completely on Hawk. Although, because of the limitations we've talked about, it's not exactly what it needs to be yet.
 
 Of course, for anyone wanting to deep dive into how I constructed it, or what I want to do next, they can read my [Building Beyond Beginner Guitar](./building-beyond-beginner-guitar.md) article where I dive into more detail. But basically, I am balancing this tension between making it easier for somebody who is not on Urbit—they never need to hear the word "Urbit"—to pay and get into the course versus the fact that I want to go more and more fully Urbit-native with it.
 
@@ -108,7 +108,7 @@ The other thing that I am doing is aiming to make the growth of the guitar cours
 
 > **\~sarlev:** I'm kind of curious to hear a little bit more about that. I've followed your work over the years and it seems like charity, and GiveDirectly specifically, is always a big part of your work. How did you get into that?
 
-**~nordus-mocwyl:** Right. I guess it's good to talk about since it's kind of out of nowhere. You know what it is? I was trying to think through what musicians need, and I ended up landing on something like universal basic income. And that musicians are sort of this interesting kind of "canary in the coal mine."
+**\~nordus-mocwyl:** Right. I guess it's good to talk about since it's kind of out of nowhere. You know what it is? I was trying to think through what musicians need, and I ended up landing on something like universal basic income. And that musicians are sort of this interesting kind of "canary in the coal mine."
 
 You just can't pay a musician to go do what they're going to want to do. And so I think the world wants—or should want—musicians to just go and make music, but it has this kind of disconnect from economics.
 
@@ -123,7 +123,7 @@ So I chose GiveDirectly because I kept asking myself, "What kind of charity do I
 
 > **\~sarlev:** The last question I like to ask in these conversations is, "If you weren't working on Urbit, what would you be doing instead?"
 
-**~nordus-mocwyl:** The first thing that popped into my mind is "Oh gosh, if I hadn't heard the word Urbit, I would be doing construction."
+**\~nordus-mocwyl:** The first thing that popped into my mind is "Oh gosh, if I hadn't heard the word Urbit, I would be doing construction."
 
 But I think a more realistic answer is that [Beyond Beginner Guitar](https://howmbase.com/give) is a guitar course that I've wanted to make for a long time. So I probably would have built it and put it on Skillshare or something like that. I would maybe have figured it out, but I think if I didn't find Urbit, my general outlook on computing, computers and the internet would just be totally blackpilled.
 
