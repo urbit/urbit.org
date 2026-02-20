@@ -7,14 +7,16 @@ description = "A conversation with ~litneb-maltyp on Urbit identity, community, 
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "https://placehold.co/1600x900.jpg"
-imageCard = "https://placehold.co/1200x630.jpg"
-# imageIndex = "<IMAGE_INDEX_URL>"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Social16_9.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Banner.png"
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
 tags = ["spotlight", "identity", "design"]
 +++
+ 
+![~litneb-maltyp contributor spotlight image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_no+text_Social16_9.png)
 
 > **\~sarlev:** What was the first thing that drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?
 
