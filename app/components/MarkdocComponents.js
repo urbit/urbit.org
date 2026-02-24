@@ -32,6 +32,19 @@ const MarkdocLink = ({ children, href }) => {
   );
 };
 
+const MarkdocIframe = ({ src, className, width, height, title }) => {
+  return (
+    <iframe
+      src={src}
+      className={className}
+      width={width}
+      height={height}
+      title={title}
+      loading="lazy"
+    ></iframe>
+  );
+};
+
 // const UnescapedHtml = ({ htmlWrapperTag = "div", children }) => {
 //   const html =
 //     typeof children === "string"
@@ -44,4 +57,4 @@ const MarkdocLink = ({ children, href }) => {
 //   return <CustomTag dangerouslySetInnerHTML={{ __html: html }} />;
 // };
 
-export { MarkdocLink };
+export { MarkdocLink, MarkdocIframe };

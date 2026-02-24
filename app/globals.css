@@ -207,6 +207,15 @@ body {
         @apply no-underline;
     }
 
+    .arena-iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        min-height: 360px;
+        border: 0;
+        display: block;
+    }
+
     /* } */
     .button {
         @apply my-[2.5rem] md:hover:bg-gray-87 text-xlarge font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem];

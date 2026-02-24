@@ -6,7 +6,7 @@ import {
 import { FaqSection } from "./components/Faq";
 import { IconCard } from "./components/IconCard";
 import { LineBreak } from "./components/LineBreak";
-import { MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
+import { MarkdocIframe, MarkdocLink, UnescapedHtml } from "./components/MarkdocComponents";
 import { Heading } from "./components/Heading";
 
 const markdocConfig = {
@@ -36,6 +36,16 @@ const markdocConfig = {
     },
     "br": {
       render: LineBreak
+    },
+    iframe: {
+      render: MarkdocIframe,
+      attributes: {
+        src: { type: String, required: true },
+        className: { type: String },
+        width: { type: String },
+        height: { type: String },
+        title: { type: String },
+      },
     },
     "iconcard": {
       render: IconCard,
