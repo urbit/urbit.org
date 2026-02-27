@@ -299,6 +299,40 @@ body {
             @apply bg-gray-f5;
         }
 
+        table {
+            @apply w-full font-sans text-base mb-6 border border-contrast-1 rounded-[.5rem] overflow-hidden block md:table border-collapse overflow-x-auto;
+        }
+
+        thead {
+            @apply bg-contrast-1 text-primary;
+        }
+
+        tbody {
+            @apply bg-background;
+        }
+
+        tr {
+            @apply border-b border-contrast-1;
+        }
+
+        tbody tr:nth-child(even) {
+            @apply bg-gray-f5;
+        }
+
+        th,
+        td {
+            @apply text-left align-top px-4 py-3 border-r border-contrast-1;
+        }
+
+        th {
+            @apply font-[600];
+        }
+
+        th:last-child,
+        td:last-child {
+            @apply border-r-0;
+        }
+
         p {
             @apply font-sans mb-6 font-[400];
         }
