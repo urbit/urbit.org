@@ -1,6 +1,6 @@
 +++
 title = "Olif and Urbit IDs"
-date = "2026-02-24"
+date = "2026-02-26"
 description = "An Olfactive rendering of Urbit Address Space"
 # aliases = []
 
@@ -8,8 +8,8 @@ description = "An Olfactive rendering of Urbit Address Space"
 # author = ""
 ship = "~litneb-maltyp"
 image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Social.png"
-imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Social16_9.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Banner.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Blog_Olif+and+Urbit+IDs_Text_Social.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Blog_Olif+and+Urbit+IDs_Text_Banner.png"
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
@@ -31,6 +31,19 @@ The core idea is to map the entire Urbit address space to distinct combinations 
 
 To keep the project truly decentralized and accessible, the entire system is open source. The Olif formulas (ingredient lists with CAS# references and percentages), material library, rendering methodology, and address-space mappings are publicly available on [GitHub](https://github.com/Olif-ID). 
 
+An Olif also requires some redundant rendering of address space to help convey the unique characteristics of smell. Without physical access to an Olif's fragrant parts it becomes impractical to share a simple character representation of, for instance, the material list. In addition, each Olif can benefit from a visual representation and potentially a multi-sentence description of the scent notes.
+
+### List of Olif renderings:
+
+- Physical fragrant ingredient mixture
+- Ingredient list 1-16 CAS# and their relative percentages
+- Multi-sentence, fragrance note description
+- Visual/graph of the ingredients and their participation in the formula
+- Address Space Rendering Map.
+
+
+![Olif renderings](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Olif+Renderings.jpg)
+
 
 
 # Methodology
@@ -38,15 +51,32 @@ To keep the project truly decentralized and accessible, the entire system is ope
 Before mapping fragrant materials to Urbit address space we established 4 guidelines pertaining to fragrance and the construction of a material library:
   
 
-1. Establish a library with wide ranging representation of various odor categories   
-2. Limit the material library to be manageable for an enthusiast (~100 pcs)   
-3. Only use fragrant materials that can be regularly acquired (insist upon CAS#)   
-4. Only use fragrant materials that have saftey documentation
+- Establish a library with wide ranging representation of various odor categories   
+- Limit the material library to be manageable for an enthusiast (~100 pcs)   
+- Only use fragrant materials that can be regularly acquired (insist upon CAS#)   
+- Only use fragrant materials that have safety documentation
 
   
 Using these guidelines we created a material library of 96 ingredients divided into 16 odor groups. Our odor groups were prepared using two properties. First, organization by similar olfactive properties; second, agreeability with neighboring odor group ingredients.
 
-![Odor Group Table image](TK)
+| Odor Group | Materials                                        |
+|------------|:-------------------------------------------------|
+| Wood       |  Virginia Cedarwood, Anthamber, Patchouli, Hinoki, Sanderol, Okoumal | 
+| Citrus     |  Bergamot, Lemon, Sweet Orange, Petitgrain, Bitter Yuzu, Pink Grapefruit |
+| Herbal     |  Lavandin, Juniper Berry, Spanish Sage, Rosemary, Myrcene, Carene 3 Delta |
+| Floral     |  Phenyl Ethyl Alcohol, Geraniol, Rose Absolute, Cyclamen Aldehyde, PADMA, Florhydral |
+| Earth      |  Geosmin, Herbal Pyrane, Clearwood, Evernyl, Summer Savory, Borneol |
+| Spice      |  Eugenol, Frankincense, Cardamom, Black Pepper, Coffee, Cassia |
+| Terpene    |  PO Cedarwood, Balsam Fir Needle, Siberian Fir Needle, Isobornyl Acetate, Black Pine, Cypress |
+| Musk       |  Romandolide, Ethylene Brassylate, Isoambrettolide, Galaxolide, Ambroxan, Cetalox |
+| Vanilla    |  Vanillin, Beeswax Absolute, Coumarin, Heliotropine, Labdanum, Methyl Liatone |
+| Narcotic   |  Jasmin Sambac, Neroli, Magnolia, Hedione, Ylang Ylang, MA/Triplal Shiff Base |
+| Resin      |  Tonka, Olibanum, Palo Santo, Myrrh, Elemi, Copaiba Blasam |
+| Menthol    |  Myrtle, Laurel, Helichrysum, Peppermint, Eucalyptus, Tea Tree |
+| Fruit      |  Fructone, Firascone, Respberry Ketone, Gamma Octalactone, Gamma Decalactone, Aldehyde C-16 |
+| Green      |  Triplal, Galbanum, Gardenol, Stemone, Cis-3 Hexonol, Violet Leaf Absolute |
+| Smoke      |  Cypriol, Vetiver, Safraeline, Birch Tar, Amyris, Tobacco Leaf |
+| Aquatic    |  Tropional, Calone, Floralozone, Dihydromyrcenol, melonal, vetival |
 
 ## 2. Mapping Library to Primitives
 Now that we have a library to build from, we begin with the same method used for `@p` and Sigil rendering by assigning unique material combinations to the 512 namespace primitives (Examples of namespace primitives are phones for `@p`s or glyphs for sigils).
@@ -66,7 +96,7 @@ To apply the 6 materials to each odor group's set of 32 primitives, we create 3 
 ### **Hearts**
 - 12 suffixes per odor group
 - These mixtures use two materials at ratios between 1:1 and 4:1
-- Hearts utilize between 4 and 6 of the 6 alloted materials
+- Hearts utilize between 4 and 6 of the 6 allotted materials
 
 ### **Modifiers**
 - 16 Prefixes per odor group
@@ -79,7 +109,7 @@ To find out which **materials** should be made available to each category of **m
 Usage Limitation is a property derived from IFRA restrictions on the quantities of fragrant materials used in consumer products. These restictions refer to specific cielings of usage (by percentage) in a final use product. To calculate our usage limitation we set a maximum **fragrance load** of 20% which allows for Eau De Parfum concentration of fine fragrances.
 
 ### **Relative substantivity**
-Relative substantivity is a subjective property given to each material that imparts a level of power and reception by the nose. This number creates a posture amoungst its peer materials. The number 1 is a baseline and is assigned to the material Virginia Cedarwood (CAS# 8000-27-9). Materials are given an RS score logrithmically in comparison to the baseline when smelling. Ex: If something smells "twice as much" in power, it's assigned a 2. If something smells "half as much" in power, it's assigned a 0.5.
+Relative substantivity is a subjective property given to each material that imparts a level of power and reception by the nose. This number creates a posture amoungst its peer materials. The number 1 is a baseline and is assigned to the material Virginia Cedarwood (CAS# 8000-27-9). Materials are given an RS score logarithmically in comparison to the baseline when smelling. Ex: If something smells "twice as much" in power, it's assigned a 2. If something smells "half as much" in power, it's assigned a 0.5.
 
 ## 3. Building complex address space with Olif primitives
 Now that all namespace primitives have been assigned materials and unique percentages, we create a system for combining the primitives with one another to form higher level addresses. One constraint we deal with in fragrance is a lack of ordinal dimension. `@p`'s and sigils have the advantage of placing their primitives in sequence with one another to help distinguish identity and maintain a unique rendering.
@@ -107,3 +137,5 @@ Since launch, the project has sustained it's activity. Hundreds of physical Olif
 In recognition of its innovative fusion of decentralized identity and olfactive art, The project received the Septimus Piesse Award for Exceptional Vision from the Art and Olfaction Awards, given to projects that demonstrate imagination in how scent is conceived, developed, or presented.
 
 The project remains active today. The [official Olif website](https://urbit.fragrance.services) continues to let any user input their Urbit ID and instantly explore its corresponding fragrance profile, ingredients, and character. Physical Olifs are still available for in-person purchase at Maak Lab in Portland, Oregon along with custom Native Planet Callisto devices for self-hosting. 
+
+![Olif in-store](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Olif_In-store.jpg)
