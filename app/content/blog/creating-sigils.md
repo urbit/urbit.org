@@ -9,8 +9,6 @@ ship = "~ridlur-figbud"
 image = "https://media.urbit.org/site/posts/essays/sigils3.png"
 +++
 
-<!-- ![](https://media.urbit.org/site/blog-9.jpg) -->
-
 ![](https://media.urbit.org/site/posts/essays/sigils0-v3.png)
 
 One of the basic building blocks of Urbit is Urbit ID, our naming and identity system. Your Urbit ID is a short, recognizable name that’s also a network address for your Urbit OS instance. (You can find a complete, high level description of Urbit ID [here](https://urbit.org/understanding-urbit/urbit-id/).)
@@ -33,37 +31,27 @@ What are the basic primitives of a visual language? There aren’t any completel
 
 So we started by collecting influences.
 
-{% iframe src="https://www.are.na/tlon/seal-zp3irwad52y/embed" className="arena-iframe" width="100%" /%}
+{% iframe src="https://www.are.na/tlon/seal-zp3irwad52y/embed" className="arena-iframe" width="100%" height="400px" /%}
 
 The ‘chop’ or [seal](<https://en.wikipedia.org/wiki/Seal_(East_Asia)>) is conceptually pretty close to what we wanted to get to.
 
-<br /><br />
-
-{% iframe className="arena-iframe" src="https://www.are.na/tlon/kamon/embed" width="100%" /%}
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/kamon/embed" width="100%" height="400px" /%}
 
 [Kamon](<https://en.wikipedia.org/wiki/Mon_(emblem)>) are even closer — especially since they have very little visual complexity.
 
-<br /><br />
-
-{% iframe className="arena-iframe" src="https://www.are.na/tlon/grids-jd_xbmspxkm/embed" width="100%" /%}
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/grids-jd_xbmspxkm/embed" width="100%" height="400px" /%}
 
 We also spent a good amount of time with both Anni Albers and Agnes Martin. Both of these painters had an incredible mastery of the grid as a means of creating engaging visual work. These paintings all have a wonderful tension between an underlying system and their specific expression.
 
-<br /><br />
-
-{% iframe className="arena-iframe" src="https://www.are.na/tlon/stella-xfroicotm_4/embed" width="100%" /%}
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/stella-xfroicotm_4/embed" width="100%" height="400px" /%}
 
 Frank Stella is a master at producing incredibly dynamic work from only a few elements. His ability to create a sense of depth from simple overlapping elements is fantastic.
 
-<br /><br />
-
-{% iframe className="arena-iframe" src="https://www.are.na/tlon/ledoux-palladio/embed" width="100%" /%}
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/ledoux-palladio/embed" width="100%" height="400px" /%}
 
 The plans of both Ledoux and Palladio are incredibly dynamic. They’re mostly gridded, use only a few elements, and use lots of symmetry — but they’re at once distinct, engaging, and fresh.
 
-<br /><br />
-
-{% iframe className="arena-iframe" src="https://www.are.na/tlon/flags-k9moxiayuvq/embed" width="100%" /%}
+{% iframe className="arena-iframe" src="https://www.are.na/tlon/flags-k9moxiayuvq/embed" width="100%" height="400px" /%}
 
 Another influence: international maritime signal flags. We like these not only because of their striking visual qualities, but also because they correspond with a letter system, just like our sigils. Each one conveys useful information; for example, “Keep clear of me; I am maneuvering with difficulty,” a flag we all feel like raising from time to time. This influence was key to the idea that pairing symbol to phoneme was a possibility.
 
@@ -91,13 +79,9 @@ So, how did we actually end up making these things?
 
 We iterated through plenty of possibilities before landing on our final approach. Let’s walk through the two we remember best.
 
-<br /><br />
-
 ![](https://media.urbit.org/site/posts/essays/sigils1-v2.png)
 
 The first attempt was a series of images in the style of Karel Martens. Overall this technique was just too cluttered and sometimes difficult to parameterize in a predictable way. We kept iterating.
-
-<br /><br />
 
 ![](https://media.urbit.org/site/posts/essays/sigils2-v2.png)
 
@@ -113,27 +97,19 @@ Best of all, tiles made it clear that we should be thinking in terms of creating
 
 Thinking in terms of syllables greatly reduced the complexity of the problem, but there was still some work to do.
 
-<br /><br />
-
 ![](https://media.urbit.org/site/posts/essays/sigils3-v2.png)
 
 At first, we thought about using a 4 x 4 tile grid, as shown here. These designs were tricky to implement because of the detailed lines and arcs spanning across individual tiles. In order to generate a result that matched these mockups, a program would have to generate a data model that knew about which tiles touched which other tiles.
 
 We felt this was too complicated and had an unknown performance profile. Plus, they proposed a deterministic color scheme and we felt strongly that color is personal, not to mention hard to parameterize. In the end we thought it better to create something that had the potential for user customization.
 
-<br /><br />
-
 ![](https://media.urbit.org/site/posts/essays/sigils4-v2.png)
 
 Around this stage, we were thinking a lot about how architectural plans aren’t unduly constrained by the fact that they’re only one color. We had a feeling we could make the grid smaller and assign details to the tiles individually.
 
-<br /><br />
-
 ![](https://media.urbit.org/site/posts/essays/sigils10-v3.png)
 
 So, we scaled it down to a 2 x 2 grid and stuck with it. It’s simple to implement, visually unique, consistent, and the color scheme is black and white, leaving room for user customization. We felt we had reached a semblance of a final result. Now all we had to do was manually draw 512 unique but consistent individual ‘phonemes’.
-
-<br /><br />
 
 ![](https://media.urbit.org/site/posts/essays/sigils5-v2.png)
 
@@ -147,21 +123,15 @@ We took a look at our hand drawn mockups and drew each individual visual buildin
 
 We eventually added a rule system to find higher quality phoneme symbols — but this combination of programmatic generation and hand selection was working pretty well.
 
-<br /><br />
-
 ![](https://media.urbit.org/site/posts/essays/sigils7-v2.png)
 
 The final step, using the tool we built, was to hand select individual phoneme symbols and create a complete index.
-
-<br /><br />
 
 ![](https://media.urbit.org/site/posts/essays/sigils8-square-v2.png)
 
 This allowed us to start looking at possible combinations and selecting phoneme symbols based on their interplay with others.
 
 Once we had selected the final set, we went about compiling the `sigil-js` library that’s now publicly available. This turned out to be fairly technically complex due to the different ways SVG is handled between browsers and Figma — but the end result is a single Javascript library you can use to embed an SVG in almost any context on a web page. See it in action and browse the available sigils [here](https://sigil.azimuth.network). If you're technically inclined, the [source](https://github.com/urbit/sigil-js) can be found on GitHub.
-
-<br /><br />
 
 ![](https://media.urbit.org/site/posts/essays/sigils9.png)
 

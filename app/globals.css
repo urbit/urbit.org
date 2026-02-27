@@ -207,6 +207,15 @@ body {
         @apply no-underline;
     }
 
+    .arena-iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        min-height: 360px;
+        border: 0;
+        display: block;
+    }
+
     /* } */
     .button {
         @apply my-[2.5rem] md:hover:bg-gray-87 text-xlarge font-[600] bg-white text-black rounded-[5px] leading-[1cap] p-[.5rem];
@@ -288,6 +297,40 @@ body {
 
         img {
             @apply bg-gray-f5;
+        }
+
+        table {
+            @apply w-full font-sans text-base mb-6 border border-contrast-1 rounded-[.5rem] overflow-hidden block md:table border-collapse overflow-x-auto;
+        }
+
+        thead {
+            @apply bg-contrast-1 text-primary;
+        }
+
+        tbody {
+            @apply bg-background;
+        }
+
+        tr {
+            @apply border-b border-contrast-1;
+        }
+
+        tbody tr:nth-child(even) {
+            @apply bg-gray-f5;
+        }
+
+        th,
+        td {
+            @apply text-left align-top px-4 py-3 border-r border-contrast-1;
+        }
+
+        th {
+            @apply font-[600];
+        }
+
+        th:last-child,
+        td:last-child {
+            @apply border-r-0;
         }
 
         p {
