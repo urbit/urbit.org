@@ -13,7 +13,7 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
-tags = ["spotlight", "identity", "design"]
+tags = ["olif", "identity", "design"]
 +++
 
 My introduction to Urbit came through its identity system. In particular,  [sigils](./creating-sigils) and `@p` names. Each Urbit ID is fundamentally a large number, but the system derives two practical representations from it. A `@p` is a pronounceable name generated from a phonetic base. The number is mapped to a selection from 512 predefined three-letter syllables or phonemes (256 prefixes and 256 suffixes). This produces a readable string like `~sampel-palnet` for a planet. The sigil is generated in parallel as a visual shape assembled from a fixed set of foundational glyphs. Each glyph corresponds directly to one of those syllables. The mapping is fully deterministic. The same address always produces the same `@p` and sigil. This keeps the core components simple and consistent across billions of possible IDs.
