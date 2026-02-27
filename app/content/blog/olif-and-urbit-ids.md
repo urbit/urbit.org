@@ -7,7 +7,7 @@ description = "An Olfactive rendering of Urbit Address Space"
 [extra]
 # author = ""
 ship = "~litneb-maltyp"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_Social.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Blog_Olif+and+Urbit+IDs_Text_Social.png"
 imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Blog_Olif+and+Urbit+IDs_Text_Social.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Olif+and+Urbit+ID/Blog_Olif+and+Urbit+IDs_Text_Banner.png"
 # imageDark = ""
