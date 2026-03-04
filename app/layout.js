@@ -1,8 +1,9 @@
 import "./globals.css";
+import Script from "next/script";
 import { getMarkdownContent } from "./lib/queries";
 import { LayoutSlotsProvider } from "./lib/layoutSlots";
 import { LayoutFrame } from "./components/LayoutFrame";
-import { ScrollManager } from "./components/ScrollManager";
+import { AnchorScrollManager } from "./components/ScrollManager";
 
 export async function generateMetadata({ params }, parent) {
   const config = await getMarkdownContent("config.md");
@@ -66,6 +67,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className="light">
       <head>
+        <Script id="scroll-restoration" strategy="beforeInteractive">
+          {"if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } if (!location.hash) { window.scrollTo(0, 0); }"}
+        </Script>
         <script defer src="/umami-script.js" data-website-id={umamiWebsiteId}></script>
         <link
           rel="preload"
@@ -121,7 +125,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body className="min-h-[100svh] w-full relative" id="observer-root">
         <LayoutSlotsProvider>
-          <ScrollManager />
+          <AnchorScrollManager />
           <LayoutFrame
             nav={config.frontMatter?.nav}
             homepage={config.frontMatter?.homepage}

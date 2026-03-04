@@ -149,7 +149,7 @@ export default async function EcosystemHome() {
 
 export const Section = ({ id, title, children, className = "" }) => {
   return (
-    <section id={id} className={`${className} pt-6 mb-4 gap-x-4 px-4 scroll-mt-[72px] md:scroll-mt-[100px]`}>
+    <section id={id} className={`${className} pt-6 mb-4 gap-x-4 px-4 scroll-mt-[90px] md:scroll-mt-[100px]`}>
       <div className="mb-4">
         <h1 className="font-serif text-4xl font-[400] text-primary">{title}</h1>
       </div>

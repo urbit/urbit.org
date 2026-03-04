@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useLayoutSlots } from "../lib/layoutSlots";
+import { getVisibleAnchorElement } from "../lib/anchorScroll";
 import { MicroBlurb } from "./ContentBlurbs";
 
 /**
@@ -23,70 +24,41 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
   const { setSidebarVisible, enableSidebarTransitions } = useLayoutSlots();
   const pathname = usePathname();
 
-  // Helper to get the visible element when there are duplicate IDs (desktop vs mobile)
-  const getVisibleElement = (id) => {
-    const elements = document.querySelectorAll(`#${id}`);
-    if (elements.length === 0) return null;
-    // Find the element with non-zero height (the visible one)
-    return Array.from(elements).find(el => el.getBoundingClientRect().height > 0) || null;
-  };
-
   const handleSectionClick = (sectionId) => {
-    const element = getVisibleElement(sectionId);
+    const element = getVisibleAnchorElement(sectionId);
     if (!element) {
       console.warn(`No visible element found for section: ${sectionId}`);
       return;
     }
 
-    // Responsive offset: 72px mobile, 80px desktop (matches scroll-mt)
-    const isMobile = window.innerWidth < 768; // md breakpoint
-    const offset = isMobile ? 72 : 80;
+    const isMobile = window.innerWidth < 768;
+    const offset = isMobile ? 90 : 80;
 
     const rect = element.getBoundingClientRect();
     const targetPosition = rect.top + window.pageYOffset - offset;
 
-    console.log('Section scroll:', {
-      sectionId,
-      isMobile,
-      offset,
-      'rect.top': rect.top,
-      'window.pageYOffset': window.pageYOffset,
-      targetPosition
-    });
-
     window.scrollTo({
       top: targetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
   const handleSubsectionClick = (subsectionId) => {
-    const element = getVisibleElement(subsectionId);
+    const element = getVisibleAnchorElement(subsectionId);
     if (!element) {
       console.warn(`No visible element found for subsection: ${subsectionId}`);
       return;
     }
 
-    // Responsive offset: 72px mobile, 80px desktop (matches scroll-mt)
-    const isMobile = window.innerWidth < 768; // md breakpoint
-    const offset = isMobile ? 72 : 80;
+    const isMobile = window.innerWidth < 768;
+    const offset = isMobile ? 90 : 80;
 
     const rect = element.getBoundingClientRect();
     const targetPosition = rect.top + window.pageYOffset - offset;
 
-    console.log('Subsection scroll:', {
-      subsectionId,
-      isMobile,
-      offset,
-      'rect.top': rect.top,
-      'rect.height': rect.height,
-      'window.pageYOffset': window.pageYOffset,
-      targetPosition
-    });
-
     window.scrollTo({
       top: targetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -112,15 +84,15 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
       }
 
       // Find active section and subsection based on scroll position
-      // Responsive offset: 72px mobile, 80px desktop (matches scroll-mt)
-      const isMobile = window.innerWidth < 768; // md breakpoint
-      const offset = isMobile ? 72 : 80;
+    const isMobile = window.innerWidth < 768;
+    const offset = isMobile ? 90 : 80;
+
       let currentSection = "";
       let currentSubsection = "";
 
       // First, check if any section wrapper is in upper viewport
       for (const section of sections) {
-        const sectionElement = getVisibleElement(section.id);
+        const sectionElement = getVisibleAnchorElement(section.id);
         if (sectionElement) {
           const rect = sectionElement.getBoundingClientRect();
 
@@ -133,7 +105,7 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
         // Then check subsections within this section
         if (section.subsections) {
           for (const subsection of section.subsections) {
-            const element = getVisibleElement(subsection.id);
+            const element = getVisibleAnchorElement(subsection.id);
             if (element) {
               const rect = element.getBoundingClientRect();
 
@@ -154,7 +126,7 @@ export function HomepageSectionNav({ sections = [], sidebarBlurb = null }) {
         for (const section of sections) {
           if (section.subsections) {
             for (const subsection of section.subsections) {
-              const element = getVisibleElement(subsection.id);
+              const element = getVisibleAnchorElement(subsection.id);
               if (element) {
                 const rect = element.getBoundingClientRect();
                 const viewportHeight = window.innerHeight;

@@ -1,4 +1,3 @@
-import React from "react";
 import { getMarkdownContent, getSectionContent } from "./lib/queries";
 import { HeroSlot, SidebarSlot, SidebarPositionSlot } from "./lib/layoutSlots";
 import { HeroSection } from "./components/HeroSection";
@@ -7,6 +6,7 @@ import { HomepageBlurb, PreviewContentBlurb, MicroBlurb, ContentBlurb } from "./
 import { HomepageSubsection } from "./components/HomepageSubsection";
 import { MobileFloatingNav } from "./components/MobileFloatingNav";
 import Markdoc from "@markdoc/markdoc";
+import { markdocHtmlConfig } from "./markdocConfig";
 
 const toPlainObject = (value) => {
   if (value === null || value === undefined) {
@@ -32,7 +32,11 @@ export default async function HomePage() {
   const loadBlurb = async (blurbSlug) => {
     if (!blurbsBySlug[blurbSlug]) {
       try {
-        const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
+        const blurbData = await getMarkdownContent(
+          `blurbs/${blurbSlug}.md`,
+          "toml",
+          markdocHtmlConfig
+        );
         const renderedContent = Markdoc.renderers.html(blurbData.content);
 
         blurbsBySlug[blurbSlug] = toPlainObject({
@@ -148,7 +152,7 @@ export default async function HomePage() {
           if (!sectionBlurb) return null;
 
           return (
-            <section key={section.id} id={section.id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px]">
+            <section key={section.id} id={section.id} className="mb-16 scroll-mt-[90px] md:scroll-mt-[80px]">
               <div className="border-t border-contrast-2">
               </div>
 
@@ -218,7 +222,7 @@ export default async function HomePage() {
             if (!sectionBlurb) return null;
 
             return (
-              <section key={section.id} id={`mobile-${section.id}`} className="mb-12 scroll-mt-[72px]">
+              <section key={section.id} id={`mobile-${section.id}`} className="mb-12 scroll-mt-[90px]">
                 {/* Section divider */}
                 <div className="border-t border-contrast-2 mb-8"></div>
 

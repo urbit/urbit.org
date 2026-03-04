@@ -125,22 +125,22 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                 }
               }}
               href="/"
-              className="flex w-36 h-16 relative items-center pl-[.7em]"
+              className="flex w-[72px] h-8 relative items-center pl-[.6em]"
             >
               {/* TODO fix icons for supporting darkmode */}
               <Image
                 src="/icons/urbit-neu.svg"
                 alt="Urbit wordmark"
-                width={140}
-                height={24}
-                className="pb-1.5"
+                width={72}
+                height={13}
+                className="pb-1 w-[72px] h-auto"
               />
               <Image
                 src="/icons/urbit-neu-dark.svg"
                 alt="Urbit wordmark"
-                width={140}
-                height={24}
-                className="pb-1.5 hidden"
+                width={72}
+                height={13}
+                className="pb-1 w-[72px] h-auto hidden"
               />
             </Link>
           </div>
