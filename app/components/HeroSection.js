@@ -281,44 +281,51 @@ export function HeroSection({ hero }) {
         </div>
 
         {/* Desktop Tertiary Link */}
-        {tertiaryLink && (
-          tertiaryLink.link.startsWith('http') ? (
-            <button
-              onClick={() => setIsModalOpen(true)}
-              data-umami-event="cta-hero-tertiary-desktop-quickstart"
-              data-umami-event-label={tertiaryLink.label}
-              data-umami-event-destination={tertiaryLink.link}
-              data-umami-event-context="hero"
-              data-umami-event-variant="desktop"
-              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
-            >
-              {tertiaryLink.label}
-            </button>
-          ) : (
-            <Link
-              href={tertiaryLink.link}
-              data-umami-event="cta-hero-tertiary-desktop-quickstart"
-              data-umami-event-label={tertiaryLink.label}
-              data-umami-event-destination={tertiaryLink.link}
-              data-umami-event-context="hero"
-              data-umami-event-variant="desktop"
-              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
-            >
-              {tertiaryLink.label}
-            </Link>
-          )
-        )}
+        <div className="hidden md:flex items-center gap-4">
+          {tertiaryLink && (
+            tertiaryLink.link.startsWith('http') ? (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                data-umami-event="cta-hero-tertiary-desktop-quickstart"
+                data-umami-event-label={tertiaryLink.label}
+                data-umami-event-destination={tertiaryLink.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="desktop"
+                className="font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
+              >
+                {tertiaryLink.label}
+              </button>
+            ) : (
+              <Link
+                href={tertiaryLink.link}
+                data-umami-event="cta-hero-tertiary-desktop-quickstart"
+                data-umami-event-label={tertiaryLink.label}
+                data-umami-event-destination={tertiaryLink.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="desktop"
+                className="font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
+              >
+                {tertiaryLink.label}
+              </Link>
+            )
+          )}
+        </div>
       </div>
 
       {/* Leaving Site Modal */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
         <h2 className="text-2xl font-serif italic font-semibold text-primary mb-4">
-		  Quickstart with Tlon Messenger
+          Quickstart with Tlon Messenger
         </h2>
         <p className="font-sans text-large leading-120 text-primary mb-6">
-		  Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.</p>
+          Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.
+        </p>
         <p className="font-sans text-large leading-120 text-primary mb-6">
-		  The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!</p>
+          The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!
+        </p>
         <div className="flex gap-3 justify-end">
           <Link
             href="/overview/running-urbit"
@@ -348,6 +355,7 @@ export function HeroSection({ hero }) {
           </a>
         </div>
       </Modal>
+
     </section>
   );
 }

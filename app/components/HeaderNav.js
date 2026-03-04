@@ -47,7 +47,38 @@ const getHeaderNavEvent = (navItem) => {
   return `nav-header-${buildHeaderNavSlug(navItem)}`;
 };
 
-export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcements, urbitExplainedSections, runningUrbitSections }) => {
+const SearchIcon = ({ className = "" }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <circle cx="11" cy="11" r="7" />
+    <line x1="16.65" y1="16.65" x2="21" y2="21" />
+  </svg>
+);
+
+const getShortcutLabel = () => {
+  if (typeof navigator === "undefined") return null;
+  const platform = navigator.userAgentData?.platform || navigator.platform || "";
+  return /mac/i.test(platform) ? "⌘K" : "Ctrl+K";
+};
+
+export const HeaderNav = ({
+  nav,
+  homepage,
+  inFrame = false,
+  mobileNav,
+  announcements,
+  urbitExplainedSections,
+  runningUrbitSections,
+  onSearchOpen,
+}) => {
   const headerRef = useRef(null);
 
   const currentRoute = usePathname();
@@ -60,6 +91,7 @@ export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcem
         announcements={announcements}
         urbitExplainedSections={urbitExplainedSections}
         runningUrbitSections={runningUrbitSections}
+        onSearchOpen={onSearchOpen}
       />
 
       <section
@@ -70,12 +102,12 @@ export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcem
         )}
       >
         {inFrame ? (
-          <GlobalNav nav={nav} />
+          <GlobalNav nav={nav} onSearchOpen={onSearchOpen} />
         ) : (
           <div className="h-auto md:flex md:flex-row md:items-center md:justify-between my-4 md:my-8">
             <div className="w-full leading-[1cap] flex justify-start h-full ">
               <div className="col-span-5 hidden md:flex w-full items-center justify-end">
-                <GlobalNav nav={nav} />
+                <GlobalNav nav={nav} onSearchOpen={onSearchOpen} />
               </div>
             </div>
           </div>
@@ -85,7 +117,14 @@ export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcem
   );
 };
 
-const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, runningUrbitSections }) => {
+const MobileNav = ({
+  nav,
+  currentRoute,
+  announcements,
+  urbitExplainedSections,
+  runningUrbitSections,
+  onSearchOpen,
+}) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
   const routeMap = {
@@ -101,6 +140,13 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
 
   const toggleMenu = () => {
     setMenuOpen(!menuIsOpen);
+  };
+
+  const handleSearchOpen = () => {
+    if (menuIsOpen) {
+      setMenuOpen(false);
+    }
+    onSearchOpen?.();
   };
 
   return (
@@ -145,46 +191,67 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
             </Link>
           </div>
           <div
-            onClick={toggleMenu}
-            className="col-span-8 w-full flex pr-[.7em] items-center justify-end"
+            className="col-span-8 w-full flex pr-[.7em] items-center justify-end gap-3"
           >
             <span className="pr-4">{routeMap[splitRoute[1]]}</span>
-            <span className="">{menuIsOpen
-              ?
-              <div>
-                <Image
-                  src="/icons/hamburger-dark.svg"
-                  alt="hamburger menu open"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6 hidden"
-                />
-                <Image
-                  src="/icons/hamburger.svg"
-                  alt="hamburger menu open"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6"
-                />
-              </div>
-              :
-              <div>
-                <Image
-                  src="/icons/hamburger-dark.svg"
-                  alt="hamburger menu closed"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6 hidden"
-                />
-                <Image
-                  src="/icons/hamburger.svg"
-                  alt="hamburger menu closed"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6"
-                />
-              </div>
-            }</span>
+            {onSearchOpen && (
+              <button
+                type="button"
+                onClick={handleSearchOpen}
+                aria-label="Open search"
+                data-umami-event="cta-header-search"
+                data-umami-event-label="Search"
+                data-umami-event-destination="search-modal"
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="mobile"
+                className="flex items-center justify-center text-contrast-2 hover:text-primary transition-colors"
+              >
+                <SearchIcon className="h-5 w-5" />
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={toggleMenu}
+              aria-label={menuIsOpen ? "Close menu" : "Open menu"}
+              className="flex items-center"
+            >
+              {menuIsOpen
+                ?
+                <div>
+                  <Image
+                    src="/icons/hamburger-dark.svg"
+                    alt="hamburger menu open"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6 hidden"
+                  />
+                  <Image
+                    src="/icons/hamburger.svg"
+                    alt="hamburger menu open"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6"
+                  />
+                </div>
+                :
+                <div>
+                  <Image
+                    src="/icons/hamburger-dark.svg"
+                    alt="hamburger menu closed"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6 hidden"
+                  />
+                  <Image
+                    src="/icons/hamburger.svg"
+                    alt="hamburger menu closed"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6"
+                  />
+                </div>
+              }
+            </button>
           </div>
         </div>
         {/* Persistent Submenus - Mobile Only */}
@@ -292,12 +359,17 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
   );
 };
 
-const GlobalNav = ({ nav }) => {
+const GlobalNav = ({ nav, onSearchOpen }) => {
   const currentRoute = usePathname();
+  const [shortcutLabel, setShortcutLabel] = useState(null);
+
+  useEffect(() => {
+    setShortcutLabel(getShortcutLabel());
+  }, []);
 
   return (
     <React.Fragment>
-      <ul className="flex mb-0 flex-row gap-x-3 pt-0 text-large font-[600]">
+      <ul className="flex mb-0 flex-row gap-x-3 pt-0 text-large font-[600] items-center">
         {nav?.map((navItem, i) => {
 
           const isActive = currentRoute.startsWith(navItem.url);
@@ -337,6 +409,26 @@ const GlobalNav = ({ nav }) => {
             </Link>
           );
         })}
+        {onSearchOpen && (
+          <button
+            type="button"
+            onClick={onSearchOpen}
+            aria-label="Open search"
+            data-umami-event="cta-header-search"
+            data-umami-event-label="Search"
+            data-umami-event-destination="search-modal"
+            data-umami-event-context={currentRoute}
+            data-umami-event-variant="desktop"
+            className="flex items-center gap-2 rounded-md px-3 py-1 text-contrast-2 hover:text-primary transition-colors"
+          >
+            <SearchIcon className="h-4 w-4" />
+            {shortcutLabel && (
+              <span className="text-xs font-mono text-contrast-2">
+                {shortcutLabel}
+              </span>
+            )}
+          </button>
+        )}
       </ul>
     </React.Fragment>
   );

@@ -42,5 +42,8 @@ yarn-error.log*
 # rss
 public/rss.xml
 
+# search index
+public/search-index.json
+
 yarn.lock
 
