@@ -52,7 +52,7 @@ const SearchIcon = ({ className = "" }) => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="1.5"
+    strokeWidth="2.3"
     strokeLinecap="round"
     strokeLinejoin="round"
     className={className}
@@ -66,7 +66,7 @@ const SearchIcon = ({ className = "" }) => (
 const getShortcutLabel = () => {
   if (typeof navigator === "undefined") return null;
   const platform = navigator.userAgentData?.platform || navigator.platform || "";
-  return /mac/i.test(platform) ? "⌘K" : "Ctrl+K";
+  return /mac/i.test(platform) ? "⌘K" : "^+K";
 };
 
 export const HeaderNav = ({
@@ -78,6 +78,7 @@ export const HeaderNav = ({
   urbitExplainedSections,
   runningUrbitSections,
   onSearchOpen,
+  isSearchOpen,
 }) => {
   const headerRef = useRef(null);
 
@@ -92,6 +93,7 @@ export const HeaderNav = ({
         urbitExplainedSections={urbitExplainedSections}
         runningUrbitSections={runningUrbitSections}
         onSearchOpen={onSearchOpen}
+        isSearchOpen={isSearchOpen}
       />
 
       <section
@@ -102,12 +104,13 @@ export const HeaderNav = ({
         )}
       >
         {inFrame ? (
-          <GlobalNav nav={nav} onSearchOpen={onSearchOpen} />
+                <GlobalNav nav={nav} onSearchOpen={onSearchOpen} isSearchOpen={isSearchOpen} />
+
         ) : (
           <div className="h-auto md:flex md:flex-row md:items-center md:justify-between my-4 md:my-8">
             <div className="w-full leading-[1cap] flex justify-start h-full ">
               <div className="col-span-5 hidden md:flex w-full items-center justify-end">
-                <GlobalNav nav={nav} onSearchOpen={onSearchOpen} />
+          <GlobalNav nav={nav} onSearchOpen={onSearchOpen} isSearchOpen={isSearchOpen} />
               </div>
             </div>
           </div>
@@ -124,6 +127,7 @@ const MobileNav = ({
   urbitExplainedSections,
   runningUrbitSections,
   onSearchOpen,
+  isSearchOpen,
 }) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
@@ -204,9 +208,13 @@ const MobileNav = ({
                 data-umami-event-destination="search-modal"
                 data-umami-event-context={currentRoute}
                 data-umami-event-variant="mobile"
-                className="flex items-center justify-center text-contrast-2 hover:text-primary transition-colors"
+                className={`flex items-center justify-center transition-colors duration-200 ${
+                  isSearchOpen
+                    ? "text-primary"
+                    : "text-contrast-2 hover:text-primary"
+                }`}
               >
-                <SearchIcon className="h-5 w-5" />
+                <SearchIcon className="h-[22px] w-[22px]" />
               </button>
             )}
             <button
@@ -359,7 +367,7 @@ const MobileNav = ({
   );
 };
 
-const GlobalNav = ({ nav, onSearchOpen }) => {
+const GlobalNav = ({ nav, onSearchOpen, isSearchOpen }) => {
   const currentRoute = usePathname();
   const [shortcutLabel, setShortcutLabel] = useState(null);
 
@@ -419,11 +427,21 @@ const GlobalNav = ({ nav, onSearchOpen }) => {
             data-umami-event-destination="search-modal"
             data-umami-event-context={currentRoute}
             data-umami-event-variant="desktop"
-            className="flex items-center gap-2 rounded-md px-3 py-1 text-contrast-2 hover:text-primary transition-colors"
+            className={`group flex items-center gap-2 rounded-md px-3 py-1 transition-colors duration-200 ${
+              isSearchOpen
+                ? "text-primary"
+                : "text-contrast-2 hover:text-primary"
+            }`}
           >
-            <SearchIcon className="h-4 w-4" />
+            <SearchIcon className="h-[18px] w-[18px]" />
             {shortcutLabel && (
-              <span className="text-xs font-mono text-contrast-2">
+              <span
+                className={`text-xs font-mono transition-colors duration-200 ${
+                  isSearchOpen
+                    ? "text-primary"
+                    : "text-contrast-2 group-hover:text-primary"
+                }`}
+              >
                 {shortcutLabel}
               </span>
             )}

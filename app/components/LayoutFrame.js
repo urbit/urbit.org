@@ -73,6 +73,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
           urbitExplainedSections={urbitExplainedSections}
           runningUrbitSections={runningUrbitSections}
           onSearchOpen={openSearch}
+          isSearchOpen={isSearchOpen}
         />
 
         {/* Optional Hero - Mobile */}
@@ -126,6 +127,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
                 homepage={homepage}
                 inFrame={true}
                 onSearchOpen={openSearch}
+                isSearchOpen={isSearchOpen}
               />
             </div>
             <div className="h-[55px] w-[23px] flex-shrink-0 ml-[-0.5px]">

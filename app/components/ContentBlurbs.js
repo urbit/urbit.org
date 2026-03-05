@@ -270,12 +270,13 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
 export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
+  const anchorId = id || blurbSlug;
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
 
   return (
-    <div className="">
+    <div id={anchorId} className="scroll-mt-[90px] md:scroll-mt-[80px]">
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           {/* Render images if provided */}

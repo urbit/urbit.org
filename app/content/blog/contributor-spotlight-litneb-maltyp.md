@@ -14,6 +14,20 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+li
 # imageCardDark = ""
 # imageIndexDark = ""
 tags = ["spotlight", "identity", "design"]
+search_terms = [
+    "contributor spotlight",
+    "litneb maltyp",
+    "urbit identity",
+    "personal server",
+    "urbit community",
+    "urbit id",
+    "azimuth ids",
+    "sigil design",
+    "olif",
+    "assembly conference",
+    "groundwire",
+    "forever computer"
+]
 +++
  
 ![~litneb-maltyp contributor spotlight image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_no+text_Social16_9.png)

@@ -16,9 +16,8 @@ const toml = require("@iarna/toml");
 
 const CONTENT_DIR = path.join(process.cwd(), "app/content");
 const OUTPUT_PATH = path.join(process.cwd(), "public/search-index.json");
+const INCLUDED_DIRECTORIES = new Set(["blog", "blurbs", "homepage", "overview"]);
 const EXCLUDED_FILE_NAMES = new Set(["config.md", "index.md"]);
-const EXCLUDED_SLUGS = new Set(["get-on-the-network"]);
-const EXCLUDED_DIRECTORIES = new Set(["blurbs", "homepage"]);
 const SECTION_ORDER = ["overview", "blog", "grants", "events", "pages", "other"];
 const SECTION_LABELS = {
   overview: "Overview",
@@ -54,6 +53,83 @@ const collectTags = (frontMatter) => {
   return Array.from(new Set(tags));
 };
 
+const collectFrontMatterValues = (value, values = []) => {
+  if (value === null || value === undefined) {
+    return values;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((entry) => collectFrontMatterValues(entry, values));
+    return values;
+  }
+
+  if (typeof value === "object") {
+    Object.values(value).forEach((entry) => collectFrontMatterValues(entry, values));
+    return values;
+  }
+
+  if (typeof value === "string" || typeof value === "number") {
+    const stringValue = String(value).trim();
+    if (stringValue) {
+      values.push(stringValue);
+    }
+  }
+
+  return values;
+};
+
+const uniqueStrings = (values) => Array.from(new Set(values.filter(Boolean)));
+
+const normalizeSearchTerms = (value) => {
+  if (!value) return [];
+
+  const values = normalizeArray(value).flatMap((entry) => {
+    if (typeof entry === "string") {
+      return entry
+        .split(",")
+        .map((item) => item.trim())
+        .filter(Boolean);
+    }
+
+    if (typeof entry === "number") {
+      return [String(entry)];
+    }
+
+    return [];
+  });
+
+  return uniqueStrings(values);
+};
+
+const collectAuthors = (frontMatter) => {
+  const values = [
+    ...normalizeArray(frontMatter.author),
+    ...normalizeArray(frontMatter.authors),
+    ...normalizeArray(frontMatter.extra?.author),
+    ...normalizeArray(frontMatter.extra?.authors),
+  ]
+    .map((entry) => String(entry || "").trim())
+    .filter(Boolean);
+
+  return uniqueStrings(values);
+};
+
+const parsePublishedTimestamp = (frontMatter) => {
+  const dateValue =
+    frontMatter.date ||
+    frontMatter.published ||
+    frontMatter.published_at ||
+    frontMatter.updated ||
+    frontMatter.extra?.date ||
+    frontMatter.extra?.published ||
+    frontMatter.extra?.updated;
+
+  if (!dateValue) return null;
+
+  const parsed = Date.parse(dateValue);
+  return Number.isNaN(parsed) ? null : parsed;
+};
+
 const parseFrontMatter = (raw, filePath) => {
   const trimmed = raw.trimStart();
   const usesToml = trimmed.startsWith("+++");
@@ -74,38 +150,174 @@ const parseFrontMatter = (raw, filePath) => {
   }
 };
 
-const resolveEntry = (relativePath) => {
+const deriveSectionInfoFromPath = (targetPath) => {
+  const parts = targetPath.split("/").filter(Boolean);
+  if (!parts.length) {
+    return { section: "pages" };
+  }
+
+  const [root, subsection] = parts;
+  if (root === "overview") {
+    return {
+      section: "overview",
+      subsection,
+      subsectionLabel: subsection ? toTitleCase(subsection) : undefined,
+    };
+  }
+
+  if (root === "blog") {
+    return { section: "blog" };
+  }
+
+  if (root === "grants") {
+    return { section: "grants" };
+  }
+
+  if (root === "events") {
+    return { section: "events" };
+  }
+
+  return { section: "pages" };
+};
+
+const resolveOverviewEntry = (segments, slug, relativePath) => {
+  const overviewSection = segments[1];
+  if (!overviewSection) {
+    console.warn(`Skipping overview content without subsection: ${relativePath}`);
+    return null;
+  }
+
+  const isIntro = slug === "intro";
+  const pathSuffix = isIntro
+    ? `/overview/${overviewSection}`
+    : `/overview/${overviewSection}/${slug}`;
+
+  return {
+    path: pathSuffix,
+    section: "overview",
+    subsection: overviewSection,
+    subsectionLabel: toTitleCase(overviewSection),
+  };
+};
+
+const addBlurbRoute = (map, slug, targetPath, { overwrite = false } = {}) => {
+  if (!slug || !targetPath) {
+    return;
+  }
+
+  if (!overwrite && map.has(slug)) {
+    return;
+  }
+
+  if (overwrite && map.has(slug) && map.get(slug) !== targetPath) {
+    console.warn(`Blurb ${slug} mapped to multiple routes; using ${targetPath}.`);
+  }
+
+  map.set(slug, targetPath);
+};
+
+const buildBlurbRouteMap = async () => {
+  const map = new Map();
+  const homepageConfigPath = path.join(CONTENT_DIR, "homepage/config.md");
+
+  if (fs.existsSync(homepageConfigPath)) {
+    try {
+      const rawContent = fs.readFileSync(homepageConfigPath, "utf-8");
+      const frontMatter = parseFrontMatter(rawContent, homepageConfigPath);
+      if (frontMatter) {
+        const sections = normalizeArray(frontMatter.sections);
+        sections.forEach((section) => {
+          if (!section) return;
+          const sectionBlurb = section["section-blurb"];
+          addBlurbRoute(map, sectionBlurb, `/#${sectionBlurb}`);
+
+          const subsectionBlurbs = normalizeArray(section["subsection-blurbs"]);
+          subsectionBlurbs.forEach((blurbSlug) => {
+            addBlurbRoute(map, blurbSlug, `/#${blurbSlug}`);
+          });
+        });
+
+        const sidebarBlurb = frontMatter.sidebar_blurb;
+        addBlurbRoute(map, sidebarBlurb, `/#${sidebarBlurb}`);
+      }
+    } catch (error) {
+      console.error("Failed to load homepage config for blurbs:", error);
+    }
+  }
+
+  const overviewPaths = await glob(path.join(CONTENT_DIR, "overview/**/*.md"));
+  for (const filePath of overviewPaths) {
+    const filename = path.basename(filePath);
+    if (EXCLUDED_FILE_NAMES.has(filename)) {
+      continue;
+    }
+
+    let rawContent;
+    try {
+      rawContent = fs.readFileSync(filePath, "utf-8");
+    } catch (error) {
+      console.error(`Failed to read ${filePath}:`, error);
+      continue;
+    }
+
+    const frontMatter = parseFrontMatter(rawContent, filePath);
+    if (!frontMatter) {
+      continue;
+    }
+
+    const blurbs = normalizeArray(frontMatter.blurbs);
+    if (!blurbs.length) {
+      continue;
+    }
+
+    const relativePath = path
+      .relative(CONTENT_DIR, filePath)
+      .replace(/\\/g, "/");
+    const segments = relativePath.split("/");
+    const slug = path.basename(filename, ".md");
+    const routeInfo = resolveOverviewEntry(segments, slug, relativePath);
+
+    if (!routeInfo) {
+      continue;
+    }
+
+    blurbs.forEach((blurbSlug) => {
+      addBlurbRoute(map, blurbSlug, `${routeInfo.path}#${blurbSlug}`, { overwrite: true });
+    });
+  }
+
+  return map;
+};
+
+const resolveEntry = (relativePath, blurbRoutes) => {
   const segments = relativePath.split("/");
   const filename = segments[segments.length - 1];
   const slug = path.basename(filename, ".md");
   const section = segments[0];
 
-  if (EXCLUDED_SLUGS.has(slug)) {
-    return null;
-  }
-
   if (section === "overview") {
-    const overviewSection = segments[1];
-    if (!overviewSection) {
-      console.warn(`Skipping overview content without subsection: ${relativePath}`);
-      return null;
-    }
-
-    const isIntro = slug === "intro";
-    const pathSuffix = isIntro
-      ? `/overview/${overviewSection}`
-      : `/overview/${overviewSection}/${slug}`;
-
-    return {
-      path: pathSuffix,
-      section: "overview",
-      subsection: overviewSection,
-      subsectionLabel: toTitleCase(overviewSection),
-    };
+    return resolveOverviewEntry(segments, slug, relativePath);
   }
 
   if (section === "blog") {
     return { path: `/blog/${slug}`, section: "blog" };
+  }
+
+  if (section === "blurbs") {
+    const targetPath = blurbRoutes?.get(slug);
+    if (!targetPath) {
+      console.warn(`Blurb missing route mapping: ${relativePath}`);
+      return { path: `/#${slug}`, section: "pages" };
+    }
+
+    return {
+      path: targetPath,
+      ...deriveSectionInfoFromPath(targetPath),
+    };
+  }
+
+  if (section === "homepage") {
+    return { path: `/#${slug}`, section: "pages" };
   }
 
   if (section === "grants") {
@@ -114,10 +326,6 @@ const resolveEntry = (relativePath) => {
 
   if (section === "events") {
     return { path: `/events/${slug}`, section: "events" };
-  }
-
-  if (section === "singles") {
-    return { path: `/${slug}`, section: "pages" };
   }
 
   if (segments.length === 1) {
@@ -148,7 +356,12 @@ async function buildSearchIndex() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const postPaths = await glob(path.join(CONTENT_DIR, "**/*.md"));
+  const blurbRoutes = await buildBlurbRouteMap();
+  const contentGlob = path.join(
+    CONTENT_DIR,
+    `{${Array.from(INCLUDED_DIRECTORIES).join(",")}}/**/*.md`
+  );
+  const postPaths = await glob(contentGlob);
   const entries = [];
   const errors = [];
 
@@ -163,7 +376,7 @@ async function buildSearchIndex() {
       continue;
     }
 
-    if (segments.some((segment) => EXCLUDED_DIRECTORIES.has(segment))) {
+    if (!INCLUDED_DIRECTORIES.has(segments[0])) {
       continue;
     }
 
@@ -182,7 +395,7 @@ async function buildSearchIndex() {
       continue;
     }
 
-    const routeInfo = resolveEntry(relativePath);
+    const routeInfo = resolveEntry(relativePath, blurbRoutes);
     if (!routeInfo) {
       continue;
     }
@@ -194,22 +407,38 @@ async function buildSearchIndex() {
       frontMatter.extra?.description ||
       "";
     const tags = collectTags(frontMatter);
+    const searchTerms = normalizeSearchTerms(
+      frontMatter.search_terms || frontMatter.searchTerms
+    );
+    const authors = collectAuthors(frontMatter);
+    const publishedTimestamp = parsePublishedTimestamp(frontMatter);
     const sectionLabel = SECTION_LABELS[routeInfo.section] || toTitleCase(routeInfo.section);
-    const searchText = [
+    const entryId = relativePath;
+    const source = segments[0];
+    const frontMatterValues = collectFrontMatterValues(frontMatter);
+    const searchText = uniqueStrings([
       title,
       description,
       tags.join(" "),
+      searchTerms.join(" "),
+      authors.join(" "),
       routeInfo.path,
       sectionLabel,
       routeInfo.subsectionLabel || "",
-    ]
+      ...frontMatterValues,
+    ])
       .join(" ")
       .toLowerCase();
 
     entries.push({
+      id: entryId,
       title,
       description,
       tags,
+      searchTerms,
+      authors,
+      publishedTimestamp,
+      source,
       path: routeInfo.path,
       section: routeInfo.section,
       sectionLabel,
