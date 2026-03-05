@@ -8,6 +8,19 @@ description = "A peek into the mind behind UrWASM, and the undertaking to make U
 ship = "~sarlev-sarsen"
 image = "/images/dozreg-toplud-spotlight.png"
 tags =  ["spotlight", "UrWASM", "subject-knowledge analysis"]
+search_terms = [
+    "contributor spotlight",
+    "dozreg toplud",
+    "urwasm",
+    "subject knowledge analysis",
+    "ford build system",
+    "nock speed",
+    "runtime performance",
+    "urbit simplicity",
+    "security permissions",
+    "gall tooling",
+    "directed messaging"
+]
 +++
 
 > **\~sarlev:** What about Urbit drew you in and captured your attention?

@@ -2,6 +2,18 @@
 title = "Interim Constitution"
 date = "2016-05-15"
 description = "The governing rules for the early days of the Urbit network."
+search_terms = [
+  "interim constitution",
+  "urbit governance",
+  "galaxy senate",
+  "stellar congress",
+  "planetary assembly",
+  "consulate rules",
+  "urbit republic",
+  "address space presale",
+  "urbit foundation",
+  "galaxy table"
+]
 aliases = [ "/posts/essays/interim-constitution", "/posts/constitution" ]
 
 [extra]

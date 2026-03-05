@@ -6,6 +6,18 @@ aliases = [
   "/posts/essays/azimuth-as-multipass/",
   "/posts/azimuth-as-multipass"
 ]
+search_terms = [
+    "azimuth multipass",
+    "civilizational key",
+    "azimuth identity",
+    "single login",
+    "urbit wallet",
+    "digital identity",
+    "multipass",
+    "azimuth point",
+    "urbit access",
+    "identity card"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

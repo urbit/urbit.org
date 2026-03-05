@@ -2,6 +2,18 @@
 title = "Check and reduce memory usage"
 description = "Monitor and optimize your urbit's memory consumption"
 tags = ["dojo", "runtime"]
+search_terms = [
+    "memory usage",
+    "loom size",
+    "mass report",
+    "meld command",
+    "pack command",
+    "urbit runtime",
+    "dojo tools",
+    "deduplicate memory",
+    "pier storage",
+    "resource constraints"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

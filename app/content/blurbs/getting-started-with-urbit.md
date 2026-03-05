@@ -2,6 +2,18 @@
 title = "Get Started with Urbit"
 description = "Ready to join the Urbit network? Get your own Urbit ID and start exploring a new way to compute."
 tags = ["getting-started", "homepage", "sidebar"]
+search_terms = [
+    "get started",
+    "urbit id",
+    "urbit os",
+    "join urbit",
+    "quickstart",
+    "self sovereign",
+    "start exploring",
+    "urbit network",
+    "buy urbit id",
+    "learn urbit"
+]
 lastest-update = "<some-arvo-hash>"
 image = ""
 imageDark = ""

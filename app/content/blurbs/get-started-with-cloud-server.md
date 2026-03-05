@@ -2,6 +2,18 @@
 title = "Cloud Server"
 description = "Running in a virtual private server (VPS) affords easy solutions to things like DNS and remote access, at a marginal cost to tangible control of your data"
 tags = ["vps", "cloud", "self-hosting"]
+search_terms = [
+    "cloud server",
+    "vps hosting",
+    "self host urbit",
+    "remote access",
+    "personal server",
+    "datacenter hosting",
+    "dns setup",
+    "cloud hosting guide",
+    "virtual private server",
+    "urbit hosting"
+]
 lastest-update = "<some-arvo-hash>"
 image = "/images/cloud-hosting-sigil-dither.png"
 imageDark = ""

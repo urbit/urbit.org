@@ -14,6 +14,19 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr
 # imageCardDark =
 # imageIndexDark =
 tags =  ["spotlight", "vere64", "runtime"]
+search_terms = [
+    "contributor spotlight",
+    "mastyr bottec",
+    "vere64",
+    "runtime developer",
+    "large data",
+    "loom size",
+    "runtime migration",
+    "directed messaging",
+    "nock runtime",
+    "storage scaling",
+    "urbit runtime"
+]
 +++
 
 > **\~sarlev:** So, starting at the top, what's the first thing that drew you into the idea that we needed to throw away and rewrite the entire network computing stack? Or are you even sold on that?

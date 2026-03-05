@@ -2,6 +2,20 @@
 title = "Input and Output in Hoon"
 description = "Let's talk about IO in Urbit."
 date = "2020-12-15"
+search_terms = [
+    "hoon io",
+    "input output",
+    "state machines",
+    "monadic io",
+    "urbit threads",
+    "urbit agents",
+    "arvo vanes",
+    "functional io",
+    "imperative io",
+    "io patterns",
+    "hoon programming",
+    "state machine io"
+]
 
 [extra]
 author = "Philip Monk"

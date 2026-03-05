@@ -2,6 +2,19 @@
 title = "Stable Arvo"
 date = "2019-11-19"
 description = "This year we set out to get Arvo to a point that we can credibly call ‘stable.' "
+search_terms = [
+    "stable arvo",
+    "kernel stability",
+    "ames rewrite",
+    "continuity breach",
+    "kelvin versioning",
+    "upgrade mechanics",
+    "urbit resilience",
+    "network protocol",
+    "error recovery",
+    "crud events",
+    "arvo upgrades"
+]
 
 [extra]
 author = "Anthony Arroyo"

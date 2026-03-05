@@ -2,6 +2,19 @@
 title = "The Value of Urbit Address Space (3 of 3)"
 date = "2020-07-09"
 description = ""
+search_terms = [
+    "address space value",
+    "urbit ids",
+    "lockups",
+    "spawning limits",
+    "galaxy distribution",
+    "star unlocks",
+    "network effects",
+    "urbit scarcity",
+    "usage metrics",
+    "network explorer",
+    "address space trade"
+]
 
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"

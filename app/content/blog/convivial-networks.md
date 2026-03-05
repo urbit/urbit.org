@@ -2,6 +2,18 @@
 title = "Convivial Networks" 
 date = "2022-05-27" 
 description = "Like the relationships that we build within them, our platforms should yield satisfaction precisely because they’re non-trivial; they demand effort, which is another way of saying they require engagement with the world." 
+search_terms = [
+    "convivial networks",
+    "convivial tools",
+    "ivan illich",
+    "human scale tech",
+    "attention economy",
+    "community building",
+    "personal computing",
+    "urbit community",
+    "peer to peer",
+    "ownership"
+]
 [extra] 
 author = "" 
 ship = "~witwyt-widlyr" 

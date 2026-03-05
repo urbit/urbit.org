@@ -2,6 +2,16 @@
 title = "Troubleshooting Your Urbit"
 description = "Placeholder description"
 tags = []
+search_terms = [
+    "urbit troubleshooting",
+    "common issues",
+    "fix urbit",
+    "ship errors",
+    "help running urbit",
+    "urbit support",
+    "debug urbit",
+    "network issues"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

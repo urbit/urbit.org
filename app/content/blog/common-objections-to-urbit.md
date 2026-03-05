@@ -2,6 +2,18 @@
 title = "Common Objections to Urbit"
 date = "2016-06-27"
 description = "Some common objections to Urbit, discussed."
+search_terms = [
+  "urbit objections",
+  "urbit critiques",
+  "urbit decentralization",
+  "urbit governance",
+  "hoon language",
+  "nock jets",
+  "urbit adoption",
+  "urbit scalability",
+  "urbit security",
+  "personal server concerns"
+]
 aliases = [
   "/posts/essays/common-objections-to-urbit",
   "/posts/common-objections-to-urbit",

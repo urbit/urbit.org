@@ -2,6 +2,20 @@
 title = "On Christopher Alexander"
 date = "2021-07-19"
 description = "An overview of his writing and relevance"
+search_terms = [
+    "christopher alexander",
+    "pattern language",
+    "timeless way",
+    "nature of order",
+    "design philosophy",
+    "architecture theory",
+    "quality without name",
+    "living structure",
+    "software design",
+    "urbit design",
+    "pattern languages",
+    "alexander influence"
+]
 
 [extra]
 author = "Matt"

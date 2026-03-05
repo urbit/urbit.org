@@ -2,6 +2,18 @@
 title = "Beliefs and Principles Guiding the Urbit Project"
 date = "2016-05-10"
 description = "We believe."
+search_terms = [
+  "urbit principles",
+  "urbit beliefs",
+  "digital independence",
+  "code is law",
+  "decentralized control",
+  "property rights",
+  "governance by stake",
+  "content neutrality",
+  "urbit republic",
+  "network governance"
+]
 aliases = [
   "/posts/essays/beliefs-and-principles",
   "/posts/beliefs-and-principles",

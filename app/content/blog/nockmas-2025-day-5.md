@@ -14,6 +14,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 5",
+    "opcode 4",
+    "increment opcode",
+    "lus operator",
+    "nock increment",
+    "arithmetic primitive",
+    "jetting",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 5 increment image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-day-5-increment-social.png)

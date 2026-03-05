@@ -2,6 +2,20 @@
 title = "State of Urbit"
 date = "2021-08-24"
 description = "A year in review"
+search_terms = [
+    "state of urbit",
+    "urbit year review",
+    "landscape app",
+    "os1 landscape",
+    "urbit hosting",
+    "urbit onboarding",
+    "urbit id fees",
+    "naive rollups",
+    "grid interface",
+    "software distribution",
+    "assembly 2021",
+    "urbit roadmap"
+]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

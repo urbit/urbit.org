@@ -2,6 +2,17 @@
 title = "Shortfalls of hosting providers"
 description = "Hosting providers are designed to be scalable, not bespoke, operations."
 tags = ["hosting", "urbit-os"]
+search_terms = [
+    "hosting drawbacks",
+    "provider risks",
+    "encrypted at rest",
+    "host access data",
+    "self hosting control",
+    "dns control",
+    "ssh access",
+    "managed hosting limits",
+    "urbit privacy"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

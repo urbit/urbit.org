@@ -2,6 +2,19 @@
 title = "First Steps Towards urbit.org"
 date = "2020-08-11"
 description = "With a stable platform taking shape and a strong community forming that wants to help build Urbit, it’s time to make urbit.org real."
+search_terms = [
+    "urbit.org",
+    "urbit foundation",
+    "address space",
+    "grants program",
+    "interim director",
+    "community builders",
+    "governance",
+    "airlock",
+    "urbit roadmap",
+    "protocol stewardship",
+    "platform maturity"
+]
 
 [extra]
 author = "Josh Lehman"

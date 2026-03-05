@@ -2,6 +2,18 @@
 title = "Simple, Durable, Yours"
 date = "2019-10-16"
 description = "We built Urbit from scratch to be a system that’s simple, durable, and yours. Everything that computing today is not — but should be."
+search_terms = [
+    "simple durable yours",
+    "urbit overview",
+    "digital home",
+    "personal computing",
+    "urbit os",
+    "urbit id",
+    "calm computing",
+    "durable software",
+    "own your data",
+    "decentralized system"
+]
 extra = { }
 +++
 

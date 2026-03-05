@@ -2,6 +2,19 @@
 title = "Hosting the Future"
 date = "2020-09-30"
 description = "The way we see it, hosting is the most important thing, next to Landscape, that Tlon can do to help Urbit continue toward widespread adoption."
+search_terms = [
+    "hosting service",
+    "tlon hosting",
+    "urbit hosting",
+    "onboarding",
+    "landscape",
+    "hosting providers",
+    "tlon.io",
+    "self hosting",
+    "urbit adoption",
+    "urbit foundation",
+    "planet hosting"
+]
 
 [extra]
 author = "Nick Simmons"

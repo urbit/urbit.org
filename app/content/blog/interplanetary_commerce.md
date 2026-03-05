@@ -3,6 +3,20 @@ title = "Interplanetary Commerce"
 date = "2021-04-08"
 description = "OS-level commercial primitives."
 tags = ["bitcoin"]
+search_terms = [
+    "interplanetary commerce",
+    "urbit payments",
+    "bitcoin wallet",
+    "lightning network",
+    "ship payments",
+    "urbit hosting",
+    "creator economy",
+    "p2p commerce",
+    "urbit services",
+    "paywalls",
+    "urbit bitcoin",
+    "commercial primitives"
+]
 
 [extra]
 author = "Christian Langalis"

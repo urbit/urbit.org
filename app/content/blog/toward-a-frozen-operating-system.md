@@ -2,6 +2,18 @@
 title = "Toward a Frozen Operating System"
 date = "2017-05-09"
 description = "Is it possible to freeze an entire OS?"
+search_terms = [
+  "frozen operating system",
+  "kelvin versioning",
+  "urbit os design",
+  "freezable os",
+  "nock hoon arvo",
+  "telescoping kelvins",
+  "palm tree model",
+  "system stability",
+  "urbit platform",
+  "infinite maturity"
+]
 aliases = [
   "/posts/essays/toward-a-frozen-operating-system",
   "/posts/toward-a-frozen-operating-system",

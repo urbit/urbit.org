@@ -2,6 +2,20 @@
 title = "Azimuth is On-Chain"
 date = "2019-01-13"
 description = "The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post."
+search_terms = [
+  "azimuth on chain",
+  "urbit address space",
+  "ethereum contracts",
+  "urbit identity",
+  "azimuth pki",
+  "ecliptic contract",
+  "erc-721 points",
+  "bridge interface",
+  "urbit os arvo",
+  "landscape cities",
+  "urbit pki",
+  "azimuth points"
+]
 aliases = [
   "/posts/essays/azimuth-is-on-chain",
   "/posts/azimuth-is-on-chain"

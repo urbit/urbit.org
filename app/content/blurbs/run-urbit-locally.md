@@ -2,6 +2,18 @@
 title = "Run urbit locally"
 description = "Quickly and easily run urbit on your laptop, or home desktop computer"
 tags = []
+search_terms = [
+    "run urbit locally",
+    "laptop urbit",
+    "home computer",
+    "local network",
+    "localhost access",
+    "ames networking",
+    "local urbit",
+    "home hosting",
+    "fakeship",
+    "no public domain"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

@@ -2,6 +2,17 @@
 title = "Check your current sponsor"
 description = "Understanding your networking sponsor can help with troubleshooting connectivity issues"
 tags = ["dojo"]
+search_terms = [
+    "sponsor command",
+    "network sponsor",
+    "sponsor chain",
+    "urbit connectivity",
+    "dojo sponsor",
+    "bridge sponsor",
+    "network explorer",
+    "onchain sponsor",
+    "urbit sponsor"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

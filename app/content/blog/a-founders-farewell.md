@@ -6,6 +6,19 @@ aliases = [
   "/posts/essays/a-founders-farewell",
   "/posts/a-founders-farewell"
 ]
+search_terms = [
+    "founders farewell",
+    "curtis yarvin",
+    "urbit founder",
+    "project handoff",
+    "tlon",
+    "galaxy distribution",
+    "urbit history",
+    "open source",
+    "urbit governance",
+    "technical report",
+    "urbit transition"
+]
 
 [extra]
 author = "Curtis Yarvin"

@@ -2,6 +2,20 @@
 title = "Buy an Urbit ID"
 description = "Learn how to acquire your own self-sovereign digital identity"
 tags = ["urbit-id"]
+search_terms = [
+    "buy urbit id",
+    "urbit planet",
+    "azimuth identity",
+    "layer 1 nft",
+    "layer 2 rollup",
+    "opensea marketplace",
+    "subject network",
+    "pocwet store",
+    "bitcoin planet",
+    "credit card planet",
+    "galaxy star ids",
+    "self sovereign identity"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

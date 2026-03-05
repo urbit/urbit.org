@@ -2,6 +2,18 @@
 title = "Layer 2 FAQ"
 date = "2022-03-01"
 description = "Answers to all your lingering L2 questions."
+search_terms = [
+    "layer 2 faq",
+    "l2 planets",
+    "rollup",
+    "bridge",
+    "planet custody",
+    "migrate l1 to l2",
+    "naive rollup",
+    "metamask",
+    "buy planet",
+    "hosting provider"
+]
 [extra]
 image = "https://media.urbit.org/site/posts/essays/l2-faq-artwork.jpg"
 +++

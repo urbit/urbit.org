@@ -2,6 +2,17 @@
 title = "Select available loom size"
 description = "Configure memory allocation for your urbit"
 tags = ["runtime"]
+search_terms = [
+    "loom size",
+    "--loom",
+    "memory allocation",
+    "urbit ram",
+    "loom exponent",
+    "loom 32",
+    "configure runtime",
+    "run urbit memory",
+    "loom flag"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

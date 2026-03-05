@@ -2,6 +2,18 @@
 title = "Urbit's Open Source Culture, Part II"
 date = "2023-06-13"
 description = "How will Urbit continue to foster its innovative open source software culture?"
+search_terms = [
+    "open source culture",
+    "urbit foundation",
+    "developer experience",
+    "hoon prime",
+    "documentation",
+    "grants program",
+    "build parties",
+    "developer tooling",
+    "open source strategy",
+    "community"
+]
 
 [extra]
 author = "N E Davis"

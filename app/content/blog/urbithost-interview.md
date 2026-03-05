@@ -2,6 +2,20 @@
 title = "An Interview with UrbitHost"
 date = "2021-08-19"
 description = "Interview with the founder of UrbitHost ~lavlyn-litmeg"
+search_terms = [
+    "urbithost",
+    "hosting provider",
+    "urbit hosting",
+    "landscape access",
+    "kubernetes",
+    "automated hosting",
+    "layer 2",
+    "khan vane",
+    "software distribution",
+    "hosted urbit",
+    "onboarding",
+    "commercial providers"
+]
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"

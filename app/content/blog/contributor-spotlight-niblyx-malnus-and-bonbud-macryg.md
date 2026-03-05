@@ -14,6 +14,19 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+~n
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "design", "architecture"]
+search_terms = [
+    "contributor spotlight",
+    "groundwire",
+    "bonbud macryg",
+    "niblyx malnus",
+    "urbit ai",
+    "llm tools",
+    "christopher alexander",
+    "mcp server",
+    "urbit master",
+    "architecture design",
+    "hoon"
+]
 +++
 
 > **\~sarlev:** This is our first two-person spotlight interview, so we'll see how it goes and adapt accordingly. I generally like to start by just asking, what first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?  

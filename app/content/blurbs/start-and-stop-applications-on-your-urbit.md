@@ -2,6 +2,17 @@
 title = "Start and stop applications on your urbit"
 description = "Control application lifecycles with dojo commands"
 tags = ["dojo"]
+search_terms = [
+    "start app",
+    "stop app",
+    "dojo start",
+    "suspend desk",
+    "pause desk",
+    "revive app",
+    "agent control",
+    "app lifecycle",
+    "desk updates"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

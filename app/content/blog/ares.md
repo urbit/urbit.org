@@ -2,6 +2,18 @@
 title = "Ares"
 date = "2023-06-26"
 description = "A light technical description of Ares, the new Urbit runtime"
+search_terms = [
+    "ares runtime",
+    "urbit runtime",
+    "subject knowledge analysis",
+    "2stackz",
+    "persistent memory arena",
+    "nock codegen",
+    "single level store",
+    "runtime performance",
+    "large data",
+    "ares release"
+]
 
 [extra]
 author = "Noah Kumin"

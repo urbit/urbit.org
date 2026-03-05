@@ -14,6 +14,19 @@ imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Buil
 # imageCardDark =
 # imageIndexDark =
 tags =  ["courseware", "hawk", "userspace"]
+search_terms = [
+    "beyond beginner guitar",
+    "hawk courseware",
+    "urbit business",
+    "guitar course",
+    "urbit hosting",
+    "stripe payments",
+    "crypto payments",
+    "access control",
+    "urbit userspace",
+    "course community",
+    "self sovereign"
+]
 +++
 
 

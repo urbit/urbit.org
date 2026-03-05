@@ -2,6 +2,18 @@
 title = "Why use a hosting provider?"
 description = "Urbit is a personal server, yet there are still service providers who will host it for you"
 tags = ["hosting", "hosting-provider", "urbit-os"]
+search_terms = [
+    "why hosting",
+    "hosting provider",
+    "managed hosting",
+    "onboarding",
+    "maintenance support",
+    "groundseg",
+    "network effects",
+    "personal server",
+    "cactus analogy",
+    "hosted urbit"
+]
 lastest-update ="<some-arvo-hash>"
 image = ""
 imageDark = ""

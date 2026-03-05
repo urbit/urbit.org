@@ -2,6 +2,17 @@
 title = "Get access code"
 description = "A secret code for remote access to your instance of Urbit OS"
 tags = ["dojo"]
+search_terms = [
+    "access code",
+    "+code",
+    "luscode",
+    "urbit login",
+    "remote access",
+    "mobile client",
+    "web login",
+    "phenome code",
+    "urbit secret"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

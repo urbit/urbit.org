@@ -14,6 +14,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 6",
+    "opcode 5",
+    "equality check",
+    "tis operator",
+    "nock equality",
+    "deep equality",
+    "loobean",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 6 equal image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-day-6-equal-social.png)

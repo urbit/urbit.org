@@ -2,6 +2,19 @@
 title = "Creating Sigils"
 date = "2020-02-03"
 description = "The origin and design process informing Urbit's generative user avatar system, Sigils."
+search_terms = [
+    "creating sigils",
+    "urbit sigils",
+    "visual identity",
+    "urbit id",
+    "sigil design",
+    "generative avatars",
+    "phonemes",
+    "sigil js",
+    "design process",
+    "identity system",
+    "urbit names"
+]
 
 [extra]
 author = "Gavin Atkinson"

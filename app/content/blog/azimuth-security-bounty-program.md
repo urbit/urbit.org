@@ -6,6 +6,18 @@ aliases = [
   "/posts/essays/azimuth-security-bounty-program",
   "/posts/azimuth-security-bounty-program"
 ]
+search_terms = [
+    "azimuth security",
+    "bounty program",
+    "hackerone",
+    "smart contracts",
+    "urbit pki",
+    "security audit",
+    "bridge testing",
+    "vulnerability report",
+    "security bounties",
+    "azimuth contracts"
+]
 
 [extra]
 author = "Anthony Arroyo"

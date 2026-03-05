@@ -6,6 +6,19 @@ aliases = [
   "/posts/essays/landscape-a-portrait/",
   "/posts/landscape-a-portrait"
 ]
+search_terms = [
+    "landscape ui",
+    "urbit interface",
+    "modulo",
+    "userspace",
+    "indigo",
+    "chat publish",
+    "urbit apps",
+    "eyre vane",
+    "create landscape app",
+    "interface roadmap",
+    "urbit design"
+]
 
 [extra]
 author = "Matilde Park"

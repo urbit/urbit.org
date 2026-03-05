@@ -2,6 +2,18 @@
 title = "Urbit + Creator DAOs with Justin Murphy"
 date = "2022-10-05"
 description = "Creator DAOs are blank slates, new foundational cryptographic patterns just beginning to take shape. Justin Murphy thinks Urbit is the most obvious place to start building one."
+search_terms = [
+    "creator dao",
+    "justin murphy",
+    "other life",
+    "urbit groups",
+    "straw app",
+    "ballot",
+    "creator economy",
+    "dao governance",
+    "p2p community",
+    "urbit id"
+]
 
 [extra]
 author = "Isaac Simpson"

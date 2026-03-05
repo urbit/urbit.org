@@ -2,6 +2,19 @@
 title = "Aesthetic Culture #1"
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."
 date = "2020-11-11"
+search_terms = [
+    "urbit art",
+    "aesthetic culture",
+    "sigil art",
+    "community art",
+    "art digest",
+    "urbit design",
+    "urbit memes",
+    "landscape themes",
+    "urbit creators",
+    "visual culture",
+    "urbit aesthetics"
+]
 
 [extra]
 description = "One of the most exciting things about Urbit is the aesthetic and design around it, developed partly by Tlon (through the design of Urbit itself) and partly by the community (by producing great Urbit art)."

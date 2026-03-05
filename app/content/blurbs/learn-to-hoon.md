@@ -2,6 +2,18 @@
 title = "Learn To Hoon"
 description = "Hoon is Urbit's high-level, statically-typed, purely-functional programming language"
 tags = []
+search_terms = [
+    "learn hoon",
+    "hoon school",
+    "urbit programming",
+    "functional language",
+    "nock hoon",
+    "runic syntax",
+    "systems programming",
+    "hoon docs",
+    "hoon video",
+    "hoon source"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

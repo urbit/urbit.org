@@ -2,6 +2,18 @@
 title = "Tlon hosting services"
 description = "Tlon Corporation is the preeminent hosting provider which provides free and seamless onboarding to the Urbit network"
 tags = ["hosting", "hosting-provider", "urbit-os", "tlon", "layer 2"]
+search_terms = [
+    "tlon hosting",
+    "tlon messenger",
+    "hosted urbit",
+    "layer 2 planet",
+    "master ticket",
+    "management proxy",
+    "urbit foundation group",
+    "invite friends",
+    "support email",
+    "hosted onboarding"
+]
 lastest-update ="<some-arvo-hash>"
 image = ""
 imageDark = ""

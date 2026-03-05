@@ -2,6 +2,18 @@
 title = "Run urbit using Native Planet hardware"
 description = "Placeholder description"
 tags = []
+search_terms = [
+    "native planet hardware",
+    "urbit appliance",
+    "colonyos",
+    "groundseg",
+    "startram",
+    "anchor",
+    "minio setup",
+    "self hosting device",
+    "dns service",
+    "hardware hosting"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

@@ -2,6 +2,18 @@
 title = "Create a moon identity"
 description = "Spawn subordinate identities tied to your planet"
 tags = ["dojo", "urbit-id"]
+search_terms = [
+    "moon identity",
+    "spawn moon",
+    "urbit moon",
+    "moon keyfile",
+    "moon breach",
+    "moon cycle keys",
+    "azimuth moon",
+    "dojo moon",
+    "sub identity",
+    "moon reset"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

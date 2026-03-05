@@ -2,6 +2,18 @@
 title = "Report from the field: Assembly 2021"
 date = "2021-11-18"
 description = "The system builds the community and the community builds the system."
+search_terms = [
+    "assembly 2021",
+    "report from the field",
+    "urbit assembly",
+    "new world energy",
+    "software distribution",
+    "star market",
+    "urbit foundation",
+    "developers.urbit.org",
+    "operators.urbit.org",
+    "urbit community"
+]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

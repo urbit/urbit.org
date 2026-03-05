@@ -2,6 +2,19 @@
 title = "An Urbit Overview"
 date = "2016-05-10"
 description = "A high-level overview of Urbit."
+search_terms = [
+  "urbit overview",
+  "personal server",
+  "urbit os",
+  "digital independence",
+  "urbit address space",
+  "urbit identity",
+  "nock hoon arvo",
+  "encrypted p2p",
+  "urbit network",
+  "clean slate stack",
+  "virtual city"
+]
 aliases = [
   "/posts/essays/an-urbit-overview",
   "/posts/an-urbit-overview"

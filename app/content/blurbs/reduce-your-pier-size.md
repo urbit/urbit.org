@@ -2,6 +2,18 @@
 title = "Reduce your pier size"
 description = "Compress and clean up your urbit's disk usage"
 tags = ["dojo", "runtime"]
+search_terms = [
+    "reduce pier size",
+    "roll command",
+    "chop command",
+    "urbit disk",
+    "event log",
+    "epoch",
+    "runtime disk",
+    "pier cleanup",
+    "truncate events",
+    "urbit storage"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

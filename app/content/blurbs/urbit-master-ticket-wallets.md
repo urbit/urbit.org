@@ -2,6 +2,18 @@
 title = "Urbit master ticket wallets"
 description = "Master ticket wallets are an easy and secure way for managing ownership of your Urbit ID"
 tags = ["ethereum", "wallet", "azimuth"]
+search_terms = [
+    "master ticket",
+    "brainwallet",
+    "hd wallet",
+    "urbit id wallet",
+    "bridge",
+    "cryptographic keys",
+    "azimuth wallet",
+    "ledger trezor",
+    "metamask",
+    "gnosis safe"
+]
 lastest-update ="<some-arvo-hash>"
 image = ""
 imageDark = ""

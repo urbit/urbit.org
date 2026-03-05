@@ -2,6 +2,18 @@
 title = "Add and remove applications"
 description = "3rd-party software distribution enables any urbit node to distribute software to the network, these commands help you manage your installed apps."
 tags = ["dojo"]
+search_terms = [
+    "install apps",
+    "uninstall apps",
+    "nuke app data",
+    "urbit applications",
+    "dojo commands",
+    "app distribution",
+    "landscape get apps",
+    "desk management",
+    "remove app state",
+    "app recovery"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

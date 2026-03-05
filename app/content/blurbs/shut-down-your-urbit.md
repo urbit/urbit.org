@@ -2,6 +2,17 @@
 title = "Shut down your urbit"
 description = "Gracefully stop your urbit instance"
 tags = ["dojo", "runtime"]
+search_terms = [
+    "shutdown urbit",
+    "exit command",
+    "ctrl-d",
+    "graceful shutdown",
+    "stop urbit",
+    "dojo exit",
+    "runtime shutdown",
+    "solid state",
+    "power loss recovery"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

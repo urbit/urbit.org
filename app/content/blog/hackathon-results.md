@@ -2,6 +2,18 @@
 title = "Hackathon Results"
 date = "2020-06-11"
 description = "We recently held an invite-only Urbit Hackathon for graduates of our Hoon School program, and the submissions really impressed us across the board. Submissions were judged on several criteria: creativity, usefulness, and code quality."
+search_terms = [
+    "urbit hackathon",
+    "hoon school",
+    "hackathon results",
+    "landscape apps",
+    "canvas app",
+    "rote flashcards",
+    "community projects",
+    "urbit prizes",
+    "developer competition",
+    "urbit builders"
+]
 
 [extra]
 author = "Robert Mariani"

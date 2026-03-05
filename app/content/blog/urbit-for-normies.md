@@ -2,6 +2,19 @@
 title = "Urbit for Normies"
 date = "2020-02-11"
 description = "A layperson’s guide to the coming new internet."
+search_terms = [
+    "urbit for normies",
+    "layperson guide",
+    "new internet",
+    "peer to peer",
+    "privacy",
+    "personal server",
+    "urbit ids",
+    "calm computing",
+    "digital autonomy",
+    "urbit overview",
+    "decentralized web"
+]
 
 [extra]
 author = "Erik Newton"

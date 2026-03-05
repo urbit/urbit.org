@@ -2,6 +2,18 @@
 title = "Groundwire-based Urbit IDs"
 description = "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain"
 tags = ["bitcoin", "urbit-id", "ordinal", "comet"]
+search_terms = [
+    "groundwire ids",
+    "bitcoin urbit",
+    "ordinal nft",
+    "inscription nft",
+    "comet identity",
+    "bitcoin address space",
+    "groundwire network",
+    "l1 bitcoin fees",
+    "self issued ids",
+    "groundwire messenger"
+]
 lastest-update ="<some-arvo-hash>"
 image = ""
 imageDark = ""

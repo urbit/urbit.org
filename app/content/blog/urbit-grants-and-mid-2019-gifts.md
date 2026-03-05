@@ -6,6 +6,17 @@ aliases = [
   "/posts/essays/urbit-grants-and-mid-2019-gifts",
   "/posts/urbit-grants-and-mid-2019-gifts"
 ]
+search_terms = [
+    "urbit grants",
+    "mid 2019 gifts",
+    "star gifts",
+    "developer rewards",
+    "grants program",
+    "azimuth stars",
+    "community contributors",
+    "gift program",
+    "urbit awards"
+]
 
 [taxonomies]
 grant_type = [ "Gift" ]

@@ -2,6 +2,18 @@
 title = "Urbit and the Blockchain Wars"
 date = "2017-09-24"
 description = "A bit about the 'idea maze' of choosing to bootstrap from Ethereum."
+search_terms = [
+  "urbit blockchain",
+  "ethereum bootstrap",
+  "urbit pki",
+  "blockchain wars",
+  "urbit land registry",
+  "on chain governance",
+  "ethereum critique",
+  "consensus engine",
+  "urbit on ethereum",
+  "chain migration"
+]
 aliases = [
   "/posts/essays/urbit-and-the-blockchain",
   "/posts/urbit-and-the-blockchain",

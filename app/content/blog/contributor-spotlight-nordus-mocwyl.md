@@ -14,6 +14,19 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+no
 # imageCardDark =
 # imageIndexDark =
 tags = ["spotlight", "userspace", "community"]
+search_terms = [
+    "contributor spotlight",
+    "nordus mocwyl",
+    "independent music",
+    "musician",
+    "urbit for creators",
+    "hawk website",
+    "guitar course",
+    "direct charity",
+    "personal server",
+    "hoon learning",
+    "sovereign web"
+]
 +++
 
 > **\~sarlev:** What drew you into the idea that we needed to throw away and rewrite the entire network computing stack?

@@ -2,6 +2,17 @@
 title = "Restart up your urbit after initial boot"
 description = "Restarting your urbit after intial boot is straightforward and doesn't require additional cryptographic secrets" 
 tags = ["runtime"]
+search_terms = [
+    "restart urbit",
+    "run urbit",
+    "urbit runtime",
+    "pier run",
+    "docked pier",
+    ".run",
+    "loom flag",
+    "boot ship",
+    "urbit restart"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

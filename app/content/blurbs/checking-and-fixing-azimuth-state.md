@@ -2,6 +2,18 @@
 title = "Checking and fixing Azimuth state"
 description = "Monitor and repair your PKI state synchronization"
 tags = ["dojo", "azimuth"]
+search_terms = [
+    "azimuth state",
+    "pki sync",
+    "azimuth block",
+    "ethereum block",
+    "azimuth load",
+    "pki snapshot",
+    "dojo azimuth",
+    "state sync",
+    "azimuth snapshot",
+    "bridge azimuth"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

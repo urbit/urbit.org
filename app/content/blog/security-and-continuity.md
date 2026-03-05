@@ -2,6 +2,20 @@
 title = "Security and Continuity"
 description = "An update on our primary infrastructure milestones for 2020."
 date = "2020-11-30"
+search_terms = [
+    "security continuity",
+    "ames audit",
+    "network breaches",
+    "continuity breach",
+    "version negotiation",
+    "data migration",
+    "urbit uptime",
+    "azimuth vote",
+    "galaxy vote",
+    "urbit security",
+    "protocol milestones",
+    "infrastructure goals"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

@@ -2,6 +2,19 @@
 title = "Designing a Permanent Personal Identity"
 date = "2019-11-26"
 description = "A public key infrastructure (PKI) is a system for binding a set of keys to a name. Sometimes a small amount of metadata is included."
+search_terms = [
+    "permanent identity",
+    "urbit pki",
+    "public key infrastructure",
+    "comets planets moons",
+    "key rotation",
+    "blockchain pki",
+    "self sovereign identity",
+    "urbit ids",
+    "idea maze",
+    "global consistency",
+    "key revocation"
+]
 
 [extra]
 author = "Philip Monk"

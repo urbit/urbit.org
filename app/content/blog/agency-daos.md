@@ -2,6 +2,18 @@
 title = "The Dream of the Agency DAO"
 date = "2022-11-04"
 description = "As creative studios and agencies struggle for more creative freedom, DAOs and tokenization will surely take a more central role in the marketing and branding industries. Decentralization offers such entities benefits that could fundamentally reshape creatives’ relationships with clients—reducing layers of inefficiency and anti-creative incentives."
+search_terms = [
+    "agency dao",
+    "creative agency",
+    "tokenization",
+    "branding industry",
+    "decentralized marketing",
+    "creative bounties",
+    "talent retention",
+    "idea valuation",
+    "urbit ids",
+    "creative reputation"
+]
 
 [extra]
 author = "Isaac Simpson"

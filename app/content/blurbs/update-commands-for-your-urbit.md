@@ -2,6 +2,17 @@
 title = "Update Commands For Your Urbit"
 description = "Your urbit is generally auto-updating, but in the event of an incompatible application or a kernel update that would conflict with existing apps, you may need to decide which software to run"
 tags = ["dojo"]
+search_terms = [
+    "update commands",
+    "bump",
+    "ota",
+    "kernel update",
+    "app incompatibility",
+    "suspend desks",
+    "update provider",
+    "over the air",
+    "dojo update"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

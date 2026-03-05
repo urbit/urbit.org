@@ -2,6 +2,18 @@
 title = "Urbit Systems Technical Journal"
 description = "Placeholder description"
 tags = []
+search_terms = [
+    "ustj",
+    "urbit systems journal",
+    "technical journal",
+    "solid state computing",
+    "neo urbit",
+    "nock performance",
+    "memory management",
+    "dynamic linking",
+    "submit article",
+    "lagrev nocfep"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

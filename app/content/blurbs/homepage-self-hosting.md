@@ -2,6 +2,17 @@
 title = "Self-Hosting"
 description = "Urbit is an attempt to build a computer that is truly yours, designed to last a lifetime, with which you can form trustworthy networks free of extractive middlemen. Part of that means a being a networked computer that can be run by it's users. That said, Urbit is still under active development, so self-hosting is currently most apt for users who aren't afraid of a little bit of tinkering. If that's not you, we recommend using a hosting provider instead."
 tags = ["self-hosting", "homepage"]
+search_terms = [
+    "self hosting",
+    "run urbit yourself",
+    "personal server",
+    "boot urbit",
+    "maintain urbit",
+    "tinkering",
+    "full control",
+    "urbit experience",
+    "caring for cactus"
+]
 lastest-update = "<some-arvo-hash>"
 image = ""
 imageDark = ""

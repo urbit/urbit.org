@@ -2,6 +2,18 @@
 title = "Documentation for self-hosting urbit"
 description = "The top guides for learning how to run your own urbit node"
 tags = []
+search_terms = [
+    "self hosting guide",
+    "run urbit node",
+    "cloud hosting",
+    "groundseg guide",
+    "local setup",
+    "urbit os",
+    "hosting docs",
+    "comet identity",
+    "native planet",
+    "cloud server"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

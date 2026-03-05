@@ -6,6 +6,18 @@ aliases = [
   "/posts/essays/the-100-year-computer/",
   "/posts/the-100-year-computer"
 ]
+search_terms = [
+    "100 year computer",
+    "durable computing",
+    "personal server",
+    "permanent data",
+    "urbit overview",
+    "long term computing",
+    "reliable computer",
+    "continuous updates",
+    "future proof",
+    "urbit vision"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

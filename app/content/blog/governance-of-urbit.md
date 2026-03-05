@@ -2,6 +2,18 @@
 title = "Governance of urbit.org"
 date = "2019-01-10"
 description = "Stewardship of the Urbit Project."
+search_terms = [
+  "urbit governance",
+  "urbit.org assets",
+  "urbit address space",
+  "azimuth property",
+  "galaxy grants",
+  "tlon stewardship",
+  "board of advisors",
+  "platform development",
+  "urbit foundation",
+  "address space pool"
+]
 aliases = [
   "/posts/essays/governance-of-urbit",
   "/posts/governance-of-urbit"

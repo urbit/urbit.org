@@ -2,6 +2,20 @@
 title = "Lunar Urbit and the Internet of Things"
 date = "2021-04-29"
 description = "Potential future use cases of moons for industry and consumers"
+search_terms = [
+    "lunar urbit",
+    "internet of things",
+    "urbit moons",
+    "iot security",
+    "solid state interpreter",
+    "self authenticating ids",
+    "industrial iot",
+    "agriculture data",
+    "p2p data markets",
+    "device identity",
+    "urbit ids",
+    "moon identities"
+]
 
 [extra]
 author = "Jonathan Paprocki"

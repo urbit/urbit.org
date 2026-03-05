@@ -2,6 +2,19 @@
 title = "The Missing Middle"
 date = "2020-05-25"
 description = "Urbit stars can facilitate a flexible continuum of community norms."
+search_terms = [
+    "missing middle",
+    "urbit stars",
+    "community norms",
+    "network governance",
+    "star providers",
+    "decentralized communities",
+    "urbit infrastructure",
+    "routing hubs",
+    "social technology",
+    "community governance",
+    "digital commons"
+]
 
 [extra]
 author = "Nicholas Simmons"

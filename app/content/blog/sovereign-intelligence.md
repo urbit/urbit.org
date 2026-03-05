@@ -14,6 +14,19 @@ imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sove
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "privacy", "sovereignty"]
+search_terms = [
+    "sovereign intelligence",
+    "personal ai",
+    "urbit ai",
+    "sidecar",
+    "data sovereignty",
+    "urbit id",
+    "urwasm",
+    "ai agents",
+    "bicameral mind",
+    "identity and memory",
+    "context without custody"
+]
 +++
 
 

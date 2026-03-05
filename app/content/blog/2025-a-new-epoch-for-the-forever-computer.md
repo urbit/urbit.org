@@ -3,6 +3,18 @@ title = "A New Epoch for The Forever Computer"
 date = "2025-10-9"
 description = "On the further decentralization of Urbit and the next era of the Urbit Foundation"
 # aliases = []
+search_terms = [
+    "urbit foundation",
+    "new epoch",
+    "forever computer",
+    "decentralization",
+    "galactic senate",
+    "governance",
+    "board of directors",
+    "executive director",
+    "urbit community",
+    "public goods"
+]
 
 [extra]
 author = "The Urbit Foundation"

@@ -2,6 +2,19 @@
 title = "The Value of Urbit Address Space (1 of 3)"
 date = "2020-04-06"
 description = "An expansion of our position on Urbit's address space value."
+search_terms = [
+    "address space value",
+    "urbit ids",
+    "azimuth",
+    "digital asset",
+    "scarce ids",
+    "network structure",
+    "galaxies stars planets",
+    "address space history",
+    "urbit land",
+    "identity system",
+    "decentralized web"
+]
 
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"

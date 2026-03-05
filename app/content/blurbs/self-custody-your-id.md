@@ -2,6 +2,18 @@
 title = "Self-custody your Urbit ID"
 description = "As a cryptographic asset, there are many ways to control and secure your Urbit ID"
 tags = ["wallet", "ledger", "trezor", "metamask", "urbit-id"]
+search_terms = [
+    "self custody",
+    "urbit id security",
+    "hardware wallet",
+    "software wallet",
+    "master ticket",
+    "ledger trezor",
+    "metamask",
+    "seed phrase",
+    "bridge wallet",
+    "ownership key"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

@@ -2,6 +2,19 @@
 title = "Urbit is for Communities"
 date = "2020-03-22"
 description = "Urbit is for giving communities the tools to shape their own environments; for us all to feel a sense of life and self-directedness in the digital world."
+search_terms = [
+    "urbit for communities",
+    "community tools",
+    "digital homesteading",
+    "os1",
+    "high trust",
+    "digital environment",
+    "self hosting",
+    "community software",
+    "urbit philosophy",
+    "community modules",
+    "digital commons"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

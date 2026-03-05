@@ -2,6 +2,19 @@
 title = "Bootstrapping Urbit from Ethereum"
 date = "2017-09-19"
 description = "We've decided to launch Urbit's constitution as a system of Ethereum contracts."
+search_terms = [
+  "bootstrapping urbit",
+  "ethereum contracts",
+  "urbit constitution",
+  "azimuth pki",
+  "urbit address space",
+  "spark token",
+  "galaxy governance",
+  "on chain registry",
+  "urbit on ethereum",
+  "urbit land registry",
+  "planet sales"
+]
 aliases = [
   "/posts/essays/bootstrapping-urbit-from-ethereum",
   "/posts/bootstrapping-urbit-from-ethereum",

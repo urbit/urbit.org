@@ -2,6 +2,19 @@
 title = "Running your Urbit"
 description = ""
 tags = ["configuration", "apps", "urbit-os"]
+search_terms = [
+    "run urbit",
+    "urbit os",
+    "urbit configuration",
+    "urbit apps",
+    "urbit id options",
+    "layer 1 azimuth",
+    "layer 2 azimuth",
+    "self hosting",
+    "private messaging",
+    "distributed systems",
+    "bitcoin compatible"
+]
 lastest-update = "<some-arvo-hash>"
 image = "/images/urbit-dither-placeholder.png"
 imageDark = ""

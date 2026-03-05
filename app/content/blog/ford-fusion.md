@@ -2,6 +2,19 @@
 title = "Ford Fusion"
 date = "2020-07-14"
 description = "Ford Fusion was an overhaul of Urbit's over-the-air upgrade process and a rewrite of its build system. The new update system corrects a few long-standing bugs with the previous one, and the new build system is simpler, smaller (by around 5,000 lines), and easier to manage."
+search_terms = [
+    "ford fusion",
+    "ota updates",
+    "build system",
+    "urbit upgrades",
+    "clay",
+    "hoon compiler",
+    "arvo kernel",
+    "atomic updates",
+    "ordered updates",
+    "self contained builds",
+    "urbit tooling"
+]
 
 [extra]
 author = "Ted Blackman"

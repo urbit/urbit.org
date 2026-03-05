@@ -2,6 +2,20 @@
 title = "Azimuth’s First Contract Upgrade"
 date = "2021-06-04"
 description = "Galactic Senate makes first concrete action"
+search_terms = [
+    "azimuth upgrade",
+    "first contract",
+    "galactic senate",
+    "ecliptic changes",
+    "erc721 fix",
+    "claims contract",
+    "proxy addresses",
+    "urbit governance",
+    "doc vote",
+    "address space",
+    "azimuth vote",
+    "senate proposals"
+]
 
 [extra]
 author = "Jonathan Paprocki and Mark"

@@ -2,6 +2,19 @@
 title = "Tools of Our Own"
 date = "2020-05-12"
 description = "What is a digital environment? What does it mean to shape your own digital environment?"
+search_terms = [
+    "tools of our own",
+    "digital environment",
+    "conversational tools",
+    "urbit philosophy",
+    "social graph",
+    "collective tools",
+    "convivial tools",
+    "personal computing",
+    "system control",
+    "urbit communities",
+    "digital autonomy"
+]
 
 [extra]
 author = "Matilde Park"

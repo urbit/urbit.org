@@ -2,6 +2,18 @@
 title = "Urbit's Open Source Culture, Part I"
 date = "2023-05-31"
 description = "How did Urbit cultivate a unique open source software culture? Let's take a look at how we got to where we are today."
+search_terms = [
+    "open source culture",
+    "urbit history",
+    "skunkworks",
+    "developer community",
+    "hoon education",
+    "third party distribution",
+    "urbit foundation",
+    "assembly events",
+    "grants program",
+    "urbit open source"
+]
 
 [extra]
 author = "N E Davis"

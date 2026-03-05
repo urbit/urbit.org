@@ -2,6 +2,17 @@
 title = "Urbit-related blogs"
 description = "A collection of written urbit content from the broader community"
 tags = []
+search_terms = [
+    "urbit blogs",
+    "community writing",
+    "subject network blog",
+    "martian computing",
+    "hawk blog",
+    "urmanac",
+    "urbit essays",
+    "urbit commentary",
+    "sarlev blog"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

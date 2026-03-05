@@ -2,6 +2,19 @@
 title = "Urbit Events Series"
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."
 date = "2020-10-29"
+search_terms = [
+    "urbit events",
+    "developer calls",
+    "community series",
+    "town hall",
+    "urbitcon",
+    "community building",
+    "urbit community",
+    "event series",
+    "grants program",
+    "knowledge sharing",
+    "developer talks"
+]
 
 [extra]
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."

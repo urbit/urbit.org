@@ -2,6 +2,20 @@
 title = "Metaphase"
 date = "2020-12-08"
 description = "On the upcoming and foregoing Landscape lifecycles, and other forms of mitosis across the Urbit project."
+search_terms = [
+    "landscape lifecycle",
+    "release streams",
+    "graph store",
+    "notifications",
+    "stable stream",
+    "dev stream",
+    "landscape roadmap",
+    "userspace apps",
+    "urbit foundation",
+    "product process",
+    "ota updates",
+    "landscape teams"
+]
 
 [extra]
 author = "Matilde Park"

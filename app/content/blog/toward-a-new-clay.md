@@ -2,6 +2,18 @@
 title = "Toward a New %clay"
 date = "2016-07-13"
 description = "Urbit's revision-control system, %clay, is itself due for a (medium-sized) revision!"
+search_terms = [
+  "clay revision control",
+  "urbit filesystem",
+  "%clay redesign",
+  "urbit dvcs",
+  "desk mounting",
+  "urbit namespace",
+  "mark system",
+  "clay storage",
+  "urbit version control",
+  "clay community"
+]
 aliases = [
   "/posts/essays/toward-a-new-clay",
   "/posts/toward-a-new-clay",

@@ -2,6 +2,20 @@
 title = "Precepts"
 date = "2020-03-17"
 description = "Technical maxims that define Urbit's approach to engineering."
+search_terms = [
+    "urbit precepts",
+    "engineering principles",
+    "system design",
+    "technical maxims",
+    "data over code",
+    "cqrs",
+    "pubsub",
+    "determinism",
+    "timeless software",
+    "hoon principles",
+    "urbit architecture",
+    "software discipline"
+]
 
 [extra]
 author = "Philip Monk"

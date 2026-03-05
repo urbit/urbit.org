@@ -6,6 +6,18 @@ aliases = [
   "/posts/essays/announcing-urbit-grants",
   "/posts/announcing-urbit-grants"
 ]
+search_terms = [
+    "urbit grants",
+    "grants program",
+    "bounties",
+    "gifts",
+    "proposals",
+    "azimuth stars",
+    "contributor rewards",
+    "grants website",
+    "community funding",
+    "urbit bounties"
+]
 
 [extra]
 author = "Robert Mariani"

@@ -14,6 +14,18 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Vere64+DP
 # imageCardDark =
 # imageIndexDark = 
 tags =  ["developer preview", "vere64", "runtime"]
+search_terms = [
+    "vere64 preview",
+    "developer preview",
+    "unlimited loom",
+    "build from source",
+    "loom size",
+    "runtime 64-bit",
+    "demand paging",
+    "loom constraints",
+    "file size limit",
+    "runtime preview"
+]
 +++
 
 Urbit has long been practically and conceptually constrained in its application by the limitation in the ["loom"](https://docs.urbit.org/build-on-urbit/core-academy/ca06#the-loom) size. Initially the Vere runtime could provide only a mere 2GB in available memory, but over the years that has been increased to 4GB, 8GB, and most recently 16GB with the recent [Vere 4.0 release](https://github.com/urbit/vere/releases/tag/vere-v4.0). These improvements have come from various projects, such as pointer compression in the allocator making 16GB loom possible in Vere 4.0, or [demand paging](https://docs.urbit.org/build-on-urbit/core-academy/ca06#demand-paging) which makes it possible to not require the entire loom to live in RAM, making it viable to run a larger loom on reasonable underlying hardware.

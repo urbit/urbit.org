@@ -14,6 +14,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 1",
+    "opcode 0",
+    "address opcode",
+    "slot operator",
+    "tree addressing",
+    "nock nouns",
+    "binary tree",
+    "nock address",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 1 tree addressing image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-day-1-tree-addressing-Social.png)

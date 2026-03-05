@@ -2,6 +2,18 @@
 title = "Run urbit in a virtual server"
 description = "Urbit runs seamlessly in any cloud server or datacenter you may already be familiar with"
 tags = []
+search_terms = [
+    "cloud server",
+    "vps urbit",
+    "run urbit in cloud",
+    "aws urbit",
+    "linode urbit",
+    "server requirements",
+    "linux hosting",
+    "datacenter hosting",
+    "virtual server",
+    "cloud hosting guide"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

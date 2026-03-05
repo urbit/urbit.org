@@ -2,6 +2,20 @@
 title = "The Value of Urbit Address Space (2 of 3)"
 date = "2020-04-12"
 description = "Scarcity, utility, liquidity, and network effect."
+search_terms = [
+    "address space value",
+    "scarcity",
+    "utility",
+    "liquidity",
+    "network effect",
+    "urbit ids",
+    "planet prices",
+    "star prices",
+    "address space trading",
+    "urbit scarcity",
+    "network laws",
+    "urbit tokens"
+]
 
 [extra]
 author = "Erik Newton + Galen Wolfe-Pauly"

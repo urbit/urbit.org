@@ -2,6 +2,17 @@
 title = "NockPU"
 date = "2023-08-02"
 description = "A light technical description of NockPU, a hardware system for running Nock"
+search_terms = [
+    "nockpu",
+    "nock hardware",
+    "nock processing unit",
+    "bare metal nock",
+    "hardware jets",
+    "tree traversal",
+    "binary tree",
+    "urbit hardware",
+    "mopfel winrux"
+]
 
 [extra]
 author = "Noah Kumin"

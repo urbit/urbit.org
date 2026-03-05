@@ -2,6 +2,18 @@
 title = "Introduction to the Combine DAO"
 date = "2022-07-01"
 description = "Inside the mind of the Combine"
+search_terms = [
+    "combine dao",
+    "urbit foundation",
+    "dao on urbit",
+    "ballot app",
+    "uqbar",
+    "urbit investing",
+    "dao membership",
+    "urbit projects",
+    "grants pipeline",
+    "dao investors"
+]
 
 [extra]
 author = "Anthony Arroyo"

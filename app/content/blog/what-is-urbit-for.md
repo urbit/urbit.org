@@ -2,6 +2,18 @@
 title = "What is Urbit For?"
 date = "2016-05-10"
 description = "A vision of the Urbit-powered future."
+search_terms = [
+  "what is urbit for",
+  "urbit future",
+  "personal server vision",
+  "cryptographic identity",
+  "self hosted publishing",
+  "web programmable",
+  "blockchain complement",
+  "data permanence",
+  "reputation systems",
+  "urbit iot"
+]
 aliases = [
   "/posts/essays/what-is-urbit-for",
   "/posts/what-is-urbit-for"

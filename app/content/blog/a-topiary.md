@@ -2,6 +2,20 @@
 title = "A Topiary: Hypertext and Urbit"
 date = "2021-06-13"
 description = "A brief history of hypertext and Urbit networking"
+search_terms = [
+    "hypertext history",
+    "urbit networking",
+    "graph store",
+    "linked data",
+    "project xanadu",
+    "world wide web",
+    "social networks",
+    "peer to peer",
+    "graph databases",
+    "urbit graph",
+    "digital hypertext",
+    "network protocols"
+]
 
 [extra]
 author = "Reid Scoggin"

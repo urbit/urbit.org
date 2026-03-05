@@ -2,6 +2,20 @@
 title = "Eliza"
 date = "2021-02-22"
 description = "Building things, even Calm™ things, makes noise."
+search_terms = [
+    "eliza bot",
+    "urbit chatbot",
+    "landscape feedback",
+    "data collection",
+    "calm bot",
+    "urbit surveys",
+    "open source bot",
+    "urbit automation",
+    "anti spam",
+    "urbit agents",
+    "network economics",
+    "tlon bot"
+]
 
 [extra]
 author = "Christian Langalis"

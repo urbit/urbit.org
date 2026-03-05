@@ -2,6 +2,18 @@
 title = "Magic"
 date = "2016-05-15"
 description = "A thought-experiment to explain the Urbit user experience."
+search_terms = [
+  "urbit user experience",
+  "personal server vision",
+  "magic thought experiment",
+  "free your data",
+  "self hosted identity",
+  "urbit platform",
+  "digital freedom",
+  "personal cloud",
+  "agent software",
+  "urbit metaphor"
+]
 aliases = [ "/posts/essays/magic", "/posts/magic" ]
 
 [extra]

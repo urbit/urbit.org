@@ -2,6 +2,18 @@
 title = "The Urbit Address Space"
 date = "2016-05-15"
 description = "An overview of Urbit's cryptographic address space."
+search_terms = [
+  "urbit address space",
+  "urbit ships",
+  "galaxies stars planets",
+  "urbit identity",
+  "urbit pki",
+  "ship hierarchy",
+  "urbit governance",
+  "digital land",
+  "ship scarcity",
+  "urbit naming"
+]
 aliases = [
   "/posts/essays/the-urbit-address-space",
   "/posts/the-urbit-address-space"

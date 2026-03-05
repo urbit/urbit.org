@@ -14,6 +14,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 7",
+    "opcode 6",
+    "conditional opcode",
+    "if then else",
+    "nock conditional",
+    "loobean",
+    "composite opcode",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 7 conditional image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-day-7-conditional-social.png)

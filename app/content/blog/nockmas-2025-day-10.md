@@ -14,6 +14,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 10",
+    "opcode 9",
+    "invoke opcode",
+    "core arms",
+    "battery payload",
+    "nock invoke",
+    "nock isa",
+    "core call",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 10 invoke image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas-day-10-invoke-social.png)

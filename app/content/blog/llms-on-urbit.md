@@ -14,6 +14,20 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+U
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "guides"]
+search_terms = [
+    "llms on urbit",
+    "clurd",
+    "urbit master",
+    "claude code",
+    "dojo access",
+    "llm tooling",
+    "mcp server",
+    "sailbox",
+    "tarball",
+    "agentic assistants",
+    "groundwire",
+    "llm setup"
+]
 +++
 
 ![llms on urbit image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+Urbit_Social+16x9.png )

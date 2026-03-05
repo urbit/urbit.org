@@ -6,6 +6,18 @@ aliases = [
   "/posts/essays/the-state-of-landscape",
   "/posts/the-state-of-landscape"
 ]
+search_terms = [
+    "state of landscape",
+    "landscape update",
+    "chat interface",
+    "urbit ui",
+    "arvo network",
+    "landscape bugs",
+    "ios app",
+    "community chats",
+    "urbit help",
+    "modulo roadmap"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

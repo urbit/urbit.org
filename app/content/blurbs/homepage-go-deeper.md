@@ -2,6 +2,17 @@
 title = "Go Deeper"
 description = "Ready to explore more? Learn about Urbit's architecture, identity system, and the broader ecosystem of applications and tools being built on the network."
 tags = ["learning", "documentation", "homepage"]
+search_terms = [
+    "urbit architecture",
+    "identity system",
+    "urbit docs",
+    "urbit overview",
+    "ecosystem apps",
+    "learn urbit",
+    "technical documentation",
+    "urbit community",
+    "personal computing"
+]
 lastest-update = "<some-arvo-hash>"
 image = ""
 imageDark = ""

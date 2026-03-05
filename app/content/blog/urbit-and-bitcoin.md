@@ -3,6 +3,18 @@ title = "Urbit and Bitcoin"
 description = "A sound money deserves a sound computer."
 date = "2019-10-16"
 tags = ["bitcoin"]
+search_terms = [
+    "urbit and bitcoin",
+    "sound money",
+    "bitcoin integration",
+    "urbit wallet",
+    "bitcoin grants",
+    "urbit os",
+    "peer to peer",
+    "sound computer",
+    "btc bounties",
+    "crypto payments"
+]
 [extra]
 author = "Christian Langalis"
 ship = "~pindet-timmut"

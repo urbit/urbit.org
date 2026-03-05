@@ -2,6 +2,18 @@
 title = "Command Line"
 description = "Every Urbit OS server is made unique by its Urbit ID, which others can use to reach you on the network. There are five ranks of Urbit ID, but the one an ordinary user needs is a planet, which has a four-syllable name like \"~sampel-palnet\". Unless you know someone who can gift you one, or you want to get one from hosting provider like Tlon, you'll need to buy one."
 tags = ["cli", "self-hosting", "command-line"]
+search_terms = [
+    "command line",
+    "cli setup",
+    "run urbit",
+    "self host",
+    "terminal boot",
+    "get urbit id",
+    "comet identity",
+    "unix terminal",
+    "urbit cli",
+    "boot a ship"
+]
 lastest-update = "<some-arvo-hash>"
 image = "/images/uf-board-sigils-dither.png"
 imageDark = ""

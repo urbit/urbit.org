@@ -2,6 +2,19 @@
 title = "Precepts: Discussion"
 date = "2020-03-17"
 description = "The precepts aren’t arguments. We discuss and justify them here."
+search_terms = [
+    "precepts discussion",
+    "urbit principles",
+    "design rationale",
+    "mechanical simplicity",
+    "code discipline",
+    "system design",
+    "real software",
+    "engineering attitude",
+    "theory and practice",
+    "urbit philosophy",
+    "abstractions"
+]
 
 [extra]
 author = "Philip Monk"
