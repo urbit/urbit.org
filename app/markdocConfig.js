@@ -18,6 +18,7 @@ const markdocConfig = {
       render: Heading,
       attributes: {
         level: { type: Number },
+        id: { type: String },
       },
     },
     link: {
@@ -99,10 +100,26 @@ const markdocConfig = {
   },
 };
 
+const markdocHtmlConfig = {
+  nodes: {
+    paragraph: { render: "p" },
+    link: {
+      render: "a",
+      attributes: {
+        href: { type: String },
+        title: { type: String },
+      },
+    },
+  },
+  tags: {
+    "br": { render: "br" },
+  },
+};
+
 const components = {
   Paragraph: ({ children }) => {
     return <div className="text-base pb-2">{children}</div>;
   },
 };
 
-export { markdocConfig, components };
+export { markdocConfig, markdocHtmlConfig, components };

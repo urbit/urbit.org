@@ -1,7 +1,22 @@
 +++
+
 title = "Creating Sigils"
 date = "2020-02-03"
 description = "The origin and design process informing Urbit's generative user avatar system, Sigils."
+summary = "Technical deep-dive into sigil generation algorithm, explaining glyph encoding, color assignment logic, collision avoidance techniques, and principles for visual identity in digital networks."
+search_terms = [
+    "creating sigils",
+    "urbit sigils",
+    "visual identity",
+    "urbit id",
+    "sigil design",
+    "generative avatars",
+    "phonemes",
+    "sigil js",
+    "design process",
+    "identity system",
+    "urbit names"
+]
 
 [extra]
 author = "Gavin Atkinson"

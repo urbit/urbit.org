@@ -1,7 +1,21 @@
 +++
+
 title = "Beliefs and Principles Guiding the Urbit Project"
 date = "2016-05-10"
 description = "We believe."
+summary = "Foundational principles for Urbit governance including digital independence, code-as-law, decentralized control, stake-based governance with equal authority per stake, and content-neutral moderation."
+search_terms = [
+  "urbit principles",
+  "urbit beliefs",
+  "digital independence",
+  "code is law",
+  "decentralized control",
+  "property rights",
+  "governance by stake",
+  "content neutrality",
+  "urbit republic",
+  "network governance"
+]
 aliases = [
   "/posts/essays/beliefs-and-principles",
   "/posts/beliefs-and-principles",

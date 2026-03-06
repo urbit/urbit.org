@@ -1,7 +1,22 @@
 +++
+
 title = "Designing a Permanent Personal Identity"
 date = "2019-11-26"
 description = "A public key infrastructure (PKI) is a system for binding a set of keys to a name. Sometimes a small amount of metadata is included."
+summary = "Philip Monk explores Urbit's PKI design through an idea maze, explaining the tradeoffs between comets (plentiful, self-sovereign, impermanent), planets (scarce, permanent, self-sovereign), and moons (plentiful, permanent, planet-controlled) identities."
+search_terms = [
+    "permanent identity",
+    "urbit pki",
+    "public key infrastructure",
+    "comets planets moons",
+    "key rotation",
+    "blockchain pki",
+    "self sovereign identity",
+    "urbit ids",
+    "idea maze",
+    "global consistency",
+    "key revocation"
+]
 
 [extra]
 author = "Philip Monk"

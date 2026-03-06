@@ -1,6 +1,8 @@
 ---
+
 title: "Resources"
 description: "Helpful resources for learning more about Urbit"
+summary: "Curated collection of Urbit documentation, tutorials, and community resources including self-hosting guides, the Urbit Systems Technical Journal, Hoon learning materials, and related blogs for continued learning."
 blurbs: ["docs-for-self-hosting-urbit", "urbit-systems-technical-journal", "learn-to-hoon", "urbit-related-blogs"]
 ---
 

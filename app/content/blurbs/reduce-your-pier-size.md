@@ -1,7 +1,21 @@
 +++
+
 title = "Reduce your pier size"
 description = "Compress and clean up your urbit's disk usage"
+summary = "Use Vere's roll and chop commands to create new epochs and truncate event logs, reducing pier size from hundreds of GB to under 10GB on long-running ships."
 tags = ["dojo", "runtime"]
+search_terms = [
+    "reduce pier size",
+    "roll command",
+    "chop command",
+    "urbit disk",
+    "event log",
+    "epoch",
+    "runtime disk",
+    "pier cleanup",
+    "truncate events",
+    "urbit storage"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

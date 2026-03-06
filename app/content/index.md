@@ -1,5 +1,6 @@
 ---
 title: Homepage
+summary: "Overview of Urbit with links to getting started, running a ship, and the broader ecosystem."
 # sections: 
 #   - title: block-2
 #     _type: "module"

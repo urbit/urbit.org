@@ -1,8 +1,23 @@
 +++
+
 title = "~2019.5 Roadmap"
 date = "2019-05-15"
 description = "Where we are and where we're going as of mid-2019."
+summary = "Overview of Urbit development progress and roadmap through Q3 2019, covering Azimuth improvements, Arvo updates, Bridge redesign, Hoon School launch, and the grants program."
 aliases = [ "/posts/essays/2019-5-roadmap", "/posts/2019-5-roadmap" ]
+search_terms = [
+    "2019 roadmap",
+    "azimuth",
+    "bridge",
+    "arvo updates",
+    "landscape modulo",
+    "hoon school",
+    "grants program",
+    "urbit roadmap",
+    "daemon updates",
+    "community plans",
+    "arvo interface"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

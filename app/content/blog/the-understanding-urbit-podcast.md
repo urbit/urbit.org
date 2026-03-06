@@ -1,7 +1,21 @@
 +++
+
 title = "The Understanding Urbit Podcast"
 date = "2020-04-02"
 description = "An interview-based podcast series about the Urbit project, as told by those working on it."
+summary = "Announcement of educational podcast series making Urbit concepts accessible through interviews, technical discussions, and community stories."
+search_terms = [
+    "understanding urbit podcast",
+    "urbit podcast",
+    "interviews",
+    "tlon team",
+    "urbit philosophy",
+    "nock performance",
+    "technology talks",
+    "podcast series",
+    "urbit interviews",
+    "streaming platforms"
+]
 
 [extra]
 author = "Arthur Falls"

@@ -1,7 +1,22 @@
 +++
+
 title = "Why Hoon?"
 date = "2019-11-13"
 description = "The promise of Urbit lies in its reimagination of the digital world using components that are as constrained and limited as possible."
+summary = "Ted Blackman explains Hoon's unique promise: enabling a purely functional operating system with hot code reload, typesafe metaprogramming, and universal serialization at full performance through jets and Nock."
+search_terms = [
+    "why hoon",
+    "hoon language",
+    "nock vm",
+    "functional os",
+    "hot code reload",
+    "metaprogramming",
+    "urbit stack",
+    "axiomatic",
+    "purely functional",
+    "urbit compiler",
+    "minimalism"
+]
 
 [extra]
 author = "Ted Blackman"

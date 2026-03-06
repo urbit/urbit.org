@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 5"
 date = "2025-12-29"
 description = "12 days of Nockmas: Increment, opcode 4"
+summary = "Covers opcode 4 (Increment), the lus + operator adding 1 to an atom, Nock's only arithmetic primitive from which all other arithmetic must be built."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 5",
+    "opcode 4",
+    "increment opcode",
+    "lus operator",
+    "nock increment",
+    "arithmetic primitive",
+    "jetting",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 5 increment image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+5/nockmas-day-5-increment-social.png)

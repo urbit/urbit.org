@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 2"
 date = "2025-12-26"
 description = "12 days of Nockmas: Constant, opcode 1"
+summary = "Covers opcode 1 (Constant), which returns its argument b while ignoring the subject, used for storing data and executable Nock expressions for later evaluation."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+2/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 2",
+    "opcode 1",
+    "constant opcode",
+    "nock constant",
+    "store data",
+    "return constant",
+    "nock isa",
+    "nock tutorial",
+    "stored code"
+]
 +++
 
 ![nockmas day 2 constants image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+2/nockmas-day-2-constants-Social.png)

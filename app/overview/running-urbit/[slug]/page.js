@@ -8,6 +8,7 @@ import { OverviewNavButtons } from "../../../components/OverviewNavButtons";
 import { calculateOverviewNavigation } from "../../../lib/overviewNavigation";
 import { notFound } from "next/navigation";
 import Markdoc from "@markdoc/markdoc";
+import { markdocHtmlConfig } from "../../../markdocConfig";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -82,9 +83,13 @@ export default async function RunningUrbitSection({ params }) {
 
   for (const blurbSlug of blurbSlugs) {
     try {
-      const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
+      const blurbData = await getMarkdownContent(
+        `blurbs/${blurbSlug}.md`,
+        "toml",
+        markdocHtmlConfig
+      );
 
-      // Render the Markdoc content to React on the server
+      // Render the Markdoc content to HTML for client blurbs
       const renderedContent = Markdoc.renderers.html(blurbData.content);
 
       // Serialize references to plain objects with descriptions

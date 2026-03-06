@@ -1,7 +1,23 @@
 +++
+
 title = "State of Urbit"
 date = "2021-08-24"
 description = "A year in review"
+summary = "Comprehensive progress report covering technical development, community growth, application ecosystem expansion, and strategic priorities for ongoing platform evolution."
+search_terms = [
+    "state of urbit",
+    "urbit year review",
+    "landscape app",
+    "os1 landscape",
+    "urbit hosting",
+    "urbit onboarding",
+    "urbit id fees",
+    "naive rollups",
+    "grid interface",
+    "software distribution",
+    "assembly 2021",
+    "urbit roadmap"
+]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

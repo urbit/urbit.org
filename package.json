@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/build-search-index.js && node scripts/build-ai-legibility.js",
     "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.js && node scripts/build-ai-legibility.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."

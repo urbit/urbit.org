@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 11"
 date = "2026-01-04"
 description = "12 days of Nockmas: Edit, opcode 10"
+summary = "Covers opcode 10 (Edit), the hax # operator replacing a noun at a given address within a structure with a new value, used for gate calls and memory optimization."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+11/nockmas
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 11",
+    "opcode 10",
+    "edit opcode",
+    "hax edit",
+    "nock edit",
+    "gate calls",
+    "nock isa",
+    "in place edit",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 11 edit image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+11/nockmas-day-11-edit-social.png)

@@ -1,10 +1,24 @@
 +++
+
 title = "The 100-Year Computer"
 date = "2019-05-13"
 description = 'One way to think about Urbit: as a "100-year computer."'
+summary = "Galen Wolfe-Pauly describes Urbit as a durable, reliable computer designed to never lose data, update itself continuously, and remain functional for decades without user intervention or ads."
 aliases = [
   "/posts/essays/the-100-year-computer/",
   "/posts/the-100-year-computer"
+]
+search_terms = [
+    "100 year computer",
+    "durable computing",
+    "personal server",
+    "permanent data",
+    "urbit overview",
+    "long term computing",
+    "reliable computer",
+    "continuous updates",
+    "future proof",
+    "urbit vision"
 ]
 
 [extra]

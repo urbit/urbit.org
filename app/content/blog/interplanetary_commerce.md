@@ -1,8 +1,24 @@
 +++
+
 title = "Interplanetary Commerce"
 date = "2021-04-08"
 description = "OS-level commercial primitives."
+summary = "Speculative essay on economic systems in distributed networks, arguing that Urbit's ownership model enables direct peer-to-peer commerce without intermediary platforms taking transaction fees."
 tags = ["bitcoin"]
+search_terms = [
+    "interplanetary commerce",
+    "urbit payments",
+    "bitcoin wallet",
+    "lightning network",
+    "ship payments",
+    "urbit hosting",
+    "creator economy",
+    "p2p commerce",
+    "urbit services",
+    "paywalls",
+    "urbit bitcoin",
+    "commercial primitives"
+]
 
 [extra]
 author = "Christian Langalis"

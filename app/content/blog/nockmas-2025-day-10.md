@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 10"
 date = "2026-01-03"
 description = "12 days of Nockmas: Invoke, opcode 9"
+summary = "Covers opcode 9 (Invoke), evaluating a core from formula c then executing the arm at address b within that core with the core itself as subject."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 10",
+    "opcode 9",
+    "invoke opcode",
+    "core arms",
+    "battery payload",
+    "nock invoke",
+    "nock isa",
+    "core call",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 10 invoke image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+10/nockmas-day-10-invoke-social.png)

@@ -1,7 +1,21 @@
 +++
+
 title = "Create a moon identity"
 description = "Spawn subordinate identities tied to your planet"
+summary = "Use |moon to generate moon identities linked to your planet, with additional commands like |moon-breach for factory resets and |moon-cycle-keys to update cryptographic keys."
 tags = ["dojo", "urbit-id"]
+search_terms = [
+    "moon identity",
+    "spawn moon",
+    "urbit moon",
+    "moon keyfile",
+    "moon breach",
+    "moon cycle keys",
+    "azimuth moon",
+    "dojo moon",
+    "sub identity",
+    "moon reset"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

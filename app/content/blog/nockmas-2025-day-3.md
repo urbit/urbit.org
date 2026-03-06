@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 3"
 date = "2025-12-27"
 description = "12 days of Nockmas: Evaluate, opcode 2"
+summary = "Covers opcode 2 (Evaluate), which computes a new subject from formula b and a new formula from formula c, enabling dynamic code execution and metaprogramming."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Day+3/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 3",
+    "opcode 2",
+    "evaluate opcode",
+    "tar operator",
+    "dynamic eval",
+    "nock evaluate",
+    "metaprogramming",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 ![nockmas day 3 evaluate image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Day+3/nockmas-day-3-Evaluate-Social.png)
 
