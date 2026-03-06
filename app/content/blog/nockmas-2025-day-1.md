@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 1"
 date = "2025-12-25"
 description = "12 days of Nockmas: Address, opcode 0"
+summary = "Covers opcode 0 (Address), the fas slot operator for navigating Nock nouns as binary trees using even numbers for left branches and odd numbers for right branches."
 # aliases = []
 
 [extra]

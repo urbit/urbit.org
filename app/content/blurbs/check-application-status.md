@@ -1,6 +1,8 @@
 +++
+
 title = "Check application info and status"
 description = "Running `+vats` will output the state of your apps and related metadata that can help with troubleshooting"
+summary = "The +vats command displays metadata for all apps or a specific app, showing cz hash, status, publishing ship, and pending updates for troubleshooting."
 tags = ["dojo"]
 search_terms = [
     "vats command",

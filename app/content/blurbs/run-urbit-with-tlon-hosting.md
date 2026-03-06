@@ -1,6 +1,8 @@
 +++
+
 title = "Tlon hosting services"
 description = "Tlon Corporation is the preeminent hosting provider which provides free and seamless onboarding to the Urbit network"
+summary = "Tlon provides free Layer 2 hosting with co-custody master tickets, quick onboarding via invite links, and email-based account creation without crypto wallet requirements."
 tags = ["hosting", "hosting-provider", "urbit-os", "tlon", "layer 2"]
 search_terms = [
     "tlon hosting",

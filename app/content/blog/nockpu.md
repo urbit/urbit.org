@@ -1,7 +1,9 @@
 +++
+
 title = "NockPU"
 date = "2023-08-02"
 description = "A light technical description of NockPU, a hardware system for running Nock"
+summary = "Noah Kumin describes ~mopfel-winrux's NockPU hardware project, explaining how a stackless, tree-traversal-optimized processor differs from von Neumann architecture and could enable ultra-efficient Nock execution on bare metal."
 search_terms = [
     "nockpu",
     "nock hardware",

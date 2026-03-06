@@ -1,7 +1,9 @@
 +++
+
 title = "Building Your DAO with Pseudonymous Reputation on Urbit"
 date = "2022-07-19"
 description = "Using Urbit ID’s pseudonymous reputation model, DAO participants know Urbit ID holders’ past behavior before relying on them, and without sacrificing anonymity."
+summary = "Anthony Arroyo explains how Combine DAO uses Urbit ID's pseudonymous reputation to select members based on past network behavior, solving DAO trust and accountability issues while maintaining anonymity and avoiding token-gated limitations."
 search_terms = [
     "pseudonymous reputation",
     "urbit id",

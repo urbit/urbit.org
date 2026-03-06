@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 9"
 date = "2026-01-02"
 description = "12 days of Nockmas: Extend, opcode 8"
+summary = "Covers opcode 8 (Extend), pinning a new value to the head of the subject then evaluating the body, implementing variable binding where the new value is accessible at address 2."
 # aliases = []
 
 [extra]

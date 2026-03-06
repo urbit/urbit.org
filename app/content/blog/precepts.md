@@ -1,7 +1,9 @@
 +++
+
 title = "Precepts"
 date = "2020-03-17"
 description = "Technical maxims that define Urbit's approach to engineering."
+summary = "Formal statement of core principles including simplicity, durability, ownership, and user control, serving as decision framework for ongoing development work."
 search_terms = [
     "urbit precepts",
     "engineering principles",

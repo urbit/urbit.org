@@ -1,7 +1,9 @@
 +++
+
 title = "Common Objections to Urbit"
 date = "2016-06-27"
 description = "Some common objections to Urbit, discussed."
+summary = "Response to frequent criticisms of Urbit including complexity concerns, adoption challenges, and decentralization tradeoffs, providing technical context and community perspectives on each objection."
 search_terms = [
   "urbit objections",
   "urbit critiques",

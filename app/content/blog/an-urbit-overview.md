@@ -1,7 +1,9 @@
 +++
+
 title = "An Urbit Overview"
 date = "2016-05-10"
 description = "A high-level overview of Urbit."
+summary = "Introduction to Urbit as a virtual city of general-purpose personal servers, describing technical architecture including Nock formal semantics, encrypted peer-to-peer networking, cryptographic identity, and advantages over fragmented cloud services."
 search_terms = [
   "urbit overview",
   "personal server",

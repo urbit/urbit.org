@@ -1,7 +1,9 @@
 +++
+
 title = "The Value of Urbit Address Space (2 of 3)"
 date = "2020-04-12"
 description = "Scarcity, utility, liquidity, and network effect."
+summary = "Erik Newton and Galen Wolfe-Pauly analyze Urbit address space value through scarcity, utility, liquidity, and network effect, examining trading patterns and explaining why Reed's law best describes Urbit's network effects."
 search_terms = [
     "address space value",
     "scarcity",

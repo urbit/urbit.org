@@ -1,7 +1,9 @@
 +++
+
 title = "Ford Fusion"
 date = "2020-07-14"
 description = "Ford Fusion was an overhaul of Urbit's over-the-air upgrade process and a rewrite of its build system. The new update system corrects a few long-standing bugs with the previous one, and the new build system is simpler, smaller (by around 5,000 lines), and easier to manage."
+summary = "Technical explanation of build system simplification eliminating traditional compilation, replacing it with filesystem-based deployment and explaining performance and reliability improvements."
 search_terms = [
     "ford fusion",
     "ota updates",

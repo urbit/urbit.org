@@ -1,7 +1,9 @@
 +++
+
 title = "Immunology for the Internet Age"
 date = "2022-04-07"
 description = "A consideration of the history of the Internet motivates introspection on the nature and causes of social dysfunction in a globally shared space. Centralized solutions fail to yield satisfactory outcomes for human freedom and thriving. Decentralized autonomous organizations and their technological apparatus together represent the evolution of an immune system against a corporatized Internet."
+summary = "The author draws an immunology metaphor for the Internet's evolution from high-trust academia to megacorp-dominated zero-trust systems, arguing DAOs, blockchain identity, and decentralized platforms form an immune system preserving human agency against corporate colonization."
 search_terms = [
     "internet immune system",
     "decentralization",

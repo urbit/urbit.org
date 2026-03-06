@@ -1,7 +1,9 @@
 +++
+
 title = "Stable Arvo"
 date = "2019-11-19"
 description = "This year we set out to get Arvo to a point that we can credibly call ‘stable.' "
+summary = "Milestone announcement for Arvo operating system stabilization, describing testing completion, API freeze, migration guides for existing applications, and long-term support commitments."
 search_terms = [
     "stable arvo",
     "kernel stability",

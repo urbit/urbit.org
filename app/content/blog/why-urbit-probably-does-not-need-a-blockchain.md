@@ -1,7 +1,9 @@
 +++
+
 title = "Why Urbit Probably Doesn't Need a Blockchain"
 date = "2016-07-13"
 description = "Urbit (probably) doesn't need a blockchain, because the Urbit address-space PKI is a special case of a consensus ledger."
+summary = "Curtis Yarvin argues Urbit's PKI is a special case of a consensus ledger, explaining why the double-sell problem can be solved without full Nakamoto consensus through governance, routing topology, and patience."
 search_terms = [
   "urbit blockchain",
   "urbit pki",

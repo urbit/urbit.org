@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~nordus-mocwyl"
 date = "2025-12-16"
 description = "A conversation with ~nordus-mocwyl on independent music, Urbit, and direct charity"
+summary = "Musician ~nordus-mocwyl discusses using Urbit for independent music distribution, building guitar courses with Hawk, and learning Hoon to understand computing from Nock upward."
 # aliases = []
 
 [extra]

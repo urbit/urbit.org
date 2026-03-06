@@ -1,7 +1,9 @@
 +++
+
 title = "Precepts: Discussion"
 date = "2020-03-17"
 description = "The precepts aren’t arguments. We discuss and justify them here."
+summary = "Philip Monk justifies Urbit's precepts across general design, specific design, attitude, theory, text style, and real software, defending mechanical simplicity, state machines for permanence, and deterministic computing as essential to lasting software."
 search_terms = [
     "precepts discussion",
     "urbit principles",

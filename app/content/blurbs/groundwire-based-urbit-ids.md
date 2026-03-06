@@ -1,6 +1,8 @@
 +++
+
 title = "Groundwire-based Urbit IDs"
 description = "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain"
+summary = "Groundwire is an upcoming Bitcoin-based Urbit identity system using ordinal/NFT inscriptions for independent self-issuance with L1 Bitcoin's spam resistance."
 tags = ["bitcoin", "urbit-id", "ordinal", "comet"]
 search_terms = [
     "groundwire ids",

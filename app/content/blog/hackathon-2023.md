@@ -1,7 +1,9 @@
 +++
+
 title = "Assembly Hackathon 2023"
 date = "2023-12-05"
 description = "The Assembly 2023 Hackathon was the most successful Urbit Hackathon we've had. Get a taste of Demo Day in Lisbon and check out the projects they made."
+summary = "Article examining community event."
 search_terms = [
     "assembly hackathon",
     "demo day",

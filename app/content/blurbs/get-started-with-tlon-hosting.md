@@ -1,6 +1,8 @@
 +++
+
 title = "Tlon Hosting"
 description = "Tlon Corporation is the preeminent hosting provider which provides free and seamless onboarding to the Urbit network"
+summary = "Tlon Corporation offers free managed hosting with quick onboarding via phone or email signup, ideal for users wanting Tlon Messenger without handling self-hosting."
 tags = ["hosting", "hosting-provider", "urbit-os", "tlon", "layer 2"]
 search_terms = [
     "tlon hosting",

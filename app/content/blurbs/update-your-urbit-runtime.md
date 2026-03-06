@@ -1,6 +1,8 @@
 +++
+
 title = "Update your urbit runtime"
 description = "Keep your vere binary up to date"
+summary = "Use ./urbit next /path/to/pier to automatically check for and install Vere runtime updates with the latest performance improvements and bug fixes."
 tags = ["runtime"]
 search_terms = [
     "update runtime",

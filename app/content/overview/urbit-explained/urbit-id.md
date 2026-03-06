@@ -1,6 +1,8 @@
 ---
+
 title: "Urbit ID"
 description: "A decentralized identity system for the Urbit network"
+summary: "Urbit ID is the naming and addressing system for the network, with five tiers from galaxies to comets. Each identity provides cryptographic authentication and contact info via the Azimuth contracts on Ethereum."
 ---
 
 Broadly construed, Urbit ID is the mechanism for both naming *and contacting* a particular computer on the network. You could call it an identity, a number, a name, an address, or it’s technical moniker a `@p` (“pat-pee”). In fact, at the technical level, each Urbit ID is really just a number. From that number we generate a pronounceable name and a visually identifiable sigil. \~dalwel-fadrun is 3,509,632,436, for example.

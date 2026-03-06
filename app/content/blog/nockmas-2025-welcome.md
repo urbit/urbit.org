@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 0"
 date = "2025-12-24"
 description = "12 days of Nockmas: Intoducing autocons"
+summary = "Introduces autocons, Nock's fundamental cell construction rule where formula structure becomes result structure, making cell construction free and enabling Nock's minimal design."
 # aliases = []
 
 [extra]

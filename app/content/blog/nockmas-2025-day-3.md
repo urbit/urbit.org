@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 3"
 date = "2025-12-27"
 description = "12 days of Nockmas: Evaluate, opcode 2"
+summary = "Covers opcode 2 (Evaluate), which computes a new subject from formula b and a new formula from formula c, enabling dynamic code execution and metaprogramming."
 # aliases = []
 
 [extra]

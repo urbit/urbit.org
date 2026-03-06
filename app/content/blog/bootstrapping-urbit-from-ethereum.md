@@ -1,7 +1,9 @@
 +++
+
 title = "Bootstrapping Urbit from Ethereum"
 date = "2017-09-19"
 description = "We've decided to launch Urbit's constitution as a system of Ethereum contracts."
+summary = "Technical analysis of leveraging Ethereum for Urbit's identity layer while maintaining independence, discussing smart contract security, gas economics, and long-term decentralization strategy."
 search_terms = [
   "bootstrapping urbit",
   "ethereum contracts",

@@ -1,6 +1,8 @@
 +++
+
 title = "Native Planet"
 description = "Native Planet builds hardware and software for simplified home hosting of your Urbit"
+summary = "Native Planet sells specialized hardware with Groundseg preinstalled for streamlined Urbit hosting, combining local control with optional Startram DNS and remote access services."
 tags = ["native-planet", "self-hosting", "hardware"]
 search_terms = [
     "native planet",

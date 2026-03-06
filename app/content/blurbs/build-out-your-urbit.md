@@ -1,6 +1,8 @@
 +++
+
 title = "Running your Urbit"
 description = ""
+summary = "Explore different ways to run your own Urbit, from Layer 1 to Layer 2 identities, cloud hosting to local self-hosting, with options for both developers and end users."
 tags = ["configuration", "apps", "urbit-os"]
 search_terms = [
     "run urbit",

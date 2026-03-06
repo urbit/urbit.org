@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 4"
 date = "2025-12-28"
 description = "12 days of Nockmas: Cell Check, opcode 3"
+summary = "Covers opcode 3 (Cell Check), the wut ? operator testing whether a noun is a cell (returns 0) or atom (returns 1), used for type discrimination."
 # aliases = []
 
 [extra]

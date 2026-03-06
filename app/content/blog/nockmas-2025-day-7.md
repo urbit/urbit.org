@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 7"
 date = "2025-12-31"
 description = "12 days of Nockmas: Conditional, opcode 6"
+summary = "Covers opcode 6 (Conditional), evaluating a test formula and returning either branch c for true (0) or d for false (1), implementing if-then-else logic."
 # aliases = []
 
 [extra]

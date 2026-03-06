@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit Events Series"
 description = "These events are an opportunity for Urbit contributors to share real-time updates that don’t make it into this blog, and for the community to get to know the contributors (and one another)."
+summary = "Lane Rettig launches Urbit's community event series with developer calls, a December Town Hall, and upcoming UrbitCon, designed to scale cultural knowledge transmission, document maker expertise, and foster community-led growth as the project reaches critical mass."
 date = "2020-10-29"
 search_terms = [
     "urbit events",

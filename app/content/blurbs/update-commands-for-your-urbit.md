@@ -1,6 +1,8 @@
 +++
+
 title = "Update Commands For Your Urbit"
 description = "Your urbit is generally auto-updating, but in the event of an incompatible application or a kernel update that would conflict with existing apps, you may need to decide which software to run"
+summary = "Use |bump to apply kernel updates and suspend incompatible apps, or |ota to change your Over-The-Air update provider if your sponsor is derelict."
 tags = ["dojo"]
 search_terms = [
     "update commands",

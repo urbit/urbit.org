@@ -1,7 +1,9 @@
 +++
+
 title = "Subssembly Hackathon 2024"
 date = "2024-09-16"
 description = "Use Login with Urbit ID in your app and win Urbit Stars"
+summary = "Article examining community event."
 search_terms = [
     "subassembly hackathon",
     "login with urbit id",

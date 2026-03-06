@@ -1,6 +1,8 @@
 +++
+
 title = "Get Started with Urbit"
 description = "Ready to join the Urbit network? Get your own Urbit ID and start exploring a new way to compute."
+summary = "Begin your Urbit journey by acquiring a self-sovereign ID and learning about Urbit OS, the personal server computing platform that gives you full control over your data."
 tags = ["getting-started", "homepage", "sidebar"]
 search_terms = [
     "get started",

@@ -1,7 +1,9 @@
 +++
+
 title = "A Perspective on Lisp and Hoon"
 date = "2023-06-15"
 description = "Lisp is an éminence grise of programming.  How does Hoon compare?"
+summary = "N E Davis compares Hoon to Lisp across syntax, metaprogramming, and philosophy, showing how Hoon's static typing, binary tree homoiconicity, and subject-oriented design advance Lisp's goals for a hundred-year computer while avoiding macro proliferation."
 search_terms = [
     "hoon vs lisp",
     "lisp comparison",

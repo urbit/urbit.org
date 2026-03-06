@@ -1,7 +1,9 @@
 +++
+
 title = "Announcing: Urbit Grants Program"
 date = "2019-08-05"
 description = "Announcing Urbit Grants, a way to earn stars through contributing."
+summary = "Launch of Urbit Grants program providing Azimuth star compensation through three mechanisms: semi-annual gifts for informal contributions, bounties for defined projects, and proposals for contributor-pitched ideas."
 aliases = [
   "/posts/essays/announcing-urbit-grants",
   "/posts/announcing-urbit-grants"

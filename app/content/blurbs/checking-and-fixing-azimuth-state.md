@@ -1,6 +1,8 @@
 +++
+
 title = "Checking and fixing Azimuth state"
 description = "Monitor and repair your PKI state synchronization"
+summary = "Check Ethereum block sync with +azimuth/block and use -azimuth-load to fetch snapshots if your ship's Azimuth state is out of sync with the blockchain."
 tags = ["dojo", "azimuth"]
 search_terms = [
     "azimuth state",

@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit Systems Technical Journal"
 description = "Placeholder description"
+summary = "The Urbit Systems Technical Journal publishes articles on Urbit development and solid-state computing, including Neo Urbit advancements in Nock performance and memory management."
 tags = []
 search_terms = [
     "ustj",

@@ -1,6 +1,8 @@
 +++
+
 title = "Cloud Server"
 description = "Running in a virtual private server (VPS) affords easy solutions to things like DNS and remote access, at a marginal cost to tangible control of your data"
+summary = "Run Urbit on a VPS from cloud providers like Digital Ocean or Hetzner for reliable uptime, remote access, and professional infrastructure while maintaining full data control."
 tags = ["vps", "cloud", "self-hosting"]
 search_terms = [
     "cloud server",

@@ -1,6 +1,8 @@
 +++
+
 title = "Check and reduce memory usage"
 description = "Monitor and optimize your urbit's memory consumption"
+summary = "Use |mass, |meld, and |pack commands to monitor and compress your urbit's memory, reducing loom usage by up to 50% on resource-constrained systems."
 tags = ["dojo", "runtime"]
 search_terms = [
     "memory usage",

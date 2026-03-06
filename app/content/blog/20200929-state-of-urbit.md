@@ -1,7 +1,9 @@
 +++
+
 title = "Late 2020 Progress Update: OS 1 -> OS 1.N"
 date = "2020-09-28"
 description = "When we announced OS 1, in April, we started to disappear into Urbit. Since then, we’ve been living on Urbit like we never have before."
+summary = "Six-month update on Urbit development focusing on 10x performance gains, memory optimization, new build system replacing Ford Fusion, graph store integration, and stability improvements to infrastructure and interface."
 search_terms = [
     "os1 updates",
     "state of urbit",

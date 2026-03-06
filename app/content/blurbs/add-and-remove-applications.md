@@ -1,6 +1,8 @@
 +++
+
 title = "Add and remove applications"
 description = "3rd-party software distribution enables any urbit node to distribute software to the network, these commands help you manage your installed apps."
+summary = "Learn the dojo commands |install, |nuke, and |uninstall to manage your urbit's application lifecycle, from adding new apps to removing all associated state."
 tags = ["dojo"]
 search_terms = [
     "install apps",

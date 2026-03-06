@@ -1,7 +1,9 @@
 +++
+
 title = "Urbit for Normies"
 date = "2020-02-11"
 description = "A layperson’s guide to the coming new internet."
+summary = "Accessibility guide explaining Urbit concepts in plain language, addressing common confusion points, and providing entry paths for non-technical users."
 search_terms = [
     "urbit for normies",
     "layperson guide",

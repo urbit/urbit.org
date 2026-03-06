@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~bonbud-macryg & ~niblyx-malnus"
 date = "2026-1-20"
 description = "A conversation with Groundwire developers ~bonbud-macryg and ~niblyx-malnus on Urbit, AI, and building beautiful computers"
+summary = "Groundwire developers ~bonbud-macryg and ~niblyx-malnus explore Urbit for AI, building LLM tools like Clurd and MCP servers, and Urbit as a trustworthy personal computing platform."
 # aliases = []
 
 [extra]

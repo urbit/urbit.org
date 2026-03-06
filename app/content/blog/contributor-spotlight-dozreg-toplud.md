@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~dozreg-toplud"
 date = "2025-11-04"
 description = "A peek into the mind behind UrWASM, and the undertaking to make Urbit faster"
+summary = "UrWASM and SKA developer ~dozreg-toplud discusses Urbit's shallow stack, security model, and work on improving Nock performance through subject knowledge analysis."
 # aliases = []
 
 [extra]

@@ -1,7 +1,9 @@
 +++
+
 title = "Azimuth Security Bounty Program"
 date = "2019-07-21"
 description = "Inviting you (and your friends) to help us make Azimuth as secure as possible."
+summary = "Launch of security bounty program incentivizing responsible disclosure of Azimuth smart contract vulnerabilities, specifying reward tiers based on severity and process for submission and verification."
 aliases = [
   "/posts/essays/azimuth-security-bounty-program",
   "/posts/azimuth-security-bounty-program"

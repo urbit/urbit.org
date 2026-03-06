@@ -1,7 +1,9 @@
 +++
+
 title = "Olif and Urbit IDs"
 date = "2026-02-26"
 description = "An Olfactive rendering of Urbit Address Space"
+summary = "Technical specification for Olif identity format extension, explaining compatibility with existing Urbit ID standards and advantages for specific application use cases."
 # aliases = []
 
 [extra]

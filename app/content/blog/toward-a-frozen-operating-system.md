@@ -1,7 +1,9 @@
 +++
+
 title = "Toward a Frozen Operating System"
 date = "2017-05-09"
 description = "Is it possible to freeze an entire OS?"
+summary = "Philosophical essay on software evolution, discussing when systems should stabilize versus continue changing, and Urbit's approach through Hoon's immutability guarantees."
 search_terms = [
   "frozen operating system",
   "kelvin versioning",

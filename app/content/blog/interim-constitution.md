@@ -1,7 +1,9 @@
 +++
+
 title = "Interim Constitution"
 date = "2016-05-15"
 description = "The governing rules for the early days of the Urbit network."
+summary = "Governance document establishing temporary constitutional framework for Urbit Foundation during transition period, defining board powers, galactic senate responsibilities, and amendment processes."
 search_terms = [
   "interim constitution",
   "urbit governance",

@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 12"
 date = "2026-01-05"
 description = "12 days of Nockmas: Hint, opcode 11"
+summary = "Covers opcode 11 (Hint), attaching metadata to Nock expressions without affecting evaluation, supporting static tags and dynamic hints for runtime optimizations."
 # aliases = []
 
 [extra]

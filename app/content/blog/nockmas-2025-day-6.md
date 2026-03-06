@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 6"
 date = "2025-12-30"
 description = "12 days of Nockmas: Equality Check, opcode 5"
+summary = "Covers opcode 5 (Equality Check), the tis = operator testing deep structural equality between two nouns, returning 0 if equal and 1 if not."
 # aliases = []
 
 [extra]

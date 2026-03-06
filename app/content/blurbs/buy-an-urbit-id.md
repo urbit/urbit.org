@@ -1,6 +1,8 @@
 +++
+
 title = "Buy an Urbit ID"
 description = "Learn how to acquire your own self-sovereign digital identity"
+summary = "Acquire a self-sovereign Urbit ID via Layer 1 NFT marketplaces like OpenSea or Layer 2 providers accepting Bitcoin or credit cards, with planets (4-syllable @p) recommended for new users."
 tags = ["urbit-id"]
 search_terms = [
     "buy urbit id",

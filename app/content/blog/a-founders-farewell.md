@@ -1,7 +1,9 @@
 +++
+
 title = "A Founder's Farewell"
 date = "2019-01-13"
 description = "My goal was always to fire myself at the first possible opportunity. I'm super happy to reach it."
+summary = "Curtis Yarvin's resignation from Tlon as CTO, board member, and voting shareholder, describing his 17-year journey building Urbit from 2002-2013 and explaining his goal of creating an open technology not controlled by any single person."
 aliases = [
   "/posts/essays/a-founders-farewell",
   "/posts/a-founders-farewell"

@@ -1,6 +1,8 @@
 +++
+
 title = "Self-custody your Urbit ID"
 description = "As a cryptographic asset, there are many ways to control and secure your Urbit ID"
+summary = "Self custody means controlling your cryptographic assets directly through master ticket wallets, software wallets like MetaMask, or hardware wallets like Ledger or Trezor."
 tags = ["wallet", "ledger", "trezor", "metamask", "urbit-id"]
 search_terms = [
     "self custody",

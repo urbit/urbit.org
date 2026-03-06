@@ -1,6 +1,8 @@
 +++
+
 title = "Troubleshooting Your Urbit"
 description = "Placeholder description"
+summary = "This guide is a placeholder and will provide troubleshooting steps for common Urbit issues, errors, and connectivity problems."
 tags = []
 search_terms = [
     "urbit troubleshooting",

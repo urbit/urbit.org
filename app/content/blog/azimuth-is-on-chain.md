@@ -1,7 +1,9 @@
 +++
+
 title = "Azimuth is On-Chain"
 date = "2019-01-13"
 description = "The Urbit address space, now called Azimuth, is on the blockchain. And too many other things to fit into a single post."
+summary = "Announcement of Urbit address space deployment to Ethereum blockchain as Azimuth, introducing Bridge interface for managing ERC-721 identity tokens and launching Landscape cities for private communities."
 search_terms = [
   "azimuth on chain",
   "urbit address space",

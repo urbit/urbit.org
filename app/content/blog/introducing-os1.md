@@ -1,7 +1,9 @@
 +++
+
 title = "Introducing OS 1"
 date = "2020-04-29"
 description = "OS 1 is somewhere between ‘productivity software’ and a ‘social network’. We think it’s the beginning of an altogether new breed of social computing."
+summary = "Launch announcement for Urbit operating system upgrade featuring Landscape interface, graph store data structure, improved network performance, and expanded application ecosystem."
 search_terms = [
     "os1",
     "introducing os1",

@@ -1,7 +1,9 @@
 +++
+
 title = "Azimuth’s First Contract Upgrade"
 date = "2021-06-04"
 description = "Galactic Senate makes first concrete action"
+summary = "Jonathan Paprocki and Mark explain Azimuth's first Galactic Senate upgrade vote on ERC721 fixes, self-modifying proxies, and Claims contract improvements while reviewing Urbit's decentralization journey from Tlon-controlled to galaxy-owner governed."
 search_terms = [
     "azimuth upgrade",
     "first contract",

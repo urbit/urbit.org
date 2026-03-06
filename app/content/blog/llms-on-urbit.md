@@ -1,7 +1,9 @@
 +++
+
 title = "LLMs on Urbit"
 date = "2026-1-27"
 description = "A walkthrough of how to use current Urbit LLM tooling by ~niblyx-malnus"
+summary = "Analysis of running large language models on personal servers, discussing privacy advantages, local inference options, and architectures for combining AI capabilities with owned infrastructure."
 # aliases = []
 
 [extra]

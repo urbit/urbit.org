@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 11"
 date = "2026-01-04"
 description = "12 days of Nockmas: Edit, opcode 10"
+summary = "Covers opcode 10 (Edit), the hax # operator replacing a noun at a given address within a structure with a new value, used for gate calls and memory optimization."
 # aliases = []
 
 [extra]

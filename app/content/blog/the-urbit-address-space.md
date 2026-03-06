@@ -1,7 +1,9 @@
 +++
+
 title = "The Urbit Address Space"
 date = "2016-05-15"
 description = "An overview of Urbit's cryptographic address space."
+summary = "Technical specification for cryptographic identity system, explaining galaxy-planet-moon hierarchy, star minting economics, and how address space enables secure communication."
 search_terms = [
   "urbit address space",
   "urbit ships",

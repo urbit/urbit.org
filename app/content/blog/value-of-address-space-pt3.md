@@ -1,7 +1,9 @@
 +++
+
 title = "The Value of Urbit Address Space (3 of 3)"
 date = "2020-07-09"
 description = ""
+summary = "Erik Newton and Galen Wolfe-Pauly explain lockups and spawning limits for Urbit address space, discuss distribution estimates, and clarify why privacy-by-design limits usage data collection despite the network explorer's development."
 search_terms = [
     "address space value",
     "urbit ids",

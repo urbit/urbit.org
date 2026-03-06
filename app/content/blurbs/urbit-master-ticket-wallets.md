@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit master ticket wallets"
 description = "Master ticket wallets are an easy and secure way for managing ownership of your Urbit ID"
+summary = "Master ticket wallets shard cryptographic permissions for Urbit IDs like a brainwallet, with support in Bridge alongside standard wallets and hardware wallets."
 tags = ["ethereum", "wallet", "azimuth"]
 search_terms = [
     "master ticket",

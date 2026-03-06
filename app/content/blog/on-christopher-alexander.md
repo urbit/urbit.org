@@ -1,7 +1,9 @@
 +++
+
 title = "On Christopher Alexander"
 date = "2021-07-19"
 description = "An overview of his writing and relevance"
+summary = "Essay examining architect Christopher Alexander's influence on Urbit design philosophy, discussing patterns language, town building principles, and technology's relationship to human flourishing."
 search_terms = [
     "christopher alexander",
     "pattern language",

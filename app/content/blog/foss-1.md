@@ -1,7 +1,9 @@
 +++
+
 title = "Urbit's Open Source Culture, Part I"
 date = "2023-05-31"
 description = "How did Urbit cultivate a unique open source software culture? Let's take a look at how we got to where we are today."
+summary = "N E Davis traces Urbit's evolution from Curtis Yarvin's personal project through Tlon's skunkworks to today's thriving open source community, crediting nine factors from functional OS appeal to public build parties in cultivating radical transparency."
 search_terms = [
     "open source culture",
     "urbit history",

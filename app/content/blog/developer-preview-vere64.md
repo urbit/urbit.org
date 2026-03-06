@@ -1,7 +1,9 @@
 +++
+
 title = "Developer Preview: vere64 runtime"
 date = "2025-11-24"
 description = "A preview for developers to experience an unlimited loom using the vere64 runtime"
+summary = "The Urbit Foundation releases a vere64 Developer Preview enabling terabyte-scale looms through 64-bit runtime, removing the conceptual 16GB glass ceiling for experimental applications while warning it's for development ships only without migration pathways."
 # aliases = []
 
 [extra]

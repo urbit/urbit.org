@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~mastyr-bottec"
 date = "2025-11-25"
 description = "A conversation with runtime developer ~mastyr-bottec on his work to make Urbit store large amounts of data"
+summary = "Runtime developer ~mastyr-bottec explains vere64 work enabling Urbit to store large amounts of data, including migrations and lifting file size limits."
 # aliases = []
 
 [extra]

@@ -1,7 +1,9 @@
 +++
+
 title = "Platform Decay, Decentralized Marketplaces, and Urbit"
 date = "2020-05-07"
 description = "Urbit is calm computing. Calm commerce follows naturally. "
+summary = "Nicholas Simmons argues e-commerce platforms decay toward exploitation, advocating decentralized marketplaces on Urbit with personal data ownership, neutral reputation systems, and calm commerce to restore fair vendor-customer relationships."
 search_terms = [
     "platform decay",
     "decentralized marketplaces",

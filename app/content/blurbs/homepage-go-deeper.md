@@ -1,6 +1,8 @@
 +++
+
 title = "Go Deeper"
 description = "Ready to explore more? Learn about Urbit's architecture, identity system, and the broader ecosystem of applications and tools being built on the network."
+summary = "Deepen your Urbit knowledge with resources on architecture, identity systems, applications, and the community building the future of personal computing."
 tags = ["learning", "documentation", "homepage"]
 search_terms = [
     "urbit architecture",

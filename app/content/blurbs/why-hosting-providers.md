@@ -1,6 +1,8 @@
 +++
+
 title = "Why use a hosting provider?"
 description = "Urbit is a personal server, yet there are still service providers who will host it for you"
+summary = "Hosting providers exist because Urbit isn't quite as easy as 'caring for a cactus' yet, and because networks effects matter for users who aren't inclined to self-host."
 tags = ["hosting", "hosting-provider", "urbit-os"]
 search_terms = [
     "why hosting",

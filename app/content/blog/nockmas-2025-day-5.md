@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 5"
 date = "2025-12-29"
 description = "12 days of Nockmas: Increment, opcode 4"
+summary = "Covers opcode 4 (Increment), the lus + operator adding 1 to an atom, Nock's only arithmetic primitive from which all other arithmetic must be built."
 # aliases = []
 
 [extra]

@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 10"
 date = "2026-01-03"
 description = "12 days of Nockmas: Invoke, opcode 9"
+summary = "Covers opcode 9 (Invoke), evaluating a core from formula c then executing the arm at address b within that core with the core itself as subject."
 # aliases = []
 
 [extra]

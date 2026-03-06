@@ -1,7 +1,9 @@
 +++
+
 title = "Tools of Our Own"
 date = "2020-05-12"
 description = "What is a digital environment? What does it mean to shape your own digital environment?"
+summary = "Manifesto for building personal computing tools users control, arguing against platform dependency and describing benefits of self-hosted, open source software."
 search_terms = [
     "tools of our own",
     "digital environment",

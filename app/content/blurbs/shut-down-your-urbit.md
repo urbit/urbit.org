@@ -1,6 +1,8 @@
 +++
+
 title = "Shut down your urbit"
 description = "Gracefully stop your urbit instance"
+summary = "Use |exit or Ctrl-D from dojo to gracefully shut down your urbit, though Urbit's solid-state design allows straightforward recovery from power loss."
 tags = ["dojo", "runtime"]
 search_terms = [
     "shutdown urbit",

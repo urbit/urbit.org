@@ -1,6 +1,8 @@
 +++
+
 title = "Azimuth-based Urbit IDs"
 description = "Azimuth identities are cryptographically owned Urbit address space on the Ethereum blockchain"
+summary = "Azimuth identities are Urbit addresses registered as NFTs on Ethereum (Layer 1 or Layer 2 rollup), purchasable via marketplaces like OpenSea or from third-party sellers."
 tags = ["ethereum", "layer 1", "layer 2", "urbit id", "nft"]
 search_terms = [
     "azimuth ids",

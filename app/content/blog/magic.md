@@ -1,7 +1,9 @@
 +++
+
 title = "Magic"
 date = "2016-05-15"
 description = "A thought-experiment to explain the Urbit user experience."
+summary = "Philosophical essay on technology's role in human experience, arguing for systems that augment rather than replace natural capabilities, and examining aesthetics of computing interfaces."
 search_terms = [
   "urbit user experience",
   "personal server vision",

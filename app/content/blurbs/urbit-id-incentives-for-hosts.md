@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit ID incentives for hosts"
 description = "Cryptographic ownership of Urbit ID helps enforce honest operation of Urbit OS by hosting providers"
+summary = "Cryptographic ID ownership enforces honest hosting by letting users override malevolent hosts at any time, shifting the principal-agent relationship back to user control."
 tags = []
 search_terms = [
     "host incentives",

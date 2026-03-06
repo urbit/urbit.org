@@ -1,7 +1,9 @@
 +++
+
 title = "Azimuth as Multipass"
 date = "2019-05-15"
 description = "What if everyone had a single 'civilizational key'?"
+summary = "Essay envisioning Azimuth as a unified identity and payment system—a 'civilizational key' serving as both driver's license and credit card for a decentralized digital society."
 aliases = [
   "/posts/essays/azimuth-as-multipass/",
   "/posts/azimuth-as-multipass"

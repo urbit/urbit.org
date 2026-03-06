@@ -1,6 +1,8 @@
 +++
+
 title = "Off-network support channels"
 description = "Not able to get onto the network at all? Here are some off-network channels for getting support"
+summary = "Get off-network support for runtime issues via support@urbit.org and GitHub, or Tlon Messenger issues via support@tlon.io when unable to reach the network directly."
 tags = []
 search_terms = [
     "support email",

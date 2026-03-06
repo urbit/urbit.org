@@ -1,7 +1,9 @@
 +++
+
 title = "Introduction to the Combine DAO"
 date = "2022-07-01"
 description = "Inside the mind of the Combine"
+summary = "Whitepaper describing DAO governance architecture implementing bicameral decision-making, combining star-based voting with identity verification for decentralized organizational coordination."
 search_terms = [
     "combine dao",
     "urbit foundation",

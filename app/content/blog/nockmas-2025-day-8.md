@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 8"
 date = "2026-01-01"
 description = "12 days of Nockmas: Compose, opcode 7"
+summary = "Covers opcode 7 (Compose), evaluating b then using that result as the subject for c, implementing the pipe pattern for sequential function composition."
 # aliases = []
 
 [extra]

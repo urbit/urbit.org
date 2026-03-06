@@ -1,6 +1,8 @@
 +++
+
 title = "Run urbit in a virtual server"
 description = "Urbit runs seamlessly in any cloud server or datacenter you may already be familiar with"
+summary = "Run Urbit on cloud providers like AWS, Linode, or Digital Ocean for reliable uptime, with minimum requirements of 1 vCPU, 2-4GB RAM, and 10-40GB storage."
 tags = []
 search_terms = [
     "cloud server",

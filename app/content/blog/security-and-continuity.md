@@ -1,6 +1,8 @@
 +++
+
 title = "Security and Continuity"
 description = "An update on our primary infrastructure milestones for 2020."
+summary = "Discussion of system resilience strategies including backup procedures, disaster recovery planning, and long-term data preservation for personal servers."
 date = "2020-11-30"
 search_terms = [
     "security continuity",

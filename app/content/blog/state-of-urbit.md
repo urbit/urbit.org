@@ -1,7 +1,9 @@
 +++
+
 title = "State of Urbit"
 date = "2021-08-24"
 description = "A year in review"
+summary = "Comprehensive progress report covering technical development, community growth, application ecosystem expansion, and strategic priorities for ongoing platform evolution."
 search_terms = [
     "state of urbit",
     "urbit year review",

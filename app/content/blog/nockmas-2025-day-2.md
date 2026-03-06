@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 2"
 date = "2025-12-26"
 description = "12 days of Nockmas: Constant, opcode 1"
+summary = "Covers opcode 1 (Constant), which returns its argument b while ignoring the subject, used for storing data and executable Nock expressions for later evaluation."
 # aliases = []
 
 [extra]

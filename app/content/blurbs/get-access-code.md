@@ -1,6 +1,8 @@
 +++
+
 title = "Get access code"
 description = "A secret code for remote access to your instance of Urbit OS"
+summary = "Use the +code command to retrieve your eight-syllable access code for logging into web interfaces and mobile clients, distinct from your master ticket."
 tags = ["dojo"]
 search_terms = [
     "access code",

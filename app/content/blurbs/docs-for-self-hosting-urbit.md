@@ -1,6 +1,8 @@
 +++
+
 title = "Documentation for self-hosting urbit"
 description = "The top guides for learning how to run your own urbit node"
+summary = "Essential self-hosting resources including CLI setup guides, Groundseg documentation, and cloud hosting instructions for running your own Urbit node."
 tags = []
 search_terms = [
     "self hosting guide",

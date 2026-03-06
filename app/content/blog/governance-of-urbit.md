@@ -1,7 +1,9 @@
 +++
+
 title = "Governance of urbit.org"
 date = "2019-01-10"
 description = "Stewardship of the Urbit Project."
+summary = "Article examining governance."
 search_terms = [
   "urbit governance",
   "urbit.org assets",

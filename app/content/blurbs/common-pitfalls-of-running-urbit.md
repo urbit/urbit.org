@@ -1,6 +1,8 @@
 +++
+
 title = "Common Pitfalls Of Running Urbit"
 description = "Placeholder description"
+summary = "This guide is a placeholder and will cover common mistakes and issues encountered when running and maintaining your own Urbit instance."
 tags = []
 search_terms = [
     "urbit pitfalls",

@@ -16,10 +16,11 @@ export async function generateMetadata({ params }, parent) {
   const postData = await getMarkdownContent(postSlug, "toml");
   const parentMetadata = await parent;
   const image = parentMetadata?.openGraph?.images?.[0]?.url;
+  const description = `${postData.frontMatter.extra.description}`;
 
   return {
     title: `Grants • ${postData.frontMatter.title}`,
-    description: `${postData.frontMatter.extra.description}`,
+    description,
     openGraph: {
       images: [
         {

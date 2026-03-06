@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit as overlay OS"
 description = "Urbit OS is a personal server operating system that runs on any Unix box as a self-contained virtual machine"
+summary = "Urbit OS runs as an overlay OS via the Vere runtime on any Unix host, allowing your entire 'pier' to be portable across hardware like a zipped virtual machine."
 tags = ["urbit-os", "virtual-machine", "runtime"]
 search_terms = [
     "overlay os",

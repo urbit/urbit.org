@@ -1,6 +1,8 @@
 +++
+
 title = "Urbit-related blogs"
 description = "A collection of written urbit content from the broader community"
+summary = "Read community blogs from subject.network, ~sarlev, Martian Computing, and the %hawk blog, plus the Urmanac almanac for Urbit history and apps."
 tags = []
 search_terms = [
     "urbit blogs",

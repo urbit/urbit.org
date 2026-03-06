@@ -218,6 +218,15 @@ const addBlurbRoute = (map, slug, targetPath, { overwrite = false } = {}) => {
 
 const buildBlurbRouteMap = async () => {
   const map = new Map();
+  const manualMappings = {
+    "troubleshooting-your-urbit": "/overview/running-urbit/support",
+    "common-pitfalls-of-running-urbit": "/overview/running-urbit/support",
+    "groundwire-based-urbit-ids": "/overview/running-urbit/get-urbit-id",
+  };
+
+  Object.entries(manualMappings).forEach(([slug, target]) => {
+    addBlurbRoute(map, slug, target, { overwrite: true });
+  });
   const homepageConfigPath = path.join(CONTENT_DIR, "homepage/config.md");
 
   if (fs.existsSync(homepageConfigPath)) {

@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~litneb-maltyp"
 date = "2026-02-17"
 description = "A conversation with ~litneb-maltyp on Urbit identity, community, and the personal server"
+summary = "Designer ~litneb-maltyp discusses Urbit's identity system, owning personal servers, and building a home lab for agency over computing and digital permanence."
 # aliases = []
 
 [extra]

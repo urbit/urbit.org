@@ -1,7 +1,9 @@
 +++
+
 title = "Toward a New %clay"
 date = "2016-07-13"
 description = "Urbit's revision-control system, %clay, is itself due for a (medium-sized) revision!"
+summary = "Curtis Yarvin proposes comprehensive redesign of Urbit's %clay revision control system, addressing storage models, Unix mounting, merge semantics, and security while inviting community contributions to improve the typed DVCS."
 search_terms = [
   "clay revision control",
   "urbit filesystem",

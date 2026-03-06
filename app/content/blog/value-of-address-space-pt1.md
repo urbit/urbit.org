@@ -1,7 +1,9 @@
 +++
+
 title = "The Value of Urbit Address Space (1 of 3)"
 date = "2020-04-06"
 description = "An expansion of our position on Urbit's address space value."
+summary = "Erik Newton and Galen Wolfe-Pauly explain what Urbit ID is, its history of distribution, and draw analogies to DNS, ISPs, CDNs, land, and dealer-operators to understand address space value beyond planet prices."
 search_terms = [
     "address space value",
     "urbit ids",

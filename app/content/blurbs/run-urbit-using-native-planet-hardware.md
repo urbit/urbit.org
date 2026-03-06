@@ -1,6 +1,8 @@
 +++
+
 title = "Run urbit using Native Planet hardware"
 description = "Placeholder description"
+summary = "Native Planet sells purpose-built hardware with ColonyOS and Groundseg preloaded, offering managed hosting features like Startram DNS while maintaining local sovereignty."
 tags = []
 search_terms = [
     "native planet hardware",

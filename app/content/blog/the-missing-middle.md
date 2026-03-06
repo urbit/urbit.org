@@ -1,7 +1,9 @@
 +++
+
 title = "The Missing Middle"
 date = "2020-05-25"
 description = "Urbit stars can facilitate a flexible continuum of community norms."
+summary = "Analysis of gaps in current internet infrastructure, describing mid-tier services and protocols that don't fit binary choices between massive platforms and individual self-hosting."
 search_terms = [
     "missing middle",
     "urbit stars",

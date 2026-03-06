@@ -1,6 +1,8 @@
 +++
+
 title = "Check your current sponsor"
 description = "Understanding your networking sponsor can help with troubleshooting connectivity issues"
+summary = "The +sponsor command reveals your ship's current sponsor @p, useful for diagnosing connectivity issues when a ship in your sponsorship chain is offline."
 tags = ["dojo"]
 search_terms = [
     "sponsor command",

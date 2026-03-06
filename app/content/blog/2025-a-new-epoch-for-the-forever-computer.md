@@ -1,7 +1,9 @@
 +++
+
 title = "A New Epoch for The Forever Computer"
 date = "2025-10-9"
 description = "On the further decentralization of Urbit and the next era of the Urbit Foundation"
+summary = "Announcement of Urbit Foundation governance transition with new three-seat board, appointment of Executive Director ~sicdev-pilnup, and evolution toward operational decentralization and broader community amplification."
 # aliases = []
 search_terms = [
     "urbit foundation",
