@@ -18,7 +18,7 @@ imageCard = ""
 tags = ["spotlight", "gall", "userspace", "security"]
 search_terms = [
     "contributor spotlight",
-    "palfun foslup",
+    "~palfun-foslup",
     "gall 2026",
     "userspace permissions",
     "userspace compatibility",
