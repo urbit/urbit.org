@@ -9,13 +9,13 @@ summary = "Tlon engineer ~palfun-foslup discusses building Gall apps like %pals 
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = ""
-imageCard = ""
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_palfun-foslup/Blog_QA+palfun-foslup_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_palfun-foslup/Blog_QA+palfun-foslup_Social16_9.png"
 # imageIndex = ""
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
-tags = ["spotlight", "gall", "userspace", "security"]
+tags = ["spotlight", "gall", "userspace"]
 search_terms = [
     "contributor spotlight",
     "~palfun-foslup",
@@ -32,6 +32,7 @@ search_terms = [
 ]
 +++
 
+![~palfun-foslup sigil rendering](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_palfun-foslup/Blog_QA+palfun-foslup_Social16_9+(no+text).jpg)
 > **\~sarlev:** What drew you into the idea that we needed to throw away and rewrite the entire network computing stack?
 
 **\~palfun-foslup:** I'm not even sure that was the idea that pulled me in. It was more like, "This thing is weird - let's look at the weird thing." Then you see the old blog posts say, "Imagine a world where client-server architecture is dead because everyone is their own server." What are the implications of that? What does that look like? You want this world, but how do you get there? You can't get there if a server isn't trivial to run and maintain.
