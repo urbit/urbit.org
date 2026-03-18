@@ -1,32 +1,88 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { scrollToHash } from "../lib/anchorScroll";
+
+const MAX_HASH_ATTEMPTS = 8;
+const HASH_RETRY_DELAY = 120;
+const INITIAL_HASH_DELAY = 80;
+
+const attemptHashScroll = (behavior = "auto") => {
+  if (typeof window === "undefined") return;
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  let attempts = 0;
+
+  const tryScroll = () => {
+    window.requestAnimationFrame(() => {
+      const didScroll = scrollToHash(hash, { behavior });
+
+      if (didScroll) {
+        return;
+      }
+
+      if (attempts >= MAX_HASH_ATTEMPTS) {
+        console.warn(`Anchor not found after ${attempts + 1} attempts: ${hash}`);
+        return;
+      }
+
+      attempts += 1;
+      setTimeout(tryScroll, HASH_RETRY_DELAY);
+    });
+  };
+
+  setTimeout(tryScroll, INITIAL_HASH_DELAY);
+};
 
 /**
- * ScrollManager - Manages scroll restoration behavior across route changes
+ * AnchorScrollManager - Handles hash scrolling after navigation
  *
- * Prevents browser's automatic scroll restoration which can cause inconsistent
- * scroll positions when navigating between pages. Ensures all pages load at
- * the top by default while preserving smooth scroll for intentional navigation.
+ * Ensures hash links scroll to the correct anchor after route changes
+ * without forcing every route to jump to the top.
  */
-export function ScrollManager() {
+export function AnchorScrollManager() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const hasMounted = useRef(false);
 
   useEffect(() => {
-    // Disable browser's automatic scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
     }
   }, []);
 
   useEffect(() => {
-    // Use requestAnimationFrame to ensure DOM has settled before scrolling
-    // This prevents race conditions with page rendering
-    window.requestAnimationFrame(() => {
-      window.scrollTo(0, 0);
-    });
-  }, [pathname]);
+    const hash = window.location.hash;
+
+    if (hash) {
+      attemptHashScroll("auto");
+    } else if (hasMounted.current) {
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      });
+    }
+
+    hasMounted.current = true;
+
+    const handleHashChange = () => {
+      attemptHashScroll("smooth");
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    if (hash) {
+      const handleLoad = () => attemptHashScroll("auto");
+      window.addEventListener("load", handleLoad, { once: true });
+
+      if (document?.fonts?.ready) {
+        document.fonts.ready.then(() => attemptHashScroll("auto"));
+      }
+    }
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [pathname, searchParams]);
 
   return null;
 }

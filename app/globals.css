@@ -58,6 +58,7 @@
     --code-accent: 'var(--accent-3)';
     --header-height: 4.5rem;
     --footer-height: 170px;
+    --anchor-offset: 90px;
 
     /* container */
     --site-max-width: 3220px;
@@ -68,6 +69,12 @@
     --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
     --ease-springy: cubic-bezier(0.8, 1.77, 0.49, 0.74);
     --ease-springy-alt: cubic-bezier(0.8, 1.3, 0.49, 0.74);
+}
+
+@media (min-width: 768px) {
+    :root {
+        --anchor-offset: 100px;
+    }
 }
 
 /* Force light mode - dark mode disabled */
@@ -121,6 +128,10 @@ html::-webkit-scrollbar {
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
         /* Chrome, Safari, Opera */
+    }
+
+    .scroll-anchor {
+        scroll-margin-top: var(--anchor-offset);
     }
 }
 
@@ -355,7 +366,7 @@ body {
         }
 
         ul li {
-            @apply list-outside mb-1 list-none before:content-['—'] before:absolute before:left-[-1.2rem];
+            @apply list-outside mb-1 list-none relative before:content-['—'] before:absolute before:left-[-1.2rem] before:top-[0.35rem];
         }
 
         ul li ul {

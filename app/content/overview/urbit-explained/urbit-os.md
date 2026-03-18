@@ -1,6 +1,8 @@
 ---
+
 title: "Urbit OS"
 description: "A new operating system designed to give individuals control of their digital lives"
+summary: "Urbit OS is an overlay system built on the Nock virtual machine, with a functional language, kernel, and core modules like filesystem and networking. It keeps state as a pure function of its event history."
 ---
 
 While some interpretations of the question *“What is Urbit?”* take the stance that “Urbit is anywhere you use your `@p`”, the canonical usage of Urbit ID is to run Urbit OS. Every node, or ‘ship’, on the Urbit network must first start with an identity. A knowledge of ‘self’ which is embedded in every action that it takes on the network. 

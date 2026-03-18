@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 1"
 date = "2025-12-25"
 description = "12 days of Nockmas: Address, opcode 0"
+summary = "Covers opcode 0 (Address), the fas slot operator for navigating Nock nouns as binary trees using even numbers for left branches and odd numbers for right branches."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 1",
+    "opcode 0",
+    "address opcode",
+    "slot operator",
+    "tree addressing",
+    "nock nouns",
+    "binary tree",
+    "nock address",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 1 tree addressing image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+1/nockmas-day-1-tree-addressing-Social.png)

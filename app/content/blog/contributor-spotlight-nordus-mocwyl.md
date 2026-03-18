@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~nordus-mocwyl"
 date = "2025-12-16"
 description = "A conversation with ~nordus-mocwyl on independent music, Urbit, and direct charity"
+summary = "Musician ~nordus-mocwyl discusses using Urbit for independent music distribution, building guitar courses with Hawk, and learning Hoon to understand computing from Nock upward."
 # aliases = []
 
 [extra]
@@ -14,6 +16,19 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+no
 # imageCardDark =
 # imageIndexDark =
 tags = ["spotlight", "userspace", "community"]
+search_terms = [
+    "contributor spotlight",
+    "nordus mocwyl",
+    "independent music",
+    "musician",
+    "urbit for creators",
+    "hawk website",
+    "guitar course",
+    "direct charity",
+    "personal server",
+    "hoon learning",
+    "sovereign web"
+]
 +++
 
 > **\~sarlev:** What drew you into the idea that we needed to throw away and rewrite the entire network computing stack?

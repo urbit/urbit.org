@@ -1,7 +1,21 @@
 +++
+
 title = "On-network support channels"
 description = "Need help with something? Give a shout in one of these groups and someone will give you a hand"
+summary = "Join Tlon Messenger groups like Tlon Local, battery payload, Hooniverse, Urbit Community, and Urbit Foundation for support with hardware, development, Hoon, and general help."
 tags = []
+search_terms = [
+    "support groups",
+    "tlon local",
+    "battery payload",
+    "hooniverse",
+    "urbit community",
+    "uf public",
+    "tlon messenger groups",
+    "get help on urbit",
+    "support comet",
+    "join group"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

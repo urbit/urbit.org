@@ -1,3 +1,5 @@
+import React from "react";
+
 /**
  * Heading component for Markdoc-rendered content
  *
@@ -5,30 +7,88 @@
  * Maintains visual hierarchy for article/blog content while ensuring
  * accessibility and SEO compliance.
  *
- * Supports {#id} syntax for anchor IDs: "# Title {#my-id}" → <h1 id="my-id">Title</h1>
+ * Supports {#id} and {% #id %} syntax for anchor IDs.
  *
  * @param {number} level - Heading level (1-6)
+ * @param {string} id - Optional explicit heading ID (Markdoc attributes)
  * @param {ReactNode} children - Heading content
  */
-export function Heading({ level, children }) {
-  // Dynamically create the appropriate heading tag
+export function Heading({ level, id, children }) {
   const HeadingTag = `h${level}`;
 
-  // Extract ID from {#id} syntax if present in heading text
-  let id = null;
-  let cleanChildren = children;
-
-  if (typeof children === 'string') {
-    // Match pattern: "Text {#anchor-id}" at end of string
-    const match = children.match(/^(.*?)\s*\{#([\w-]+)\}\s*$/);
-    if (match) {
-      cleanChildren = match[1].trim();
-      id = match[2];
+  const extractText = (node) => {
+    if (typeof node === "string" || typeof node === "number") {
+      return node.toString();
     }
-  }
 
-  // Map heading levels to Tailwind classes for article content
-  // These styles match the existing visual hierarchy from globals.css
+    if (Array.isArray(node)) {
+      return node.map(extractText).join("");
+    }
+
+    if (React.isValidElement(node)) {
+      return extractText(node.props?.children);
+    }
+
+    return "";
+  };
+
+  const extractExplicitId = (text) => {
+    if (!text) {
+      return { cleaned: "", explicitId: null };
+    }
+
+    const patterns = [
+      { regex: /^(.*?)\s*\{#([\w-]+)\}\s*$/, index: 2 },
+      { regex: /^(.*?)\s*\{%\s*#([\w-]+)\s*%\}\s*$/, index: 2 },
+    ];
+
+    for (const pattern of patterns) {
+      const match = text.match(pattern.regex);
+      if (match) {
+        return { cleaned: match[1].trim(), explicitId: match[pattern.index] };
+      }
+    }
+
+    return { cleaned: text, explicitId: null };
+  };
+
+  const stripExplicitId = (node) => {
+    if (typeof node === "string") {
+      return node
+        .replace(/\s*\{#([\w-]+)\}\s*$/, "")
+        .replace(/\s*\{%\s*#([\w-]+)\s*%\}\s*$/, "")
+        .trimEnd();
+    }
+
+    if (Array.isArray(node)) {
+      return node.map(stripExplicitId);
+    }
+
+    if (React.isValidElement(node) && node.props?.children) {
+      return React.cloneElement(node, {
+        children: stripExplicitId(node.props.children),
+      });
+    }
+
+    return node;
+  };
+
+  const slugify = (value) => {
+    if (!value) return "";
+    return value
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+  };
+
+  const headingText = extractText(children);
+  const { cleaned, explicitId } = extractExplicitId(headingText);
+  const autoId = slugify(cleaned);
+  const resolvedId = id || explicitId || autoId || undefined;
+  const cleanChildren = stripExplicitId(children);
+
   const styles = {
     1: "text-5xl font-[400] mb-8 md:mb-16 lg:mb-20 leading-[100%] my-[2.5rem]",
     2: "text-3xl font-[700] mb-[1rem]",
@@ -39,7 +99,10 @@ export function Heading({ level, children }) {
   };
 
   return (
-    <HeadingTag className={styles[level] || styles[1]} id={id}>
+    <HeadingTag
+      className={`${styles[level] || styles[1]} scroll-anchor`}
+      id={resolvedId}
+    >
       {cleanChildren}
     </HeadingTag>
   );

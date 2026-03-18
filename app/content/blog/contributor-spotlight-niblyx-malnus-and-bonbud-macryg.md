@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~bonbud-macryg & ~niblyx-malnus"
 date = "2026-1-20"
 description = "A conversation with Groundwire developers ~bonbud-macryg and ~niblyx-malnus on Urbit, AI, and building beautiful computers"
+summary = "Groundwire developers ~bonbud-macryg and ~niblyx-malnus explore Urbit for AI, building LLM tools like Clurd and MCP servers, and Urbit as a trustworthy personal computing platform."
 # aliases = []
 
 [extra]
@@ -14,6 +16,19 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+~n
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "design", "architecture"]
+search_terms = [
+    "contributor spotlight",
+    "groundwire",
+    "bonbud macryg",
+    "niblyx malnus",
+    "urbit ai",
+    "llm tools",
+    "christopher alexander",
+    "mcp server",
+    "urbit master",
+    "architecture design",
+    "hoon"
+]
 +++
 
 > **\~sarlev:** This is our first two-person spotlight interview, so we'll see how it goes and adapt accordingly. I generally like to start by just asking, what first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?  

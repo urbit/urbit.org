@@ -52,7 +52,15 @@ async function getToml(slug) {
   return data;
 }
 
-async function getMarkdownContent(slug, type = "yaml") {
+const normalizeHeadingIds = (content) => {
+  if (!content) return content;
+  return content.replace(
+    /^(#{1,6}[^\n]*?)\s*\{%\s*#([\w-]+)\s*%\}\s*$/gm,
+    "$1 {#$2}"
+  );
+};
+
+async function getMarkdownContent(slug, type = "yaml", config = markdocConfig) {
   const toml = require("@iarna/toml");
 
   // Ensure slug ends with .md
@@ -82,8 +90,9 @@ async function getMarkdownContent(slug, type = "yaml") {
     fileSyncRead,
     options
   );
-  const ast = Markdoc.parse(pageContent); //ast is for abstract syntax tree
-  const transform = Markdoc.transform(ast, markdocConfig);
+  const normalizedContent = normalizeHeadingIds(pageContent);
+  const ast = Markdoc.parse(normalizedContent); //ast is for abstract syntax tree
+  const transform = Markdoc.transform(ast, config);
   return {
     content: transform,
     frontMatter: pageData,
@@ -115,13 +124,13 @@ async function getSectionContent(slug) {
 
   // Split content on ---outro--- delimiter
   const outroDelimiter = "\n---outro---\n";
-  let introContent = pageContent;
+  let introContent = normalizeHeadingIds(pageContent);
   let outroContent = null;
 
   if (pageContent.includes(outroDelimiter)) {
     const parts = pageContent.split(outroDelimiter);
-    introContent = parts[0].trim();
-    outroContent = parts[1]?.trim() || null;
+    introContent = normalizeHeadingIds(parts[0].trim());
+    outroContent = normalizeHeadingIds(parts[1]?.trim() || "");
   }
 
   // Parse and transform intro content

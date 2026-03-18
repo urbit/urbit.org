@@ -1,7 +1,23 @@
 +++
+
 title = "Ames Security Audit and the Future of the Protocol"
 description = "Ames’ design has unparalleled potential to deter, mitigate, and recover from attacks, since every packet is authenticated and encrypted and backed by a stable, decentralized PKI."
+summary = "Article examining security audit."
 date = "2020-12-17"
+search_terms = [
+    "ames security",
+    "protocol audit",
+    "urbit security",
+    "forward secrecy",
+    "dos attacks",
+    "ddos mitigation",
+    "ames protocol",
+    "urbit pki",
+    "networking keys",
+    "cryptographic audit",
+    "social boundaries",
+    "security roadmap"
+]
 
 [extra]
 author = "Ted Blackman + Anthony Arroyo"

@@ -1,7 +1,20 @@
 +++
+
 title = "Shortfalls of hosting providers"
 description = "Hosting providers are designed to be scalable, not bespoke, operations."
+summary = "Hosting providers must keep your urbit unencrypted at runtime, limiting privacy, and offer narrower interaction options like web interfaces rather than full SSH access."
 tags = ["hosting", "urbit-os"]
+search_terms = [
+    "hosting drawbacks",
+    "provider risks",
+    "encrypted at rest",
+    "host access data",
+    "self hosting control",
+    "dns control",
+    "ssh access",
+    "managed hosting limits",
+    "urbit privacy"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

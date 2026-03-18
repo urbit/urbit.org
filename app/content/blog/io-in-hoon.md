@@ -1,7 +1,23 @@
 +++
+
 title = "Input and Output in Hoon"
 description = "Let's talk about IO in Urbit."
+summary = "Philip Monk compares imperative, monadic, and state machine IO paradigms, defending Urbit's 90% state machine approach for permanence and robustness, with monadic threads for complex IO sequences that don't require upgradeability."
 date = "2020-12-15"
+search_terms = [
+    "hoon io",
+    "input output",
+    "state machines",
+    "monadic io",
+    "urbit threads",
+    "urbit agents",
+    "arvo vanes",
+    "functional io",
+    "imperative io",
+    "io patterns",
+    "hoon programming",
+    "state machine io"
+]
 
 [extra]
 author = "Philip Monk"

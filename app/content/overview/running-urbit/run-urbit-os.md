@@ -1,6 +1,8 @@
 ---
+
 title: "Run Urbit OS"
 description: "Set up and run your own Urbit node"
+summary: "Methods for running an Urbit node after acquiring an identity, covering local VPS deployment, Native Planet hardware, and Groundseg with explanations of networking tradeoffs and sovereignty implications for each approach."
 blurbs: ["urbit-as-overlay-os", "run-urbit-locally", "run-urbit-using-native-planet-hardware", "run-urbit-in-a-vps", "run-urbit-using-groundseg"]
 ---
 

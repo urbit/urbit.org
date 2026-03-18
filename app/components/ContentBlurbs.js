@@ -3,7 +3,20 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const renderHtml = (content) => ({ __html: content || "" });
+const renderContent = (Tag, content, className) => {
+  if (content === null || content === undefined) {
+    return null;
+  }
+
+  const Wrapper = Tag;
+  if (typeof content === "string") {
+    return (
+      <Wrapper className={className} dangerouslySetInnerHTML={{ __html: content }} />
+    );
+  }
+
+  return <Wrapper className={className}>{content}</Wrapper>;
+};
 
 const slugify = (value) => {
   if (!value) {
@@ -92,7 +105,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
               );
             })}
           </ul>
-          <div className="text-base text-gray-87 line-clamp-5" dangerouslySetInnerHTML={renderHtml(content)} />
+          {renderContent("div", content, "text-base text-gray-87 line-clamp-5")}
         </div>
       </div>
       <button
@@ -110,7 +123,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
 
       {isExpanded && (
         <div className="mt-6 animate-fadeIn">
-          <article className="prose prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
+          {renderContent("article", content, "prose prose-invert max-w-none")}
 
           {references && references.length > 0 && (
             <div className="mt-8 pt-6 border-t border-gray-87">
@@ -128,7 +141,7 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
   const tooltipContext = blurbSlug || id || slugify(title);
 
   return (
-    <div id={id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
+    <div id={id} className="mb-16 scroll-mt-[90px] md:scroll-mt-[80px] snap-start">
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           {/* Render images if provided */}
@@ -182,10 +195,11 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
               );
             })}
           </ul>
-          <div
-            className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}
-            dangerouslySetInnerHTML={renderHtml(content)}
-          />
+          {renderContent(
+            "div",
+            content,
+            `text-base text-primary transition-transform duration-300 ${isExpanded ? "" : "line-clamp-3"}`
+          )}
         </div>
       </div>
       <div className="flex justify-between">
@@ -256,12 +270,13 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
 export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
+  const anchorId = id || blurbSlug;
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
 
   return (
-    <div className="">
+    <div id={anchorId} className="scroll-mt-[90px] md:scroll-mt-[80px]">
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           {/* Render images if provided */}
@@ -383,7 +398,7 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
       )}
 
       {/* Full content without line-clamp */}
-      <article className="prose prose-invert max-w-none mt-6" dangerouslySetInnerHTML={renderHtml(content)} />
+      {renderContent("article", content, "prose prose-invert max-w-none mt-6")}
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -425,7 +440,7 @@ export const MicroBlurb = ({
   const hasDetails = description || (references && references.some(ref => ref.description));
 
   return (
-    <div id={id} className="scroll-mt-[72px] md:scroll-mt-[80px]">
+    <div id={id} className="scroll-mt-[90px] md:scroll-mt-[80px]">
       {/* Images - smaller size for narrow layout */}
       {(image || imageDark) && (
         <div className="mb-3">
@@ -516,9 +531,9 @@ export const MicroBlurb = ({
       {/* Content - either full or line-clamped */}
       <div className={`text-sm text-primary mt-3 ${showFullContent ? '' : 'line-clamp-8'}`}>
         {showFullContent ? (
-          <article className="prose prose-sm prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
+          renderContent("article", content, "prose prose-sm prose-invert max-w-none")
         ) : (
-          <div dangerouslySetInnerHTML={renderHtml(content)} />
+          renderContent("div", content, "")
         )}
       </div>
 
@@ -574,7 +589,7 @@ export function HomepageBlurb({
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
   return (
-    <div id={id} className="mb-12 md:mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
+    <div id={id} className="mb-12 md:mb-16 scroll-mt-[90px] md:scroll-mt-[80px] snap-start">
       {/* Header Images */}
       {(image || imageDark) && (
         <div className="mb-4 md:mb-6">
@@ -670,7 +685,11 @@ export function HomepageBlurb({
         </div>
       )}
       {/* Full content */}
-      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]" dangerouslySetInnerHTML={renderHtml(content)} />
+      {renderContent(
+        "article",
+        content,
+        "prose prose-lg max-w-none mb-8 text-[#3f3f3f]"
+      )}
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (

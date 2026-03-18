@@ -1,7 +1,21 @@
 +++
+
 title = "Run Urbit Using Groundseg"
 description = "Groundseg is free and open-source software for running urbits, developed by Native Planet"
+summary = "Groundseg provides a GUI for managing Urbit containers via Docker, with features for loom adjustment, event log truncation, and automatic maintenance routines."
 tags = ["urbit-os", "docker", "native-planet"]
+search_terms = [
+    "groundseg",
+    "native planet software",
+    "urbit gui",
+    "docker urbit",
+    "colonyos",
+    "startram",
+    "anchor",
+    "urbit management",
+    "loom size",
+    "event log"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

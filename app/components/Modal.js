@@ -15,8 +15,16 @@ import { createPortal } from "react-dom";
  * @param {boolean} isOpen - Controls modal visibility
  * @param {function} onClose - Called when modal is dismissed
  * @param {ReactNode} children - Custom content slot
+ * @param {string} panelClassName - Optional panel styling overrides
+ * @param {string} contentClassName - Optional content wrapper classes
  */
-export function Modal({ isOpen, onClose, children }) {
+export function Modal({
+  isOpen,
+  onClose,
+  children,
+  panelClassName = "",
+  contentClassName = "",
+}) {
   const canUseDOM = typeof document !== "undefined";
 
   // Handle escape key
@@ -58,7 +66,7 @@ export function Modal({ isOpen, onClose, children }) {
       onClick={onClose}
     >
       <div
-        className="relative bg-contrast-1 border border-gray-87 rounded-16px shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeIn"
+        className={`relative bg-contrast-1 border border-gray-87 rounded-16px shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeIn ${panelClassName}`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -83,7 +91,7 @@ export function Modal({ isOpen, onClose, children }) {
         </button>
 
         {/* Content */}
-        <div className="p-6 pt-12">{children}</div>
+        <div className={`p-6 pt-12 ${contentClassName}`}>{children}</div>
       </div>
     </div>,
     document.body

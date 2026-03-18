@@ -1,32 +1,41 @@
-"use client";
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const MarkdocLink = ({ children, href }) => {
-  const pathname = usePathname();
   const normalizedHref = href?.toLowerCase() || "";
   const isMailto = normalizedHref.startsWith("mailto:");
   const isTel = normalizedHref.startsWith("tel:");
   const isExternal = normalizedHref.startsWith("http");
+  const isHashLink = href?.startsWith("#");
   const eventName = isMailto || isTel ? "link-contact" : isExternal ? "link-external" : undefined;
   const label = React.Children.toArray(children)
     .map((child) => (typeof child === "string" ? child : ""))
     .join(" ")
     .trim();
 
+  const sharedProps = {
+    className: isExternal ? "external" : "",
+    "data-umami-event": eventName,
+    "data-umami-event-label": label || undefined,
+    "data-umami-event-destination": eventName ? href : undefined,
+    "data-umami-event-variant": eventName ? "content" : undefined,
+  };
+
+  if (isHashLink || isMailto || isTel || isExternal) {
+    return (
+      <a
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        {...sharedProps}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      target={isExternal ? "_blank" : ""}
-      rel={isExternal ? "noopener noreferrer" : undefined}
-      className={isExternal ? "external" : ""}
-      data-umami-event={eventName}
-      data-umami-event-label={label || undefined}
-      data-umami-event-destination={eventName ? href : undefined}
-      data-umami-event-context={eventName ? pathname : undefined}
-      data-umami-event-variant={eventName ? "content" : undefined}
-    >
+    <Link href={href} {...sharedProps}>
       {children}
     </Link>
   );

@@ -1,7 +1,21 @@
 +++
+
 title = "Report from the field: Assembly 2021"
 date = "2021-11-18"
 description = "The system builds the community and the community builds the system."
+summary = "Recap of Urbit Assembly 2021 conference in Austin, highlighting the community's new world energy, hardware and software project announcements, and the relationship between system building and community formation."
+search_terms = [
+    "assembly 2021",
+    "report from the field",
+    "urbit assembly",
+    "new world energy",
+    "software distribution",
+    "star market",
+    "urbit foundation",
+    "developers.urbit.org",
+    "operators.urbit.org",
+    "urbit community"
+]
 [extra]
 author = "Galen Wolfe-Pauly"
 ship = "~ravmel-ropdyl"

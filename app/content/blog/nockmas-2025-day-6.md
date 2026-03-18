@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 6"
 date = "2025-12-30"
 description = "12 days of Nockmas: Equality Check, opcode 5"
+summary = "Covers opcode 5 (Equality Check), the tis = operator testing deep structural equality between two nouns, returning 0 if equal and 1 if not."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 6",
+    "opcode 5",
+    "equality check",
+    "tis operator",
+    "nock equality",
+    "deep equality",
+    "loobean",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 6 equal image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+6/nockmas-day-6-equal-social.png)

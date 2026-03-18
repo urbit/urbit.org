@@ -45,6 +45,11 @@ This is a Next.js application using:
 - Custom Markdoc tags enable rich content layouts
 - Content is processed through `app/lib/queries.js` utilities
 
+### Search Index
+- A static search index is generated from `app/content/` via `scripts/build-search-index.js`
+- The index is written to `public/search-index.json` and refreshed on `npm run dev`/`npm run build`
+- The homepage modal search consumes this index at runtime
+
 ### Key Directories
 - `app/` - Next.js App Router pages and components
 - `app/content/` - Markdown content files

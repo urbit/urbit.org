@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~litneb-maltyp"
 date = "2026-02-17"
 description = "A conversation with ~litneb-maltyp on Urbit identity, community, and the personal server"
+summary = "Designer ~litneb-maltyp discusses Urbit's identity system, owning personal servers, and building a home lab for agency over computing and digital permanence."
 # aliases = []
 
 [extra]
@@ -14,6 +16,20 @@ imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+li
 # imageCardDark = ""
 # imageIndexDark = ""
 tags = ["spotlight", "identity", "design"]
+search_terms = [
+    "contributor spotlight",
+    "litneb maltyp",
+    "urbit identity",
+    "personal server",
+    "urbit community",
+    "urbit id",
+    "azimuth ids",
+    "sigil design",
+    "olif",
+    "assembly conference",
+    "groundwire",
+    "forever computer"
+]
 +++
  
 ![~litneb-maltyp contributor spotlight image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+litneb-maltyp/Blog_QA+litneb-maltyp_no+text_Social16_9.png)

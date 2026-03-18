@@ -1,7 +1,21 @@
 +++
+
 title = "Desire Lines to a New Internet"
 date = "2022-05-06"
 description = "As more DAOs, NFT and digital communities find their way to Urbit, others are likely to follow their paths, making them their own, just like the network itself."
+summary = "The author describes web3 communities migrating to Urbit as traversing Christopher Alexander's desire lines, with Layer 2 making planet distribution affordable, DAO tooling proliferating on Landscape, and token-gated distributions scaling through projects like Dusko and PointDAO."
+search_terms = [
+    "desire lines",
+    "web3 communities",
+    "dao migration",
+    "urbit adoption",
+    "token gating",
+    "planet distribution",
+    "holium ballot",
+    "pointdao",
+    "urbit for creators",
+    "decentralized networks"
+]
 [extra]
 author = ""
 ship = "~dalwes-migdec"

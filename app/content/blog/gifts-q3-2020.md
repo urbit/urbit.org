@@ -1,7 +1,21 @@
 +++
+
 title = "Gifts Q3 2020"
 date = "2020-09-22"
 description = "Twice a year we distribute address space to those that have made valuable contributions to Urbit. Now called our Gifts program, the gifting of address space has been part of Urbit long before we had a grants program."
+summary = "Quarterly grants distribution announcement recognizing technical contributions, documentation improvements, community building efforts, and ecosystem development work across Urbit's open source projects."
+search_terms = [
+    "gifts program",
+    "address space",
+    "urbit gifts",
+    "community contributors",
+    "grants program",
+    "galaxy gifts",
+    "star awards",
+    "urbit foundation",
+    "network growth",
+    "urbit rewards"
+]
 
 [taxonomies]
 grant_type = [ "Gift" ]

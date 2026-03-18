@@ -1,7 +1,22 @@
 +++
+
 title = "Infrastructural"
 date = "2020-04-09"
 description = "A reflection–meditation on OS 1’s initial form development, and the attitude we brought to bear in designing it."
+summary = "Technical essay examining network infrastructure requirements, explaining choices supporting long-term durability, decentralization, and resistance to single points of failure."
+search_terms = [
+    "infrastructural",
+    "os1 design",
+    "human shaped infrastructure",
+    "interface design",
+    "beautiful infrastructure",
+    "digital spaces",
+    "os0",
+    "os1",
+    "communal computing",
+    "urbit interface",
+    "design philosophy"
+]
 
 [extra]
 author = "É. Urcades"

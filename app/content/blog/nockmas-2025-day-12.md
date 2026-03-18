@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 12"
 date = "2026-01-05"
 description = "12 days of Nockmas: Hint, opcode 11"
+summary = "Covers opcode 11 (Hint), attaching metadata to Nock expressions without affecting evaluation, supporting static tags and dynamic hints for runtime optimizations."
 # aliases = []
 
 [extra]
@@ -14,6 +16,18 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+12/nockmas
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 12",
+    "opcode 11",
+    "hint opcode",
+    "static hint",
+    "dynamic hint",
+    "nock metadata",
+    "hints and jetting",
+    "nock isa",
+    "runtime hints",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 12 hint image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+12/nockmas-day-12-hint-social.png)

@@ -1,6 +1,8 @@
 ---
+
 title: "Introduction"
 description: "Urbit is a practice in building a forever computer"
+summary: "Introduction to Urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. Covers Urbit ID and Urbit OS as core components."
 ---
 
 Urbit grew out of a thought experiment: What would the software of a timeless Martian society look like, given 50 million years of development? Would it be an indeterminable ball of mud, endlessly large and complex? Or a diamond perfect stack, unchanging over aeons, simple and solid as a foundation for humanity’s lasting needs?
