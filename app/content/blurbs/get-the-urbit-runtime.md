@@ -29,7 +29,7 @@ description = "Learn how to get the runtime, boot a ship, and log into Landscape
 wip = false
 
 [[tabs]]
-title = "macOS (Apple Silicon)"
+title = "macOS (M-series)"
 content = """
 Open a terminal and run:
 

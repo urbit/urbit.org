@@ -5,6 +5,7 @@ import { useLayoutSlots } from "../lib/layoutSlots";
 import { HeaderNav } from "./HeaderNav";
 import { FooterSection, FooterExpansion } from "./FooterSection";
 import { SearchModal } from "./SearchModal";
+import { GetUrbitModal } from "./GetUrbitModal";
 
 /**
  * LayoutFrame - Client component that renders the frame with hero/sidebar slots
@@ -16,6 +17,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
   const [expansionHeight, setExpansionHeight] = useState(0);
   const [expandedSection, setExpandedSection] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isGetUrbitOpen, setIsGetUrbitOpen] = useState(false);
 
   const openSearch = useCallback(() => {
     setIsSearchOpen(true);
@@ -27,6 +29,14 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
 
   const toggleSearch = useCallback(() => {
     setIsSearchOpen((prev) => !prev);
+  }, []);
+
+  const openGetUrbit = useCallback(() => {
+    setIsGetUrbitOpen(true);
+  }, []);
+
+  const closeGetUrbit = useCallback(() => {
+    setIsGetUrbitOpen(false);
   }, []);
 
   useEffect(() => {
@@ -68,6 +78,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
   return (
     <>
       <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
+      <GetUrbitModal isOpen={isGetUrbitOpen} onClose={closeGetUrbit} />
 
       {/* Mobile View - No Frame */}
       <div className="md:hidden min-h-screen flex flex-col">
@@ -80,6 +91,8 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
           runningUrbitSections={runningUrbitSections}
           onSearchOpen={openSearch}
           isSearchOpen={isSearchOpen}
+          onGetUrbitOpen={openGetUrbit}
+          isGetUrbitOpen={isGetUrbitOpen}
         />
 
         {/* Optional Hero - Mobile */}
@@ -134,6 +147,8 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
                 inFrame={true}
                 onSearchOpen={openSearch}
                 isSearchOpen={isSearchOpen}
+                onGetUrbitOpen={openGetUrbit}
+                isGetUrbitOpen={isGetUrbitOpen}
               />
             </div>
             <div className="h-[55px] w-[23px] flex-shrink-0 ml-[-0.5px]">

@@ -67,7 +67,7 @@ const TabbedBlurbContent = ({
   return (
     <div className="mt-6">
       <div
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap gap-2 md:flex-nowrap md:gap-[6px]"
         role="tablist"
         aria-label="Platform-specific instructions"
       >
@@ -86,7 +86,7 @@ const TabbedBlurbContent = ({
               aria-controls={panelId}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActiveTabIndex(index)}
-              className={`rounded-md border px-3 py-1 font-mono text-small transition-colors ${
+              className={`whitespace-nowrap rounded-md border px-[10px] py-1 font-mono text-[12px] transition-colors lg:px-3 lg:text-small ${
                 isActive
                   ? "border-primary bg-primary text-secondary"
                   : "border-contrast-2 text-contrast-2 hover:border-primary hover:text-primary"

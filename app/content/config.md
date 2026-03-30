@@ -22,13 +22,13 @@ nav:
   url: "/blog"
   external: false
   aside_title: "Recommended Reading"
-- title: Run Urbit
+- title: Get Urbit
   url: "/overview/running-urbit"
   variant: 'primary'
   external: false
   icon: 'urbit-digi.svg'
 mobileNav:
-- title: Run Urbit
+- title: Get Urbit
   url: "/overview/running-urbit"
   variant: 'primary'
   external: false

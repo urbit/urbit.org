@@ -4,29 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
-
-const RUNTIME_INSTALL_COMMAND = "curl -fsSL https://urbit.org/get-runtime.sh | sh";
-
-const copyToClipboard = async (value) => {
-  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(value);
-    return;
-  }
-
-  if (typeof document === "undefined") {
-    throw new Error("Clipboard unavailable");
-  }
-
-  const textarea = document.createElement("textarea");
-  textarea.value = value;
-  textarea.setAttribute("readonly", "true");
-  textarea.style.position = "absolute";
-  textarea.style.left = "-9999px";
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-};
+import { copyToClipboard, RUNTIME_INSTALL_COMMAND } from "../lib/runtimeInstall";
 
 /**
  * HeroSection - Full viewport width hero section

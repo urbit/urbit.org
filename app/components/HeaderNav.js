@@ -47,6 +47,8 @@ const getHeaderNavEvent = (navItem) => {
   return `nav-header-${buildHeaderNavSlug(navItem)}`;
 };
 
+const isGetUrbitNavItem = (navItem) => navItem?.url === "/overview/running-urbit";
+
 const SearchIcon = ({ className = "" }) => (
   <svg
     viewBox="0 0 24 24"
@@ -73,6 +75,8 @@ export const HeaderNav = ({
   runningUrbitSections,
   onSearchOpen,
   isSearchOpen,
+  onGetUrbitOpen,
+  isGetUrbitOpen,
 }) => {
   const headerRef = useRef(null);
 
@@ -80,15 +84,17 @@ export const HeaderNav = ({
 
   return (
     <React.Fragment>
-      <MobileNav
+        <MobileNav
         nav={mobileNav || nav}
         currentRoute={currentRoute}
         announcements={announcements}
         urbitExplainedSections={urbitExplainedSections}
-        runningUrbitSections={runningUrbitSections}
-        onSearchOpen={onSearchOpen}
-        isSearchOpen={isSearchOpen}
-      />
+          runningUrbitSections={runningUrbitSections}
+          onSearchOpen={onSearchOpen}
+          isSearchOpen={isSearchOpen}
+          onGetUrbitOpen={onGetUrbitOpen}
+          isGetUrbitOpen={isGetUrbitOpen}
+        />
 
       <section
         ref={headerRef}
@@ -98,13 +104,25 @@ export const HeaderNav = ({
         )}
       >
         {inFrame ? (
-                <GlobalNav nav={nav} onSearchOpen={onSearchOpen} isSearchOpen={isSearchOpen} />
+                <GlobalNav
+                  nav={nav}
+                  onSearchOpen={onSearchOpen}
+                  isSearchOpen={isSearchOpen}
+                  onGetUrbitOpen={onGetUrbitOpen}
+                  isGetUrbitOpen={isGetUrbitOpen}
+                />
 
         ) : (
           <div className="h-auto md:flex md:flex-row md:items-center md:justify-between my-4 md:my-8">
             <div className="w-full leading-[1cap] flex justify-start h-full ">
               <div className="col-span-5 hidden md:flex w-full items-center justify-end">
-          <GlobalNav nav={nav} onSearchOpen={onSearchOpen} isSearchOpen={isSearchOpen} />
+          <GlobalNav
+            nav={nav}
+            onSearchOpen={onSearchOpen}
+            isSearchOpen={isSearchOpen}
+            onGetUrbitOpen={onGetUrbitOpen}
+            isGetUrbitOpen={isGetUrbitOpen}
+          />
               </div>
             </div>
           </div>
@@ -121,12 +139,14 @@ const MobileNav = ({
   urbitExplainedSections,
   runningUrbitSections,
   onSearchOpen,
+  onGetUrbitOpen,
+  isGetUrbitOpen,
 }) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
   const routeMap = {
     "": "",
-    "get-on-the-network": "Run Urbit",
+    "get-on-the-network": "Get Urbit",
     overview: "Overview",
     blog: "Blog",
     ecosystem: "Ecosystem",
@@ -142,6 +162,13 @@ const MobileNav = ({
       setMenuOpen(false);
     }
     onSearchOpen?.();
+  };
+
+  const handleGetUrbitOpen = () => {
+    if (menuIsOpen) {
+      setMenuOpen(false);
+    }
+    onGetUrbitOpen?.();
   };
 
   return (
@@ -271,6 +298,38 @@ const MobileNav = ({
               const eventName = getHeaderNavEvent(navItem);
               const eventVariant = eventName.startsWith("link-") ? "header" : "header-mobile";
 
+              if (isGetUrbitNavItem(navItem) && onGetUrbitOpen) {
+                return (
+                  <button
+                    type="button"
+                    className={classNames(
+                      "text-[26px] leading-[1.1] first-of-type:mt-4 last-of-type:mb-4 text-left transition-colors",
+                      isGetUrbitOpen ? "text-primary" : "text-contrast-2"
+                    )}
+                    key={`${navItem.url}-${i}`}
+                    onClick={handleGetUrbitOpen}
+                    data-umami-event="cta-header-get-urbit"
+                    data-umami-event-label={navItem.title}
+                    data-umami-event-destination="get-urbit-modal"
+                    data-umami-event-context={currentRoute}
+                    data-umami-event-variant="mobile"
+                  >
+                    <span className="nav-button leading-inherit flex items-center gap-2">
+                      {navItem.title}
+                      {navItem.icon && (
+                        <Image
+                          src={`/icons/reverse-${navItem.icon}`}
+                          alt="Urbit configurator icon"
+                          width={16}
+                          height={16}
+                          className="w-4 h-4"
+                        />
+                      )}
+                    </span>
+                  </button>
+                );
+              }
+
               return (
                 <Link
                   className={classNames(
@@ -354,7 +413,7 @@ const MobileNav = ({
   );
 };
 
-const GlobalNav = ({ nav, onSearchOpen, isSearchOpen }) => {
+const GlobalNav = ({ nav, onSearchOpen, isSearchOpen, onGetUrbitOpen, isGetUrbitOpen }) => {
   const currentRoute = usePathname();
 
   return (
@@ -365,6 +424,40 @@ const GlobalNav = ({ nav, onSearchOpen, isSearchOpen }) => {
           const isActive = currentRoute.startsWith(navItem.url);
           const eventName = getHeaderNavEvent(navItem);
           const eventVariant = eventName.startsWith("link-") ? "header" : "header-desktop";
+
+          if (isGetUrbitNavItem(navItem) && onGetUrbitOpen) {
+            return (
+              <button
+                type="button"
+                className={classNames(
+                  "text-lg flex items-center py-1 px-3 gap-x-2 rounded-md",
+                  navItem.variant == 'primary'
+                    ? "text-background bg-foreground rounded-lg hover:text-contrast-1"
+                    : isGetUrbitOpen
+                      ? "text-contrast-3 rounded-lg border-secondary"
+                      : "text-contrast-2 rounded-lg border-secondary"
+                )}
+                key={`${navItem.url}-${i}`}
+                onClick={onGetUrbitOpen}
+                data-umami-event="cta-header-get-urbit"
+                data-umami-event-label={navItem.title}
+                data-umami-event-destination="get-urbit-modal"
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="desktop"
+              >
+                <span>{navItem.title}</span>
+                {navItem.icon && (
+                  <Image
+                    src={`/icons/${navItem.icon}`}
+                    alt={`${navItem.icon} icon`}
+                    width={16}
+                    height={16}
+                    className="w-4 h-4"
+                  />
+                )}
+              </button>
+            );
+          }
 
           return (
             <Link
