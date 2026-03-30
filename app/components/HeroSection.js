@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Modal } from "./Modal";
+import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
 
 /**
  * HeroSection - Full viewport width hero section
@@ -316,14 +316,15 @@ export function HeroSection({ hero }) {
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        {...FIGMA_LIGHTBOX_MODAL_PROPS}
       >
-        <h2 className="text-2xl font-serif italic font-semibold text-primary mb-4">
+        <h2 className="mb-4 font-serif text-[48px] font-[700] leading-[0.94] tracking-[-0.03em] text-accent-1">
           Quickstart with Tlon Messenger
         </h2>
-        <p className="font-sans text-large leading-120 text-primary mb-6">
+        <p className="mb-6 font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
           Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.
         </p>
-        <p className="font-sans text-large leading-120 text-primary mb-6">
+        <p className="mb-6 font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
           The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!
         </p>
         <div className="flex gap-3 justify-end">

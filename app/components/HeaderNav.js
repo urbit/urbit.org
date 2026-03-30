@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { NewsletterSignup } from "./NewsletterSignup";
@@ -63,12 +63,6 @@ const SearchIcon = ({ className = "" }) => (
   </svg>
 );
 
-const getShortcutLabel = () => {
-  if (typeof navigator === "undefined") return null;
-  const platform = navigator.userAgentData?.platform || navigator.platform || "";
-  return /mac/i.test(platform) ? "⌘K" : "^+K";
-};
-
 export const HeaderNav = ({
   nav,
   homepage,
@@ -127,7 +121,6 @@ const MobileNav = ({
   urbitExplainedSections,
   runningUrbitSections,
   onSearchOpen,
-  isSearchOpen,
 }) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
@@ -139,8 +132,6 @@ const MobileNav = ({
     ecosystem: "Ecosystem",
   };
   const splitRoute = currentRoute.split("/");
-
-  useEffect(() => { }, [menuIsOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuIsOpen);
@@ -194,29 +185,8 @@ const MobileNav = ({
               />
             </Link>
           </div>
-          <div
-            className="col-span-8 w-full flex pr-[.7em] items-center justify-end gap-3"
-          >
+          <div className="col-span-8 w-full flex pr-[.7em] items-center justify-end gap-3">
             <span className="pr-4">{routeMap[splitRoute[1]]}</span>
-            {onSearchOpen && (
-              <button
-                type="button"
-                onClick={handleSearchOpen}
-                aria-label="Open search"
-                data-umami-event="cta-header-search"
-                data-umami-event-label="Search"
-                data-umami-event-destination="search-modal"
-                data-umami-event-context={currentRoute}
-                data-umami-event-variant="mobile"
-                className={`flex items-center justify-center transition-colors duration-200 ${
-                  isSearchOpen
-                    ? "text-primary"
-                    : "text-contrast-2 hover:text-primary"
-                }`}
-              >
-                <SearchIcon className="h-[22px] w-[22px]" />
-              </button>
-            )}
             <button
               type="button"
               onClick={toggleMenu}
@@ -277,7 +247,24 @@ const MobileNav = ({
           )}
         >
           {/* Internal Navigation */}
-          <div className="px-4 py-4 flex flex-col gap-6">
+          <div className="px-4 py-4 flex flex-col gap-2">
+            {onSearchOpen && (
+              <button
+                type="button"
+                onClick={handleSearchOpen}
+                aria-label="Open search"
+                data-umami-event="cta-header-search"
+                data-umami-event-label="Search"
+                data-umami-event-destination="search-modal"
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="mobile"
+                className="text-[26px] leading-[1.1] text-primary first-of-type:mt-4 text-left transition-colors"
+              >
+                <span className="nav-button leading-inherit flex items-center gap-2">
+                  Search
+                </span>
+              </button>
+            )}
             {nav?.filter(navItem => !navItem.external).map((navItem, i) => {
               const isActive = currentRoute.startsWith(navItem.url) && navItem.url !== '/';
               const isHome = currentRoute === '/' && navItem.url === '/';
@@ -287,8 +274,8 @@ const MobileNav = ({
               return (
                 <Link
                   className={classNames(
-                    "text-3xl leading-[1cap] first-of-type:mt-4 last-of-type:mb-4 transition-colors",
-                    (isActive || isHome) ? "text-primary" : "text-contrast-3"
+                    "text-[26px] leading-[1.1] first-of-type:mt-4 last-of-type:mb-4 transition-colors",
+                    (isActive || isHome) ? "text-primary" : "text-contrast-2"
                   )}
                   key={`${navItem} + ${i}`}
                   href={navItem.url}
@@ -369,11 +356,6 @@ const MobileNav = ({
 
 const GlobalNav = ({ nav, onSearchOpen, isSearchOpen }) => {
   const currentRoute = usePathname();
-  const [shortcutLabel, setShortcutLabel] = useState(null);
-
-  useEffect(() => {
-    setShortcutLabel(getShortcutLabel());
-  }, []);
 
   return (
     <React.Fragment>
@@ -427,24 +409,13 @@ const GlobalNav = ({ nav, onSearchOpen, isSearchOpen }) => {
             data-umami-event-destination="search-modal"
             data-umami-event-context={currentRoute}
             data-umami-event-variant="desktop"
-            className={`group flex items-center gap-2 rounded-md px-3 py-1 transition-colors duration-200 ${
+            className={`flex h-[36px] w-[36px] items-center justify-center rounded-md border transition-colors duration-200 ${
               isSearchOpen
-                ? "text-primary"
-                : "text-contrast-2 hover:text-primary"
+                ? "border-primary text-primary"
+                : "border-contrast-2 text-contrast-2 hover:border-primary hover:text-primary"
             }`}
           >
             <SearchIcon className="h-[18px] w-[18px]" />
-            {shortcutLabel && (
-              <span
-                className={`text-xs font-mono transition-colors duration-200 ${
-                  isSearchOpen
-                    ? "text-primary"
-                    : "text-contrast-2 group-hover:text-primary"
-                }`}
-              >
-                {shortcutLabel}
-              </span>
-            )}
           </button>
         )}
       </ul>

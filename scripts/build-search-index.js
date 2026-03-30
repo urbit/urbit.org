@@ -235,6 +235,9 @@ const buildBlurbRouteMap = async () => {
       const frontMatter = parseFrontMatter(rawContent, homepageConfigPath);
       if (frontMatter) {
         const sections = normalizeArray(frontMatter.sections);
+        const homepageIntroTarget = sections[0]?.["section-id"]
+          ? `/#${sections[0]["section-id"]}`
+          : "/";
         sections.forEach((section) => {
           if (!section) return;
           const sectionBlurb = section["section-blurb"];
@@ -247,7 +250,7 @@ const buildBlurbRouteMap = async () => {
         });
 
         const sidebarBlurb = frontMatter.sidebar_blurb;
-        addBlurbRoute(map, sidebarBlurb, `/#${sidebarBlurb}`);
+        addBlurbRoute(map, sidebarBlurb, homepageIntroTarget, { overwrite: true });
       }
     } catch (error) {
       console.error("Failed to load homepage config for blurbs:", error);

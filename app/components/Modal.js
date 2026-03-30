@@ -3,6 +3,17 @@
 import { useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 
+export const FIGMA_LIGHTBOX_MODAL_PROPS = {
+  overlayClassName:
+    "items-start justify-center bg-[rgba(255,255,255,0.18)] px-4 pt-[180px] backdrop-blur-[10px]",
+  panelClassName:
+    "w-full max-w-[920px] max-h-[calc(100dvh-180px-2rem)] overflow-hidden rounded-[6px] border-0 bg-contrast-1 shadow-[0px_4px_40.4px_0px_rgba(63,63,63,0.32)] origin-top transition-[max-height] duration-300 ease-out",
+  contentClassName: "px-[18px] pb-[18px] pt-[20px]",
+  closeButtonClassName: "right-[18px] top-[18px]",
+  closeIconSize: 17,
+  closeIconStrokeWidth: 1.75,
+};
+
 /**
  * Modal - A reusable modal component
  *
@@ -24,6 +35,7 @@ export function Modal({
   children,
   overlayClassName = "",
   panelClassName = "",
+  panelStyle,
   contentClassName = "",
   closeButtonClassName = "",
   closeIconClassName = "",
@@ -32,6 +44,7 @@ export function Modal({
 }) {
   const canUseDOM = typeof document !== "undefined";
   const resolvedContentClassName = contentClassName || "p-6 pt-12";
+  const resolvedOverlayClassName = overlayClassName || "items-center justify-center";
 
   // Handle escape key
   const handleEscape = useCallback(
@@ -66,13 +79,14 @@ export function Modal({
 
   return createPortal(
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 ${overlayClassName}`}
+      className={`fixed inset-0 z-[9999] flex p-4 ${resolvedOverlayClassName}`}
       role="dialog"
       aria-modal="true"
       onClick={onClose}
     >
       <div
         className={`relative bg-contrast-1 border border-gray-87 rounded-16px shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeIn ${panelClassName}`}
+        style={panelStyle}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}

@@ -35,6 +35,12 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
       if (!(event.metaKey || event.ctrlKey)) return;
       if (String(event.key).toLowerCase() !== "k") return;
 
+      if (isSearchOpen) {
+        event.preventDefault();
+        toggleSearch();
+        return;
+      }
+
       const target = event.target;
       if (target?.tagName) {
         const tag = target.tagName.toLowerCase();
@@ -53,7 +59,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [toggleSearch]);
+  }, [isSearchOpen, toggleSearch]);
 
   // Separate resources and socials from footerData for FooterExpansion
   const resources = footerData?.find(col => col.column_label === "resources");
