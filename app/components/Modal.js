@@ -22,10 +22,16 @@ export function Modal({
   isOpen,
   onClose,
   children,
+  overlayClassName = "",
   panelClassName = "",
   contentClassName = "",
+  closeButtonClassName = "",
+  closeIconClassName = "",
+  closeIconSize = 24,
+  closeIconStrokeWidth = 2,
 }) {
   const canUseDOM = typeof document !== "undefined";
+  const resolvedContentClassName = contentClassName || "p-6 pt-12";
 
   // Handle escape key
   const handleEscape = useCallback(
@@ -60,7 +66,7 @@ export function Modal({
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+      className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 ${overlayClassName}`}
       role="dialog"
       aria-modal="true"
       onClick={onClose}
@@ -72,18 +78,19 @@ export function Modal({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-contrast-2 hover:text-primary transition-colors"
+          className={`absolute top-4 right-4 text-contrast-2 hover:text-primary transition-colors ${closeButtonClassName}`}
           aria-label="Close modal"
         >
           <svg
-            width="24"
-            height="24"
+            width={closeIconSize}
+            height={closeIconSize}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth={closeIconStrokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
+            className={closeIconClassName}
           >
             <line x1="18" y1="6" x2="6" y2="18" />
             <line x1="6" y1="6" x2="18" y2="18" />
@@ -91,7 +98,7 @@ export function Modal({
         </button>
 
         {/* Content */}
-        <div className={`p-6 pt-12 ${contentClassName}`}>{children}</div>
+        <div className={resolvedContentClassName}>{children}</div>
       </div>
     </div>,
     document.body

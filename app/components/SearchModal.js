@@ -4,22 +4,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Modal } from "./Modal";
 
-const SECTION_ORDER = ["overview", "blog", "grants", "events", "pages", "other"];
-const SECTION_LABELS = {
-  overview: "Overview",
-  blog: "Blog",
-  grants: "Grants",
-  events: "Events",
-  pages: "Pages",
-  other: "Other",
-};
-
-const toTitleCase = (value) =>
-  value
-    .split("-")
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join(" ");
-
 const getEntries = (payload) => {
   if (Array.isArray(payload)) return payload;
   if (payload && Array.isArray(payload.entries)) return payload.entries;
@@ -215,32 +199,6 @@ const dedupeAnchoredResults = (results) => {
   });
 };
 
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const highlightMatches = (text, tokens) => {
-  if (!text || !tokens.length) return text;
-  const uniqueTokens = Array.from(
-    new Set(tokens.map((token) => token.toLowerCase()).filter(Boolean))
-  );
-  if (!uniqueTokens.length) return text;
-
-  const regex = new RegExp(
-    `(${uniqueTokens.map((token) => escapeRegExp(token)).join("|")})`,
-    "gi"
-  );
-  const segments = String(text).split(regex);
-
-  return segments.map((segment, index) => {
-    const isMatch = uniqueTokens.includes(segment.toLowerCase());
-    if (!isMatch) return segment;
-    return (
-      <span key={`${segment}-${index}`} className="text-accent-1 font-semibold">
-        {segment}
-      </span>
-    );
-  });
-};
-
 export function SearchModal({ isOpen, onClose, children }) {
   const router = useRouter();
   const inputRef = useRef(null);
@@ -325,9 +283,14 @@ export function SearchModal({ isOpen, onClose, children }) {
 
   useEffect(() => {
     if (!isOpen) return;
-    inputRef.current?.focus();
-    inputRef.current?.select();
-  }, [isOpen]);
+    const timeout = window.setTimeout(() => {
+      ensureIndexLoaded();
+      inputRef.current?.focus();
+      inputRef.current?.select();
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
+  }, [isOpen, ensureIndexLoaded]);
 
   useEffect(() => {
     if (!isOpen || !isMobile || typeof document === "undefined") {
@@ -352,11 +315,6 @@ export function SearchModal({ isOpen, onClose, children }) {
   }, [isOpen, isMobile, handleClose]);
 
   const queryTokens = useMemo(() => normalizeTokens(debouncedQuery), [debouncedQuery]);
-  const highlightTokens = useMemo(() => normalizeTokens(query), [query]);
-  const highlightText = useCallback(
-    (text) => highlightMatches(text, highlightTokens),
-    [highlightTokens]
-  );
 
   const entryWords = useMemo(() => {
     const map = new Map();
@@ -373,77 +331,30 @@ export function SearchModal({ isOpen, onClose, children }) {
     [indexEntries, queryTokens, entryWords]
   );
 
-  const groupedResults = useMemo(() => {
-    const groups = new Map();
-
-    for (const entry of filteredResults) {
-      const section = entry.section || "other";
-      if (!groups.has(section)) {
-        groups.set(section, []);
-      }
-      groups.get(section).push(entry);
-    }
-
-    return SECTION_ORDER.map((section) => {
-      const items = groups.get(section) || [];
-      if (!items.length) return null;
-
-      const label =
-        SECTION_LABELS[section] ||
-        items[0]?.sectionLabel ||
-        toTitleCase(section);
-
-      const sortedItems = [...items].sort((a, b) => {
-        const scoreDiff = (b.score || 0) - (a.score || 0);
-        if (scoreDiff !== 0) return scoreDiff;
-        return String(a.title || "").localeCompare(String(b.title || ""), undefined, {
-          sensitivity: "base",
-        });
-      });
-
-      return { section, label, items: sortedItems };
-    }).filter(Boolean);
-  }, [filteredResults]);
-
-  const flatResults = useMemo(
-    () =>
-      groupedResults.flatMap((group) =>
-        group.items.map((item) => ({
-          ...item,
-          group: group.section,
-          groupLabel: group.label,
-        }))
-      ),
-    [groupedResults]
-  );
-
   const resultIndexById = useMemo(() => {
     const indexMap = new Map();
-    flatResults.forEach((result, index) => {
+    filteredResults.forEach((result, index) => {
       const key = result.id || result.path || result.title;
       if (key) {
         indexMap.set(key, index);
       }
     });
     return indexMap;
-  }, [flatResults]);
+  }, [filteredResults]);
 
-  const querySignature = queryTokens.join(" ");
-
-  useEffect(() => {
-    if (!querySignature || !flatResults.length) {
-      setActiveIndex(-1);
-      return;
-    }
-
-    setActiveIndex(0);
-  }, [querySignature, flatResults.length]);
+  const hasQuery = queryTokens.length > 0;
+  const resolvedActiveIndex =
+    !isMobile && hasQuery && filteredResults.length > 0
+      ? activeIndex < 0 || activeIndex >= filteredResults.length
+        ? 0
+        : activeIndex
+      : -1;
 
   useEffect(() => {
-    if (activeIndex < 0) return;
-    const element = document.getElementById(`search-result-${activeIndex}`);
+    if (resolvedActiveIndex < 0) return;
+    const element = document.getElementById(`search-result-${resolvedActiveIndex}`);
     element?.scrollIntoView({ block: "nearest" });
-  }, [activeIndex]);
+  }, [resolvedActiveIndex]);
 
   const handleQueryChange = (event) => {
     const nextQuery = event.target.value;
@@ -475,71 +386,162 @@ export function SearchModal({ isOpen, onClose, children }) {
       ensureIndexLoaded();
     }
 
-    if (!flatResults.length) return;
+    if (!filteredResults.length) return;
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
-      setActiveIndex((prev) => (prev + 1) % flatResults.length);
+      setActiveIndex((resolvedActiveIndex + 1) % filteredResults.length);
       return;
     }
 
     if (event.key === "ArrowUp") {
       event.preventDefault();
-      setActiveIndex((prev) =>
-        prev <= 0 ? flatResults.length - 1 : prev - 1
+      setActiveIndex(
+        resolvedActiveIndex <= 0 ? filteredResults.length - 1 : resolvedActiveIndex - 1
       );
       return;
     }
 
-    if (event.key === "Enter" && activeIndex >= 0) {
+    if (event.key === "Enter" && resolvedActiveIndex >= 0) {
       event.preventDefault();
-      handleSelect(flatResults[activeIndex]);
+      handleSelect(filteredResults[resolvedActiveIndex]);
     }
   };
 
-  const activeId = activeIndex >= 0 ? `search-result-${activeIndex}` : undefined;
-  const resultCountLabel =
-    queryTokens.length > 0 && !isLoading && !errorMessage
-      ? `${flatResults.length} results`
-      : null;
+  const activeId =
+    !isMobile && resolvedActiveIndex >= 0 ? `search-result-${resolvedActiveIndex}` : undefined;
+  const inputIsActive = query.length > 0;
 
-  const searchBody = (
-    <div className="block w-full">
-      <div className="hidden md:block">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-2xl font-serif italic font-semibold text-primary">
-            Search urbit.org
-          </h2>
-          {resultCountLabel && (
-            <span className="text-xs font-mono text-contrast-2">
-              {resultCountLabel}
-            </span>
-          )}
+  const renderResults = (mobileLayout = false) => {
+    if (errorMessage && hasQuery) {
+      return (
+        <div className={`font-sans tracking-[0.01em] text-accent-1 ${mobileLayout ? "mt-[4.5rem] text-[16px] leading-[1.35]" : "mt-[2rem] px-[14px] text-[24px] leading-[25px]"}`}>
+          {errorMessage}
         </div>
-        <p className="text-sm text-contrast-2 mt-1">
+      );
+    }
+
+    if (isLoading && hasQuery) {
+      return (
+        <div className={`font-sans tracking-[0.01em] text-contrast-2 ${mobileLayout ? "mt-[4.5rem] text-[16px] leading-[1.35]" : "mt-[2rem] px-[14px] text-[24px] leading-[25px]"}`}>
+          Loading search index...
+        </div>
+      );
+    }
+
+    if (!hasQuery) {
+      return null;
+    }
+
+    if (!filteredResults.length) {
+      return (
+        <div className={`font-sans tracking-[0.01em] text-contrast-2 ${mobileLayout ? "mt-[4.5rem] text-[16px] leading-[1.35]" : "mt-[2rem] px-[14px] text-[24px] leading-[25px]"}`}>
+          No results found. Try a different search.
+        </div>
+      );
+    }
+
+    return (
+      <div
+        id="search-results"
+        role="listbox"
+        aria-live="polite"
+        className={mobileLayout ? "mt-[4.5rem] space-y-[12px] pb-8" : "mt-[2rem] max-h-[318px] space-y-[12px] overflow-y-auto pr-1"}
+      >
+        {filteredResults.map((item) => {
+          const itemKey = item.id || item.path || item.title;
+          const resultIndex = resultIndexById.get(itemKey);
+          const isActive = !mobileLayout && resultIndex === resolvedActiveIndex;
+          const resultId =
+            typeof resultIndex === "number" ? `search-result-${resultIndex}` : undefined;
+          const tags = Array.isArray(item.tags) ? item.tags : [];
+          const visibleTags = tags.slice(0, 2);
+
+          return (
+            <button
+              key={itemKey}
+              id={resultId}
+              type="button"
+              role="option"
+              aria-selected={isActive}
+              aria-label={`Open ${item.title}`}
+              data-umami-event="search-result-select"
+              data-umami-event-label={item.title}
+              data-umami-event-destination={item.path}
+              data-umami-event-variant={item.section}
+              onClick={() => handleSelect(item)}
+              onFocus={() => {
+                if (!mobileLayout && typeof resultIndex === "number") {
+                  setActiveIndex(resultIndex);
+                }
+              }}
+              onMouseEnter={() => {
+                if (!mobileLayout && typeof resultIndex === "number") {
+                  setActiveIndex(resultIndex);
+                }
+              }}
+              className={`w-full min-w-0 rounded-[6px] text-left transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-primary ${
+                mobileLayout
+                  ? isActive
+                    ? "bg-white px-[8px] py-[10px]"
+                    : "bg-transparent px-[8px] py-[10px] hover:bg-white/70"
+                  : isActive
+                    ? "bg-white px-[10px] pb-[24px] pt-[10px]"
+                    : "bg-transparent px-[10px] pb-[24px] pt-[10px] hover:bg-white/70"
+              }`}
+            >
+              <div className="min-w-0">
+                <div
+                  className={`min-w-0 break-words font-serif font-[700] tracking-[-0.03em] ${
+                    mobileLayout
+                      ? `text-[44px] leading-[0.94] ${isActive ? "text-accent-1" : "text-contrast-2"}`
+                      : `text-[48px] leading-[0.94] ${isActive ? "text-accent-1" : "text-contrast-2"}`
+                  }`}
+                >
+                  {item.title}
+                </div>
+                {item.description && (
+                  <p
+                    className={`mt-[4px] break-words font-sans tracking-[0.01em] text-primary ${
+                      mobileLayout ? "text-[16px] leading-[1.45]" : "text-[24px] leading-[25px]"
+                    }`}
+                  >
+                    {item.description}
+                  </p>
+                )}
+                {visibleTags.length > 0 && (
+                  <div className={`mt-[12px] flex flex-wrap gap-[11px] ${mobileLayout ? "" : "items-center"}`}>
+                    {visibleTags.map((tag) => (
+                      <span
+                        key={`${item.path}-${tag}`}
+                        className={`inline-flex items-center justify-center rounded-[8px] border border-contrast-2 px-[8px] text-center font-sans tracking-[0.01em] text-contrast-2 ${
+                          mobileLayout ? "h-[28px] text-[16px] leading-none" : "h-[30px] text-[20px] leading-none"
+                        }`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const searchBody = isMobile ? (
+    <div className="px-[11px] pb-8 pt-[18px]">
+      <div className="pr-[2.75rem]">
+        <h2 className="font-serif text-[46px] font-[700] leading-[43px] tracking-[-0.03em] text-accent-1">
+          Search
+        </h2>
+        <p className="mt-[3px] max-w-[344px] font-sans text-[16px] leading-[16px] tracking-[0.01em] text-primary">
           Browse site content, guides, grants, and updates.
         </p>
-        <div className="mt-3 flex flex-wrap items-center gap-3 text-xs font-mono text-contrast-2">
-          <span>Use ↑/↓ to navigate, Enter to open.</span>
-          {!indexEntries.length && !isLoading && (
-            <span>Focus the field to load results.</span>
-          )}
-        </div>
       </div>
-
-      <div className="md:hidden">
-        <p className="text-sm text-contrast-2">
-          Browse site content, guides, grants, and updates.
-        </p>
-        <div className="mt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-contrast-2">
-          <span>Tap a result to open.</span>
-          {!indexEntries.length && !isLoading && (
-            <span>Focus the field to load results.</span>
-          )}
-        </div>
-      </div>
-
-      <div className="mt-4 w-full">
+      <div className="mt-[18px] w-full">
         <label htmlFor="search-modal-input" className="sr-only">
           Search the site
         </label>
@@ -551,131 +553,52 @@ export function SearchModal({ isOpen, onClose, children }) {
           onChange={handleQueryChange}
           onFocus={ensureIndexLoaded}
           onKeyDown={handleKeyDown}
-          placeholder="Search topics, guides, or grants"
+          placeholder="Search topics, guides, terms, etc."
           autoComplete="off"
           aria-controls="search-results"
           aria-activedescendant={activeId}
-          className="w-full max-w-full rounded-lg border border-contrast-2 bg-transparent px-3 py-2 text-[16px] md:text-base text-primary placeholder:text-contrast-2 focus:border-accent-1 focus:outline-none focus:ring-1 focus:ring-accent-1"
+          className={`h-[50px] w-full max-w-full rounded-[5px] border bg-white px-[13px] font-sans text-[24px] leading-none tracking-[0.01em] text-primary outline-none transition-colors placeholder:font-sans placeholder:text-[24px] placeholder:tracking-[0.01em] placeholder:text-contrast-2 ${
+            inputIsActive ? "border-primary" : "border-contrast-2"
+          }`}
         />
       </div>
-
-      <div
-        id="search-results"
-        role="listbox"
-        aria-live="polite"
-        className="mt-4 space-y-4"
-      >
-        {isLoading && (
-          <div className="text-sm text-contrast-2">Loading search index…</div>
-        )}
-
-        {errorMessage && (
-          <div className="text-sm text-accent-1">{errorMessage}</div>
-        )}
-
-        {!isLoading && !errorMessage && !queryTokens.length && (
-          <div className="text-sm text-contrast-2">
-            Start typing to see search results.
-          </div>
-        )}
-
-        {!isLoading && !errorMessage && queryTokens.length > 0 && !flatResults.length && (
-          <div className="text-sm text-contrast-2">
-            No results found. Try a different search.
-          </div>
-        )}
-
-          {!isLoading && !errorMessage && groupedResults.length > 0 && (
-          <div className="space-y-6 w-full md:max-h-[300px] md:overflow-y-auto md:pr-1">
-
-            {groupedResults.map((group) => (
-              <div key={group.section}>
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-contrast-2 mb-2">
-                  {group.label}
-                </div>
-                <div className="space-y-2">
-                  {group.items.map((item) => {
-                    const itemKey = item.id || item.path || item.title;
-                    const resultIndex = resultIndexById.get(itemKey);
-                    const isActive = resultIndex === activeIndex;
-                    const resultId =
-                      typeof resultIndex === "number"
-                        ? `search-result-${resultIndex}`
-                        : undefined;
-                    const tags = Array.isArray(item.tags) ? item.tags : [];
-                    const visibleTags = tags.slice(0, 3);
-                    const extraTags = tags.length - visibleTags.length;
-
-                    return (
-                      <button
-                        key={itemKey}
-                        id={resultId}
-                        type="button"
-                        role="option"
-                        aria-selected={isActive}
-                        aria-label={`Open ${item.title}`}
-                        data-umami-event="search-result-select"
-                        data-umami-event-label={item.title}
-                        data-umami-event-destination={item.path}
-                        data-umami-event-variant={item.section}
-                        onClick={() => handleSelect(item)}
-                        onMouseEnter={() => {
-                          if (typeof resultIndex === "number") {
-                            setActiveIndex(resultIndex);
-                          }
-                        }}
-                        className={`w-full min-w-0 text-left rounded-lg border px-3 py-2 transition-colors ${
-                          isActive
-                            ? "border-accent-1 bg-contrast-1"
-                            : "border-transparent hover:border-contrast-2"
-                        }`}
-                      >
-                        <div className="flex flex-wrap items-start justify-between gap-3 min-w-0">
-                          <span className="text-base font-semibold text-primary break-words min-w-0 flex-1">
-                            {highlightText(item.title)}
-                          </span>
-                          {item.subsectionLabel && (
-                            <span className="text-xs font-mono text-contrast-2 shrink-0">
-                              {item.subsectionLabel}
-                            </span>
-                          )}
-                        </div>
-                        {item.description && (
-                          <p className="mt-1 text-sm text-contrast-2 line-clamp-2 break-words">
-                            {highlightText(item.description)}
-                          </p>
-                        )}
-                        {item.path && (
-                          <div className="mt-2 text-xs font-mono text-contrast-2 break-all">
-                            {item.path}
-                          </div>
-                        )}
-                        {visibleTags.length > 0 && (
-                          <div className="mt-2 flex flex-wrap gap-2 text-xs font-mono text-contrast-2">
-                            {visibleTags.map((tag) => (
-                              <span
-                                key={`${item.path}-${tag}`}
-                                className="rounded-full border border-contrast-2 px-2 py-[1px] break-words"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-                            {extraTags > 0 && (
-                              <span className="rounded-full border border-contrast-2 px-2 py-[1px] break-words">
-                                +{extraTags}
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+      {renderResults(true)}
+    </div>
+  ) : (
+    <div className="block w-full">
+      <div className="px-[14px] pr-[3.25rem]">
+        <h2 className="font-serif text-[48px] font-[700] leading-[45px] tracking-[-0.03em] text-accent-1">
+          Search urbit.org
+        </h2>
+        <p className="mt-[3px] max-w-[626px] font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
+          Browse site content, guides, grants, and updates.
+        </p>
       </div>
+      <div className="mt-[4.1rem] w-full">
+        <label htmlFor="search-modal-input" className="sr-only">
+          Search the site
+        </label>
+        <input
+          id="search-modal-input"
+          ref={inputRef}
+          type="search"
+          value={query}
+          onChange={handleQueryChange}
+          onFocus={ensureIndexLoaded}
+          onKeyDown={handleKeyDown}
+          placeholder="Search topics, guides, terms, etc."
+          autoComplete="off"
+          aria-controls="search-results"
+          aria-activedescendant={activeId}
+          className={`h-[50px] w-full max-w-full rounded-[5px] border bg-white px-[13px] font-sans text-[24px] leading-none tracking-[0.01em] text-primary outline-none transition-colors placeholder:font-sans placeholder:text-[24px] placeholder:tracking-[0.01em] placeholder:text-contrast-2 ${
+            inputIsActive ? "border-primary" : "border-contrast-2"
+          }`}
+        />
+        <p className="mt-[5px] px-[14px] font-mono text-[14px] tracking-[-0.02em] text-contrast-2">
+          Use ↑/↓ to navigate, Enter to open.
+        </p>
+      </div>
+      {renderResults(false)}
     </div>
   );
 
@@ -684,33 +607,23 @@ export function SearchModal({ isOpen, onClose, children }) {
 
     return (
       <div
-        className="fixed inset-0 z-[9999] flex h-[100dvh] w-full flex-col bg-contrast-1 text-primary overflow-x-hidden"
+        className="fixed inset-0 z-[9999] h-[100dvh] w-full overflow-hidden bg-contrast-1 text-primary"
         role="dialog"
         aria-modal="true"
       >
-        <div className="flex w-full items-center justify-between gap-3 border-b border-contrast-2 px-4 py-4">
-          <div>
-            <h2 className="text-xl font-serif italic font-semibold text-primary">
-              Search
-            </h2>
-            {resultCountLabel && (
-              <div className="text-xs font-mono text-contrast-2">
-                {resultCountLabel}
-              </div>
-            )}
-          </div>
+        <div className="relative h-full w-full overflow-hidden shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
           <button
             onClick={handleClose}
-            className="text-contrast-2 hover:text-primary transition-colors"
+            className="absolute right-[17px] top-[18px] z-10 text-contrast-2 transition-colors hover:text-primary"
             aria-label="Close search"
           >
             <svg
-              width="24"
-              height="24"
+              width="17"
+              height="17"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.75"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -718,12 +631,10 @@ export function SearchModal({ isOpen, onClose, children }) {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </button>
-        </div>
-        <div className="flex-1 w-full overflow-y-auto px-4 pb-8 pt-4">
-          {searchBody}
-          {children && (
-            <div className="mt-6 border-t border-contrast-2 pt-6">{children}</div>
-          )}
+          <div className="h-full overflow-y-auto overflow-x-hidden">
+            {searchBody}
+            {children && <div className="px-[11px] pb-8">{children}</div>}
+          </div>
         </div>
       </div>
     );
@@ -733,14 +644,16 @@ export function SearchModal({ isOpen, onClose, children }) {
     <Modal
       isOpen={isOpen}
       onClose={handleClose}
-      panelClassName="max-w-3xl"
-      contentClassName="space-y-8"
+      overlayClassName="items-start bg-[rgba(255,255,255,0.18)] px-4 pt-[8rem] backdrop-blur-[10px]"
+      panelClassName="w-full max-w-[690px] max-h-[calc(100dvh-9rem)] overflow-hidden rounded-[6px] border-0 bg-contrast-1 shadow-[0px_4px_40.4px_0px_rgba(63,63,63,0.32)]"
+      contentClassName="px-[18px] pb-[18px] pt-[20px]"
+      closeButtonClassName="right-[18px] top-[18px]"
+      closeIconSize={17}
+      closeIconStrokeWidth={1.75}
     >
       {searchBody}
 
-      {children && (
-        <div className="md:border-t md:border-contrast-2 md:pt-6">{children}</div>
-      )}
+      {children && <div className="mt-6 border-t border-contrast-2 pt-6">{children}</div>}
     </Modal>
   );
 }
