@@ -1,9 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
+
+const RUNTIME_INSTALL_COMMAND = "curl -fsSL https://urbit.org/get-runtime.sh | sh";
+
+const copyToClipboard = async (value) => {
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  if (typeof document === "undefined") {
+    throw new Error("Clipboard unavailable");
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = value;
+  textarea.setAttribute("readonly", "true");
+  textarea.style.position = "absolute";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+};
 
 /**
  * HeroSection - Full viewport width hero section
@@ -22,6 +45,35 @@ import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
  */
 export function HeroSection({ hero }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [copyState, setCopyState] = useState("idle");
+  const resetCopyTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetCopyTimeoutRef.current) {
+        window.clearTimeout(resetCopyTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleCopyInstallCommand = useCallback(async () => {
+    try {
+      await copyToClipboard(RUNTIME_INSTALL_COMMAND);
+      setCopyState("copied");
+    } catch (error) {
+      console.error("Failed to copy runtime install command:", error);
+      setCopyState("error");
+    }
+
+    if (resetCopyTimeoutRef.current) {
+      window.clearTimeout(resetCopyTimeoutRef.current);
+    }
+
+    resetCopyTimeoutRef.current = window.setTimeout(() => {
+      setCopyState("idle");
+      resetCopyTimeoutRef.current = null;
+    }, 1800);
+  }, []);
 
   if (!hero) return null;
 
@@ -68,18 +120,44 @@ export function HeroSection({ hero }) {
   };
 
   return (
-    <section
-      className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] z-0 hero-background"
-      {...(backgroundImage && {
-        style: {
-          backgroundImage: getResponsiveBackgroundImage(backgroundImage),
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          transition: 'background-size 0.5s ease-in-out, min-height 0.5s ease-in-out',
-        }
-      })}
-    >
+    <>
+      <button
+        type="button"
+        onClick={handleCopyInstallCommand}
+        aria-label={`Copy runtime install command: ${RUNTIME_INSTALL_COMMAND}`}
+        title={RUNTIME_INSTALL_COMMAND}
+        data-umami-event="cta-hero-copy-runtime-command"
+        data-umami-event-label="Download binary"
+        data-umami-event-destination="/get-runtime.sh"
+        data-umami-event-context="hero"
+        data-umami-event-variant="desktop"
+        className={`fixed right-[20px] top-[52px] z-[70] hidden h-[28px] items-center gap-0 rounded-[6px] border bg-[rgba(255,255,255,0.72)] px-[8px] font-mono text-[10px] leading-none tracking-[-0.01em] text-contrast-2 backdrop-blur-[8px] transition-colors md:flex lg:gap-2 lg:px-[10px] lg:text-[11px] ${
+          copyState === "copied"
+            ? "border-primary text-primary"
+            : copyState === "error"
+              ? "border-accent-1 text-accent-1"
+              : "border-[rgba(63,63,63,0.18)] hover:border-contrast-2 hover:bg-[rgba(255,255,255,0.9)]"
+        }`}
+      >
+        <span className="hidden lg:inline">download binary:</span>
+        <span className="rounded-[4px] bg-[rgba(255,255,255,0.82)] px-[6px] py-[4px] text-primary">
+          {RUNTIME_INSTALL_COMMAND}
+        </span>
+      </button>
+
+      <section
+        className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] hero-background"
+        {...(backgroundImage && {
+          style: {
+            backgroundImage: getResponsiveBackgroundImage(backgroundImage),
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            transition: 'background-size 0.5s ease-in-out, min-height 0.5s ease-in-out',
+          }
+        })}
+      >
+
       {/* Fallback for browsers without image-set support */}
       {backgroundImage && (
         <style jsx>{`
@@ -312,6 +390,8 @@ export function HeroSection({ hero }) {
         </div>
       </div>
 
+      </section>
+
       {/* Leaving Site Modal */}
       <Modal
         isOpen={isModalOpen}
@@ -356,7 +436,6 @@ export function HeroSection({ hero }) {
           </a>
         </div>
       </Modal>
-
-    </section>
+    </>
   );
 }
