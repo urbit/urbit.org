@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -47,7 +47,70 @@ const getExternalEventName = (href) => {
   return undefined;
 };
 
-export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark }) => {
+const TabbedBlurbContent = ({
+  tabs = [],
+  contextId,
+  panelClassName = "",
+  contentClassName = "",
+}) => {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const uniqueId = useId();
+
+  if (!tabs.length) {
+    return null;
+  }
+
+  const safeActiveTabIndex = Math.min(activeTabIndex, tabs.length - 1);
+  const activeTab = tabs[safeActiveTabIndex];
+  const tabGroupId = `${slugify(contextId || "blurb-tabs")}-${uniqueId.replace(/:/g, "")}`;
+
+  return (
+    <div className="mt-6">
+      <div
+        className="flex flex-wrap gap-2"
+        role="tablist"
+        aria-label="Platform-specific instructions"
+      >
+        {tabs.map((tab, index) => {
+          const isActive = index === safeActiveTabIndex;
+          const tabId = `${tabGroupId}-tab-${index}`;
+          const panelId = `${tabGroupId}-panel-${index}`;
+
+          return (
+            <button
+              key={tabId}
+              id={tabId}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={panelId}
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => setActiveTabIndex(index)}
+              className={`rounded-md border px-3 py-1 font-mono text-small transition-colors ${
+                isActive
+                  ? "border-primary bg-primary text-secondary"
+                  : "border-contrast-2 text-contrast-2 hover:border-primary hover:text-primary"
+              }`}
+            >
+              {tab.title}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        id={`${tabGroupId}-panel-${safeActiveTabIndex}`}
+        role="tabpanel"
+        aria-labelledby={`${tabGroupId}-tab-${safeActiveTabIndex}`}
+        className={`mt-4 rounded-lg border border-contrast-2 bg-contrast-1/60 p-4 md:p-5 ${panelClassName}`}
+      >
+        {renderContent("article", activeTab?.content, contentClassName)}
+      </div>
+    </div>
+  );
+};
+
+export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark, tabs = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -106,6 +169,11 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
             })}
           </ul>
           {renderContent("div", content, "text-base text-gray-87 line-clamp-5")}
+          <TabbedBlurbContent
+            tabs={tabs}
+            contextId={title}
+            contentClassName="prose prose-invert max-w-none"
+          />
         </div>
       </div>
       <button
@@ -136,7 +204,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
   );
 };
 
-export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
+export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton, tabs = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
 
@@ -200,6 +268,11 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
             content,
             `text-base text-primary transition-transform duration-300 ${isExpanded ? "" : "line-clamp-3"}`
           )}
+          <TabbedBlurbContent
+            tabs={tabs}
+            contextId={tooltipContext}
+            contentClassName="prose prose-invert max-w-none"
+          />
         </div>
       </div>
       <div className="flex justify-between">
@@ -267,7 +340,7 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
   );
 };
 
-export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
+export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton, tabs = [] }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
   const anchorId = id || blurbSlug;
@@ -399,6 +472,11 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
 
       {/* Full content without line-clamp */}
       {renderContent("article", content, "prose prose-invert max-w-none mt-6")}
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        contentClassName="prose prose-invert max-w-none"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -431,6 +509,7 @@ export const MicroBlurb = ({
   image,
   imageDark,
   ctaButton,
+  tabs = [],
   showFullContent = false  // Toggle between preview and full content
 }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
@@ -536,6 +615,11 @@ export const MicroBlurb = ({
           renderContent("div", content, "")
         )}
       </div>
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        contentClassName="prose prose-sm prose-invert max-w-none"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -581,7 +665,8 @@ export function HomepageBlurb({
   image,
   imageDark,
   references = [],
-  ctaButton
+  ctaButton,
+  tabs = [],
 }) {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
@@ -690,6 +775,12 @@ export function HomepageBlurb({
         content,
         "prose prose-lg max-w-none mb-8 text-[#3f3f3f]"
       )}
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        panelClassName="bg-white/70"
+        contentClassName="prose prose-lg max-w-none text-[#3f3f3f]"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (

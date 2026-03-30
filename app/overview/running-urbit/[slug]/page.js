@@ -19,6 +19,12 @@ const toPlainObject = (value) => {
   return JSON.parse(JSON.stringify(value));
 };
 
+const renderTabContent = (content = "") => {
+  const ast = Markdoc.parse(content);
+  const transformed = Markdoc.transform(ast, markdocHtmlConfig);
+  return Markdoc.renderers.html(transformed);
+};
+
 export async function generateStaticParams() {
   // Get the config to know which sections exist
   const configData = await getMarkdownContent("overview/running-urbit/config.md");
@@ -103,6 +109,10 @@ export default async function RunningUrbitSection({ params }) {
         title: blurbData.frontMatter.title,
         description: blurbData.frontMatter.description,
         content: renderedContent,
+        tabs: (blurbData.frontMatter.tabs || []).map((tab) => ({
+          title: tab.title,
+          content: renderTabContent(tab.content || ""),
+        })),
         references,
         image: blurbData.frontMatter.image || "",
         imageDark: blurbData.frontMatter.imageDark || "",
@@ -177,6 +187,7 @@ export default async function RunningUrbitSection({ params }) {
                     title={blurb.title}
                     description={blurb.description}
                     content={blurb.content}
+                    tabs={blurb.tabs}
                     references={blurb.references}
                     image={blurb.image}
                     imageDark={blurb.imageDark}

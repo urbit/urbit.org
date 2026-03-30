@@ -15,6 +15,12 @@ const toPlainObject = (value) => {
   return JSON.parse(JSON.stringify(value));
 };
 
+const renderTabContent = (content = "") => {
+  const ast = Markdoc.parse(content);
+  const transformed = Markdoc.transform(ast, markdocHtmlConfig);
+  return Markdoc.renderers.html(transformed);
+};
+
 export default async function HomePage() {
   // Load homepage configuration
   const configData = await getMarkdownContent("homepage/config.md");
@@ -44,6 +50,10 @@ export default async function HomePage() {
           title: blurbData.frontMatter.title,
           description: blurbData.frontMatter.description,
           content: renderedContent,
+          tabs: (blurbData.frontMatter.tabs || []).map((tab) => ({
+            title: tab.title,
+            content: renderTabContent(tab.content || ""),
+          })),
           image: blurbData.frontMatter.image || "",
           imageDark: blurbData.frontMatter.imageDark || "",
           references: (blurbData.frontMatter.references || []).map(ref => ({
@@ -163,6 +173,7 @@ export default async function HomePage() {
                 title={sectionBlurb.title}
                 description={sectionBlurb.description}
                 content={sectionBlurb.content}
+                tabs={sectionBlurb.tabs}
                 image={sectionBlurb.image}
                 imageDark={sectionBlurb.imageDark}
                 references={sectionBlurb.references}
@@ -183,6 +194,7 @@ export default async function HomePage() {
                       title={blurb.title}
                       description={blurb.description}
                       content={blurb.content}
+                      tabs={blurb.tabs}
                       image={blurb.image}
                       imageDark={blurb.imageDark}
                       references={blurb.references}
@@ -208,6 +220,7 @@ export default async function HomePage() {
                 title={blurbsBySlug[sidebarBlurbSlug].title}
                 description={blurbsBySlug[sidebarBlurbSlug].description}
                 content={blurbsBySlug[sidebarBlurbSlug].content}
+                tabs={blurbsBySlug[sidebarBlurbSlug].tabs}
                 image={blurbsBySlug[sidebarBlurbSlug].image}
                 imageDark={blurbsBySlug[sidebarBlurbSlug].imageDark}
                 references={blurbsBySlug[sidebarBlurbSlug].references}
@@ -233,6 +246,7 @@ export default async function HomePage() {
                   title={sectionBlurb.title}
                   description={sectionBlurb.description}
                   content={sectionBlurb.content}
+                  tabs={sectionBlurb.tabs}
                   image={sectionBlurb.image}
                   imageDark={sectionBlurb.imageDark}
                   references={sectionBlurb.references}
@@ -256,6 +270,7 @@ export default async function HomePage() {
                         title={blurb.title}
                         description={blurb.description}
                         content={blurb.content}
+                        tabs={blurb.tabs}
                         image={blurb.image}
                         imageDark={blurb.imageDark}
                         references={blurb.references}
@@ -268,6 +283,7 @@ export default async function HomePage() {
                         title={blurb.title}
                         description={blurb.description}
                         content={blurb.content}
+                        tabs={blurb.tabs}
                         image={blurb.image}
                         imageDark={blurb.imageDark}
                         references={blurb.references}
