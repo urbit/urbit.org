@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-05T23:59:44.305Z",
-  "total": 179,
+  "generatedAt": "2026-03-31T00:00:00.000Z",
+  "total": 180,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4625,6 +4625,37 @@
       "section": "pages",
       "sectionLabel": "Pages",
       "searchText": "tlon hosting tlon corporation is the preeminent hosting provider which provides free and seamless onboarding to the urbit network hosting hosting-provider urbit-os tlon layer 2 tlon hosting tlon messenger hosted urbit quickstart onboarding layer 2 hosting provider phone number signup email signup managed hosting /#get-started-with-tlon-hosting pages tlon corporation offers free managed hosting with quick onboarding via phone or email signup, ideal for users wanting tlon messenger without handling self-hosting. hosting hosting-provider urbit-os tlon layer 2 tlon hosting tlon messenger hosted urbit quickstart onboarding hosting provider phone number signup email signup managed hosting <some-arvo-hash> /images/tlon-corp-dither.png quickstart https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em1 get started in a few clicks using tlon hosting tlon corporation https://tlon.io learn more about tlon's hosting services quickstart via tlon tlon messenger onboarding and hosted urbit services"
+    },
+    {
+      "id": "blog/gall-2026.md",
+      "title": "The Future of Userspace",
+      "description": "The Gall 2026 project and what it means for userspace",
+      "tags": [
+        "security",
+        "gall",
+        "userspace"
+      ],
+      "searchTerms": [
+        "~mopfel-winrux",
+        "~sarlev-sarsen",
+        "~palfun-foslup",
+        "shrubbery",
+        "gall 2026",
+        "userspace permissions",
+        "userspace compatibility",
+        "urbit security"
+      ],
+      "authors": [
+        "~mopfel-winrux",
+        "~palfun-foslup",
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1774915200000,
+      "source": "blog",
+      "path": "/blog/gall-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "the future of userspace the gall 2026 project and what it means for userspace security gall userspace ~mopfel-winrux ~sarlev-sarsen ~palfun-foslup shrubbery gall 2026 userspace permissions userspace compatibility urbit security /blog/gall-2026 blog 2026-03-31 an overview of the gall 2026 userspace roadmap, including scoped eyre permissions, support for alternative agent apis, and a kelvin-shimming proof of concept for application compatibility across arvo updates. ~mopfel-winrux ~palfun-foslup ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_gall2026/blog_gall2026_social+16x9.png"
     }
   ]
 }
