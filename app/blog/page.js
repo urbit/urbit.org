@@ -160,26 +160,16 @@ export default async function BlogHome() {
 
                           <div className="flex flex-col">
                             {extra && (extra.author || extra.ship) && (
-                              <div className="hidden md:flex flex-col font-mono text-right text-base items-end min-w-[160px] text-contrast-2 group-hover:text-primary">
+                              <div className="hidden md:flex flex-row justify-between font-mono text-right text-base items-end min-w-[160px] text-contrast-2 group-hover:text-primary">
+                                {date && <div>{date}</div>}
                                 {extra.ship ? (
                                   <div>{extra.ship}</div>
                                 ) : (
                                   extra.author && <div>{extra.author}</div>
                                 )}
-                                {date && <div>{date}</div>}
                               </div>
                             )}
                           </div>
-                      {extra?.tags && extra.tags.length > 0 && (
-                        <div className="hidden md:block font-mono flex gap-8 overflow-x-auto whitespace-nowrap scrollbar-hide snap-x snap-mandatory">
-                          {extra.tags.map((tag, index) => (
-                            <span
-                              key={index}
-                              className="text-contrast-2 px-4 py-1 text-xs md:text-sm flex-shrink-0 group-hover:text-primary"
-                            >{tag}</span>
-                          ))}
-                        </div>
-                      )}
                     </div>
                   </Link>
                 );
