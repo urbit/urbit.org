@@ -2,19 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Modal } from "./Modal";
+import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
 import { copyToClipboard, RUNTIME_INSTALL_COMMAND } from "../lib/runtimeInstall";
-
-const GET_URBIT_MODAL_PROPS = {
-  overlayClassName:
-    "items-start justify-center bg-[rgba(255,255,255,0.18)] px-4 pt-[96px] md:pt-[180px] backdrop-blur-[10px]",
-  panelClassName:
-    "w-full max-w-[920px] max-h-[calc(100dvh-96px-2rem)] md:max-h-[calc(100dvh-180px-2rem)] overflow-hidden rounded-[6px] border-0 bg-contrast-1 shadow-[0px_4px_40.4px_0px_rgba(63,63,63,0.32)]",
-  contentClassName: "px-[18px] pb-[18px] pt-[20px]",
-  closeButtonClassName: "right-[18px] top-[18px]",
-  closeIconSize: 17,
-  closeIconStrokeWidth: 1.75,
-};
 
 export function GetUrbitModal({ isOpen, onClose }) {
   const [copyState, setCopyState] = useState("idle");
@@ -48,7 +37,7 @@ export function GetUrbitModal({ isOpen, onClose }) {
   }, []);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} {...GET_URBIT_MODAL_PROPS}>
+    <Modal isOpen={isOpen} onClose={onClose} {...FIGMA_LIGHTBOX_MODAL_PROPS}>
       <div className="w-full">
         <h2 className="pr-[3.25rem] font-serif text-[44px] font-[700] leading-[0.94] tracking-[-0.03em] text-accent-1 md:text-[48px]">
           Get the Urbit runtime
