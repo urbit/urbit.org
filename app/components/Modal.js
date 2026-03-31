@@ -85,7 +85,7 @@ export function Modal({
       onClick={onClose}
     >
       <div
-        className={`relative bg-contrast-1 border border-gray-87 rounded-16px shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeIn ${panelClassName}`}
+        className={`relative bg-contrast-1 border border-gray-87 rounded-16px shadow-lg w-full max-h-[90vh] overflow-y-auto animate-fadeIn ${panelClassName}`}
         style={panelStyle}
         onClick={(e) => e.stopPropagation()}
       >
