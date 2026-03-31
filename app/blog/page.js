@@ -137,21 +137,9 @@ export default async function BlogHome() {
                     <div className="py-4 flex flex-col leading-[120%]">
                       <div className="px-2">
                         <div className="flex flex-row gap-x-4 justify-between">
-                          <div className="font-bold font-serif text-5xl text-accent-1 group-hover:text-primary md:mb-2">{title}</div>
-                          <div className="flex flex-col">
-                            {extra && (extra.author || extra.ship) && (
-                              <div className="hidden md:flex flex-col font-mono text-right text-base items-end min-w-[160px] text-contrast-2 group-hover:text-primary">
-                                {extra.ship ? (
-                                  <div>{extra.ship}</div>
-                                ) : (
-                                  extra.author && <div>{extra.author}</div>
-                                )}
-                                {date && <div>{date}</div>}
-                              </div>
-                            )}
-                          </div>
+                          <div className="font-bold font-serif text-4xl text-accent-1 group-hover:text-primary md:mb-2">{title}</div>
                         </div>
-                        <div className="font-sans md:mb-0 text-2xl text-primary group-hover:text-primary line-clamp-3">{description}</div>
+                        <div className="font-sans md:mb-0 text-xl text-primary group-hover:text-primary line-clamp-3">{description}</div>
                       </div>
                       {/* <div className="font-mono flex md:hidden flex-col justify-between"> */}
                       {/*   <div className="">{extra.author}</div> */}
@@ -170,16 +158,18 @@ export default async function BlogHome() {
                           </div>
                         )}
 
-                      {extra?.tags && extra.tags.length > 0 && (
-                        <div className="hidden md:block font-mono flex gap-8 overflow-x-auto whitespace-nowrap scrollbar-hide snap-x snap-mandatory">
-                          {extra.tags.map((tag, index) => (
-                            <span
-                              key={index}
-                              className="text-contrast-2 px-4 py-1 text-xs md:text-sm flex-shrink-0 group-hover:text-primary"
-                            >{tag}</span>
-                          ))}
-                        </div>
-                      )}
+                          <div className="flex flex-col">
+                            {extra && (extra.author || extra.ship) && (
+                              <div className="hidden md:flex flex-row justify-between font-mono text-right text-base items-end min-w-[160px] text-contrast-2 group-hover:text-primary">
+                                {date && <div>{date}</div>}
+                                {extra.ship ? (
+                                  <div>{extra.ship}</div>
+                                ) : (
+                                  extra.author && <div>{extra.author}</div>
+                                )}
+                              </div>
+                            )}
+                          </div>
                     </div>
                   </Link>
                 );
