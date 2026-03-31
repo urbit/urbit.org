@@ -604,10 +604,10 @@ export function SearchModal({ isOpen, onClose, children }) {
           </svg>
         </button>
         <div className="pr-[2.75rem]">
-          <h2 className="font-serif text-[46px] font-[700] leading-[43px] tracking-[-0.03em] text-accent-1">
+          <h2 className="mb-4 font-serif text-[46px] font-[700] leading-[43px] tracking-[-0.03em] text-accent-1">
             Search
           </h2>
-          <p className="mt-[3px] max-w-[344px] font-sans text-[16px] leading-[16px] tracking-[0.01em] text-primary">
+          <p className="max-w-[344px] font-sans text-[16px] leading-[16px] tracking-[0.01em] text-primary">
             Browse side content & guides
           </p>
         </div>
@@ -638,10 +638,10 @@ export function SearchModal({ isOpen, onClose, children }) {
   ) : (
     <div className="block w-full">
       <div className="px-[14px] pr-[3.25rem]">
-        <h2 className="font-serif text-[48px] font-[700] leading-[45px] tracking-[-0.03em] text-accent-1">
+        <h2 className="mb-4 font-serif text-[48px] font-[700] leading-[45px] tracking-[-0.03em] text-accent-1">
           Search urbit.org
         </h2>
-        <p className="mt-[3px] max-w-[626px] font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
+        <p className="max-w-[626px] font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
           Browse side content & guides
         </p>
       </div>

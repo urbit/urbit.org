@@ -39,10 +39,10 @@ export function GetUrbitModal({ isOpen, onClose }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} {...FIGMA_LIGHTBOX_MODAL_PROPS}>
       <div className="w-full">
-        <h2 className="pr-[3.25rem] font-serif text-[44px] font-[700] leading-[0.94] tracking-[-0.03em] text-accent-1 md:text-[48px]">
+        <h2 className="mb-4 pr-[3.25rem] font-serif text-[44px] font-[700] leading-[0.94] tracking-[-0.03em] text-accent-1 md:text-[48px]">
           Get the Urbit runtime
         </h2>
-        <p className="mt-[3px] max-w-[680px] font-sans text-[18px] leading-[1.2] tracking-[0.01em] text-primary md:text-[24px] md:leading-[25px]">
+        <p className="max-w-[680px] font-sans text-[18px] leading-[1.2] tracking-[0.01em] text-primary md:text-[24px] md:leading-[25px]">
           Download the right binary for your machine with a single command.
         </p>
 

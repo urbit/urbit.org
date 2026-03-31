@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useLayoutSlots } from "../lib/layoutSlots";
 import { HeaderNav } from "./HeaderNav";
 import { FooterSection, FooterExpansion } from "./FooterSection";
+import { FooterContactModal } from "./FooterContactModal";
 import { SearchModal } from "./SearchModal";
 import { GetUrbitModal } from "./GetUrbitModal";
 
@@ -18,6 +19,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
   const [expandedSection, setExpandedSection] = useState(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isGetUrbitOpen, setIsGetUrbitOpen] = useState(false);
+  const [isFooterContactOpen, setIsFooterContactOpen] = useState(false);
 
   const openSearch = useCallback(() => {
     setIsSearchOpen(true);
@@ -37,6 +39,14 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
 
   const closeGetUrbit = useCallback(() => {
     setIsGetUrbitOpen(false);
+  }, []);
+
+  const openFooterContact = useCallback(() => {
+    setIsFooterContactOpen(true);
+  }, []);
+
+  const closeFooterContact = useCallback(() => {
+    setIsFooterContactOpen(false);
   }, []);
 
   useEffect(() => {
@@ -79,6 +89,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
     <>
       <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
       <GetUrbitModal isOpen={isGetUrbitOpen} onClose={closeGetUrbit} />
+      <FooterContactModal isOpen={isFooterContactOpen} onClose={closeFooterContact} />
 
       {/* Mobile View - No Frame */}
       <div className="md:hidden min-h-screen flex flex-col">
@@ -99,7 +110,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
         {hero && <div className="w-full">{hero}</div>}
 
         <div className="flex-grow mt-[var(--header-height)] z-0">{children}</div>
-        <FooterSection footerData={footerData} />
+        <FooterSection footerData={footerData} onFooterEmailOpen={openFooterContact} />
       </div>
 
       {/* Desktop View - With Frame */}
@@ -219,6 +230,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
                   onExpansionHeightChange={setExpansionHeight}
                   expandedSection={expandedSection}
                   setExpandedSection={setExpandedSection}
+                  onFooterEmailOpen={openFooterContact}
                 />
               </div>
               <div className="h-[55px] w-[23px] flex-shrink-0 ml-[-0.5px]">
@@ -263,6 +275,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
               footerData={socials}
               onClose={() => setExpandedSection(null)}
               onHeightChange={setExpansionHeight}
+              onFooterEmailOpen={openFooterContact}
             />
           </div>
         </div>

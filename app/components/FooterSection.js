@@ -22,7 +22,73 @@ const getFooterEventName = (url) => {
   return undefined;
 };
 
-export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSection, setExpandedSection }) => {
+const isFooterEmailLink = (link) => link?.url?.toLowerCase().startsWith("mailto:");
+
+const FooterContactIcon = ({
+  link,
+  idx,
+  pathname,
+  variant,
+  onFooterEmailOpen,
+  iconClassName,
+}) => {
+  const eventName = getFooterEventName(link.url);
+
+  if (isFooterEmailLink(link) && onFooterEmailOpen) {
+    return (
+      <button
+        key={link.title || idx}
+        type="button"
+        onClick={onFooterEmailOpen}
+        data-umami-event="cta-footer-contact-modal"
+        data-umami-event-label={link.label || link.title}
+        data-umami-event-destination="footer-contact-modal"
+        data-umami-event-context={pathname}
+        data-umami-event-variant={variant}
+        className="w-max group"
+        aria-label={link.label || link.title}
+      >
+        {link.logo && (
+          <Image
+            src={link.logo}
+            alt={link.label || link.title}
+            width={16}
+            height={16}
+            className={iconClassName}
+          />
+        )}
+      </button>
+    );
+  }
+
+  return (
+    <Link
+      key={link.title || idx}
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-umami-event={eventName}
+      data-umami-event-label={link.label || link.title}
+      data-umami-event-destination={eventName ? link.url : undefined}
+      data-umami-event-context={eventName ? pathname : undefined}
+      data-umami-event-variant={eventName ? variant : undefined}
+      className="w-max group"
+      aria-label={link.label || link.title}
+    >
+      {link.logo && (
+        <Image
+          src={link.logo}
+          alt={link.label || link.title}
+          width={16}
+          height={16}
+          className={iconClassName}
+        />
+      )}
+    </Link>
+  );
+};
+
+export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSection, setExpandedSection, onFooterEmailOpen }) => {
   // Separate resources and socials from footerData
   const resources = footerData?.find(col => col.column_label === "resources");
   const socials = footerData?.find(col => col.column_label === "socials");
@@ -33,7 +99,7 @@ export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSec
 
       {/* Mobile View */}
       <div className="block md:hidden">
-        <MobileFooter resources={resources} socials={socials} />
+        <MobileFooter resources={resources} socials={socials} onFooterEmailOpen={onFooterEmailOpen} />
       </div>
 
       {/* Desktop View */}
@@ -43,6 +109,7 @@ export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSec
           socials={socials}
           expandedSection={expandedSection}
           setExpandedSection={setExpandedSection}
+          onFooterEmailOpen={onFooterEmailOpen}
         />
       </div>
 
@@ -51,7 +118,7 @@ export const FooterSection = ({ footerData, onExpansionHeightChange, expandedSec
 };
 
 // FooterExpansion Component: Displays expanded content at bottom of viewport
-export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightChange }) => {
+export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightChange, onFooterEmailOpen }) => {
   const expansionRef = useRef(null);
   const pathname = usePathname();
 
@@ -131,32 +198,16 @@ export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightCha
             {type === 'contact' && (
               <div className="flex flex-row gap-x-4 justify-center items-center">
                 {footerData.subItems?.map((link, idx) => {
-                  const eventName = getFooterEventName(link.url);
-
                   return (
-                    <Link
+                    <FooterContactIcon
                       key={link.title || idx}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-umami-event={eventName}
-                      data-umami-event-label={link.label || link.title}
-                      data-umami-event-destination={eventName ? link.url : undefined}
-                      data-umami-event-context={eventName ? pathname : undefined}
-                      data-umami-event-variant={eventName ? "footer-contact" : undefined}
-                      className="w-max"
-                      aria-label={link.label || link.title}
-                    >
-                      {link.logo && (
-                        <Image
-                          src={link.logo}
-                          alt={link.label || link.title}
-                          width={16}
-                          height={16}
-                          className="w-4 h-4 invert"
-                        />
-                      )}
-                    </Link>
+                      link={link}
+                      idx={idx}
+                      pathname={pathname}
+                      variant="footer-contact"
+                      onFooterEmailOpen={onFooterEmailOpen}
+                      iconClassName="w-4 h-4 invert"
+                    />
                   );
                 })}
               </div>
@@ -168,7 +219,7 @@ export const FooterExpansion = ({ isOpen, type, footerData, onClose, onHeightCha
 };
 
 // Mobile Component: Resources stacked vertically, socials as icons
-const MobileFooter = ({ resources, socials }) => {
+const MobileFooter = ({ resources, socials, onFooterEmailOpen }) => {
   const pathname = usePathname();
   return (
     <div className="flex flex-col text-[16px] bg-contrast-1 gap-y-6 border-t border-t-1 border-foreground p-4">
@@ -177,32 +228,16 @@ const MobileFooter = ({ resources, socials }) => {
       {socials && (
         <div className="justify-center flex flex-row gap-x-4">
           {socials.subItems.map((link, idx) => {
-            const eventName = getFooterEventName(link.url);
-
             return (
-              <Link
+              <FooterContactIcon
                 key={link.title || idx}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-umami-event={eventName}
-                data-umami-event-label={link.label || link.title}
-                data-umami-event-destination={eventName ? link.url : undefined}
-                data-umami-event-context={eventName ? pathname : undefined}
-                data-umami-event-variant={eventName ? "footer-social" : undefined}
-                className="w-max"
-                aria-label={link.label || link.title}
-              >
-                {link.logo && (
-                  <Image
-                    src={link.logo}
-                    alt={link.label || link.title}
-                    width={16}
-                    height={16}
-                    className="w-[1em] h-[1em] invert"
-                  />
-                )}
-              </Link>
+                link={link}
+                idx={idx}
+                pathname={pathname}
+                variant="footer-social"
+                onFooterEmailOpen={onFooterEmailOpen}
+                iconClassName="w-[1em] h-[1em] invert"
+              />
             );
           })}
         </div>
@@ -212,7 +247,7 @@ const MobileFooter = ({ resources, socials }) => {
 };
 
 // Desktop Component: Resources inline, socials as icons
-const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection }) => {
+const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection, onFooterEmailOpen }) => {
   const pathname = usePathname();
   return (
     <div>
@@ -265,32 +300,16 @@ const DesktopFooter = ({ resources, socials, expandedSection, setExpandedSection
             <div>
               <div className="flex flex-row flex-wrap gap-y-4 gap-x-4">
                 {socials.subItems.map((link, idx) => {
-                  const eventName = getFooterEventName(link.url);
-
                   return (
-                    <Link
+                    <FooterContactIcon
                       key={link.title || idx}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-umami-event={eventName}
-                      data-umami-event-label={link.label || link.title}
-                      data-umami-event-destination={eventName ? link.url : undefined}
-                      data-umami-event-context={eventName ? pathname : undefined}
-                      data-umami-event-variant={eventName ? "footer-social" : undefined}
-                      className="w-max group"
-                      aria-label={link.label || link.title}
-                    >
-                      {link.logo && (
-                        <Image
-                          src={link.logo}
-                          alt={link.label || link.title}
-                          width={16}
-                          height={16}
-                          className="w-[1em] h-[1em] invert"
-                        />
-                      )}
-                    </Link>
+                      link={link}
+                      idx={idx}
+                      pathname={pathname}
+                      variant="footer-social"
+                      onFooterEmailOpen={onFooterEmailOpen}
+                      iconClassName="w-[1em] h-[1em] invert"
+                    />
                   );
                 })}
               </div>
