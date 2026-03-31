@@ -65,6 +65,7 @@ export default async function PostPage({ params }) {
   const postSlug = `/blog/${blog}.md`; // Append .md here to use in the file path
   const postData = await getMarkdownContent(postSlug, "toml");
   const { title, date, extra = {}, taxonomies } = postData.frontMatter;
+  const authorShip = extra.ship || extra.author;
 
   // Get recommended posts
   const allPosts = await getAllBlogPosts();
@@ -95,12 +96,11 @@ export default async function PostPage({ params }) {
           <h3 className="text-3xl font-sans leading-[120%] mb-4">
             {postData.frontMatter.description}
           </h3>
-          <div className="flex flex-row justify-between mb-8">
-            <h3 className="text-large font-mono text-contrast-2 mb-4">{postData.frontMatter.date}</h3>
-            {(extra.author || extra.ship) && (
-              <div className="flex flex-col leading-[120%] mb-4 font-mono text-large tracking-[.01em] text-contrast-2">
-                {extra.author && <div className="mb-[.1em] font-mono">{extra.author}</div>}
-                {extra.ship && <div>{extra.ship}</div>}
+          <div className="flex flex-row justify-between items-baseline gap-x-4 mb-8 font-mono text-base text-contrast-2">
+            <h3 className="shrink-0 whitespace-nowrap">{postData.frontMatter.date}</h3>
+            {authorShip && (
+              <div className="min-w-0 max-w-[70%] text-right leading-[120%] break-words">
+                {authorShip}
               </div>
             )}
           </div>
