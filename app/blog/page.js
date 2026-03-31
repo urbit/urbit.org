@@ -160,12 +160,12 @@ export default async function BlogHome() {
 
                           <div className="flex flex-col">
                             {extra && (extra.author || extra.ship) && (
-                              <div className="hidden md:flex flex-row justify-between font-mono text-right text-base items-end min-w-[160px] text-contrast-2 group-hover:text-primary">
-                                {date && <div>{date}</div>}
+                              <div className="hidden md:flex flex-row justify-between items-end gap-x-4 min-w-0 font-mono text-right md:text-[0.75rem] lg:text-sm text-contrast-2 group-hover:text-primary">
+                                {date && <div className="whitespace-nowrap shrink-0">{date}</div>}
                                 {extra.ship ? (
-                                  <div>{extra.ship}</div>
+                                  <div className="truncate whitespace-nowrap">{extra.ship}</div>
                                 ) : (
-                                  extra.author && <div>{extra.author}</div>
+                                  extra.author && <div className="truncate whitespace-nowrap">{extra.author}</div>
                                 )}
                               </div>
                             )}
