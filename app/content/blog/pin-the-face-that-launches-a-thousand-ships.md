@@ -1,7 +1,21 @@
 +++
+
 title = "Pin the Face that Launches a Thousand Ships"
 date = "2023-04-07"
 description = "A guest post by ~nospex-larsut"
+summary = "~nospex-larsut addresses standard hesitations to learning Hoon, arguing that Hoon's difficulty creates opportunity, Urbit's momentum is accelerating with new apps and hosting options, and learning now positions developers to benefit from early involvement."
+search_terms = [
+    "learn hoon",
+    "hoon hesitations",
+    "pin the face",
+    "urbit apps",
+    "onboarding",
+    "hosting providers",
+    "hoon school",
+    "urbit adoption",
+    "runes",
+    "hoon community"
+]
 [extra]
 image = "https://storage.googleapis.com/media.urbit.org/blog/6a0120a85dcdae970b016766c94c14970b-800wi.jpg"
 author = ""

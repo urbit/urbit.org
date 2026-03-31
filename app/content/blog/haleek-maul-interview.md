@@ -1,7 +1,23 @@
 +++
+
 title = "NFTs, Urbit IDs, and Communities w/ Haleek Maul"
 date = "2021-09-09"
 description = "An interview with the founder of Holdersland"
+summary = "Matt interviews Haleek Maul about Holdersland's Urbit NFT project, exploring how blockchain lowers barriers for Caribbean artists, enables peer-to-peer communities, and creates new financial structures beyond traditional music industry gatekeepers."
+search_terms = [
+    "haleek maul",
+    "holdersland",
+    "urbit ids",
+    "nfts",
+    "sigil art",
+    "digital communities",
+    "caribbean artists",
+    "assembly 2021",
+    "urbit dao",
+    "nft auction",
+    "urbit identity",
+    "crypto communities"
+]
 [extra]
 author = "Matt"
 ship = "~tirwyd-sarmes"

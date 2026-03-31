@@ -1,7 +1,21 @@
 +++
+
 title = "The Promise and Paradox of Decentralization"
 date = "2021-11-17"
 description = "Is centralization just a natural tendency of all networks? Are we destined to have a 'decentralization sandwich?'"
+summary = "Analysis of centralization trends in decentralized networks, examining the decentralization sandwich phenomenon, onramp privatization, and Urbit's approach to balancing identity ownership with open protocols."
+search_terms = [
+    "decentralization paradox",
+    "centralization",
+    "onramps",
+    "ownership of data",
+    "open protocols",
+    "decentralization sandwich",
+    "urbit identity",
+    "centralized platforms",
+    "norms",
+    "protocol governance"
+]
 [extra]
 author = ""
 ship = "~lableg-tadrex"

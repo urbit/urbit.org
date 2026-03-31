@@ -1,7 +1,21 @@
 +++
+
 title = "Layer 2 FAQ"
 date = "2022-03-01"
 description = "Answers to all your lingering L2 questions."
+summary = "Frequently asked questions addressing Urbit's relationship to blockchain layer 2 solutions, clarifying architectural distinctions and explaining why Urbit doesn't require additional scaling layers."
+search_terms = [
+    "layer 2 faq",
+    "l2 planets",
+    "rollup",
+    "bridge",
+    "planet custody",
+    "migrate l1 to l2",
+    "naive rollup",
+    "metamask",
+    "buy planet",
+    "hosting provider"
+]
 [extra]
 image = "https://media.urbit.org/site/posts/essays/l2-faq-artwork.jpg"
 +++

@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 9"
 date = "2026-01-02"
 description = "12 days of Nockmas: Extend, opcode 8"
+summary = "Covers opcode 8 (Extend), pinning a new value to the head of the subject then evaluating the body, implementing variable binding where the new value is accessible at address 2."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+9/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 9",
+    "opcode 8",
+    "extend opcode",
+    "variable binding",
+    "nock extend",
+    "pin value",
+    "subject extension",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 9 extend image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+9/nockmas-day-9-extend-social.png)

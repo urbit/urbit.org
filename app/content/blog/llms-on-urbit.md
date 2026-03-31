@@ -1,7 +1,9 @@
 +++
+
 title = "LLMs on Urbit"
 date = "2026-1-27"
 description = "A walkthrough of how to use current Urbit LLM tooling by ~niblyx-malnus"
+summary = "Analysis of running large language models on personal servers, discussing privacy advantages, local inference options, and architectures for combining AI capabilities with owned infrastructure."
 # aliases = []
 
 [extra]
@@ -14,6 +16,20 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+U
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "guides"]
+search_terms = [
+    "llms on urbit",
+    "clurd",
+    "urbit master",
+    "claude code",
+    "dojo access",
+    "llm tooling",
+    "mcp server",
+    "sailbox",
+    "tarball",
+    "agentic assistants",
+    "groundwire",
+    "llm setup"
+]
 +++
 
 ![llms on urbit image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_LLMs+on+Urbit_Social+16x9.png )

@@ -53,19 +53,22 @@ export function MobileFloatingNav({ anchors, heroHeight = 0 }) {
     const nextIndex = (currentAnchorIndex + 1) % anchors.length;
     const nextAnchor = anchors[nextIndex];
 
-    if (nextAnchor) {
-      const element = document.getElementById(nextAnchor.id);
-      if (element) {
-        const offset = 72; // Match scroll-mt-[72px]
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - offset;
+    if (!nextAnchor) return;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+    const element = document.getElementById(nextAnchor.id);
+    if (!element) {
+      console.warn(`Anchor not found for floating nav: ${nextAnchor.id}`);
+      return;
     }
+
+    const offset = 90;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   };
 
   if (!isVisible || anchors.length === 0) return null;

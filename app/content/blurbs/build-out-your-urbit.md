@@ -1,7 +1,22 @@
 +++
+
 title = "Running your Urbit"
 description = ""
+summary = "Explore different ways to run your own Urbit, from Layer 1 to Layer 2 identities, cloud hosting to local self-hosting, with options for both developers and end users."
 tags = ["configuration", "apps", "urbit-os"]
+search_terms = [
+    "run urbit",
+    "urbit os",
+    "urbit configuration",
+    "urbit apps",
+    "urbit id options",
+    "layer 1 azimuth",
+    "layer 2 azimuth",
+    "self hosting",
+    "private messaging",
+    "distributed systems",
+    "bitcoin compatible"
+]
 lastest-update = "<some-arvo-hash>"
 image = "/images/urbit-dither-placeholder.png"
 imageDark = ""

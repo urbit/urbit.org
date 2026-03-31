@@ -1,4 +1,3 @@
-import React from "react";
 import { getMarkdownContent, getSectionContent } from "./lib/queries";
 import { HeroSlot, SidebarSlot, SidebarPositionSlot } from "./lib/layoutSlots";
 import { HeroSection } from "./components/HeroSection";
@@ -7,12 +6,19 @@ import { HomepageBlurb, PreviewContentBlurb, MicroBlurb, ContentBlurb } from "./
 import { HomepageSubsection } from "./components/HomepageSubsection";
 import { MobileFloatingNav } from "./components/MobileFloatingNav";
 import Markdoc from "@markdoc/markdoc";
+import { markdocHtmlConfig } from "./markdocConfig";
 
 const toPlainObject = (value) => {
   if (value === null || value === undefined) {
     return value;
   }
   return JSON.parse(JSON.stringify(value));
+};
+
+const renderTabContent = (content = "") => {
+  const ast = Markdoc.parse(content);
+  const transformed = Markdoc.transform(ast, markdocHtmlConfig);
+  return Markdoc.renderers.html(transformed);
 };
 
 export default async function HomePage() {
@@ -32,7 +38,11 @@ export default async function HomePage() {
   const loadBlurb = async (blurbSlug) => {
     if (!blurbsBySlug[blurbSlug]) {
       try {
-        const blurbData = await getMarkdownContent(`blurbs/${blurbSlug}.md`, "toml");
+        const blurbData = await getMarkdownContent(
+          `blurbs/${blurbSlug}.md`,
+          "toml",
+          markdocHtmlConfig
+        );
         const renderedContent = Markdoc.renderers.html(blurbData.content);
 
         blurbsBySlug[blurbSlug] = toPlainObject({
@@ -40,6 +50,10 @@ export default async function HomePage() {
           title: blurbData.frontMatter.title,
           description: blurbData.frontMatter.description,
           content: renderedContent,
+          tabs: (blurbData.frontMatter.tabs || []).map((tab) => ({
+            title: tab.title,
+            content: renderTabContent(tab.content || ""),
+          })),
           image: blurbData.frontMatter.image || "",
           imageDark: blurbData.frontMatter.imageDark || "",
           references: (blurbData.frontMatter.references || []).map(ref => ({
@@ -148,7 +162,7 @@ export default async function HomePage() {
           if (!sectionBlurb) return null;
 
           return (
-            <section key={section.id} id={section.id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px]">
+            <section key={section.id} id={section.id} className="mb-16 scroll-mt-[90px] md:scroll-mt-[80px]">
               <div className="border-t border-contrast-2">
               </div>
 
@@ -159,6 +173,7 @@ export default async function HomePage() {
                 title={sectionBlurb.title}
                 description={sectionBlurb.description}
                 content={sectionBlurb.content}
+                tabs={sectionBlurb.tabs}
                 image={sectionBlurb.image}
                 imageDark={sectionBlurb.imageDark}
                 references={sectionBlurb.references}
@@ -179,6 +194,7 @@ export default async function HomePage() {
                       title={blurb.title}
                       description={blurb.description}
                       content={blurb.content}
+                      tabs={blurb.tabs}
                       image={blurb.image}
                       imageDark={blurb.imageDark}
                       references={blurb.references}
@@ -204,6 +220,7 @@ export default async function HomePage() {
                 title={blurbsBySlug[sidebarBlurbSlug].title}
                 description={blurbsBySlug[sidebarBlurbSlug].description}
                 content={blurbsBySlug[sidebarBlurbSlug].content}
+                tabs={blurbsBySlug[sidebarBlurbSlug].tabs}
                 image={blurbsBySlug[sidebarBlurbSlug].image}
                 imageDark={blurbsBySlug[sidebarBlurbSlug].imageDark}
                 references={blurbsBySlug[sidebarBlurbSlug].references}
@@ -218,7 +235,7 @@ export default async function HomePage() {
             if (!sectionBlurb) return null;
 
             return (
-              <section key={section.id} id={`mobile-${section.id}`} className="mb-12 scroll-mt-[72px]">
+              <section key={section.id} id={`mobile-${section.id}`} className="mb-12 scroll-mt-[90px]">
                 {/* Section divider */}
                 <div className="border-t border-contrast-2 mb-8"></div>
 
@@ -229,6 +246,7 @@ export default async function HomePage() {
                   title={sectionBlurb.title}
                   description={sectionBlurb.description}
                   content={sectionBlurb.content}
+                  tabs={sectionBlurb.tabs}
                   image={sectionBlurb.image}
                   imageDark={sectionBlurb.imageDark}
                   references={sectionBlurb.references}
@@ -252,6 +270,7 @@ export default async function HomePage() {
                         title={blurb.title}
                         description={blurb.description}
                         content={blurb.content}
+                        tabs={blurb.tabs}
                         image={blurb.image}
                         imageDark={blurb.imageDark}
                         references={blurb.references}
@@ -264,6 +283,7 @@ export default async function HomePage() {
                         title={blurb.title}
                         description={blurb.description}
                         content={blurb.content}
+                        tabs={blurb.tabs}
                         image={blurb.image}
                         imageDark={blurb.imageDark}
                         references={blurb.references}

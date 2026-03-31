@@ -1,7 +1,9 @@
 +++
+
 title = "Building 'Beyond Beginner Guitar' on Urbit"
 date = "2025-12-09"
 description = "~nordus-mocwyl walks through what it took to build a guitar course and member community on Urbit"
+summary = "~nordus-mocwyl details building an Urbit-powered guitar course business today with YouTube discovery, email communication, and Stripe payments, while dreaming of a fully decentralized flow with LLM recommendations, cryptocurrency payments, and native course syncing."
 # aliases = []
 
 [extra]
@@ -14,6 +16,19 @@ imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Buil
 # imageCardDark =
 # imageIndexDark =
 tags =  ["courseware", "hawk", "userspace"]
+search_terms = [
+    "beyond beginner guitar",
+    "hawk courseware",
+    "urbit business",
+    "guitar course",
+    "urbit hosting",
+    "stripe payments",
+    "crypto payments",
+    "access control",
+    "urbit userspace",
+    "course community",
+    "self sovereign"
+]
 +++
 
 

@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useLayoutSlots } from "../lib/layoutSlots";
 import { HeaderNav } from "./HeaderNav";
 import { FooterSection, FooterExpansion } from "./FooterSection";
+import { FooterContactModal } from "./FooterContactModal";
+import { SearchModal } from "./SearchModal";
+import { GetUrbitModal } from "./GetUrbitModal";
 
 /**
  * LayoutFrame - Client component that renders the frame with hero/sidebar slots
@@ -14,6 +17,69 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
   const { hero, sidebar, sidebarPosition, sidebarVisible, sidebarTransitionsEnabled } = useLayoutSlots();
   const [expansionHeight, setExpansionHeight] = useState(0);
   const [expandedSection, setExpandedSection] = useState(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isGetUrbitOpen, setIsGetUrbitOpen] = useState(false);
+  const [isFooterContactOpen, setIsFooterContactOpen] = useState(false);
+
+  const openSearch = useCallback(() => {
+    setIsSearchOpen(true);
+  }, []);
+
+  const closeSearch = useCallback(() => {
+    setIsSearchOpen(false);
+  }, []);
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen((prev) => !prev);
+  }, []);
+
+  const openGetUrbit = useCallback(() => {
+    setIsGetUrbitOpen(true);
+  }, []);
+
+  const closeGetUrbit = useCallback(() => {
+    setIsGetUrbitOpen(false);
+  }, []);
+
+  const openFooterContact = useCallback(() => {
+    setIsFooterContactOpen(true);
+  }, []);
+
+  const closeFooterContact = useCallback(() => {
+    setIsFooterContactOpen(false);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.defaultPrevented) return;
+      if (!(event.metaKey || event.ctrlKey)) return;
+      if (String(event.key).toLowerCase() !== "k") return;
+
+      if (isSearchOpen) {
+        event.preventDefault();
+        toggleSearch();
+        return;
+      }
+
+      const target = event.target;
+      if (target?.tagName) {
+        const tag = target.tagName.toLowerCase();
+        if (["input", "textarea", "select"].includes(tag)) {
+          return;
+        }
+      }
+      if (target?.isContentEditable) return;
+      if (typeof target?.closest === "function" && target.closest("[contenteditable='true']")) {
+        return;
+      }
+
+      event.preventDefault();
+      toggleSearch();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isSearchOpen, toggleSearch]);
 
   // Separate resources and socials from footerData for FooterExpansion
   const resources = footerData?.find(col => col.column_label === "resources");
@@ -21,6 +87,10 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
 
   return (
     <>
+      <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
+      <GetUrbitModal isOpen={isGetUrbitOpen} onClose={closeGetUrbit} />
+      <FooterContactModal isOpen={isFooterContactOpen} onClose={closeFooterContact} />
+
       {/* Mobile View - No Frame */}
       <div className="md:hidden min-h-screen flex flex-col">
         <HeaderNav
@@ -30,13 +100,17 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
           announcements={announcements}
           urbitExplainedSections={urbitExplainedSections}
           runningUrbitSections={runningUrbitSections}
+          onSearchOpen={openSearch}
+          isSearchOpen={isSearchOpen}
+          onGetUrbitOpen={openGetUrbit}
+          isGetUrbitOpen={isGetUrbitOpen}
         />
 
         {/* Optional Hero - Mobile */}
         {hero && <div className="w-full">{hero}</div>}
 
         <div className="flex-grow mt-[var(--header-height)] z-0">{children}</div>
-        <FooterSection footerData={footerData} />
+        <FooterSection footerData={footerData} onFooterEmailOpen={openFooterContact} />
       </div>
 
       {/* Desktop View - With Frame */}
@@ -78,7 +152,15 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
               <svg className="absolute bottom-[-0.5px] left-0 w-full h-full pointer-events-none" preserveAspectRatio="none" style={{ display: 'block' }}>
                 <line x1="0" y1="100%" x2="100%" y2="100%" stroke="var(--foreground)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
               </svg>
-              <HeaderNav nav={nav} homepage={homepage} inFrame={true} />
+              <HeaderNav
+                nav={nav}
+                homepage={homepage}
+                inFrame={true}
+                onSearchOpen={openSearch}
+                isSearchOpen={isSearchOpen}
+                onGetUrbitOpen={openGetUrbit}
+                isGetUrbitOpen={isGetUrbitOpen}
+              />
             </div>
             <div className="h-[55px] w-[23px] flex-shrink-0 ml-[-0.5px]">
               <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style={{ display: 'block' }} viewBox="0 0 23 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,6 +230,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
                   onExpansionHeightChange={setExpansionHeight}
                   expandedSection={expandedSection}
                   setExpandedSection={setExpandedSection}
+                  onFooterEmailOpen={openFooterContact}
                 />
               </div>
               <div className="h-[55px] w-[23px] flex-shrink-0 ml-[-0.5px]">
@@ -192,6 +275,7 @@ export function LayoutFrame({ children, nav, homepage, footerData, mobileNav, an
               footerData={socials}
               onClose={() => setExpandedSection(null)}
               onHeightChange={setExpansionHeight}
+              onFooterEmailOpen={openFooterContact}
             />
           </div>
         </div>

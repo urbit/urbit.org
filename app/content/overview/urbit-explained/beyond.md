@@ -1,6 +1,8 @@
 ---
+
 title: "Beyond"
 description: "Building towards a decentralized future for a distributed network"
+summary: "Overview of Urbit's ecosystem and development goals, including the Urbit Foundation, private companies like Tlon and Native Planet, and technical contributions such as Named Data Networking. Explains how each component can be used independently and resources for contributors."
 ---
 
 We are building Urbit because we want to take computing beyond what seems like the inevitable mess of humanity’s current computing trajectory: unfixable security vulnerabilities, hopeless bitrot, endless spam, and deeply structural centralization. We want to build a future where we can have computers that we can trust. Computers that can last a lifetime. Computers that we can use free of extractive middlemen who want to hijack our attention, steal our data, and manipulate our behavior to their own ends. 

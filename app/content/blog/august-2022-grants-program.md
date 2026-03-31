@@ -1,7 +1,21 @@
 +++
+
 title = "August Grants Program Review"
 date = "2022-08-30"
 description = "The completion of the first cohort of Hoon School Live and the following App School Live program minted dozens of capable new Hoon developers. These developers are completing applications, closing out bounties, and putting together proposals at a rapid pace, with more to come as Assembly 2022 draws near."
+summary = "Article examining grants distribution."
+search_terms = [
+    "grants program",
+    "hoon school",
+    "app school",
+    "grant review",
+    "bounties",
+    "apprenticeships",
+    "urbit foundation grants",
+    "completed grants",
+    "proposals",
+    "assembly 2022"
+]
 [extra]
 author = ""
 ship = "~sarlev-sarsen"

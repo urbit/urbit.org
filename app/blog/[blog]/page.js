@@ -17,10 +17,11 @@ export async function generateMetadata({ params }, parent) {
   const { blog } = await params;
   const postSlug = `/blog/${blog}.md`;
   const postData = await getMarkdownContent(postSlug, "toml");
+  const description = `${postData.frontMatter.description}`;
 
   const metadata = {
     title: `${postData.frontMatter.title} • Blog`,
-    description: `${postData.frontMatter.description}`,
+    description,
   };
 
   // Only add openGraph image if it exists

@@ -1,7 +1,9 @@
 +++
+
 title = "Contributor Spotlight: ~mastyr-bottec"
 date = "2025-11-25"
 description = "A conversation with runtime developer ~mastyr-bottec on his work to make Urbit store large amounts of data"
+summary = "Runtime developer ~mastyr-bottec explains vere64 work enabling Urbit to store large amounts of data, including migrations and lifting file size limits."
 # aliases = []
 
 [extra]
@@ -14,6 +16,19 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA+mastyr
 # imageCardDark =
 # imageIndexDark =
 tags =  ["spotlight", "vere64", "runtime"]
+search_terms = [
+    "contributor spotlight",
+    "mastyr bottec",
+    "vere64",
+    "runtime developer",
+    "large data",
+    "loom size",
+    "runtime migration",
+    "directed messaging",
+    "nock runtime",
+    "storage scaling",
+    "urbit runtime"
+]
 +++
 
 > **\~sarlev:** So, starting at the top, what's the first thing that drew you into the idea that we needed to throw away and rewrite the entire network computing stack? Or are you even sold on that?

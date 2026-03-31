@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 7"
 date = "2025-12-31"
 description = "12 days of Nockmas: Conditional, opcode 6"
+summary = "Covers opcode 6 (Conditional), evaluating a test formula and returning either branch c for true (0) or d for false (1), implementing if-then-else logic."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 7",
+    "opcode 6",
+    "conditional opcode",
+    "if then else",
+    "nock conditional",
+    "loobean",
+    "composite opcode",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 7 conditional image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+7/nockmas-day-7-conditional-social.png)

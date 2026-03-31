@@ -1,7 +1,23 @@
 +++
+
 title = "The Gang Solves the Gas Crisis"
 date = "2021-05-13"
 description = "How we're making Urbit ID affordable again"
+summary = "Jonathan Paprocki explains Tlon's naive rollups layer-2 solution for reducing Urbit ID gas costs by 65x, detailing user experience changes, one-way migration, roller setup, and security guarantees that preserve ship sovereignty."
+search_terms = [
+    "gas crisis",
+    "layer 2",
+    "naive rollups",
+    "urbit id fees",
+    "ethereum gas",
+    "bridge update",
+    "roller node",
+    "layer 2 planets",
+    "layer 1 vs 2",
+    "azimuth changes",
+    "star owners",
+    "rollup security"
+]
 
 [extra]
 author = "Jonathan Paprocki"

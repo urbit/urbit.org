@@ -1,10 +1,23 @@
 +++
+
 title = "Urbit Grants and mid-2019 Gifts"
 date = "2019-06-09"
 description = "Announcing an upcoming Urbit grants program and star gifts for Mid-2019."
+summary = "Article examining grants distribution."
 aliases = [
   "/posts/essays/urbit-grants-and-mid-2019-gifts",
   "/posts/urbit-grants-and-mid-2019-gifts"
+]
+search_terms = [
+    "urbit grants",
+    "mid 2019 gifts",
+    "star gifts",
+    "developer rewards",
+    "grants program",
+    "azimuth stars",
+    "community contributors",
+    "gift program",
+    "urbit awards"
 ]
 
 [taxonomies]

@@ -1,7 +1,20 @@
 +++
+
 title = "Start and stop applications on your urbit"
 description = "Control application lifecycles with dojo commands"
+summary = "Manage applications with |start, |suspend, |pause, and |revive commands to control specific agents, suspend desks, prevent updates, or restart suspended agents."
 tags = ["dojo"]
+search_terms = [
+    "start app",
+    "stop app",
+    "dojo start",
+    "suspend desk",
+    "pause desk",
+    "revive app",
+    "agent control",
+    "app lifecycle",
+    "desk updates"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

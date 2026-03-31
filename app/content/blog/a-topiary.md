@@ -1,7 +1,23 @@
 +++
+
 title = "A Topiary: Hypertext and Urbit"
 date = "2021-06-13"
 description = "A brief history of hypertext and Urbit networking"
+summary = "Historical overview of hypertext from Vannevar Bush's Memex through Ted Nelson's Project Xanadu to the modern web, explaining Urbit's %graph-store data structure as a peer-to-peer alternative to proprietary platform graph databases."
+search_terms = [
+    "hypertext history",
+    "urbit networking",
+    "graph store",
+    "linked data",
+    "project xanadu",
+    "world wide web",
+    "social networks",
+    "peer to peer",
+    "graph databases",
+    "urbit graph",
+    "digital hypertext",
+    "network protocols"
+]
 
 [extra]
 author = "Reid Scoggin"

@@ -1,6 +1,8 @@
 ---
+
 title: "Introduction"
 description: "A comprehensive guide to getting started with Urbit"
+summary: "Introduction to running Urbit covering the two required steps of acquiring an Urbit ID and booting Urbit OS, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
 ---
 
 "Running Urbit" consists of two core steps:

@@ -1,10 +1,25 @@
 +++
+
 title = "Landscape: A Portrait"
 date = "2019-09-02"
 description = "On the latest Urbit user interface, and the interfaces to come."
+summary = "Visual and technical introduction to Landscape interface design, explaining component architecture, interaction patterns, and principles guiding user experience development."
 aliases = [
   "/posts/essays/landscape-a-portrait/",
   "/posts/landscape-a-portrait"
+]
+search_terms = [
+    "landscape ui",
+    "urbit interface",
+    "modulo",
+    "userspace",
+    "indigo",
+    "chat publish",
+    "urbit apps",
+    "eyre vane",
+    "create landscape app",
+    "interface roadmap",
+    "urbit design"
 ]
 
 [extra]

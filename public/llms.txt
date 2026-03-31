@@ -1,0 +1,32 @@
+# urbit.org
+> Curated entry points for AI agents, crawlers, and other automated readers.
+
+## Start here
+- [Homepage](https://urbit.org/) — Overview of Urbit with links to getting started, running a ship, and the broader ecosystem.
+- [Overview](https://urbit.org/overview) — Introduction to Urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. Covers Urbit ID and Urbit OS as core components.
+- [Urbit Explained](https://urbit.org/overview/urbit-explained) — Introduction to Urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. Covers Urbit ID and Urbit OS as core components.
+- [Running Urbit](https://urbit.org/overview/running-urbit) — Introduction to running Urbit covering the two required steps of acquiring an Urbit ID and booting Urbit OS, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops.
+- [Get On The Network](https://urbit.org/get-on-the-network) — Entry points for getting on Urbit, including hosted options and self-hosting resources.
+- [https://urbit.org/ecosystem](https://urbit.org/ecosystem)
+- [https://urbit.org/blog](https://urbit.org/blog)
+
+## Running Urbit
+- [Get Urbit ID](https://urbit.org/overview/running-urbit/get-urbit-id) — Methods for obtaining an Urbit ID including purchasing Layer 1 Azimuth identities on NFT marketplaces, acquiring Layer 2 identities from vendors using Bitcoin or fiat, and receiving invitations from existing users.
+- [Run Urbit OS](https://urbit.org/overview/running-urbit/run-urbit-os) — Methods for running an Urbit node after acquiring an identity, covering local VPS deployment, Native Planet hardware, and Groundseg with explanations of networking tradeoffs and sovereignty implications for each approach.
+- [Hosting Providers](https://urbit.org/overview/running-urbit/hosting-providers) — Third-party managed hosting services for Urbit ships that handle technical infrastructure management, with coverage of providers like Tlon, incentives for hosts, and tradeoffs compared to self-hosting.
+- [Common Commands](https://urbit.org/overview/running-urbit/common-commands) — Reference guide for essential dojo commands including ship management operations, application installation and status checking, azimuth state verification, memory optimization, moon identity creation, and shutdown procedures.
+- [Resources](https://urbit.org/overview/running-urbit/resources) — Curated collection of Urbit documentation, tutorials, and community resources including self-hosting guides, the Urbit Systems Technical Journal, Hoon learning materials, and related blogs for continued learning.
+- [Support](https://urbit.org/overview/running-urbit/support) — Support resources for Urbit users encountering issues or with questions, providing links to community forums and contact points for assistance from the Urbit community and core developers.
+
+## Understanding Urbit
+- [Urbit ID](https://urbit.org/overview/urbit-explained/urbit-id) — Urbit ID is the naming and addressing system for the network, with five tiers from galaxies to comets. Each identity provides cryptographic authentication and contact info via the Azimuth contracts on Ethereum.
+- [Urbit OS](https://urbit.org/overview/urbit-explained/urbit-os) — Urbit OS is an overlay system built on the Nock virtual machine, with a functional language, kernel, and core modules like filesystem and networking. It keeps state as a pure function of its event history.
+- [Beyond](https://urbit.org/overview/urbit-explained/beyond) — Overview of Urbit's ecosystem and development goals, including the Urbit Foundation, private companies like Tlon and Native Planet, and technical contributions such as Named Data Networking. Explains how each component can be used independently and resources for contributors.
+
+## Building on Urbit (docs.urbit.org)
+- [https://docs.urbit.org/](https://docs.urbit.org/) — Start here for official Urbit documentation and orientation material.
+- [https://docs.urbit.org/tutorials/](https://docs.urbit.org/tutorials/) — Step-by-step tutorials for building and configuring Urbit systems.
+- [https://docs.urbit.org/glossary/](https://docs.urbit.org/glossary/) — Definitions for Urbit terms, components, and system concepts.
+- [https://docs.urbit.org/reference/hoon/](https://docs.urbit.org/reference/hoon/) — Reference documentation for the Hoon programming language.
+- [https://docs.urbit.org/reference/nock/](https://docs.urbit.org/reference/nock/) — Reference documentation for the Nock combinator language.
+- [https://docs.urbit.org/reference/arvo/](https://docs.urbit.org/reference/arvo/) — Reference documentation for Arvo, the Urbit kernel.

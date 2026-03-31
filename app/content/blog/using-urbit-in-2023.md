@@ -1,7 +1,21 @@
 +++
+
 title = "Using Urbit in 2023"
 date = "2023-02-06"
 description = "There are more ways to run Urbit than ever, and more options coming soon."
+summary = "Practical guide for new users covering initial setup, basic operations, landscape navigation, application recommendations, and community involvement opportunities."
+search_terms = [
+    "using urbit 2023",
+    "hosting providers",
+    "command line",
+    "cloud hosting",
+    "port app",
+    "windows binary",
+    "native planet",
+    "tlon hosting",
+    "run urbit",
+    "vps"
+]
 [extra]
 image = "https://storage.googleapis.com/media.urbit.org/blog/usingurbit-2023.jpg"
 author = "Josh Lehman"
