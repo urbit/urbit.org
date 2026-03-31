@@ -1,7 +1,21 @@
 +++
+
 title = "The DAO as a Lesson in Decentralized Governance"
 date = "2016-06-23"
 description = "What's the right lesson for the decentralization community to learn from the collapse of the DAO?"
+summary = "Case study analysis of Ethereum DAO collapse, examining smart contract vulnerabilities, governance failures, and lessons applied to Urbit's constitutional framework."
+search_terms = [
+  "dao collapse",
+  "decentralized governance",
+  "blockchain governance",
+  "decentralization theater",
+  "ethereum fork",
+  "code is law",
+  "sovereignty conserved",
+  "dao rollback",
+  "governance institutions",
+  "urbit governance"
+]
 aliases = [
   "/posts/essays/the-dao-as-a-lesson-in-decentralized-governance",
   "/posts/the-dao-as-a-lesson-in-decentralized-governance",

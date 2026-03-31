@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Modal } from "./Modal";
+import { FIGMA_LIGHTBOX_MODAL_PROPS, Modal } from "./Modal";
 
 /**
  * HeroSection - Full viewport width hero section
@@ -68,18 +68,20 @@ export function HeroSection({ hero }) {
   };
 
   return (
-    <section
-      className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] z-0 hero-background"
-      {...(backgroundImage && {
-        style: {
-          backgroundImage: getResponsiveBackgroundImage(backgroundImage),
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          transition: 'background-size 0.5s ease-in-out, min-height 0.5s ease-in-out',
-        }
-      })}
-    >
+    <>
+      <section
+        className="relative flex items-center justify-center md:items-start md:justify-start md:pt-[15vh] min-h-dvh md:min-h-[calc(100vh+300px)] hero-background"
+        {...(backgroundImage && {
+          style: {
+            backgroundImage: getResponsiveBackgroundImage(backgroundImage),
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            transition: 'background-size 0.5s ease-in-out, min-height 0.5s ease-in-out',
+          }
+        })}
+      >
+
       {/* Fallback for browsers without image-set support */}
       {backgroundImage && (
         <style jsx>{`
@@ -281,44 +283,54 @@ export function HeroSection({ hero }) {
         </div>
 
         {/* Desktop Tertiary Link */}
-        {tertiaryLink && (
-          tertiaryLink.link.startsWith('http') ? (
-            <button
-              onClick={() => setIsModalOpen(true)}
-              data-umami-event="cta-hero-tertiary-desktop-quickstart"
-              data-umami-event-label={tertiaryLink.label}
-              data-umami-event-destination={tertiaryLink.link}
-              data-umami-event-context="hero"
-              data-umami-event-variant="desktop"
-              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
-            >
-              {tertiaryLink.label}
-            </button>
-          ) : (
-            <Link
-              href={tertiaryLink.link}
-              data-umami-event="cta-hero-tertiary-desktop-quickstart"
-              data-umami-event-label={tertiaryLink.label}
-              data-umami-event-destination={tertiaryLink.link}
-              data-umami-event-context="hero"
-              data-umami-event-variant="desktop"
-              className="hidden md:block font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
-            >
-              {tertiaryLink.label}
-            </Link>
-          )
-        )}
+        <div className="hidden md:flex items-center gap-4">
+          {tertiaryLink && (
+            tertiaryLink.link.startsWith('http') ? (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                data-umami-event="cta-hero-tertiary-desktop-quickstart"
+                data-umami-event-label={tertiaryLink.label}
+                data-umami-event-destination={tertiaryLink.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="desktop"
+                className="font-mono text-sm text-contrast-2 hover:text-primary transition-colors text-left"
+              >
+                {tertiaryLink.label}
+              </button>
+            ) : (
+              <Link
+                href={tertiaryLink.link}
+                data-umami-event="cta-hero-tertiary-desktop-quickstart"
+                data-umami-event-label={tertiaryLink.label}
+                data-umami-event-destination={tertiaryLink.link}
+                data-umami-event-context="hero"
+                data-umami-event-variant="desktop"
+                className="font-mono text-sm text-contrast-2 hover:text-primary transition-colors"
+              >
+                {tertiaryLink.label}
+              </Link>
+            )
+          )}
+        </div>
       </div>
 
+      </section>
+
       {/* Leaving Site Modal */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2 className="text-2xl font-serif italic font-semibold text-primary mb-4">
-		  Quickstart with Tlon Messenger
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        {...FIGMA_LIGHTBOX_MODAL_PROPS}
+      >
+        <h2 className="mb-4 font-serif text-[48px] font-[700] leading-[0.94] tracking-[-0.03em] text-accent-1">
+          Quickstart with Tlon Messenger
         </h2>
-        <p className="font-sans text-large leading-120 text-primary mb-6">
-		  Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.</p>
-        <p className="font-sans text-large leading-120 text-primary mb-6">
-		  The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!</p>
+        <p className="mb-6 font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
+          Tlon will onboard you to Urbit without needing to run your own node. They provide free hosting and a free Urbit ID with their mobile app.
+        </p>
+        <p className="mb-6 font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
+          The link below will get you set up and added to the Urbit Foundation public group; say hello and someone will show you around!
+        </p>
         <div className="flex gap-3 justify-end">
           <Link
             href="/overview/running-urbit"
@@ -348,6 +360,6 @@ export function HeroSection({ hero }) {
           </a>
         </div>
       </Modal>
-    </section>
+    </>
   );
 }

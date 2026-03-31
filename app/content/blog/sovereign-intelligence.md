@@ -1,7 +1,9 @@
 +++
+
 title = "Sovereign Intelligence"
 date = "2026-1-13"
 description = "Urbit offers a bicameral future for personal AI. One side stable. One side fluid. Each stronger with the other"
+summary = "Vision statement for personal AI systems running on owned infrastructure, arguing for models that augment rather than replace human decision-making while protecting user privacy."
 # aliases = []
 
 [extra]
@@ -14,6 +16,19 @@ imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Sove
 # imageCardDark =
 # imageIndexDark =
 tags =  ["AI", "privacy", "sovereignty"]
+search_terms = [
+    "sovereign intelligence",
+    "personal ai",
+    "urbit ai",
+    "sidecar",
+    "data sovereignty",
+    "urbit id",
+    "urwasm",
+    "ai agents",
+    "bicameral mind",
+    "identity and memory",
+    "context without custody"
+]
 +++
 
 

@@ -1,7 +1,23 @@
 +++
+
 title = "After the Machine War"
 description = "The date is January 1, 2050. The place, New York City. The vibe...subdued."
+summary = "Speculative fiction set in 2050 New York City depicting a dystopian future where iThink microchips deliver drug-induced compliance, surveillance is pervasive, and content moderation is a mundane job in a world stripped of natural experiences."
 date = "2021-03-14"
+search_terms = [
+    "after machine war",
+    "speculative fiction",
+    "digital dystopia",
+    "urbit future",
+    "permanent identities",
+    "peer to peer",
+    "2050 future",
+    "content moderation",
+    "megacorp world",
+    "surveillance tech",
+    "urbit optimism",
+    "future internet"
+]
 
 [extra]
 author = "Simon Kovacs"

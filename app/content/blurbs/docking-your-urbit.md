@@ -1,7 +1,20 @@
 +++
+
 title = "Docking your urbit"
 description = "Install a specific runtime version into your pier"
+summary = "Use the dock command to copy the Vere runtime binary into your pier, making it self-contained with a specific runtime version for portable deployment."
 tags = ["runtime"]
+search_terms = [
+    "dock command",
+    "urbit dock",
+    "runtime version",
+    "vere binary",
+    "pier runtime",
+    "version pinning",
+    "docked pier",
+    "run urbit",
+    "runtime install"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

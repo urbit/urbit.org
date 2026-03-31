@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { NewsletterSignup } from "./NewsletterSignup";
@@ -47,20 +47,54 @@ const getHeaderNavEvent = (navItem) => {
   return `nav-header-${buildHeaderNavSlug(navItem)}`;
 };
 
-export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcements, urbitExplainedSections, runningUrbitSections }) => {
+const isGetUrbitNavItem = (navItem) => navItem?.url === "/overview/running-urbit";
+
+const SearchIcon = ({ className = "" }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.3"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <circle cx="11" cy="11" r="7" />
+    <line x1="16.65" y1="16.65" x2="21" y2="21" />
+  </svg>
+);
+
+export const HeaderNav = ({
+  nav,
+  homepage,
+  inFrame = false,
+  mobileNav,
+  announcements,
+  urbitExplainedSections,
+  runningUrbitSections,
+  onSearchOpen,
+  isSearchOpen,
+  onGetUrbitOpen,
+  isGetUrbitOpen,
+}) => {
   const headerRef = useRef(null);
 
   const currentRoute = usePathname();
 
   return (
     <React.Fragment>
-      <MobileNav
+        <MobileNav
         nav={mobileNav || nav}
         currentRoute={currentRoute}
         announcements={announcements}
         urbitExplainedSections={urbitExplainedSections}
-        runningUrbitSections={runningUrbitSections}
-      />
+          runningUrbitSections={runningUrbitSections}
+          onSearchOpen={onSearchOpen}
+          isSearchOpen={isSearchOpen}
+          onGetUrbitOpen={onGetUrbitOpen}
+          isGetUrbitOpen={isGetUrbitOpen}
+        />
 
       <section
         ref={headerRef}
@@ -70,12 +104,25 @@ export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcem
         )}
       >
         {inFrame ? (
-          <GlobalNav nav={nav} />
+                <GlobalNav
+                  nav={nav}
+                  onSearchOpen={onSearchOpen}
+                  isSearchOpen={isSearchOpen}
+                  onGetUrbitOpen={onGetUrbitOpen}
+                  isGetUrbitOpen={isGetUrbitOpen}
+                />
+
         ) : (
           <div className="h-auto md:flex md:flex-row md:items-center md:justify-between my-4 md:my-8">
             <div className="w-full leading-[1cap] flex justify-start h-full ">
               <div className="col-span-5 hidden md:flex w-full items-center justify-end">
-                <GlobalNav nav={nav} />
+          <GlobalNav
+            nav={nav}
+            onSearchOpen={onSearchOpen}
+            isSearchOpen={isSearchOpen}
+            onGetUrbitOpen={onGetUrbitOpen}
+            isGetUrbitOpen={isGetUrbitOpen}
+          />
               </div>
             </div>
           </div>
@@ -85,22 +132,43 @@ export const HeaderNav = ({ nav, homepage, inFrame = false, mobileNav, announcem
   );
 };
 
-const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, runningUrbitSections }) => {
+const MobileNav = ({
+  nav,
+  currentRoute,
+  announcements,
+  urbitExplainedSections,
+  runningUrbitSections,
+  onSearchOpen,
+  onGetUrbitOpen,
+  isGetUrbitOpen,
+}) => {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
   const routeMap = {
     "": "",
-    "get-on-the-network": "Run Urbit",
+    "get-on-the-network": "Get Urbit",
     overview: "Overview",
     blog: "Blog",
     ecosystem: "Ecosystem",
   };
   const splitRoute = currentRoute.split("/");
 
-  useEffect(() => { }, [menuIsOpen]);
-
   const toggleMenu = () => {
     setMenuOpen(!menuIsOpen);
+  };
+
+  const handleSearchOpen = () => {
+    if (menuIsOpen) {
+      setMenuOpen(false);
+    }
+    onSearchOpen?.();
+  };
+
+  const handleGetUrbitOpen = () => {
+    if (menuIsOpen) {
+      setMenuOpen(false);
+    }
+    onGetUrbitOpen?.();
   };
 
   return (
@@ -125,66 +193,70 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
                 }
               }}
               href="/"
-              className="flex w-36 h-16 relative items-center pl-[.7em]"
+              className="flex w-[72px] h-8 relative items-center pl-[.6em]"
             >
               {/* TODO fix icons for supporting darkmode */}
               <Image
                 src="/icons/urbit-neu.svg"
                 alt="Urbit wordmark"
-                width={140}
-                height={24}
-                className="pb-1.5"
+                width={72}
+                height={13}
+                className="pb-1 w-[72px] h-auto"
               />
               <Image
                 src="/icons/urbit-neu-dark.svg"
                 alt="Urbit wordmark"
-                width={140}
-                height={24}
-                className="pb-1.5 hidden"
+                width={72}
+                height={13}
+                className="pb-1 w-[72px] h-auto hidden"
               />
             </Link>
           </div>
-          <div
-            onClick={toggleMenu}
-            className="col-span-8 w-full flex pr-[.7em] items-center justify-end"
-          >
+          <div className="col-span-8 w-full flex pr-[.7em] items-center justify-end gap-3">
             <span className="pr-4">{routeMap[splitRoute[1]]}</span>
-            <span className="">{menuIsOpen
-              ?
-              <div>
-                <Image
-                  src="/icons/hamburger-dark.svg"
-                  alt="hamburger menu open"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6 hidden"
-                />
-                <Image
-                  src="/icons/hamburger.svg"
-                  alt="hamburger menu open"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6"
-                />
-              </div>
-              :
-              <div>
-                <Image
-                  src="/icons/hamburger-dark.svg"
-                  alt="hamburger menu closed"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6 hidden"
-                />
-                <Image
-                  src="/icons/hamburger.svg"
-                  alt="hamburger menu closed"
-                  width={28}
-                  height={24}
-                  className="w-7 h-6"
-                />
-              </div>
-            }</span>
+            <button
+              type="button"
+              onClick={toggleMenu}
+              aria-label={menuIsOpen ? "Close menu" : "Open menu"}
+              className="flex items-center"
+            >
+              {menuIsOpen
+                ?
+                <div>
+                  <Image
+                    src="/icons/hamburger-dark.svg"
+                    alt="hamburger menu open"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6 hidden"
+                  />
+                  <Image
+                    src="/icons/hamburger.svg"
+                    alt="hamburger menu open"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6"
+                  />
+                </div>
+                :
+                <div>
+                  <Image
+                    src="/icons/hamburger-dark.svg"
+                    alt="hamburger menu closed"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6 hidden"
+                  />
+                  <Image
+                    src="/icons/hamburger.svg"
+                    alt="hamburger menu closed"
+                    width={28}
+                    height={24}
+                    className="w-7 h-6"
+                  />
+                </div>
+              }
+            </button>
           </div>
         </div>
         {/* Persistent Submenus - Mobile Only */}
@@ -202,18 +274,67 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
           )}
         >
           {/* Internal Navigation */}
-          <div className="px-4 py-4 flex flex-col gap-6">
+          <div className="px-4 py-4 flex flex-col gap-2">
+            {onSearchOpen && (
+              <button
+                type="button"
+                onClick={handleSearchOpen}
+                aria-label="Open search"
+                data-umami-event="cta-header-search"
+                data-umami-event-label="Search"
+                data-umami-event-destination="search-modal"
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="mobile"
+                className="text-[26px] leading-[1.1] text-primary first-of-type:mt-4 text-left transition-colors"
+              >
+                <span className="nav-button leading-inherit flex items-center gap-2">
+                  Search
+                </span>
+              </button>
+            )}
             {nav?.filter(navItem => !navItem.external).map((navItem, i) => {
               const isActive = currentRoute.startsWith(navItem.url) && navItem.url !== '/';
               const isHome = currentRoute === '/' && navItem.url === '/';
               const eventName = getHeaderNavEvent(navItem);
               const eventVariant = eventName.startsWith("link-") ? "header" : "header-mobile";
 
+              if (isGetUrbitNavItem(navItem) && onGetUrbitOpen) {
+                return (
+                  <button
+                    type="button"
+                    className={classNames(
+                      "text-[26px] leading-[1.1] first-of-type:mt-4 last-of-type:mb-4 text-left transition-colors",
+                      isGetUrbitOpen ? "text-primary" : "text-contrast-2"
+                    )}
+                    key={`${navItem.url}-${i}`}
+                    onClick={handleGetUrbitOpen}
+                    data-umami-event="cta-header-get-urbit"
+                    data-umami-event-label={navItem.title}
+                    data-umami-event-destination="get-urbit-modal"
+                    data-umami-event-context={currentRoute}
+                    data-umami-event-variant="mobile"
+                  >
+                    <span className="nav-button leading-inherit flex items-center gap-2">
+                      {navItem.title}
+                      {navItem.icon && (
+                        <Image
+                          src={`/icons/reverse-${navItem.icon}`}
+                          alt="Urbit configurator icon"
+                          width={16}
+                          height={16}
+                          className="w-4 h-4"
+                        />
+                      )}
+                    </span>
+                  </button>
+                );
+              }
+
               return (
                 <Link
                   className={classNames(
-                    "text-3xl leading-[1cap] first-of-type:mt-4 last-of-type:mb-4 transition-colors",
-                    (isActive || isHome) ? "text-primary" : "text-contrast-3"
+                    "text-[26px] leading-[1.1] first-of-type:mt-4 last-of-type:mb-4 transition-colors",
+                    (isActive || isHome) ? "text-primary" : "text-contrast-2"
                   )}
                   key={`${navItem} + ${i}`}
                   href={navItem.url}
@@ -292,17 +413,51 @@ const MobileNav = ({ nav, currentRoute, announcements, urbitExplainedSections, r
   );
 };
 
-const GlobalNav = ({ nav }) => {
+const GlobalNav = ({ nav, onSearchOpen, isSearchOpen, onGetUrbitOpen, isGetUrbitOpen }) => {
   const currentRoute = usePathname();
 
   return (
     <React.Fragment>
-      <ul className="flex mb-0 flex-row gap-x-3 pt-0 text-large font-[600]">
+      <ul className="flex mb-0 flex-row gap-x-3 pt-0 text-large font-[600] items-center">
         {nav?.map((navItem, i) => {
 
           const isActive = currentRoute.startsWith(navItem.url);
           const eventName = getHeaderNavEvent(navItem);
           const eventVariant = eventName.startsWith("link-") ? "header" : "header-desktop";
+
+          if (isGetUrbitNavItem(navItem) && onGetUrbitOpen) {
+            return (
+              <button
+                type="button"
+                className={classNames(
+                  "text-lg flex items-center py-1 px-3 gap-x-2 rounded-md",
+                  navItem.variant == 'primary'
+                    ? "text-background bg-foreground rounded-lg hover:text-contrast-1"
+                    : isGetUrbitOpen
+                      ? "text-contrast-3 rounded-lg border-secondary"
+                      : "text-contrast-2 rounded-lg border-secondary"
+                )}
+                key={`${navItem.url}-${i}`}
+                onClick={onGetUrbitOpen}
+                data-umami-event="cta-header-get-urbit"
+                data-umami-event-label={navItem.title}
+                data-umami-event-destination="get-urbit-modal"
+                data-umami-event-context={currentRoute}
+                data-umami-event-variant="desktop"
+              >
+                <span>{navItem.title}</span>
+                {navItem.icon && (
+                  <Image
+                    src={`/icons/${navItem.icon}`}
+                    alt={`${navItem.icon} icon`}
+                    width={16}
+                    height={16}
+                    className="w-4 h-4"
+                  />
+                )}
+              </button>
+            );
+          }
 
           return (
             <Link
@@ -337,6 +492,25 @@ const GlobalNav = ({ nav }) => {
             </Link>
           );
         })}
+        {onSearchOpen && (
+          <button
+            type="button"
+            onClick={onSearchOpen}
+            aria-label="Open search"
+            data-umami-event="cta-header-search"
+            data-umami-event-label="Search"
+            data-umami-event-destination="search-modal"
+            data-umami-event-context={currentRoute}
+            data-umami-event-variant="desktop"
+            className={`flex h-[36px] w-[36px] items-center justify-center rounded-md border transition-colors duration-200 ${
+              isSearchOpen
+                ? "border-primary text-primary"
+                : "border-contrast-2 text-contrast-2 hover:border-primary hover:text-primary"
+            }`}
+          >
+            <SearchIcon className="h-[18px] w-[18px]" />
+          </button>
+        )}
       </ul>
     </React.Fragment>
   );

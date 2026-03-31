@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 8"
 date = "2026-01-01"
 description = "12 days of Nockmas: Compose, opcode 7"
+summary = "Covers opcode 7 (Compose), evaluating b then using that result as the subject for c, implementing the pipe pattern for sequential function composition."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+8/nockmas-
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", ""]
+search_terms = [
+    "nockmas day 8",
+    "opcode 7",
+    "compose opcode",
+    "function composition",
+    "nock compose",
+    "pipe pattern",
+    "subject transform",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day 8 compose image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/day+8/nockmas-day-8-compose-social.png)

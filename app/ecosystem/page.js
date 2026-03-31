@@ -17,13 +17,15 @@ export async function generateMetadata() {
 
   return {
     openGraph: {
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-        },
-      ],
+      images: image
+        ? [
+            {
+              url: image,
+              width: 1200,
+              height: 630,
+            },
+          ]
+        : undefined,
     },
   };
 }
@@ -62,7 +64,7 @@ export default async function EcosystemHome() {
   const allOrgsFrontMatter = paths.orgs.frontMatter;
 
   return (
-    <div className="mb-32 mt-[55px]">
+    <div className="mb-32 mt-[55px] md:mx-4">
       {/* Set sidebar position */}
       <SidebarPositionSlot position={sidebarPosition} />
 
@@ -83,73 +85,75 @@ export default async function EcosystemHome() {
         </SidebarElement>
       </SidebarSlot>
 
-      <Section id="companies" className="mx-auto w-auto" title="Companies">
-        {allOrgsFrontMatter.map((org, i) => {
-          return (
-            <Link
-              href={org.data.URL}
-              target="_blank"
-              key={i}
-              data-umami-event="link-external"
-              data-umami-event-label={org.data.title}
-              data-umami-event-destination={org.data.URL}
-              data-umami-event-context={ecosystemContext}
-              data-umami-event-variant="ecosystem-org"
-              className="relative group max-h-12"
-            >
-              <div className="flex gap-x-4 md:gap-x-8 items-center py-2 md:py-4">
-                {/* Light mode image; needs additional code for darkmode support */}
-                <Image
-                  src={org.data.image}
-                  className="w-12 h-12 md:w-16 md:h-16 group-hover:grayscale"
-                  alt={org.data.title}
-                  width={64}
-                  height={64}
-                />
-                <h1 className="text-3xl md:text-6xl font-bold font-serif text-accent-1 group-hover:text-primary leading-8 tracking-tight">{org.data.title}</h1>
-              </div>
-            </Link>
-          );
-        })}
-      </Section>
-
-      <Section id="articles-press" className="container" title="Articles & Press">
-        {allArticlesFrontMatter.map((article, i) => {
-          return (
-            <Link
-              href={article.data.URL}
-              key={i}
-              target="_blank"
-              data-umami-event="link-external"
-              data-umami-event-label={article.data.publication}
-              data-umami-event-destination={article.data.URL}
-              data-umami-event-context={ecosystemContext}
-              data-umami-event-variant="ecosystem-article"
-              className="group leading-[110%] cursor-pointer mb-4 flex flex-col"
-            >
-              <div className="flex justify-between items-end">
-                <h3 className="font-serif font-bold text-5xl text-accent-1 group-hover:text-primary">{article.data.publication}</h3>
-                <div className="hidden flex items-end md:block">
-                  <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
-                  <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
+      <div className="mx-auto max-w-[1200px]">
+        <Section id="companies" title="Companies">
+          {allOrgsFrontMatter.map((org, i) => {
+            return (
+              <Link
+                href={org.data.URL}
+                target="_blank"
+                key={i}
+                data-umami-event="link-external"
+                data-umami-event-label={org.data.title}
+                data-umami-event-destination={org.data.URL}
+                data-umami-event-context={ecosystemContext}
+                data-umami-event-variant="ecosystem-org"
+                className="relative group max-h-12"
+              >
+                <div className="flex gap-x-4 md:gap-x-8 items-center py-2 md:py-4">
+                  {/* Light mode image; needs additional code for darkmode support */}
+                  <Image
+                    src={org.data.image}
+                    className="w-12 h-12 md:w-16 md:h-16 group-hover:grayscale"
+                    alt={org.data.title}
+                    width={64}
+                    height={64}
+                  />
+                  <h1 className="text-3xl md:text-6xl font-bold font-serif text-accent-1 group-hover:text-primary leading-8 tracking-tight">{org.data.title}</h1>
                 </div>
-              </div>
-              <h1 className="font-sans text-2xl text-primary group-hover:text-primary">{article.data.title}</h1>
-              <div className="flex justify-between md:hidden">
-                <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
-                <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
-              </div>
-            </Link>
-          );
-        })}
-      </Section>
+              </Link>
+            );
+          })}
+        </Section>
+
+        <Section id="articles-press" title="Articles & Press">
+          {allArticlesFrontMatter.map((article, i) => {
+            return (
+              <Link
+                href={article.data.URL}
+                key={i}
+                target="_blank"
+                data-umami-event="link-external"
+                data-umami-event-label={article.data.publication}
+                data-umami-event-destination={article.data.URL}
+                data-umami-event-context={ecosystemContext}
+                data-umami-event-variant="ecosystem-article"
+                className="group leading-[110%] cursor-pointer mb-4 flex flex-col"
+              >
+                <div className="flex justify-between items-end">
+                  <h3 className="font-serif font-bold text-5xl text-accent-1 group-hover:text-primary">{article.data.publication}</h3>
+                  <div className="hidden flex items-end md:block">
+                    <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
+                    <h3 className="text-right font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
+                  </div>
+                </div>
+                <h1 className="font-sans text-2xl text-primary group-hover:text-primary">{article.data.title}</h1>
+                <div className="flex justify-between md:hidden">
+                  <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.author}</h3>
+                  <h3 className="font-mono text-base text-contrast-2 group-hover:text-primary">{article.data.date}</h3>
+                </div>
+              </Link>
+            );
+          })}
+        </Section>
+      </div>
     </div>
   );
 }
 
 export const Section = ({ id, title, children, className = "" }) => {
   return (
-    <section id={id} className={`${className} pt-6 mb-4 gap-x-4 px-4 scroll-mt-[72px] md:scroll-mt-[100px]`}>
+    <section id={id} className={`${className} pt-6 mb-4 gap-x-4 px-4 scroll-mt-[90px] md:scroll-mt-[100px]`}>
       <div className="mb-4">
         <h1 className="font-serif text-4xl font-[400] text-primary">{title}</h1>
       </div>

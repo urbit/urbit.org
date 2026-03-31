@@ -1,7 +1,20 @@
 +++
+
 title = "Select available loom size"
 description = "Configure memory allocation for your urbit"
+summary = "Use the --loom flag with a power-of-two exponent to set memory allocation: 30=1GB, 31=2GB (default), 32=4GB, or 33=8GB based on system resources."
 tags = ["runtime"]
+search_terms = [
+    "loom size",
+    "--loom",
+    "memory allocation",
+    "urbit ram",
+    "loom exponent",
+    "loom 32",
+    "configure runtime",
+    "run urbit memory",
+    "loom flag"
+]
 lastest-update = ""
 image = ""
 imageDark = ""

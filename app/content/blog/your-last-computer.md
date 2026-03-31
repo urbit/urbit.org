@@ -1,7 +1,21 @@
 +++
+
 title = "Your Last Computer"
 date = "2019-10-16"
 description = "Your Urbit is a simpler computer, a quieter computer, a more private computer. We want it to feel predictable, safe, and reliable — things only a complete, sealed system can do. This, we hope, can get us a world where technology keeps us connected, but doesn’t dominate our lives."
+summary = "Vision essay describing computing experience where technology recedes into background, devices endure for decades, and users maintain permanent control over digital infrastructure."
+search_terms = [
+    "your last computer",
+    "urbit os",
+    "digital life",
+    "social computing",
+    "sealed system",
+    "private computer",
+    "urbit communities",
+    "personal server",
+    "calm computing",
+    "future computing"
+]
 
 [extra]
 image = "https://media.urbit.org/site/understanding-urbit/your-last-computer/your-last-computer-waves%402x.png"

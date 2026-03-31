@@ -1,7 +1,22 @@
 +++
+
 title = "Providers"
 date = "2020-08-17"
 description = "We’ve always assumed that providers would have to come into existence sooner or later. By the look of it, that time is now. Tlon and a few others have provider-like services in the works."
+summary = "Ecosystem announcement documenting third-party hosting services, comparing offerings, pricing, and features while maintaining standards for reliability and data portability."
+search_terms = [
+    "urbit providers",
+    "hosting providers",
+    "onboarding",
+    "planet hosting",
+    "urbit service",
+    "address space",
+    "provider business",
+    "urbit hosting",
+    "community access",
+    "provider examples",
+    "tlon provider"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

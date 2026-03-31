@@ -1,7 +1,23 @@
 +++
+
 title = "An Email from the Archive"
 description = "I found this email in my archives recently and thought it might be fun to share publicly."
+summary = "Forwarded 2020 email from Galen Wolfe-Pauly discussing Urbit's principles of simplicity, durability, and ownership in digital communication tools, arguing that platform-centric software creates fundamental user conflicts."
 date = "2020-11-29"
+search_terms = [
+    "email from archive",
+    "simplicity",
+    "durability",
+    "ownership",
+    "urbit philosophy",
+    "digital tools",
+    "personal computing",
+    "decentralized network",
+    "software craftsmanship",
+    "christopher alexander",
+    "future vision",
+    "network institutions"
+]
 
 [extra]
 author = "Galen Wolfe-Pauly"

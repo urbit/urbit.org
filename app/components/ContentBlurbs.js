@@ -1,9 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const renderHtml = (content) => ({ __html: content || "" });
+const renderContent = (Tag, content, className) => {
+  if (content === null || content === undefined) {
+    return null;
+  }
+
+  const Wrapper = Tag;
+  if (typeof content === "string") {
+    return (
+      <Wrapper className={className} dangerouslySetInnerHTML={{ __html: content }} />
+    );
+  }
+
+  return <Wrapper className={className}>{content}</Wrapper>;
+};
 
 const slugify = (value) => {
   if (!value) {
@@ -34,7 +47,70 @@ const getExternalEventName = (href) => {
   return undefined;
 };
 
-export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark }) => {
+const TabbedBlurbContent = ({
+  tabs = [],
+  contextId,
+  panelClassName = "",
+  contentClassName = "",
+}) => {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const uniqueId = useId();
+
+  if (!tabs.length) {
+    return null;
+  }
+
+  const safeActiveTabIndex = Math.min(activeTabIndex, tabs.length - 1);
+  const activeTab = tabs[safeActiveTabIndex];
+  const tabGroupId = `${slugify(contextId || "blurb-tabs")}-${uniqueId.replace(/:/g, "")}`;
+
+  return (
+    <div className="mt-6">
+      <div
+        className="flex flex-wrap gap-2 md:flex-nowrap md:gap-[6px]"
+        role="tablist"
+        aria-label="Platform-specific instructions"
+      >
+        {tabs.map((tab, index) => {
+          const isActive = index === safeActiveTabIndex;
+          const tabId = `${tabGroupId}-tab-${index}`;
+          const panelId = `${tabGroupId}-panel-${index}`;
+
+          return (
+            <button
+              key={tabId}
+              id={tabId}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={panelId}
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => setActiveTabIndex(index)}
+              className={`whitespace-nowrap rounded-md border px-[10px] py-1 font-mono text-[12px] transition-colors lg:px-3 lg:text-small ${
+                isActive
+                  ? "border-primary bg-primary text-secondary"
+                  : "border-contrast-2 text-contrast-2 hover:border-primary hover:text-primary"
+              }`}
+            >
+              {tab.title}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        id={`${tabGroupId}-panel-${safeActiveTabIndex}`}
+        role="tabpanel"
+        aria-labelledby={`${tabGroupId}-tab-${safeActiveTabIndex}`}
+        className={`mt-4 rounded-lg border border-contrast-2 bg-contrast-1/60 p-4 md:p-5 ${panelClassName}`}
+      >
+        {renderContent("article", activeTab?.content, contentClassName)}
+      </div>
+    </div>
+  );
+};
+
+export const CollapsibleContentBlurb = ({ title, description, content, references, image, imageDark, tabs = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -92,7 +168,12 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
               );
             })}
           </ul>
-          <div className="text-base text-gray-87 line-clamp-5" dangerouslySetInnerHTML={renderHtml(content)} />
+          {renderContent("div", content, "text-base text-gray-87 line-clamp-5")}
+          <TabbedBlurbContent
+            tabs={tabs}
+            contextId={title}
+            contentClassName="prose prose-invert max-w-none"
+          />
         </div>
       </div>
       <button
@@ -110,7 +191,7 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
 
       {isExpanded && (
         <div className="mt-6 animate-fadeIn">
-          <article className="prose prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
+          {renderContent("article", content, "prose prose-invert max-w-none")}
 
           {references && references.length > 0 && (
             <div className="mt-8 pt-6 border-t border-gray-87">
@@ -123,12 +204,12 @@ export const CollapsibleContentBlurb = ({ title, description, content, reference
   );
 };
 
-export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
+export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton, tabs = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
 
   return (
-    <div id={id} className="mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
+    <div id={id} className="mb-16 scroll-mt-[90px] md:scroll-mt-[80px] snap-start">
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           {/* Render images if provided */}
@@ -182,9 +263,15 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
               );
             })}
           </ul>
-          <div
-            className={`text-base text-primary transition-transform duration-300 ${isExpanded ? '' : 'line-clamp-3'}`}
-            dangerouslySetInnerHTML={renderHtml(content)}
+          {renderContent(
+            "div",
+            content,
+            `text-base text-primary transition-transform duration-300 ${isExpanded ? "" : "line-clamp-3"}`
+          )}
+          <TabbedBlurbContent
+            tabs={tabs}
+            contextId={tooltipContext}
+            contentClassName="prose prose-invert max-w-none"
           />
         </div>
       </div>
@@ -253,15 +340,16 @@ export const PreviewContentBlurb = ({ id, blurbSlug, title, description, content
   );
 };
 
-export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton }) => {
+export const ContentBlurb = ({ id, blurbSlug, title, description, content, references, image, imageDark, ctaButton, tabs = [] }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
+  const anchorId = id || blurbSlug;
 
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
 
   return (
-    <div className="">
+    <div id={anchorId} className="scroll-mt-[90px] md:scroll-mt-[80px]">
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           {/* Render images if provided */}
@@ -383,7 +471,12 @@ export const ContentBlurb = ({ id, blurbSlug, title, description, content, refer
       )}
 
       {/* Full content without line-clamp */}
-      <article className="prose prose-invert max-w-none mt-6" dangerouslySetInnerHTML={renderHtml(content)} />
+      {renderContent("article", content, "prose prose-invert max-w-none mt-6")}
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        contentClassName="prose prose-invert max-w-none"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -416,6 +509,7 @@ export const MicroBlurb = ({
   image,
   imageDark,
   ctaButton,
+  tabs = [],
   showFullContent = false  // Toggle between preview and full content
 }) => {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
@@ -425,7 +519,7 @@ export const MicroBlurb = ({
   const hasDetails = description || (references && references.some(ref => ref.description));
 
   return (
-    <div id={id} className="scroll-mt-[72px] md:scroll-mt-[80px]">
+    <div id={id} className="scroll-mt-[90px] md:scroll-mt-[80px]">
       {/* Images - smaller size for narrow layout */}
       {(image || imageDark) && (
         <div className="mb-3">
@@ -516,11 +610,16 @@ export const MicroBlurb = ({
       {/* Content - either full or line-clamped */}
       <div className={`text-sm text-primary mt-3 ${showFullContent ? '' : 'line-clamp-8'}`}>
         {showFullContent ? (
-          <article className="prose prose-sm prose-invert max-w-none" dangerouslySetInnerHTML={renderHtml(content)} />
+          renderContent("article", content, "prose prose-sm prose-invert max-w-none")
         ) : (
-          <div dangerouslySetInnerHTML={renderHtml(content)} />
+          renderContent("div", content, "")
         )}
       </div>
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        contentClassName="prose prose-sm prose-invert max-w-none"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (
@@ -566,7 +665,8 @@ export function HomepageBlurb({
   image,
   imageDark,
   references = [],
-  ctaButton
+  ctaButton,
+  tabs = [],
 }) {
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(false);
   const tooltipContext = blurbSlug || id || slugify(title);
@@ -574,7 +674,7 @@ export function HomepageBlurb({
   // Check if there are any details to show
   const hasDetails = description || (references && references.some(ref => ref.description));
   return (
-    <div id={id} className="mb-12 md:mb-16 scroll-mt-[72px] md:scroll-mt-[80px] snap-start">
+    <div id={id} className="mb-12 md:mb-16 scroll-mt-[90px] md:scroll-mt-[80px] snap-start">
       {/* Header Images */}
       {(image || imageDark) && (
         <div className="mb-4 md:mb-6">
@@ -670,7 +770,17 @@ export function HomepageBlurb({
         </div>
       )}
       {/* Full content */}
-      <article className="prose prose-lg max-w-none mb-8 text-[#3f3f3f]" dangerouslySetInnerHTML={renderHtml(content)} />
+      {renderContent(
+        "article",
+        content,
+        "prose prose-lg max-w-none mb-8 text-[#3f3f3f]"
+      )}
+      <TabbedBlurbContent
+        tabs={tabs}
+        contextId={tooltipContext}
+        panelClassName="bg-white/70"
+        contentClassName="prose prose-lg max-w-none text-[#3f3f3f]"
+      />
 
       {/* CTA Button - smaller for narrow layout */}
       {ctaButton && ctaButton.link && ctaButton.label && (

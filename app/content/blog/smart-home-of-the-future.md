@@ -1,7 +1,21 @@
 +++
+
 title = "The Smart Home of the Future"
 date = "2022-08-04"
 description = "Homes are getting smarter. A smart home is no longer just a collection of smart devices but a superorganism of data-collecting objects. These people and devices who use and inhabit these homes form a complex socio-technical system. What is the future of the smart home and how will Urbit fit into it?"
+summary = "This grant research explores smart home privacy needs, arguing Urbit's identity model should prioritize access control over legible reputation, enabling communal computing while respecting contextual integrity and household relationships."
+search_terms = [
+    "smart home",
+    "communal computing",
+    "iot",
+    "urbit identity",
+    "privacy",
+    "contextual integrity",
+    "home data",
+    "smart devices",
+    "gall app",
+    "communal computing grant"
+]
 [extra]
 author = ""
 ship = "~pilwyc-fastec"

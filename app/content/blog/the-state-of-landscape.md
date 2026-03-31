@@ -1,10 +1,24 @@
 +++
+
 title = "The State of Landscape"
 date = "2019-05-15"
 description = "An update on the state of Landscape and the Urbit network."
+summary = "Status report on Landscape interface development covering feature releases, usability improvements, performance optimizations, and roadmap for upcoming releases."
 aliases = [
   "/posts/essays/the-state-of-landscape",
   "/posts/the-state-of-landscape"
+]
+search_terms = [
+    "state of landscape",
+    "landscape update",
+    "chat interface",
+    "urbit ui",
+    "arvo network",
+    "landscape bugs",
+    "ios app",
+    "community chats",
+    "urbit help",
+    "modulo roadmap"
 ]
 
 [extra]

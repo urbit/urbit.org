@@ -1,5 +1,6 @@
 ---
-title = "Get On The Network"
+title: "Get On The Network"
+summary: "Entry points for getting on Urbit, including hosted options and self-hosting resources."
 ---
 {% overview-section title="Hosting Provider" %}
 

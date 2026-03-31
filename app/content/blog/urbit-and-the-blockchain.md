@@ -1,7 +1,21 @@
 +++
+
 title = "Urbit and the Blockchain Wars"
 date = "2017-09-24"
 description = "A bit about the 'idea maze' of choosing to bootstrap from Ethereum."
+summary = "Curtis Yarvin explains Urbit's pragmatic decision to bootstrap on Ethereum despite criticisms, detailing governance migration options, security models, and why Urbit uses Ethereum as a land registry rather than endorsing the platform."
+search_terms = [
+  "urbit blockchain",
+  "ethereum bootstrap",
+  "urbit pki",
+  "blockchain wars",
+  "urbit land registry",
+  "on chain governance",
+  "ethereum critique",
+  "consensus engine",
+  "urbit on ethereum",
+  "chain migration"
+]
 aliases = [
   "/posts/essays/urbit-and-the-blockchain",
   "/posts/urbit-and-the-blockchain",

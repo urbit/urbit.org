@@ -1,7 +1,23 @@
 +++
+
 title = "Models of Society"
 description = "Conversations compose society. What composes conversation — how do we digitize it in a way that enhances society without imposing upon it? How do we form this new medium, both to facilitate natural human behavior and to inspire the best of it?"
+summary = "Examination of how digital conversation forms shape society, arguing for Urbit's territory-based model where users own persistent identities and can build distinct digital spaces without centralized platform control."
 date = "2020-11-18"
+search_terms = [
+    "models of society",
+    "digital messaging",
+    "conversation forms",
+    "identity and place",
+    "digital spaces",
+    "urbit territory",
+    "messaging modes",
+    "hypertext",
+    "social networks",
+    "urbit identity",
+    "digital city",
+    "community spaces"
+]
 
 [extra]
 author = "Tyler Shuster"

@@ -1,7 +1,21 @@
 +++
+
 title = "Urbit Is for Creators"
 date = "2021-12-09"
 description = "Urbit is for creators who are ready to wake up from this bad dream."
+summary = "Noah Kumin argues Urbit offers creators freedom from algorithmic manipulation and platform dependency, enabling direct peer-to-peer distribution, ownership of work, and sustainable communities through durable infrastructure."
+search_terms = [
+    "urbit for creators",
+    "creator economy",
+    "p2p creators",
+    "content ownership",
+    "1000 true fans",
+    "creator community",
+    "peer to peer payments",
+    "no middlemen",
+    "urbit creators",
+    "digital sovereignty"
+]
 [extra]
 author = "Noah Kumin"
 ship = "~librex-dozryc"

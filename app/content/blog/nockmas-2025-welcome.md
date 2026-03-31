@@ -1,7 +1,9 @@
 +++
+
 title = "Nockmas 2025: Day 0"
 date = "2025-12-24"
 description = "12 days of Nockmas: Intoducing autocons"
+summary = "Introduces autocons, Nock's fundamental cell construction rule where formula structure becomes result structure, making cell construction free and enabling Nock's minimal design."
 # aliases = []
 
 [extra]
@@ -14,6 +16,17 @@ image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/nockmas-day-mi
 # imageCardDark =
 # imageIndexDark =
 tags =  ["nock", "nockmas", "autocons"]
+search_terms = [
+    "nockmas day 0",
+    "autocons",
+    "nock evaluation",
+    "cell construction",
+    "nock intro",
+    "formula cell",
+    "nock basics",
+    "nock isa",
+    "nock tutorial"
+]
 +++
 
 ![nockmas day minus 1 autocons image](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/nockmas-day-minus-1-autocons.png)

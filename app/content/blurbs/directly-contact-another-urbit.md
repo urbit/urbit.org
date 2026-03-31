@@ -1,7 +1,20 @@
 +++
+
 title = "Directly contact another urbit"
 description = "Urbit's most basic messaging protocol can send a quick hi in the dojo"
+summary = "The |hi command sends a peer-to-peer ping to another Urbit ship with an optional message, the most basic p2p messaging affordance in the dojo."
 tags = ["dojo"]
+search_terms = [
+    "hi command",
+    "dojo hi",
+    "ping ship",
+    "direct message",
+    "urbit p2p",
+    "neighbor message",
+    "connect to ship",
+    "urbit messaging",
+    "quick hi"
+]
 lastest-update = ""
 image = ""
 imageDark = ""
