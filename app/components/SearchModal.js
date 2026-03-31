@@ -11,12 +11,7 @@ const getEntries = (payload) => {
   return [];
 };
 
-const normalizeTokens = (value) =>
-  value
-    .trim()
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(Boolean);
+const normalizeTokens = (value) => Array.from(new Set(splitWords(value.trim())));
 
 const splitWords = (value) =>
   value
@@ -608,7 +603,7 @@ export function SearchModal({ isOpen, onClose, children }) {
             Search
           </h2>
           <p className="max-w-[344px] font-sans text-[16px] leading-[16px] tracking-[0.01em] text-primary">
-            Browse side content & guides
+            Browse site content & guides
           </p>
         </div>
         <div className="mt-[18px] w-full">
@@ -642,7 +637,7 @@ export function SearchModal({ isOpen, onClose, children }) {
           Search urbit.org
         </h2>
         <p className="max-w-[626px] font-sans text-[24px] leading-[25px] tracking-[0.01em] text-primary">
-          Browse side content & guides
+          Browse site content & guides
         </p>
       </div>
       <div className="mt-[4.1rem] w-full">

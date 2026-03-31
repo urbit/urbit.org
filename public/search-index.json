@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-31T00:00:00.000Z",
-  "total": 180,
+  "generatedAt": "2026-03-31T19:33:14.318Z",
+  "total": 183,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -243,7 +243,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "common commands essential commands for using urbit /overview/running-urbit/common-commands overview running urbit reference guide for essential dojo commands including ship management operations, application installation and status checking, azimuth state verification, memory optimization, moon identity creation, and shutdown procedures. get-access-code directly-contact-another-urbit add-and-remove-applications check-application-status update-commands-for-your-urbit start-and-stop-applications-on-your-urbit checking-and-fixing-azimuth-state check-and-reduce-memory-usage create-a-moon-identity check-your-sponsor shut-down-your-urbit start-up-your-urbit docking-your-urbit select-available-loom-size reduce-your-pier-size update-your-urbit-runtime"
+      "searchText": "common commands essential commands for using urbit /overview/running-urbit/common-commands overview running urbit reference guide for essential dojo commands including ship management operations, application installation and status checking, azimuth state verification, memory optimization, moon identity creation, and shutdown procedures. get-access-code directly-contact-another-urbit add-and-remove-applications check-application-status update-commands-for-your-urbit start-and-stop-applications-on-your-urbit checking-and-fixing-azimuth-state check-and-reduce-memory-usage create-a-moon-identity check-your-sponsor shut-down-your-urbit start-up-your-urbit docking-your-urbit select-available-loom-size reduce-your-pier-size get-the-urbit-runtime update-your-urbit-runtime"
     },
     {
       "id": "blurbs/common-pitfalls-of-running-urbit.md",
@@ -411,6 +411,34 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "get access code a secret code for remote access to your instance of urbit os dojo access code +code luscode urbit login remote access mobile client web login phenome code urbit secret /overview/running-urbit/common-commands#get-access-code overview running urbit use the +code command to retrieve your eight-syllable access code for logging into web interfaces and mobile clients, distinct from your master ticket. access code +code luscode urbit login remote access mobile client web login phenome code urbit secret technical documentation https://docs.urbit.org/user-manual/os/shell#code details on using your `+code`"
+    },
+    {
+      "id": "blurbs/get-the-urbit-runtime.md",
+      "title": "Get the Urbit runtime",
+      "description": "Download the runtime binary for your host platform",
+      "tags": [
+        "runtime",
+        "install",
+        "command-line"
+      ],
+      "searchTerms": [
+        "get runtime",
+        "install runtime",
+        "download urbit binary",
+        "get-runtime.sh",
+        "macos runtime",
+        "linux runtime",
+        "install vere"
+      ],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "blurbs",
+      "path": "/overview/running-urbit/common-commands#get-the-urbit-runtime",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "running-urbit",
+      "subsectionLabel": "Running Urbit",
+      "searchText": "get the urbit runtime download the runtime binary for your host platform runtime install command-line get runtime install runtime download urbit binary get-runtime.sh macos runtime linux runtime install vere /overview/running-urbit/common-commands#get-the-urbit-runtime overview running urbit install the urbit runtime with the guided `get-runtime.sh` helper or use direct per-platform commands for macos and linux. runtime install command-line get runtime install runtime download urbit binary get-runtime.sh macos runtime linux runtime install vere cli setup guide https://docs.urbit.org/get-on-urbit#get-the-urbit-runtime official guide to downloading the runtime and booting your first ship. read the full cli guide https://docs.urbit.org/get-on-urbit learn how to get the runtime, boot a ship, and log into landscape. macos (m-series) open a terminal and run:\n\n```sh\ncurl -l https://urbit.org/install/macos-aarch64/latest | tar xzk -s '/.*/urbit/'\n``` macos (intel) open a terminal and run:\n\n```sh\ncurl -l https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/'\n``` linux (x86_64) open a terminal and run:\n\n```sh\ncurl -l https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.*/urbit/g'\n``` linux (aarch64) open a terminal and run:\n\n```sh\ncurl -l https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/.*/urbit/g'\n```"
     },
     {
       "id": "overview/running-urbit/get-urbit-id.md",
@@ -603,6 +631,32 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "on-network support channels need help with something? give a shout in one of these groups and someone will give you a hand support groups tlon local battery payload hooniverse urbit community uf public tlon messenger groups get help on urbit support comet join group /overview/running-urbit/support#urbit-support-groups overview running urbit join tlon messenger groups like tlon local, battery payload, hooniverse, urbit community, and urbit foundation for support with hardware, development, hoon, and general help. support groups tlon local battery payload hooniverse urbit community uf public tlon messenger groups get help on urbit support comet join group"
+    },
+    {
+      "id": "blurbs/partnerships-outreach.md",
+      "title": "Partnerships and outreach",
+      "description": "Reach out if you want to collaborate with the Urbit Foundation",
+      "tags": [
+        "support",
+        "partnerships",
+        "outreach"
+      ],
+      "searchTerms": [
+        "partnerships",
+        "collaborate",
+        "outreach",
+        "business development",
+        "partnerships@urbit.org"
+      ],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "blurbs",
+      "path": "/overview/running-urbit/support#partnerships-outreach",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "running-urbit",
+      "subsectionLabel": "Running Urbit",
+      "searchText": "partnerships and outreach reach out if you want to collaborate with the urbit foundation support partnerships outreach partnerships collaborate outreach business development partnerships@urbit.org /overview/running-urbit/support#partnerships-outreach overview running urbit contact the urbit foundation partnerships team for collaborations, events, integrations, and other outreach opportunities. support partnerships outreach collaborate business development partnerships@urbit.org email partnerships@urbit.org mailto:partnerships@urbit.org start a conversation with the partnerships team."
     },
     {
       "id": "blurbs/reduce-your-pier-size.md",
@@ -967,7 +1021,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "support get help with urbit /overview/running-urbit/support overview running urbit support resources for urbit users encountering issues or with questions, providing links to community forums and contact points for assistance from the urbit community and core developers. urbit-support-groups support-contact-points"
+      "searchText": "support get help with urbit /overview/running-urbit/support overview running urbit support resources for urbit users encountering issues or with questions, providing links to community forums and contact points for assistance from the urbit community and core developers. urbit-support-groups support-contact-points partnerships-outreach"
     },
     {
       "id": "blurbs/run-urbit-with-tlon-hosting.md",
@@ -2121,6 +2175,24 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~nordus-mocwyl a conversation with ~nordus-mocwyl on independent music, urbit, and direct charity spotlight userspace community /blog/contributor-spotlight-nordus-mocwyl blog 2025-12-16 musician ~nordus-mocwyl discusses using urbit for independent music distribution, building guitar courses with hawk, and learning hoon to understand computing from nock upward. ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa+nordus-mocwyl_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa+nordus-mocwyl_social16_9.png spotlight userspace community contributor spotlight nordus mocwyl independent music musician urbit for creators hawk website guitar course direct charity personal server hoon learning sovereign web"
+    },
+    {
+      "id": "blog/contributor-spotlight-palfun-foslup.md",
+      "title": "Contributor Spotlight: ~palfun-foslup",
+      "description": "A conversation with ~palfun-foslup on Gall, userspace, and making simple software",
+      "tags": [
+        "spotlight",
+        "gall",
+        "userspace"
+      ],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": 1773705600000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-palfun-foslup",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~palfun-foslup a conversation with ~palfun-foslup on gall, userspace, and making simple software spotlight gall userspace /blog/contributor-spotlight-palfun-foslup blog 2026-03-17 tlon engineer ~palfun-foslup discusses building gall apps like %pals and %rumors, why user-owned servers lower the barrier for peer-to-peer software, and what gall 2026 aims to deliver with userspace compatibility and permissions. ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social16_9.png spotlight gall userspace contributor spotlight ~palfun-foslup gall 2026 userspace permissions userspace compatibility tlon messenger pals app rumors app peer to peer software personal server urbit security vere64"
     },
     {
       "id": "blog/convivial-networks.md",
@@ -3575,6 +3647,24 @@
       "searchText": "the dream of the agency dao as creative studios and agencies struggle for more creative freedom, daos and tokenization will surely take a more central role in the marketing and branding industries. decentralization offers such entities benefits that could fundamentally reshape creatives’ relationships with clients—reducing layers of inefficiency and anti-creative incentives. agency dao creative agency tokenization branding industry decentralized marketing creative bounties talent retention idea valuation urbit ids creative reputation isaac simpson /blog/agency-daos blog 2022-11-04 examination of creative agency daos as potential solutions to modern advertising inefficiencies, exploring project bountification, talent retention through token ownership, and idea valuation while acknowledging challenges of creative work by committee. agency dao creative agency tokenization branding industry decentralized marketing creative bounties talent retention idea valuation urbit ids creative reputation ~mogmet-tadnem https://storage.googleapis.com/media.urbit.org/blog/skybanner.jpg"
     },
     {
+      "id": "blog/gall-2026.md",
+      "title": "The Future of Userspace",
+      "description": "The Gall 2026 project and what it means for userspace",
+      "tags": [
+        "security",
+        "gall",
+        "userspace"
+      ],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": 1774915200000,
+      "source": "blog",
+      "path": "/blog/gall-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "the future of userspace the gall 2026 project and what it means for userspace security gall userspace /blog/gall-2026 blog 2026-03-31 an overview of the gall 2026 userspace roadmap, including scoped eyre permissions, support for alternative agent apis, and a kelvin-shimming proof of concept for application compatibility across arvo updates. ~mopfel-winrux + ~palfun-foslup + ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_gall2026/blog_gall2026_social+16x9.png security gall userspace ~mopfel-winrux ~sarlev-sarsen ~palfun-foslup shrubbery gall 2026 userspace permissions userspace compatibility urbit security"
+    },
+    {
       "id": "blog/rollups.md",
       "title": "The Gang Solves the Gas Crisis",
       "description": "How we're making Urbit ID affordable again",
@@ -4448,10 +4538,10 @@
       "authors": [],
       "publishedTimestamp": null,
       "source": "blurbs",
-      "path": "/#getting-started-with-urbit",
+      "path": "/#self-hosting",
       "section": "pages",
       "sectionLabel": "Pages",
-      "searchText": "get started with urbit ready to join the urbit network? get your own urbit id and start exploring a new way to compute. getting-started homepage sidebar get started urbit id urbit os join urbit quickstart self sovereign start exploring urbit network buy urbit id learn urbit /#getting-started-with-urbit pages begin your urbit journey by acquiring a self-sovereign id and learning about urbit os, the personal server computing platform that gives you full control over your data. getting-started homepage sidebar get started urbit id urbit os join urbit quickstart self sovereign start exploring urbit network buy urbit id learn urbit <some-arvo-hash> quickstart with tlon https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em1 get started instantly with tlon hosting urbit explained /overview learn the fundamentals of urbit get an urbit id /overview/running-urbit/get-urbit-id"
+      "searchText": "get started with urbit ready to join the urbit network? get your own urbit id and start exploring a new way to compute. getting-started homepage sidebar get started urbit id urbit os join urbit quickstart self sovereign start exploring urbit network buy urbit id learn urbit /#self-hosting pages begin your urbit journey by acquiring a self-sovereign id and learning about urbit os, the personal server computing platform that gives you full control over your data. getting-started homepage sidebar get started urbit id urbit os join urbit quickstart self sovereign start exploring urbit network buy urbit id learn urbit <some-arvo-hash> quickstart with tlon https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em1 get started instantly with tlon hosting urbit explained /overview learn the fundamentals of urbit get an urbit id /overview/running-urbit/get-urbit-id"
     },
     {
       "id": "blurbs/homepage-go-deeper.md",
@@ -4625,37 +4715,6 @@
       "section": "pages",
       "sectionLabel": "Pages",
       "searchText": "tlon hosting tlon corporation is the preeminent hosting provider which provides free and seamless onboarding to the urbit network hosting hosting-provider urbit-os tlon layer 2 tlon hosting tlon messenger hosted urbit quickstart onboarding layer 2 hosting provider phone number signup email signup managed hosting /#get-started-with-tlon-hosting pages tlon corporation offers free managed hosting with quick onboarding via phone or email signup, ideal for users wanting tlon messenger without handling self-hosting. hosting hosting-provider urbit-os tlon layer 2 tlon hosting tlon messenger hosted urbit quickstart onboarding hosting provider phone number signup email signup managed hosting <some-arvo-hash> /images/tlon-corp-dither.png quickstart https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em1 get started in a few clicks using tlon hosting tlon corporation https://tlon.io learn more about tlon's hosting services quickstart via tlon tlon messenger onboarding and hosted urbit services"
-    },
-    {
-      "id": "blog/gall-2026.md",
-      "title": "The Future of Userspace",
-      "description": "The Gall 2026 project and what it means for userspace",
-      "tags": [
-        "security",
-        "gall",
-        "userspace"
-      ],
-      "searchTerms": [
-        "~mopfel-winrux",
-        "~sarlev-sarsen",
-        "~palfun-foslup",
-        "shrubbery",
-        "gall 2026",
-        "userspace permissions",
-        "userspace compatibility",
-        "urbit security"
-      ],
-      "authors": [
-        "~mopfel-winrux",
-        "~palfun-foslup",
-        "~sarlev-sarsen"
-      ],
-      "publishedTimestamp": 1774915200000,
-      "source": "blog",
-      "path": "/blog/gall-2026",
-      "section": "blog",
-      "sectionLabel": "Blog",
-      "searchText": "the future of userspace the gall 2026 project and what it means for userspace security gall userspace ~mopfel-winrux ~sarlev-sarsen ~palfun-foslup shrubbery gall 2026 userspace permissions userspace compatibility urbit security /blog/gall-2026 blog 2026-03-31 an overview of the gall 2026 userspace roadmap, including scoped eyre permissions, support for alternative agent apis, and a kelvin-shimming proof of concept for application compatibility across arvo updates. ~mopfel-winrux ~palfun-foslup ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_gall2026/blog_gall2026_social+16x9.png"
     }
   ]
 }
