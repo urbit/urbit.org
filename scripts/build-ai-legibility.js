@@ -146,7 +146,8 @@ const buildBlurbRouteMap = async () => {
   const manualMappings = {
     "troubleshooting-your-urbit": "/overview/running-urbit/support",
     "common-pitfalls-of-running-urbit": "/overview/running-urbit/support",
-    "groundwire-based-urbit-ids": "/overview/running-urbit/get-urbit-id",
+    "groundwire-based-urbit-ids":
+      "/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
   };
 
   Object.entries(manualMappings).forEach(([slug, target]) => {
