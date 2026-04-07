@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-31T19:33:14.318Z",
-  "total": 183,
+  "generatedAt": "2026-04-07T21:41:05.353Z",
+  "total": 184,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -454,7 +454,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "get urbit id learn how to acquire your own urbit identity /overview/running-urbit/get-urbit-id overview running urbit methods for obtaining an urbit id including purchasing layer 1 azimuth identities on nft marketplaces, acquiring layer 2 identities from vendors using bitcoin or fiat, and receiving invitations from existing users. buy-an-urbit-id azimuth-based-urbit-ids urbit-master-ticket-wallets self-custody-your-id"
+      "searchText": "get urbit id learn how to acquire your own urbit identity /overview/running-urbit/get-urbit-id overview running urbit methods for obtaining an urbit id including purchasing layer 1 azimuth identities on nft marketplaces, acquiring layer 2 identities from vendors using bitcoin or fiat, and receiving invitations from existing users. buy-an-urbit-id azimuth-based-urbit-ids groundwire-based-urbit-ids urbit-master-ticket-wallets self-custody-your-id"
     },
     {
       "id": "overview/running-urbit/glossary.md",
@@ -497,12 +497,12 @@
       "authors": [],
       "publishedTimestamp": null,
       "source": "blurbs",
-      "path": "/overview/running-urbit/get-urbit-id",
+      "path": "/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
       "section": "overview",
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id overview running urbit groundwire is an upcoming bitcoin-based urbit identity system using ordinal/nft inscriptions for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> groundwire on tlon https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger"
+      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is an upcoming bitcoin-based urbit identity system using ordinal/nft inscriptions for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> groundwire on tlon https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger"
     },
     {
       "id": "overview/running-urbit/hosting-providers.md",
@@ -2157,6 +2157,25 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~mastyr-bottec a conversation with runtime developer ~mastyr-bottec on his work to make urbit store large amounts of data spotlight vere64 runtime /blog/contributor-spotlight-mastyr-bottec blog 2025-11-25 runtime developer ~mastyr-bottec explains vere64 work enabling urbit to store large amounts of data, including migrations and lifting file size limits. ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa+mastyr-bottec_social.png spotlight vere64 runtime contributor spotlight mastyr bottec runtime developer large data loom size runtime migration directed messaging nock runtime storage scaling urbit runtime"
+    },
+    {
+      "id": "blog/contributor-spotlight-nomryg-nilref.md",
+      "title": "Contributor Spotlight: ~nomryg-nilref",
+      "description": "A conversation with ~nomryg-nilref on beautiful lost causes, forever software, and Obelisk",
+      "tags": [
+        "spotlight",
+        "obelisk",
+        "databases",
+        "functional-programming"
+      ],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": 1776124800000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-nomryg-nilref",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~nomryg-nilref a conversation with ~nomryg-nilref on beautiful lost causes, forever software, and obelisk spotlight obelisk databases functional-programming /blog/contributor-spotlight-nomryg-nilref blog 2026-04-14 ~nomryg-nilref discusses how urbit's sovereign computing vision resonated with decades of technical experience, why simple software distribution matters, and what obelisk is trying to fix in relational databases. ~sarlev-sarsen <image_url> <image_card_url> spotlight obelisk databases functional-programming contributor spotlight ~nomryg-nilref obelisk database urbit database relational database sovereign computing forever software software distribution functional programming f sharp urbit kelvin zero e f codd"
     },
     {
       "id": "blog/contributor-spotlight-nordus-mocwyl.md",
