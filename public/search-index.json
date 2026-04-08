@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T19:33:14.318Z",
+  "generatedAt": "2026-04-02T00:43:49.090Z",
   "total": 183,
   "entries": [
     {
@@ -454,7 +454,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "get urbit id learn how to acquire your own urbit identity /overview/running-urbit/get-urbit-id overview running urbit methods for obtaining an urbit id including purchasing layer 1 azimuth identities on nft marketplaces, acquiring layer 2 identities from vendors using bitcoin or fiat, and receiving invitations from existing users. buy-an-urbit-id azimuth-based-urbit-ids urbit-master-ticket-wallets self-custody-your-id"
+      "searchText": "get urbit id learn how to acquire your own urbit identity /overview/running-urbit/get-urbit-id overview running urbit methods for obtaining an urbit id including purchasing layer 1 azimuth identities on nft marketplaces, acquiring layer 2 identities from vendors using bitcoin or fiat, and receiving invitations from existing users. buy-an-urbit-id azimuth-based-urbit-ids groundwire-based-urbit-ids urbit-master-ticket-wallets self-custody-your-id"
     },
     {
       "id": "overview/running-urbit/glossary.md",
@@ -485,9 +485,11 @@
       "searchTerms": [
         "groundwire ids",
         "bitcoin urbit",
-        "ordinal nft",
-        "inscription nft",
-        "comet identity",
+        "ordinal",
+        "inscription",
+        "nft",
+        "comet",
+        "identity",
         "bitcoin address space",
         "groundwire network",
         "l1 bitcoin fees",
@@ -497,12 +499,12 @@
       "authors": [],
       "publishedTimestamp": null,
       "source": "blurbs",
-      "path": "/overview/running-urbit/get-urbit-id",
+      "path": "/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
       "section": "overview",
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id overview running urbit groundwire is an upcoming bitcoin-based urbit identity system using ordinal/nft inscriptions for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> groundwire on tlon https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger"
+      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is a bitcoin-based urbit identity system using ordinals for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit inscription nft identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> urbit group https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger groundwire.io https://groundwire.io groundwire foundation official website https://github.com/gwbtc groundwire github organization and related code repositories"
     },
     {
       "id": "overview/running-urbit/hosting-providers.md",
