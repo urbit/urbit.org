@@ -9,9 +9,9 @@ summary = "~nomryg-nilref discusses how Urbit's sovereign computing vision reson
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "<IMAGE_URL>"
-imageCard = "<IMAGE_CARD_URL>"
-# imageIndex = "<IMAGE_INDEX_URL>"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Social16_9.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Banner.png"
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
@@ -32,13 +32,15 @@ search_terms = [
 ]
 +++
 
+![Hero image of ~nomryg-nilreg sigil art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Hero.png)
+
 > **\~sarlev:** What was the first thing that drew you into the idea that we needed to throw away and rewrite the entire network computing stack?
 
 **\~nomryg-nilref:** I’ve had this strange urge ever since I got involved in technology--I’m not someone who investigates every bleeding-edge thing that comes along--but when I see one that looks beautiful, that matters to me. Beauty plays a role here. Most of us know it when we see it, even if it’s hard to define.
 
 So the concept of rewriting the entire computing stack from scratch for sovereign computing made immediate sense to me. Pieces of it had already been floating around in my mind, and `~sorreg-namtyv` had brought the whole thing together.
 
-I’ve got a history of getting drawn into beautiful lost causes in tech. My first was the [Omega computer](https://omega365.com/about/history). When I read about it, I thought, “Of course this is the way.” It was mostly vaporware when I first encountered it, but I got one a year later and kept using it for a long time. Some of the free software around it included the original Vim, though before that I’d already gotten roped into another text editor, Uedit (TK, spelling, details?), so I have never actually learned Vim.
+I’ve got a history of getting drawn into beautiful lost causes in tech. My first was the [Amiga](https://grokipedia.com/page/Amiga) computer. When I read about it, I thought, “Of course this is the way.” It was mostly vaporware when I first encountered it, but I got one a year later and kept using it for a long time. Some of the free software around it included the original Vim, though before that I’d already gotten roped into another text editor, Uedit, which was a programmable editor, so I have never actually learned Vim.
 
 Later, in 2010, the next thing that really caught my interest was functional programming—specifically F#. It felt like the future. I didn’t have to keep the call stack in my head in the same way anymore, and that was a huge relief. Once I understood type systems better, I realized that type systems plus functional programming were really something special.
 
@@ -48,7 +50,7 @@ Then I got introduced to `~sorreg-namtyv` the night he was being canceled in rea
 
 > **\~sarlev:** Urbit is trying to build computers and software that last. What does a forever computer mean to you?
 
-**\~nomryg-nilref:** It kind of means everything. That was my idea back in the Omega days. I wanted personalized software. I wanted it to act the way I wanted it to act. I wanted it to be an extension of my thoughts.
+**\~nomryg-nilref:** It kind of means everything. That was my idea back in the Amiga days. I wanted personalized software. I wanted it to act the way I wanted it to act. I wanted it to be an extension of my thoughts.
 
 I had all sorts of half-baked ideas about how a computer could become an extension of me, but I never fully fleshed them out. `~sorreg-namtyv` went a very long way toward doing that, and the philosophy resonates with basically everyone who’s interested in the Urbit project. We all have some sense of where we want to go. We know where Kelvin 0 is. We want software that doesn’t expire, doesn’t break every time there’s a new update, and doesn’t get abandoned.
 
@@ -59,7 +61,7 @@ Abandoned software is still something the Urbit Foundation needs to work on, but
 **\~nomryg-nilref:** Yeah, and I think there’s some tension around that in the Urbit community. There’s the idea that everything must be entirely sovereign, and that bleeds over into anarcho-capitalism and pure libertarianism, both of which I think are failed programs.
 
 Personally, since almost everybody is developing with very permissive licenses, I’d like to see the Foundation get a little more involved in keeping backups around—especially for projects it funded, but maybe also for others that are critical. Keep secondary mirrors. Keep a copy of the source code just to have it.
-
+mag
 Some ultra-libertarian people would say that’s not sovereign computing anymore because now you’ve introduced a central point of failure. I look at it as a central point of backup.
 
 > **\~sarlev:** You’d seen a lot of these pieces already—functional programming, type systems, distributed systems. How did your relationship with computers change once you found Urbit and saw them pulled together?
@@ -88,7 +90,9 @@ If you know what SQL is in relational databases, Obelisk is a relational databas
 
 Obelisk fixes some of those. For one thing, results are proper sets of data, unlike what goes on in SQL. Another issue is the whole problem of nulls, which people who use SQL every day have learned to live with even though they’re actually fundamental logical problems.
 
-Another big thing Obelisk brings is time travel. All states of your data still exist. If you changed the database yesterday, that doesn’t mean the prior state is gone. You can see what it looked like at any point in time. That eliminates a lot of the overhead you otherwise need around audits: when did the database change, how did it change, can we go back to what it looked like before.
+Obelisk fixes some of those. For one thing, results are proper sets of data, unlike what goes on in SQL. Another issue is the whole problem of nulls, which people who use SQL every day have learned to live with even though they’re actually fundamental logical problems. The urQL dialect of SQL in Obelisk emphasizes composeability through enforced use of Common Table Expressions and a new SCALARS clause where otherwise in standard SQL you could inline SQL expressions. I think this makes your query language much more readable and easier to reason about.
+
+Another big thing Obelisk brings is time travel. All states of your data still exist. If you changed the database yesterday, that doesn’t mean the prior state is gone. You can query what it looked like at any point in time. That eliminates a lot of the overhead you otherwise need around audits: when did the database change, how did it change, can we go back to what it looked like before.
 
 > **\~sarlev:** How do you imagine people using it? Is it one database for everything, or something else?
 
@@ -108,7 +112,7 @@ I don’t want to fall into the trap of expecting everybody else to know relatio
 
 **\~nomryg-nilref:** Kind of all of the above. I want to touch grass more, for sure. But I’ve also got a couple of directions in mind for Obelisk, and it depends on community reaction and feedback from the Core Guild.
 
-The most important thing is getting version 1.0 out. The main things still missing are views, grouping, `group by`, `order by`, and related features. The [roadmap is published](TK--need link) and I recently updated it, so I know what’s required for version one.
+The most important thing is getting version 1.0 out. The main things still missing are views, grouping, `group by`, `order by`, and related features. The [roadmap is published](https://github.com/jackfoxy/obelisk/blob/master/roadmap.md) and I recently updated it, so I know what’s required for version one.
 
 And then there’s testing. I’ve written a lot of tests, but tests are the burnout part of the work. They make this kind of project a slog sometimes, even though agents have helped a lot. I know someone is going to find bugs; I just don’t know which bugs yet.
 
@@ -124,4 +128,4 @@ In my [Urbit Systems Technical Journal article](https://urbitsystems.tech/articl
 
 **\~nomryg-nilref:** I’d probably be touching grass more.
 
-But the brainworm is deep enough in me that I feel like I’m doing this to glorify God. If we don’t have a future with Urbit—which appears to be the only serious sovereign-computing project fails—we’re going to be serfs to the regime, literally.
+But the brainworm is deep enough in me that I feel like I’m doing this to glorify God. If we don’t have a future with Urbit—which appears to be the only serious sovereign-computing project—we’re going to be serfs to the regime, literally.
