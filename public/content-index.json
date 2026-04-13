@@ -4714,7 +4714,7 @@
       "url": "https://urbit.org/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
       "type": "blurbs",
       "title": "Groundwire-based Urbit IDs",
-      "summary": "Groundwire is an upcoming Bitcoin-based Urbit identity system using ordinal/NFT inscriptions for independent self-issuance with L1 Bitcoin's spam resistance.",
+      "summary": "Groundwire is a Bitcoin-based Urbit identity system using ordinals for independent self-issuance with L1 Bitcoin's spam resistance.",
       "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
       "tags": [
         "bitcoin",
@@ -4725,9 +4725,11 @@
       "search_terms": [
         "groundwire ids",
         "bitcoin urbit",
-        "ordinal nft",
-        "inscription nft",
-        "comet identity",
+        "ordinal",
+        "inscription",
+        "nft",
+        "comet",
+        "identity",
         "bitcoin address space",
         "groundwire network",
         "l1 bitcoin fees",

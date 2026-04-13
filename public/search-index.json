@@ -485,9 +485,11 @@
       "searchTerms": [
         "groundwire ids",
         "bitcoin urbit",
-        "ordinal nft",
-        "inscription nft",
-        "comet identity",
+        "ordinal",
+        "inscription",
+        "nft",
+        "comet",
+        "identity",
         "bitcoin address space",
         "groundwire network",
         "l1 bitcoin fees",
@@ -502,7 +504,11 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
+<<<<<<< vanta/nomryg-nilref-contributor-spotlight
       "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is an upcoming bitcoin-based urbit identity system using ordinal/nft inscriptions for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> groundwire on tlon https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger"
+=======
+      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is a bitcoin-based urbit identity system using ordinals for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit inscription nft identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> urbit group https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger groundwire.io https://groundwire.io groundwire foundation official website https://github.com/gwbtc groundwire github organization and related code repositories"
+>>>>>>> master
     },
     {
       "id": "overview/running-urbit/hosting-providers.md",
