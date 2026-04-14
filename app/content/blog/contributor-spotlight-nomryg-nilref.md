@@ -88,8 +88,6 @@ So despite the difficulty of getting Hoon right—for both humans and agents—t
 
 If you know what SQL is in relational databases, Obelisk is a relational database for Urbit-native computing that fixes some of the lingering compromises in SQL. SQL got rushed out the door in the 1970s on machines that could barely handle the workload of a relational database, so it had to make all sorts of compromises.
 
-Obelisk fixes some of those. For one thing, results are proper sets of data, unlike what goes on in SQL. Another issue is the whole problem of nulls, which people who use SQL every day have learned to live with even though they’re actually fundamental logical problems.
-
 Obelisk fixes some of those. For one thing, results are proper sets of data, unlike what goes on in SQL. Another issue is the whole problem of nulls, which people who use SQL every day have learned to live with even though they’re actually fundamental logical problems. The urQL dialect of SQL in Obelisk emphasizes composeability through enforced use of Common Table Expressions and a new SCALARS clause where otherwise in standard SQL you could inline SQL expressions. I think this makes your query language much more readable and easier to reason about.
 
 Another big thing Obelisk brings is time travel. All states of your data still exist. If you changed the database yesterday, that doesn’t mean the prior state is gone. You can query what it looked like at any point in time. That eliminates a lot of the overhead you otherwise need around audits: when did the database change, how did it change, can we go back to what it looked like before.
