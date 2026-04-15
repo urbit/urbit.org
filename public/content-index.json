@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-15T03:32:20.247Z",
-  "total": 338,
+  "generatedAt": "2026-04-15T03:37:47.051Z",
+  "total": 339,
   "entries": [
     {
       "id": "index.md",
@@ -849,6 +849,21 @@
         "AI",
         "design",
         "architecture"
+      ],
+      "search_terms": []
+    },
+    {
+      "id": "blog/contributor-spotlight-nomryg-nilref.md",
+      "url": "https://urbit.org/blog/contributor-spotlight-nomryg-nilref",
+      "type": "blog",
+      "title": "Contributor Spotlight: ~nomryg-nilref",
+      "summary": "~nomryg-nilref discusses how Urbit's sovereign computing vision resonated with decades of technical experience, why simple software distribution matters, and what Obelisk is trying to fix in relational databases.",
+      "description": "A conversation with ~nomryg-nilref on beautiful lost causes, forever software, and Obelisk",
+      "tags": [
+        "spotlight",
+        "obelisk",
+        "databases",
+        "functional-programming"
       ],
       "search_terms": []
     },
@@ -4699,8 +4714,8 @@
       "url": "https://urbit.org/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
       "type": "blurbs",
       "title": "Groundwire-based Urbit IDs",
-      "summary": "Groundwire is an upcoming Bitcoin-based Urbit identity system using ordinal/NFT inscriptions for independent self-issuance with L1 Bitcoin's spam resistance.",
-      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
+      "summary": "Groundwire is a Bitcoin-based Urbit identity system using ordinals for independent self-issuance with L1 Bitcoin's spam resistance.",
+      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain.",
       "tags": [
         "bitcoin",
         "urbit-id",
@@ -4710,9 +4725,11 @@
       "search_terms": [
         "groundwire ids",
         "bitcoin urbit",
-        "ordinal nft",
-        "inscription nft",
-        "comet identity",
+        "ordinal",
+        "inscription",
+        "nft",
+        "comet",
+        "identity",
         "bitcoin address space",
         "groundwire network",
         "l1 bitcoin fees",
