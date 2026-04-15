@@ -40,8 +40,8 @@ This most recent upgrade to a 16GB loom, as noted by `~dozreg-toplud` in last mo
 
 ```
 git clone https://github.com/urbit/vere && cd vere
-git fetch --tags
-git checkout tags/vere64-peek
+git fetch
+git checkout ml/vere-64
 
 # See `./INSTALL.MD` for additional details and dependencies for the build process
 zig build -Doptimize=ReleaseFast
@@ -59,3 +59,5 @@ As this is a developer preview, we are sharing this WITHOUT WARRANTY OR ANY OTHE
 So why are we providing this preview if it has to come with these caveats? Urbit developers have often found themselves mentally constrained by the idea that their urbit, or their users' urbits, would run out of space just at the moment they became useful. We want to remove that conceptual blocker and allow intrepid developers from the community to be able to play with applications like file sharing, epub readers, or music players without that looming constraint.
 
 Interested in building something to take advantage of this Developer Preview of `vere64`? Get after it, and if you are looking for collaborators or discussion, join us in Runtime channel of [the `[battery payload]` group on Tlon Messenger](https://join.tlon.io/0v1.thdiu.q9kem.a0gtu.438pi.544q5).
+
+> April 14, 2026 Update: The recommended branch is now `ml/64`, changed from the previous `tags/vere64-peek` recommended on initial release of this post.
