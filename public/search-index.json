@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T21:41:05.353Z",
+  "generatedAt": "2026-04-15T03:37:46.965Z",
   "total": 184,
   "entries": [
     {
@@ -475,7 +475,7 @@
     {
       "id": "blurbs/groundwire-based-urbit-ids.md",
       "title": "Groundwire-based Urbit IDs",
-      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
+      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain.",
       "tags": [
         "bitcoin",
         "urbit-id",
@@ -504,11 +504,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-<<<<<<< vanta/nomryg-nilref-contributor-spotlight
-      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is an upcoming bitcoin-based urbit identity system using ordinal/nft inscriptions for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal nft inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> groundwire on tlon https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger"
-=======
-      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is a bitcoin-based urbit identity system using ordinals for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit inscription nft identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> urbit group https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger groundwire.io https://groundwire.io groundwire foundation official website https://github.com/gwbtc groundwire github organization and related code repositories"
->>>>>>> master
+      "searchText": "groundwire-based urbit ids groundwire identities are cryptographically owned urbit address space on the bitcoin blockchain. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit ordinal inscription nft comet identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger /overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids overview running urbit groundwire is a bitcoin-based urbit identity system using ordinals for independent self-issuance with l1 bitcoin's spam resistance. bitcoin urbit-id ordinal comet groundwire ids bitcoin urbit inscription nft identity bitcoin address space groundwire network l1 bitcoin fees self issued ids groundwire messenger <some-arvo-hash> urbit group https://join.tlon.io/0v6.kumf3.l31r5.f0peh.odf94.kk8ai join the conversation with groundwire using tlon messenger official website https://groundwire.io groundwire foundation official website github organization https://github.com/gwbtc groundwire github organization and related code repositories"
     },
     {
       "id": "overview/running-urbit/hosting-providers.md",
@@ -2181,7 +2177,7 @@
       "path": "/blog/contributor-spotlight-nomryg-nilref",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "contributor spotlight: ~nomryg-nilref a conversation with ~nomryg-nilref on beautiful lost causes, forever software, and obelisk spotlight obelisk databases functional-programming /blog/contributor-spotlight-nomryg-nilref blog 2026-04-14 ~nomryg-nilref discusses how urbit's sovereign computing vision resonated with decades of technical experience, why simple software distribution matters, and what obelisk is trying to fix in relational databases. ~sarlev-sarsen <image_url> <image_card_url> spotlight obelisk databases functional-programming contributor spotlight ~nomryg-nilref obelisk database urbit database relational database sovereign computing forever software software distribution functional programming f sharp urbit kelvin zero e f codd"
+      "searchText": "contributor spotlight: ~nomryg-nilref a conversation with ~nomryg-nilref on beautiful lost causes, forever software, and obelisk spotlight obelisk databases functional-programming /blog/contributor-spotlight-nomryg-nilref blog 2026-04-14 ~nomryg-nilref discusses how urbit's sovereign computing vision resonated with decades of technical experience, why simple software distribution matters, and what obelisk is trying to fix in relational databases. ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_nomryg-nilref/blog_qa+nomryg-nilref_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_nomryg-nilref/blog_qa+nomryg-nilref_social16_9.png spotlight obelisk databases functional-programming contributor spotlight ~nomryg-nilref obelisk database urbit database relational database sovereign computing forever software software distribution functional programming f sharp urbit kelvin zero e f codd"
     },
     {
       "id": "blog/contributor-spotlight-nordus-mocwyl.md",

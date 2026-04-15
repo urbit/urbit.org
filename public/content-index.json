@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T21:41:05.446Z",
+  "generatedAt": "2026-04-15T03:37:47.051Z",
   "total": 339,
   "entries": [
     {
@@ -4715,7 +4715,7 @@
       "type": "blurbs",
       "title": "Groundwire-based Urbit IDs",
       "summary": "Groundwire is a Bitcoin-based Urbit identity system using ordinals for independent self-issuance with L1 Bitcoin's spam resistance.",
-      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
+      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain.",
       "tags": [
         "bitcoin",
         "urbit-id",
