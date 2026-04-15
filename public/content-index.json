@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-05T23:59:44.390Z",
-  "total": 334,
+  "generatedAt": "2026-04-15T03:32:20.247Z",
+  "total": 338,
   "entries": [
     {
       "id": "index.md",
@@ -141,31 +141,6 @@
       ]
     },
     {
-      "id": "blurbs/getting-started-with-urbit.md",
-      "url": "https://urbit.org/#getting-started-with-urbit",
-      "type": "blurbs",
-      "title": "Get Started with Urbit",
-      "summary": "Begin your Urbit journey by acquiring a self-sovereign ID and learning about Urbit OS, the personal server computing platform that gives you full control over your data.",
-      "description": "Ready to join the Urbit network? Get your own Urbit ID and start exploring a new way to compute.",
-      "tags": [
-        "getting-started",
-        "homepage",
-        "sidebar"
-      ],
-      "search_terms": [
-        "get started",
-        "urbit id",
-        "urbit os",
-        "join urbit",
-        "quickstart",
-        "self sovereign",
-        "start exploring",
-        "urbit network",
-        "buy urbit id",
-        "learn urbit"
-      ]
-    },
-    {
       "id": "blurbs/homepage-go-deeper.md",
       "url": "https://urbit.org/#homepage-go-deeper",
       "type": "blurbs",
@@ -234,6 +209,31 @@
         "full control",
         "urbit experience",
         "caring for cactus"
+      ]
+    },
+    {
+      "id": "blurbs/getting-started-with-urbit.md",
+      "url": "https://urbit.org/#self-hosting",
+      "type": "blurbs",
+      "title": "Get Started with Urbit",
+      "summary": "Begin your Urbit journey by acquiring a self-sovereign ID and learning about Urbit OS, the personal server computing platform that gives you full control over your data.",
+      "description": "Ready to join the Urbit network? Get your own Urbit ID and start exploring a new way to compute.",
+      "tags": [
+        "getting-started",
+        "homepage",
+        "sidebar"
+      ],
+      "search_terms": [
+        "get started",
+        "urbit id",
+        "urbit os",
+        "join urbit",
+        "quickstart",
+        "self sovereign",
+        "start exploring",
+        "urbit network",
+        "buy urbit id",
+        "learn urbit"
       ]
     },
     {
@@ -867,6 +867,20 @@
       "search_terms": []
     },
     {
+      "id": "blog/contributor-spotlight-palfun-foslup.md",
+      "url": "https://urbit.org/blog/contributor-spotlight-palfun-foslup",
+      "type": "blog",
+      "title": "Contributor Spotlight: ~palfun-foslup",
+      "summary": "Tlon engineer ~palfun-foslup discusses building Gall apps like %pals and %rumors, why user-owned servers lower the barrier for peer-to-peer software, and what Gall 2026 aims to deliver with userspace compatibility and permissions.",
+      "description": "A conversation with ~palfun-foslup on Gall, userspace, and making simple software",
+      "tags": [
+        "spotlight",
+        "gall",
+        "userspace"
+      ],
+      "search_terms": []
+    },
+    {
       "id": "blog/convivial-networks.md",
       "url": "https://urbit.org/blog/convivial-networks",
       "type": "blog",
@@ -1097,6 +1111,20 @@
         "open source strategy",
         "community"
       ]
+    },
+    {
+      "id": "blog/gall-2026.md",
+      "url": "https://urbit.org/blog/gall-2026",
+      "type": "blog",
+      "title": "The Future of Userspace",
+      "summary": "An overview of the Gall 2026 userspace roadmap, including scoped Eyre permissions, support for alternative agent APIs, and a kelvin-shimming proof of concept for application compatibility across Arvo updates.",
+      "description": "The Gall 2026 project and what it means for userspace",
+      "tags": [
+        "security",
+        "gall",
+        "userspace"
+      ],
+      "search_terms": []
     },
     {
       "id": "blog/gifts-q3-2020.md",
@@ -4425,6 +4453,28 @@
       ]
     },
     {
+      "id": "blurbs/get-the-urbit-runtime.md",
+      "url": "https://urbit.org/overview/running-urbit/common-commands#get-the-urbit-runtime",
+      "type": "blurbs",
+      "title": "Get the Urbit runtime",
+      "summary": "Install the Urbit runtime with the guided get-runtime.sh helper or use direct per-platform commands for macOS and Linux.",
+      "description": "Download the runtime binary for your host platform",
+      "tags": [
+        "runtime",
+        "install",
+        "command-line"
+      ],
+      "search_terms": [
+        "get runtime",
+        "install runtime",
+        "download urbit binary",
+        "get-runtime.sh",
+        "macos runtime",
+        "linux runtime",
+        "install vere"
+      ]
+    },
+    {
       "id": "blurbs/reduce-your-pier-size.md",
       "url": "https://urbit.org/overview/running-urbit/common-commands#reduce-your-pier-size",
       "type": "blurbs",
@@ -4582,32 +4632,6 @@
       ]
     },
     {
-      "id": "blurbs/groundwire-based-urbit-ids.md",
-      "url": "https://urbit.org/overview/running-urbit/get-urbit-id",
-      "type": "blurbs",
-      "title": "Groundwire-based Urbit IDs",
-      "summary": "Groundwire is an upcoming Bitcoin-based Urbit identity system using ordinal/NFT inscriptions for independent self-issuance with L1 Bitcoin's spam resistance.",
-      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
-      "tags": [
-        "bitcoin",
-        "urbit-id",
-        "ordinal",
-        "comet"
-      ],
-      "search_terms": [
-        "groundwire ids",
-        "bitcoin urbit",
-        "ordinal nft",
-        "inscription nft",
-        "comet identity",
-        "bitcoin address space",
-        "groundwire network",
-        "l1 bitcoin fees",
-        "self issued ids",
-        "groundwire messenger"
-      ]
-    },
-    {
       "id": "overview/running-urbit/get-urbit-id.md",
       "url": "https://urbit.org/overview/running-urbit/get-urbit-id",
       "type": "overview",
@@ -4668,6 +4692,32 @@
         "credit card planet",
         "galaxy star ids",
         "self sovereign identity"
+      ]
+    },
+    {
+      "id": "blurbs/groundwire-based-urbit-ids.md",
+      "url": "https://urbit.org/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
+      "type": "blurbs",
+      "title": "Groundwire-based Urbit IDs",
+      "summary": "Groundwire is an upcoming Bitcoin-based Urbit identity system using ordinal/NFT inscriptions for independent self-issuance with L1 Bitcoin's spam resistance.",
+      "description": "Groundwire identities are cryptographically owned Urbit address space on the Bitcoin blockchain",
+      "tags": [
+        "bitcoin",
+        "urbit-id",
+        "ordinal",
+        "comet"
+      ],
+      "search_terms": [
+        "groundwire ids",
+        "bitcoin urbit",
+        "ordinal nft",
+        "inscription nft",
+        "comet identity",
+        "bitcoin address space",
+        "groundwire network",
+        "l1 bitcoin fees",
+        "self issued ids",
+        "groundwire messenger"
       ]
     },
     {
@@ -5102,6 +5152,26 @@
       "description": "Get help with Urbit",
       "tags": [],
       "search_terms": []
+    },
+    {
+      "id": "blurbs/partnerships-outreach.md",
+      "url": "https://urbit.org/overview/running-urbit/support#partnerships-outreach",
+      "type": "blurbs",
+      "title": "Partnerships and outreach",
+      "summary": "Contact the Urbit Foundation partnerships team for collaborations, events, integrations, and other outreach opportunities.",
+      "description": "Reach out if you want to collaborate with the Urbit Foundation",
+      "tags": [
+        "support",
+        "partnerships",
+        "outreach"
+      ],
+      "search_terms": [
+        "partnerships",
+        "collaborate",
+        "outreach",
+        "business development",
+        "partnerships@urbit.org"
+      ]
     },
     {
       "id": "blurbs/support-contact-points.md",
