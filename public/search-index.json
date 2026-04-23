@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-15T03:37:46.965Z",
-  "total": 184,
+  "generatedAt": "2026-04-23T16:07:01.557Z",
+  "total": 185,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -3219,6 +3219,38 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "nockpu a light technical description of nockpu, a hardware system for running nock nockpu nock hardware nock processing unit bare metal nock hardware jets tree traversal binary tree urbit hardware mopfel winrux noah kumin /blog/nockpu blog 2023-08-02 noah kumin describes ~mopfel-winrux's nockpu hardware project, explaining how a stackless, tree-traversal-optimized processor differs from von neumann architecture and could enable ultra-efficient nock execution on bare metal. nockpu nock hardware nock processing unit bare metal nock hardware jets tree traversal binary tree urbit hardware mopfel winrux ~librex-dozryc https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/npu/state_diagrams/mtu_state_diagram.png"
+    },
+    {
+      "id": "blog/obelisk-beta-release.md",
+      "title": "Obelisk Beta Release",
+      "description": "A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.",
+      "tags": [
+        "obelisk",
+        "databases",
+        "urql",
+        "developers"
+      ],
+      "searchTerms": [
+        "obelisk beta",
+        "~nomryg-nilref",
+        "urql",
+        "urbit database",
+        "relational database",
+        "time travel database",
+        "sql for urbit",
+        "common table expressions",
+        "scalars clause",
+        "sample database",
+        "hawk ui",
+        "no nulls"
+      ],
+      "authors": [],
+      "publishedTimestamp": 1776902400000,
+      "source": "blog",
+      "path": "/blog/obelisk-beta-release",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "obelisk beta release a first look at obelisk, a relational database for urbit with time travel, composable queries, and no nulls. obelisk databases urql developers obelisk beta ~nomryg-nilref urql urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls /blog/obelisk-beta-release blog 2026-04-23 obelisk brings a time-traveling relational database to urbit. this post outlines urql, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the hawk ui. obelisk databases urql developers obelisk beta ~nomryg-nilref urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls ~sarlev-sarsen"
     },
     {
       "id": "blog/olif-and-urbit-ids.md",
