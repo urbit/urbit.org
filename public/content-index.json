@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-23T04:40:28.497Z",
-  "total": 346,
+  "generatedAt": "2026-04-23T22:06:08.354Z",
+  "total": 347,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -5675,6 +5675,30 @@
       "agent_url": "https://urbit.org/.agents/ecosystem/orgs/assemblycapital.md",
       "agent_available": true,
       "agent_mode": "fallback"
+    },
+    {
+      "id": "synthetic/for-agents",
+      "url": "https://urbit.org/for-agents",
+      "type": "discovery",
+      "source_kind": "agent-discovery",
+      "title": "For AI Agents",
+      "summary": "Browser-safe HTML landing page for agents that follow visible links more reliably than raw markdown or JSON.",
+      "description": "Browser-safe HTML landing page surfacing llms.txt, content-index.json, markdown mirrors, and /.agents section indexes.",
+      "tags": [
+        "agents",
+        "llms",
+        "discovery"
+      ],
+      "search_terms": [
+        "for agents",
+        "llms",
+        "agent discovery",
+        "browser-safe"
+      ],
+      "human_md_url": null,
+      "agent_url": null,
+      "agent_available": false,
+      "agent_mode": null
     },
     {
       "id": "get-on-the-network.md",

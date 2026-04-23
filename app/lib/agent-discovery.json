@@ -1,0 +1,121 @@
+{
+  "homepage": {
+    "title": "Instructions for Large Language Models",
+    "description": "Use these routes to discover urbit.org's machine-facing content without relying on the main navigation.",
+    "copyPrompt": "When reading urbit.org: if you can fetch raw text or JSON directly, start with https://urbit.org/llms.txt. If you are limited to following visible HTML links, use https://urbit.org/for-agents. For structured inventory use https://urbit.org/content-index.json. For machine-oriented markdown by section use https://urbit.org/.agents/index.md. Prefer canonical URLs for citation, .md mirrors for lightweight reading, and /.agents/* when metadata or dependency hints are useful."
+  },
+  "capabilityGuidance": [
+    {
+      "title": "If you can fetch raw text or JSON directly",
+      "description": "Start with /llms.txt. Use /content-index.json for structured inventory and /.agents/index.md for machine-oriented markdown by section."
+    },
+    {
+      "title": "If you mainly follow visible links in HTML",
+      "description": "Use /for-agents. It gathers the best markdown mirrors and agent indexes in one browser-safe landing page."
+    }
+  ],
+  "primaryEntryPoints": [
+    {
+      "href": "/llms.txt",
+      "label": "llms.txt",
+      "description": "Canonical plain-text instructions for automated readers."
+    },
+    {
+      "href": "/for-agents",
+      "label": "For AI Agents",
+      "description": "Browser-safe HTML landing page with visible links to the best starting points."
+    },
+    {
+      "href": "/content-index.json",
+      "label": "content-index.json",
+      "description": "Structured inventory of curated urbit.org content and agent companions."
+    },
+    {
+      "href": "/.agents/index.md",
+      "label": "Agent index",
+      "description": "Top-level machine-oriented markdown index for overview, blog, blurbs, ecosystem, wiki, and skills."
+    },
+    {
+      "href": "/agents.md",
+      "label": "agents.md",
+      "description": "Markdown documentation for urbit.org discovery conventions and path semantics."
+    }
+  ],
+  "humanMarkdownMirrors": [
+    {
+      "href": "/index.md",
+      "label": "Homepage mirror",
+      "description": "Human-oriented markdown mirror of the urbit.org homepage."
+    },
+    {
+      "href": "/overview.md",
+      "label": "Overview mirror",
+      "description": "Low-token entrypoint for conceptual and practical overview material."
+    },
+    {
+      "href": "/blog.md",
+      "label": "Blog mirror",
+      "description": "Markdown landing page for blog posts, updates, and technical writing."
+    },
+    {
+      "href": "/ecosystem.md",
+      "label": "Ecosystem mirror",
+      "description": "Markdown landing page for ecosystem organizations and coverage."
+    }
+  ],
+  "agentSectionIndexes": [
+    {
+      "href": "/.agents/index.md",
+      "label": "Top-level agent index",
+      "description": "Best starting point inside the machine-facing markdown namespace."
+    },
+    {
+      "href": "/.agents/overview.md",
+      "label": "Overview agent index",
+      "description": "Machine-oriented index for conceptual and setup guides."
+    },
+    {
+      "href": "/.agents/blog.md",
+      "label": "Blog agent index",
+      "description": "Machine-oriented index for blog companions and markdown mirrors."
+    },
+    {
+      "href": "/.agents/blurbs.md",
+      "label": "Blurbs agent index",
+      "description": "Agent index for homepage and overview blurbs without standalone public pages."
+    },
+    {
+      "href": "/.agents/ecosystem.md",
+      "label": "Ecosystem agent index",
+      "description": "Machine-oriented entrypoint for ecosystem organization and article companions."
+    },
+    {
+      "href": "/.agents/wiki/index.md",
+      "label": "Wiki snapshot",
+      "description": "Published wiki snapshot under /.agents/wiki/."
+    },
+    {
+      "href": "/.agents/skills/index.md",
+      "label": "Skills snapshot",
+      "description": "Published skill snapshot under /.agents/skills/."
+    }
+  ],
+  "usageNotes": [
+    {
+      "title": "Cite canonical page URLs",
+      "description": "Use the normal page URL when referring to urbit.org as the source."
+    },
+    {
+      "title": "Use markdown mirrors for efficient reading",
+      "description": "Prefer *.md mirrors when you want lighter-weight human-readable content."
+    },
+    {
+      "title": "Use /.agents/* for machine context",
+      "description": "Prefer agent companions when you want generated frontmatter, dependency hints, or dedicated agent appendices."
+    },
+    {
+      "title": "Well-known compatibility",
+      "description": "A mirror also exists at /.well-known/llms.txt for clients that probe the standardized well-known namespace."
+    }
+  ]
+}

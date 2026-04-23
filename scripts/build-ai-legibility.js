@@ -13,6 +13,7 @@ const fs = require("fs");
 const path = require("path");
 const { glob } = require("glob");
 
+const discoveryConfig = require("../app/lib/agent-discovery.json");
 const { llmsConfig } = require("./ai-legibility-config");
 const {
   buildSummaryInfo,
@@ -41,6 +42,7 @@ const {
 
 const OUTPUT_INDEX = path.join(process.cwd(), "public/content-index.json");
 const OUTPUT_LLMS = path.join(process.cwd(), "public/llms.txt");
+const OUTPUT_WELL_KNOWN_LLMS = path.join(process.cwd(), "public/.well-known/llms.txt");
 const OUTPUT_AGENTS = path.join(process.cwd(), "public/agents.md");
 const SUMMARY_RECOMMENDED_MAX = 280;
 const SUMMARY_ENFORCED_DIRS = ["blog/", "blurbs/", "overview/"];
@@ -58,6 +60,11 @@ const loadConfigFrontMatter = (relativePath) => {
 };
 
 const toAbsoluteUrl = (relativePath, canonicalBase) => new URL(relativePath, canonicalBase).toString();
+
+const toDiscoveryUrl = (value, canonicalBase) =>
+  value.startsWith("http://") || value.startsWith("https://")
+    ? value
+    : toAbsoluteUrl(value, canonicalBase);
 
 const buildSyntheticEntries = (canonicalBase) => {
   const siteConfig = loadConfigFrontMatter("config.md") || {};
@@ -129,6 +136,23 @@ const buildSyntheticEntries = (canonicalBase) => {
       agent_url: toAbsoluteUrl("/.agents/ecosystem.md", canonicalBase),
       agent_available: true,
       agent_mode: "fallback",
+    },
+    {
+      id: "synthetic/for-agents",
+      url: toAbsoluteUrl("/for-agents", canonicalBase),
+      type: "discovery",
+      source_kind: "agent-discovery",
+      title: "For AI Agents",
+      summary:
+        "Browser-safe HTML landing page for agents that follow visible links more reliably than raw markdown or JSON.",
+      description:
+        "Browser-safe HTML landing page surfacing llms.txt, content-index.json, markdown mirrors, and /.agents section indexes.",
+      tags: ["agents", "llms", "discovery"],
+      search_terms: ["for agents", "llms", "agent discovery", "browser-safe"],
+      human_md_url: null,
+      agent_url: null,
+      agent_available: false,
+      agent_mode: null,
     },
   ];
 };
@@ -294,40 +318,39 @@ const buildLlmsText = (entries, canonicalBase) => {
   );
   lines.push("");
 
-  lines.push("## Machine-readable surfaces");
-  [
-    {
-      url: `${canonicalBase}/index.md`,
-      title: "Homepage markdown mirror",
-      summary: "Human-oriented markdown mirror of the homepage content.",
-    },
-    {
-      url: `${canonicalBase}/.agents/index.md`,
-      title: "Agent index",
-      summary: "Top-level machine entry point for overview, blog, blurbs, ecosystem, wiki, and skills.",
-    },
-    {
-      url: `${canonicalBase}/.agents/overview.md`,
-      title: "Overview agent index",
-      summary: "Machine-facing index for conceptual and setup guides.",
-    },
-    {
-      url: `${canonicalBase}/.agents/blog.md`,
-      title: "Blog agent index",
-      summary: "Machine-facing index for blog companions and human markdown mirrors.",
-    },
-    {
-      url: `${canonicalBase}/.agents/wiki/index.md`,
-      title: "Wiki snapshot",
-      summary: "Committed wiki-style snapshot content published under /.agents/wiki/.",
-    },
-    {
-      url: `${canonicalBase}/.agents/skills/index.md`,
-      title: "Skills snapshot",
-      summary: "Committed skill snapshot content published under /.agents/skills/.",
-    },
-  ].forEach((entry) => {
-    lines.push(`- [${entry.title}](${entry.url}) — ${entry.summary}`);
+  lines.push("## Capability routing");
+  discoveryConfig.capabilityGuidance.forEach((item) => {
+    lines.push(`- ${item.title}: ${item.description}`);
+  });
+  lines.push(
+    `- Well-known compatibility: ${toAbsoluteUrl("/.well-known/llms.txt", canonicalBase)} mirrors the canonical ${toAbsoluteUrl("/llms.txt", canonicalBase)} entrypoint for clients that probe /.well-known/.`
+  );
+  lines.push("");
+
+  lines.push("## Primary discovery endpoints");
+  discoveryConfig.primaryEntryPoints.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Top-level human markdown mirrors");
+  discoveryConfig.humanMarkdownMirrors.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Machine-oriented section indexes");
+  discoveryConfig.agentSectionIndexes.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Retrieval notes");
+  discoveryConfig.usageNotes.forEach((note) => {
+    lines.push(`- ${note.title}: ${note.description}`);
   });
   lines.push("");
 
@@ -354,17 +377,35 @@ const buildLlmsText = (entries, canonicalBase) => {
 
 const buildAgentsMd = (canonicalBase) => [
   "# urbit.org",
-  "> Guidance for automated agents and crawlers.",
+  "> Discovery guidance for automated agents, crawlers, and user-directed language models.",
   "",
-  "## Entry points",
-  `- ${canonicalBase}/llms.txt`,
-  `- ${canonicalBase}/content-index.json`,
-  `- ${canonicalBase}/.agents/index.md`,
+  "## Primary protocol",
+  `1. If you can fetch raw text or JSON directly, start with ${canonicalBase}/llms.txt.`,
+  `2. If you mainly follow visible links in HTML, use ${canonicalBase}/for-agents.`,
+  `3. Use ${canonicalBase}/content-index.json for the structured inventory.`,
+  `4. Use ${canonicalBase}/.agents/index.md for machine-oriented markdown by section.`,
+  `5. A compatibility mirror also exists at ${canonicalBase}/.well-known/llms.txt.`,
+  "",
+  "## Discovery surfaces",
+  ...discoveryConfig.primaryEntryPoints.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
+  `- ${canonicalBase}/.well-known/llms.txt — Mirror of the canonical llms.txt entrypoint for clients that probe /.well-known/.`,
+  "",
+  "## Human markdown mirrors",
+  ...discoveryConfig.humanMarkdownMirrors.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
+  "",
+  "## Machine-oriented section indexes",
+  ...discoveryConfig.agentSectionIndexes.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
   "",
   "## Path conventions",
-  `- Human markdown mirrors: ${canonicalBase}/index.md, ${canonicalBase}/overview.md, ${canonicalBase}/blog.md, ${canonicalBase}/ecosystem.md, plus page-backed mirrors like ${canonicalBase}/blog/llms-on-urbit.md`,
-  `- Agent companions: ${canonicalBase}/.agents/*.md`,
-  `- Snapshot content: ${canonicalBase}/.agents/wiki/** and ${canonicalBase}/.agents/skills/**`,
+  `- Human markdown mirrors live alongside page routes with a .md suffix.`,
+  `- Agent companions live under ${canonicalBase}/.agents/*.md.`,
+  `- Snapshot content lives under ${canonicalBase}/.agents/wiki/** and ${canonicalBase}/.agents/skills/**.`,
   "",
   "## Delimiter and fallback behavior",
   "- If a source file includes `---agent---`, the human page and human `.md` mirror use the pre-delimiter content.",
@@ -388,6 +429,9 @@ const buildAgentsMd = (canonicalBase) => [
   `- ${canonicalBase}/.agents/ecosystem.md`,
   `- ${canonicalBase}/.agents/wiki/index.md`,
   `- ${canonicalBase}/.agents/skills/index.md`,
+  "",
+  "## Retrieval notes",
+  ...discoveryConfig.usageNotes.map((note) => `- ${note.title}: ${note.description}`),
   "",
   "## Notes",
   "- This site is statically generated; these artifacts are build outputs, not runtime routes.",
@@ -433,11 +477,15 @@ async function buildAiLegibility() {
   };
 
   fs.writeFileSync(OUTPUT_INDEX, JSON.stringify(indexOutput, null, 2), "utf-8");
-  fs.writeFileSync(OUTPUT_LLMS, buildLlmsText(entries, canonicalBase), "utf-8");
+  const llmsText = buildLlmsText(entries, canonicalBase);
+  fs.writeFileSync(OUTPUT_LLMS, llmsText, "utf-8");
+  fs.mkdirSync(path.dirname(OUTPUT_WELL_KNOWN_LLMS), { recursive: true });
+  fs.writeFileSync(OUTPUT_WELL_KNOWN_LLMS, llmsText, "utf-8");
   fs.writeFileSync(OUTPUT_AGENTS, buildAgentsMd(canonicalBase), "utf-8");
 
   console.log(`✓ Content index written to ${OUTPUT_INDEX}`);
   console.log(`✓ llms.txt written to ${OUTPUT_LLMS}`);
+  console.log(`✓ well-known llms.txt written to ${OUTPUT_WELL_KNOWN_LLMS}`);
   console.log(`✓ agents.md written to ${OUTPUT_AGENTS}`);
   console.log(`✓ Indexed ${entries.length} content entries`);
 

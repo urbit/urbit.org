@@ -40,8 +40,10 @@ export default async function sitemap() {
   const urls = new Set(entries.map((entry) => entry.url));
   getGeneratedPublicUrls(baseUrl).forEach((url) => urls.add(url));
   urls.add(`${baseUrl}/llms.txt`);
+  urls.add(`${baseUrl}/.well-known/llms.txt`);
   urls.add(`${baseUrl}/agents.md`);
   urls.add(`${baseUrl}/content-index.json`);
+  urls.add(`${baseUrl}/for-agents`);
 
   return Array.from(urls).map((url) => ({
     url,
