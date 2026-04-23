@@ -5,6 +5,7 @@ import { HomepageSectionNav } from "./components/HomepageSectionNav";
 import { HomepageBlurb, PreviewContentBlurb, MicroBlurb, ContentBlurb } from "./components/ContentBlurbs";
 import { HomepageSubsection } from "./components/HomepageSubsection";
 import { MobileFloatingNav } from "./components/MobileFloatingNav";
+import HomepageAgentDiscoveryFooter from "./components/HomepageAgentDiscoveryFooter";
 import Markdoc from "@markdoc/markdoc";
 import { markdocHtmlConfig } from "./markdocConfig";
 
@@ -206,6 +207,11 @@ export default async function HomePage() {
             </section>
           );
         })}
+
+        <HomepageAgentDiscoveryFooter
+          id="desktop-agent-discovery"
+          className="mt-20"
+        />
       </div>
 
       {/* Mobile Content Layout */}
@@ -296,6 +302,11 @@ export default async function HomePage() {
               </section>
             );
           })}
+
+          <HomepageAgentDiscoveryFooter
+            id="mobile-agent-discovery"
+            className="mt-12"
+          />
         </div>
 
         {/* Mobile Floating Navigation */}
