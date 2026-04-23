@@ -4,24 +4,37 @@
 ## Entry points
 - https://urbit.org/llms.txt
 - https://urbit.org/content-index.json
+- https://urbit.org/.agents/index.md
 
-## Content format
-- Primary content is Markdown with Markdoc frontmatter.
-- Use canonical URLs for citations.
+## Path conventions
+- Human markdown mirrors: https://urbit.org/index.md, https://urbit.org/overview.md, https://urbit.org/blog.md, https://urbit.org/ecosystem.md, plus page-backed mirrors like https://urbit.org/blog/llms-on-urbit.md
+- Agent companions: https://urbit.org/.agents/*.md
+- Snapshot content: https://urbit.org/.agents/wiki/** and https://urbit.org/.agents/skills/**
 
-## content-index.json schema
-Each entry is a flat object with these fields:
-- `url`: canonical URL for the page
-- `type`: one of `homepage`, `overview`, `blog`, `blurbs`, `ecosystem`, `communities`, `pages`, `other`
-- `title`: page title
-- `summary`: 1-2 sentence plain-text summary (may be fallback)
-- `description`: existing SEO description
-- `tags`: array of strings
-- `search_terms`: array of strings
+## Delimiter and fallback behavior
+- If a source file includes `---agent---`, the human page and human `.md` mirror use the pre-delimiter content.
+- The generated `/.agents/*` file uses the post-delimiter content plus generated frontmatter and a pointer to the human markdown mirror.
+- If no delimiter exists, the generated `/.agents/*` file falls back to human content.
 
-## Quoting and attribution
-- Prefer quoting from canonical pages on urbit.org.
-- Use docs.urbit.org for developer references when it is the authoritative source.
+## Generated frontmatter on `/.agents/*.md`
+- `title`
+- `source_kind`
+- `canonical_url`
+- `human_md_url`
+- `agent_mode`
+- `dependencies`
+- `related_pages`
+
+## Section index locations
+- https://urbit.org/.agents/index.md
+- https://urbit.org/.agents/overview.md
+- https://urbit.org/.agents/blog.md
+- https://urbit.org/.agents/blurbs.md
+- https://urbit.org/.agents/ecosystem.md
+- https://urbit.org/.agents/wiki/index.md
+- https://urbit.org/.agents/skills/index.md
 
 ## Notes
-- This site is statically generated; content is updated via source control.
+- This site is statically generated; these artifacts are build outputs, not runtime routes.
+- Prefer canonical page URLs for citations and the markdown mirrors for low-token retrieval.
+- Use docs.urbit.org when it is the authoritative developer reference.
