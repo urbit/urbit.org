@@ -44,7 +44,7 @@ function CompactNotes({ items }) {
 
 function DisclosureBlock({ title, children }) {
   return (
-    <details className="group border-t border-contrast-2 py-3">
+    <details className="agent-discovery-disclosure border-t border-contrast-2 py-3">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-mono text-[0.78rem] tracking-[-0.02em] text-contrast-2 [&::-webkit-details-marker]:hidden">
         <span>{title}</span>
         <Image
@@ -52,7 +52,7 @@ function DisclosureBlock({ title, children }) {
           alt=""
           width={9}
           height={7}
-          className="h-[7px] w-[9px] invert transition-transform duration-300 group-open:rotate-180"
+          className="agent-discovery-caret h-[7px] w-[9px] invert transition-transform duration-300"
         />
       </summary>
       <div className="pt-3">{children}</div>
@@ -63,7 +63,7 @@ function DisclosureBlock({ title, children }) {
 export default function HomepageAgentDiscoveryFooter({ id, className = "" }) {
   return (
     <section id={id} className={className} aria-labelledby={`${id}-title`}>
-      <details className="group border-t border-contrast-2 py-4">
+      <details className="agent-discovery-disclosure border-t border-contrast-2 py-4">
         <summary className="flex cursor-pointer list-none items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
           <div className="min-w-0 pt-[2px]">
             <h2
@@ -81,7 +81,7 @@ export default function HomepageAgentDiscoveryFooter({ id, className = "" }) {
               alt=""
               width={9}
               height={7}
-              className="mt-[1px] h-[7px] w-[9px] invert transition-transform duration-300 group-open:rotate-180"
+              className="agent-discovery-caret mt-[1px] h-[7px] w-[9px] invert transition-transform duration-300"
             />
           </div>
         </summary>
