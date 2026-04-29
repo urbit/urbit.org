@@ -28,6 +28,55 @@ Vercel deployment
 best-effort Umami event send
 ```
 
+## Connect an agent to Cloudflare MCP
+
+Use Cloudflare MCP when you want an agent to inspect or change Cloudflare configuration: Worker deployments, routes, DNS records, build status, bindings, or observability. Use Wrangler for local development and deploy commands; use MCP for account and dashboard operations that are easier to verify through the API.
+
+For OpenCode, add the Cloudflare remote MCP servers to the project-level `.opencode.jsonc` or the user-level OpenCode config:
+
+```jsonc
+{
+  "mcp": {
+    "cloudflare": {
+      "type": "remote",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-docs": {
+      "type": "remote",
+      "url": "https://docs.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-builds": {
+      "type": "remote",
+      "url": "https://builds.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-observability": {
+      "type": "remote",
+      "url": "https://observability.mcp.cloudflare.com/mcp",
+      "enabled": true
+    },
+    "cloudflare-bindings": {
+      "type": "remote",
+      "url": "https://bindings.mcp.cloudflare.com/mcp",
+      "enabled": true
+    }
+  }
+}
+```
+
+Then:
+
+1. Start OpenCode from the repository or Worker directory.
+2. Run `opencode mcp list` and confirm the Cloudflare servers are enabled.
+3. Ask the agent to call a Cloudflare tool, for example: `List Workers deployments for this account`.
+4. Complete the browser OAuth flow when prompted by Cloudflare.
+5. Grant the narrowest permissions that cover the task: Workers Scripts/Builds for deployments, DNS/Zone for routes and records, and Logs/Observability for debugging.
+6. Ask the agent to verify the active account, zone, Worker script name, routes, and bindings before it changes anything.
+
+Do not commit Cloudflare API tokens or OAuth credentials to the repo. The remote MCP flow should authorize through Cloudflare OAuth. If an agent or CLI needs a token outside OAuth, provide it through the local shell or secret manager only.
+
 ## Analytics behavior
 
 Worker-sent events use these coarse event names:
@@ -56,50 +105,143 @@ The Worker deliberately does **not**:
 - store full raw external referer URLs
 - add a second storage system in v1
 
-## Production setup for `urbit.org`
+## Step-by-step: set up the Worker from this repo
 
-1. Confirm the site is deployed on Vercel.
-2. Add both `urbit.org` and `www.urbit.org` to the Vercel project.
-3. In Vercel, inspect the required DNS records for those domains.
-4. In Cloudflare DNS, create the required records and keep them proxied/orange-clouded.
-5. In Cloudflare Workers & Pages, create a Worker from Git.
-6. Select the `urbit.org` repository.
-7. Set the Worker root directory to:
+These steps assume Vercel remains the origin and Cloudflare only runs the reverse-proxy Worker plus DNS/routing.
 
-```txt
-infra/cloudflare-worker
+### 1. Prepare the repository
+
+```bash
+git clone https://github.com/urbit/urbit.org.git
+cd urbit.org/infra/cloudflare-worker
+npm ci
+npm run check
 ```
 
-8. Set the production branch to the intended deployment branch.
-9. Use deploy command:
+Use Node 22 for the Worker toolchain. The Worker directory includes `.node-version`, and Cloudflare Builds should set `NODE_VERSION=22.16.0` if the dashboard defaults to an older runtime.
 
-```txt
-npx wrangler deploy
-```
+### 2. Pick the Worker script name
 
-10. Leave build command empty, or use `npm run check` if you want type-checking during builds.
-11. Confirm the Worker name in Cloudflare matches `wrangler.jsonc`:
+The default `wrangler.jsonc` name is:
 
 ```txt
 urbit-org-edge-worker
 ```
 
-12. Add Worker routes in the Cloudflare dashboard:
+If you are updating an existing Cloudflare Worker, make the script name match the existing Worker before deployment. For example, the current testing deployment may use a shorter script name such as `urbit-org`. The important rule is that the Worker script name, Cloudflare routes, and Git build project all point at the same Worker.
+
+### 3. Connect the domain to Vercel and Cloudflare
+
+1. Confirm the site is deployed on Vercel.
+2. Add the target hostname(s) to the Vercel project, for example `urbit.org` and `www.urbit.org`, or a testing hostname such as `next-urbit.org`.
+3. In Vercel, copy the required DNS record targets.
+4. In Cloudflare DNS, create the Vercel-required records.
+5. Keep the DNS records proxied/orange-clouded so Worker routes can run.
+
+### 4. Create or connect the Worker in Cloudflare
+
+In the Cloudflare dashboard:
+
+1. Go to **Workers & Pages**.
+2. Create a Worker from Git, or open the existing Worker and connect its Git build.
+3. Select the `urbit.org` repository.
+4. Set root directory:
+
+```txt
+infra/cloudflare-worker
+```
+
+5. Set the production branch to the branch you want Cloudflare to deploy.
+6. Set install command:
+
+```txt
+npm ci
+```
+
+7. Set build command:
+
+```txt
+npm run build
+```
+
+`npm run build` is intentionally just `npm run check`, so Cloudflare type-checks the Worker before deploy.
+
+8. Set deploy command:
+
+```txt
+npx wrangler deploy
+```
+
+9. Set build environment variable:
+
+```txt
+NODE_VERSION=22.16.0
+```
+
+### 5. Configure Worker variables
+
+Set these Worker variables in the Cloudflare dashboard:
+
+```txt
+UMAMI_API_URL=https://cloud.umami.is/api/send
+UMAMI_WEBSITE_ID=<umami-website-id>
+```
+
+For production, `UMAMI_WEBSITE_ID` should be the same existing `urbit.org` Umami website/property already used by the browser tracker. For a testing domain, use the corresponding testing Umami property.
+
+Optional variables:
+
+```txt
+ORIGIN_URL=https://your-vercel-project.vercel.app
+DEBUG_RESPONSES=true
+```
+
+Leave `ORIGIN_URL` unset for normal production pass-through mode where Cloudflare DNS already points the requested hostname at Vercel. Use `ORIGIN_URL` only for preview or custom test setups where the Worker route hostname is not directly configured in Vercel.
+
+Set `DEBUG_RESPONSES=true` only during testing. Turn it off after validation because it adds an `X-Urbit-Edge-Worker` response header.
+
+`wrangler.jsonc` has `keep_vars: true` so deploys do not erase dashboard-managed variables.
+
+### 6. Attach Worker routes
+
+In the Cloudflare zone, add routes for each hostname that should pass through the Worker:
 
 ```txt
 urbit.org/*
 www.urbit.org/*
 ```
 
-13. Leave `ORIGIN_URL` unset for normal production pass-through mode.
-14. Set Worker vars in Cloudflare dashboard:
+For a testing deployment, use testing routes instead:
 
-- `UMAMI_API_URL`
-- `UMAMI_WEBSITE_ID`
+```txt
+next-urbit.org/*
+www.next-urbit.org/*
+```
 
-For production, `UMAMI_WEBSITE_ID` should be the **same existing `urbit.org` Umami website/property** already used by the browser tracker.
+Confirm each route targets the same Worker script name you deployed in step 2.
 
-15. Set `DEBUG_RESPONSES=true` only during testing, then turn it back off.
+### 7. Verify the deployment
+
+Run content probes:
+
+```bash
+curl -I https://next-urbit.org/llms.txt
+curl -I https://next-urbit.org/.agents/overview.md
+curl -I -A 'ClaudeBot' https://next-urbit.org/llms.txt
+curl -I -A 'GPTBot' https://next-urbit.org/overview.md
+```
+
+Expected result: HTTP 200 or the same status the Vercel origin would return for that path. Captured requests should still send best-effort Umami events regardless of whether the upstream status is 200, 404, or 500.
+
+To verify analytics through the Umami API, export a read API key and query the target website for recent events named `ai-entrypoint-hit` and `bot-page-hit`. For Umami Cloud, the read API base is `https://api.umami.is/v1`, while Worker ingestion uses `https://cloud.umami.is/api/send`.
+
+You can also ask a Cloudflare-MCP-enabled agent to verify:
+
+1. the Worker script exists;
+2. the latest deployment timestamp is recent;
+3. `UMAMI_API_URL` and `UMAMI_WEBSITE_ID` bindings exist;
+4. the expected routes point to the Worker;
+5. recent Worker logs have no Umami send failures.
 
 ## Personal/dev deployment setup
 
@@ -204,7 +346,7 @@ The Worker should not block, rewrite specially, or cache these validation paths:
 
 ```bash
 cd infra/cloudflare-worker
-npm install
+npm ci
 cp .dev.vars.example .dev.vars
 npm run dev
 ```
@@ -239,7 +381,7 @@ as a simple alias for `npm run check`, so leaving the default Cloudflare build c
 
 ## Validation checklist
 
-- [ ] `npm install` succeeds in `infra/cloudflare-worker`.
+- [ ] `npm ci` succeeds in `infra/cloudflare-worker`.
 - [ ] `npm run check` succeeds.
 - [ ] `npm run dev` starts Wrangler locally.
 - [ ] Requests preserve path and query string.
