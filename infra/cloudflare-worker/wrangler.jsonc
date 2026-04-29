@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "urbit-org-edge-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-28",
+  "workers_dev": false,
+  "keep_vars": true,
+  "observability": {
+    "enabled": true
+  }
+}
