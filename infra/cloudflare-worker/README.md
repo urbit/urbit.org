@@ -133,7 +133,7 @@ If you are updating an existing Cloudflare Worker, make the script name match th
 ### 3. Connect the domain to Vercel and Cloudflare
 
 1. Confirm the site is deployed on Vercel.
-2. Add the target hostname(s) to the Vercel project, for example `urbit.org` and `www.urbit.org`, or a testing hostname such as `next-urbit.org`.
+2. Add the target hostname(s) to the Vercel project, for example `urbit.org` and `www.urbit.org`.
 3. In Vercel, copy the required DNS record targets.
 4. In Cloudflare DNS, create the Vercel-required records.
 5. Keep the DNS records proxied/orange-clouded so Worker routes can run.
@@ -211,13 +211,6 @@ urbit.org/*
 www.urbit.org/*
 ```
 
-For a testing deployment, use testing routes instead:
-
-```txt
-next-urbit.org/*
-www.next-urbit.org/*
-```
-
 Confirm each route targets the same Worker script name you deployed in step 2.
 
 ### 7. Verify the deployment
@@ -225,10 +218,10 @@ Confirm each route targets the same Worker script name you deployed in step 2.
 Run content probes:
 
 ```bash
-curl -I https://next-urbit.org/llms.txt
-curl -I https://next-urbit.org/.agents/overview.md
-curl -I -A 'ClaudeBot' https://next-urbit.org/llms.txt
-curl -I -A 'GPTBot' https://next-urbit.org/overview.md
+curl -I https://urbit.org/llms.txt
+curl -I https://urbit.org/.agents/overview.md
+curl -I -A 'ClaudeBot' https://urbit.org/llms.txt
+curl -I -A 'GPTBot' https://urbit.org/overview.md
 ```
 
 Expected result: HTTP 200 or the same status the Vercel origin would return for that path. Captured requests should still send best-effort Umami events regardless of whether the upstream status is 200, 404, or 500.
