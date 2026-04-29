@@ -46,6 +46,9 @@ type RequestClassification = {
 };
 
 const DEFAULT_UMAMI_API_URL = "https://cloud.umami.is/api/send";
+const UMAMI_INGEST_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+const UMAMI_INGEST_LANGUAGE = "en-US";
+const UMAMI_INGEST_SCREEN = "1920x1080";
 
 const DIRECT_AI_ENTRYPOINTS = new Set<string>([
 	"/llms.txt",
@@ -198,6 +201,8 @@ async function sendUmamiEvent(
 		payload: {
 			website: websiteID,
 			hostname: url.hostname,
+			language: UMAMI_INGEST_LANGUAGE,
+			screen: UMAMI_INGEST_SCREEN,
 			url: classification.pathCanonical,
 			referrer: "",
 			title: classification.pathCanonical,
@@ -206,12 +211,11 @@ async function sendUmamiEvent(
 		},
 	};
 
-	const userAgentHeader = normalizeText(request.headers.get("user-agent")) || "urbit-org-cloudflare-worker/1.0";
 	const umamiRequest = new Request(resolveUmamiAPIURL(env), {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-			"User-Agent": userAgentHeader,
+			"User-Agent": UMAMI_INGEST_USER_AGENT,
 		},
 		body: JSON.stringify(payload),
 	});

@@ -47,6 +47,8 @@ They include request properties such as:
 - `capture_reason`
 - `source=cloudflare-worker`
 
+Umami's ingest endpoint drops requests that use bot-like `User-Agent` headers. The Worker therefore sends Umami requests with a neutral browser-style ingest `User-Agent` while preserving the original request user agent in `ua_raw` and the normalized label in `ua_label`.
+
 The Worker deliberately does **not**:
 
 - dedupe repeated matching requests
