@@ -215,6 +215,26 @@ curl -I http://localhost:8787/llms.txt
 
 Local development usually uses `ORIGIN_URL` because pass-through mode depends on deployed Cloudflare DNS/routing behavior.
 
+## Build environment notes
+
+This Worker project expects a Node 20+ environment.
+
+The repo includes a local `.node-version` file for the Worker project and a package `engines.node` requirement so Cloudflare Builds can use a modern Node runtime for this subproject.
+
+If the Cloudflare build UI is still defaulting to an older Node version, set the build environment variable:
+
+```txt
+NODE_VERSION=22.16.0
+```
+
+The Worker project also defines:
+
+```txt
+npm run build
+```
+
+as a simple alias for `npm run check`, so leaving the default Cloudflare build command in place will still succeed.
+
 ## Validation checklist
 
 - [ ] `npm install` succeeds in `infra/cloudflare-worker`.
