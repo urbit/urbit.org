@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T16:07:01.557Z",
+  "generatedAt": "2026-04-29T00:33:58.639Z",
   "total": 185,
   "entries": [
     {
@@ -3230,27 +3230,14 @@
         "urql",
         "developers"
       ],
-      "searchTerms": [
-        "obelisk beta",
-        "~nomryg-nilref",
-        "urql",
-        "urbit database",
-        "relational database",
-        "time travel database",
-        "sql for urbit",
-        "common table expressions",
-        "scalars clause",
-        "sample database",
-        "hawk ui",
-        "no nulls"
-      ],
+      "searchTerms": [],
       "authors": [],
       "publishedTimestamp": 1776902400000,
       "source": "blog",
       "path": "/blog/obelisk-beta-release",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "obelisk beta release a first look at obelisk, a relational database for urbit with time travel, composable queries, and no nulls. obelisk databases urql developers obelisk beta ~nomryg-nilref urql urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls /blog/obelisk-beta-release blog 2026-04-23 obelisk brings a time-traveling relational database to urbit. this post outlines urql, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the hawk ui. obelisk databases urql developers obelisk beta ~nomryg-nilref urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls ~sarlev-sarsen"
+      "searchText": "obelisk beta release a first look at obelisk, a relational database for urbit with time travel, composable queries, and no nulls. obelisk databases urql developers /blog/obelisk-beta-release blog 2026-04-23 obelisk brings a time-traveling relational database to urbit. this post outlines urql, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the hawk ui. ~sarlev-sarsen https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_obelisk+beta+release/blog_obelisk_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_obelisk+beta+release/blog_obelisk_social16_9.png obelisk databases urql developers obelisk beta ~nomryg-nilref urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls"
     },
     {
       "id": "blog/olif-and-urbit-ids.md",

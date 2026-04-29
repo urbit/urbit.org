@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T16:07:01.642Z",
+  "generatedAt": "2026-04-29T00:33:58.723Z",
   "total": 340,
   "entries": [
     {
@@ -1775,20 +1775,7 @@
         "urql",
         "developers"
       ],
-      "search_terms": [
-        "obelisk beta",
-        "~nomryg-nilref",
-        "urql",
-        "urbit database",
-        "relational database",
-        "time travel database",
-        "sql for urbit",
-        "common table expressions",
-        "scalars clause",
-        "sample database",
-        "hawk ui",
-        "no nulls"
-      ]
+      "search_terms": []
     },
     {
       "id": "blog/olif-and-urbit-ids.md",
