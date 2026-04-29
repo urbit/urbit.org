@@ -76,7 +76,7 @@ const KNOWN_AGENT_MATCHERS: Array<{ label: KnownAgentLabel; pattern: RegExp }> =
 	{ label: "CCBot", pattern: /\bccbot\b/i },
 ];
 
-const CRAWLER_LIKE_PATTERN = /\b(bot|crawl|crawler|spider|slurp|fetch|preview|scanner|archiver)\b/i;
+const CRAWLER_LIKE_PATTERN = /(?:bot|crawler|spider|slurp|fetch|preview|scanner|archiver)\b|\bcrawl\b/i;
 const AI_ADJACENT_PATTERN = /\b(ai|agent|assistant|llm|gpt|claude|perplexity|gemini|openai|anthropic)\b/i;
 const LOW_SIGNAL_PREFIXES = ["/_next/", "/fonts/", "/images/", "/icons/"];
 const LOW_SIGNAL_EXACT_PATHS = new Set<string>(["/favicon.ico", "/umami-script.js", "/robots.txt", "/sitemap.xml"]);
