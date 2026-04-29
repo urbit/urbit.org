@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-15T03:37:47.051Z",
-  "total": 339,
+  "generatedAt": "2026-04-29T00:33:58.723Z",
+  "total": 340,
   "entries": [
     {
       "id": "index.md",
@@ -1761,6 +1761,21 @@
         "urbit hardware",
         "mopfel winrux"
       ]
+    },
+    {
+      "id": "blog/obelisk-beta-release.md",
+      "url": "https://urbit.org/blog/obelisk-beta-release",
+      "type": "blog",
+      "title": "Obelisk Beta Release",
+      "summary": "Obelisk brings a time-traveling relational database to Urbit. This post outlines urQL, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the Hawk UI.",
+      "description": "A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.",
+      "tags": [
+        "obelisk",
+        "databases",
+        "urql",
+        "developers"
+      ],
+      "search_terms": []
     },
     {
       "id": "blog/olif-and-urbit-ids.md",

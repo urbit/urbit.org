@@ -4,11 +4,10 @@ title = "Contributor Spotlight: ~nomryg-nilref"
 date = "2026-04-14"
 description = "A conversation with ~nomryg-nilref on beautiful lost causes, forever software, and Obelisk"
 summary = "~nomryg-nilref discusses how Urbit's sovereign computing vision resonated with decades of technical experience, why simple software distribution matters, and what Obelisk is trying to fix in relational databases."
-# aliases = []
 
 [extra]
-# author = ""
 ship = "~sarlev-sarsen"
+# aliases = []
 image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Social.png"
 imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Social16_9.png"
 # imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_QA_nomryg-nilref/Blog_QA+nomryg-nilref_Banner.png"
