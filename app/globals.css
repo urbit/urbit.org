@@ -416,3 +416,7 @@ body {
         animation: fadeIn 0.2s ease-out;
     }
 }
+
+.agent-discovery-disclosure[open] > summary .agent-discovery-caret {
+    transform: rotate(180deg);
+}

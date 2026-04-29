@@ -1,0 +1,15 @@
+# Copy this file to .dev.vars for local development.
+# Do not commit .dev.vars.
+
+# Optional. Leave unset to use pass-through origin mode.
+ORIGIN_URL="https://your-vercel-project.vercel.app"
+
+# Optional. Defaults to Umami Cloud if unset.
+UMAMI_API_URL="https://cloud.umami.is/api/send"
+
+# In production, use the same existing urbit.org Umami website/property
+# that is already used by the browser tracker.
+UMAMI_WEBSITE_ID="your-umami-website-id"
+
+# Optional. Set to true/1/yes to add X-Urbit-Edge-Worker.
+DEBUG_RESPONSES="true"

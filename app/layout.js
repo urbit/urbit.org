@@ -72,6 +72,8 @@ export default async function RootLayout({ children }) {
         <Script id="scroll-restoration" strategy="beforeInteractive">
           {"if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } if (!location.hash) { window.scrollTo(0, 0); }"}
         </Script>
+        <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script defer src="/umami-script.js" data-website-id={umamiWebsiteId}></script>
         <link
           rel="preload"

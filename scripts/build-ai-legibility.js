@@ -6,303 +6,47 @@
  * Generates:
  * - public/content-index.json
  * - public/llms.txt
+ * - public/agents.md
  */
 
 const fs = require("fs");
 const path = require("path");
-const matter = require("gray-matter");
 const { glob } = require("glob");
-const toml = require("@iarna/toml");
-const { llmsConfig } = require("./ai-legibility-config");
 
-const CONTENT_DIR = path.join(process.cwd(), "app/content");
+const discoveryConfig = require("../app/lib/agent-discovery.json");
+const { llmsConfig } = require("./ai-legibility-config");
+const {
+  buildSummaryInfo,
+  normalizeArray,
+  normalizeSearchTerms,
+  parseFrontMatter,
+  splitAgentContent,
+  toTitleCase,
+  uniqueStrings,
+} = (() => {
+  const content = require("./lib/content-parse");
+  const split = require("./lib/agent-split");
+  return {
+    ...content,
+    splitAgentContent: split.splitAgentContent,
+  };
+})();
+const {
+  CONTENT_DIR,
+  EXCLUDED_FILE_NAMES,
+  buildBlurbRouteMap,
+  getCanonicalBaseUrl,
+  resolveSearchEntry,
+  resolveSourceDescriptor,
+} = require("./lib/route-utils");
+
 const OUTPUT_INDEX = path.join(process.cwd(), "public/content-index.json");
 const OUTPUT_LLMS = path.join(process.cwd(), "public/llms.txt");
-const EXCLUDED_FILE_NAMES = new Set(["config.md"]);
+const OUTPUT_WELL_KNOWN_LLMS = path.join(process.cwd(), "public/.well-known/llms.txt");
+const OUTPUT_AGENTS = path.join(process.cwd(), "public/agents.md");
 const SUMMARY_RECOMMENDED_MAX = 280;
 const SUMMARY_ENFORCED_DIRS = ["blog/", "blurbs/", "overview/"];
 const EXCLUDED_SECTIONS = new Set(["grants", "events", "singles"]);
-
-const normalizeArray = (value) => {
-  if (!value) return [];
-  return Array.isArray(value) ? value : [value];
-};
-
-const uniqueStrings = (values) => Array.from(new Set(values.filter(Boolean)));
-
-const normalizeSearchTerms = (value) => {
-  if (!value) return [];
-
-  const values = normalizeArray(value).flatMap((entry) => {
-    if (typeof entry === "string") {
-      return entry
-        .split(",")
-        .map((item) => item.trim())
-        .filter(Boolean);
-    }
-
-    if (typeof entry === "number") {
-      return [String(entry)];
-    }
-
-    return [];
-  });
-
-  return uniqueStrings(values);
-};
-
-const stripMarkdown = (value) => {
-  if (!value) return "";
-  let text = String(value);
-  text = text.replace(/```[\s\S]*?```/g, " ");
-  text = text.replace(/`([^`]+)`/g, "$1");
-  text = text.replace(/!\[[^\]]*\]\([^\)]+\)/g, " ");
-  text = text.replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1");
-  text = text.replace(/\*\*([^*]+)\*\*/g, "$1");
-  text = text.replace(/\*([^*]+)\*/g, "$1");
-  text = text.replace(/_([^_]+)_/g, "$1");
-  text = text.replace(/^#+\s+/gm, "");
-  text = text.replace(/^>\s+/gm, "");
-  text = text.replace(/\s+/g, " ").trim();
-  return text;
-};
-
-const extractFirstParagraph = (content) => {
-  if (!content) return "";
-  const chunks = content
-    .split(/\n\s*\n/)
-    .map((chunk) => chunk.trim())
-    .filter(Boolean);
-
-  for (const chunk of chunks) {
-    const cleaned = stripMarkdown(chunk.replace(/\n+/g, " "));
-    if (cleaned) {
-      return cleaned;
-    }
-  }
-
-  return "";
-};
-
-const parseFrontMatter = (raw, filePath) => {
-  const trimmed = raw.trimStart();
-  const usesToml = trimmed.startsWith("+++");
-  const options = usesToml
-    ? {
-        engines: { toml: toml.parse.bind(toml) },
-        language: "toml",
-        delimiters: "+++",
-      }
-    : undefined;
-
-  try {
-    const { data, content } = matter(raw, options);
-    return { data: data || {}, content };
-  } catch (error) {
-    console.error(`Failed to parse frontmatter for ${filePath}:`, error);
-    return null;
-  }
-};
-
-const toTitleCase = (value) =>
-  value
-    .split("-")
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join(" ");
-
-const resolveOverviewEntry = (segments, slug, relativePath) => {
-  const overviewSection = segments[1];
-  if (!overviewSection) {
-    console.warn(`Skipping overview content without subsection: ${relativePath}`);
-    return null;
-  }
-
-  const isIntro = slug === "intro";
-  const pathSuffix = isIntro
-    ? `/overview/${overviewSection}`
-    : `/overview/${overviewSection}/${slug}`;
-
-  return { path: pathSuffix };
-};
-
-const addBlurbRoute = (map, slug, targetPath, { overwrite = false } = {}) => {
-  if (!slug || !targetPath) {
-    return;
-  }
-
-  if (!overwrite && map.has(slug)) {
-    return;
-  }
-
-  if (overwrite && map.has(slug) && map.get(slug) !== targetPath) {
-    console.warn(`Blurb ${slug} mapped to multiple routes; using ${targetPath}.`);
-  }
-
-  map.set(slug, targetPath);
-};
-
-const buildBlurbRouteMap = async () => {
-  const map = new Map();
-  const manualMappings = {
-    "troubleshooting-your-urbit": "/overview/running-urbit/support",
-    "common-pitfalls-of-running-urbit": "/overview/running-urbit/support",
-    "groundwire-based-urbit-ids":
-      "/overview/running-urbit/get-urbit-id#groundwire-based-urbit-ids",
-  };
-
-  Object.entries(manualMappings).forEach(([slug, target]) => {
-    addBlurbRoute(map, slug, target, { overwrite: true });
-  });
-  const homepageConfigPath = path.join(CONTENT_DIR, "homepage/config.md");
-
-  if (fs.existsSync(homepageConfigPath)) {
-    try {
-      const rawContent = fs.readFileSync(homepageConfigPath, "utf-8");
-      const parsed = parseFrontMatter(rawContent, homepageConfigPath);
-      if (parsed) {
-        const frontMatter = parsed.data;
-        const sections = normalizeArray(frontMatter.sections);
-        const homepageIntroTarget = sections[0]?.["section-id"]
-          ? `/#${sections[0]["section-id"]}`
-          : "/";
-        sections.forEach((section) => {
-          if (!section) return;
-          const sectionBlurb = section["section-blurb"];
-          addBlurbRoute(map, sectionBlurb, `/#${sectionBlurb}`);
-
-          const subsectionBlurbs = normalizeArray(section["subsection-blurbs"]);
-          subsectionBlurbs.forEach((blurbSlug) => {
-            addBlurbRoute(map, blurbSlug, `/#${blurbSlug}`);
-          });
-        });
-
-        const sidebarBlurb = frontMatter.sidebar_blurb;
-        addBlurbRoute(map, sidebarBlurb, homepageIntroTarget, { overwrite: true });
-      }
-    } catch (error) {
-      console.error("Failed to load homepage config for blurbs:", error);
-    }
-  }
-
-  const overviewPaths = await glob(path.join(CONTENT_DIR, "overview/**/*.md"));
-  for (const filePath of overviewPaths) {
-    const filename = path.basename(filePath);
-    if (EXCLUDED_FILE_NAMES.has(filename)) {
-      continue;
-    }
-
-    let rawContent;
-    try {
-      rawContent = fs.readFileSync(filePath, "utf-8");
-    } catch (error) {
-      console.error(`Failed to read ${filePath}:`, error);
-      continue;
-    }
-
-    const parsed = parseFrontMatter(rawContent, filePath);
-    if (!parsed) {
-      continue;
-    }
-
-    const blurbs = normalizeArray(parsed.data.blurbs);
-    if (!blurbs.length) {
-      continue;
-    }
-
-    const relativePath = path
-      .relative(CONTENT_DIR, filePath)
-      .replace(/\\/g, "/");
-    const segments = relativePath.split("/");
-    const slug = path.basename(filename, ".md");
-    const routeInfo = resolveOverviewEntry(segments, slug, relativePath);
-
-    if (!routeInfo) {
-      continue;
-    }
-
-    blurbs.forEach((blurbSlug) => {
-      addBlurbRoute(map, blurbSlug, `${routeInfo.path}#${blurbSlug}`, { overwrite: true });
-    });
-  }
-
-  return map;
-};
-
-const resolveEntry = (relativePath, blurbRoutes) => {
-  const segments = relativePath.split("/");
-  const filename = segments[segments.length - 1];
-  const slug = path.basename(filename, ".md");
-  const section = segments[0];
-
-  if (relativePath === "index.md") {
-    return { path: "/", section: "homepage" };
-  }
-
-  if (section === "overview") {
-    const overviewEntry = resolveOverviewEntry(segments, slug, relativePath);
-    return overviewEntry ? { ...overviewEntry, section: "overview" } : null;
-  }
-
-  if (section === "blog") {
-    return { path: `/blog/${slug}`, section: "blog" };
-  }
-
-  if (section === "blurbs") {
-    const targetPath = blurbRoutes?.get(slug);
-    if (!targetPath) {
-      console.warn(`Blurb missing route mapping: ${relativePath}`);
-      return { path: `/#${slug}`, section: "blurbs" };
-    }
-
-    return { path: targetPath, section: "blurbs" };
-  }
-
-  if (section === "homepage") {
-    return { path: `/#${slug}`, section: "homepage" };
-  }
-
-  if (section === "grants") {
-    return { path: `/grants/${slug}`, section: "grants" };
-  }
-
-  if (section === "events") {
-    return { path: `/events/${slug}`, section: "events" };
-  }
-
-  if (section === "communities") {
-    return { path: `/communities/${slug}`, section: "communities" };
-  }
-
-  if (section === "ecosystem") {
-    return { path: `/ecosystem/${slug}`, section: "ecosystem" };
-  }
-
-  if (section === "singles") {
-    return { path: `/${slug}`, section: "singles" };
-  }
-
-  if (section === "communities") {
-    return { path: `/communities/${slug}` };
-  }
-
-  if (segments.length === 1) {
-    return { path: `/${slug}`, section: "pages" };
-  }
-
-  return { path: `/${relativePath.replace(/\.md$/, "")}`, section: "other" };
-};
-
-const getCanonicalBaseUrl = () => {
-  const configPath = path.join(CONTENT_DIR, "config.md");
-  if (!fs.existsSync(configPath)) {
-    return "https://urbit.org";
-  }
-
-  const rawContent = fs.readFileSync(configPath, "utf-8");
-  const parsed = parseFrontMatter(rawContent, configPath);
-  const url = parsed?.data?.site_metadata?.canonicalUrl;
-  return url || "https://urbit.org";
-};
 
 const loadConfigFrontMatter = (relativePath) => {
   const filePath = path.join(CONTENT_DIR, relativePath);
@@ -315,28 +59,103 @@ const loadConfigFrontMatter = (relativePath) => {
   return parsed?.data || null;
 };
 
-const buildSummaryInfo = (frontMatter, content) => {
-  const rawSummary = frontMatter?.summary;
-  const summaryText = stripMarkdown(rawSummary || "");
-  if (summaryText) {
-    return { summary: summaryText, source: "summary" };
-  }
+const toAbsoluteUrl = (relativePath, canonicalBase) => new URL(relativePath, canonicalBase).toString();
 
-  const firstParagraph = extractFirstParagraph(content);
-  if (firstParagraph) {
-    return { summary: firstParagraph, source: "content" };
-  }
+const toDiscoveryUrl = (value, canonicalBase) =>
+  value.startsWith("http://") || value.startsWith("https://")
+    ? value
+    : toAbsoluteUrl(value, canonicalBase);
 
-  const description = stripMarkdown(frontMatter?.description || "");
-  if (description) {
-    return { summary: description, source: "description" };
-  }
+const buildSyntheticEntries = (canonicalBase) => {
+  const siteConfig = loadConfigFrontMatter("config.md") || {};
+  const homepageConfig = loadConfigFrontMatter("homepage/config.md") || {};
+  const overviewConfig = loadConfigFrontMatter("overview/config.md") || {};
 
-  return { summary: "", source: "missing" };
+  return [
+    {
+      id: "synthetic/homepage",
+      url: toAbsoluteUrl("/", canonicalBase),
+      type: "homepage",
+      source_kind: "homepage",
+      title: siteConfig.title || "Urbit",
+      summary:
+        homepageConfig.description ||
+        siteConfig.site_metadata?.description ||
+        "Overview of Urbit with links to getting started, running a ship, and the broader ecosystem.",
+      description: siteConfig.site_metadata?.description || homepageConfig.description || "",
+      tags: [],
+      search_terms: [],
+      human_md_url: toAbsoluteUrl("/index.md", canonicalBase),
+      agent_url: toAbsoluteUrl("/.agents/index.md", canonicalBase),
+      agent_available: true,
+      agent_mode: "fallback",
+    },
+    {
+      id: "synthetic/overview",
+      url: toAbsoluteUrl("/overview", canonicalBase),
+      type: "overview",
+      source_kind: "overview-index",
+      title: "Overview",
+      summary:
+        overviewConfig.summary ||
+        "Overview section navigation hub providing entry points to conceptual and practical Urbit guides.",
+      description: overviewConfig.summary || "Overview section navigation hub for urbit.org.",
+      tags: [],
+      search_terms: [],
+      human_md_url: toAbsoluteUrl("/overview.md", canonicalBase),
+      agent_url: toAbsoluteUrl("/.agents/overview.md", canonicalBase),
+      agent_available: true,
+      agent_mode: "fallback",
+    },
+    {
+      id: "synthetic/blog",
+      url: toAbsoluteUrl("/blog", canonicalBase),
+      type: "blog",
+      source_kind: "blog-index",
+      title: "Blog",
+      summary: "Latest updates, developer spotlights, and technical deep dives from the Urbit community.",
+      description: "Latest updates, developer spotlights, and technical deep dives from the Urbit community.",
+      tags: [],
+      search_terms: [],
+      human_md_url: toAbsoluteUrl("/blog.md", canonicalBase),
+      agent_url: toAbsoluteUrl("/.agents/blog.md", canonicalBase),
+      agent_available: true,
+      agent_mode: "fallback",
+    },
+    {
+      id: "synthetic/ecosystem",
+      url: toAbsoluteUrl("/ecosystem", canonicalBase),
+      type: "ecosystem",
+      source_kind: "ecosystem-index",
+      title: "Ecosystem",
+      summary: "Selected organizations and external coverage from the wider Urbit ecosystem.",
+      description: "Selected organizations and coverage from the wider Urbit ecosystem.",
+      tags: [],
+      search_terms: [],
+      human_md_url: toAbsoluteUrl("/ecosystem.md", canonicalBase),
+      agent_url: toAbsoluteUrl("/.agents/ecosystem.md", canonicalBase),
+      agent_available: true,
+      agent_mode: "fallback",
+    },
+    {
+      id: "synthetic/for-agents",
+      url: toAbsoluteUrl("/for-agents", canonicalBase),
+      type: "discovery",
+      source_kind: "agent-discovery",
+      title: "For AI Agents",
+      summary:
+        "Browser-safe HTML landing page for agents that follow visible links more reliably than raw markdown or JSON.",
+      description:
+        "Browser-safe HTML landing page surfacing llms.txt, content-index.json, markdown mirrors, and /.agents section indexes.",
+      tags: ["agents", "llms", "discovery"],
+      search_terms: ["for agents", "llms", "agent discovery", "browser-safe"],
+      human_md_url: null,
+      agent_url: null,
+      agent_available: false,
+      agent_mode: null,
+    },
+  ];
 };
-
-const collectAliases = (frontMatter) =>
-  uniqueStrings(normalizeArray(frontMatter.aliases).map((alias) => String(alias).trim()));
 
 const buildContentIndex = async () => {
   if (!fs.existsSync(CONTENT_DIR)) {
@@ -357,7 +176,6 @@ const buildContentIndex = async () => {
   };
 
   const canonicalBase = getCanonicalBaseUrl();
-  const canonicalUrl = new URL(canonicalBase);
 
   for (const filePath of postPaths) {
     const filename = path.basename(filePath);
@@ -378,10 +196,8 @@ const buildContentIndex = async () => {
       continue;
     }
 
-    const relativePath = path
-      .relative(CONTENT_DIR, filePath)
-      .replace(/\\/g, "/");
-    const routeInfo = resolveEntry(relativePath, blurbRoutes);
+    const relativePath = path.relative(CONTENT_DIR, filePath).replace(/\\/g, "/");
+    const routeInfo = resolveSearchEntry(relativePath, blurbRoutes);
     if (!routeInfo) {
       continue;
     }
@@ -390,8 +206,10 @@ const buildContentIndex = async () => {
       continue;
     }
 
+    const descriptor = resolveSourceDescriptor(relativePath, blurbRoutes);
+    const split = splitAgentContent(parsed.content || "");
     let title = parsed.data.title || toTitleCase(path.basename(filePath, ".md"));
-    let description = stripMarkdown(parsed.data.description || parsed.data.extra?.description || "");
+    let description = parsed.data.description || parsed.data.extra?.description || "";
     const tags = uniqueStrings(
       normalizeArray(parsed.data.tags)
         .concat(normalizeArray(parsed.data.extra?.tags))
@@ -401,19 +219,19 @@ const buildContentIndex = async () => {
     const searchTerms = normalizeSearchTerms(
       parsed.data.search_terms || parsed.data.searchTerms
     );
-    const summaryInfo = buildSummaryInfo(parsed.data, parsed.content);
+    const summaryInfo = buildSummaryInfo(parsed.data, split.humanContent);
 
     if (relativePath === "overview/urbit-explained/intro.md" && overviewExplainedConfig) {
       title = overviewExplainedConfig.title || title;
-      description = stripMarkdown(overviewExplainedConfig.description || description);
+      description = overviewExplainedConfig.description || description;
     }
 
     if (relativePath === "overview/running-urbit/intro.md" && overviewRunningConfig) {
       title = overviewRunningConfig.title || title;
-      description = stripMarkdown(overviewRunningConfig.description || description);
+      description = overviewRunningConfig.description || description;
     }
 
-    const url = new URL(routeInfo.path, canonicalUrl).toString();
+    const url = toAbsoluteUrl(routeInfo.path, canonicalBase);
 
     if (summaryInfo.source === "missing") {
       warnings.missing.push({ path: relativePath, url });
@@ -432,33 +250,42 @@ const buildContentIndex = async () => {
       id: relativePath,
       url,
       type: routeInfo.section,
+      source_kind: descriptor?.sourceKind || routeInfo.section,
       title,
       summary: summaryInfo.summary,
       description,
       tags,
       search_terms: searchTerms,
+      human_md_url:
+        descriptor?.hasStandalonePage && descriptor.humanMdPath
+          ? toAbsoluteUrl(descriptor.humanMdPath, canonicalBase)
+          : null,
+      agent_url: descriptor?.agentPath ? toAbsoluteUrl(descriptor.agentPath, canonicalBase) : null,
+      agent_available: Boolean(descriptor?.agentPath),
+      agent_mode: descriptor ? (split.hasDedicatedAgentContent ? "dedicated" : "fallback") : null,
     });
   }
 
-  const overviewUrl = new URL("/overview", canonicalUrl).toString();
-  const explainedUrl = new URL("/overview/urbit-explained", canonicalUrl).toString();
-  const hasOverview = entries.some((entry) => entry.url === overviewUrl);
-  if (!hasOverview) {
-    const sourceEntry = entries.find((entry) => entry.url === explainedUrl);
-    if (sourceEntry) {
-      entries.push({
-        ...sourceEntry,
-        id: "overview/redirect",
-        url: overviewUrl,
-        title: "Overview",
-      });
-      summarySourcesByUrl.set(overviewUrl, "summary");
+  buildSyntheticEntries(canonicalBase).forEach((entry) => {
+    const existingIndex = entries.findIndex((candidate) => candidate.url === entry.url);
+    if (existingIndex === -1) {
+      entries.push(entry);
+      summarySourcesByUrl.set(entry.url, "summary");
+      return;
     }
-  }
+
+    entries[existingIndex] = {
+      ...entries[existingIndex],
+      ...entry,
+      summary: entry.summary || entries[existingIndex].summary,
+      description: entry.description || entries[existingIndex].description,
+    };
+    summarySourcesByUrl.set(entry.url, "summary");
+  });
 
   entries.sort((a, b) => a.url.localeCompare(b.url, undefined, { sensitivity: "base" }));
 
-  return { entries, warnings, summarySourcesByUrl };
+  return { entries, warnings, summarySourcesByUrl, canonicalBase };
 };
 
 const summarizeWarnings = (warnings) => {
@@ -480,11 +307,51 @@ const summarizeWarnings = (warnings) => {
   listWarnings("Summary fallback used", warnings.fallback);
 };
 
-const buildLlmsText = (entries) => {
+const buildLlmsText = (entries, canonicalBase) => {
   const indexByUrl = new Map(entries.map((entry) => [entry.url, entry]));
   const lines = [];
   lines.push(`# ${llmsConfig.title}`);
   lines.push(`> ${llmsConfig.description}`);
+  lines.push("");
+  lines.push(
+    "> Human markdown mirrors live alongside page routes with a .md suffix. Agent-specific companions live under /.agents/*. When a source file includes ---agent---, the companion uses only that appendix and points back to the human mirror."
+  );
+  lines.push("");
+
+  lines.push("## Capability routing");
+  discoveryConfig.capabilityGuidance.forEach((item) => {
+    lines.push(`- ${item.title}: ${item.description}`);
+  });
+  lines.push(
+    `- Well-known compatibility: ${toAbsoluteUrl("/.well-known/llms.txt", canonicalBase)} mirrors the canonical ${toAbsoluteUrl("/llms.txt", canonicalBase)} entrypoint for clients that probe /.well-known/.`
+  );
+  lines.push("");
+
+  lines.push("## Primary discovery endpoints");
+  discoveryConfig.primaryEntryPoints.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Top-level human markdown mirrors");
+  discoveryConfig.humanMarkdownMirrors.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Machine-oriented section indexes");
+  discoveryConfig.agentSectionIndexes.forEach((entry) => {
+    const url = toDiscoveryUrl(entry.href, canonicalBase);
+    lines.push(`- [${entry.label}](${url}) — ${entry.description}`);
+  });
+  lines.push("");
+
+  lines.push("## Retrieval notes");
+  discoveryConfig.usageNotes.forEach((note) => {
+    lines.push(`- ${note.title}: ${note.description}`);
+  });
   lines.push("");
 
   llmsConfig.sections.forEach((section) => {
@@ -495,12 +362,83 @@ const buildLlmsText = (entries) => {
       const summaryText = indexed?.summary || entry.summary || "";
       const summaryPart = summaryText ? ` — ${summaryText}` : "";
       lines.push(`- [${title}](${entry.url})${summaryPart}`);
+      if (indexed?.human_md_url) {
+        lines.push(`  - Human markdown mirror: ${indexed.human_md_url}`);
+      }
+      if (indexed?.agent_url) {
+        lines.push(`  - Agent companion: ${indexed.agent_url}`);
+      }
     });
     lines.push("");
   });
 
   return lines.join("\n").trim() + "\n";
 };
+
+const buildAgentsMd = (canonicalBase) => [
+  "# urbit.org",
+  "> Discovery guidance for automated agents, crawlers, and user-directed language models.",
+  "",
+  "## Primary protocol",
+  `1. If you can fetch raw text or JSON directly, start with ${canonicalBase}/llms.txt.`,
+  `2. If you mainly follow visible links in HTML, use ${canonicalBase}/for-agents.`,
+  `3. Use ${canonicalBase}/content-index.json for the structured inventory.`,
+  `4. Use ${canonicalBase}/.agents/index.md for machine-oriented markdown by section.`,
+  `5. A compatibility mirror also exists at ${canonicalBase}/.well-known/llms.txt.`,
+  "",
+  "## Discovery surfaces",
+  ...discoveryConfig.primaryEntryPoints.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
+  `- ${canonicalBase}/.well-known/llms.txt — Mirror of the canonical llms.txt entrypoint for clients that probe /.well-known/.`,
+  "",
+  "## Human markdown mirrors",
+  ...discoveryConfig.humanMarkdownMirrors.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
+  "",
+  "## Machine-oriented section indexes",
+  ...discoveryConfig.agentSectionIndexes.map(
+    (entry) => `- ${toDiscoveryUrl(entry.href, canonicalBase)} — ${entry.description}`
+  ),
+  "",
+  "## Path conventions",
+  `- Human markdown mirrors live alongside page routes with a .md suffix.`,
+  `- Agent companions live under ${canonicalBase}/.agents/*.md.`,
+  `- Snapshot content lives under ${canonicalBase}/.agents/wiki/** and ${canonicalBase}/.agents/skills/**.`,
+  "",
+  "## Delimiter and fallback behavior",
+  "- If a source file includes `---agent---`, the human page and human `.md` mirror use the pre-delimiter content.",
+  "- The generated `/.agents/*` file uses the post-delimiter content plus generated frontmatter and a pointer to the human markdown mirror.",
+  "- If no delimiter exists, the generated `/.agents/*` file falls back to human content.",
+  "",
+  "## Generated frontmatter on `/.agents/*.md`",
+  "- `title`",
+  "- `source_kind`",
+  "- `canonical_url`",
+  "- `human_md_url`",
+  "- `agent_mode`",
+  "- `dependencies`",
+  "- `related_pages`",
+  "",
+  "## Section index locations",
+  `- ${canonicalBase}/.agents/index.md`,
+  `- ${canonicalBase}/.agents/overview.md`,
+  `- ${canonicalBase}/.agents/blog.md`,
+  `- ${canonicalBase}/.agents/blurbs.md`,
+  `- ${canonicalBase}/.agents/ecosystem.md`,
+  `- ${canonicalBase}/.agents/wiki/index.md`,
+  `- ${canonicalBase}/.agents/skills/index.md`,
+  "",
+  "## Retrieval notes",
+  ...discoveryConfig.usageNotes.map((note) => `- ${note.title}: ${note.description}`),
+  "",
+  "## Notes",
+  "- This site is statically generated; these artifacts are build outputs, not runtime routes.",
+  "- Prefer canonical page URLs for citations and the markdown mirrors for low-token retrieval.",
+  "- Use docs.urbit.org when it is the authoritative developer reference.",
+  "",
+].join("\n");
 
 const assertRequiredSummaries = (entries, summarySourcesByUrl) => {
   const requiredUrls = [];
@@ -512,22 +450,15 @@ const assertRequiredSummaries = (entries, summarySourcesByUrl) => {
     });
   });
 
-  if (!requiredUrls.length) {
-    return [];
-  }
-
   const indexByUrl = new Map(entries.map((entry) => [entry.url, entry]));
-  const failures = [];
-
-  requiredUrls.forEach((url) => {
+  return requiredUrls.reduce((failures, url) => {
     const entry = indexByUrl.get(url);
     const source = summarySourcesByUrl?.get(url) || "missing";
     if (!entry || source !== "summary") {
       failures.push({ url, source });
     }
-  });
-
-  return failures;
+    return failures;
+  }, []);
 };
 
 async function buildAiLegibility() {
@@ -538,7 +469,7 @@ async function buildAiLegibility() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const { entries, warnings, summarySourcesByUrl } = await buildContentIndex();
+  const { entries, warnings, summarySourcesByUrl, canonicalBase } = await buildContentIndex();
   const indexOutput = {
     generatedAt: new Date().toISOString(),
     total: entries.length,
@@ -546,10 +477,16 @@ async function buildAiLegibility() {
   };
 
   fs.writeFileSync(OUTPUT_INDEX, JSON.stringify(indexOutput, null, 2), "utf-8");
-  fs.writeFileSync(OUTPUT_LLMS, buildLlmsText(entries), "utf-8");
+  const llmsText = buildLlmsText(entries, canonicalBase);
+  fs.writeFileSync(OUTPUT_LLMS, llmsText, "utf-8");
+  fs.mkdirSync(path.dirname(OUTPUT_WELL_KNOWN_LLMS), { recursive: true });
+  fs.writeFileSync(OUTPUT_WELL_KNOWN_LLMS, llmsText, "utf-8");
+  fs.writeFileSync(OUTPUT_AGENTS, buildAgentsMd(canonicalBase), "utf-8");
 
   console.log(`✓ Content index written to ${OUTPUT_INDEX}`);
   console.log(`✓ llms.txt written to ${OUTPUT_LLMS}`);
+  console.log(`✓ well-known llms.txt written to ${OUTPUT_WELL_KNOWN_LLMS}`);
+  console.log(`✓ agents.md written to ${OUTPUT_AGENTS}`);
   console.log(`✓ Indexed ${entries.length} content entries`);
 
   summarizeWarnings(warnings);

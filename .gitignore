@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/infra/cloudflare-worker/node_modules
 /.pnp
 .pnp.js
 
@@ -32,6 +33,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+/infra/cloudflare-worker/.dev.vars
 
 # vercel
 .vercel
@@ -46,4 +48,3 @@ public/rss.xml
 public/search-index.json
 
 yarn.lock
-
