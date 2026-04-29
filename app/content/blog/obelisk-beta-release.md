@@ -4,7 +4,16 @@ title = "Obelisk Beta Release"
 date = "2026-04-23"
 description = "A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls."
 summary = "Obelisk brings a time-traveling relational database to Urbit. This post outlines urQL, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the Hawk UI."
+
+[extra]
+ship = "~sarlev-sarsen"
 # aliases = []
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Obelisk+Beta+Release/Blog_Obelisk_Social.png"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Obelisk+Beta+Release/Blog_Obelisk_Social16_9.png"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Obelisk+Beta+Release/Blog_Obelisk_Banner.png"
+# imageDark = ""
+# imageCardDark = ""
+# imageIndexDark = ""
 tags = ["obelisk", "databases", "urql", "developers"]
 search_terms = [
     "obelisk beta",
@@ -21,8 +30,6 @@ search_terms = [
     "no nulls"
 ]
 
-[extra]
-ship = "~sarlev-sarsen"
 +++
 
 Obelisk is a relational database management system for Urbit built around a simple question: if SQL were reinvented today, with nearly fifty years of hindsight, what would it look like?
@@ -47,11 +54,11 @@ Obelisk also rethinks query shape. In urQL, clauses are arranged in the same ord
 
 ## What the beta opens up
 
-The beta is an initial working release that developers can use today (TK: do we want to point them at the repo and/or a distro ship?) The published roadmap marks Common Table Expressions, scalar functions, and expanded join support as beta work, while the repository already includes a sample `animal-shelter` database for learning and testing. That matters because Obelisk is not being released as a paper design. It is being released as something developers can start building against.
+The beta is an initial working release that developers can use today, either by installing manually from [the GitHub repo](https://github.com/jackfoxy/obelisk) or directly over the network: `|install ~dister-nomryg-nilref %obelisk`. Included in this beta release are CTEs, `SCALAR` functions, and expanded joins. Also included is a sample `animal-shelter` database for learning and testing. That matters because Obelisk is not being released as a paper design. It is being released as something developers can start building against.
 
 The sample database also means new users are not staring at a blank page after installation. You can immediately start running queries, reading the users guide, and getting a feel for the model with concrete data.
 
-The beta also comes with a `%hawk` UI. If you do not already have `%hawk`, you can install it with `|install ~dister-migrev-dolseg %hawk`. From there, the Obelisk template gives you a SQL Studio-like interface for writing queries and viewing results. The repo also includes an `obelisk-urql` skill file, a practical sign that the project is being built with agent-assisted development in mind.
+The beta also comes with a `%hawk` UI. If you do not already have `%hawk`, you can install it with `|install ~dister-migrev-dolseg %hawk`. `%hawk` itself now comes with an `%obelisk` UI compiled directly into the app. Early alpha users will find that they no longer need to create a dedicated template, and that performance is improved over early template versions of the UI. The repo also includes an `obelisk-urql` skill file, a practical sign that the project is being built with agent-assisted development in mind.
 
 ## Why it matters on Urbit
 
@@ -66,8 +73,7 @@ Obelisk is still marching toward 1.0. The roadmap includes views, `GROUP BY`, ag
 ## Learn more
 
 `~nomryg-nilref`, Obelisk's creators, makes available comprehensive resources for getting started with Obelisk, and an active developer community on Tlon Messenger at `~pitlyn-mintul-nomryg-nilref/obelisk`.
-- [Obelisk on GitHub](https://github.com/jackfoxy/obelisk)
 - [Obelisk: Reinventing SQL for Modern Computing](https://urbitsystems.tech/article/v03-i01/obelisk-reinventing-sql-for-modern-computing)
+- [Obelisk on GitHub](https://github.com/jackfoxy/obelisk)
 - [Obelisk roadmap](https://github.com/jackfoxy/obelisk/blob/master/roadmap.md)
-- [Obelisk Hawk template](https://github.com/jackfoxy/obelisk/blob/master/templates/hawk.hoon)
 - [Obelisk skills](https://github.com/jackfoxy/obelisk/blob/master/.claude/skills)
