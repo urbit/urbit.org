@@ -8,6 +8,7 @@ dependencies: []
 related_pages:
   - "/blog.md"
   - "/blog/this-month-in-urbit-april-2026.md"
+  - "/blog/obelisk-beta-release.md"
   - "/blog/contributor-spotlight-nomryg-nilref.md"
   - "/blog/gall-2026.md"
   - "/blog/contributor-spotlight-palfun-foslup.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/llms-on-urbit.md"
   - "/blog/contributor-spotlight-niblyx-malnus-and-bonbud-macryg.md"
   - "/blog/sovereign-intelligence.md"
-  - "/blog/nockmas-2025-day-12.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,7 +25,8 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
-- [This Month in Urbit: April 2026](/.agents/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, app distribution, storage, mail, local LLM routing, and mobile clients
+- [This Month in Urbit: April 2026](/.agents/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, games, mail, local LLM routing, and mobile clients
+- [Obelisk Beta Release](/.agents/blog/obelisk-beta-release.md) — A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.
 - [Contributor Spotlight: ~nomryg-nilref](/.agents/blog/contributor-spotlight-nomryg-nilref.md) — A conversation with ~nomryg-nilref on beautiful lost causes, forever software, and Obelisk
 - [The Future of Userspace](/.agents/blog/gall-2026.md) — The Gall 2026 project and what it means for userspace
 - [Contributor Spotlight: ~palfun-foslup](/.agents/blog/contributor-spotlight-palfun-foslup.md) — A conversation with ~palfun-foslup on Gall, userspace, and making simple software

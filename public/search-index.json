@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T04:41:37.631Z",
-  "total": 185,
+  "generatedAt": "2026-05-01T19:02:47.876Z",
+  "total": 186,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -3320,6 +3320,27 @@
       "searchText": "nockpu a light technical description of nockpu, a hardware system for running nock nockpu nock hardware nock processing unit bare metal nock hardware jets tree traversal binary tree urbit hardware mopfel winrux noah kumin ~librex-dozryc /blog/nockpu blog 2023-08-02 noah kumin describes ~mopfel-winrux's nockpu hardware project, explaining how a stackless, tree-traversal-optimized processor differs from von neumann architecture and could enable ultra-efficient nock execution on bare metal. nockpu nock hardware nock processing unit bare metal nock hardware jets tree traversal binary tree urbit hardware mopfel winrux noah kumin ~librex-dozryc https://mopfel-winrux-s3.nyc3.digitaloceanspaces.com/mopfel-winrux/npu/state_diagrams/mtu_state_diagram.png"
     },
     {
+      "id": "blog/obelisk-beta-release.md",
+      "title": "Obelisk Beta Release",
+      "description": "A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.",
+      "tags": [
+        "obelisk",
+        "databases",
+        "urql",
+        "developers"
+      ],
+      "searchTerms": [],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1776902400000,
+      "source": "blog",
+      "path": "/blog/obelisk-beta-release",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "obelisk beta release a first look at obelisk, a relational database for urbit with time travel, composable queries, and no nulls. obelisk databases urql developers ~sarlev-sarsen /blog/obelisk-beta-release blog 2026-04-23 obelisk brings a time-traveling relational database to urbit. this post outlines urql, why composability matters, what the beta makes available, and where to go for docs, roadmap, and the hawk ui. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_obelisk+beta+release/blog_obelisk_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_obelisk+beta+release/blog_obelisk_social16_9.png obelisk databases urql developers obelisk beta ~nomryg-nilref urbit database relational database time travel database sql for urbit common table expressions scalars clause sample database hawk ui no nulls"
+    },
+    {
       "id": "blog/olif-and-urbit-ids.md",
       "title": "Olif and Urbit IDs",
       "description": "An Olfactive rendering of Urbit Address Space",
@@ -4122,7 +4143,7 @@
     {
       "id": "blog/this-month-in-urbit-april-2026.md",
       "title": "This Month in Urbit: April 2026",
-      "description": "Experiments from around the Urbit ecosystem, including MCP, app distribution, storage, mail, local LLM routing, and mobile clients",
+      "description": "Experiments from around the Urbit ecosystem, including MCP, games, mail, local LLM routing, and mobile clients",
       "tags": [
         "this-month-in-urbit",
         "ecosystem",
@@ -4139,7 +4160,7 @@
       "path": "/blog/this-month-in-urbit-april-2026",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, app distribution, storage, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+      "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
     },
     {
       "id": "blog/tools-of-our-own.md",
