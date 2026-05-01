@@ -74,6 +74,7 @@ export default async function RootLayout({ children }) {
         </Script>
         <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <Script id="umami-event-guard" src="/umami-event-guard.js" strategy="beforeInteractive" />
         <script defer src="/umami-script.js" data-website-id={umamiWebsiteId}></script>
         <link
           rel="preload"

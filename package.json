@@ -8,7 +8,8 @@
     "prebuild": "node scripts/build-search-index.js && node scripts/build-agent-artifacts.js && node scripts/build-ai-legibility.js",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:umami-guard": "node scripts/test-umami-event-guard.js"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
