@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-23T04:40:28.324Z",
-  "total": 184,
+  "generatedAt": "2026-05-01T04:41:37.631Z",
+  "total": 185,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4118,6 +4118,28 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "the value of urbit address space (3 of 3) erik newton and galen wolfe-pauly explain lockups and spawning limits for urbit address space, discuss distribution estimates, and clarify why privacy-by-design limits usage data collection despite the network explorer's development. address space value urbit ids lockups spawning limits galaxy distribution star unlocks network effects urbit scarcity usage metrics network explorer address space trade erik newton + galen wolfe-pauly ~patnes-rigtyn + ~ravmel-ropdyl /blog/value-of-address-space-pt3 blog 2020-07-09 address space value urbit ids lockups spawning limits galaxy distribution star unlocks network effects urbit scarcity usage metrics network explorer address space trade erik newton + galen wolfe-pauly ~patnes-rigtyn + ~ravmel-ropdyl https://media.urbit.org/site/posts/essays/value-of-address-space-pt3.jpg"
+    },
+    {
+      "id": "blog/this-month-in-urbit-april-2026.md",
+      "title": "This Month in Urbit: April 2026",
+      "description": "Experiments from around the Urbit ecosystem, including MCP, app distribution, storage, mail, local LLM routing, and mobile clients",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "mcp",
+        "applications",
+        "ai"
+      ],
+      "searchTerms": [],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1777593600000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-april-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, app distribution, storage, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
     },
     {
       "id": "blog/tools-of-our-own.md",

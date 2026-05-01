@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [This Month in Urbit: April 2026](/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, app distribution, storage, mail, local LLM routing, and mobile clients
 - [Contributor Spotlight: ~nomryg-nilref](/blog/contributor-spotlight-nomryg-nilref.md) — A conversation with ~nomryg-nilref on beautiful lost causes, forever software, and Obelisk
 - [The Future of Userspace](/blog/gall-2026.md) — The Gall 2026 project and what it means for userspace
 - [Contributor Spotlight: ~palfun-foslup](/blog/contributor-spotlight-palfun-foslup.md) — A conversation with ~palfun-foslup on Gall, userspace, and making simple software

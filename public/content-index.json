@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-23T22:06:08.354Z",
-  "total": 347,
+  "generatedAt": "2026-05-01T04:41:37.831Z",
+  "total": 348,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -2875,6 +2875,27 @@
       "agent_url": "https://urbit.org/.agents/blog/the-urbit-address-space.md",
       "agent_available": true,
       "agent_mode": "fallback"
+    },
+    {
+      "id": "blog/this-month-in-urbit-april-2026.md",
+      "url": "https://urbit.org/blog/this-month-in-urbit-april-2026",
+      "type": "blog",
+      "source_kind": "blog",
+      "title": "This Month in Urbit: April 2026",
+      "summary": "The first This Month in Urbit highlights April 2026 ecosystem experiments: Groundwire's Urbit MCP server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, Talon, and other network updates.",
+      "description": "Experiments from around the Urbit ecosystem, including MCP, app distribution, storage, mail, local LLM routing, and mobile clients",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "mcp",
+        "applications",
+        "ai"
+      ],
+      "search_terms": [],
+      "human_md_url": "https://urbit.org/blog/this-month-in-urbit-april-2026.md",
+      "agent_url": "https://urbit.org/.agents/blog/this-month-in-urbit-april-2026.md",
+      "agent_available": true,
+      "agent_mode": "dedicated"
     },
     {
       "id": "blog/tools-of-our-own.md",

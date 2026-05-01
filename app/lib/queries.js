@@ -8,6 +8,13 @@ import Markdoc from "@markdoc/markdoc";
 import { markdocConfig } from "../markdocConfig";
 const ARTICLES_PATH = "/app/content";
 const POSTS_DIR = path.join(process.cwd(), ARTICLES_PATH);
+const AGENT_DELIMITER_PATTERN = /^\s*---agent---\s*$/m;
+
+// Source files may include an agent-only appendix after ---agent---. The public
+// site should render only the human portion; build-agent-artifacts.js consumes
+// the companion content separately for /.agents/*.md outputs.
+const getHumanContent = (content = "") =>
+  String(content || "").split(AGENT_DELIMITER_PATTERN)[0].trim();
 
 async function getPostsTree(specificPath = "") {
   const postPaths = await glob(path.join(POSTS_DIR, specificPath, "**/*.md"));
@@ -90,7 +97,7 @@ async function getMarkdownContent(slug, type = "yaml", config = markdocConfig) {
     fileSyncRead,
     options
   );
-  const normalizedContent = normalizeHeadingIds(pageContent);
+  const normalizedContent = normalizeHeadingIds(getHumanContent(pageContent));
   const ast = Markdoc.parse(normalizedContent); //ast is for abstract syntax tree
   const transform = Markdoc.transform(ast, config);
   return {
@@ -124,11 +131,12 @@ async function getSectionContent(slug) {
 
   // Split content on ---outro--- delimiter
   const outroDelimiter = "\n---outro---\n";
-  let introContent = normalizeHeadingIds(pageContent);
+  const humanPageContent = getHumanContent(pageContent);
+  let introContent = normalizeHeadingIds(humanPageContent);
   let outroContent = null;
 
-  if (pageContent.includes(outroDelimiter)) {
-    const parts = pageContent.split(outroDelimiter);
+  if (humanPageContent.includes(outroDelimiter)) {
+    const parts = humanPageContent.split(outroDelimiter);
     introContent = normalizeHeadingIds(parts[0].trim());
     outroContent = normalizeHeadingIds(parts[1]?.trim() || "");
   }
