@@ -64,7 +64,7 @@ The beta also comes with a `%hawk` UI. If you do not already have `%hawk`, you c
 
 Urbit needs local software primitives that are durable, inspectable, and pleasant to compose. A relational database with built-in history, proper set semantics, and no nulls opens up a cleaner foundation for apps running on personal servers. It also makes a strong claim about what local-first infrastructure can look like: not less powerful than legacy systems, but simpler and more coherent.
 
-While this doesn't wholesale replace other patterns for data storage, such as directly using Gall state, or the Clay filesystem, it offers an additional option for persistence of data that can be used across applications. 
+While this doesn't wholesale replace other patterns for data storage, such as directly using Gall state, or the Clay filesystem, it offers an additional option for persistence of data that can be used across applications.
 
 ## What comes next
 
