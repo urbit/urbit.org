@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "test:agent-discovery": "node scripts/test-agent-discovery-content.js",
     "test:umami-guard": "node scripts/test-umami-event-guard.js"
   },
   "dependencies": {

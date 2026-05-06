@@ -1,5 +1,5 @@
 import Link from "next/link";
-import discoveryData from "../lib/agent-discovery.json";
+import { getAgentDiscoveryData } from "../lib/agentDiscovery";
 
 function DiscoveryLinkCard({ href, label, description }) {
   return (
@@ -72,6 +72,7 @@ export default function AgentDiscoverySection({
   id,
   className = "",
 }) {
+  const discoveryData = getAgentDiscoveryData();
   const headingId = `${id || "agent-discovery"}-title`;
   const primaryEntryPoints = compact
     ? discoveryData.primaryEntryPoints.slice(0, 4)
