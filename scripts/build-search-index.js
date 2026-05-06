@@ -16,6 +16,7 @@ const {
   collectAuthors,
   collectFrontMatterValues,
   collectTags,
+  isSearchExcluded,
   normalizeSearchTerms,
   parseFrontMatter,
   parsePublishedTimestamp,
@@ -93,6 +94,10 @@ async function buildSearchIndex() {
     const parsed = parseFrontMatter(rawContent, filePath);
     if (!parsed) {
       errors.push({ filePath, error: new Error("Frontmatter parse failed") });
+      continue;
+    }
+
+    if (isSearchExcluded(parsed.data)) {
       continue;
     }
 
