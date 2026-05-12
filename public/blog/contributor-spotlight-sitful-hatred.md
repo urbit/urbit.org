@@ -1,37 +1,9 @@
-+++
+# Contributor Spotlight: ~sitful-hatred
 
-title = "Contributor Spotlight: ~sitful-hatred"
-date = "2026-05-12"
-description = "A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing"
-summary = "~sitful-hatred discusses self-hosting, OpenClaw and native Urbit LLM tooling, deterministic on-ship inference, and peer-to-peer file sharing on Urbit."
-# aliases = []
-search_terms = [
-    "contributor spotlight",
-    "sitful hatred",
-    "subject.network",
-    "urbit hosting",
-    "Native Planet",
-    "Groundseg",
-    "Startram",
-    "OpenClaw",
-    "Claude Code",
-    "Qwen3",
-    "GPT-2",
-    "Vere64",
-    "peer to peer file sharing"
-]
+A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing
 
-[extra]
-# author = ""
-ship = "~sarlev-sarsen"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+sitful-hatred/Blog_QA+sitful-hatred_Social.png"
-imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+sitful-hatred/Blog_QA+sitful-hatred_Social16_9.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+sitful-hatred/Blog_QA+sitful-hatred_Banner.png"
-# imageDark = ""
-# imageCardDark = ""
-# imageIndexDark = ""
-tags = ["spotlight", "hosting", "llms", "file-sharing"]
-+++
+- Date: 2026-05-12
+- Author: ~sarlev-sarsen
 
 ![~sitful-hatred Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+sitful-hatred/Blog_QA+sitful-hatred_Hero.png)
 
