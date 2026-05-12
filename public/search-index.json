@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-01T19:02:47.876Z",
-  "total": 186,
+  "generatedAt": "2026-05-12T20:34:51.952Z",
+  "total": 187,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/urbit-explained/intro.md",
-      "title": "Introduction",
-      "description": "Urbit is a practice in building a forever computer",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/urbit-explained",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "urbit-explained",
-      "subsectionLabel": "Urbit Explained",
-      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
-    },
-    {
       "id": "overview/running-urbit/intro.md",
       "title": "Introduction",
       "description": "A comprehensive guide to getting started with Urbit",
@@ -553,6 +537,22 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
+    },
+    {
+      "id": "overview/urbit-explained/intro.md",
+      "title": "Introduction",
+      "description": "Urbit is a practice in building a forever computer",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/urbit-explained",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "urbit-explained",
+      "subsectionLabel": "Urbit Explained",
+      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
@@ -2255,6 +2255,41 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~palfun-foslup a conversation with ~palfun-foslup on gall, userspace, and making simple software spotlight gall userspace ~sarlev-sarsen /blog/contributor-spotlight-palfun-foslup blog 2026-03-17 tlon engineer ~palfun-foslup discusses building gall apps like %pals and %rumors, why user-owned servers lower the barrier for peer-to-peer software, and what gall 2026 aims to deliver with userspace compatibility and permissions. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social16_9.png spotlight gall userspace contributor spotlight ~palfun-foslup gall 2026 userspace permissions userspace compatibility tlon messenger pals app rumors app peer to peer software personal server urbit security vere64"
+    },
+    {
+      "id": "blog/contributor-spotlight-sitful-hatred.md",
+      "title": "Contributor Spotlight: ~sitful-hatred",
+      "description": "A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing",
+      "tags": [
+        "spotlight",
+        "hosting",
+        "llms",
+        "file-sharing"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "sitful hatred",
+        "subject.network",
+        "urbit hosting",
+        "Native Planet",
+        "Groundseg",
+        "Startram",
+        "OpenClaw",
+        "Claude Code",
+        "Qwen3",
+        "GPT-2",
+        "Vere64",
+        "peer to peer file sharing"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1778544000000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-sitful-hatred",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~sitful-hatred a conversation with ~sitful-hatred on hosting, llm tooling, and peer-to-peer file sharing spotlight hosting llms file-sharing contributor spotlight sitful hatred subject.network urbit hosting native planet groundseg startram openclaw claude code qwen3 gpt-2 vere64 peer to peer file sharing ~sarlev-sarsen /blog/contributor-spotlight-sitful-hatred blog 2026-05-12 ~sitful-hatred discusses self-hosting, openclaw and native urbit llm tooling, deterministic on-ship inference, and peer-to-peer file sharing on urbit. contributor spotlight sitful hatred subject.network urbit hosting native planet groundseg startram openclaw claude code qwen3 gpt-2 vere64 peer to peer file sharing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sitful-hatred/blog_qa+sitful-hatred_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sitful-hatred/blog_qa+sitful-hatred_social16_9.png spotlight hosting llms file-sharing"
     },
     {
       "id": "blog/convivial-networks.md",
