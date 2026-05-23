@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Developer Preview: %claw](/blog/developer-preview-claw.md) — An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship
 - [Contributor Spotlight: ~sitful-hatred](/blog/contributor-spotlight-sitful-hatred.md) — A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing
 - [This Month in Urbit: April 2026](/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, games, mail, local LLM routing, and mobile clients
 - [Obelisk Beta Release](/blog/obelisk-beta-release.md) — A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.
