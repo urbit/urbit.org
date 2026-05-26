@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-12T20:34:51.952Z",
-  "total": 187,
+  "generatedAt": "2026-05-23T03:36:15.569Z",
+  "total": 188,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/running-urbit/intro.md",
-      "title": "Introduction",
-      "description": "A comprehensive guide to getting started with Urbit",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/running-urbit",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "running-urbit",
-      "subsectionLabel": "Running Urbit",
-      "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
-    },
-    {
       "id": "overview/urbit-explained/intro.md",
       "title": "Introduction",
       "description": "Urbit is a practice in building a forever computer",
@@ -553,6 +537,22 @@
       "subsection": "urbit-explained",
       "subsectionLabel": "Urbit Explained",
       "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
+    },
+    {
+      "id": "overview/running-urbit/intro.md",
+      "title": "Introduction",
+      "description": "A comprehensive guide to getting started with Urbit",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/running-urbit",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "running-urbit",
+      "subsectionLabel": "Running Urbit",
+      "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
@@ -2402,6 +2402,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "desire lines to a new internet as more daos, nft and digital communities find their way to urbit, others are likely to follow their paths, making them their own, just like the network itself. desire lines web3 communities dao migration urbit adoption token gating planet distribution holium ballot pointdao urbit for creators decentralized networks ~dalwes-migdec /blog/desire-lines blog 2022-05-06 the author describes web3 communities migrating to urbit as traversing christopher alexander's desire lines, with layer 2 making planet distribution affordable, dao tooling proliferating on landscape, and token-gated distributions scaling through projects like dusko and pointdao. desire lines web3 communities dao migration urbit adoption token gating planet distribution holium ballot pointdao urbit for creators decentralized networks https://media.urbit.org/blog/desire-lines.jpg"
+    },
+    {
+      "id": "blog/developer-preview-claw.md",
+      "title": "Developer Preview: %claw",
+      "description": "An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship",
+      "tags": [
+        "developer preview",
+        "agents",
+        "llms",
+        "vere64",
+        "mcp",
+        "claw"
+      ],
+      "searchTerms": [
+        "developer preview claw",
+        "%claw",
+        "%maroon",
+        "sitful hatred",
+        "urbit llm",
+        "urbit agents",
+        "openclaw tlon",
+        "tlonbot",
+        "deterministic inference",
+        "qwen3",
+        "vere64 cuda jets",
+        "urbit mcp",
+        "local llm",
+        "sovereign ai"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1779408000000,
+      "source": "blog",
+      "path": "/blog/developer-preview-claw",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "developer preview: %claw an urbit-native personal agent harness, and an experimental path toward deterministic llm inference inside a ship developer preview agents llms vere64 mcp claw developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai ~sarlev-sarsen /blog/developer-preview-claw blog 2026-05-22 %claw is an experimental urbit-native agent harness by ~sitful-hatred. it can use hosted llm providers today and, on the bleeding edge, demonstrates deterministic qwen3 inference through %maroon, vere64, and cuda jets. developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai developer preview agents llms vere64 mcp claw"
     },
     {
       "id": "blog/developer-preview-vere64.md",

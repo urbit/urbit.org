@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/developer-preview-claw.md"
   - "/blog/contributor-spotlight-sitful-hatred.md"
   - "/blog/this-month-in-urbit-april-2026.md"
   - "/blog/obelisk-beta-release.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/olif-and-urbit-ids.md"
   - "/blog/contributor-spotlight-litneb-maltyp.md"
   - "/blog/llms-on-urbit.md"
-  - "/blog/contributor-spotlight-niblyx-malnus-and-bonbud-macryg.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [Developer Preview: %claw](/.agents/blog/developer-preview-claw.md) — An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship
 - [Contributor Spotlight: ~sitful-hatred](/.agents/blog/contributor-spotlight-sitful-hatred.md) — A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing
 - [This Month in Urbit: April 2026](/.agents/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, games, mail, local LLM routing, and mobile clients
 - [Obelisk Beta Release](/.agents/blog/obelisk-beta-release.md) — A first look at Obelisk, a relational database for Urbit with time travel, composable queries, and no nulls.
