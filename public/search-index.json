@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-23T03:36:15.569Z",
-  "total": 188,
+  "generatedAt": "2026-05-30T05:21:11.367Z",
+  "total": 189,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2439,7 +2439,7 @@
       "path": "/blog/developer-preview-claw",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "developer preview: %claw an urbit-native personal agent harness, and an experimental path toward deterministic llm inference inside a ship developer preview agents llms vere64 mcp claw developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai ~sarlev-sarsen /blog/developer-preview-claw blog 2026-05-22 %claw is an experimental urbit-native agent harness by ~sitful-hatred. it can use hosted llm providers today and, on the bleeding edge, demonstrates deterministic qwen3 inference through %maroon, vere64, and cuda jets. developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai developer preview agents llms vere64 mcp claw"
+      "searchText": "developer preview: %claw an urbit-native personal agent harness, and an experimental path toward deterministic llm inference inside a ship developer preview agents llms vere64 mcp claw developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai ~sarlev-sarsen /blog/developer-preview-claw blog 2026-05-22 %claw is an experimental urbit-native agent harness by ~sitful-hatred. it can use hosted llm providers today and, on the bleeding edge, demonstrates deterministic qwen3 inference through %maroon, vere64, and cuda jets. developer preview claw %claw %maroon sitful hatred urbit llm urbit agents openclaw tlon tlonbot deterministic inference qwen3 vere64 cuda jets urbit mcp local llm sovereign ai https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+dp+claw/blog_claw+dp_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+dp+claw/blog_claw+dp_social+16_9.jpg developer preview agents llms vere64 mcp claw"
     },
     {
       "id": "blog/developer-preview-vere64.md",
@@ -4234,6 +4234,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+    },
+    {
+      "id": "blog/this-month-in-urbit-may-2026.md",
+      "title": "This Month in Urbit: May 2026",
+      "description": "May ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "ai",
+        "agents",
+        "mcp"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "may 2026 urbit",
+        "%notes",
+        "obsidian notes",
+        "%boox",
+        "urbit books",
+        "%last",
+        "audioscrobble",
+        "urbit agents",
+        "hermes agent",
+        "tlonbot",
+        "%claw",
+        "urbit mcp",
+        "spider threads"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1780012800000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-may-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: may 2026 may ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools this-month-in-urbit ecosystem applications ai agents mcp this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads ~sarlev-sarsen /blog/this-month-in-urbit-may-2026 blog 2026-05-29 this month in urbit for may 2026 covers %notes, %boox, %last, hermes agent integration, tlon's agent experiments, %claw, %mcp, and recent contributor writing about agentic urbit and concurrent io in spider threads. this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social16_9.jpg this-month-in-urbit ecosystem applications ai agents mcp"
     },
     {
       "id": "blog/tools-of-our-own.md",

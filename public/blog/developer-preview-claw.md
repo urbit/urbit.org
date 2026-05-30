@@ -5,9 +5,11 @@ An Urbit-native personal agent harness, and an experimental path toward determin
 - Date: 2026-05-22
 - Author: ~sarlev-sarsen
 
-If you sign up for Tlon hosting today, your hosted Urbit includes **Tlonbot**: an instance of [OpenClaw](https://openclaw.ai) running on a dedicated moon as your personal agent. Through the [Tlon skill](https://github.com/tloncorp/tlon-skill) and [OpenClaw's Tlon plugin](https://docs.openclaw.ai/channels/tlon), it can manage groups, chat with peers, and operate your hosted ship through ordinary messages.
+## Putting a ghost in the shell
 
-That is already useful. It also still depends on a sidecar Unix process to run OpenClaw. In the words of [`~sitful-hatred`](/blog/contributor-spotlight-sitful-hatred):
+If you sign up for Tlon hosting today, your hosted Urbit includes **Tlonbot**: an instance of [OpenClaw](https://openclaw.ai) running alongside a dedicated moon as your personal agent. Through the [Tlon skill](https://github.com/tloncorp/tlon-skill) and [OpenClaw's Tlon plugin](https://docs.openclaw.ai/channels/tlon), it can manage groups, chat with peers, and operate your hosted ship through ordinary messages.
+
+That is already useful. It also still depends on a sidecar Unix process to run OpenClaw. [In the words of `~sitful-hatred`](/blog/contributor-spotlight-sitful-hatred):
 
 > "It works for what it is, but it doesn’t fit very well with how we run ships in hosting. That pushed me toward the conclusion that this should really have a native harness. We shouldn’t be using a third-party system just to let your ship make HTTP requests to a provider or to its own engine."
 
