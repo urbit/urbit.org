@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [This Month in Urbit: May 2026](/blog/this-month-in-urbit-may-2026.md) — May ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools
 - [Developer Preview: %claw](/blog/developer-preview-claw.md) — An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship
 - [Contributor Spotlight: ~sitful-hatred](/blog/contributor-spotlight-sitful-hatred.md) — A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing
 - [This Month in Urbit: April 2026](/blog/this-month-in-urbit-april-2026.md) — Experiments from around the Urbit ecosystem, including MCP, games, mail, local LLM routing, and mobile clients
