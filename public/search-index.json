@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-30T05:21:11.367Z",
-  "total": 189,
+  "generatedAt": "2026-06-03T16:02:54.025Z",
+  "total": 190,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2154,6 +2154,42 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~dozreg-toplud a peek into the mind behind urwasm, and the undertaking to make urbit faster spotlight urwasm subject-knowledge analysis ~sarlev-sarsen /blog/contributor-spotlight-dozreg-toplud blog 2025-11-04 urwasm and ska developer ~dozreg-toplud discusses urbit's shallow stack, security model, and work on improving nock performance through subject knowledge analysis. /images/dozreg-toplud-spotlight.png spotlight urwasm subject-knowledge analysis contributor spotlight dozreg toplud urwasm subject knowledge analysis ford build system nock speed runtime performance urbit simplicity security permissions gall tooling directed messaging"
+    },
+    {
+      "id": "blog/contributor-spotlight-lagrev-nocfep.md",
+      "title": "Contributor Spotlight: ~lagrev-nocfep",
+      "description": "A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer",
+      "tags": [
+        "spotlight",
+        "nock",
+        "language-design",
+        "computing"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "~lagrev-nocfep",
+        "Nock",
+        "Hoon",
+        "language design",
+        "computational substrate",
+        "forever computer",
+        "Azimuth identity",
+        "Nockchain",
+        "Wolfram",
+        "von Neumann",
+        "combinator calculus",
+        "Forth",
+        "replayable state"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1780444800000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-lagrev-nocfep",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~lagrev-nocfep a conversation with ~lagrev-nocfep on nock, language design, computation, and the forever computer spotlight nock language-design computing contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state ~sarlev-sarsen /blog/contributor-spotlight-lagrev-nocfep blog 2026-06-03 ~lagrev-nocfep discusses nock as a computational substrate, alternative models of computation, azimuth identity, replayable ship state, and how language design shapes what computers make possible. contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social16_9.png spotlight nock language-design computing"
     },
     {
       "id": "blog/contributor-spotlight-litneb-maltyp.md",
