@@ -1,7 +1,7 @@
 +++
 
 title = "Contributor Spotlight: ~lagrev-nocfep"
-date = "2026-06-03"
+date = "2026-06-09"
 description = "A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer"
 summary = "~lagrev-nocfep discusses Nock as a computational substrate, alternative models of computation, Azimuth identity, replayable ship state, and how language design shapes what computers make possible."
 # aliases = []

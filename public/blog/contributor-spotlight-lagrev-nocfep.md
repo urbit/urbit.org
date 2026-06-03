@@ -2,7 +2,7 @@
 
 A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer
 
-- Date: 2026-06-03
+- Date: 2026-06-09
 - Author: ~sarlev-sarsen
 
 ![~lagrev-nocfep Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Hero.png)

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T16:02:54.025Z",
+  "generatedAt": "2026-06-03T16:13:46.786Z",
   "total": 190,
   "entries": [
     {
@@ -2184,12 +2184,12 @@
       "authors": [
         "~sarlev-sarsen"
       ],
-      "publishedTimestamp": 1780444800000,
+      "publishedTimestamp": 1780963200000,
       "source": "blog",
       "path": "/blog/contributor-spotlight-lagrev-nocfep",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "contributor spotlight: ~lagrev-nocfep a conversation with ~lagrev-nocfep on nock, language design, computation, and the forever computer spotlight nock language-design computing contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state ~sarlev-sarsen /blog/contributor-spotlight-lagrev-nocfep blog 2026-06-03 ~lagrev-nocfep discusses nock as a computational substrate, alternative models of computation, azimuth identity, replayable ship state, and how language design shapes what computers make possible. contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social16_9.png spotlight nock language-design computing"
+      "searchText": "contributor spotlight: ~lagrev-nocfep a conversation with ~lagrev-nocfep on nock, language design, computation, and the forever computer spotlight nock language-design computing contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state ~sarlev-sarsen /blog/contributor-spotlight-lagrev-nocfep blog 2026-06-09 ~lagrev-nocfep discusses nock as a computational substrate, alternative models of computation, azimuth identity, replayable ship state, and how language design shapes what computers make possible. contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social16_9.png spotlight nock language-design computing"
     },
     {
       "id": "blog/contributor-spotlight-litneb-maltyp.md",
