@@ -8,6 +8,25 @@ const normalizeArray = (value) => {
 
 const uniqueStrings = (values) => Array.from(new Set(values.filter(Boolean)));
 
+const isTruthyFrontMatterValue = (value) =>
+  value === true || String(value || "").trim().toLowerCase() === "true";
+
+const isSearchExcluded = (frontMatter = {}) =>
+  [
+    frontMatter.search_exclude,
+    frontMatter.searchExclude,
+    frontMatter.index_exclude,
+    frontMatter.indexExclude,
+  ].some(isTruthyFrontMatterValue);
+
+const isContentIndexExcluded = (frontMatter = {}) =>
+  [
+    frontMatter.content_index_exclude,
+    frontMatter.contentIndexExclude,
+    frontMatter.index_exclude,
+    frontMatter.indexExclude,
+  ].some(isTruthyFrontMatterValue);
+
 const toTitleCase = (value = "") =>
   String(value)
     .split("-")
@@ -223,6 +242,8 @@ module.exports = {
   collectTags,
   extractFirstParagraph,
   extractMarkdownLinks,
+  isContentIndexExcluded,
+  isSearchExcluded,
   normalizeArray,
   normalizeHeadingIds,
   normalizeSearchTerms,
