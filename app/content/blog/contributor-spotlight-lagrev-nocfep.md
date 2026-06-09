@@ -50,19 +50,13 @@ As to why specifically Urbit: to be honest, I was intrigued in the puzzle-box na
 
 Over time I’ve become more drawn into this, conditioned by re-encountering Wolfram's work: the idea that you have particular sets of rules, and then you ask what ramifications and elaborations fall out of those rule sets once you define them.
 
-Of late I’ve been working on Nock-related computing and combinator formulations on top of Nock or adjacent to Nock, Mock-style work. I’ve been working on PLAN, which is a Nock competitor in a way, or at least a reconceptualization. I’ve been looking at what it takes to implement Nock on top of a Forth operating system; that’s the Trinitite project. And I’ve been looking at other language stuff that compiles to, or is interpreted by, Nock as an instruction set architecture.
-
-* [Trinitite OS](https://github.com/sigilante/trinitite)
+Of late I’ve been working on Nock-related computing and combinator formulations on top of Nock or adjacent to Nock, Mock-style work. I’ve been working on PLAN, which is a Nock competitor in a way, or at least a reconceptualization. I’ve been looking at what it takes to implement Nock on top of a Forth operating system; that’s the [Trinitite OS](https://github.com/sigilante/trinitite) project. And I’ve been looking at other language stuff that compiles to, or is interpreted by, Nock as an instruction set architecture.
 
 > **\~sarlev:** You mentioned the idea that using just one approach to computing is a monocrop. What are some of the things that have caught your interest about doing a non-von-Neumann architecture? What has been useful or interesting there?
 
 **\~lagrev-nocfep:** The von Neumann architecture, to some extent, is baked into anything we’re doing on a modern chip. We might be simulating things that behave differently, but at the object level of bits moving through a CPU, that’s where we’re at.
 
-There are things like the Mill model. There are some interesting things with Tenstorrent; they’re building GPU-style AI ASICs. People are doing other chip stuff. And historically there have been many other things tried: analog computing, ternary computing, etc.
-
-* [“Unconventional computing”, Wikipedia](https://en.wikipedia.org/wiki/Unconventional_computing)
-* [Mill Computing](https://millcomputing.com/)
-* [Tenstorrent](https://tenstorrent.com/)
+There are things like [the Mill model](https://millcomputing.com). There are some interesting things with [Tenstorrent](https://tenstorrent.com/); they’re building GPU-style AI ASICs. People are doing other chip stuff. And [historically there have been many other things tried](https://en.wikipedia.org/wiki/Unconventional_computing): analog computing, ternary computing, etc.
 
 > **\~sarlev:** Can you get past that in an atomically constrained economic model, where you’re always going to have faster and cheaper storage than RAM? Does that just end up being a constraint, or do you have a theory of how this would structurally be able to be different?
 
@@ -74,10 +68,7 @@ Computing is caught in the same bind. You’re competing with highly optimized I
 
 If you’re talking about the metal, you’re going to have to play a game where you find a field or a niche where what you offer is more valuable than what can be done on conventional x86.
 
-In the operating-system field, you have the two giants. Everything is either Unix or the NT kernel at this point. Then you have a handful of minor operating systems that are one step above hobby systems: Haiku/BeOS, Fuchsia that Google’s working on, and a few others. Then you have academic research and hobbyist operating systems.
-
-* [Haiku OS](https://www.haiku-os.org/)
-* [Fuchsia OS](https://fuchsia.dev/)
+In the operating-system field, you have the two giants. Everything is either Unix or the NT kernel at this point. Then you have a handful of minor operating systems that are one step above hobby systems: [Haiku/BeOS](https://www.haiku-os.org), [Fuchsia](https://fuchsia.dev) that Google’s working on, and a few others. Then you have academic research and hobbyist operating systems.
 
 If Urbit is going to be an operating system, modulo the semantics of that phrasing, it has to have things it does better than any existing Windows or Unix system can do. And it probably has to be ten times better at it than any existing Windows or Unix system just because of the friction introduced by getting people to talk to and deal with a different computing model.
 
@@ -95,10 +86,7 @@ The uniformity of the event-loop model, where everything is a state machine with
 
 Virtualization is another one. Nock was designed for virtualization long before Hoon was in anyone’s mind. It is used in Mock, but the idea of virtualizing whole ships, Aqua-style, could be revived very profitably.
 
-* [`nock.is`](https://nock.is/)
-* [Jupytur](https://github.com/sigilante/jupytur)
-* [Pinochle](https://github.com/sigilante/pinochle)
-* [“Metacircular Virtualization & Practical Nock Interpretation”](https://urbitsystems.tech/article/v02-i01/metacircular-virtualization-and-practical-nock-interpretation)
+***A few worthwile explorations for the curious reader include: [`nock.is`](https://nock.is/), [Jupytur](https://github.com/sigilante/jupytur), [Pinochle](https://github.com/sigilante/pinochle), and [“Metacircular Virtualization & Practical Nock Interpretation”](https://urbitsystems.tech/article/v02-i01/metacircular-virtualization-and-practical-nock-interpretation).***
 
 > **\~sarlev:** When you talk about the ability to trivially replay or recover any given past state of your ship, one thing that has been in the Urbit zeitgeist forever is the computer you can pass down to your grandchildren. Is that something you see being enabled by this architecture? Is it a pipe dream? Is it only possible with this architecture, or could we get there with Unix and a sufficiently large language model?
 
@@ -110,13 +98,9 @@ From the rhetorical-aesthetic aspect, what you’re looking at is the experienti
 
 The other aspect is the universal-computing-substrate perspective. Nock is not the only universal computing substrate. Obviously, anything Turing-complete or μ-recursive is. But it is a reasonably good portable instruction-set architecture. It allows you to explore particular portions of computational space in a way that wasn’t previously apparent.
 
-* [*Urbit Systems Technical Journal*](https://urbitsystems.tech/)
+[As we get a better feel for what happens when you have subject-oriented programming](https://urbitsystems.tech/) in more systems besides Nock, then we’ll know if Nock or PLAN or something like them is a universal, nearly pure language the way an APL or a Forth is. Or we’ll know if Nock is more like B, the predecessor to C: it had some good ideas, but as we explored more of that computational field, we realized that if you make a very small adjustment, a lot more pops out at you in relief.
 
-As we get a better feel for what happens when you have subject-oriented programming in more systems besides Nock, then we’ll know if Nock or PLAN or something like them is a universal, nearly pure language the way an APL or a Forth is. Or we’ll know if Nock is more like B, the predecessor to C: it had some good ideas, but as we explored more of that computational field, we realized that if you make a very small adjustment, a lot more pops out at you in relief.
-
-There are also ways you can probably game Nock down that aren’t apparent. It is a combinator calculus, which means that it does have a mapping for the S, K, and I combinators. Because it has primitive elements that are atoms, you do have to have affordances to work with atoms. You could imagine doing a different version of Nock that uses Church numerals and is unary over cell structure or something like that.
-
-* [`nock.is`, “The Combinator Approach”](https://nock.is/content/understanding/combinator-approach/)
+There are also ways you can probably game Nock down that aren’t apparent. [It is a combinator calculus](https://nock.is/content/understanding/combinator-approach/), which means that it does have a mapping for the S, K, and I combinators. Because it has primitive elements that are atoms, you do have to have affordances to work with atoms. You could imagine doing a different version of Nock that uses Church numerals and is unary over cell structure or something like that.
 
 I have a long-standing suspicion that Nock 5 is not actually fundamental. I haven’t been able to make it concrete. I’ve been playing with it in various ways, but it seems to me that Nock 0 through 4 may be enough, with Nock 5 optional. There may be a way to refactor it down not to use it.
 
@@ -130,19 +114,13 @@ So, forever computer? All computing is forever. Computing is the eldritch proces
 
 How weird do we want to get?
 
-One of my fundamental contentions is that computation is alchemy. What the alchemists were doing was describing the universe of processes around them in terms of a set of fundamental transformations. They conceived of these as processes. We use other terminology now, like operators. But this is what computation is.
-
-* [`nock.is`, “The Alchemy Approach”](https://nock.is/content/understanding/alchemy-approach/)
+One of my fundamental contentions is that [computation is alchemy](https://nock.is/content/understanding/alchemy-approach/). What the alchemists were doing was describing the universe of processes around them in terms of a set of fundamental transformations. They conceived of these as processes. We use other terminology now, like operators. But this is what computation is.
 
 In the same sense, Leibniz would have talked about a *calculus ratiocinator*. John Wilkins had language notions. All the way through Kurt Gödel, the people who were laying the foundations of computing were extremely interested in representing and manipulating thought and process.
 
 In a sense, for us, it has become unmagical because it is so commonplace. We don’t step back and actually think about what it is that we are doing that even makes this possible. There should be a little bit of vertigo when you think about a sorting algorithm. Something as banal as a sorting algorithm means there is a way in this universe to extricate a completely general process for ordering things, and it applies in every single case. Nothing gets special-cased out of a sorting algorithm working, assuming they’re discrete and non-interchangeable objects.
 
-Every part of computing is alive. That is the fundamental thesis of the *Nockonomicon* (a forthcoming project of mine): computing is this latent factor in reality, and we are purifying it by naming it, by calling it forth, by giving it expression in concrete and abstract ways. We have abstractions that are high-level descriptions. We instantiate them in all sorts of physical and electronic processes.
-
-* [“One Kelvin”](https://planet.sigilante.red/story-one-kelvin)
-* [“Nock Alchemy”](https://planet.sigilante.red/essay-nock-alchemy)
-* [“Thuringia”](https://planet.sigilante.red/story-thuringia)
+Every part of computing is alive. That is the fundamental thesis of the *Nockonomicon* (a forthcoming project of mine): computing is this latent factor in reality, and we are purifying it by naming it, by calling it forth, by giving it expression in concrete and abstract ways. We have abstractions that are high-level descriptions: [“One Kelvin”](https://planet.sigilante.red/story-one-kelvin), [“Nock Alchemy”](https://planet.sigilante.red/essay-nock-alchemy), [“Thuringia”](https://planet.sigilante.red/story-thuringia). We instantiate them in all sorts of physical and electronic processes.
 
 Turing, toward the end of his life, was obsessed with the processes that gave rise to coloration in fur and seashells and other kinds of things. This has often been framed as, “Oh, he was working on differential equations.” But differential equations are really downstream of computation. Mathematics, in a deep way, is downstream of computation.
 
@@ -162,6 +140,4 @@ The way alphabets work—language is unnatural. This is the [Cormac McCarthy ess
 
 And you can’t really get away from these problems because there is a reason people use different programming languages. When you are using computer languages to manipulate the physical reality presented to you, you are making decisions about why to use one set of symbol systems and rules over another. Why are you making that choice? What is the fallout from that choice?
 
-What is particularly interesting to me is what happens when you make new choices that no one else has ever made before. This is why I’ve been playing with language design so much lately. You design a new language, a new syntax, or a new way of approaching what’s going on, and you’re able to do things that were not clearly available to you previously.
-
-* [“Agential Urbit”](https://planet.sigilante.red/agential-urbit)
+What is particularly interesting to me is what happens when you make new choices that no one else has ever made before. This is why I’ve been playing with language design so much lately. You design a new language, a new syntax, or [a new way of approaching what’s going on](https://planet.sigilante.red/agential-urbit), and you’re able to do things that were not clearly available to you previously.
