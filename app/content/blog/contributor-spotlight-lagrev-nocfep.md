@@ -25,16 +25,16 @@ search_terms = [
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Social.png"
-imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Social16_9.png"
-# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Banner.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Social16_9.jpg"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Banner.jpg"
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
 tags = ["spotlight", "nock", "language-design", "computing"]
 +++
 
-![~lagrev-nocfep Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Hero.png)
+![~lagrev-nocfep Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Hero.jpg)
 
 > **\~sarlev:** What drew you into the idea that we needed to throw away and rewrite the entire network computing stack? Obviously, it’s kind of insane.
 
