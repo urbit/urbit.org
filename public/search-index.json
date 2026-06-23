@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-09T05:05:21.322Z",
-  "total": 190,
+  "generatedAt": "2026-06-23T20:24:01.946Z",
+  "total": 191,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2189,7 +2189,7 @@
       "path": "/blog/contributor-spotlight-lagrev-nocfep",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "contributor spotlight: ~lagrev-nocfep a conversation with ~lagrev-nocfep on nock, language design, computation, and the forever computer spotlight nock language-design computing contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state ~sarlev-sarsen /blog/contributor-spotlight-lagrev-nocfep blog 2026-06-09 ~lagrev-nocfep discusses nock as a computational substrate, alternative models of computation, azimuth identity, replayable ship state, and how language design shapes what computers make possible. contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social16_9.png spotlight nock language-design computing"
+      "searchText": "contributor spotlight: ~lagrev-nocfep a conversation with ~lagrev-nocfep on nock, language design, computation, and the forever computer spotlight nock language-design computing contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state ~sarlev-sarsen /blog/contributor-spotlight-lagrev-nocfep blog 2026-06-09 ~lagrev-nocfep discusses nock as a computational substrate, alternative models of computation, azimuth identity, replayable ship state, and how language design shapes what computers make possible. contributor spotlight ~lagrev-nocfep nock hoon language design computational substrate forever computer azimuth identity nockchain wolfram von neumann combinator calculus forth replayable state https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+lagrev-nocfep/blog_qa+lagrev-nocfep_social16_9.jpg spotlight nock language-design computing"
     },
     {
       "id": "blog/contributor-spotlight-litneb-maltyp.md",
@@ -2930,6 +2930,40 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "landscape: a portrait on the latest urbit user interface, and the interfaces to come. landscape ui urbit interface modulo userspace indigo chat publish urbit apps eyre vane create landscape app interface roadmap urbit design matilde park ~haddef-sigwen /blog/landscape-a-portrait blog 2019-09-02 visual and technical introduction to landscape interface design, explaining component architecture, interaction patterns, and principles guiding user experience development. /posts/essays/landscape-a-portrait/ /posts/landscape-a-portrait landscape ui urbit interface modulo userspace indigo chat publish urbit apps eyre vane create landscape app interface roadmap urbit design matilde park ~haddef-sigwen"
+    },
+    {
+      "id": "blog/languages-on-nock.md",
+      "title": "Languages on Nock",
+      "description": "A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock",
+      "tags": [
+        "nock",
+        "language-design",
+        "hoon",
+        "programming"
+      ],
+      "searchTerms": [
+        "languages on nock",
+        "nock languages",
+        "Hoon",
+        "Jock",
+        "Yamoon",
+        "North",
+        "forth-nock",
+        "Loon",
+        "Watt",
+        "Nockchain",
+        "language design",
+        "Urbit programming"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1782172800000,
+      "source": "blog",
+      "path": "/blog/languages-on-nock",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "languages on nock a survey of hoon, jock, yamoon, north, loon, and the programming languages emerging around nock nock language-design hoon programming languages on nock nock languages hoon jock yamoon north forth-nock loon watt nockchain language design urbit programming ~sarlev-sarsen /blog/languages-on-nock blog 2026-06-23 a survey of languages on and around nock, covering hoon, watt, jock, yamoon, north, forth-nock, and loon as examples of how different abstractions shape computation on urbit and nockchain. languages on nock nock languages hoon jock yamoon north forth-nock loon watt nockchain language design urbit programming https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+language+on+nock/blog_language+on+nock_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+language+on+nock/blog_language+on+nock_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+language+on+nock/blog_language+on+nock_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+language+on+nock/blog_language+on+nock_mail.jpg nock language-design hoon programming"
     },
     {
       "id": "blog/20200929-state-of-urbit.md",
