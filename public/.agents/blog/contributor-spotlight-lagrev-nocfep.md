@@ -19,7 +19,7 @@ A conversation with ~lagrev-nocfep on Nock, language design, computation, and th
 - Date: 2026-06-09
 - Author: ~sarlev-sarsen
 
-![~lagrev-nocfep Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Hero.png)
+![~lagrev-nocfep Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+lagrev-nocfep/Blog_QA+lagrev-nocfep_Hero.jpg)
 
 > **\~sarlev:** What drew you into the idea that we needed to throw away and rewrite the entire network computing stack? Obviously, it’s kind of insane.
 
@@ -71,7 +71,7 @@ The uniformity of the event-loop model, where everything is a state machine with
 
 Virtualization is another one. Nock was designed for virtualization long before Hoon was in anyone’s mind. It is used in Mock, but the idea of virtualizing whole ships, Aqua-style, could be revived very profitably.
 
-> A few worthwile explorations for the curious reader include: [`nock.is`](https://nock.is/), [Jupytur](https://github.com/sigilante/jupytur), [Pinochle](https://github.com/sigilante/pinochle), and [“Metacircular Virtualization & Practical Nock Interpretation”](https://urbitsystems.tech/article/v02-i01/metacircular-virtualization-and-practical-nock-interpretation)
+***A few worthwile explorations for the curious reader include: [`nock.is`](https://nock.is/), [Jupytur](https://github.com/sigilante/jupytur), [Pinochle](https://github.com/sigilante/pinochle), and [“Metacircular Virtualization & Practical Nock Interpretation”](https://urbitsystems.tech/article/v02-i01/metacircular-virtualization-and-practical-nock-interpretation).***
 
 > **\~sarlev:** When you talk about the ability to trivially replay or recover any given past state of your ship, one thing that has been in the Urbit zeitgeist forever is the computer you can pass down to your grandchildren. Is that something you see being enabled by this architecture? Is it a pipe dream? Is it only possible with this architecture, or could we get there with Unix and a sufficiently large language model?
 
@@ -83,9 +83,7 @@ From the rhetorical-aesthetic aspect, what you’re looking at is the experienti
 
 The other aspect is the universal-computing-substrate perspective. Nock is not the only universal computing substrate. Obviously, anything Turing-complete or μ-recursive is. But it is a reasonably good portable instruction-set architecture. It allows you to explore particular portions of computational space in a way that wasn’t previously apparent.
 
-* [*Urbit Systems Technical Journal*](https://urbitsystems.tech/)
-
-As we get a better feel for what happens when you have subject-oriented programming in more systems besides Nock, then we’ll know if Nock or PLAN or something like them is a universal, nearly pure language the way an APL or a Forth is. Or we’ll know if Nock is more like B, the predecessor to C: it had some good ideas, but as we explored more of that computational field, we realized that if you make a very small adjustment, a lot more pops out at you in relief.
+[As we get a better feel for what happens when you have subject-oriented programming](https://urbitsystems.tech/) in more systems besides Nock, then we’ll know if Nock or PLAN or something like them is a universal, nearly pure language the way an APL or a Forth is. Or we’ll know if Nock is more like B, the predecessor to C: it had some good ideas, but as we explored more of that computational field, we realized that if you make a very small adjustment, a lot more pops out at you in relief.
 
 There are also ways you can probably game Nock down that aren’t apparent. [It is a combinator calculus](https://nock.is/content/understanding/combinator-approach/), which means that it does have a mapping for the S, K, and I combinators. Because it has primitive elements that are atoms, you do have to have affordances to work with atoms. You could imagine doing a different version of Nock that uses Church numerals and is unary over cell structure or something like that.
 

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-09T05:05:21.881Z",
-  "total": 353,
+  "generatedAt": "2026-06-23T20:24:02.139Z",
+  "total": 354,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -1969,6 +1969,39 @@
       "agent_url": "https://urbit.org/.agents/blog/landscape-a-portrait.md",
       "agent_available": true,
       "agent_mode": "fallback"
+    },
+    {
+      "id": "blog/languages-on-nock.md",
+      "url": "https://urbit.org/blog/languages-on-nock",
+      "type": "blog",
+      "source_kind": "blog",
+      "title": "Languages on Nock",
+      "summary": "A survey of languages on and around Nock, covering Hoon, Watt, Jock, Yamoon, North, forth-nock, and Loon as examples of how different abstractions shape computation on Urbit and Nockchain.",
+      "description": "A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock",
+      "tags": [
+        "nock",
+        "language-design",
+        "hoon",
+        "programming"
+      ],
+      "search_terms": [
+        "languages on nock",
+        "nock languages",
+        "Hoon",
+        "Jock",
+        "Yamoon",
+        "North",
+        "forth-nock",
+        "Loon",
+        "Watt",
+        "Nockchain",
+        "language design",
+        "Urbit programming"
+      ],
+      "human_md_url": "https://urbit.org/blog/languages-on-nock.md",
+      "agent_url": "https://urbit.org/.agents/blog/languages-on-nock.md",
+      "agent_available": true,
+      "agent_mode": "dedicated"
     },
     {
       "id": "blog/layer-2-faq.md",
