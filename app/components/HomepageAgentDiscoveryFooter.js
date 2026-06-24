@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import discoveryData from "../lib/agent-discovery.json";
+import { getAgentDiscoveryData } from "../lib/agentDiscovery";
 import AgentPromptCopyButton from "./AgentPromptCopyButton";
 
 function CompactLinks({ items }) {
@@ -61,6 +61,8 @@ function DisclosureBlock({ title, children }) {
 }
 
 export default function HomepageAgentDiscoveryFooter({ id, className = "" }) {
+  const discoveryData = getAgentDiscoveryData();
+
   return (
     <section id={id} className={className} aria-labelledby={`${id}-title`}>
       <details className="agent-discovery-disclosure border-t border-contrast-2 py-4">
@@ -70,7 +72,7 @@ export default function HomepageAgentDiscoveryFooter({ id, className = "" }) {
               id={`${id}-title`}
               className="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-contrast-2"
             >
-              instructions for ai agents
+              {discoveryData.homepage.footerTitle}
             </h2>
           </div>
 

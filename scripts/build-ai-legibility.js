@@ -13,10 +13,11 @@ const fs = require("fs");
 const path = require("path");
 const { glob } = require("glob");
 
-const discoveryConfig = require("../app/lib/agent-discovery.json");
+const { loadAgentDiscoveryMarkdown } = require("../app/lib/agentDiscoveryContent.cjs");
 const { llmsConfig } = require("./ai-legibility-config");
 const {
   buildSummaryInfo,
+  isContentIndexExcluded,
   normalizeArray,
   normalizeSearchTerms,
   parseFrontMatter,
@@ -47,6 +48,7 @@ const OUTPUT_AGENTS = path.join(process.cwd(), "public/agents.md");
 const SUMMARY_RECOMMENDED_MAX = 280;
 const SUMMARY_ENFORCED_DIRS = ["blog/", "blurbs/", "overview/"];
 const EXCLUDED_SECTIONS = new Set(["grants", "events", "singles"]);
+const discoveryConfig = loadAgentDiscoveryMarkdown();
 
 const loadConfigFrontMatter = (relativePath) => {
   const filePath = path.join(CONTENT_DIR, relativePath);
@@ -193,6 +195,10 @@ const buildContentIndex = async () => {
 
     const parsed = parseFrontMatter(rawContent, filePath);
     if (!parsed) {
+      continue;
+    }
+
+    if (isContentIndexExcluded(parsed.data)) {
       continue;
     }
 
