@@ -5,6 +5,8 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Languages on Nock](/blog/languages-on-nock.md) — A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock
+- [Contributor Spotlight: ~lagrev-nocfep](/blog/contributor-spotlight-lagrev-nocfep.md) — A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer
 - [This Month in Urbit: May 2026](/blog/this-month-in-urbit-may-2026.md) — May ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools
 - [Developer Preview: %claw](/blog/developer-preview-claw.md) — An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship
 - [Contributor Spotlight: ~sitful-hatred](/blog/contributor-spotlight-sitful-hatred.md) — A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing

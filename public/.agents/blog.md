@@ -7,6 +7,8 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/languages-on-nock.md"
+  - "/blog/contributor-spotlight-lagrev-nocfep.md"
   - "/blog/this-month-in-urbit-may-2026.md"
   - "/blog/developer-preview-claw.md"
   - "/blog/contributor-spotlight-sitful-hatred.md"
@@ -15,8 +17,6 @@ related_pages:
   - "/blog/contributor-spotlight-nomryg-nilref.md"
   - "/blog/gall-2026.md"
   - "/blog/contributor-spotlight-palfun-foslup.md"
-  - "/blog/olif-and-urbit-ids.md"
-  - "/blog/contributor-spotlight-litneb-maltyp.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,8 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [Languages on Nock](/.agents/blog/languages-on-nock.md) — A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock
+- [Contributor Spotlight: ~lagrev-nocfep](/.agents/blog/contributor-spotlight-lagrev-nocfep.md) — A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer
 - [This Month in Urbit: May 2026](/.agents/blog/this-month-in-urbit-may-2026.md) — May ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools
 - [Developer Preview: %claw](/.agents/blog/developer-preview-claw.md) — An Urbit-native personal agent harness, and an experimental path toward deterministic LLM inference inside a ship
 - [Contributor Spotlight: ~sitful-hatred](/.agents/blog/contributor-spotlight-sitful-hatred.md) — A conversation with ~sitful-hatred on hosting, LLM tooling, and peer-to-peer file sharing
