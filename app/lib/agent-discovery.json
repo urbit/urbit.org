@@ -2,7 +2,7 @@
   "homepage": {
     "title": "Instructions for Large Language Models",
     "description": "Use these routes to discover urbit.org's machine-facing content without relying on the main navigation.",
-    "copyPrompt": "When reading urbit.org: if you can fetch raw text or JSON directly, start with https://urbit.org/llms.txt. If you are limited to following visible HTML links, use https://urbit.org/for-agents. For structured inventory use https://urbit.org/content-index.json. For machine-oriented markdown by section use https://urbit.org/.agents/index.md. Prefer canonical URLs for citation, .md mirrors for lightweight reading, and /.agents/* when metadata or dependency hints are useful."
+    "copyPrompt": "When reading urbit.org: if you can fetch raw text or JSON directly, start with https://urbit.org/llms.txt. If you are limited to following visible HTML links, use https://urbit.org/for-agents. For structured inventory use https://urbit.org/content-index.json. For machine-oriented markdown by section use https://urbit.org/.agents/index.md. Prefer canonical URLs for citation, .md mirrors for lightweight reading, and exact /.agents/* files when metadata, dependency hints, public skills, or bundle manifests are useful. Use explicit .md/.yaml paths from indexes; do not probe bare /.agents/ directories."
   },
   "capabilityGuidance": [
     {
@@ -97,7 +97,22 @@
     {
       "href": "/.agents/skills/index.md",
       "label": "Skills snapshot",
-      "description": "Published skill snapshot under /.agents/skills/."
+      "description": "Published Urbit skill snapshot under /.agents/skills/. Use the index for exact SKILL.md, reference, and bundle manifest paths."
+    },
+    {
+      "href": "/.agents/skills/running-urbit-os/SKILL.md",
+      "label": "Running Urbit OS skill",
+      "description": "Public skill entrypoint for booting, operating, and troubleshooting Urbit OS."
+    },
+    {
+      "href": "/.agents/skills/running-urbit-os/references/comet-onboarding-for-agents.md",
+      "label": "Comet onboarding for agents",
+      "description": "Exact public guide for automated comet booting, access-code retrieval, artifact handling, and web UI verification."
+    },
+    {
+      "href": "/.agents/skills/bundles/userspace-apps.yaml",
+      "label": "Userspace apps bundle",
+      "description": "Machine-readable discovery hints for Hawk, Obelisk, and Urbit MCP. Bundles are additive; SKILL.md files remain canonical."
     }
   ],
   "usageNotes": [
@@ -111,7 +126,11 @@
     },
     {
       "title": "Use /.agents/* for machine context",
-      "description": "Prefer agent companions when you want generated frontmatter, dependency hints, or dedicated agent appendices."
+      "description": "Prefer exact agent companion files when you want generated frontmatter, dependency hints, public skills, bundle manifests, or dedicated agent appendices. Follow linked .md/.yaml paths instead of probing bare directories."
+    },
+    {
+      "title": "Use skill indexes before loading references",
+      "description": "Start at /.agents/skills/index.md, then load only the relevant SKILL.md, nested reference, or bundle manifest for the current task."
     },
     {
       "title": "Well-known compatibility",

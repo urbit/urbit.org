@@ -389,15 +389,17 @@ const writeSnapshotExports = ({ sourceDir, outputDir, sourceKind, indexFallbackT
     return [];
   }
 
-  const filePaths = glob.sync(path.join(sourceDir, "**/*.md"));
+  const filePaths = glob.sync(path.join(sourceDir, "**/*.{md,yaml,yml,json}"));
   const written = [];
 
   filePaths.forEach((filePath) => {
     const relativePath = path.relative(sourceDir, filePath).replace(/\\/g, "/");
+    const extension = path.extname(relativePath).toLowerCase();
     const raw = fs.readFileSync(filePath, "utf-8");
-    const parsed = parseFrontMatter(raw, filePath);
-    const content = rewriteSnapshotContent(parsed?.content || raw);
-    const baseName = path.basename(relativePath, ".md");
+    const isMarkdown = extension === ".md";
+    const parsed = isMarkdown ? parseFrontMatter(raw, filePath) : null;
+    const content = isMarkdown ? rewriteSnapshotContent(parsed?.content || raw) : rewriteSnapshotContent(raw);
+    const baseName = path.basename(relativePath, extension);
     const title =
       parsed?.data?.title ||
       (relativePath === "index.md"
@@ -415,16 +417,20 @@ const writeSnapshotExports = ({ sourceDir, outputDir, sourceKind, indexFallbackT
     };
     const relatedPages = relativePath === "index.md" ? [agentPath] : [`/.agents/${outputDir}/index.md`];
     const dependencies = deriveDependencies({ artifact, inferredLinks: [] });
-    const document = buildAgentDocument({
-      artifact,
-      title,
-      body: content,
-      agentMode: "fallback",
-      relatedPages,
-      dependencies,
-    });
+    if (isMarkdown) {
+      const document = buildAgentDocument({
+        artifact,
+        title,
+        body: content,
+        agentMode: "fallback",
+        relatedPages,
+        dependencies,
+      });
 
-    writeTextFile(path.join(PUBLIC_DIR, ".agents", outputDir, relativePath), document);
+      writeTextFile(path.join(PUBLIC_DIR, ".agents", outputDir, relativePath), document);
+    } else {
+      writeTextFile(path.join(PUBLIC_DIR, ".agents", outputDir, relativePath), content.trimEnd() + "\n");
+    }
     written.push({ relativePath, title, agentPath });
   });
 

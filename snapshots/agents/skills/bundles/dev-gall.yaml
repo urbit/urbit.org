@@ -1,0 +1,47 @@
+id: dev-gall
+title: Urbit Gall Development
+description: Optional discovery bundle for agents building or migrating Gall desks and applications. Bundles are additive hints; use linked SKILL.md and references as canonical instructions.
+entrypoint: /.agents/skills/urbit-development/SKILL.md
+items:
+  - id: hoon-basics
+    title: Hoon Basics
+    references:
+      - /.agents/skills/urbit-development/references/hoon-basics.md
+    triggers:
+      - hoon
+      - hoon syntax
+      - rune
+      - list head tail
+      - tall form
+      - type error
+    level: intro
+    side_effects: none
+  - id: generators
+    title: Generators
+    references:
+      - /.agents/skills/urbit-development/references/generators.md
+    triggers:
+      - generator
+      - gen
+      - say generator
+      - ask generator
+      - dojo command
+      - khan
+    level: practical
+    side_effects: none
+  - id: kelvin-migrations
+    title: Kelvin Migrations
+    references:
+      - /.agents/skills/urbit-development/references/kelvin-migrations/README.md
+      - /.agents/skills/urbit-development/references/kelvin-migrations/409-to-408.md
+    triggers:
+      - kelvin
+      - kelvin decrement
+      - 409k to 408k
+      - gall upgrade
+      - desk migration
+      - sys.kelvin
+      - on-load migration
+      - vere release notes
+    level: advanced
+    side_effects: writes-source

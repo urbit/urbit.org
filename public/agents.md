@@ -29,12 +29,16 @@
 - https://urbit.org/.agents/blurbs.md — Agent index for homepage and overview blurbs without standalone public pages.
 - https://urbit.org/.agents/ecosystem.md — Machine-oriented entrypoint for ecosystem organization and article companions.
 - https://urbit.org/.agents/wiki/index.md — Published wiki snapshot under /.agents/wiki/.
-- https://urbit.org/.agents/skills/index.md — Published skill snapshot under /.agents/skills/.
+- https://urbit.org/.agents/skills/index.md — Published Urbit skill snapshot under /.agents/skills/. Use the index for exact SKILL.md, reference, and bundle manifest paths.
+- https://urbit.org/.agents/skills/running-urbit-os/SKILL.md — Public skill entrypoint for booting, operating, and troubleshooting Urbit OS.
+- https://urbit.org/.agents/skills/running-urbit-os/references/comet-onboarding-for-agents.md — Exact public guide for automated comet booting, access-code retrieval, artifact handling, and web UI verification.
+- https://urbit.org/.agents/skills/bundles/userspace-apps.yaml — Machine-readable discovery hints for Hawk, Obelisk, and Urbit MCP. Bundles are additive; SKILL.md files remain canonical.
 
 ## Path conventions
 - Human markdown mirrors live alongside page routes with a .md suffix.
 - Agent companions live under https://urbit.org/.agents/*.md.
 - Snapshot content lives under https://urbit.org/.agents/wiki/** and https://urbit.org/.agents/skills/**.
+- Use exact linked .md, .yaml, or .json files from indexes; do not probe bare /.agents/ directories.
 
 ## Delimiter and fallback behavior
 - If a source file includes `---agent---`, the human page and human `.md` mirror use the pre-delimiter content.
@@ -58,11 +62,15 @@
 - https://urbit.org/.agents/ecosystem.md
 - https://urbit.org/.agents/wiki/index.md
 - https://urbit.org/.agents/skills/index.md
+- https://urbit.org/.agents/skills/running-urbit-os/SKILL.md
+- https://urbit.org/.agents/skills/running-urbit-os/references/comet-onboarding-for-agents.md
+- https://urbit.org/.agents/skills/bundles/userspace-apps.yaml
 
 ## Retrieval notes
 - Cite canonical page URLs: Use the normal page URL when referring to urbit.org as the source.
 - Use markdown mirrors for efficient reading: Prefer *.md mirrors when you want lighter-weight human-readable content.
-- Use /.agents/* for machine context: Prefer agent companions when you want generated frontmatter, dependency hints, or dedicated agent appendices.
+- Use /.agents/* for machine context: Prefer exact agent companion files when you want generated frontmatter, dependency hints, public skills, bundle manifests, or dedicated agent appendices. Follow linked .md/.yaml paths instead of probing bare directories.
+- Use skill indexes before loading references: Start at /.agents/skills/index.md, then load only the relevant SKILL.md, nested reference, or bundle manifest for the current task.
 - Well-known compatibility: A mirror also exists at /.well-known/llms.txt for clients that probe the standardized well-known namespace.
 
 ## Notes

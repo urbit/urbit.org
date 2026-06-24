@@ -1,0 +1,11 @@
+id: dev-nock
+title: Nock Development
+description: Placeholder discovery bundle for future Nock development references. Bundles are additive and must link only real references.
+entrypoint: /.agents/skills/urbit-development/SKILL.md
+items:
+  - id: urbit-development
+    references:
+      - /.agents/skills/urbit-development/SKILL.md
+    triggers: [nock, nock interpreter, hoon to nock, nock formula, jets, noun]
+    level: advanced
+    side_effects: none

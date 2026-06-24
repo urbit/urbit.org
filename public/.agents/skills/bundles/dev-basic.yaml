@@ -1,0 +1,24 @@
+id: dev-basic
+title: Urbit Development Basics
+description: Optional discovery bundle for agents doing introductory Urbit development work.
+entrypoint: /.agents/skills/urbit-development/SKILL.md
+items:
+  - id: urbit-core
+    references:
+      - /.agents/skills/urbit-core/SKILL.md
+      - /.agents/skills/urbit-core/references/glossary.md
+    triggers: [urbit, arvo, desk, gall, clay, eyre, ames, vere]
+    level: intro
+    side_effects: none
+  - id: hoon-basics
+    references:
+      - /.agents/skills/urbit-development/references/hoon-basics.md
+    triggers: [hoon, rune, gate, core, mold, aura, list, syntax]
+    level: intro
+    side_effects: none
+  - id: generators
+    references:
+      - /.agents/skills/urbit-development/references/generators.md
+    triggers: [generator, dojo, khan, say, ask, gen, thread, ted]
+    level: practical
+    side_effects: none
