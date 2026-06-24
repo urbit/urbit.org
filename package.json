@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:umami-guard": "node scripts/test-umami-event-guard.js"
+    "test:umami-guard": "node scripts/test-umami-event-guard.js",
+    "test:agent-snapshot": "node scripts/test-agent-snapshot.js"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
