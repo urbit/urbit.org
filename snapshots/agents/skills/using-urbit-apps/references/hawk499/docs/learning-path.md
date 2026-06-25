@@ -59,7 +59,7 @@ Learn:
 
 Success check:
 
-- `/o/learn/03-query-params-f?name=Stuart` changes the greeting.
+- `/o/learn/03-query-params-f?name=Comet` changes the greeting.
 
 ### 04 — Rest routing
 

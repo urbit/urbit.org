@@ -1,7 +1,7 @@
 ::  Lesson 03: query params
 ::
 ::  Install path: /learn/03-query-params
-::  Try:          /o/learn/03-query-params?name=Stuart
+::  Try:          /o/learn/03-query-params?name=Comet
 ::
 ::  New idea:
 ::    `query.req` is a map from query parameter names to values.

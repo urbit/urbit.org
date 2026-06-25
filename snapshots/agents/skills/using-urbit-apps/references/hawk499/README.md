@@ -287,7 +287,7 @@ python skills/using-urbit-apps/references/hawk499/scripts/hawk499_http.py \
 Open:
 
 ```text
-http://localhost:8080/o/learn/03-query-params-f?name=Stuart
+http://localhost:8080/o/learn/03-query-params-f?name=Comet
 ```
 
 ## Quality Checklist

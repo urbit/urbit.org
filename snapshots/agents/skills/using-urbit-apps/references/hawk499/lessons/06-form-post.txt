@@ -44,7 +44,7 @@
     ;form(method "post", action (spud base.req))
       ;label
         ;div: Name
-        ;input(type "text", name "name", placeholder "Stuart");
+        ;input(type "text", name "name", placeholder "Comet");
       ==
       ;p
         ;button(type "submit"): submit
