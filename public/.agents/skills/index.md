@@ -19,7 +19,7 @@ This committed snapshot publishes public Urbit agent skills for urbit.org.
 - [running-urbit-os](running-urbit-os/SKILL.md) — install, boot, operate, and troubleshoot Urbit OS
 - [using-urbit-id](using-urbit-id/SKILL.md) — understand Urbit ID, ownership, custody, and point management
 - [urbit-development](urbit-development/SKILL.md) — develop with Hoon, generators, Gall, desks, and Kelvin migrations
-- [using-urbit-apps](using-urbit-apps/SKILL.md) — work with public Urbit userspace apps such as Hawk, Obelisk, and Urbit MCP
+- [using-urbit-apps](using-urbit-apps/SKILL.md) — work with public Urbit userspace apps such as Hawk, Hawk499, Obelisk, and Urbit MCP
 
 ## Discovery bundles
 

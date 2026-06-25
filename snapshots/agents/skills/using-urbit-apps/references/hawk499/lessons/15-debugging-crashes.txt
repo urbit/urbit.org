@@ -1,0 +1,51 @@
+::  Lesson 15: debugging crashes
+::
+::  Install path: /learn/15-debugging-crashes
+::  View URL:     /o/learn/15-debugging-crashes
+::
+::  New idea:
+::    Compile errors happen when saving/installing. Runtime crashes happen when
+::    a request runs. Runtime crashes appear in `/hawk499/quills`.
+::
+::  Try:
+::    Open /o/learn/15-debugging-crashes?crash
+::    Then open /hawk499/quills and inspect the crash log.
+::
+|=  req=http-request
+=/  m  (strand ,~)
+^-  form:m
+=*  r  ~(. server req ~)
+?:  (~(has by query.req) 'crash')
+  ~|  %lesson-15-intentional-crash
+  !!
+%-  respond-html:r
+;html
+  ;head
+    ;meta(charset "UTF-8");
+    ;meta(name "viewport", content "width=device-width, initial-scale=1");
+    ;link(rel "stylesheet", href "/hawk499/assets/feather");
+    ;title: Lesson 15 — debugging crashes
+  ==
+  ;body.page.prose
+    ;h1: Lesson 15 — debugging crashes
+    ;p
+      ; This page is healthy unless you add
+      ;code: ?crash
+      ; to the URL.
+    ==
+    ;p
+      ;a(href "?crash"): intentionally crash this endpoint
+    ==
+    ;p
+      ; After it crashes, open
+      ;code: /hawk499/quills
+      ; and look for the crash log on this endpoint.
+    ==
+    ;p
+      ; Open
+      ;code: /hawk499/bowl
+      ; when you need to inspect request fields like `prefix.req`, `rest.req`,
+      ; `query.req`, `src.req`, and `our.req`.
+    ==
+  ==
+==

@@ -1,0 +1,35 @@
+::  Lesson 03: query params
+::
+::  Install path: /learn/03-query-params
+::  Try:          /o/learn/03-query-params?name=Stuart
+::
+::  New idea:
+::    `query.req` is a map from query parameter names to values.
+::
+|=  req=http-request
+=/  m  (strand ,~)
+^-  form:m
+=*  r  ~(. server req ~)
+=/  name=@t  (fall (~(get by query.req) 'name') 'world')
+%-  respond-html:r
+;html
+  ;head
+    ;meta(charset "UTF-8");
+    ;meta(name "viewport", content "width=device-width, initial-scale=1");
+    ;link(rel "stylesheet", href "/hawk499/assets/feather");
+    ;title: Lesson 03 — query params
+  ==
+  ;body.page.prose
+    ;h1: Lesson 03 — query params
+    ;p: Hello, {(trip name)}.
+    ;p
+      ; The value came from `?name=...` in the URL. If it is absent, `fall`
+      ; uses the default value `'world'`.
+    ==
+    ;p
+      ; Try
+      ;code: ?name=your-name
+      ; at the end of this page's URL.
+    ==
+  ==
+==

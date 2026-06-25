@@ -1,0 +1,61 @@
+::  Lesson 10: simple todo list with session state
+::
+::  Install path: /learn/10-todo-simple
+::  View URL:     /o/learn/10-todo-simple
+::
+::  New idea:
+::    Session state can hold structured values such as a list of text items.
+::    This version uses full-page reloads after POST.
+::
+|=  req=http-request
+=/  m  (strand ,~)
+^-  form:m
+=*  r  ~(. server req ~)
+|^
+?:  is-post:r
+  =/  form=(map @t @t)  formencoded-body:r
+  =/  op=@t  (fall (~(get by form) 'op') 'add')
+  ;<  old=(unit (list @t))  bind:m  (get-session:r (list @t))
+  =/  todos=(list @t)  (fall old ~)
+  =/  next=(list @t)
+    ?:  =('clear' op)
+      ~
+    =/  text=@t  (fix-newlines (fall (~(get by form) 'text') ''))
+    ?:  =('' text)  todos
+    [text todos]
+  ;<  ~  bind:m  (set-session:r !>(next))
+  (respond-redirect:r 303 (crip (spud base.req)))
+?.  (is-method:r 'GET')
+  (respond-json-error:r 405 'method not allowed')
+;<  old=(unit (list @t))  bind:m  (get-session:r (list @t))
+(respond-html:r (page (fall old ~)))
+::
+++  page
+  |=  todos=(list @t)
+  ^-  manx
+  ;html
+    ;head
+      ;meta(charset "UTF-8");
+      ;meta(name "viewport", content "width=device-width, initial-scale=1");
+      ;link(rel "stylesheet", href "/hawk499/assets/feather");
+      ;title: Lesson 10 — todo simple
+    ==
+    ;body.page.prose
+      ;h1: Lesson 10 — todo simple
+      ;form(method "post", action (spud base.req))
+        ;input(type "hidden", name "op", value "add");
+        ;input(type "text", name "text", placeholder "what needs doing?");
+        ;button(type "submit"): add
+      ==
+      ;ul
+        ;*  %+  turn  todos
+            |=  t=@t
+            ;li: {(trip t)}
+      ==
+      ;form(method "post", action (spud base.req))
+        ;input(type "hidden", name "op", value "clear");
+        ;button(type "submit"): clear all
+      ==
+    ==
+  ==
+--

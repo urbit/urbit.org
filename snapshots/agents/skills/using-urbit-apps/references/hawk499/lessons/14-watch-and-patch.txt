@@ -1,0 +1,88 @@
+::  Lesson 14: watch and patch pattern
+::
+::  Install path: /learn/14-watch-and-patch
+::  View URL:     /o/learn/14-watch-and-patch
+::
+::  New idea:
+::    A live page watches a read-model and turns facts into Datastar patches.
+::    This lesson watches this endpoint's own session state.
+::
+!:
+%-  feather-1
+=>
+  |%
+  ++  read-log
+    |=  req=http-request
+    =/  m  (strand ,(list @t))
+    ^-  form:m
+    =*  r  ~(. server req ~)
+    ;<  old=(unit (list @t))  bind:m  (get-session:r (list @t))
+    (pure:m (fall old ~))
+  ::
+  ++  log-section
+    |=  rows=(list @t)
+    ^-  manx
+    ;section.fc.g2(id "watch-log")
+      ;h2: live log
+      ;+  ?:  =(~ rows)
+            ;p.o5: no rows yet
+          ;/("")
+      ;ul
+        ;*  %+  turn  rows
+            |=  row=@t
+            ;li: {(trip row)}
+      ==
+    ==
+  --
+|_  req=http-request
+++  get
+  =/  m  (strand ,get-response)
+  ^-  form:m
+  ;<  rows=(list @t)  bind:m  (read-log req)
+  %-  pure:m
+  :-  *marl
+  ;main.page.prose
+    =data-signals  "\{msg: '', saving: false}"
+    ;h1: Lesson 14 — watch and patch
+    ;form.fr.g2.ac
+      =data-on_submit  "@post('?op=append', \{contentType: 'form'}); $msg = ''"
+      =data-indicator  "saving"
+      ;input.grow(name "msg", data-bind "msg", placeholder "message");
+      ;button(type "submit", data-attr_disabled "$saving"): append
+    ==
+    ;+  (log-section rows)
+    ;form
+      =data-on_submit  "@post('?op=clear', \{contentType: 'form'})"
+      =data-indicator  "saving"
+      ;button(type "submit", data-attr_disabled "$saving"): clear log
+    ==
+  ==
+::
+++  post
+  =/  m  (strand ,~)
+  ^-  form:m
+  =*  r  ~(. server req ~)
+  =/  op=@t  (fall (~(get by query.req) 'op') 'append')
+  =/  form=(map @t @t)  formencoded-body:r
+  =/  msg=@t  (fix-newlines (fall (~(get by form) 'msg') ''))
+  ;<  rows=(list @t)  bind:m  (read-log req)
+  =/  next=(list @t)
+    ?:  =('clear' op)  ~
+    ?:  =('' msg)  rows
+    [msg rows]
+  ;<  ~  bind:m  (set-session:r !>(next))
+  (respond-patch:r ~)
+::
+++  ui-diff
+  =*  r  ~(. server req ~)
+  ^-  datastar-conduit
+  :-  !>(~)
+  :~  %-  session-sub:r
+      |=  [state=vase ev=watch-sign]
+      =/  m  (strand ,[vase (list datastar-event)])
+      ^-  form:m
+      ?.  ?=(%fact -.ev)  (pure:m [state ~])
+      =/  rows=(list @t)  (fall ((soft (list @t)) q.q.cage.ev) ~)
+      (pure:m [state ~[[%outer ~ ~ (log-section rows)]]])
+  ==
+--

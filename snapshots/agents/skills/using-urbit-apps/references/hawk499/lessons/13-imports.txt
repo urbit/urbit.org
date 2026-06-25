@@ -1,0 +1,39 @@
+::  Lesson 13: imports from the hawk499 desk
+::
+::  Install path: /learn/13-imports
+::  View URL:     /o/learn/13-imports
+::
+::  New idea:
+::    Runtime endpoint source can import desk libraries. Here we import
+::    `/lib/icons.hoon` from the hawk499 desk and expose its arms directly.
+::
+/+  *icons
+|=  req=http-request
+=/  m  (strand ,~)
+^-  form:m
+=*  r  ~(. server req ~)
+%-  respond-html:r
+;html
+  ;head
+    ;meta(charset "UTF-8");
+    ;meta(name "viewport", content "width=device-width, initial-scale=1");
+    ;link(rel "stylesheet", href "/hawk499/assets/feather");
+    ;title: Lesson 13 — imports
+  ==
+  ;body.page.prose
+    ;h1: Lesson 13 — imports
+    ;p
+      ; The source begins with
+      ;code: /+  *icons
+      ; which imports `/lib/icons.hoon` and exposes its arms without an `icons.` prefix.
+    ==
+    ;div.fr.ac.g3.b1.p4.br3
+      ;+  icon-globe
+      ;span: This globe icon came from the imported library.
+    ==
+    ;p
+      ; Imports resolve when the endpoint is saved. If an imported file changes,
+      ; `%hawk499` can mark dependent endpoints stale.
+    ==
+  ==
+==

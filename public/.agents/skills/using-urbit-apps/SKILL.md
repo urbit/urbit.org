@@ -42,6 +42,10 @@ This file should stay short. Reach for the references only when a task actually 
     - [Hawk](references/hawk/README.md) — overview reference with distribution, community, and source pointers
     - [Hawk core model](references/hawk/core-model.md) — compile subject, loads, cards, and file utilities
     - [Hawk UI and operations](references/hawk/ui-and-ops.md) — Feather, templates, auth, theming, and debugging
+- `%hawk499`
+    - [Hawk499](references/hawk499/README.md) — runtime interface endpoints, sidecar lessons, HTTP editor installation, and debugging workflows
+    - [Hawk499 HTTP CLI](references/hawk499/docs/http-cli.md) — dependency-free Python CLI for authenticated endpoint lifecycle operations
+    - [Hawk499 learning path](references/hawk499/docs/learning-path.md) — ordered beginner lessons from static pages through Datastar, imports, watches, and crash debugging
 - `%mcp` from `gwbtc/urbit-mcp`
     - [Urbit MCP](references/urbit-mcp/README.md) — build and install the desk, authenticate with a ship cookie, register Claude or Codex, and extend the server with new tools, prompts, and resources
 - `%obelisk` from ~nomryg-nilref
@@ -52,7 +56,7 @@ This file should stay short. Reach for the references only when a task actually 
 
 ## Bundle discovery
 
-The optional [`bundles/userspace-apps.yaml`](../../bundles/userspace-apps.yaml) manifest provides machine-readable routing hints for Hawk, Obelisk, and Urbit MCP. It is additive: this `SKILL.md` and the nested app references remain the canonical readable entrypoints.
+The optional [`bundles/userspace-apps.yaml`](../../bundles/userspace-apps.yaml) manifest provides machine-readable routing hints for Hawk, Hawk499, Obelisk, and Urbit MCP. It is additive: this `SKILL.md` and the nested app references remain the canonical readable entrypoints.
 
 ## Contribution pattern
 

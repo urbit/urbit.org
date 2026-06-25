@@ -1,0 +1,26 @@
+::  Lesson 01: Udon static page
+::
+::  Install path: /learn/01-udon-static
+::  View URL:     /o/learn/01-udon-static
+::
+::  New idea:
+::    Udon is Markdown-like content that becomes a `manx` HTML tree.
+::    `udon:helpers` wraps that content in a Feather-styled page.
+::
+::  Try this:
+::    Change the heading and re-install the lesson.
+::
+%-  udon:helpers  ;>
+
+# Lesson 01 — Udon static page
+
+This is the smallest useful `%hawk499` page.
+
+- no explicit `|= req` handler gate
+- no manual HTTP response
+- no SAIL yet
+- just Udon content wrapped by `udon:helpers`
+
+---
+
+If this page renders, you have successfully installed a runtime endpoint without changing the `%hawk499` desk.

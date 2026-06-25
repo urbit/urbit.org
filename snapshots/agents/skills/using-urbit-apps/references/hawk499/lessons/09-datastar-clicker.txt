@@ -1,0 +1,43 @@
+::  Lesson 09: Datastar client-side signals
+::
+::  Install path: /learn/09-datastar-clicker
+::  View URL:     /o/learn/09-datastar-clicker
+::
+::  New idea:
+::    Browser-local state can live in Datastar signals. This lesson does not
+::    store durable Urbit state yet.
+::
+|=  req=http-request
+=/  m  (strand ,~)
+^-  form:m
+=*  r  ~(. server req ~)
+?.  (is-method:r 'GET')
+  (respond-json-error:r 405 'GET only')
+%-  respond-html:r
+;html
+  ;head
+    ;meta(charset "UTF-8");
+    ;meta(name "viewport", content "width=device-width, initial-scale=1");
+    ;link(rel "stylesheet", href "/hawk499/assets/feather");
+    ;script(type "module", src "/hawk499/assets/datastar");
+    ;title: Lesson 09 — Datastar clicker
+  ==
+  ;body.page.prose
+    =data-signals  "\{count: 0}"
+    ;h1: Lesson 09 — Datastar clicker
+    ;p
+      ; This counter is browser-local. Refresh the page and it resets.
+    ==
+    ;div.fr.ac.g3
+      ;button.px4.py3.br2.bd1.b2.hover.bold
+        =data-on_click  "$count = $count + 1"
+        ; increment
+      ==
+      ;button.px4.py3.br2.bd1.b2.hover
+        =data-on_click  "$count = 0"
+        ; reset
+      ==
+      ;strong(data-text "$count"): 0
+    ==
+  ==
+==

@@ -1,0 +1,28 @@
+::  Lesson 07: `feather:helpers`
+::
+::  Install path: /learn/07-feather-static
+::  View URL:     /o/learn/07-feather-static
+::
+::  New idea:
+::    `feather:helpers` builds a handler for you from [head body].
+::    It is the middle abstraction between Udon and a raw handler.
+::
+%+  feather:helpers
+  ^-  marl
+  :~  ;title: Lesson 07 — Feather static
+      ;meta(name "viewport", content "width=device-width, initial-scale=1");
+  ==
+;body.p5.mono.fc.g4
+  ;main.page.prose
+    ;h1: Lesson 07 — Feather static page
+    ;p
+      ; This endpoint source does not manually define `|= req`. The helper
+      ; returns a handler for us.
+    ==
+    ;div.frw.g2
+      ;span.b2.p-3.br10: feather
+      ;span.b2.p-3.br10: helper
+      ;span.b2.p-3.br10.toggled: styled
+    ==
+  ==
+==
