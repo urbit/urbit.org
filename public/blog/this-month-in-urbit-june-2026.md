@@ -1,32 +1,28 @@
 # This Month in Urbit: June 2026
 
-June ecosystem updates bring non-Hoon languages, MCP updates, Tlon's public launch, and a freshly overhauled %hawk interface builder.
+June 2026 brings non-Hoon languages, Tlon's public launch, and the long-awaited %hawk499 interface builder.
 
 - Date: 2026-06-26
 - Author: ~sarlev-sarsen
 
-# This Month in Urbit: June 2026
-### June ecosystem updates bring non-Hoon languages, MCP updates, and a freshly overhauled %hawk interface builder.
-
-Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. We aim to share new apps, bleeding edge experiments, and general news from the ecosystem in a way that helps you get your feet wet. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old school way.
-
-Not quite ready to run your own ship? Many of these experiments can still be experienced if you have a hosted ship, but please note that most should not be considered stable software, so they could negatively impact your ship's functionality.
+Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old school way.
 
 This guide is written to be human-friendly, allowing you to follow along and learn something new. Embedded in this page are also instructions for your agent; share the link and your agent should help you through getting the enclosed items up and running. The AI landscape is fast-moving and variable, so we can't guarantee everything will work smoothly, but we try to test across various models and agent harnesses. If you or your agents ever get stuck, just give a shout in [The Urbit Foundation group on Tlon Messenger](https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em17) and we'll help you out.
 
 ## June Quickstart
-
-This month's main installable item is `%hawk499`, available over the network from `~dister-migrev-dolseg`:
-
+To get started with our featured experiments for this month, try booting a moon off the June TMIU pill. If you don't have it already, get the runtime for your OS:
 ```
-|install ~dister-migrev-dolseg
+curl -fsSL https://urbit.org/get-runtime.sh | sh
 ```
 
-As with all early network software, use a moon, comet, or otherwise disposable test ship first if you are not sure how it will interact with your existing setup. The other items in this month's post are primarily links, language experiments, and ecosystem news.
+In the dojo of your planet, run `|moon` and you'll get a moon networking key. You can do this from the webterm on a Tlon-hosted planet. Then boot your moon with the May TMIU pill:
+```
+urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.orgcontent/tmiu-pills/tmiu-june.pill --http-port 8899
+```
+(if you don't have moon keys, replace the moon args with -c tmiu-may-comet to just get started with a comet.)
 
-# hawk
-
-The biggest release this month is `%hawk499` from `~migrev-dolseg`. For those who have been tinkering with their urbits live on the network for the past few years, [`%hawk`](https://hawk.computer) has been a beloved tool in the toolbox, and `~migrev-dolseg` its beloved creator. From using it as a simple site builder to create a 'front door' for the clearweb (see `~rus`'s [urbitfederation.org](https://urbitfederation.org)), to a way to publish 'gists', and even build comprehensive [webapps like `~nordus-mocwyl`'s guitar course](https://urbit.org/blog/building-beyond-beginner-guitar), it has proven itself as a powerful framework for bringing the capabilities of your urbit to life. Even the [hawk.computer](https://hawk.computer) site is written in, and served via, `%hawk`.
+## %hawk499
+The biggest release this month is `%hawk499` from `~migrev-dolseg`. For those who have been tinkering with their urbits live on the network for the past few years, [`%hawk`](https://hawk.computer) has been a beloved tool in the toolbox, and `~migrev-dolseg` its beloved creator. From using it as a simple site builder to create a 'front door' for the clearweb (see `~rus`'s [urbitfederation.org](https://urbitfederation.org)), to a way to publish 'gists', and even build comprehensive [webapps like `~nordus-mocwyl`'s guitar course](https://urbit.org/blog/building-beyond-beginner-guitar), `%hawk` has proven itself as a powerful framework for bringing the capabilities of your urbit to life. Even the [hawk.computer](https://hawk.computer) site is written in, and served via, `%hawk`.
 
 `%hawk499` is a step change in what it looks like to build interfaces into your urbit. In the words of `~migrev-dolseg`: 
 
@@ -46,10 +42,9 @@ In other changes from legacy `%hawk`, `%hawk499` offers noticeable performance i
 |install ~dister-migrev-dolseg
 ```
 
-*As a word of warning, this is an early release and not advised to be installed on a ship running a legacy version of `%hawk`, so test it on a moon or comet first if you currently run `%hawk` on your main urbit ship.*
+*As a word of warning, this is an early release and not advised to be installed on a ship running a legacy version of `%hawk`, so test it on a moon or comet first if you currently run `%hawk` on your main urbit ship. Need help with `%hawk` or `%hawk499`? [Jump in `~migrev-dolseg`'s group](https://join.tlon.io/0v7.nikjh.4ei7s.8fol7.bfe0h.8ad5p).*
 
-# Yamoon
-
+## Yamoon
 First getting a mention in this month's ["Languages on Nock"](/blog/languages-on-nock) article, [Yamoon](https://github.com/the-man-with-a-golden-mind/yamoon/tree/master) slid into the scene out of nowhere. From the repo readme:
 
 > "yamoon makes writing Hoon pleasant and efficient by hiding its complex rune-based syntax and specific atom molds behind familiar concepts. It provides a robust, type-checked pipeline for building Hoon libraries and Gall agents."
@@ -76,10 +71,14 @@ Hardcore hooners might say, "Sure but look at what it compiles to; wouldn't that
 --
 ```
 
-But as we suggest in the "Languages on Nock" article, different tools work for different problems--and different minds. If you blocker was learned to write idiomatic Hoon, consider yourself unblocked, and go build!
+But as we suggest in the "Languages on Nock" article, different tools work for different problems--and different minds. If you blocker was learned to write idiomatic Hoon, consider yourself unblocked, and go build! You can self-host the code, or use it [via a hosted version](https://yamoon-page.michmajchrzak.workers.dev/).
 
-# Tlon public launch
+## Tlon public launch
 
 In other Urbit ecosystem news, Tlon Messenger is now [open for public signups](https://x.com/tloncorporation/status/2067611600970768657?s=20)--no more waitlist! Go to [tlon.io](https://tlon.io/) today to get a hosted urbit, their native mobile app, and your very own Tlonbot. In contrast to something like Claude Tag in Slack, Urbit is the place where you can own both the messenger, and the agent. 
 
 If you are already on the network, you can continue to invite your friends with your own invite codes so they are dropped right into your DMs or the group you invited them to.
+
+## Urbit-skills alpha
+
+As a last mention, we are experimenting with making some baseline `urbit-skills` available. Point your agents at urbit.org or this post and they should be able to find them. Please send any feedback or your usage experience to `~sarlev` and we will continue to improve them as effective patterns emerge.
