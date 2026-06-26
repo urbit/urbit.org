@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T03:10:49.324Z",
+  "generatedAt": "2026-06-26T03:14:23.511Z",
   "total": 192,
   "entries": [
     {
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/urbit-explained/intro.md",
-      "title": "Introduction",
-      "description": "Urbit is a practice in building a forever computer",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/urbit-explained",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "urbit-explained",
-      "subsectionLabel": "Urbit Explained",
-      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
-    },
-    {
       "id": "overview/running-urbit/intro.md",
       "title": "Introduction",
       "description": "A comprehensive guide to getting started with Urbit",
@@ -553,6 +537,22 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
+    },
+    {
+      "id": "overview/urbit-explained/intro.md",
+      "title": "Introduction",
+      "description": "Urbit is a practice in building a forever computer",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/urbit-explained",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "urbit-explained",
+      "subsectionLabel": "Urbit Explained",
+      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
