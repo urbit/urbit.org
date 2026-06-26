@@ -23,8 +23,13 @@ search_terms = [
 
 [extra]
 ship = "~sarlev-sarsen"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/Blog_TMIU+June_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/Blog_TMIU+June_Social16_9.jpg"
+# imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/Blog_TMIU+June_Banner.jpg"
 tags = ["this-month-in-urbit", "ecosystem", "applications", "ai", "agents", "nock"]
 +++
+
+![June 2026 This Month in Urbit Concept Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/Blog_TMIU+June_Hero.jpg)
 
 Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old school way.
 
@@ -44,6 +49,9 @@ urbit -w <moon-name> -G <moon-key> --http-port 8899
 
 
 ## Yamoon
+
+![Yamoon concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/TIMU+June_yamoon.jpg)
+
 First getting a mention in this month's ["Languages on Nock"](/blog/languages-on-nock) article, [Yamoon](https://github.com/the-man-with-a-golden-mind/yamoon/tree/master) slid into the scene out of nowhere. From the repo readme:
 
 > "yamoon makes writing Hoon pleasant and efficient by hiding its complex rune-based syntax and specific atom molds behind familiar concepts. It provides a robust, type-checked pipeline for building Hoon libraries and Gall agents."
@@ -75,11 +83,17 @@ But as we suggest in the "Languages on Nock" article, different tools work for d
 You might ask, "Why are you showing this to me again, though?" And really it's as a bit of an empahsis of how much is happened around Nock-based computing these days. Because since that article was released, two other Nock-related projects were released!
 
 ## Lua-Hoon
+
+![Lua-Hoon concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/TIMU+June_LuaHoon.jpg)
+
 Popular as a scripting language in a wide array programs, Lua typically runs in an embedded interpreter in some host environment. Famously it is used in programs like Minecraft and Neovim. Given it's popularity and approachability, and in a spirit similar to his Forth-Nock project, `~mopfel-winrux` wrote `lua-hoon` so that it would be possible to run Lua on a Nock substrate.
 
 It runs as a Gall app, but we recommend installing it directly from [the `lua-hoon` GitHub Repo](https://github.com/mopfel-winrux/lua-hoon), as it is not available over the network, and may take some tinkering with your runtime to fully experience.
 
 ## Nockasm
+
+![Nock macro concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/TIMU+June_nock+macro.jpg)
+
 Ever the educator, `~lagrev-nocfep` put together ["Nock Assembly"](https://github.com/sigilante/nockasm), or `nockasm`. As he describes it:
 
 > "Nock Assembly is a thin macro over [Nock ISA](https://nock.is) designed to make the language more legible for pedagogical purposes."
@@ -108,6 +122,9 @@ over
 ```
 
 ## Tlon public launch
+
+![Tlon public launch concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/TIMU+June_Tlon+Open.jpg)
+
 In other Urbit ecosystem news, Tlon Messenger is now [open for public signups](https://x.com/tloncorporation/status/2067611600970768657?s=20)--no more waitlist! Go to [tlon.io](https://tlon.io/) today to get a hosted urbit, their native mobile app, and your very own Tlonbot. In contrast to something like Claude Tag in Slack, Urbit is the place where you can own both the messenger, and the agent. 
 
 If you are already on the network, you can continue to invite your friends with your own invite codes so they are dropped right into your DMs or the group you invited them to.
