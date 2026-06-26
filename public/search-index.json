@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-24T18:16:27.640Z",
-  "total": 191,
+  "generatedAt": "2026-06-26T03:14:23.511Z",
+  "total": 192,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/urbit-explained/intro.md",
-      "title": "Introduction",
-      "description": "Urbit is a practice in building a forever computer",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/urbit-explained",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "urbit-explained",
-      "subsectionLabel": "Urbit Explained",
-      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
-    },
-    {
       "id": "overview/running-urbit/intro.md",
       "title": "Introduction",
       "description": "A comprehensive guide to getting started with Urbit",
@@ -553,6 +537,22 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
+    },
+    {
+      "id": "overview/urbit-explained/intro.md",
+      "title": "Introduction",
+      "description": "Urbit is a practice in building a forever computer",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/urbit-explained",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "urbit-explained",
+      "subsectionLabel": "Urbit Explained",
+      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
@@ -4304,6 +4304,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+    },
+    {
+      "id": "blog/this-month-in-urbit-june-2026.md",
+      "title": "This Month in Urbit: June 2026",
+      "description": "June 2026 brings non-Hoon languages, Tlon's public launch, and the long-awaited %hawk499 interface builder.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "ai",
+        "agents",
+        "hawk499"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "june 2026 urbit",
+        "%hawk499",
+        "%hawk",
+        "hawk499",
+        "yamoon",
+        "languages on nock",
+        "non-hoon languages",
+        "tlon messenger",
+        "public signups",
+        "urbit skills",
+        "agent skills",
+        "urbit mcp"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1782432000000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-june-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: june 2026 june 2026 brings non-hoon languages, tlon's public launch, and the long-awaited %hawk499 interface builder. this-month-in-urbit ecosystem applications ai agents hawk499 this month in urbit june 2026 urbit %hawk499 %hawk hawk499 yamoon languages on nock non-hoon languages tlon messenger public signups urbit skills agent skills urbit mcp ~sarlev-sarsen /blog/this-month-in-urbit-june-2026 blog 2026-06-26 this month in urbit for june 2026 covers %hawk499 from ~migrev-dolseg, yamoon and the broader languages on nock discussion, tlon messenger public signups, and the new public urbit agent skills snapshot for operating and developing on urbit. this month in urbit june 2026 urbit %hawk499 %hawk hawk499 yamoon languages on nock non-hoon languages tlon messenger public signups urbit skills agent skills urbit mcp this-month-in-urbit ecosystem applications ai agents"
     },
     {
       "id": "blog/this-month-in-urbit-may-2026.md",
