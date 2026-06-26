@@ -90,7 +90,7 @@ Popular as a scripting language in a wide array programs, Lua typically runs in 
 
 It runs as a Gall app, but we recommend installing it directly from [the `lua-hoon` GitHub Repo](https://github.com/mopfel-winrux/lua-hoon), as it is not available over the network, and may take some tinkering with your runtime to fully experience.
 
-## Nockasm
+## Nock Assembly
 
 ![Nock macro concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TIMU+June/TIMU+June_nock+macro.jpg)
 
@@ -111,7 +111,7 @@ Experiment with it, perhaps while you go through the ["Nock for Everyday Coders"
 ```
 [8 [0 2] 6 [5 [1 1] 0 2] [4 0 7] 6 [5 [1 2] 0 2] [0 7] 1 0]
 ```
-over
+for it's raw nature over the more classically legible:
 ```
 :subject {.tag .data}
 #match .tag {
