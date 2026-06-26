@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T03:14:23.726Z",
+  "generatedAt": "2026-06-26T18:11:07.250Z",
   "total": 355,
   "entries": [
     {
@@ -3062,30 +3062,31 @@
       "type": "blog",
       "source_kind": "blog",
       "title": "This Month in Urbit: June 2026",
-      "summary": "This Month in Urbit for June 2026 covers %hawk499 from ~migrev-dolseg, Yamoon and the broader Languages on Nock discussion, Tlon Messenger public signups, and the new public Urbit agent skills snapshot for operating and developing on Urbit.",
-      "description": "June 2026 brings non-Hoon languages, Tlon's public launch, and the long-awaited %hawk499 interface builder.",
+      "summary": "This Month in Urbit for June 2026 covers Yamoon and the broader Languages on Nock discussion, Lua-Hoon, Nockasm, Tlon Messenger public signups, and the new public Urbit agent skills snapshot for operating and developing on Urbit.",
+      "description": "June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.",
       "tags": [
         "this-month-in-urbit",
         "ecosystem",
         "applications",
         "ai",
         "agents",
-        "hawk499"
+        "nock"
       ],
       "search_terms": [
         "this month in urbit",
         "june 2026 urbit",
-        "%hawk499",
-        "%hawk",
-        "hawk499",
         "yamoon",
+        "lua-hoon",
+        "lua hoon",
+        "nockasm",
+        "nock assembly",
+        "nock isa",
         "languages on nock",
         "non-hoon languages",
         "tlon messenger",
         "public signups",
         "urbit skills",
-        "agent skills",
-        "urbit mcp"
+        "agent skills"
       ],
       "human_md_url": "https://urbit.org/blog/this-month-in-urbit-june-2026.md",
       "agent_url": "https://urbit.org/.agents/blog/this-month-in-urbit-june-2026.md",

@@ -21,29 +21,6 @@ items:
       - urbit page builder
     level: advanced
     side_effects: reads-source
-  - id: hawk499
-    title: Hawk499
-    skill: /.agents/skills/using-urbit-apps/SKILL.md
-    references:
-      - /.agents/skills/using-urbit-apps/references/hawk499/README.md
-      - /.agents/skills/using-urbit-apps/references/hawk499/docs/http-cli.md
-      - /.agents/skills/using-urbit-apps/references/hawk499/docs/learning-path.md
-      - /.agents/skills/using-urbit-apps/references/hawk499/docs/concepts.md
-    triggers:
-      - hawk499
-      - runtime interface
-      - urbit app endpoints
-      - userspace runtime api
-      - quill endpoint
-      - endpoint editor
-      - datastar feather
-      - hawk499 lessons
-      - /i/o editor
-      - /o learn
-      - runtime endpoint
-      - sidecar lessons
-    level: advanced
-    side_effects: network
   - id: obelisk
     title: Obelisk
     skill: /.agents/skills/using-urbit-apps/SKILL.md

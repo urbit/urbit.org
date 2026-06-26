@@ -1,6 +1,6 @@
 # This Month in Urbit: June 2026
 
-June 2026 brings non-Hoon languages, Tlon's public launch, and the long-awaited %hawk499 interface builder.
+June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.
 
 - Date: 2026-06-26
 - Author: ~sarlev-sarsen
@@ -10,39 +10,17 @@ Welcome to This Month in Urbit, our series for sharing recent happenings from ar
 This guide is written to be human-friendly, allowing you to follow along and learn something new. Embedded in this page are also instructions for your agent; share the link and your agent should help you through getting the enclosed items up and running. The AI landscape is fast-moving and variable, so we can't guarantee everything will work smoothly, but we try to test across various models and agent harnesses. If you or your agents ever get stuck, just give a shout in [The Urbit Foundation group on Tlon Messenger](https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em17) and we'll help you out.
 
 ## June Quickstart
-To get started with our featured experiments for this month, try booting a moon off the June TMIU pill. If you don't have it already, get the runtime for your OS:
+This month, there are no Gall applications being distributed acorss the network, so we are chosing to not include a custom pill in the quickstart guide. That said, having an up-to-date version of the runtime, and a fresh ship to experiment with will still be helpful. To get the runtime:
 ```
 curl -fsSL https://urbit.org/get-runtime.sh | sh
 ```
 
-In the dojo of your planet, run `|moon` and you'll get a moon networking key. You can do this from the webterm on a Tlon-hosted planet. Then boot your moon with the June TMIU pill:
+In the dojo of your planet, run `|moon` and you'll get a moon networking key. You can do this from the webterm on a Tlon-hosted planet. Then boot your moon with the default bootstrap pill:
 ```
-urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.orgcontent/tmiu-pills/tmiu-june.pill --http-port 8899
+urbit -w <moon-name> -G <moon-key> --http-port 8899
 ```
 (if you don't have moon keys, replace the moon args with `-c tmiu-june-comet` to just get started with a comet.)
 
-## %hawk499
-The biggest release this month is `%hawk499` from `~migrev-dolseg`. For those who have been tinkering with their urbits live on the network for the past few years, [`%hawk`](https://hawk.computer) has been a beloved tool in the toolbox, and `~migrev-dolseg` its beloved creator. From using it as a simple site builder to create a 'front door' for the clearweb (see `~rus`'s [urbitfederation.org](https://urbitfederation.org)), to a way to publish 'gists', and even build comprehensive [webapps like `~nordus-mocwyl`'s guitar course](https://urbit.org/blog/building-beyond-beginner-guitar), `%hawk` has proven itself as a powerful framework for bringing the capabilities of your urbit to life. Even the [hawk.computer](https://hawk.computer) site is written in, and served via, `%hawk`.
-
-`%hawk499` is a step change in what it looks like to build interfaces into your urbit. In the words of `~migrev-dolseg`: 
-
-> "The One Interface To Rule Them All"
-
-This comes from his observation that there is unlikely to be a world where there is "One Filesystem To Rule Them All." And this seems to be a reasonable claim. Your average computer user doesn't even know what a filesystem is, let alone whether their data needs to go in a relational database, a file tree, or any other form factor. 
-
-So with `%hawk499`, we see `~migrev-dolseg` leaning in to building a strong interface tool. Instead of the legacy model of storing everything as a `%manx`, with 499 se see a different strategy:
-
-> "No user data is stored by the %hawk499 agent. But the hawk499 pages can still do stateful things by using other agents to store data."
-
-It's not that 499 stores nothing, but rather it makes full use of Urbit's open nature to say, 'We'll do the interface in `%hawk499`, but put your data in the agents that are best suited for it. It is through this model that 499 gets to absorb and compose the data of other apps, and thus focus on delivering self-styled interfaces to users. 
-
-In other changes from legacy `%hawk`, `%hawk499` offers noticeable performance improvements, as well as the ability to update data across the network. For an overview view, [check this out](https://willhanlen.com/~~/outbox/26/6/hawk-ui-demo/), or just install it yourself at:
-
-```
-|install ~dister-migrev-dolseg
-```
-
-*As a word of warning, this is an early release and not advised to be installed on a ship running a legacy version of `%hawk`, so test it on a moon or comet first if you currently run `%hawk` on your main urbit ship. Need help with `%hawk` or `%hawk499`? [Jump in `~migrev-dolseg`'s group](https://join.tlon.io/0v7.nikjh.4ei7s.8fol7.bfe0h.8ad5p).*
 
 ## Yamoon
 First getting a mention in this month's ["Languages on Nock"](/blog/languages-on-nock) article, [Yamoon](https://github.com/the-man-with-a-golden-mind/yamoon/tree/master) slid into the scene out of nowhere. From the repo readme:
@@ -73,12 +51,45 @@ Hardcore hooners might say, "Sure but look at what it compiles to; wouldn't that
 
 But as we suggest in the "Languages on Nock" article, different tools work for different problems--and different minds. If you blocker was learned to write idiomatic Hoon, consider yourself unblocked, and go build! You can self-host the code, or use it [via a hosted version](https://yamoon-page.michmajchrzak.workers.dev/).
 
-## Tlon public launch
+You might ask, "Why are you showing this to me again, though?" And really it's as a bit of an empahsis of how much is happened around Nock-based computing these days. Because since that article was released, two other Nock-related projects were released!
 
+## Lua-Hoon
+Popular as a scripting language in a wide array programs, Lua typically runs in an embedded interpreter in some host environment. Famously it is used in programs like Minecraft and Neovim. Given it's popularity and approachability, and in a spirit similar to his Forth-Nock project, `~mopfel-winrux` wrote `lua-hoon` so that it would be possible to run Lua on a Nock substrate.
+
+It runs as a Gall app, but we recommend installing it directly from [the `lua-hoon` GitHub Repo](https://github.com/mopfel-winrux/lua-hoon), as it is not available over the network, and may take some tinkering with your runtime to fully experience.
+
+## Nockasm
+Ever the educator, `~lagrev-nocfep` put together ["Nock Assembly"](https://github.com/sigilante/nockasm), or `nockasm`. As he describes it:
+
+> "Nock Assembly is a thin macro over [Nock ISA](https://nock.is) designed to make the language more legible for pedagogical purposes."
+
+Like with Hoon, Nock can be somewhat difficult for a newcomer. While intended to be ruthlessly simple as a Instruction Set Architecture (ISA) or a 'definition of a virtual machine that first on a t-shirt', it still generally requires a mental translation later between nouns and opcodes, to the mental model of the learner. To help got past some of these early hurdles, Nock Assembly provides lexical, named opcodes. Instead of the raw Nock for an increment:
+```
+[4 0 2]
+```
+Students get a more immediately legible:
+```
+(%inc .x)
+```
+
+Experiment with it, perhaps while you go through the ["Nock for Everyday Coders"](https://urbitsystems.tech/article/v02-i01/nock-for-everyday-coders) article from `~timluc-miptev`, and soon enough you'll get the hang of Nock and prefer:
+```
+[8 [0 2] 6 [5 [1 1] 0 2] [4 0 7] 6 [5 [1 2] 0 2] [0 7] 1 0]
+```
+over
+```
+:subject {.tag .data}
+#match .tag {
+  1 => (%inc .data)
+  2 => .data
+  _ => 0
+}
+```
+
+## Tlon public launch
 In other Urbit ecosystem news, Tlon Messenger is now [open for public signups](https://x.com/tloncorporation/status/2067611600970768657?s=20)--no more waitlist! Go to [tlon.io](https://tlon.io/) today to get a hosted urbit, their native mobile app, and your very own Tlonbot. In contrast to something like Claude Tag in Slack, Urbit is the place where you can own both the messenger, and the agent. 
 
 If you are already on the network, you can continue to invite your friends with your own invite codes so they are dropped right into your DMs or the group you invited them to.
 
 ## Urbit-skills alpha
-
 As a last mention, we are experimenting with making some baseline `urbit-skills` available. Point your agents at urbit.org or this post and they should be able to find them. Please send any feedback or your usage experience to `~sarlev` and we will continue to improve them as effective patterns emerge.
