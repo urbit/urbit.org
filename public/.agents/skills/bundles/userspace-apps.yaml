@@ -1,0 +1,57 @@
+id: userspace-apps
+title: Urbit Userspace Apps
+description: Optional discovery bundle for agents working with public Urbit userspace apps. Bundles are additive hints; use the linked SKILL.md and references as canonical instructions.
+entrypoint: /.agents/skills/using-urbit-apps/SKILL.md
+items:
+  - id: hawk
+    title: Hawk
+    skill: /.agents/skills/using-urbit-apps/SKILL.md
+    references:
+      - /.agents/skills/using-urbit-apps/references/hawk/README.md
+      - /.agents/skills/using-urbit-apps/references/hawk/core-model.md
+      - /.agents/skills/using-urbit-apps/references/hawk/ui-and-ops.md
+    triggers:
+      - hawk
+      - feather app
+      - urbit http app
+      - migrev dolseg
+      - hawk computer
+      - hawk templates
+      - programmable pages
+      - urbit page builder
+    level: advanced
+    side_effects: reads-source
+  - id: obelisk
+    title: Obelisk
+    skill: /.agents/skills/using-urbit-apps/SKILL.md
+    references:
+      - /.agents/skills/using-urbit-apps/references/obelisk/README.md
+      - /.agents/skills/using-urbit-apps/references/obelisk/urql/README.md
+      - /.agents/skills/using-urbit-apps/references/obelisk/testing.md
+    triggers:
+      - obelisk
+      - urbit rdbms
+      - urbit database
+      - relational database
+      - urql
+      - app data storage
+      - time travel query
+      - nomryg nilref
+    level: practical
+    side_effects: reads-source
+  - id: urbit-mcp
+    title: Urbit MCP
+    skill: /.agents/skills/using-urbit-apps/SKILL.md
+    references:
+      - /.agents/skills/using-urbit-apps/references/urbit-mcp/README.md
+    triggers:
+      - urbit mcp
+      - mcp
+      - model context protocol
+      - agent bridge
+      - urbit tool server
+      - ship tools
+      - mcp server desk
+      - gwbtc urbit-mcp
+    level: advanced
+    side_effects: network

@@ -9,26 +9,38 @@ related_pages:
   - "/.agents/skills/index.md"
 ---
 
-# running-urbit-os
+# Running Urbit OS
 
-## Goal
+Use this as the thin entrypoint for runtime and operational questions about Urbit OS.
 
-Help an agent move from "I need to get a ship online" to the correct public urbit.org guides with minimal branching.
+This file should stay short. Add long-form operational material under `references/` and read it only when it is relevant.
 
-## Read first
+## Scope
 
-1. [Running Urbit agent landing](../../../.agents/overview/running-urbit.md)
-2. [Running Urbit human mirror](../../../overview/running-urbit.md)
+- installing and booting ships
+- pier lifecycle, backups, and upgrades
+- networking, keys, and operational troubleshooting
+- desk management and runtime administration
 
-## Follow-up references
+## Dependencies and canonical sources
 
-- [Get Urbit ID](../../../overview/running-urbit/get-urbit-id.md)
-- [Run Urbit OS](../../../overview/running-urbit/run-urbit-os.md)
-- [Common Commands](../../../overview/running-urbit/common-commands.md)
-- [Run Urbit wiki guide](../../wiki/guides/run-urbit.md)
+- `https://developers.urbit.org/`
+- `https://github.com/urbit/urbit`
+- release notes and operational docs for the runtime being used
 
-## Expected output
+## Working rules
 
-- identify whether the user needs identity acquisition, runtime installation, hosting guidance, or command lookup
-- point to the smallest relevant urbit.org markdown mirror
-- use the corresponding `/.agents/overview/*` page when dependency frontmatter is useful
+1. Separate runtime and operations guidance from identity and app guidance.
+2. Prefer documented operational procedures over ad hoc shell folklore.
+3. Put long-form walkthroughs in `references/`, not here.
+4. Keep contributions narrow and auditable.
+
+## Reference index
+
+- See [references/README.md](references/README.md) for the contribution pattern.
+- For autonomous comet bootstrapping with a native-first, low-dependency flow, see [references/comet-onboarding-for-agents.md](references/comet-onboarding-for-agents.md).
+- For booting disposable ships that expose an MCP endpoint for agent tooling, see [references/mcp-bootstrap.md](references/mcp-bootstrap.md).
+
+## Contribution pattern
+
+Add focused markdown references under `references/` and list them here. Do not create nested `SKILL.md` files for subtopics.

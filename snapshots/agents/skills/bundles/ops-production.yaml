@@ -1,0 +1,11 @@
+id: ops-production
+title: Urbit Production Operations
+description: Placeholder discovery bundle for production operations references as they mature. Bundles are additive and must link only real references.
+entrypoint: /.agents/skills/running-urbit-os/SKILL.md
+items:
+  - id: running-urbit-os
+    references:
+      - /.agents/skills/running-urbit-os/SKILL.md
+    triggers: [run urbit, production ship, pier lifecycle, backup, networking, troubleshooting]
+    level: practical
+    side_effects: writes-pier
