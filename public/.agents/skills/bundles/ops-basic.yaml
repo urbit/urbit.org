@@ -1,0 +1,24 @@
+id: ops-basic
+title: Running Urbit Basics
+description: Optional discovery bundle for agents helping users run and troubleshoot Urbit OS.
+entrypoint: /.agents/skills/running-urbit-os/SKILL.md
+items:
+  - id: urbit-core
+    references:
+      - /.agents/skills/urbit-core/SKILL.md
+      - /.agents/skills/urbit-core/references/glossary.md
+    triggers: [urbit, ship, pier, vere, arvo, dojo, eyre, ames]
+    level: intro
+    side_effects: none
+  - id: comet-onboarding
+    references:
+      - /.agents/skills/running-urbit-os/references/comet-onboarding-for-agents.md
+    triggers: [comet, boot comet, anonymous ship, onboarding, run urbit, pier]
+    level: practical
+    side_effects: writes-pier
+  - id: mcp-bootstrap
+    references:
+      - /.agents/skills/running-urbit-os/references/mcp-bootstrap.md
+    triggers: [mcp bootstrap, disposable ship, fake ship, mcp endpoint, urbit mcp]
+    level: advanced
+    side_effects: network

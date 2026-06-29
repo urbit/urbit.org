@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-23T20:24:01.946Z",
-  "total": 191,
+  "generatedAt": "2026-06-26T21:33:18.899Z",
+  "total": 192,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4304,6 +4304,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+    },
+    {
+      "id": "blog/this-month-in-urbit-june-2026.md",
+      "title": "This Month in Urbit: June 2026",
+      "description": "June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "ai",
+        "agents",
+        "nock"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "june 2026 urbit",
+        "yamoon",
+        "lua-hoon",
+        "lua hoon",
+        "nockasm",
+        "nock assembly",
+        "nock isa",
+        "languages on nock",
+        "non-hoon languages",
+        "tlon messenger",
+        "public signups",
+        "urbit skills",
+        "agent skills"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1782432000000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-june-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: june 2026 june 2026 brings non-hoon languages, nock learning tools, tlon's public launch, and the urbit skills alpha. this-month-in-urbit ecosystem applications ai agents nock this month in urbit june 2026 urbit yamoon lua-hoon lua hoon nockasm nock assembly nock isa languages on nock non-hoon languages tlon messenger public signups urbit skills agent skills ~sarlev-sarsen /blog/this-month-in-urbit-june-2026 blog 2026-06-26 this month in urbit for june 2026 covers yamoon and the broader languages on nock discussion, lua-hoon, nockasm, tlon messenger public signups, and the new public urbit agent skills snapshot for operating and developing on urbit. this month in urbit june 2026 urbit yamoon lua-hoon lua hoon nockasm nock assembly nock isa languages on nock non-hoon languages tlon messenger public signups urbit skills agent skills https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+june/blog_tmiu+june_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+june/blog_tmiu+june_social16_9.jpg this-month-in-urbit ecosystem applications ai agents nock"
     },
     {
       "id": "blog/this-month-in-urbit-may-2026.md",
