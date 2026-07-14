@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Contributor Spotlight: ~sicdev-pilnup](/blog/contributor-spotlight-sicdev-pilnup.md) — A conversation with ~sicdev-pilnup on coordination technologies, AI sovereignty, Urbit, and collective intelligence
 - [This Month in Urbit: June 2026](/blog/this-month-in-urbit-june-2026.md) — June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.
 - [Languages on Nock](/blog/languages-on-nock.md) — A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock
 - [Contributor Spotlight: ~lagrev-nocfep](/blog/contributor-spotlight-lagrev-nocfep.md) — A conversation with ~lagrev-nocfep on Nock, language design, computation, and the forever computer

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-26T21:33:18.899Z",
-  "total": 192,
+  "generatedAt": "2026-07-14T18:02:22.267Z",
+  "total": 193,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2291,6 +2291,42 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~palfun-foslup a conversation with ~palfun-foslup on gall, userspace, and making simple software spotlight gall userspace ~sarlev-sarsen /blog/contributor-spotlight-palfun-foslup blog 2026-03-17 tlon engineer ~palfun-foslup discusses building gall apps like %pals and %rumors, why user-owned servers lower the barrier for peer-to-peer software, and what gall 2026 aims to deliver with userspace compatibility and permissions. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social16_9.png spotlight gall userspace contributor spotlight ~palfun-foslup gall 2026 userspace permissions userspace compatibility tlon messenger pals app rumors app peer to peer software personal server urbit security vere64"
+    },
+    {
+      "id": "blog/contributor-spotlight-sicdev-pilnup.md",
+      "title": "Contributor Spotlight: ~sicdev-pilnup",
+      "description": "A conversation with ~sicdev-pilnup on coordination technologies, AI sovereignty, Urbit, and collective intelligence",
+      "tags": [
+        "spotlight",
+        "coordination",
+        "ai",
+        "sovereignty"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "~sicdev-pilnup",
+        "AI sovereignty",
+        "coordination technology",
+        "collective intelligence",
+        "Dalten",
+        "Urbit Foundation",
+        "Vere64",
+        "Directed Messaging",
+        "Model Context Protocol",
+        "Groundwire",
+        "Urbit hosting",
+        "Azimuth identity",
+        "distributed inference"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1783987200000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-sicdev-pilnup",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~sicdev-pilnup a conversation with ~sicdev-pilnup on coordination technologies, ai sovereignty, urbit, and collective intelligence spotlight coordination ai sovereignty contributor spotlight ~sicdev-pilnup ai sovereignty coordination technology collective intelligence dalten urbit foundation vere64 directed messaging model context protocol groundwire urbit hosting azimuth identity distributed inference ~sarlev-sarsen /blog/contributor-spotlight-sicdev-pilnup blog 2026-07-14 ~sicdev-pilnup discusses urbit as sovereign infrastructure for identity, memory, coordination, and collective intelligence; the risks of centralized ai; and paths toward hosting, federation, and distributed inference. contributor spotlight ~sicdev-pilnup ai sovereignty coordination technology collective intelligence dalten urbit foundation vere64 directed messaging model context protocol groundwire urbit hosting azimuth identity distributed inference https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sicdev-pilnup/blog_qa+sicdev-pilnup_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sicdev-pilnup/blog_qa+sicdev-pilnup_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sicdev-pilnup/blog_qa+sicdev-pilnup_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+sicdev-pilnup/blog_qa+sicdev-pilnup_mail.jpg spotlight coordination ai sovereignty"
     },
     {
       "id": "blog/contributor-spotlight-sitful-hatred.md",
