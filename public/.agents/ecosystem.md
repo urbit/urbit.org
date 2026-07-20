@@ -20,12 +20,12 @@ Machine-facing exports for ecosystem organizations and articles, with related hu
 - [Dalten Collective](/.agents/ecosystem/orgs/dalten.md) — Dalten is a distributed fellowship of like minded individuals.
 - [Labyrinth DAO](/.agents/ecosystem/orgs/labyrinthdao.md) — Labyrinth DAO is a new decentralized autonomous organization investing in Urbit projects.
 - [Native Planet](/.agents/ecosystem/orgs/nativeplanet.md) — Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management.
+- [Nockchain](/.agents/ecosystem/orgs/nockchain.md) — The protocol for verifiable compute networks, built as the first ZK-Proof-of-Work (zkPoW) blockchain.
 - [Octu Ventures](/.agents/ecosystem/orgs/octu.md) — A member-driven venture DAO investing in teams building on urbit
 - [Sortug Development](/.agents/ecosystem/orgs/sortug.md) — Sortug is an Urbit development DAO based on Earth Time UTC+08:00.
 - [The Mars Review of Books](/.agents/ecosystem/orgs/mars-review-of-books.md) — The Mars Review of Books is a magazine in print and on Urbit which combines ruthlessly intelligent and fearless sense-making on subjects of global importance with today’s most stylish belletristic writing on contemporary arts and culture.
 - [Tirrel Corporation](/.agents/ecosystem/orgs/tirrel.md) — Tirrel Corporation is an Urbit product studio.
 - [Tlon](/.agents/ecosystem/orgs/tlon.md) — The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network.
-- [Zorp](/.agents/ecosystem/orgs/zorp.md) — We assure critical computation using zero-knowledge proofs
 - [Urbit Isn't Alright](/.agents/ecosystem/articles/2025-07-27_urbit-isnt-alright.md) — A crypto-oldhead's reflections on urbit's era of coups, counter-coups, and relevance of the Urbit project to the outside world
 - [The Rise and Fall of Urbit](/.agents/ecosystem/articles/2025-06-18_the-rise-and-fall-of-urbit.md) — An outside journalist's look on Urbit's path through the era of covid censorship and NFT bubbles, with 'bitcoin is dead' vibes.
 - ['Wartime CEO': Urbit's Founder Returns in Shakeup at Moonshot Software Project](/.agents/ecosystem/articles/2024-08-21_wartime-ceo-urbits-founder-returns.md) — Curtis Yarvin, the founder of Urbit, has returned to the Urbit Foundation as a "wartime CEO" to address challenges and steer the moonshot software project more effectively. This move aims to reinvigorate the initiative, which focuses on rebuilding internet infrastructure.
