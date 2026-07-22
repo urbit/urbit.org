@@ -9,12 +9,12 @@ Selected organizations and coverage from the wider Urbit ecosystem.
 - [Dalten Collective](https://dalten.org) — Dalten is a distributed fellowship of like minded individuals.
 - [Labyrinth DAO](https://labyrinthdao.io/) — Labyrinth DAO is a new decentralized autonomous organization investing in Urbit projects.
 - [Native Planet](https://www.nativeplanet.io/) — Native Planet builds Urbit-centric hardware and software that simplifies sovereign self hosting and ship management.
+- [Nockchain](https://nockchain.org) — The protocol for verifiable compute networks, built as the first ZK-Proof-of-Work (zkPoW) blockchain.
 - [Octu Ventures](https://octu.ventures) — A member-driven venture DAO investing in teams building on urbit
 - [Sortug Development](https://sortug.com) — Sortug is an Urbit development DAO based on Earth Time UTC+08:00.
 - [The Mars Review of Books](https://store.marsreview.org) — The Mars Review of Books is a magazine in print and on Urbit which combines ruthlessly intelligent and fearless sense-making on subjects of global importance with today’s most stylish belletristic writing on contemporary arts and culture.
 - [Tirrel Corporation](https://tirrel.io) — Tirrel Corporation is an Urbit product studio.
 - [Tlon](https://tlon.io) — The first developer of Urbit. Their work continues to maintain core infrastructure development in addition to designing products for communities on the network.
-- [Zorp](https://zorp.io/) — We assure critical computation using zero-knowledge proofs
 ## Articles & Press
 
 - [Three Things: Urbit Isn't Alright](https://rettig.substack.com/p/urbit-isnt-alright) — Lane Rettig • 2025-07-27
