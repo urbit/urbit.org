@@ -164,3 +164,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 - [What is Urbit For?](/blog/what-is-urbit-for.md) — A vision of the Urbit-powered future.
 - [Beliefs and Principles Guiding the Urbit Project](/blog/beliefs-and-principles.md) — We believe.
 - [An Urbit Overview](/blog/an-urbit-overview.md) — A high-level overview of Urbit.
+
+## NaN
+
+- [Building White Marble: Capital, Membership, and Software on Urbit](/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.

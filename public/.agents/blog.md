@@ -157,3 +157,4 @@ Agent companions for urbit.org blog posts. When a source file includes ---agent-
 - [What is Urbit For?](/.agents/blog/what-is-urbit-for.md) — A vision of the Urbit-powered future.
 - [Beliefs and Principles Guiding the Urbit Project](/.agents/blog/beliefs-and-principles.md) — We believe.
 - [An Urbit Overview](/.agents/blog/an-urbit-overview.md) — A high-level overview of Urbit.
+- [Building White Marble: Capital, Membership, and Software on Urbit](/.agents/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
