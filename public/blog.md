@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Building White Marble: Capital, Membership, and Software on Urbit](/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
 - [Contributor Spotlight: ~sicdev-pilnup](/blog/contributor-spotlight-sicdev-pilnup.md) — A conversation with ~sicdev-pilnup on coordination technologies, AI sovereignty, Urbit, and collective intelligence
 - [This Month in Urbit: June 2026](/blog/this-month-in-urbit-june-2026.md) — June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.
 - [Languages on Nock](/blog/languages-on-nock.md) — A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock

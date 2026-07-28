@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-20T20:53:28.658Z",
-  "total": 193,
+  "generatedAt": "2026-07-28T19:06:00.578Z",
+  "total": 194,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2029,6 +2029,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "building 'beyond beginner guitar' on urbit ~nordus-mocwyl walks through what it took to build a guitar course and member community on urbit courseware hawk userspace ~nordus-mocwyl /blog/building-beyond-beginner-guitar blog 2025-12-09 ~nordus-mocwyl details building an urbit-powered guitar course business today with youtube discovery, email communication, and stripe payments, while dreaming of a fully decentralized flow with llm recommendations, cryptocurrency payments, and native course syncing. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_building+on+urbit_social+16x9.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_building+on+urbit_tall+banner.png courseware hawk userspace beyond beginner guitar hawk courseware urbit business guitar course urbit hosting stripe payments crypto payments access control urbit userspace course community self sovereign"
+    },
+    {
+      "id": "blog/building-white-marble.md",
+      "title": "Building White Marble: Capital, Membership, and Software on Urbit",
+      "description": "White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.",
+      "tags": [
+        "ai",
+        "syndicates",
+        "data-sovereignty",
+        "case-study"
+      ],
+      "searchTerms": [
+        "White Marble Syndicate",
+        "White Marble DAO",
+        "WHTMRBL",
+        "private AI",
+        "data sovereignty",
+        "collective intelligence",
+        "Privateer",
+        "Computeer",
+        "Ames",
+        "Urbit compute sharing",
+        "portable digital organization",
+        "Tocwex Syndicate",
+        "fund",
+        "slab",
+        "classical scholarship"
+      ],
+      "authors": [
+        "~sicdev-pilnup"
+      ],
+      "publishedTimestamp": 1785196800000,
+      "source": "blog",
+      "path": "/blog/building-white-marble",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "building white marble: capital, membership, and software on urbit white marble syndicate connects member-governed data, local ai compute, and portable software through urbit. ai syndicates data-sovereignty case-study white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ~sicdev-pilnup /blog/building-white-marble blog 2026-07-28 a case study of how white marble syndicate used urbit and syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated ai inference. white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_mail.jpg ai syndicates data-sovereignty case-study"
     },
     {
       "id": "blog/pseudonymous-reputation.md",
