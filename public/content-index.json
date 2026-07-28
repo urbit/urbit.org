@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T15:59:13.950Z",
+  "generatedAt": "2026-07-28T18:05:33.348Z",
   "total": 357,
   "entries": [
     {
@@ -972,7 +972,7 @@
       "human_md_url": "https://urbit.org/blog/building-white-marble.md",
       "agent_url": "https://urbit.org/.agents/blog/building-white-marble.md",
       "agent_available": true,
-      "agent_mode": "fallback"
+      "agent_mode": "dedicated"
     },
     {
       "id": "blog/common-objections-to-urbit.md",

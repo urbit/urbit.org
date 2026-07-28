@@ -2,10 +2,10 @@
 
 White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
 
-- Date: 2026-07-XX
+- Date: 2026-07-28
 - Author: ~sicdev-pilnup
 
-<!-- TK: Add White Marble hero image and final alt text. -->
+![White Marble Syndicate](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_white+marble_Hero16_9.jpg)
 
 Models are getting smarter, and the private data they need is getting more valuable.
 
@@ -29,12 +29,13 @@ The White Marble Syndicate emerged that fall as the first focused test. Its mand
 
 > **\~lagrev-nocfep:** 
 > "We chose to focus on classics and classical scholarship for a few convergent reasons:  there is an ample but enumerable corpus from the ancient world, there are a large number of public domain translations, the languages themselves are pretty good with machine translation tools, and there has been substantial scholarly work carried out over centuries which is reasonably straightforward to import.
-11m
 > In addition, unlike some other topics, there is a fairly bright line delimiting what is and is not classical scholarship:  we would countenance Byzantine Greek or Etruscan, but not, say, Egyptian."
 
 Building it required three connected systems: capital formation, membership coordination, and software distribution.
 
 ## Capital Formation
+
+![White Marble capital formation](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_White+Marble_Capital+Formation_16x9.jpg)
 
 Collecting a serious library and running local inference cost money. White Marble raised it through `%fund`, a crypto-backed peer-to-peer fundraising app built by [`~tocwex.syndicate`](https://syndicate.box), but run on urbit--run on `~pondeg`, White Marble's designated star, owned and operated by the DAO. The campaign paid for initial corpus curation, AI research tools, compute, and infrastructure.
 
@@ -44,6 +45,8 @@ While initial contributors received one, manually-distributed, `$WHTMRBL` token 
 
 ## Membership Coordination
 
+![White Marble membership coordination](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_White+Marble_Membership+Coordination_16x9.jpg)
+
 `$WHTMRBL` is a membership record, voting instrument, and portable software credential. The [bylaws](https://whitemarble.ai/blog/posts/bylaws.html) define a member as anyone holding at least one token, with one vote per complete token. Members can bring a motion with support from five percent of issued tokens, and amendments require a two-thirds vote with quorum. They collectively own the library, treasury, website, forum, repositories, AI-generated outputs, and `~pondeg` itself. A board and named administrators handle the work between votes.
 
 White Marble deployed the token through [`%slab`](https://github.com/tocwex/slab), the `~tocwex.syndicate` launchpad, using Syndicate contracts that associate `$WHTMRBL` with the `~pondeg` NFT. The owner of `~pondeg` controls token issuance. Putting `~pondeg` in a wallet governed by `$WHTMRBL` holders would close the loop. The fungible membership token would control the non-fungible identity, which controls the computer running the Syndicate's software.
@@ -51,6 +54,8 @@ White Marble deployed the token through [`%slab`](https://github.com/tocwex/slab
 Members already use the token as a software key. They sign into the [White Marble portal](https://portal.whitemarble.ai/apps/privateer) with the Ethereum wallet holding `$WHTMRBL`, even if they do not own an Urbit ID or run a ship. But if they *do* have an Urbit ID, in the same wallet as their membership token, software running on `~pondeg` will automatically invite them into the members-only Tlon Messenger group.
 
 ## Software Distribution
+
+![White Marble data sovereignty](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_White+Marble_Data+Sovereignty_16x9.jpg)
 
 White Marble's software has two Urbit layers: `%privateer` and `%computeer`.
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T15:59:13.751Z",
+  "generatedAt": "2026-07-28T18:05:33.164Z",
   "total": 194,
   "entries": [
     {
@@ -2060,12 +2060,12 @@
       "authors": [
         "~sicdev-pilnup"
       ],
-      "publishedTimestamp": null,
+      "publishedTimestamp": 1785196800000,
       "source": "blog",
       "path": "/blog/building-white-marble",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "building white marble: capital, membership, and software on urbit white marble syndicate connects member-governed data, local ai compute, and portable software through urbit. ai syndicates data-sovereignty case-study white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ~sicdev-pilnup /blog/building-white-marble blog 2026-07-xx a case study of how white marble syndicate used urbit and syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated ai inference. white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ai syndicates data-sovereignty case-study"
+      "searchText": "building white marble: capital, membership, and software on urbit white marble syndicate connects member-governed data, local ai compute, and portable software through urbit. ai syndicates data-sovereignty case-study white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ~sicdev-pilnup /blog/building-white-marble blog 2026-07-28 a case study of how white marble syndicate used urbit and syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated ai inference. white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_mail.jpg ai syndicates data-sovereignty case-study"
     },
     {
       "id": "blog/pseudonymous-reputation.md",
