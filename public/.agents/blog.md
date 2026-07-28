@@ -25,7 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
-- [Building White Marble: Capital, Membership, and Software on Urbit](/.agents/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
+- [Building White Marble](/.agents/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
 - [Contributor Spotlight: ~sicdev-pilnup](/.agents/blog/contributor-spotlight-sicdev-pilnup.md) — A conversation with ~sicdev-pilnup on coordination technologies, AI sovereignty, Urbit, and collective intelligence
 - [This Month in Urbit: June 2026](/.agents/blog/this-month-in-urbit-june-2026.md) — June 2026 brings non-Hoon languages, Nock learning tools, Tlon's public launch, and the Urbit skills alpha.
 - [Languages on Nock](/.agents/blog/languages-on-nock.md) — A survey of Hoon, Jock, Yamoon, North, Loon, and the programming languages emerging around Nock

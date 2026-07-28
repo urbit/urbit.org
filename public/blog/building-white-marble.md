@@ -1,4 +1,4 @@
-# Building White Marble: Capital, Membership, and Software on Urbit
+# Building White Marble
 
 White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
 
