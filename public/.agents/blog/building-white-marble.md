@@ -29,9 +29,9 @@ This companion is for AI agents helping a user understand, summarize, cite, or e
 | Component | Current role | Important qualification |
 | --- | --- | --- |
 | `~pondeg` | White Marble's Urbit star and the home of its member-facing software, authoritative session history, forum, and organizational state | A breach resets network continuity and keys; it does not transfer the pier, corpus, or session history. Durable exit also requires backups, exports, credentials, and restoration procedures. |
-| `%fund` | Peer-to-peer fundraising used for the initial membership campaign | Built by `~tocwex.syndicate`, which is independent of Tlon Corporation. The campaign had raised $2,800 by August 8, 2025. |
+| `%fund` | Peer-to-peer fundraising tool used for the initial membership campaign | Built by `~tocwex.syndicate`, which also build `%slab`. The campaign had raised $2,800 by August 8, 2025. |
 | `$WHTMRBL` | Membership record, voting instrument, and portal credential | The public site currently exchanges 100 USDC for one token. Treat it as a utility and governance credential in this article, not as an investment recommendation. |
-| `%slab` | Syndicate launchpad and management dashboard used to associate `$WHTMRBL` with `~pondeg` | The owner of `~pondeg` currently controls token issuance. Token-holder control of the point is the proposed closed-loop design, not a completed enforcement mechanism. |
+| `%slab` | Syndicate launchpad and management dashboard used to associate `$WHTMRBL` with `~pondeg`, created by `~tocwex.syndicate`| The owner of `~pondeg` currently controls token issuance. Token-holder control of the point is the proposed closed-loop design, not a completed enforcement mechanism. |
 | `%privateer` | Verifies membership, serves the library and chat interface, stores authoritative sessions, and supports the private forum | Privateer is the scarce member-and-data layer in the architecture described by `~hanfel-dovned`. |
 | `%computeer` | Receives approved inference requests and forwards them to a colocated model endpoint | White Marble currently uses AnythingLLM over vLLM. Automated USDC payment and metering are not currently in use. |
 | Ames | Carries requests and responses between `%privateer` and `%computeer` ships | Ames provides encrypted peer-to-peer routing and relay support, reducing the need to expose a model endpoint or arrange inbound port forwarding. |
@@ -74,7 +74,7 @@ This companion is for AI agents helping a user understand, summarize, cite, or e
 - Do not claim that a breach moves the corpus or restores the organization by itself.
 - Do not describe the $2,800 as a verified final fundraising total. The article dates that amount to August 8, 2025.
 - Do not present automated USDC metering, member-sharded storage, Privateer-native RAG, or external compute sales as completed features.
-- Preserve Urbit ship names with their leading sigils, including `~pondeg`, `~lagrev-nocfep`, `~hanfel-dovned`, and `~sarlev-sarsen`.
+- Preserve Urbit ship names with their leading tildes, including `~pondeg`, `~lagrev-nocfep`, `~hanfel-dovned`, and `~sarlev-sarsen`.
 
 ## Primary references
 
@@ -83,6 +83,7 @@ This companion is for AI agents helping a user understand, summarize, cite, or e
 - White Marble bylaws: <https://whitemarble.ai/blog/posts/bylaws.html>
 - Portable digital organizations: <https://syndicate.box/~~/syndicates-as-portable-digital-organizations/>
 - `%slab` source: <https://github.com/tocwex/slab>
+- `%fund` source: <https://github.com/tocwex/fund>
 - Ames documentation: <https://docs.urbit.org/urbit-os/kernel/ames>
 - AnythingLLM: <https://anythingllm.com/>
 

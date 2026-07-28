@@ -13,7 +13,7 @@ Early large language models trained across large portions of the public internet
 
 Examples abound. In July 2026, a security researcher [reported that xAI's Grok Build CLI uploaded complete local Git repositories](https://cryptobriefing.com/xai-grok-build-cli-private-code-leak/), including untracked files and secrets, to cloud storage. The CLI's opt-out toggle reportedly did not stop the transfer. Amid the hubbub around Mythos' alleged cybersecurity and CBRN risk, [access to the frontier of intelligence required 30-day retention](https://www.digitalapplied.com/blog/fable-5-30-day-data-retention-zdr-enterprise-2026), while zero-data-retention terms remained available for less capable models.
 
-Naturally, Providers don't want the heat of "we're hoovering up all the data we can get our hands on," so they cite safety, telemetry, better answers, and model improvement. And in the meantime, Users have little power over how those incentives or terms change. White Marble Syndicate is a pushback to that model. It aims, instead, to keeps a community's distinctive corpus and conversations under member control. As models become more interchangeable, that private data becomes the asset.
+Naturally, Providers don't want the heat of "we're hoovering up all the data we can get our hands on," so they cite safety, telemetry, better answers, and model improvement. And in the meantime, Users have little power over how those incentives or terms change. White Marble Syndicate is a pushback to that model. It aims, instead, to keep a community's distinctive corpus and conversations under member control. As models become more interchangeable, that private data becomes the asset.
 
 ## Build With What Exists
 
@@ -23,25 +23,26 @@ Urbit already supplied persistent identity, pseudonymous peer-to-peer networking
 
 The sovereign hardware thesis survived, but the center moved. Hardware became more expensive while open models became much more capable on modest machines. A gaming PC, workstation, or homelab could now run useful models. Compute looked increasingly interchangeable. The scarce part was the data.
 
-As `~sarlev-sarsen` puts it, "It's the data. It's the sovereignty. It's the corpus of information that you're actually operating over. A model can be replaced as capabilities and costs change. A carefully assembled body of knowledge, with provenance, translations, commentary, and the judgment of the people curating it, develops value over time. It is harder to recreate and easier to lose."
+As `~sarlev-sarsen` emphasizes, "It's the data. It's the sovereignty. It's the corpus of information that you're actually operating over. A model can be replaced as capabilities and costs change. A carefully assembled body of knowledge, with provenance, translations, commentary, and the judgment of the people curating it, develops value over time. It is harder to recreate and easier to lose."
 
 The White Marble Syndicate emerged that fall as the first focused test. Its mandate is "to acquire, preserve, and use scholarship concerning the ancient Greek and Roman world." The corpus is bounded enough for retrieval-augmented generation on relatively small models, but rich enough that selection, provenance, translation, and scholarly disagreement matter.
 
-> **\~lagrev-nocfep:** 
+`~lagrev-nocfep` explains more about why this specific corpus served as a starting point for the project:
 > "We chose to focus on classics and classical scholarship for a few convergent reasons:  there is an ample but enumerable corpus from the ancient world, there are a large number of public domain translations, the languages themselves are pretty good with machine translation tools, and there has been substantial scholarly work carried out over centuries which is reasonably straightforward to import.
+>
 > In addition, unlike some other topics, there is a fairly bright line delimiting what is and is not classical scholarship:  we would countenance Byzantine Greek or Etruscan, but not, say, Egyptian."
 
-Building it required three connected systems: capital formation, membership coordination, and software distribution.
+Building out the vision laid out before them required three connected systems: capital formation, membership coordination, and software distribution.
 
 ## Capital Formation
 
 ![White Marble capital formation](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_White+Marble_Capital+Formation_16x9.jpg)
 
-Collecting a serious library and running local inference cost money. White Marble raised it through `%fund`, a crypto-backed peer-to-peer fundraising app built by [`~tocwex.syndicate`](https://syndicate.box), but run on urbit--run on `~pondeg`, White Marble's designated star, owned and operated by the DAO. The campaign paid for initial corpus curation, AI research tools, compute, and infrastructure.
+Collecting a serious library and running local inference cost money. White Marble solicited cash contributions through [`%fund`](https://github.com/tocwex/fund), a crypto-backed peer-to-peer fundraising app built by [`~tocwex.syndicate`](https://syndicate.box)--but run directly on `~pondeg`, the star owned and operated by the White Marble DAO. The campaign paid for initial corpus curation, AI research tools, compute, and infrastructure.
 
 Some backers contributed through accounts associated with their Urbit IDs. Others used only an Ethereum keypair. The campaign needed no email list, card numbers, or third-party payment processor. By August 8, 2025, it had raised $2,800. The modest sum was enough to test whether a small, distributed group could capitalize a useful service with existing tools.
 
-While initial contributors received one, manually-distributed, `$WHTMRBL` token for each $100 contributed, membership no longer depends on the original campaign. The [White Marble website](https://whitemarble.ai) now uses a distribution contract that exchanges 100 USDC for one `$WHTMRBL` token. New members can enter through the same wallet-based system without asking an administrator to recreate the original fund drive.
+While initial contributors received one, manually-distributed, `$WHTMRBL` token for each $100 contributed, membership no longer depends on the original crowdfunding campaign. The [White Marble website](https://whitemarble.ai) now uses a distribution contract that exchanges 100 USDC for one `$WHTMRBL` token. New members can enter through the same wallet-based system without asking an administrator to recreate the original `%fund` drive.
 
 ## Membership Coordination
 
@@ -57,9 +58,9 @@ Members already use the token as a software key. They sign into the [White Marbl
 
 ![White Marble data sovereignty](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+White+Marble/Blog_White+Marble_Data+Sovereignty_16x9.jpg)
 
-White Marble's software has two Urbit layers: `%privateer` and `%computeer`.
+White Marble's software has two layers, both of which run natively on urbit: `%privateer` and `%computeer`.
 
-Privateer is the member and library-management side. Its agents run on `~pondeg`, verify `$WHTMRBL` ownership, store member sessions, serve the library and chat interface, and provide a private forum for acquisitions and corpus development. The authoritative conversation history and application state persist on the collective's Urbit.
+`%privateer` is the member and library-management side. Its agents run on `~pondeg`, verify `$WHTMRBL` ownership, store member sessions, serve the library and chat interface, and provide a private forum for acquisitions and corpus development. The authoritative conversation history and application state persist on the collective's Urbit.
 
 `%computeer` is the inference side. Its core agent runs on a ship beside an inference engine, in this case AnythingLLM layered over vLLM, and controls which `%privateer` ships may submit requests. It supports request allowances, unlimited access, and model selection. White Marble does not currently use automated USDC payment or metering, but the optionality exists. 
 
@@ -89,19 +90,19 @@ And if you stop being friends? As `~hanfel-dovned` noted, layers can also evolve
 
 There is a long road to travel betwen the current state of the project, and the idealized future. White Marble is already member-controlled as an organization, but from the governance perspective the next step is making that control durable across the technical stack. Future smart contracts and voting tools will give members authority over treasury policy, token issuance, administrator appointments, operating budgets, corpus changes, and the star itself.
 
-The design for a closed loop still needs opportunities for judgment from trusted roles, and release valves to prevent accidentally lost assests or malicious 'governance attacks'. Curators should have latitude to curate, compute operators should be agile enough to maintain compute, and routine maintenance should not require a constitutional vote. But with the bylaws defining the 'political' system, The technical work now is deciding which decisions to enforce automatically and which to leave with accountable people (and how to keep those people accountable).
+The design for a closed loop still needs opportunities for judgment from trusted roles, and release valves to prevent accidentally lost assets or malicious 'governance attacks'. Curators should have latitude to curate, compute operators should be agile enough to maintain compute, and routine maintenance should not require a constitutional vote. But with the bylaws defining the 'political' system, The technical work now is deciding which decisions to enforce automatically and which to leave with accountable people (and how to keep those people accountable).
 
-And even once that enforcement layer is implemented, a breach can reset `~pondeg`'s network continuity and keys, pulling control from an operator. It cannot transfer the pier, corpus, or session history, so durable exit also needs member-controlled backups, data exports, deployment credentials, and tested restoration procedures. Ideas the project is exploring include permissioned uploads to, and retrieval from, IPFS, or federating session data our to members who run software on their own urbits, thus enabling the sharding of syndicate data over the membership.
+Once that enforcement layer is implemented, while a breach can reset `~pondeg`'s network continuity and keys and effectuate pulling control from an operator, it cannot transfer the pier, corpus, or session history. So durable exit also needs member-controlled backups, data exports, deployment credentials, and tested restoration procedures. Ideas the project is exploring include permissioned uploads to, and retrieval from, IPFS, or federating session data our to members who run software on their own urbits, thus enabling the sharding of syndicate data over the membership.
 
-### The Next advancement
+### The Next Advancement
 
-All that said, the lowest hanging fruit is sharpening the fuzzy divide between `%computeer`'s control of compute and `%privateer`'s control of data. Earth-side software--[AnythingLLM](https://anythingllm.com/), wonderful in it's own right--is used for Retrival Augmented Generation (RAG), which means the corpus data drifts out of `~pondeg` and into the hands of the compute provider. But there is work underway to do vectorized embeddings and subsequent session context construction natively in `%privateer`, with just select pieces of data going out to the `%computeer` provider.
+All that said, the lowest hanging fruit is sharpening the fuzzy divide between `%computeer`'s control of compute and `%privateer`'s control of data. Earth-side software--[AnythingLLM](https://anythingllm.com/)--is used for Retrival Augmented Generation (RAG), which means the corpus data drifts out of `~pondeg` and into the hands of the compute provider. But there is work underway to do vectorized embeddings and subsequent session context construction natively in `%privateer`, with just select pieces of data going out to the `%computeer` provider.
 
 When completed, doing RAG on the star controlled by the membership will strengthen the claim that, if operators stop serving the membership, members are able to replace them and move the infrastructure, without having given up the most valuable assets: their corpus of data. 
 
 ## From Collaborative Community to Distributed Network
 
-Certainly, White Marble aims to be useful to its membership in its own right, but the true goal is that the design replicates outward and in interwoven ways. Interwoven replication means another community adapt the structure and piggybacks on existing resources, creating syndicates that collaborate piecemeal across relationships and resources as needs emerge. A group could assemble medical research, legal history, or private organizational memory. It could define membership through a Syndicate token, serve members through `%privateer`, and select a `%computeer` provider over Ames, perhaps even purchasing compute from White Marble before growing large enough to run its own compute.
+Certainly, White Marble aims to be useful to its membership in its own right, but the true goal is that the design replicates outward and in interwoven ways. Interwoven replication means another community adapts the structure and piggybacks on existing resources, creating syndicates that collaborate piecemeal across relationships and resources as needs emerge. A group could assemble medical research, legal history, or private organizational memory. It could define membership through a Syndicate token, serve members through `%privateer`, and select a `%computeer` provider over Ames, perhaps even purchasing compute from White Marble before growing large enough to run its own compute.
 
 Few communities should copy White Marble exactly. With the software already written, another group may not need a crowdfund. But certainly communities should not have to surrender their memory to use intelligence against it. White Marble gives other groups a working structure to test, alter, or reject. The next useful result will be another community trying it.
 
@@ -109,4 +110,4 @@ Learn more at [whitemarble.ai](https://whitemarble.ai).
 
 ---
 
-*Draft disclosure: Some members of the Urbit Foundation and broader Urbit community have a direct stake in White Marble. This article describes the project as a case study and is not an endorsement of the token.*
+*Disclosure: Some members of the Urbit Foundation and broader Urbit community have a direct stake in White Marble. This article describes the project as a case study and is not an endorsement of the token.*
