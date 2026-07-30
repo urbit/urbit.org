@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T19:06:00.578Z",
-  "total": 194,
+  "generatedAt": "2026-07-30T20:58:31.856Z",
+  "total": 195,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4377,6 +4377,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+    },
+    {
+      "id": "blog/this-month-in-urbit-july-2026.md",
+      "title": "This Month in Urbit: July 2026",
+      "description": "July 2026 brings Directed Messaging, refreshed Gall apps, Hoon notebooks, noun and graph visualization, Hawk 499, and new Tlon Messenger features.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "directed-messaging",
+        "agents",
+        "tlon"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "july 2026 urbit",
+        "directed messaging",
+        "named data networking",
+        "408k",
+        "%docs",
+        "%cliff",
+        "mondrian",
+        "%caderno",
+        "%graph-viz",
+        "%obelisk",
+        "hawk 499",
+        "tlon notebooks",
+        "context lens"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1785456000000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-july-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: july 2026 july 2026 brings directed messaging, refreshed gall apps, hoon notebooks, noun and graph visualization, hawk 499, and new tlon messenger features. this-month-in-urbit ecosystem applications directed-messaging agents tlon this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens ~sarlev-sarsen /blog/this-month-in-urbit-july-2026 blog 2026-07-31 this month in urbit for july 2026 covers directed messaging in 408k, updated %docs and %cliff apps, mondrian, %caderno, %graph-viz, hawk 499, and tlon messenger's new notebooks and context lens. this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens https://urbit.org/images/urbit-dither-placeholder.png this-month-in-urbit ecosystem applications directed-messaging agents tlon"
     },
     {
       "id": "blog/this-month-in-urbit-june-2026.md",
