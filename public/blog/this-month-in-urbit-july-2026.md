@@ -40,7 +40,7 @@ The update is rolling out in two phases: the initial 408k release makes it avail
 This will return your base hash. At the time of writing, it is `0v1p.bbmmr.fqrkl.bb9jn.g40no.3pddu.tbege.7g2k4.rm02c.a628h.j24nv`. Then run:
 
 ```
-:hood &ahoy-set-hash 0v1p.bd1ud.hribk.6619t.70jni.n06f4.9il00.voegf.kh8i9.8se4n.124s8
+hood &ahoy-set-hash 0v1p.bd1ud.hribk.6619t.70jni.n06f4.9il00.voegf.kh8i9.8se4n.124s8
 ```
 
 *(Even if your base hash is different, e.g. `0v1p.bbmmr.fqrkl.bb9jn.g40no.3pddu.tbege.7g2k4.rm02c.a628h.j24nv`, use the command ending in `124s8` to enable Directed Messaging.)*
@@ -57,7 +57,7 @@ As Gall apps were refreshed for the 408k release, `~tinnus-napbus` took the oppo
 
 In his words, "The release includes a complete responsive redesign, improved typography and navigation, Markdown/GFM support, multi-language syntax highlighting, light/dark/system themes, fast lazy-loaded Eyre caching, and configurable public documentation for selected desks."
 
-Also released alongside the application itself are ["Mortar"](https://github.com/tinnus-napbus/mortar), [`syntect-urwasm`](https://github.com/tinnus-napbus/syntect-urwasm), and [`urbit-markdown`](https://github.com/tinnus-napbus/urbit-markdown) to support desk assembly, syntax highlighting, and Markdown parsing. `urbit-markdown` in particular is built on top of `~wispem-wantex`'s Markdown library, but with strict adherence to GitHub-flavored Markdown.
+Also released alongside the application itself are ["Mortar"](TK), [`syntect-urwasm`](TK), and [`urbit-markdown`](TK) to support desk assembly, syntax highlighting, and Markdown parsing. `urbit-markdown` in particular is built on top of `~wispem-wantex`'s Markdown library, but with strict adherence to GitHub-flavored Markdown.
 
 For end users, `%docs` offers a location on your ship, `/docs`, where you can find developer-provided documentation for any of the applications installed on your ship. If you are a developer, all you need to do is add Markdown files to `/doc` in your desk, and the `%docs` agent will pull them into each user's instance and publish them via Eyre. To learn more, such as how to push docs for a given desk to the clearweb, install `%docs` and visit `<your-ship>/docs/d/docs/overview`.
 

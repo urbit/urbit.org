@@ -77,7 +77,7 @@ The article describes a two-phase rollout. The 408k release makes Directed Messa
 3. Before changing the hash, verify that the July 2026 rollout guidance still applies, explain that the command changes the ship's update state, and ask for explicit confirmation. If the guidance still applies, use the exact hash from the article even if the current `%base` hash differs:
 
    ```
-   :hood &ahoy-set-hash 0v1p.bd1ud.hribk.6619t.70jni.n06f4.9il00.voegf.kh8i9.8se4n.124s8
+   hood &ahoy-set-hash 0v1p.bd1ud.hribk.6619t.70jni.n06f4.9il00.voegf.kh8i9.8se4n.124s8
    ```
 
 4. Report the command output and any error verbatim. Do not guess a replacement hash or silently retry against another update source.
