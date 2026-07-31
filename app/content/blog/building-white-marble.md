@@ -1,5 +1,5 @@
 +++
-title = "Building White Marble: Capital, Membership, and Software on Urbit"
+title = "Building White Marble"
 date = "2026-07-28"
 description = "White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit."
 summary = "A case study of how White Marble Syndicate used Urbit and Syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated AI inference."
