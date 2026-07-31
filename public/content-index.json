@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T20:58:32.052Z",
+  "generatedAt": "2026-07-31T21:22:40.013Z",
   "total": 358,
   "entries": [
     {
@@ -943,7 +943,7 @@
       "url": "https://urbit.org/blog/building-white-marble",
       "type": "blog",
       "source_kind": "blog",
-      "title": "Building White Marble: Capital, Membership, and Software on Urbit",
+      "title": "Building White Marble",
       "summary": "A case study of how White Marble Syndicate used Urbit and Syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated AI inference.",
       "description": "White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.",
       "tags": [

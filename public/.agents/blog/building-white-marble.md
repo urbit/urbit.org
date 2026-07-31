@@ -1,5 +1,5 @@
 ---
-title: "Building White Marble: Capital, Membership, and Software on Urbit"
+title: "Building White Marble"
 source_kind: "blog"
 canonical_url: "/blog/building-white-marble"
 human_md_url: "/blog/building-white-marble.md"

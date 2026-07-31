@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T20:58:31.856Z",
+  "generatedAt": "2026-07-31T21:22:39.799Z",
   "total": 195,
   "entries": [
     {
@@ -2032,7 +2032,7 @@
     },
     {
       "id": "blog/building-white-marble.md",
-      "title": "Building White Marble: Capital, Membership, and Software on Urbit",
+      "title": "Building White Marble",
       "description": "White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.",
       "tags": [
         "ai",
@@ -2065,7 +2065,7 @@
       "path": "/blog/building-white-marble",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "building white marble: capital, membership, and software on urbit white marble syndicate connects member-governed data, local ai compute, and portable software through urbit. ai syndicates data-sovereignty case-study white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ~sicdev-pilnup /blog/building-white-marble blog 2026-07-28 a case study of how white marble syndicate used urbit and syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated ai inference. white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_mail.jpg ai syndicates data-sovereignty case-study"
+      "searchText": "building white marble white marble syndicate connects member-governed data, local ai compute, and portable software through urbit. ai syndicates data-sovereignty case-study white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship ~sicdev-pilnup /blog/building-white-marble blog 2026-07-28 a case study of how white marble syndicate used urbit and syndicate tooling to fund a private classical library, coordinate token-based membership, and connect community data to locally operated ai inference. white marble syndicate white marble dao whtmrbl private ai data sovereignty collective intelligence privateer computeer ames urbit compute sharing portable digital organization tocwex syndicate fund slab classical scholarship https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+white+marble/blog_white+marble_mail.jpg ai syndicates data-sovereignty case-study"
     },
     {
       "id": "blog/pseudonymous-reputation.md",
@@ -4414,7 +4414,7 @@
       "path": "/blog/this-month-in-urbit-july-2026",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "this month in urbit: july 2026 july 2026 brings directed messaging, refreshed gall apps, hoon notebooks, noun and graph visualization, hawk 499, and new tlon messenger features. this-month-in-urbit ecosystem applications directed-messaging agents tlon this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens ~sarlev-sarsen /blog/this-month-in-urbit-july-2026 blog 2026-07-31 this month in urbit for july 2026 covers directed messaging in 408k, updated %docs and %cliff apps, mondrian, %caderno, %graph-viz, hawk 499, and tlon messenger's new notebooks and context lens. this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens https://urbit.org/images/urbit-dither-placeholder.png this-month-in-urbit ecosystem applications directed-messaging agents tlon"
+      "searchText": "this month in urbit: july 2026 july 2026 brings directed messaging, refreshed gall apps, hoon notebooks, noun and graph visualization, hawk 499, and new tlon messenger features. this-month-in-urbit ecosystem applications directed-messaging agents tlon this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens ~sarlev-sarsen /blog/this-month-in-urbit-july-2026 blog 2026-07-31 this month in urbit for july 2026 covers directed messaging in 408k, updated %docs and %cliff apps, mondrian, %caderno, %graph-viz, hawk 499, and tlon messenger's new notebooks and context lens. this month in urbit july 2026 urbit directed messaging named data networking 408k %docs %cliff mondrian %caderno %graph-viz %obelisk hawk 499 tlon notebooks context lens https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+july/blog_tmiu+july_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+july/blog_tmiu+july_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+july/blog_tmiu+july_banner.jpg this-month-in-urbit ecosystem applications directed-messaging agents tlon"
     },
     {
       "id": "blog/this-month-in-urbit-june-2026.md",

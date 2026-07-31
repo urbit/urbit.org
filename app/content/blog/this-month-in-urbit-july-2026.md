@@ -23,13 +23,13 @@ search_terms = [
 
 [extra]
 ship = "~sarlev-sarsen"
-# TODO: Replace the placeholder images before publication.
-image = "https://urbit.org/images/urbit-dither-placeholder.png"
-imageCard = "https://urbit.org/images/urbit-dither-placeholder.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/Blog_TMIU+July_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/Blog_TMIU+July_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/Blog_TMIU+July_Banner.jpg"
 tags = ["this-month-in-urbit", "ecosystem", "applications", "directed-messaging", "agents", "tlon"]
 +++
 
-![July 2026 This Month in Urbit artwork placeholder](/images/urbit-dither-placeholder.png)
+![July 2026 This Month in Urbit concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/Blog_TMIU+July_Hero.jpg)
 
 Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old-school way.
 
@@ -50,6 +50,8 @@ urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.o
 (If you don't have moon keys, replace the moon args with `-c tmiu-july-comet` to just get started with a comet.)
 
 ## Directed Messaging is live
+
+![Directed Messaging concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/TIMU+July_Directed+Message.jpg)
 
 Released on July 14, 2026, 408k is a monumental update. It implements the "Directed Messaging" project across the entire Urbit network. In short, this upgrade increases bandwidth across the network by implementing the "Named Data Networking" (NDN) protocol natively over Urbit. This networking model uses a "request<>response" design, leans on Urbit's scry namespace, and creates a "content-centric" network where recipients request named *data*, rather than data from particular sources.
 
@@ -74,6 +76,8 @@ The next release, 408k-1, will turn Directed Messaging on for all users. Follow 
 
 ## Self-documenting ships are re-shipped
 
+![Self-documenting ships concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/TIMU+July_docs.jpg)
+
 As Gall apps were refreshed for the 408k release, `~tinnus-napbus` took the opportunity to update—and massively upgrade—the [`%docs`](https://github.com/tinnus-napbus/docs-app) app. You can install it by running:
 
 ```
@@ -87,6 +91,8 @@ Also released alongside the application itself are ["Mortar"](https://github.com
 For end users, `%docs` offers a location on your ship, `/docs`, where you can find developer-provided documentation for any of the applications installed on your ship. If you are a developer, all you need to do is add Markdown files to `/doc` in your desk, and the `%docs` agent will pull them into each user's instance and publish them via Eyre. To learn more, such as how to push docs for a given desk to the clearweb, install `%docs` and visit `<your-ship>/docs/d/docs/overview`.
 
 ## Exploring files beyond docs
+
+![July 2026 Gall app updates concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/TIMU+July_app+Updates.jpg)
 
 As data transfer speeds increase across the network, perhaps your ship will become a place where you store ever more files to share with your friends. While we expect more bespoke or polished solutions to arise as exact use cases come to light, `~lagrev-nocfep` has revitalized `%cliff` from the [`~paldev` suite](https://github.com/Fang-/suite), making it available across the network alongside the 408k update:
 
@@ -102,7 +108,7 @@ As an improvement to `~palfun-foslup`'s original `%cliff`, the version currently
 
 Not to be relegated to just updating existing software, though, `~lagrev-nocfep` also shipped two original works in the past month. ["Mondrian"](https://github.com/sigilante/mondrian) is what could probably best be described as a fun "art project" that takes a noun and visualizes it along the lines of a Piet Mondrian painting, or like the [recipe cards from cookingforengineers.com](https://www.cookingforengineers.com/recipe/227/Ratatouille/trn).
 
-![Nouns by Mondrian](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/sigilante-mondrian)
+![Nouns visualized by Mondrian](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+July/TIMU+July_Mondrian.jpg)
 
 On the Gall side, he released `%caderno`, which you can download by running:
 
