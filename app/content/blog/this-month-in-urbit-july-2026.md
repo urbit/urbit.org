@@ -129,7 +129,7 @@ End users are able to render [Graphviz](https://graphviz.org/) DOT diagrams as S
 
 For full documentation and related agent skills, check out the [repo on GitHub](https://github.com/jackfoxy/graph-viz).
 
-> *Correction August 5, 2026: An earlier version of this post noted `%obelisk` as a dependency for `%graph-viz`. That was incorrect.
+> *Correction August 5, 2026: An earlier version of this post noted `%obelisk` as a dependency for `%graph-viz`. That was incorrect.*
 
 ## Hawk, revisited
 
@@ -163,7 +163,7 @@ This is a huge improvement for anyone who has tried to use agents via Telegram o
 
 # Agent companion: This Month in Urbit, July 2026
 
-This companion is for AI agents helping a user reproduce or explore the July 2026 _This Month in Urbit_ items. The human-facing article is intentionally narrative; use this section as the operational checklist and source map. This article includes the July TMIU pill, the 408k Directed Messaging rollout, `%docs`, `%cliff`, Mondrian, `%caderno`, `%graph-viz`, `%obelisk`, Hawk 499, and new Tlon Messenger features.
+This companion is for AI agents helping a user reproduce or explore the July 2026 _This Month in Urbit_ items. The human-facing article is intentionally narrative; use this section as the operational checklist and source map. This article includes the July TMIU pill, the 408k Directed Messaging rollout, `%docs`, `%cliff`, Mondrian, `%caderno`, the self-contained `%graph-viz` app, Hawk 499, and new Tlon Messenger features.
 
 ## Start with the public Urbit skills
 
@@ -174,7 +174,6 @@ Use the public skills snapshot before improvising Urbit operations or userspace 
 - Comet onboarding for agents: `/.agents/skills/running-urbit-os/references/comet-onboarding-for-agents.md`
 - Userspace apps: `/.agents/skills/using-urbit-apps/SKILL.md`
 - Userspace apps bundle: `/.agents/skills/bundles/userspace-apps.yaml`
-- Obelisk references: `/.agents/skills/using-urbit-apps/references/obelisk/README.md`
 
 ## Safety profile
 
@@ -187,7 +186,7 @@ Use the public skills snapshot before improvising Urbit operations or userspace 
 - Verify that the article-provided July pill URL is publicly retrievable before booting. If it is unavailable, surface the exact error and stop rather than substituting another pill.
 - `%cliff` can edit Clay files and change publication settings. Confirm the target desk, path, and intended visibility before editing or publishing anything.
 - `%docs`, `%caderno`, and Tlon Notebooks can publish content. Keep private or sensitive material out of test documents and confirm visibility before publishing.
-- The article describes `%obelisk` as a dependency of the network-distributed `%graph-viz`, while the linked source repository currently describes a self-contained desk. Verify the release-specific requirements before installing either desk, and surface the discrepancy rather than guessing.
+- `%graph-viz` is self-contained and does not require `%obelisk`. Do not install `%obelisk` as part of the `%graph-viz` flow; only discuss or install it if the user separately requests it.
 - This article covers Hawk 499. Do not apply instructions written specifically for Hawk 500 unless the source confirms they are compatible.
 - If a boot, update, or install command fails, surface the exact error and stop. Do not silently switch to an unreviewed pill, publisher, or install path.
 
@@ -240,8 +239,7 @@ The article describes a two-phase rollout. The 408k release makes Directed Messa
 | `%cliff` | Clay file explorer with editing and publication controls | `|install ~magbel %cliff` | Can edit files and alter whitelists or blacklists. Prefer a disposable ship and test paths. |
 | Mondrian | Noun visualization project from `~lagrev-nocfep` | <https://github.com/sigilante/mondrian> | Repository/reference project; do not invent a network install command. |
 | `%caderno` | Hoon notebook app for publishing, browsing, sharing, and forking notebooks | `|install ~magbel %caderno` | Use test notebooks first and confirm intended visibility before publishing. |
-| `%graph-viz` | Gall app that renders Graphviz DOT diagrams as SVG on-ship | `|install ~dister-nomryg-nilref %graph-viz`; <https://github.com/jackfoxy/graph-viz> | The article says the network release requires `%obelisk`, while the linked source repository describes a self-contained desk. Verify the release-specific requirement before installing dependencies. |
-| `%obelisk` | Database described in the article as a dependency for the network-distributed `%graph-viz` | `|install ~dister-nomryg-nilref %obelisk` | Install only after confirming the release-specific dependency; use `/.agents/skills/using-urbit-apps/references/obelisk/README.md` for general Obelisk guidance, not as proof of this OTA install path. |
+| `%graph-viz` | Self-contained Gall app that renders Graphviz DOT diagrams as SVG on-ship | `|install ~dister-nomryg-nilref %graph-viz`; <https://github.com/jackfoxy/graph-viz> | Does not depend on `%obelisk`; install only `%graph-viz` for this article's graph visualization flow. |
 | `%hawk` at Kelvin 499 | Composable interface tooling for interacting with agents on a ship | `|install ~dister-migrev-dolseg %hawk`; <https://willhanlen.com/hawk499/crash-course#module-0> | Confirm instructions are for Hawk 499; public references for other Kelvin versions may not be compatible. |
 | Tlon Notebooks and Context Lens | Markdown notebook channels and detailed Tlonbot run inspection | <https://tlon.io>; <https://x.com/tloncorporation/status/2075224895013736784?s=20> | Informational features. Do not automate account access or inspect private notebooks and run logs without permission. |
 
@@ -250,7 +248,7 @@ The article describes a two-phase rollout. The 408k release makes Directed Messa
 1. Ask whether the user wants to boot the July test ship, inspect or enable Directed Messaging, install a featured Gall app, explore a linked repository, or review the Tlon features.
 2. For the full set of Gall apps, verify the article-provided July TMIU pill is publicly retrievable, then prefer it on a disposable moon or comet.
 3. For an existing ship, confirm the exact target, publisher, desk, and expected state or publication change before each command.
-4. The article says to install `%obelisk` before `%graph-viz`, but the linked source repository describes a self-contained desk. Verify the requirements of the network-distributed release before either state-changing install.
+4. Install `%graph-viz` by itself; do not install `%obelisk` as a dependency.
 5. For `%cliff`, begin with read-only exploration and ask separately before editing files or changing publication controls.
 6. For `%docs` and `%caderno`, use non-sensitive test content and confirm clearweb or peer visibility before publishing.
 7. For `%hawk`, use the linked Hawk 499 crash course and version-matched documentation before improvising interface endpoints.
