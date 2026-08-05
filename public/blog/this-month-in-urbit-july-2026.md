@@ -94,23 +94,19 @@ On the Gall side, he released `%caderno`, which you can download by running:
 
 Portuguese for "notebook," `%caderno` is a Hoon notebook. Similar to a Jupyter notebook in spirit, it allows users to publish and share notebooks, with built-in functionality for browsing and forking the notebooks of your peers.
 
-## Obelisk, also visualized
+## Graphs, also visualized
 
-As a follow-on to his `%obelisk` project, `~nomryg-nilref` built an example of how to use its database capabilities in an effectively stateless Gall agent. `%graph-viz` lets users write the DOT "graph description language" to create flow charts, dependency graphs, state machines, and more. You can pick it up from the `~dister` moon:
+As a follow-on to his `%obelisk` project, `~nomryg-nilref` built `%graph-viz` to let users write the DOT "graph description language" to create flow charts, dependency graphs, state machines, and more. You can pick it up from the `~dister` moon:
 
 ```
 |install ~dister-nomryg-nilref %graph-viz
 ```
 
-Note here that `%obelisk` is a dependency for `%graph-viz`, so make sure you have it installed as well:
-
-```
-|install ~dister-nomryg-nilref %obelisk
-```
-
-With both desks installed, end users are able to render [Graphviz](https://graphviz.org/) DOT diagrams as SVG entirely on-ship, without a dependency on external services and without any sloppy glue code.
+End users are able to render [Graphviz](https://graphviz.org/) DOT diagrams as SVG entirely on-ship, without a dependency on external services and without any sloppy glue code.
 
 For full documentation and related agent skills, check out the [repo on GitHub](https://github.com/jackfoxy/graph-viz).
+
+> *Correction August 5, 2026: An earlier version of this post noted `%obelisk` as a dependency for `%graph-viz`. That was incorrect.*
 
 ## Hawk, revisited
 
