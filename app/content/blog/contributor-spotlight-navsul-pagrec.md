@@ -1,7 +1,7 @@
 +++
 
 title = "Contributor Spotlight: ~navsul-pagrec"
-date = "2026-08-18"
+date = "2026-08-25"
 description = "A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk"
 summary = "~navsul-pagrec discusses finding a contribution path through Nockchain, improving its Hoon development workflows, using LLMs with strong verification loops, and building Honk for Nockchain's Hoon-138 environment."
 # aliases = []
