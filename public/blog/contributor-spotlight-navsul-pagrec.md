@@ -5,6 +5,8 @@ A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable
 - Date: 2026-08-18
 - Author: ~sarlev-sarsen
 
+![~navsul-pagrec Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Hero.jpg)
+
 > **\~sarlev:** What first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack? Or is that not quite how you came to this work?
 
 **\~navsul-pagrec:** It is not really an Urbit conversion story for me. I bought an Urbit star when they were selling them for $512 during the fundraising round, but I think I booted something once and that was roughly the extent of my direct engagement. Urbit and Bitcoin inhabited the same category in my head: they were aligned with problems I cared about and I hoped they succeeded, but I was not sold on the particulars of either approach. They were interesting things other people were working on, but not a specific platform I was going to invest time into.

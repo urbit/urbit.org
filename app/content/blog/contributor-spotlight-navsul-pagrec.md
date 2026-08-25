@@ -25,15 +25,17 @@ search_terms = [
 [extra]
 # author = ""
 ship = "~sarlev-sarsen"
-image = "/images/urbit-dither-placeholder.png"
-imageCard = "/images/urbit-dither-placeholder.png"
-imageIndex = "/images/urbit-dither-placeholder.png"
-imageEmail = "/images/urbit-dither-placeholder.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Banner.jpg"
+imageEmail = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Mail.jpg"
 # imageDark = ""
 # imageCardDark = ""
 # imageIndexDark = ""
 tags = ["spotlight", "nockchain", "zero-knowledge", "llms", "hoon"]
 +++
+
+![~navsul-pagrec Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Hero.jpg)
 
 > **\~sarlev:** What first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack? Or is that not quite how you came to this work?
 
