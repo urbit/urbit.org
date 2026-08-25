@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-05T16:41:14.510Z",
-  "total": 358,
+  "generatedAt": "2026-08-25T21:06:26.774Z",
+  "total": 359,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -1116,6 +1116,42 @@
       "search_terms": [],
       "human_md_url": "https://urbit.org/blog/contributor-spotlight-mastyr-bottec.md",
       "agent_url": "https://urbit.org/.agents/blog/contributor-spotlight-mastyr-bottec.md",
+      "agent_available": true,
+      "agent_mode": "fallback"
+    },
+    {
+      "id": "blog/contributor-spotlight-navsul-pagrec.md",
+      "url": "https://urbit.org/blog/contributor-spotlight-navsul-pagrec",
+      "type": "blog",
+      "source_kind": "blog",
+      "title": "Contributor Spotlight: ~navsul-pagrec",
+      "summary": "~navsul-pagrec discusses finding a contribution path through Nockchain, improving its Hoon development workflows, using LLMs with strong verification loops, and building Honk for Nockchain's Hoon-138 environment.",
+      "description": "A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk",
+      "tags": [
+        "spotlight",
+        "nockchain",
+        "zero-knowledge",
+        "llms",
+        "hoon"
+      ],
+      "search_terms": [
+        "contributor spotlight",
+        "~navsul-pagrec",
+        "Nockchain",
+        "Zorp",
+        "Honk",
+        "hoonc",
+        "Hoon compiler",
+        "Nock",
+        "Nockasm",
+        "ZKVM",
+        "zero knowledge proofs",
+        "compute markets",
+        "LLM coding",
+        "developer experience"
+      ],
+      "human_md_url": "https://urbit.org/blog/contributor-spotlight-navsul-pagrec.md",
+      "agent_url": "https://urbit.org/.agents/blog/contributor-spotlight-navsul-pagrec.md",
       "agent_available": true,
       "agent_mode": "fallback"
     },
