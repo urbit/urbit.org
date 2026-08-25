@@ -2,7 +2,7 @@
 
 A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk
 
-- Date: 2026-08-18
+- Date: 2026-08-25
 - Author: ~sarlev-sarsen
 
 ![~navsul-pagrec Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+navsul-pagrec/Blog_QA+navsul-pagrec_Hero.jpg)
