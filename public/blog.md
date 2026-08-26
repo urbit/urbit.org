@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Contributor Spotlight: ~migrev-dolseg](/blog/contributor-spotlight-migrev-dolseg.md) — A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software
 - [Contributor Spotlight: ~navsul-pagrec](/blog/contributor-spotlight-navsul-pagrec.md) — A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk
 - [This Month in Urbit: July 2026](/blog/this-month-in-urbit-july-2026.md) — July 2026 brings Directed Messaging, refreshed Gall apps, Hoon notebooks, noun and graph visualization, Hawk 499, and new Tlon Messenger features.
 - [Building White Marble](/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.

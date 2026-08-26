@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/contributor-spotlight-migrev-dolseg.md"
   - "/blog/contributor-spotlight-navsul-pagrec.md"
   - "/blog/this-month-in-urbit-july-2026.md"
   - "/blog/building-white-marble.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/contributor-spotlight-lagrev-nocfep.md"
   - "/blog/this-month-in-urbit-may-2026.md"
   - "/blog/developer-preview-claw.md"
-  - "/blog/contributor-spotlight-sitful-hatred.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [Contributor Spotlight: ~migrev-dolseg](/.agents/blog/contributor-spotlight-migrev-dolseg.md) — A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software
 - [Contributor Spotlight: ~navsul-pagrec](/.agents/blog/contributor-spotlight-navsul-pagrec.md) — A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk
 - [This Month in Urbit: July 2026](/.agents/blog/this-month-in-urbit-july-2026.md) — July 2026 brings Directed Messaging, refreshed Gall apps, Hoon notebooks, noun and graph visualization, Hawk 499, and new Tlon Messenger features.
 - [Building White Marble](/.agents/blog/building-white-marble.md) — White Marble Syndicate connects member-governed data, local AI compute, and portable software through Urbit.
