@@ -23,13 +23,13 @@ search_terms = [
 
 [extra]
 ship = "~sarlev-sarsen"
-# TODO: Replace the placeholder images before publication.
-image = "https://urbit.org/images/urbit-dither-placeholder.png"
-imageCard = "https://urbit.org/images/urbit-dither-placeholder.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/Blog_TMIU+August_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/Blog_TMIU+August_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/Blog_TMIU+August_Banner.jpg"
 tags = ["this-month-in-urbit", "ecosystem", "applications", "protocols", "agents", "userspace"]
 +++
 
-![August 2026 This Month in Urbit artwork placeholder](/images/urbit-dither-placeholder.png)
+![August 2026 This Month in Urbit concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/Blog_TMIU+August_Hero.jpg)
 
 Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old-school way.
 
@@ -54,6 +54,8 @@ urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.o
 As usual, the pill also includes `%mcp` from [The Groundwire Foundation](https://groundwire.io), [`%obelisk` from `~nomryg-nilref`](/blog/obelisk-beta-release), `%pals` from `~palfun-foslup`, and `%hawk` from `~migrev-dolseg`.
 
 ## Earth protocols find their way to Mars
+
+![Earth protocols on Urbit concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/TIMU+August_Sitful+Apps.jpg)
 
 Urbit may be a Martian computing stack, but that doesn't mean we never want to communicate with Earth. This month, `~sitful-hatred` continues his campaign to enable more classic computing use cases on Urbit—this time tackling code storage and sharing, federated social media, and secure decentralized communications. If your friends aren't yet on Urbit but they like Git, the AT Protocol, or Matrix, you can still connect and collaborate.
 
@@ -91,6 +93,8 @@ One particularly neat feature is the ability to set up an Ames federation relay 
 
 ## Chat app advocacy
 
+![Urbit chat app advocacy concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/TIMU+August_UDI.jpg)
+
 Not everyone is against the idea of a Cambrian explosion of chat apps. `~disden-talhes`, one of Urbit's greatest out-of-band thinkers, is a strong advocate for ever more chat apps on Urbit. That said, he aims to expand the definition of "chat app" as far as possible. `%noltbook` may be the maximally excessive definition:
 
 ```
@@ -102,6 +106,8 @@ Yes, you can send and receive messages. You can also make voice and video calls,
 (We'll give you a hint: to get started, search for `~disden-talhes` in the sidebar and join his shared note.)
 
 ## Experimental models of userspace
+
+![August 2026 Urbit app updates concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+August/TIMU+August_App+updates.jpg)
 
 The ["Neo Urbit" project](https://www.youtube.com/watch?v=I5NCB3gaBHk&t=5s) has encountered delays and other upsets over the years, but in large part it is still underway. [`vere64`](/blog/developer-preview-vere64) is under review and being prepared for release. Directed Messaging is now [live on the network](https://x.com/urbit/status/2077065985509756936?s=20). And [`~dozreg-toplud`](/blog/contributor-spotlight-dozreg-toplud) continues to chip away at an implementation of [Subject Knowledge Analysis (SKA)](https://urbitsystems.tech/article/v03-i01/subject-knowledge-analysis).
 
