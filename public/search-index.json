@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-25T21:14:57.716Z",
-  "total": 196,
+  "generatedAt": "2026-08-28T17:36:18.631Z",
+  "total": 197,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4414,6 +4414,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: april 2026 experiments from around the urbit ecosystem, including mcp, games, mail, local llm routing, and mobile clients this-month-in-urbit ecosystem mcp applications ai ~sarlev-sarsen /blog/this-month-in-urbit-april-2026 blog 2026-05-01 the first this month in urbit highlights april 2026 ecosystem experiments: groundwire's urbit mcp server, ~mopfel-winrux's %jars and %bide desks, %monsters, %mail, %sovnas, urbit-llmproxy, talon, and other network updates. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+april/blog_tmiu+april_social16_9.jpg this-month-in-urbit ecosystem mcp applications ai this month in urbit april 2026 urbit urbit mcp groundwire mcp urbit agent jars urbit bide urbit urbit email sovnas urbit llmproxy talon mobile"
+    },
+    {
+      "id": "blog/this-month-in-urbit-august-2026.md",
+      "title": "This Month in Urbit: August 2026",
+      "description": "August 2026 brings Git, AT Protocol and Matrix clients, Noltbook, Grubbery experiments, and a Hawk-powered guitar course.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "protocols",
+        "agents",
+        "userspace"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "august 2026 urbit",
+        "%urgit",
+        "git on urbit",
+        "%atpro",
+        "at protocol",
+        "bluesky on urbit",
+        "%matpro",
+        "matrix on urbit",
+        "%noltbook",
+        "%grubbery",
+        "subject knowledge analysis",
+        "hawk 499",
+        "beyond beginner guitar"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1787875200000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-august-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: august 2026 august 2026 brings git, at protocol and matrix clients, noltbook, grubbery experiments, and a hawk-powered guitar course. this-month-in-urbit ecosystem applications protocols agents userspace this month in urbit august 2026 urbit %urgit git on urbit %atpro at protocol bluesky on urbit %matpro matrix on urbit %noltbook %grubbery subject knowledge analysis hawk 499 beyond beginner guitar ~sarlev-sarsen /blog/this-month-in-urbit-august-2026 blog 2026-08-28 this month in urbit for august 2026 covers %urgit, %atpro, %matpro, %noltbook, %grubbery, and two approaches to the beyond beginner guitar overhaul using hawk with obelisk or grubbery. this month in urbit august 2026 urbit %urgit git on urbit %atpro at protocol bluesky on urbit %matpro matrix on urbit %noltbook %grubbery subject knowledge analysis hawk 499 beyond beginner guitar https://urbit.org/images/urbit-dither-placeholder.png this-month-in-urbit ecosystem applications protocols agents userspace"
     },
     {
       "id": "blog/this-month-in-urbit-july-2026.md",
