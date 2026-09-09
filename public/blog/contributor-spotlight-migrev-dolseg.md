@@ -5,6 +5,8 @@ A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, react
 - Date: 2026-09-01
 - Author: ~sarlev-sarsen
 
+![~migrev-dolseg Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+migrev-dolseg/Blog_QA+migrev-dolseg_Hero.jpg)
+
 > **\~sarlev:** What first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?
 
 **\~migrev-dolseg:** I think it took me a really long time to believe that was true, but I was interested in Urbit regardless. I had gotten really into Emacs and ricing my system. I had this desire for a feeling of unification: one environment that I controlled, understood, and could customize, where I had a sense of ownership over my data.
