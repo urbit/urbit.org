@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-28T22:42:26.289Z",
-  "total": 197,
+  "generatedAt": "2026-09-09T02:27:29.685Z",
+  "total": 198,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2267,6 +2267,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~mastyr-bottec a conversation with runtime developer ~mastyr-bottec on his work to make urbit store large amounts of data spotlight vere64 runtime ~sarlev-sarsen /blog/contributor-spotlight-mastyr-bottec blog 2025-11-25 runtime developer ~mastyr-bottec explains vere64 work enabling urbit to store large amounts of data, including migrations and lifting file size limits. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa+mastyr-bottec_social.png spotlight vere64 runtime contributor spotlight mastyr bottec runtime developer large data loom size runtime migration directed messaging nock runtime storage scaling urbit runtime"
+    },
+    {
+      "id": "blog/contributor-spotlight-migrev-dolseg.md",
+      "title": "Contributor Spotlight: ~migrev-dolseg",
+      "description": "A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software",
+      "tags": [
+        "spotlight",
+        "personal-computing",
+        "hawk",
+        "hoon",
+        "llms"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "~migrev-dolseg",
+        "Hawk",
+        "Hawk 499",
+        "Hoon",
+        "Sail",
+        "Kelvin 0",
+        "reactive interfaces",
+        "LLM harness",
+        "local LLMs",
+        "CQRS",
+        "EAuth",
+        "Oxal",
+        "personal computing"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1788220800000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-migrev-dolseg",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~migrev-dolseg a conversation with ~migrev-dolseg on personal computing, kelvin 0, %hawk, reactive interfaces, and llm-native software spotlight personal-computing hawk hoon llms contributor spotlight ~migrev-dolseg hawk hawk 499 hoon sail kelvin 0 reactive interfaces llm harness local llms cqrs eauth oxal personal computing ~sarlev-sarsen /blog/contributor-spotlight-migrev-dolseg blog 2026-09-01 ~migrev-dolseg discusses building a unified personal computing environment on urbit, evolving %hawk into a reactive hoon website builder, and designing small, typed systems that local llms can understand and extend. contributor spotlight ~migrev-dolseg hawk hawk 499 hoon sail kelvin 0 reactive interfaces llm harness local llms cqrs eauth oxal personal computing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+migrev-dolseg/blog_qa+migrev-dolseg_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+migrev-dolseg/blog_qa+migrev-dolseg_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+migrev-dolseg/blog_qa+migrev-dolseg_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+migrev-dolseg/blog_qa+migrev-dolseg_mail.jpg spotlight personal-computing hawk hoon llms"
     },
     {
       "id": "blog/contributor-spotlight-navsul-pagrec.md",
