@@ -137,6 +137,6 @@ It was much better than `%hawk-500` at storing data, but it was still basically 
 
 > **\~sarlev:** If you weren't working on Urbit, what would you be doing instead?
 
-**\~migrev-dolseg:** Oh gosh. Not software. I'm tangentially interested in plants. I think plants are cool. But I've made a rule for myself that if Urbit sinks, I'm going to get a normal-person job. I'd probably be a forest guide or a spin instructor—something where I'm not static all day.
+**\~migrev-dolseg:** Oh gosh. Not software. I'm tangentially interested in [PLAN, the Plunder ISA](https://github.com/xocore-tech/PLAN). I think PLAN is cool. But I've made a rule for myself that if Urbit sinks, I'm going to get a normal-person job. I'd probably be a forest guide or a spin instructor—something where I'm not static all day.
 
 I hate computers. If this doesn't work out, then the whole computing industry was a failure and there's no point. Let's go back.
