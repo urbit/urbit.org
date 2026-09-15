@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-09T02:27:29.685Z",
-  "total": 198,
+  "generatedAt": "2026-09-15T23:19:59.699Z",
+  "total": 199,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -5001,6 +5001,40 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "using urbit in 2023 there are more ways to run urbit than ever, and more options coming soon. using urbit 2023 hosting providers command line cloud hosting port app windows binary native planet tlon hosting run urbit vps josh lehman ~wolref-podlex /blog/using-urbit-in-2023 blog 2023-02-06 practical guide for new users covering initial setup, basic operations, landscape navigation, application recommendations, and community involvement opportunities. using urbit 2023 hosting providers command line cloud hosting port app windows binary native planet tlon hosting run urbit vps https://storage.googleapis.com/media.urbit.org/blog/usingurbit-2023.jpg josh lehman ~wolref-podlex"
+    },
+    {
+      "id": "blog/directed-messaging.md",
+      "title": "What Is Directed Messaging?",
+      "description": "Directed Messaging brings content-centric networking to Urbit, making large peer-to-peer data transfers dramatically faster.",
+      "tags": [
+        "directed-messaging",
+        "named-data-networking",
+        "ames",
+        "mesa",
+        "infrastructure"
+      ],
+      "searchTerms": [
+        "directed messaging",
+        "named data networking",
+        "NDN",
+        "%mesa",
+        "%fine",
+        "remote scry",
+        "408k",
+        "%lattice",
+        "%urgit",
+        "libmesa",
+        "Urbit networking"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1789430400000,
+      "source": "blog",
+      "path": "/blog/directed-messaging",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "what is directed messaging? directed messaging brings content-centric networking to urbit, making large peer-to-peer data transfers dramatically faster. directed-messaging named-data-networking ames mesa infrastructure directed messaging named data networking ndn %mesa %fine remote scry 408k %lattice %urgit libmesa urbit networking ~sarlev-sarsen /blog/directed-messaging blog 2026-09-15 an introduction to directed messaging, urbit's implementation of named data networking through %mesa, including its 408k rollout, performance gains, and emerging uses in %lattice and %urgit. directed messaging named data networking ndn %mesa %fine remote scry 408k %lattice %urgit libmesa urbit networking https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+directed+messaging/blog_directed+messaging_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+directed+messaging/blog_directed+messaging_social+16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+directed+messaging/blog_directed+messaging_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+directed+messaging/blog_qa+directed+messaging_mail.jpg directed-messaging named-data-networking ames mesa infrastructure"
     },
     {
       "id": "blog/what-is-urbit-for.md",
