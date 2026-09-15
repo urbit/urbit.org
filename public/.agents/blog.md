@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/directed-messaging.md"
   - "/blog/contributor-spotlight-migrev-dolseg.md"
   - "/blog/this-month-in-urbit-august-2026.md"
   - "/blog/contributor-spotlight-navsul-pagrec.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/this-month-in-urbit-june-2026.md"
   - "/blog/languages-on-nock.md"
   - "/blog/contributor-spotlight-lagrev-nocfep.md"
-  - "/blog/this-month-in-urbit-may-2026.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [What Is Directed Messaging?](/.agents/blog/directed-messaging.md) — Directed Messaging brings content-centric networking to Urbit, making large peer-to-peer data transfers dramatically faster.
 - [Contributor Spotlight: ~migrev-dolseg](/.agents/blog/contributor-spotlight-migrev-dolseg.md) — A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software
 - [This Month in Urbit: August 2026](/.agents/blog/this-month-in-urbit-august-2026.md) — August 2026 brings Git, AT Protocol and Matrix clients, Noltbook, Grubbery experiments, and a Hawk-powered guitar course.
 - [Contributor Spotlight: ~navsul-pagrec](/.agents/blog/contributor-spotlight-navsul-pagrec.md) — A conversation with ~navsul-pagrec on Nockchain developer experience, verifiable compute, LLM-assisted engineering, and Honk
