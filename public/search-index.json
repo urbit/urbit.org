@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-15T23:19:59.699Z",
-  "total": 199,
+  "generatedAt": "2026-09-21T17:34:54.530Z",
+  "total": 200,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2846,6 +2846,45 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "hosting the future the way we see it, hosting is the most important thing, next to landscape, that tlon can do to help urbit continue toward widespread adoption. hosting service tlon hosting urbit hosting onboarding landscape hosting providers tlon.io self hosting urbit adoption urbit foundation planet hosting nick simmons ~simfur-ritwed /blog/hosting-the-future blog 2020-09-30 discussion of urbit hosting infrastructure options including commercial providers, self-hosting guides, redundancy strategies, and long-term continuity planning for personal servers. hosting service tlon hosting urbit hosting onboarding landscape hosting providers tlon.io self hosting urbit adoption urbit foundation planet hosting nick simmons ~simfur-ritwed https://storage.googleapis.com/media.urbit.org/site/posts/essays/200930-hosting-by-tlon.jpg"
+    },
+    {
+      "id": "blog/how-honk-got-fast.md",
+      "title": "How honk got fast: identity, arenas, and a byte-exact oracle",
+      "description": "How Honk made Nockchain's Hoon compiler 20× faster with native Rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc.",
+      "tags": [
+        "nockchain",
+        "hoon",
+        "nock",
+        "compilers",
+        "performance"
+      ],
+      "searchTerms": [
+        "Honk compiler",
+        "hoonc",
+        "Hoon compiler",
+        "Hoon-138",
+        "Nockchain",
+        "NockVM",
+        "Nock",
+        "native compiler",
+        "compiler performance",
+        "byte-for-byte parity",
+        "hash-consing",
+        "arena allocation",
+        "seminouns",
+        "nockasm",
+        "incremental compilation"
+      ],
+      "authors": [
+        "Chris Allen",
+        "~navsul-pagrec"
+      ],
+      "publishedTimestamp": 1789948800000,
+      "source": "blog",
+      "path": "/blog/how-honk-got-fast",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "how honk got fast: identity, arenas, and a byte-exact oracle how honk made nockchain's hoon compiler 20× faster with native rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc. nockchain hoon nock compilers performance honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec /blog/how-honk-got-fast blog 2026-09-21 chris allen explains how honk made nockchain's hoon-138 compilation up to 20.6× faster while preserving byte-for-byte parity with hoonc, covering native rust arenas, hash-consed identities, seminoun optimization, caching, and the correctness oracle behind each change. honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec nockchain hoon nock compilers performance"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",
