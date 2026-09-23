@@ -24,8 +24,14 @@ search_terms = [
 [extra]
 author = "Chris Allen"
 ship = "~navsul-pagrec"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Honk/Blog_Honk_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Honk/Blog_Honk_Social+16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Honk/Blog_Honk_Banner.jpg"
+imageEmail = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Honk/Blog_Honk_Mail.jpg"
 tags = ["nockchain", "hoon", "nock", "compilers", "performance"]
 +++
+
+![Honk compiler concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_Honk/Blog_Honk_Hero.jpg)
 
 Last month's Contributor spotlight [interview](https://urbit.org/blog/contributor-spotlight-navsul-pagrec) I mentioned [honk](https://github.com/nockchain/nockchain/tree/master/crates/honk), the native Hoon compiler I wrote for [Nockchain](https://nockchain.org) and talked about why I built it. This post is intended as a follow on to describe the how: what honk does differently from the compiler it replaced, where the twenty-fold speedup actually came from, and keeping sure work stayed correct as performance improved. It gets relatively detailed, so be forewarned. While I won't provide a `TL;DR:` explicitly, I have tried to frontload the core takeaways.
 

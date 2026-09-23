@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T17:34:54.530Z",
+  "generatedAt": "2026-09-23T02:06:06.253Z",
   "total": 200,
   "entries": [
     {
@@ -2884,7 +2884,7 @@
       "path": "/blog/how-honk-got-fast",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "how honk got fast: identity, arenas, and a byte-exact oracle how honk made nockchain's hoon compiler 20× faster with native rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc. nockchain hoon nock compilers performance honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec /blog/how-honk-got-fast blog 2026-09-21 chris allen explains how honk made nockchain's hoon-138 compilation up to 20.6× faster while preserving byte-for-byte parity with hoonc, covering native rust arenas, hash-consed identities, seminoun optimization, caching, and the correctness oracle behind each change. honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec nockchain hoon nock compilers performance"
+      "searchText": "how honk got fast: identity, arenas, and a byte-exact oracle how honk made nockchain's hoon compiler 20× faster with native rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc. nockchain hoon nock compilers performance honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec /blog/how-honk-got-fast blog 2026-09-21 chris allen explains how honk made nockchain's hoon-138 compilation up to 20.6× faster while preserving byte-for-byte parity with hoonc, covering native rust arenas, hash-consed identities, seminoun optimization, caching, and the correctness oracle behind each change. honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_social+16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_mail.jpg nockchain hoon nock compilers performance"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",
