@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-15T23:19:59.930Z",
-  "total": 362,
+  "generatedAt": "2026-09-23T02:06:06.507Z",
+  "total": 363,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -1900,6 +1900,43 @@
       "agent_url": "https://urbit.org/.agents/blog/hosting-the-future.md",
       "agent_available": true,
       "agent_mode": "fallback"
+    },
+    {
+      "id": "blog/how-honk-got-fast.md",
+      "url": "https://urbit.org/blog/how-honk-got-fast",
+      "type": "blog",
+      "source_kind": "blog",
+      "title": "How honk got fast: identity, arenas, and a byte-exact oracle",
+      "summary": "Chris Allen explains how Honk made Nockchain's Hoon-138 compilation up to 20.6× faster while preserving byte-for-byte parity with hoonc, covering native Rust arenas, hash-consed identities, seminoun optimization, caching, and the correctness oracle behind each change.",
+      "description": "How Honk made Nockchain's Hoon compiler 20× faster with native Rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc.",
+      "tags": [
+        "nockchain",
+        "hoon",
+        "nock",
+        "compilers",
+        "performance"
+      ],
+      "search_terms": [
+        "Honk compiler",
+        "hoonc",
+        "Hoon compiler",
+        "Hoon-138",
+        "Nockchain",
+        "NockVM",
+        "Nock",
+        "native compiler",
+        "compiler performance",
+        "byte-for-byte parity",
+        "hash-consing",
+        "arena allocation",
+        "seminouns",
+        "nockasm",
+        "incremental compilation"
+      ],
+      "human_md_url": "https://urbit.org/blog/how-honk-got-fast.md",
+      "agent_url": "https://urbit.org/.agents/blog/how-honk-got-fast.md",
+      "agent_available": true,
+      "agent_mode": "dedicated"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",

@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [How honk got fast: identity, arenas, and a byte-exact oracle](/blog/how-honk-got-fast.md) — How Honk made Nockchain's Hoon compiler 20× faster with native Rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc.
 - [What Is Directed Messaging?](/blog/directed-messaging.md) — Directed Messaging brings content-centric networking to Urbit, making large peer-to-peer data transfers dramatically faster.
 - [Contributor Spotlight: ~migrev-dolseg](/blog/contributor-spotlight-migrev-dolseg.md) — A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software
 - [This Month in Urbit: August 2026](/blog/this-month-in-urbit-august-2026.md) — August 2026 brings Git, AT Protocol and Matrix clients, Noltbook, Grubbery experiments, and a Hawk-powered guitar course.
