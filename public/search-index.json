@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T02:06:06.253Z",
-  "total": 200,
+  "generatedAt": "2026-09-25T07:13:48.786Z",
+  "total": 201,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4641,6 +4641,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: may 2026 may ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools this-month-in-urbit ecosystem applications ai agents mcp this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads ~sarlev-sarsen /blog/this-month-in-urbit-may-2026 blog 2026-05-29 this month in urbit for may 2026 covers %notes, %boox, %last, hermes agent integration, tlon's agent experiments, %claw, %mcp, and recent contributor writing about agentic urbit and concurrent io in spider threads. this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social16_9.jpg this-month-in-urbit ecosystem applications ai agents mcp"
+    },
+    {
+      "id": "blog/this-month-in-urbit-september-2026.md",
+      "title": "This Month in Urbit: September 2026",
+      "description": "September 2026 brings quick comet booting, Orraah, Talon calls, Grubbery mail and calendar apps, %harness, an Urbit-native browser, Lattice, and %lift.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "grubbery",
+        "agents",
+        "native-clients"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "september 2026 urbit",
+        "quickstart comet",
+        "orraah",
+        "talon",
+        "%trunk",
+        "party line",
+        "%grubbery",
+        "%auspex",
+        "urbit calendar",
+        "%harness",
+        "urbit-browser",
+        "lattice",
+        "%lift"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1790294400000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-september-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: september 2026 september 2026 brings quick comet booting, orraah, talon calls, grubbery mail and calendar apps, %harness, an urbit-native browser, lattice, and %lift. this-month-in-urbit ecosystem applications grubbery agents native-clients this month in urbit september 2026 urbit quickstart comet orraah talon %trunk party line %grubbery %auspex urbit calendar %harness urbit-browser lattice %lift ~sarlev-sarsen /blog/this-month-in-urbit-september-2026 blog 2026-09-25 this month in urbit for september 2026 covers hawk's quickstart comet, orraah, talon's party lines, grubbery-based mail and calendar, %harness, urbit-browser, lattice, and %lift. this month in urbit september 2026 urbit quickstart comet orraah talon %trunk party line %grubbery %auspex urbit calendar %harness urbit-browser lattice %lift https://urbit.org/images/urbit-dither-placeholder.png this-month-in-urbit ecosystem applications grubbery agents native-clients"
     },
     {
       "id": "blog/tools-of-our-own.md",
