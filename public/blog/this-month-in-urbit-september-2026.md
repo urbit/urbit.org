@@ -15,7 +15,9 @@ This guide is written to be human-friendly, allowing you to follow along and lea
 
 As a slight departure from the quickstart sections of past "This Month in Urbit" posts, there are two new methods for running urbit ships worth mentioning:
 
-1. There is [a new 'quickstart comet' method from `~migrev-dolseg`](https://hawk.computer/-#installation-) that will rapidly boot you into a comet identity:
+### Comets with `%hawk`
+
+There is [a new 'quickstart comet' method from `~migrev-dolseg`](https://hawk.computer/-#installation-) that will rapidly boot you into a comet identity:
 
 ```
 uv run https://hawk.computer/-/try
@@ -25,7 +27,9 @@ This script only requires `uv` on your machine and otherwise smoothly handles al
 
 Lightweight and easy, this is probably the quickest way to boot a self-hosted urbit. It doesn't pretend to give you all the bells and whistles, but if you are aiming to poke around `%hawk` for the first time without making grand commitments, it is a great place to start.
 
-2. There is also a new, more robust, desktop GUI ship manager from `~fidzod-fidfes`: [Orraah](https://orraah.com) ('aura' as the zoomers in the audience would pronounce it).
+### Desktop GUIs for everyone, including Windows users
+
+There is also a new, more robust, desktop GUI ship manager from `~fidzod-fidfes`: [Orraah](https://orraah.com) ('aura' as the zoomers in the audience would pronounce it).
 
 Orraah is a ship manager and runner that supports managing the size of your ship's loom, runtime updates, and scheduling of automatic maintenance. Currently it supports booting a comet, a new planet from a keyfile, or running a ship in an arbitrary pier on your local machine. In the future, `~fidzod-fidfes` aims to provide a 'Planet Store' where new users can purchase Urbit IDs with a credit card and smoothly onboard to a peer-to-peer commerce platform and app store.
 
@@ -59,19 +63,23 @@ One such creation is `%trunk`, a bit of connective tissue that enables the 'part
 
 The other endeavor you will implicitly discover by installing and using the Talon client: `~ricsul-bilwyt` is starting to build on top of `%grubbery` (from `~niblyx-malnus` and the Groundwire Foundation). Two apps that will jump out at you, in particular: Mail and Calendar. Both are built on top of the `%grubbery` application model and add excellent capabilities to your Urbit. To install and use them, look for the envelope and calendar icons in the Talon sidebar and approve the app installs. Give it an 'urbit second' to install, and then explore your newfound powers.
 
+### Long-form, tree-shaped conversations
+
 Mail, built on the `%auspex` protocol, is an Urbit-native threaded conversation application. In many ways—including in having [a Thunderbird client available for installation](https://github.com/nisfeb/auspex/tree/master/thunderbird)—it behaves as a classic email experience: threaded and possibly branching conversations, adding and removing discussion participants ("Moving `~sampel-palnet` to cc so we don't clog up his inbox" remains a lovely and respectful pattern to use with your peers), and forwarding messages to others are all available. There's even a size limit for attached files, in case you missed having your email client yell at you about files >35MB (to be removed in the coming months as `vere64` launches, naturally).
 
 Full legacy-email compatibility was even considered during the protocol design stage. But for a new era, one where *"Nock is the only legal form of computing"*, breaking compatibility was determined to be the better path. In the words of `~ricsul-bilwyt`, "I really value this communication form and want it to exist so it does. I recommend having longer, slower, branching, threaded conversations."
 
+### Your calendars, now on Urbit
+
 Calendar, also a `%grubbery` app, is... What it says on the tin. A calendar with events, recurrences, timezones, and sharing. It also includes syncing and import options for your Earth calendar, e.g. as ICS or CalDAV, or even fully syncing your Google Calendar via an OAuth client. It isn't necessarily something *new* in a grand sense, but just one more step in the direction of Urbit being able to be the place you do your computing, hold your data, and make your network connections work for you. And of course you can access it via the desktop or mobile Talon clients, or on any machine from which you access your urbit in the browser.
 
-As you might imagine, this porting of legacy protocols (and legacy-protocol-inspired tooling) is massively accelerated by both `%grubbery` as an experimental application model (currently implemented inside of Gall), and AI tooling. One could make the case that there is lots of 'hype' in the AI space, like with "Jev" and possible application interactions enabled by very fast and low-latency AI interactions. And of course, that skepticism isn't always wrong. But we will take this as the opportunity to make the case that [the benefits of a tiny, deterministic, networked, typed, self-sovereign state machine](https://x.com/urbit/status/2103185879770734975?s=20) are just starting to spread their wings. That all that work to make something small and perfect is paying off in a world which is experiencing wild expansion of code generation and excitement. Take, for example, this interaction on the network from a few days ago:
+As you might imagine, this porting of legacy protocols (and legacy-protocol-inspired tooling) is massively accelerated by both `%grubbery` as an experimental application model (currently implemented inside of Gall), and AI tooling. One could make the case that there is lots of 'hype' in the AI space, like with "Jev" and possible [application interactions enabled by very fast and low-latency AI responses](https://x.com/anishfn/status/2102327334485557422?s=20). And of course, that skepticism isn't always wrong. But we will take this as the opportunity to make the case that [the benefits of a tiny, deterministic, networked, typed, self-sovereign state machine](https://x.com/urbit/status/2103185879770734975?s=20) are just starting to spread their wings. That all that work to make something small and perfect is paying off in a world which is experiencing wild expansion of code generation and excitement. Take, for example, this interaction on the network from a few days ago:
 
-```
-~sarlev @ 12:10 AM: what could you do with this + a grubbery: https://x.com/anishfn/status/2102327334485557422?s=20
-~niblyx-malnus @ 3:32 AM: pointing a clanker at it now
-~niblyx-malnus @ 5:59 AM: Built it, that was easy. Doesn't even need jev.
-```
+> **~sarlev @ 12:10 AM:** what could you do with this + a grubbery: https://x.com/anishfn/status/2102327334485557422?s=20
+
+> **~niblyx-malnus @ 3:32 AM:** pointing a clanker at it now
+
+> **~niblyx-malnus @ 5:59 AM:** Built it, that was easy. Doesn't even need jev.
 
 And the result, [an interaction mode that creates mini grub apps](https://drive.google.com/file/d/14xOaj3S41tDZcEzHM8KCD6q9V9RUdg-k/view?usp=sharing) which can then be shared and collaborated on with your friends across the network. Now, this isn't a polished product. And sure, lots of people are building things fast with AI. But, as the coming months are going to show, the foundations that Urbit has built are strong for exactly the kind of bespoke, *sharable*, and *collaborative* digital experiences that people are yearning for. Things that are only possible when you have a peer-to-peer personal server that comes with identity and networking baked in.
 
@@ -80,6 +88,8 @@ And the result, [an interaction mode that creates mini grub apps](https://drive.
 Not to let the `%grubbery` enthusiasts have all the fun, the ever-prolific `~mopfel-winrux` and `~sitful-hatred` continue to both enable—and be enabled by—AI agent development in Gall. Starting to leak their way into the shared Urbit consciousness, `urbit-browser` and `%harness` are both projects that are built with the assistance of agents, and for the purpose of putting your agents in your urbit.
 
 *While the Talon client and the various on-ship protocols listed above are in use on many users' primary livenet ships, we'll make the note that these projects are a bit more 'in-flight' so it would be best to experiment with them on a moon.*
+
+### The harness is *in the computer*
 
 `%harness` is an ongoing experiment to put the entirety of a modern LLM harness into your ship. Why? You could say, "So we can have Meta's Muse, minus all the walled gardens and spyware." So your agents can be *yours*. And of course since Urbit isn't just a decentralized peer-to-peer chat app, or a bloated systemd process running in some sort of messy tailnet or `libp2p` swarm, you can get all of the things that a MEGACORP-managed cloud VM offers—granular controls over agent conversations, collaborative [projects](https://www.anthropic.com/news/projects), publishable artifacts, and of course direct access to all of your past sessions. All in a way that is purely *yours*.
 
@@ -90,6 +100,8 @@ If you didn't boot from the September TMIU pill, pick it up from `~sitful-hatred
 ```
 
 Sign in with your ChatGPT subscription, add an Anthropic or OpenRouter API key, or set up your own endpoint and get to chatting with your ship. Experiment around and see what you find—and what you can make!
+
+### A protocol for browsing the clearweb
 
 As a subset of this effort, `~mopfel-winrux`'s [urbit-native headless browser](https://github.com/mopfel-winrux/urbit-browser) is a feat in its own right. A web browser, in your urbit. Designed to be included in `%harness`, having a headless browser inside your self-hosted urbit offers an amazing benefit in the world of "AI Agents with a Virtual Machine": your agent's browser requests look like they are coming from a home IP, and thus are less likely to get flagged as spam and blocked from accessing resources on the legacy internet. To pull this off it runs entirely within Urbit, requesting pages via `%iris` and then processing them in a JavaScript page runtime via [UrWASM](https://urbitsystems.tech/article/v01-i01/the-urwasm-webassembly-interpreter-suite-on-urbit). An absolutely impressive undertaking that builds on years of critical core development efforts.
 
