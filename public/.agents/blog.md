@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/this-month-in-urbit-september-2026.md"
   - "/blog/how-honk-got-fast.md"
   - "/blog/directed-messaging.md"
   - "/blog/contributor-spotlight-migrev-dolseg.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/building-white-marble.md"
   - "/blog/contributor-spotlight-sicdev-pilnup.md"
   - "/blog/this-month-in-urbit-june-2026.md"
-  - "/blog/languages-on-nock.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [This Month in Urbit: September 2026](/.agents/blog/this-month-in-urbit-september-2026.md) — September 2026 brings quick comet booting, Orraah, Talon calls, Grubbery mail and calendar apps, %harness, an Urbit-native browser, Lattice, and %lift.
 - [How honk got fast: identity, arenas, and a byte-exact oracle](/.agents/blog/how-honk-got-fast.md) — How Honk made Nockchain's Hoon compiler 20× faster with native Rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc.
 - [What Is Directed Messaging?](/.agents/blog/directed-messaging.md) — Directed Messaging brings content-centric networking to Urbit, making large peer-to-peer data transfers dramatically faster.
 - [Contributor Spotlight: ~migrev-dolseg](/.agents/blog/contributor-spotlight-migrev-dolseg.md) — A conversation with ~migrev-dolseg on personal computing, Kelvin 0, %hawk, reactive interfaces, and LLM-native software
