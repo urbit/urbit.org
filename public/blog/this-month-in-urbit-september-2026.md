@@ -119,4 +119,12 @@ Long the focal point of the Urbit native application experience were mobile clie
 
 ## Touch grass, pick up heavy things, and share with `%pals`
 
-Now, maybe you are wanting an escape from the AI psychosis and the pace of acceleration. We get it. In that case, we *won't* tell you about `~littel-wolfur`'s urbit-native harness. We'll save that for another day. But we will tell you about what he built with it: `%lift`. An app for tracking your lifts and sharing them with your `%pals`. Go outside. Lift some weights. Be in your body. And only just for a moment when you get home, share it with your internet friends.
+Now, maybe you are wanting an escape from the AI psychosis and the pace of acceleration. We get it. In that case, we *won't* tell you about `~littel-wolfur`'s urbit-native harness. We'll save that for another day. But we will tell you about what he built with it: `%lift`. An app for tracking your lifts and sharing them with your `%pals`.
+
+Install `%lift` with:
+
+```
+|install ~dister-littel-wolfur %lift
+```
+
+Go outside. Lift some weights. Be in your body. And only just for a moment when you get home, share it with your internet friends.
