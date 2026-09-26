@@ -23,19 +23,21 @@ search_terms = [
 
 [extra]
 ship = "~sarlev-sarsen"
-# TODO: Replace the placeholder images before publication.
-image = "https://urbit.org/images/urbit-dither-placeholder.png"
-imageCard = "https://urbit.org/images/urbit-dither-placeholder.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/Blog_TMIU+September_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/Blog_TMIU+September_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/Blog_TMIU+September_Banner.jpg"
 tags = ["this-month-in-urbit", "ecosystem", "applications", "grubbery", "agents", "native-clients"]
 +++
 
-![September 2026 This Month in Urbit artwork placeholder](/images/urbit-dither-placeholder.png)
+![September 2026 This Month in Urbit concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/Blog_TMIU+September_Hero.jpg)
 
 Welcome to This Month in Urbit, our series for sharing recent happenings from around the Urbit network. To fully participate, you will need to know how to run an Urbit ship. If you don't know how to do that yet, point your favorite AI agent at this page and it will help get you started. Or [check out the getting started documentation](https://docs.urbit.org/get-on-urbit) to do it the old-school way. Or, read on for more new ways to get started running urbits—it is getting easier by the day!
 
 This guide is written to be human-friendly, allowing you to follow along and learn something new. Embedded in this page are also instructions for your agent; share the link and your agent should help you through getting the enclosed items up and running. The AI landscape is fast-moving and variable, so we can't guarantee everything will work smoothly, but we try to test across various models and agent harnesses. If you or your agents ever get stuck, just give a shout in [The Urbit Foundation group on Tlon Messenger](https://join.tlon.io/0v3.r87kb.fjpft.3k7b5.pbsr5.5em17) and we'll help you out.
 
 ## September boot methods
+
+![September 2026 Urbit boot methods concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/TIMU+September_New+Boot+Methods.jpg)
 
 As a slight departure from the quickstart sections of past "This Month in Urbit" posts, there are two new methods for running urbit ships worth mentioning:
 
@@ -77,6 +79,8 @@ As usual, the pill also includes `%mcp` from [The Groundwire Foundation](https:/
 
 ## More `%groups` clients, and more than `%groups` in your clients
 
+![September 2026 Urbit clients concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/TIMU+September_Clients.jpg)
+
 Tlon continues to ship updates to their `%groups` application and native mobile apps. This month they made the jump on iOS to styling more in line with Apple's 'Liquid Glass'. So if you've kept up to date with iOS updates (you should, as [they recently fixed some large security flaws](https://cryptobriefing.com/safari-zero-day-exploit-iphone-crypto-wallets/)), this will be a welcome unification to the look and feel of your mobile experience.
 
 [Talon](https://talon.nisfeb.com), an alternative cross-platform Urbit client from `~ricsul-bilwyt` of `~nisfeb` Software, is also continually shipping updates that enable you to interact with your urbit's `%groups` protocol. In addition to being a fully featured `%groups` client, Talon is expanding out to serve as a client to other parts of your urbit.
@@ -84,6 +88,8 @@ Tlon continues to ship updates to their `%groups` application and native mobile 
 One such creation is `%trunk`, a bit of connective tissue that enables the 'party line' feature in Talon. What is the 'party line', you ask? It builds on top of `%groups` to enable peer-to-peer calling connected to a group. If you are in a group where the host has party line enabled (and `%trunk` installed), you can click a button and join into a video call room. `%trunk` mediates peer-to-peer client connections over `%ames` and, if needed, utilizes a TURN service from `~nisfeb` to ensure a smooth experience. The host can record the call, generate transcriptions, and more. A great tool for digital communities looking for a more direct way to connect.
 
 ## Grubbery at the bleeding edge
+
+![September 2026 Grubbery applications concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+September/TIMU+September_Grubbery.jpg)
 
 The other endeavor you will implicitly discover by installing and using the Talon client: `~ricsul-bilwyt` is starting to build on top of `%grubbery` (from `~niblyx-malnus` and the Groundwire Foundation). Two apps that will jump out at you, in particular: Mail and Calendar. Both are built on top of the `%grubbery` application model and add excellent capabilities to your Urbit. To install and use them, look for the envelope and calendar icons in the Talon sidebar and approve the app installs. Give it an 'urbit second' to install, and then explore your newfound powers.
 
