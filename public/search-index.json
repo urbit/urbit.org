@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T00:20:49.223Z",
-  "total": 201,
+  "generatedAt": "2026-09-28T17:02:16.970Z",
+  "total": 202,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -3862,6 +3862,40 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "providers we’ve always assumed that providers would have to come into existence sooner or later. by the look of it, that time is now. tlon and a few others have provider-like services in the works. urbit providers hosting providers onboarding planet hosting urbit service address space provider business urbit hosting community access provider examples tlon provider galen wolfe-pauly ~ravmel-ropdyl /blog/providers blog 2020-08-17 ecosystem announcement documenting third-party hosting services, comparing offerings, pricing, and features while maintaining standards for reliability and data portability. urbit providers hosting providers onboarding planet hosting urbit service address space provider business urbit hosting community access provider examples tlon provider galen wolfe-pauly ~ravmel-ropdyl https://storage.googleapis.com/media.urbit.org/site/posts/essays/providers.png"
+    },
+    {
+      "id": "blog/reactive-ui-in-hawk.md",
+      "title": "Reactive UI in hawk",
+      "description": "Hawk has a new reactive UI system.",
+      "tags": [
+        "hawk",
+        "hoon",
+        "reactive-ui",
+        "developers"
+      ],
+      "searchTerms": [
+        "reactive UI in Hawk",
+        "Hawk",
+        "Hawk 499",
+        "reactive UI",
+        "Hoon UI",
+        "Plume",
+        "Datastar",
+        "Gall subscriptions",
+        "vitals",
+        "Urbit frontend",
+        "server-rendered UI"
+      ],
+      "authors": [
+        "Will Hanlen",
+        "~migrev-dolseg"
+      ],
+      "publishedTimestamp": 1790553600000,
+      "source": "blog",
+      "path": "/blog/reactive-ui-in-hawk",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "reactive ui in hawk hawk has a new reactive ui system. hawk hoon reactive-ui developers reactive ui in hawk hawk hawk 499 reactive ui hoon ui plume datastar gall subscriptions vitals urbit frontend server-rendered ui will hanlen ~migrev-dolseg /blog/reactive-ui-in-hawk blog 2026-09-28 hawk has a new reactive ui system. it renders data from any app on your ship in a way that live-updates on the screen as it changes. reactive ui in hawk hawk hawk 499 reactive ui hoon ui plume datastar gall subscriptions vitals urbit frontend server-rendered ui will hanlen ~migrev-dolseg hawk hoon reactive-ui developers"
     },
     {
       "id": "blog/2021-11-18-report-from-the-field.md",
