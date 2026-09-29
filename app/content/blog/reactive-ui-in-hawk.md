@@ -33,6 +33,21 @@ Developers no longer need to know javascript! The whole reactive sytem is writte
 
 For an example of something rendered with this system, check out the [Hoon crash course](https://hawk.computer/+/hawk-crash-course). (you might even learn some hoon)
 
+If you already have a running ship, you can download hawk from me:
+
+```
+|install ~dister-migrev-dolseg
+```
+
+or if you want a experimental environment, I made a little quickstart script that will boot you a comet and automatically drop you into an authenticated browser session: 
+
+```
+uv run https://hawk.computer/-/try
+```
+
+(Its only dependency is `uv`.)
+
+
 ## How it works
 
 A reactive component is a door with four arms, typed by its model:
