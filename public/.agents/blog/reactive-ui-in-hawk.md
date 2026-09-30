@@ -19,6 +19,8 @@ Hawk has a new reactive UI system.
 - Date: 2026-09-28
 - Author: Will Hanlen, ~migrev-dolseg
 
+![Reactive UI in Hawk concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Hero.jpg)
+
 Hawk has a new reactive UI system.
 
 It renders data from any app on your ship in a way that live-updates on the screen as it changes.
@@ -28,6 +30,20 @@ Hawk handles the hard parts, you just connect to the data you want, write the UI
 Developers no longer need to know javascript! The whole reactive sytem is written in hoon.
 
 For an example of something rendered with this system, check out the [Hoon crash course](https://hawk.computer/+/hawk-crash-course). (you might even learn some hoon)
+
+If you already have a running ship, you can download hawk from me:
+
+```
+|install ~dister-migrev-dolseg
+```
+
+or if you want a experimental environment, I made a little quickstart script that will boot you a comet and automatically drop you into an authenticated browser session:
+
+```
+uv run https://hawk.computer/-/try
+```
+
+(Its only dependency is `uv`.)
 
 ## How it works
 

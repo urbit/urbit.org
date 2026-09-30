@@ -20,8 +20,14 @@ search_terms = [
 [extra]
 author = "Will Hanlen"
 ship = "~migrev-dolseg"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Banner.jpg"
+imageEmail = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Mail.jpg"
 tags = ["hawk", "hoon", "reactive-ui", "developers"]
 +++
+
+![Reactive UI in Hawk concept art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+Reactive+UI/Blog_Reactive+UI_Hero.jpg)
 
 Hawk has a new reactive UI system.
 
@@ -39,14 +45,13 @@ If you already have a running ship, you can download hawk from me:
 |install ~dister-migrev-dolseg
 ```
 
-or if you want a experimental environment, I made a little quickstart script that will boot you a comet and automatically drop you into an authenticated browser session: 
+or if you want a experimental environment, I made a little quickstart script that will boot you a comet and automatically drop you into an authenticated browser session:
 
 ```
 uv run https://hawk.computer/-/try
 ```
 
 (Its only dependency is `uv`.)
-
 
 ## How it works
 
