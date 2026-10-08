@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T03:55:04.516Z",
-  "total": 202,
+  "generatedAt": "2026-10-08T00:52:03.719Z",
+  "total": 203,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2171,6 +2171,42 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~bonbud-macryg & ~niblyx-malnus a conversation with groundwire developers ~bonbud-macryg and ~niblyx-malnus on urbit, ai, and building beautiful computers ai design architecture ~sarlev-sarsen /blog/contributor-spotlight-niblyx-malnus-and-bonbud-macryg blog 2026-1-20 groundwire developers ~bonbud-macryg and ~niblyx-malnus explore urbit for ai, building llm tools like clurd and mcp servers, and urbit as a trustworthy personal computing platform. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+~niblyx-malnus+and+~bonbud-macryg/blog_qa+~niblyx-malnus+and+~bonbud-macryg_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+~niblyx-malnus+and+~bonbud-macryg/blog_qa+~niblyx-malnus+and+~bonbud-macryg_social16_9.png ai design architecture contributor spotlight groundwire bonbud macryg niblyx malnus urbit ai llm tools christopher alexander mcp server urbit master architecture design hoon"
+    },
+    {
+      "id": "blog/contributor-spotlight-disden-talhes.md",
+      "title": "Contributor Spotlight: ~disden-talhes",
+      "description": "A conversation with ~disden-talhes on identity, claims, Noltbook, Glurff, virtual ships, and why composability requires rules",
+      "tags": [
+        "spotlight",
+        "identity",
+        "noltbook",
+        "glurff",
+        "personal-computing"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "~disden-talhes",
+        "Noltbook",
+        "Glurff",
+        "Theseus",
+        "Urbit identity",
+        "digital signatures",
+        "personal server",
+        "social computing",
+        "composable software",
+        "virtual ships",
+        "Urbit apps",
+        "Pals"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1791849600000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-disden-talhes",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~disden-talhes a conversation with ~disden-talhes on identity, claims, noltbook, glurff, virtual ships, and why composability requires rules spotlight identity noltbook glurff personal-computing contributor spotlight ~disden-talhes noltbook glurff theseus urbit identity digital signatures personal server social computing composable software virtual ships urbit apps pals ~sarlev-sarsen /blog/contributor-spotlight-disden-talhes blog 2026-10-13 ~disden-talhes discusses finding urbit through questions of truth and identity, building noltbook as an opinionated social toolkit, and extending it through glurff and theseus. contributor spotlight ~disden-talhes noltbook glurff theseus urbit identity digital signatures personal server social computing composable software virtual ships urbit apps pals tk spotlight identity noltbook glurff personal-computing"
     },
     {
       "id": "blog/contributor-spotlight-dozreg-toplud.md",
