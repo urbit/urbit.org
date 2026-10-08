@@ -80,7 +80,7 @@ Community is something I definitely missed out on. When I was young, I could fin
 
 Finding people who are interested in the same weird niche thing matters. How many people do you bump into during a day, and how many of them will also land on that specific thing?
 
-> **\~sarlev:** What is Noltbook?
+> **\~sarlev:** Speaking of specific things--you've been working on a thing that is specific to the way you want to use Urbit. What is Noltbook?
 
 **\~disden-talhes:** Ultimately, it’s a chat app. It has what I would call minimum viable chat, which is quite a bit more than what other people would call minimum viable chat.
 
@@ -120,7 +120,7 @@ Anybody could do this. Anybody could spawn multiple planets and use them to let 
 
 > **\~sarlev:** Does Theseus require changes below userspace?
 
-**\~disden-talhes:** It uses modified Vere, I believe. There are a couple of ways we can do this. At the time you were on, we were running a sidecar to go outside. You basically pop out of Urbit and then pop back in, so you could still do that.
+**\~disden-talhes:** Right now, it uses a modified Vere. But, there are a couple of ways we can do this. At the time you were on, we were running a sidecar to go outside. You basically pop out of Urbit and then pop back in, so you could still do that.
 
 I think modified Vere is probably a little easier, though it’s more invasive to Urbit. No one else on the network knows the difference either way. It would be nice if we could get an upstream change, but we’ll see. We’ll try.
 
