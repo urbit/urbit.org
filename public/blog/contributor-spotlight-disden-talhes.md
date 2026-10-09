@@ -123,8 +123,4 @@ The bricks don’t necessarily sway in the wind. They’re not as flexible as th
 
 > **\~sarlev:** If you weren’t working on Urbit, what would you be doing with your free time instead?
 
-**\~disden-talhes:** I don’t even know if I can answer that. It wouldn’t be pretty. Urbit is a very powerful, positive force in my life. I’m an insane person. I’ve played fast and loose with much of my life. I’m much older and maybe even slightly wiser, but I can’t imagine what I would be doing.
-
-Nothing good, I’d say. Maybe I’m not giving myself enough credit. I would find something else positive. But this is definitely one of the most interesting things I’ve stumbled upon, and for that alone it’s worth dedicating time and interest to. It’s hilarious, number one—it’s super funny—and then there are layers. It’s pretty in-depth.
-
-What would I be doing? Most likely, nothing good.
+**\~disden-talhes:** But I am working on Urbit.
