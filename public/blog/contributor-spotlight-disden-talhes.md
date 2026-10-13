@@ -5,6 +5,8 @@ A conversation with ~disden-talhes on identity, claims, Noltbook, Glurff, virtua
 - Date: 2026-10-13
 - Author: ~sarlev-sarsen
 
+![~disden-talhes Contributor Spotlight Art](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+QA+disden-talhes/Blog_QA+disden-talhes_Hero.jpg)
+
 > **\~sarlev:** What first drew you into the idea that we needed to throw away and rewrite the entire networked computing stack?
 
 **\~disden-talhes:** Do I even agree with the premise of the question? I think it’s funny and fun.
