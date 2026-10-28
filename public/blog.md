@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [Glurff, because it would be funny](/blog/glurff-because-it-would-be-funny.md) — Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.
 - [Contributor Spotlight: ~disden-talhes](/blog/contributor-spotlight-disden-talhes.md) — A conversation with ~disden-talhes on identity, claims, Noltbook, Glurff, virtual ships, and why composability requires rules
 - [Reactive UI in hawk](/blog/reactive-ui-in-hawk.md) — Hawk has a new reactive UI system.
 - [This Month in Urbit: September 2026](/blog/this-month-in-urbit-september-2026.md) — September 2026 brings quick comet booting, Orraah, Talon calls, Grubbery mail and calendar apps, %harness, an Urbit-native browser, Lattice, and %lift.

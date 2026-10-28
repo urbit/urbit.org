@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-13T23:59:01.870Z",
-  "total": 366,
+  "generatedAt": "2026-10-28T01:23:40.932Z",
+  "total": 367,
   "entries": [
     {
       "id": "synthetic/homepage",
@@ -1773,6 +1773,42 @@
       "agent_url": "https://urbit.org/.agents/blog/gifts-q3-2020.md",
       "agent_available": true,
       "agent_mode": "fallback"
+    },
+    {
+      "id": "blog/glurff-because-it-would-be-funny.md",
+      "url": "https://urbit.org/blog/glurff-because-it-would-be-funny",
+      "type": "blog",
+      "source_kind": "blog",
+      "title": "Glurff, because it would be funny",
+      "summary": "Glurff turns Noltbook into a spatial, pixel-art social world. Visit through a one-click guest moon, or install Glurff and Noltbook on your own ship to explore its opinionated vision of composable Urbit software.",
+      "description": "Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.",
+      "tags": [
+        "glurff",
+        "noltbook",
+        "apps",
+        "virtualization",
+        "social-computing"
+      ],
+      "search_terms": [
+        "Glurff",
+        "Noltbook",
+        "Theseus",
+        "Manor",
+        "Urbit apps",
+        "Urbit social software",
+        "pixel art world",
+        "virtual office",
+        "virtual moons",
+        "Vere",
+        "composable software",
+        "one-click onboarding",
+        "~disden-talhes",
+        "~nolset"
+      ],
+      "human_md_url": "https://urbit.org/blog/glurff-because-it-would-be-funny.md",
+      "agent_url": "https://urbit.org/.agents/blog/glurff-because-it-would-be-funny.md",
+      "agent_available": true,
+      "agent_mode": "dedicated"
     },
     {
       "id": "blog/governance-of-urbit.md",
