@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-13T23:59:01.670Z",
-  "total": 203,
+  "generatedAt": "2026-10-28T01:23:40.725Z",
+  "total": 204,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2797,6 +2797,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "gifts q3 2020 twice a year we distribute address space to those that have made valuable contributions to urbit. now called our gifts program, the gifting of address space has been part of urbit long before we had a grants program. gift gifts program address space urbit gifts community contributors grants program galaxy gifts star awards urbit foundation network growth urbit rewards josh lehman ~wolref-podlex /blog/gifts-q3-2020 blog 2020-09-22 quarterly grants distribution announcement recognizing technical contributions, documentation improvements, community building efforts, and ecosystem development work across urbit's open source projects. gifts program address space urbit gifts community contributors grants program galaxy gifts star awards urbit foundation network growth urbit rewards josh lehman ~wolref-podlex https://media.urbit.org/site/posts/essays/gifts.png"
+    },
+    {
+      "id": "blog/glurff-because-it-would-be-funny.md",
+      "title": "Glurff, because it would be funny",
+      "description": "Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.",
+      "tags": [
+        "glurff",
+        "noltbook",
+        "apps",
+        "virtualization",
+        "social-computing"
+      ],
+      "searchTerms": [
+        "Glurff",
+        "Noltbook",
+        "Theseus",
+        "Manor",
+        "Urbit apps",
+        "Urbit social software",
+        "pixel art world",
+        "virtual office",
+        "virtual moons",
+        "Vere",
+        "composable software",
+        "one-click onboarding",
+        "~disden-talhes",
+        "~nolset"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1793059200000,
+      "source": "blog",
+      "path": "/blog/glurff-because-it-would-be-funny",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "glurff, because it would be funny enter glurff, a pixel-art world built on noltbook, through a one-click guest moon or by installing it on your own urbit ship. glurff noltbook apps virtualization social-computing glurff noltbook theseus manor urbit apps urbit social software pixel art world virtual office virtual moons vere composable software one-click onboarding ~disden-talhes ~nolset ~sarlev-sarsen /blog/glurff-because-it-would-be-funny blog 2026-10-27 glurff turns noltbook into a spatial, pixel-art social world. visit through a one-click guest moon, or install glurff and noltbook on your own ship to explore its opinionated vision of composable urbit software. glurff noltbook theseus manor urbit apps urbit social software pixel art world virtual office virtual moons vere composable software one-click onboarding ~disden-talhes ~nolset https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_glurff/blog_glurff_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_glurff/blog_glurff_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_glurff/blog_glurff_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_glurff/blog_glurff_mail.jpg glurff noltbook apps virtualization social-computing"
     },
     {
       "id": "blog/governance-of-urbit.md",
