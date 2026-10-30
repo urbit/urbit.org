@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-28T01:23:40.725Z",
-  "total": 204,
+  "generatedAt": "2026-10-30T17:44:13.709Z",
+  "total": 205,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -110,7 +110,7 @@
       "sectionLabel": "Overview",
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
-      "searchText": "buy an urbit id learn how to acquire your own self-sovereign digital identity urbit-id buy urbit id urbit planet azimuth identity layer 1 nft layer 2 rollup opensea marketplace subject network pocwet store bitcoin planet credit card planet galaxy star ids self sovereign identity /overview/running-urbit/get-urbit-id#buy-an-urbit-id overview running urbit acquire a self-sovereign urbit id via layer 1 nft marketplaces like opensea or layer 2 providers accepting bitcoin or credit cards, with planets (4-syllable @p) recommended for new users. buy urbit id urbit planet azimuth identity layer 1 nft layer 2 rollup opensea marketplace subject network pocwet store bitcoin planet credit card planet galaxy star ids self sovereign identity opensea https://opensea.io/collection/urbit-id an nft marketplace that supports trading layer 1 urbit ids subject.network https://subject.network/buy/ buy a layer 2 planet with bitcoin ~pocwet https://store.pocwet.com/ buy a layer 2 planet with a credit card"
+      "searchText": "buy an urbit id learn how to acquire your own self-sovereign digital identity urbit-id buy urbit id urbit planet azimuth identity layer 1 nft layer 2 rollup opensea marketplace subject network pocwet store bitcoin planet credit card planet galaxy star ids self sovereign identity /overview/running-urbit/get-urbit-id#buy-an-urbit-id overview running urbit acquire a self-sovereign urbit id via layer 1 nft marketplaces like opensea or layer 2 providers accepting bitcoin or credit cards, with planets (4-syllable @p) recommended for new users. buy urbit id urbit planet azimuth identity layer 1 nft layer 2 rollup opensea marketplace subject network pocwet store bitcoin planet credit card planet galaxy star ids self sovereign identity opensea https://opensea.io/collection/urbit-id an nft marketplace that supports trading layer 1 urbit ids subject.network https://buy.subject.network/ buy a layer 2 planet with bitcoin ~pocwet https://store.pocwet.com/ buy a layer 2 planet with a credit card"
     },
     {
       "id": "blurbs/check-and-reduce-memory-usage.md",
@@ -4748,6 +4748,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: may 2026 may ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools this-month-in-urbit ecosystem applications ai agents mcp this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads ~sarlev-sarsen /blog/this-month-in-urbit-may-2026 blog 2026-05-29 this month in urbit for may 2026 covers %notes, %boox, %last, hermes agent integration, tlon's agent experiments, %claw, %mcp, and recent contributor writing about agentic urbit and concurrent io in spider threads. this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social16_9.jpg this-month-in-urbit ecosystem applications ai agents mcp"
+    },
+    {
+      "id": "blog/this-month-in-urbit-october-2026.md",
+      "title": "This Month in Urbit: October 2026",
+      "description": "October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "identity",
+        "agents",
+        "native-clients"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "october 2026 urbit",
+        "sign in with urbit",
+        "duel duet",
+        "azimov",
+        "aero",
+        "harbor",
+        "nockmilio",
+        "nock experiments",
+        "%glurff",
+        "%heathcliff",
+        "%utilities",
+        "x402 payments",
+        "atlas arms"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1793318400000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-october-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: october 2026 october brings sign in with urbit, new ship managers and mobile clients, glurff, heathcliff, browser utilities, and tools built for their owners. this-month-in-urbit ecosystem applications identity agents native-clients this month in urbit october 2026 urbit sign in with urbit duel duet azimov aero harbor nockmilio nock experiments %glurff %heathcliff %utilities x402 payments atlas arms ~sarlev-sarsen /blog/this-month-in-urbit-october-2026 blog 2026-10-30 october 2026's urbit roundup covers eauth games, azimov networking, aero, harbor, nockmilio, nock experiments, glurff, heathcliff, browser utilities, x402 payments, and atlas arms' urbit-backed tools. this month in urbit october 2026 urbit sign in with urbit duel duet azimov aero harbor nockmilio nock experiments %glurff %heathcliff %utilities x402 payments atlas arms this-month-in-urbit ecosystem applications identity agents native-clients"
     },
     {
       "id": "blog/this-month-in-urbit-september-2026.md",
