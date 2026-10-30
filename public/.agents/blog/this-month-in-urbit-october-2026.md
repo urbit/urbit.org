@@ -85,6 +85,14 @@ As we covered in our recent article, ["Glurff, because it would be funny"](/blog
 |install ~nolset %glurff
 ```
 
+If you enjoyed the creativity of Glurff, you may also like `%fhloston-poker` from `~foghet-filweb`:
+
+```hoon
+|install ~forbes-marmet %fhloston-poker
+```
+
+Play heads up Texas Hold 'Em with other urbiters and build up your winnings and your reputation as the most cut-throat card shark on the network.
+
 `~nomryg-nilref` continues to ship updates to `%obelisk` and `%graph-viz`, this month providing them interfaces from his new UI framework, ["UrUI"](https://github.com/jackfoxy/urui). He also has a fresh app release this month: `%heathcliff`:
 
 ```hoon
