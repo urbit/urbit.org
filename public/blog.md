@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [This Month in Urbit: October 2026](/blog/this-month-in-urbit-october-2026.md) — October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.
 - [Glurff, because it would be funny](/blog/glurff-because-it-would-be-funny.md) — Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.
 - [Contributor Spotlight: ~disden-talhes](/blog/contributor-spotlight-disden-talhes.md) — A conversation with ~disden-talhes on identity, claims, Noltbook, Glurff, virtual ships, and why composability requires rules
 - [Reactive UI in hawk](/blog/reactive-ui-in-hawk.md) — Hawk has a new reactive UI system.

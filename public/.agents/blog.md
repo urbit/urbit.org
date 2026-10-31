@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/this-month-in-urbit-october-2026.md"
   - "/blog/glurff-because-it-would-be-funny.md"
   - "/blog/contributor-spotlight-disden-talhes.md"
   - "/blog/reactive-ui-in-hawk.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/contributor-spotlight-migrev-dolseg.md"
   - "/blog/this-month-in-urbit-august-2026.md"
   - "/blog/contributor-spotlight-navsul-pagrec.md"
-  - "/blog/this-month-in-urbit-july-2026.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [This Month in Urbit: October 2026](/.agents/blog/this-month-in-urbit-october-2026.md) — October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.
 - [Glurff, because it would be funny](/.agents/blog/glurff-because-it-would-be-funny.md) — Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.
 - [Contributor Spotlight: ~disden-talhes](/.agents/blog/contributor-spotlight-disden-talhes.md) — A conversation with ~disden-talhes on identity, claims, Noltbook, Glurff, virtual ships, and why composability requires rules
 - [Reactive UI in hawk](/.agents/blog/reactive-ui-in-hawk.md) — Hawk has a new reactive UI system.
