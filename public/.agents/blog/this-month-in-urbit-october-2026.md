@@ -23,6 +23,8 @@ October brings Sign in with Urbit, new ship managers and mobile clients, Glurff,
 - Date: 2026-10-30
 - Author: ~sarlev-sarsen
 
+![October 2026 This Month in Urbit artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/Blog_TMIU+October_Hero.jpg)
+
 Welcome to This Month in Urbit. This is month #7 of doing these recaps and things are officially heating up. We have disclaimed before that Urbit is a decentralized and distributed network, such that we can't know everything that is happening for certain. But this month is the first month where we know for a fact that we are leaving out cool projects because there is just too much going on!
 
 Want to know more about what is happening on the network? Boot a planet and ask around!
@@ -54,6 +56,8 @@ urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.o
 
 ## Before putting anything in your Arvo
 
+![Before putting anything in your Arvo — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_A.jpg)
+
 There are a few new projects around the network that won't quite touch your Arvo. First up is a spotting of [an 'in the wild' instance](https://cancel.tylerirl.com/) of ["Sign in with Urbit"](https://x.com/urbit/status/2110469929657143551?a=VPRAL9DVmkh1xUcC0kM&s=20) using EAuth from the Milady corner of the future internet. If you have a running ship, click the big glowing Urbit ID button to sign in to `~raddem-tidwyt` and play "the cancel is coming". No need to install a new desk, and you don't even need a Milady to enjoy it.
 
 Making use of the same EAuth mechanism is [Duel Duet](https://wisbyr-pollec.com/+/duel-duet) from `~migrev-dolseg`. A musical game, you can play as a guest, log in with your urbit, and even join into the multiplayer ['Atlantis'](https://wisbyr-pollec.com/+/duel-duet?room=atlantis) room and play with others.
@@ -64,17 +68,23 @@ Also not quite ready for your Arvo, but certainly turning heads, is `~littel-wol
 
 ## More from the Milady universe
 
+![More from the Milady universe — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_B.jpg)
+
 The Milady adjacent 'Network Spirituality' cohort is finding itself [intersecting with the Urbit network yet again](https://x.com/davetist/status/2112943823550865636?s=20). In addition to the previously mentioned 'Sign in with Urbit' appearance, `~firmel-rovmyl` has been putting in work to add to the list of ways to run and manage your ship: [Harbor](https://github.com/davetist/harbor). Inspired by the now-deprecated "Port" of the early 2020s, Harbor supports MacOS and Linux across both x86 and ARM architectures. He is also working on `%urbitwarden` and `%connect` to be able to use your ship as your Bitwarden server. Given the security requirements for such an application, public release will be pending Gall 2026 userspace security work.
 
 The other network overlap comes in the form of the [Nockmilio project from `~buswel-lagpyl`](https://x.com/wiggerborea/status/2106112273337258097?a=-QmfWOwgIxOTSazM5aE&s=20). 1-part Nockchain, 1-part Remilio, and 1-part Urbit, Nockmilio sits at an intersection of sovereign computing and has [a strong cohort of Urbiters looking to make sure Telegram isn't the digital home of such a community](https://x.com/sarlev_/status/2114504843109060778?a=R89Uiw63oeMFPzOrTG8&s=20), and building [software to make NFT gated communities on Urbit](https://github.com/thelifeandtimes/gater). *Author's Note: It's me. I'm building that software. There is no reason for Telegram to exist when we have Tlon Messenger.*
 
 ## Agent-enabled experimentation continues
 
+![Agent-enabled experimentation continues — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_C.jpg)
+
 `~lagrev-nocfep` has been a regularly mentioned contributor in these articles, and this month is no different. He's managed [APL to Nockasm compilation](https://x.com/sigilante/status/2115199409134968934?a=ptdy5hp-X8jj3T1Xixg&s=20), and theorizes that with [UrWASM and Jock you could get compilers for many more languages in just a few days](https://x.com/sigilante/status/2115248217596338253?a=NySaNyMX7PiahK6LpKk&s=20).
 
 That, though, is the more sane of the experiments we came across this month. The other one worth mentioning? ["Lamp for Nock"](https://github.com/rogueinsiderpodcast-hub/Lamp-for-nock) which runs Nock without `libc`, a bootloader, a disk, or even any OS at all. Sure, it also lacks networking, but "The only piece of hardware it touches is the 16550 serial port at 0x3f8, polled, one byte at a time" is pretty damn cool nonetheless.
 
 ## More apps on the network
+
+![More apps on the network — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_D.jpg)
 
 Of course, we started this article by encouraging you to boot a ship—why so if we don't tell you about apps from around the network?! There are a few good mentions this month.
 
@@ -120,6 +130,8 @@ As `~mopfel-winrux` puts it, "the one thats fun is the office one, you have libr
 
 ## Building tools that work for you
 
+![Building tools that work for you — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_E.jpg)
+
 A growing theme—which we will touch on more next month—is the intrepid Urbiter who is building tools for themselves, that work the way they want and don't farm their data out to SaaS providers and hyperscale datacenters. `~ricsul-bilwyt`'s growing `~nisfeb` Software ecosystem (with apps like [Talon](https://talon.nisfeb.com) and [Lattice](https://lattice.nisfeb.com)) came from this drive. But he is not the only one.
 
 `~sitful-hatred` has implemented x402 payments to build payment gated pages on Urbit. It publishes a selected feed of Tlon `%notes` and enables the publisher to charge a subscription to be paid in an EVM/EIP-3009 token transfer. Getting a bunch of bot traffic to your site? Try giving them a way to pay you with the [reusable Hoon library](https://github.com/yapishu/domheap/blob/master/desk/lib/x402/README.md)...
@@ -127,6 +139,8 @@ A growing theme—which we will touch on more next month—is the intrepid Urbit
 Building on top of an `%obelisk` foundation, `~dinnyt-divsud` has been working towards putting more and more of the [Atlas Arms](https://atlasarms.com) business on Urbit. For example, his [Integrated Ballistics Lab](https://dinnyt-divsud.startram.io/apps/urgit/public/IntegratedBallisticsLab) software is both stored in an `%urgit` instance on his ship, and the ballistics data is stored inside an `%obelisk` database. It runs the computation off-ship, given the compute requirements, but by putting the database in Urbit, he can easily integrate it with his `%erpit` ERP system with the future goal of being able to provide customers with detailed testing data for the exact purchases that they made, all without needing a 3rd party service provider.
 
 ## Whisperings of the future
+
+![Whisperings of the future — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_F.jpg)
 
 As we mentioned before, there is more building happening on the network than ever before. We hear rumors of a Directed Messaging library, usable to send Ames packets between Urbit IDs without needing a running Arvo. People are building multiplayer Omarchy plugins using Urbit as the identity layer and backend. There might even be a forthcoming natural language interface into Azimuth for easier management of your Urbit ID. And perhaps even something having to do with Halo...
 
