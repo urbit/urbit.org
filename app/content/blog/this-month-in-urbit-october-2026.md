@@ -34,7 +34,7 @@ Welcome to This Month in Urbit. This is month #7 of doing these recaps and thing
 
 Want to know more about what is happening on the network? Boot a planet and ask around!
 
-![Running an urbit — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_B.jpg)
+![Running an urbit — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_A.jpg)
 
 As always, the Urbit community offers a growing variety of ways to run an urbit ship if you have an [Urbit ID](https://urbit.org/overview/running-urbit/get-urbit-id):
 
@@ -63,7 +63,7 @@ urbit -w <moon-name> -G <moon-key> -u https://s3.us-east-1.amazonaws.com/urbit.o
 
 ## Before putting anything in your Arvo
 
-![Before putting anything in your Arvo — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_A.jpg)
+![Before putting anything in your Arvo — October 2026 artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog_TMIU+October/TIMU+October_B.jpg)
 
 There are a few new projects around the network that won't quite touch your Arvo. First up is a spotting of [an 'in the wild' instance](https://cancel.tylerirl.com/) of ["Sign in with Urbit"](https://x.com/urbit/status/2110469929657143551?a=VPRAL9DVmkh1xUcC0kM&s=20) using EAuth from the Milady corner of the future internet. If you have a running ship, click the big glowing Urbit ID button to sign in to `~raddem-tidwyt` and play "the cancel is coming". No need to install a new desk, and you don't even need a Milady to enjoy it.
 
