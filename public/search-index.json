@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-31T04:29:35.785Z",
-  "total": 205,
+  "generatedAt": "2026-11-11T02:20:27.463Z",
+  "total": 206,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -2438,6 +2438,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "contributor spotlight: ~palfun-foslup a conversation with ~palfun-foslup on gall, userspace, and making simple software spotlight gall userspace ~sarlev-sarsen /blog/contributor-spotlight-palfun-foslup blog 2026-03-17 tlon engineer ~palfun-foslup discusses building gall apps like %pals and %rumors, why user-owned servers lower the barrier for peer-to-peer software, and what gall 2026 aims to deliver with userspace compatibility and permissions. https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social.png https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_qa_palfun-foslup/blog_qa+palfun-foslup_social16_9.png spotlight gall userspace contributor spotlight ~palfun-foslup gall 2026 userspace permissions userspace compatibility tlon messenger pals app rumors app peer to peer software personal server urbit security vere64"
+    },
+    {
+      "id": "blog/contributor-spotlight-ricsul-bilwyt.md",
+      "title": "Contributor Spotlight: ~ricsul-bilwyt",
+      "description": "A conversation with ~ricsul-bilwyt on identity, forever computers, Talon, Lattice, and computing for the household",
+      "tags": [
+        "spotlight",
+        "identity",
+        "personal-computing",
+        "talon",
+        "lattice"
+      ],
+      "searchTerms": [
+        "contributor spotlight",
+        "~ricsul-bilwyt",
+        "Talon",
+        "Lattice",
+        "personal server",
+        "forever computer",
+        "Urbit identity",
+        "authentication",
+        "Gall",
+        "Grubbery",
+        "libmesa",
+        "Ames",
+        "agent memory",
+        "household computing"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1794268800000,
+      "source": "blog",
+      "path": "/blog/contributor-spotlight-ricsul-bilwyt",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "contributor spotlight: ~ricsul-bilwyt a conversation with ~ricsul-bilwyt on identity, forever computers, talon, lattice, and computing for the household spotlight identity personal-computing talon lattice contributor spotlight ~ricsul-bilwyt talon lattice personal server forever computer urbit identity authentication gall grubbery libmesa ames agent memory household computing ~sarlev-sarsen /blog/contributor-spotlight-ricsul-bilwyt blog 2026-11-10 ~ricsul-bilwyt discusses urbit's built-in identity, durable personal data, developing talon and lattice, networked knowledge sharing, and ai-assisted household computing. contributor spotlight ~ricsul-bilwyt talon lattice personal server forever computer urbit identity authentication gall grubbery libmesa ames agent memory household computing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+ricsul-bilwyt/blog_qa+ricsul-bilwyt_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+ricsul-bilwyt/blog_qa+ricsul-bilwyt_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+ricsul-bilwyt/blog_qa+ricsul-bilwyt_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+qa+ricsul-bilwyt/blog_qa+ricsul-bilwyt_mail.jpg spotlight identity personal-computing talon lattice"
     },
     {
       "id": "blog/contributor-spotlight-sicdev-pilnup.md",
