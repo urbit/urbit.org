@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [How I build, with ~ricsul-bilwyt](/blog/how-i-build-ricsul-bilwyt.md) — managing fake ships, a shared memory, and agents I run from my phone
 - [Contributor Spotlight: ~ricsul-bilwyt](/blog/contributor-spotlight-ricsul-bilwyt.md) — A conversation with ~ricsul-bilwyt on identity, forever computers, Talon, Lattice, and computing for the household
 - [This Month in Urbit: October 2026](/blog/this-month-in-urbit-october-2026.md) — October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.
 - [Glurff, because it would be funny](/blog/glurff-because-it-would-be-funny.md) — Enter Glurff, a pixel-art world built on Noltbook, through a one-click guest moon or by installing it on your own Urbit ship.

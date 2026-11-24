@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T02:20:27.463Z",
-  "total": 206,
+  "generatedAt": "2026-11-24T04:08:41.905Z",
+  "total": 207,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/urbit-explained/intro.md",
-      "title": "Introduction",
-      "description": "Urbit is a practice in building a forever computer",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/urbit-explained",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "urbit-explained",
-      "subsectionLabel": "Urbit Explained",
-      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
-    },
-    {
       "id": "overview/running-urbit/intro.md",
       "title": "Introduction",
       "description": "A comprehensive guide to getting started with Urbit",
@@ -553,6 +537,22 @@
       "subsection": "running-urbit",
       "subsectionLabel": "Running Urbit",
       "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
+    },
+    {
+      "id": "overview/urbit-explained/intro.md",
+      "title": "Introduction",
+      "description": "Urbit is a practice in building a forever computer",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/urbit-explained",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "urbit-explained",
+      "subsectionLabel": "Urbit Explained",
+      "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
@@ -2995,6 +2995,43 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "how honk got fast: identity, arenas, and a byte-exact oracle how honk made nockchain's hoon compiler 20× faster with native rust arenas, hash-consing, persistent caching, and byte-for-byte parity with hoonc. nockchain hoon nock compilers performance honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec /blog/how-honk-got-fast blog 2026-09-21 chris allen explains how honk made nockchain's hoon-138 compilation up to 20.6× faster while preserving byte-for-byte parity with hoonc, covering native rust arenas, hash-consed identities, seminoun optimization, caching, and the correctness oracle behind each change. honk compiler hoonc hoon compiler hoon-138 nockchain nockvm nock native compiler compiler performance byte-for-byte parity hash-consing arena allocation seminouns nockasm incremental compilation chris allen ~navsul-pagrec https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_social+16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_honk/blog_honk_mail.jpg nockchain hoon nock compilers performance"
+    },
+    {
+      "id": "blog/how-i-build-ricsul-bilwyt.md",
+      "title": "How I build, with ~ricsul-bilwyt",
+      "description": "managing fake ships, a shared memory, and agents I run from my phone",
+      "tags": [
+        "development",
+        "ai",
+        "lattice",
+        "reins",
+        "testing"
+      ],
+      "searchTerms": [
+        "~ricsul-bilwyt",
+        "AI coding agents",
+        "fake ships",
+        "Hoon development",
+        "fleet",
+        "hoon-test-kit",
+        "agent skills",
+        "Lattice",
+        "agent memory",
+        "Reins",
+        "Claude Code",
+        "release automation",
+        "Ames",
+        "household computing"
+      ],
+      "authors": [
+        "~ricsul-bilwyt"
+      ],
+      "publishedTimestamp": 1795478400000,
+      "source": "blog",
+      "path": "/blog/how-i-build-ricsul-bilwyt",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "how i build, with ~ricsul-bilwyt managing fake ships, a shared memory, and agents i run from my phone development ai lattice reins testing ~ricsul-bilwyt ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing ~ricsul-bilwyt /blog/how-i-build-ricsul-bilwyt blog 2026-11-24 ~ricsul-bilwyt describes an ai-assisted development workflow using disposable urbit ships, reusable skills, shared lattice memory, and reins, including testing, reviews, release automation, and lessons from failures. ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing /images/urbit-dither-placeholder.png development ai lattice reins testing"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",
