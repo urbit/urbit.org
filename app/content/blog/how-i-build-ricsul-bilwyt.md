@@ -1,7 +1,7 @@
 +++
 title = "How I build, with ~ricsul-bilwyt"
 date = "2026-11-24"
-description = "managing fake ships, a shared memory, and agents I run from my phone"
+description = "The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone"
 summary = "~ricsul-bilwyt describes an AI-assisted development workflow using disposable Urbit ships, reusable skills, shared Lattice memory, and Reins, including testing, reviews, release automation, and lessons from failures."
 search_terms = [
     "~ricsul-bilwyt",

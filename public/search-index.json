@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T03:56:41.949Z",
+  "generatedAt": "2026-11-25T05:19:52.805Z",
   "total": 207,
   "entries": [
     {
@@ -2999,7 +2999,7 @@
     {
       "id": "blog/how-i-build-ricsul-bilwyt.md",
       "title": "How I build, with ~ricsul-bilwyt",
-      "description": "managing fake ships, a shared memory, and agents I run from my phone",
+      "description": "The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone",
       "tags": [
         "development",
         "ai",
@@ -3031,7 +3031,7 @@
       "path": "/blog/how-i-build-ricsul-bilwyt",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "how i build, with ~ricsul-bilwyt managing fake ships, a shared memory, and agents i run from my phone development ai lattice reins testing ~ricsul-bilwyt ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing ~ricsul-bilwyt /blog/how-i-build-ricsul-bilwyt blog 2026-11-24 ~ricsul-bilwyt describes an ai-assisted development workflow using disposable urbit ships, reusable skills, shared lattice memory, and reins, including testing, reviews, release automation, and lessons from failures. ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_mail.jpg development ai lattice reins testing"
+      "searchText": "how i build, with ~ricsul-bilwyt the reins i use to manage fakeships, an agent memory system, and a feedback loop i can run from my phone development ai lattice reins testing ~ricsul-bilwyt ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing ~ricsul-bilwyt /blog/how-i-build-ricsul-bilwyt blog 2026-11-24 ~ricsul-bilwyt describes an ai-assisted development workflow using disposable urbit ships, reusable skills, shared lattice memory, and reins, including testing, reviews, release automation, and lessons from failures. ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_mail.jpg development ai lattice reins testing"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",

@@ -1,6 +1,6 @@
 # How I build, with ~ricsul-bilwyt
 
-managing fake ships, a shared memory, and agents I run from my phone
+The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone
 
 - Date: 2026-11-24
 - Author: ~ricsul-bilwyt

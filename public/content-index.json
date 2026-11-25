@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T03:56:42.180Z",
+  "generatedAt": "2026-11-25T05:19:53.038Z",
   "total": 370,
   "entries": [
     {
@@ -2052,7 +2052,7 @@
       "source_kind": "blog",
       "title": "How I build, with ~ricsul-bilwyt",
       "summary": "~ricsul-bilwyt describes an AI-assisted development workflow using disposable Urbit ships, reusable skills, shared Lattice memory, and Reins, including testing, reviews, release automation, and lessons from failures.",
-      "description": "managing fake ships, a shared memory, and agents I run from my phone",
+      "description": "The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone",
       "tags": [
         "development",
         "ai",
