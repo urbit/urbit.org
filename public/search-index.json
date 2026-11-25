@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T04:08:41.905Z",
+  "generatedAt": "2026-11-25T03:56:41.949Z",
   "total": 207,
   "entries": [
     {
@@ -523,22 +523,6 @@
       "searchText": "hosting providers explore hosting options for your urbit /overview/running-urbit/hosting-providers overview running urbit third-party managed hosting services for urbit ships that handle technical infrastructure management, with coverage of providers like tlon, incentives for hosts, and tradeoffs compared to self-hosting. run-urbit-with-tlon-hosting why-hosting-providers shortfalls-of-hosting-providers urbit-id-incentives-for-hosts"
     },
     {
-      "id": "overview/running-urbit/intro.md",
-      "title": "Introduction",
-      "description": "A comprehensive guide to getting started with Urbit",
-      "tags": [],
-      "searchTerms": [],
-      "authors": [],
-      "publishedTimestamp": null,
-      "source": "overview",
-      "path": "/overview/running-urbit",
-      "section": "overview",
-      "sectionLabel": "Overview",
-      "subsection": "running-urbit",
-      "subsectionLabel": "Running Urbit",
-      "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
-    },
-    {
       "id": "overview/urbit-explained/intro.md",
       "title": "Introduction",
       "description": "Urbit is a practice in building a forever computer",
@@ -553,6 +537,22 @@
       "subsection": "urbit-explained",
       "subsectionLabel": "Urbit Explained",
       "searchText": "introduction urbit is a practice in building a forever computer /overview/urbit-explained overview urbit explained introduction to urbit as an approach to building durable computing infrastructure, explaining the motivation for a long-lasting software stack and the two-part structure of identity and operating system. covers urbit id and urbit os as core components."
+    },
+    {
+      "id": "overview/running-urbit/intro.md",
+      "title": "Introduction",
+      "description": "A comprehensive guide to getting started with Urbit",
+      "tags": [],
+      "searchTerms": [],
+      "authors": [],
+      "publishedTimestamp": null,
+      "source": "overview",
+      "path": "/overview/running-urbit",
+      "section": "overview",
+      "sectionLabel": "Overview",
+      "subsection": "running-urbit",
+      "subsectionLabel": "Running Urbit",
+      "searchText": "introduction a comprehensive guide to getting started with urbit /overview/running-urbit overview running urbit introduction to running urbit covering the two required steps of acquiring an urbit id and booting urbit os, with examples of deployment options ranging from galaxy-level infrastructure to comets on local laptops."
     },
     {
       "id": "blurbs/learn-to-hoon.md",
@@ -3031,7 +3031,7 @@
       "path": "/blog/how-i-build-ricsul-bilwyt",
       "section": "blog",
       "sectionLabel": "Blog",
-      "searchText": "how i build, with ~ricsul-bilwyt managing fake ships, a shared memory, and agents i run from my phone development ai lattice reins testing ~ricsul-bilwyt ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing ~ricsul-bilwyt /blog/how-i-build-ricsul-bilwyt blog 2026-11-24 ~ricsul-bilwyt describes an ai-assisted development workflow using disposable urbit ships, reusable skills, shared lattice memory, and reins, including testing, reviews, release automation, and lessons from failures. ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing /images/urbit-dither-placeholder.png development ai lattice reins testing"
+      "searchText": "how i build, with ~ricsul-bilwyt managing fake ships, a shared memory, and agents i run from my phone development ai lattice reins testing ~ricsul-bilwyt ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing ~ricsul-bilwyt /blog/how-i-build-ricsul-bilwyt blog 2026-11-24 ~ricsul-bilwyt describes an ai-assisted development workflow using disposable urbit ships, reusable skills, shared lattice memory, and reins, including testing, reviews, release automation, and lessons from failures. ai coding agents fake ships hoon development fleet hoon-test-kit agent skills lattice agent memory reins claude code release automation ames household computing https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_banner.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog+how+i+build/blog_how+i+build_mail.jpg development ai lattice reins testing"
     },
     {
       "id": "blog/immunology-for-the-internet-age.md",

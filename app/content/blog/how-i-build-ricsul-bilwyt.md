@@ -23,15 +23,14 @@ search_terms = [
 [extra]
 author = "~ricsul-bilwyt"
 ship = "~ricsul-bilwyt"
-# Placeholder artwork for review; replace before publication.
-image = "/images/urbit-dither-placeholder.png"
-imageCard = "/images/urbit-dither-placeholder.png"
-imageIndex = "/images/urbit-dither-placeholder.png"
-imageEmail = "/images/urbit-dither-placeholder.png"
+image = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Social.jpg"
+imageCard = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Social16_9.jpg"
+imageIndex = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Banner.jpg"
+imageEmail = "https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Mail.jpg"
 tags = ["development", "ai", "lattice", "reins", "testing"]
 +++
 
-![Placeholder artwork for How I build, with ~ricsul-bilwyt](/images/urbit-dither-placeholder.png)
+![How I build, with ~ricsul-bilwyt — article artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Hero.jpg)
 
 In my [Contributor Spotlight](https://urbit.org/blog/contributor-spotlight-ricsul-bilwyt) I said I professionally maintain industrial software, and that keeping anything of consequence running is a full-time job for multiple people. Urbit is cutting away at this, but it is still true that keeping anything of consequence going takes many workers. What is changing, though, is who the multiple people are.
 

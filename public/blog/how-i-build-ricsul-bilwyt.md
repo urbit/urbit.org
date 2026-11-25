@@ -5,7 +5,7 @@ managing fake ships, a shared memory, and agents I run from my phone
 - Date: 2026-11-24
 - Author: ~ricsul-bilwyt
 
-![Placeholder artwork for How I build, with ~ricsul-bilwyt](/images/urbit-dither-placeholder.png)
+![How I build, with ~ricsul-bilwyt — article artwork](https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Blog/Blog+How+I+Build/Blog_How+I+Build_Hero.jpg)
 
 In my [Contributor Spotlight](https://urbit.org/blog/contributor-spotlight-ricsul-bilwyt) I said I professionally maintain industrial software, and that keeping anything of consequence running is a full-time job for multiple people. Urbit is cutting away at this, but it is still true that keeping anything of consequence going takes many workers. What is changing, though, is who the multiple people are.
 
