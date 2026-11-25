@@ -365,7 +365,8 @@ body {
             @apply font-sans relative mb-6 ml-8;
         }
 
-        ul li {
+        /* Only style immediate items so mixed nested lists keep their own markers. */
+        ul > li {
             @apply list-outside mb-1 list-none relative before:content-['—'] before:absolute before:left-[-1.2rem] before:top-[0.35rem];
         }
 
@@ -374,11 +375,12 @@ body {
         }
 
         ol {
-            @apply font-sans relative mb-6;
+            @apply font-sans relative mb-6 ml-8;
         }
 
-        ol li {
-            @apply list-decimal list-inside mb-1;
+        /* Inside markers occupy a separate line when Markdown wraps an item in <p>. */
+        ol > li {
+            @apply list-decimal list-outside mb-1;
         }
 
         code,

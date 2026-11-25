@@ -29,7 +29,12 @@ npm start
 
 # Run linting
 npm run lint
+
+# Check article list styling and Markdown structure
+npm run test:article-lists
 ```
+
+See [TESTING.md](TESTING.md) for the complete validation sequence and responsive list checks.
 
 ## Project Structure
 
