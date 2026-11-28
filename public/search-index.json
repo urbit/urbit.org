@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-25T05:19:52.805Z",
-  "total": 207,
+  "generatedAt": "2026-11-28T02:47:06.424Z",
+  "total": 208,
   "entries": [
     {
       "id": "blurbs/add-and-remove-applications.md",
@@ -4822,6 +4822,44 @@
       "section": "blog",
       "sectionLabel": "Blog",
       "searchText": "this month in urbit: may 2026 may ecosystem updates on notetaking tools, peer-to-peer ebook sharing, and more agent-oriented and agent-built tools this-month-in-urbit ecosystem applications ai agents mcp this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads ~sarlev-sarsen /blog/this-month-in-urbit-may-2026 blog 2026-05-29 this month in urbit for may 2026 covers %notes, %boox, %last, hermes agent integration, tlon's agent experiments, %claw, %mcp, and recent contributor writing about agentic urbit and concurrent io in spider threads. this month in urbit may 2026 urbit %notes obsidian notes %boox urbit books %last audioscrobble urbit agents hermes agent tlonbot %claw urbit mcp spider threads https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_timu+may/blog_tmiu+may_social16_9.jpg this-month-in-urbit ecosystem applications ai agents mcp"
+    },
+    {
+      "id": "blog/this-month-in-urbit-november-2026.md",
+      "title": "This Month in Urbit: November 2026",
+      "description": "November brings Omabit, anonymous Lattice browsing, network visibility tools, new apps, Nockchain's Open Proof Machine, and Tlon Buckets.",
+      "tags": [
+        "this-month-in-urbit",
+        "ecosystem",
+        "applications",
+        "self-hosting",
+        "agents",
+        "native-clients"
+      ],
+      "searchTerms": [
+        "this month in urbit",
+        "november 2026 urbit",
+        "omabit",
+        "omarchy self hosting",
+        "lattice",
+        "libmesa",
+        "%accountability",
+        "%sextant",
+        "claw bank",
+        "octra wallet",
+        "gluewear id",
+        "%ursketch",
+        "open proof machine",
+        "tlon buckets"
+      ],
+      "authors": [
+        "~sarlev-sarsen"
+      ],
+      "publishedTimestamp": 1795737600000,
+      "source": "blog",
+      "path": "/blog/this-month-in-urbit-november-2026",
+      "section": "blog",
+      "sectionLabel": "Blog",
+      "searchText": "this month in urbit: november 2026 november brings omabit, anonymous lattice browsing, network visibility tools, new apps, nockchain's open proof machine, and tlon buckets. this-month-in-urbit ecosystem applications self-hosting agents native-clients this month in urbit november 2026 urbit omabit omarchy self hosting lattice libmesa %accountability %sextant claw bank octra wallet gluewear id %ursketch open proof machine tlon buckets ~sarlev-sarsen /blog/this-month-in-urbit-november-2026 blog 2026-11-27 november 2026's urbit roundup covers omabit hosting, anonymous lattice browsing via libmesa, accountability and sextant, experimental finance apps, gluewear id, ursketch, nockchain's open proof machine, and tlon buckets. this month in urbit november 2026 urbit omabit omarchy self hosting lattice libmesa %accountability %sextant claw bank octra wallet gluewear id %ursketch open proof machine tlon buckets https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+november/blog_tmiu+november_social.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+november/blog_tmiu+november_social16_9.jpg https://s3.us-east-1.amazonaws.com/urbit.orgcontent/blog/blog_tmiu+november/blog_tmiu+november_banner.jpg this-month-in-urbit ecosystem applications self-hosting agents native-clients"
     },
     {
       "id": "blog/this-month-in-urbit-october-2026.md",

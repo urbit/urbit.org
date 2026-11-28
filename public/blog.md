@@ -5,6 +5,7 @@ Latest updates, developer spotlights, and technical deep dives from the Urbit co
 
 ## 2026
 
+- [This Month in Urbit: November 2026](/blog/this-month-in-urbit-november-2026.md) — November brings Omabit, anonymous Lattice browsing, network visibility tools, new apps, Nockchain's Open Proof Machine, and Tlon Buckets.
 - [How I build, with ~ricsul-bilwyt](/blog/how-i-build-ricsul-bilwyt.md) — The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone
 - [Contributor Spotlight: ~ricsul-bilwyt](/blog/contributor-spotlight-ricsul-bilwyt.md) — A conversation with ~ricsul-bilwyt on identity, forever computers, Talon, Lattice, and computing for the household
 - [This Month in Urbit: October 2026](/blog/this-month-in-urbit-october-2026.md) — October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.
