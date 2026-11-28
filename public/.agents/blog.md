@@ -7,6 +7,7 @@ agent_mode: "fallback"
 dependencies: []
 related_pages:
   - "/blog.md"
+  - "/blog/this-month-in-urbit-november-2026.md"
   - "/blog/how-i-build-ricsul-bilwyt.md"
   - "/blog/contributor-spotlight-ricsul-bilwyt.md"
   - "/blog/this-month-in-urbit-october-2026.md"
@@ -16,7 +17,6 @@ related_pages:
   - "/blog/this-month-in-urbit-september-2026.md"
   - "/blog/how-honk-got-fast.md"
   - "/blog/directed-messaging.md"
-  - "/blog/contributor-spotlight-migrev-dolseg.md"
 ---
 
 Human-oriented content: /blog.md
@@ -25,6 +25,7 @@ Human-oriented content: /blog.md
 
 Agent companions for urbit.org blog posts. When a source file includes ---agent---, the companion contains only the dedicated agent appendix plus a pointer back to the human mirror.
 
+- [This Month in Urbit: November 2026](/.agents/blog/this-month-in-urbit-november-2026.md) — November brings Omabit, anonymous Lattice browsing, network visibility tools, new apps, Nockchain's Open Proof Machine, and Tlon Buckets.
 - [How I build, with ~ricsul-bilwyt](/.agents/blog/how-i-build-ricsul-bilwyt.md) — The reins I use to manage fakeships, an agent memory system, and a feedback loop I can run from my phone
 - [Contributor Spotlight: ~ricsul-bilwyt](/.agents/blog/contributor-spotlight-ricsul-bilwyt.md) — A conversation with ~ricsul-bilwyt on identity, forever computers, Talon, Lattice, and computing for the household
 - [This Month in Urbit: October 2026](/.agents/blog/this-month-in-urbit-october-2026.md) — October brings Sign in with Urbit, new ship managers and mobile clients, Glurff, Heathcliff, browser utilities, and tools built for their owners.
